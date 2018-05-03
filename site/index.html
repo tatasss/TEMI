@@ -1,14 +1,17 @@
 <!DOCTYPE html>
 <html  lang="fr">
 <head>
+<title>index</title>
 <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-  <script src="./script.js">
-	
-</script>
+  <script src="./fabrique.js"></script>
+  <script src="./genererVue.js"></script>
+  <script src="./script.js"></script>
+  <script src="./jquery-3.3.1.js"></script>
+
 </head>
 <body>
 <nav class="navbar navbar-inverse">
@@ -20,7 +23,7 @@
 </nav>
 <div class="container">
 <div class="form-group">
-<form name="myForm" onsubmit="return validateForm()" method="post">
+
   <label for="sel1">données:</label>
   <select class="form-control" id="donne">
     <option  selected value="Djankov">Djankov</option>
@@ -38,29 +41,33 @@
 <div class="form-group">
   <label for="sel1">Pays:</label>
   <select class="form-control" id="PAYS">
-    <option>Benin</option>
-    <option>Burkina Faso</option>
-    <option>Cameroun</option>
-    <option>République centrafricaine</option>
-	<option>République du Congo</option>
-	<option>Côte d'Ivoire</option>
-	<option>Gabon</option>
-	<option>Mali</option>
-	<option>Niger</option>
-	<option>Senegal</option>
-	<option>Tchad</option>
-	<option>Togo</option>
+    <option value="Benin">Benin</option>
+    <option value="Burkina Faso">Burkina Faso</option>
+    <option value="Cameroun">Cameroun</option>
+    <option value="Republique Centraficaine">République centrafricaine</option>
+	<option value="Republique du Congo">République du Congo</option>
+	<option value="Côte d'Ivoire">Côte d'Ivoire</option>
+	<option value="Gabon">Gabon</option>
+	<option value="Mali">Mali</option>
+	<option value="Niger">Niger</option>
+	<option value="Senegal">Senegal</option>
+	<option value="Tchad">Tchad</option>
+	<option value="Togo">Togo</option>
   </select>
 </div>
 <div class="form-group">
   <label for="sel1">Regime:</label>
   <select class="form-control" id="REGIME">
-    <option>Régime général</option>
-    <option>Régime des investissements</option>
+    <option value="gen">Régime général</option>
+    <option value="nongen">Régime des investissements</option>
   </select>
 </div>
-  <button type="valider données" class="btn btn-default">valider</button>
- </form>
+<button type="valider données" class="btn btn-default" onclick="validateForm()">valider</button>
+<div>
+<br/>
+<div id="result"></div>
+
+</div>
 </div>
 </body>
 </html>
