@@ -25,41 +25,45 @@ var modeleManager= {
     },
     taxe_val_ajout : function (mE, mP, pibchoix) {
         //-------------------------------
-        var taxeValAjout = [];
+        var petrole = [];
+        var taux = [];
+        var tva = [];
         //contribution forfaitaires
 
-        taxeValAjout.push("Petrole");
-        taxeValAjout.push("FCFA");
         for (var i = 0; i < 5; i++) {
-            taxeValAjout.push(mE.petrole * pibchoix);
+            petrole.push(mE.petrole * pibchoix);
         }
-        taxeValAjout.push("Taux");
-        taxeValAjout.push("%");
+
         for (var i = 0; i < 5; i++) {
-            taxeValAjout.push(mP.impot.tva_petrole);
+            taux.push(mP.impot.tva_petrole);
         }
-        taxeValAjout.push("TVA Petrole");
-        taxeValAjout.push("FCFA");
+
         for (var i = 0; i < 5; i++) {
-            taxeValAjout.push((mE.petrole * pibchoix) / mP.impot.tva_petrole);
+            tva.push((mE.petrole * pibchoix) / mP.impot.tva_petrole);
         }
-        return taxeValAjout;
+
+        return{
+            petrole:petrole,
+            taux:taux,
+            tva:tva
+
+        }
         //--------------------------------------
     },
     contributioForfEmploie :function (mE, mP, pibchoix) {
-        var salaireCadre = [];
+        var salaireCadre = []
         for (var i = 0; i < 5; i++) {
             salaireCadre.push(Math.trunc(mE.cadre * mE.indice_cadre * pibchoix));
         }
-        var salaireSecretaire = [];
+        var salaireSecretaire = []
         for (var i = 0; i < 5; i++) {
             salaireSecretaire.push(Math.trunc(mE.secretaire * mE.indice_secretaire * pibchoix));
         }
-        var salaireOuvrier = [];
+        var salaireOuvrier = []
         for (var i = 0; i < 5; i++) {
             salaireOuvrier.push(Math.trunc(mE.ouvrier * mE.indice_ouvrier * pibchoix));
         }
-        var masseSalarial = [];
+        var masseSalarial = []
         for (var i = 0; i < 5; i++) {
             masseSalarial.push(salaireCadre[i] + salaireSecretaire[i] + salaireOuvrier[i]);
         }
@@ -84,4 +88,4 @@ var modeleManager= {
         };
         return employer;
     },
-};
+}

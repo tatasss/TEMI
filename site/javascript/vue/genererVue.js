@@ -44,6 +44,7 @@ var genererVue={
 			result="<p>le PNB par tête dans le pays "+pays+" est de :"+mP.pnb+" FCFA</p>";
 			pibchoix=mP.pnb;
 		}
+
 		return result;
 	},
 	entrepriseHTML:function(){
@@ -185,25 +186,32 @@ var genererVue={
 		var result="<div class='panel panel-default'><div class='panel-heading'>Paramétres</div>";
 		result+="<div class='panel-body'>";
 		result+=donne+"</br>"+pin+"<br/>"+pays+"<br/>"+regime+"</br>";
-		result+="</div></div>";	
-		result+=" <button type='submit'  id='retour' class='btn btn-default' value='back' onclick='documEnt.location.href=documEnt.referrer' >retour</button>";
+		result+="</div></div>";
+		result+="<div class='vertical-menu'>"
+		result+="<a  class='btn btn-default' type='submit' href='./test.html'>voir test en cours</a>";
+        result+="<a class='btn btn-default' href='./modele.html'>voir modele en cours</a>";
+		result+="<a  id='retour' class='btn btn-default' value='back' href='./index.html' >retour</a></div>";
 		return result
 	},
 	mainHTML:function(donne,pin,pays,regimE){
+			donneRef(donne,pin,pays,regimE);
 			mE=fabrique.entreprise(donne);
-			console.log(pays);
+			localStorage.setItem('mE',mE);
+
+
 			var randPays=mesPays();
-			console.log(randPays.length);
+
 			for(var i=0;i<randPays.length;i++){
 				if(randPays[i].nom==pays){
-					console.log("vrai");
+
 					mP=randPays[i];
+					localStorage.setItem('mP',mP);
 					break;
 					
 				}
-				console.log(randPays[i].nom +"faux");
+
 			}
-			
+
 			var result=this.bodyHtml(donne,pin,pays,regimE);
 			result+="</div>";
 			result+="<div class='col-sm-2'>";
@@ -212,5 +220,58 @@ var genererVue={
 			result+="</div></body></html>";
 			//prompt(global)
 			return result;
+	},
+	petroleHtml:function(taxeAjout){
+        let html="<div class='panel panel-default'><div class='panel-body'>"
+		html+="<table class='table'><thead></thead><tbody><tr>";
+        console.log(typeof "lol");
+        html+="<td>petrole</td><td>FCFA</td>"
+        for (var i=0;i<taxeAjout.petrole.length;i++){
+			html+="<td>"+taxeAjout.petrole[i]+"</td>";
+
+		}
+		html+="</tr>";
+        html+="<td>taux</td><td>%</td>"
+        for (var i=0;i<taxeAjout.taux.length;i++){
+            html+="<td>"+taxeAjout.taux[i]+"</td>";
+
+        }
+        html+="</tr>";
+        html+="<td>TVA Petrole</td><td>FCFA</td>"
+        for (var i=0;i<taxeAjout.tva.length;i++){
+            html+="<td>"+taxeAjout.tva[i]+"</td>"
+        }
+        html+="</tr></tbody></table></div></div>";
+
+		return html;
+	},
+	emploieHtml:function(monm){
+        var html="<div class='panel panel-default'><div class='panel-body'><table class='table'><thead></thead>";
+        html+="<tbody><tr><td>Salaire des cadres</td><td>FCFA</td>";
+        for(var i=0;i<monm.employer.salaire_cadre.length;i++){
+            html+="<td>"+monm.employer.salaire_cadre[i]+"</td>";
+        }
+        html+="</tr><tr><td>Salaire des secretaires</td><td>FCFA</td>";
+        for(var i=0;i<monm.employer.salaire_secretaire.length;i++){
+            html+="<td>"+monm.employer.salaire_secretaire[i]+"</td>";
+        }
+        html+="</tr><tr><td>Salaire des ouvrier</td><td>FCFA</td>";
+        for(var i=0;i<monm.employer.salaire_ouvrier.length;i++){
+            html+="<td>"+monm.employer.salaire_ouvrier[i]+"</td>";
+        }
+        html+="</tr><tr><td>masse Salarial</td><td>FCFA</td>";
+        for(var i=0;i<monm.employer.masse_salarial.length;i++){
+            html+="<td>"+monm.employer.masse_salarial[i]+"</td>";
+        }
+        html+="</tr><tr><td>taux</td><td>%</td>";
+        for(var i=0;i<monm.employer.tauxCfe.length;i++){
+            html+="<td>"+monm.employer.tauxCfe[i]+"</td>";
+        }
+        html+="</tr><tr><td>CFE</td><td>FCFA</td>";
+        for(var i=0;i<monm.employer.reel_CFE.length;i++){
+            html+="<td>"+monm.employer.reel_CFE[i]+"</td>";
+        }
+        html+="</tr></tbody></table></div></div>";
+        return html;
 	}
-};
+}

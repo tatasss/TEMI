@@ -1,5 +1,8 @@
 
-modele= function(mE,mP,pibchoix){
+modele= function(){
+    var mE=donne().mE;
+    var mP=donne().mP;
+    var pibchoix= donne().pibChoisi;
 	var investissement=modeleManager.investissementModele(mE,pibchoix);
 	var amortissement=modeleManager.ammortissment(mE,mP,pibchoix);
 	var generalAmort=modeleManager.ammortGen(amortissement);
@@ -18,6 +21,7 @@ modele= function(mE,mP,pibchoix){
     return{
     	investissement:investissement,
 		amortissement:amortissement,
+        taxeAjout:taxeValAjout,
 		employer:employer,
 		getAmmortHtml:function(){
     		var cpt=0;
@@ -59,4 +63,4 @@ modele= function(mE,mP,pibchoix){
 
 	
 	
-};
+}

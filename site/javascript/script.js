@@ -16,16 +16,11 @@ function validateForm() {
 			
 }
 
+
 function testModele1(){
-    //armortirModele:function(prix,durLin,coefdegr)
-	/*dureeRestante:dureeRestante,
-			baseAmortissable:baseAmortissable,
-			tauxLineaire:tauxLineaire,
-			tauxDegressif:tauxDegressif,
-			chargeAmorti:chargeAmorti,
-	* */
+
 	var monTest= fabrique.armortirModele(26801197,10,2.5,"equipement");
-    var html="<p>"+monTest.nom+"</p>";
+    var html="<p>"+monTest.nom+"</p>"
 	html+="<table class='table'><thead><tr><th>duree restante</th>";
 	for(var i=0;i<5;i++){
 		html+="<th>"+monTest.dureeRestante[i]+"</th>";
@@ -34,7 +29,7 @@ function testModele1(){
     for(var i=0;i<5;i++){
         html+="<td>"+monTest.baseAmortissable[i]+"</td>";
     }
-    html+="</tr><tr><td>Taux Unitaire</td>";
+    html+="</tr><tr><td>Taux Unitaire</td>"
     for(var i=0;i<5;i++){
         html+="<td>"+monTest.tauxLineaire[i]+"</td>";
     }
@@ -47,14 +42,15 @@ function testModele1(){
 	html+="<td>"+monTest.chargeAmorti[i]+"</td>";
     }
     html+="</tr></tbody></table>";
+    console.log(document.getElementById("test1"));
     document.getElementById("test1").innerHTML=html;
 }
 function testModele2(){
 	var amortissement=[];
 	var html="<p>";
-	var mE=fabrique.entreprise("Djankov");
-	var mP=mesPays()[0];
-	var pibchoix=mP.pib;
+	var mE=donne().mE;
+	var mP=donne().mP;
+	var pibchoix=donne().pibChoisi;
     amortissement.push(fabrique.armortirModele(Math.trunc(mE.construction*pibchoix),mP.ammort.construction,mP.ammort.coefdegressif,"construction"));
     amortissement.push(fabrique.armortirModele(mE.equipement*pibchoix,mP.ammort.equipement,mP.ammort.coefdegressif,"equipement"));
     amortissement.push(fabrique.armortirModele(mE.camion*pibchoix,mP.ammort.camion,mP.ammort.coefdegressif,"camion"));
@@ -67,7 +63,7 @@ function testModele2(){
     document.getElementById("test2").innerHTML=html;
 }
 function testModele3(){
-	var monm=modele(fabrique.entreprise("Djankov"),mesPays()[0],mesPays()[0].pib);
+	var monm=modele();
 
 	var html="<h1>investissment</h1><p>investissement : "+monm.investissement+"</p><h1>Ammortissment :</h1>"+monm.getAmmortHtml();
     for(var i=0;i<monm.amortissement.length;i++){
@@ -77,7 +73,7 @@ function testModele3(){
 
 }
 function testModele4(){
-    var monm=modele(fabrique.entreprise("Djankov"),mesPays()[0],mesPays()[0].pib);
+    var monm=modele();
     var html="<p>contribution employer</p>";
     html+="<table class='table'><thead></thead>";
     html+="<tbody><tr><td>Salaire des cadres</td><td>FCFA</td>";

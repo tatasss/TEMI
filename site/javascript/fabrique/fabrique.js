@@ -66,7 +66,7 @@ var fabrique={
 		else{
 			alert("pas encore fait")
 		}
-
+		return
 		
 	},
 	armortirModele:function(prix,durLin,coef,nom){
@@ -105,7 +105,7 @@ var fabrique={
 		}
 		chargeAmorti.push(Math.trunc(baseAmortissable[0]*(tauxDegressif[0]/100)));
 		for(var i=1; i<5;i++){
-			console.log(dureeRestante[i-1]-1);
+
 			if(dureeRestante[i-1]>0){
 					dureeRestante.push(dureeRestante[i-1]-1);
 			}
@@ -136,7 +136,7 @@ var fabrique={
 				}
 			}
 			purcent=tauxDegressif[i]/100;
-			console.log(baseAmortissable[i]*purcent);
+
 			chargeAmorti.push(Math.trunc(baseAmortissable[i]*purcent));
 		}
 	
@@ -152,11 +152,11 @@ var fabrique={
   <div class="panel-heading">Panel Heading</div>
   <div class="panel-body">Panel Content</div>
 </div>*/
-				var html="<div class='panel panel-info'><div class=\"panel-heading\">";
+				var html="<div class='panel panel-info'><div class=\"panel-heading\">"
 				html+="<table class='table'><thead><tr><th>"+this.nom+"</th><th>FCFA</th><th>"+this.baseAmortissable[0]+"</th></tr></thead>";
 				html+="<tbody><tr><td>duree linneaire</td><td>annee</td><td>"+this.dureeRestante[0]+"</td></tr>";
             	html+="<tr><td>coef degressif</td><td>coef</td><td>"+coefdegr+"</td></tr></tbody></table>";
-            	html+="</div> <div class='panel-body'>";
+            	html+="</div> <div class='panel-body'>"
                 html+="<table class='table'><thead><tr><th>duree restante</th><th>Annee</th>";
                 for(var i=0;i<5;i++){
                     html+="<th>"+this.dureeRestante[i]+"</th>";
@@ -165,7 +165,7 @@ var fabrique={
                 for(var i=0;i<5;i++){
                     html+="<td>"+this.baseAmortissable[i]+"</td>";
                 }
-                html+="</tr><tr><td>Taux Unitaire</td><td>%</td>";
+                html+="</tr><tr><td>Taux Unitaire</td><td>%</td>"
                 for(var i=0;i<5;i++){
                     html+="<td>"+this.tauxLineaire[i]+"</td>";
                 }
