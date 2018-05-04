@@ -245,6 +245,30 @@ var genererVue={
 
 		return html;
 	},
+    chargeFinancierHtml:function(taxeAjout){
+        let html="<div class='panel panel-default'><div class='panel-body'>"
+        html+="<table class='table'><thead></thead><tbody><tr>";
+        console.log(typeof "lol");
+        html+="<td>charges financiéres</td><td>FCFA</td>"
+        for (var i=0;i<taxeAjout.chargeFinance.length;i++){
+            html+="<td>"+taxeAjout.chargeFinance[i]+"</td>";
+
+        }
+        html+="</tr>";
+        html+="<td>taux</td><td>%</td>"
+        for (var i=0;i<taxeAjout.taux.length;i++){
+            html+="<td>"+taxeAjout.taux[i]+"</td>";
+
+        }
+        html+="</tr>";
+        html+="<td>IRC</td><td>FCFA</td>"
+        for (var i=0;i<taxeAjout.irc.length;i++){
+            html+="<td>"+taxeAjout.irc[i]+"</td>"
+        }
+        html+="</tr></tbody></table></div></div>";
+
+        return html;
+    },
 	emploieHtml:function(monm){
         var html="<div class='panel panel-default'><div class='panel-body'><table class='table'><thead></thead>";
         html+="<tbody><tr><td>Salaire des cadres</td><td>FCFA</td>";

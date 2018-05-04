@@ -13,12 +13,19 @@ var modeleManager= {
 
     },
     ammortGen : function (ammortissement) {
+        var total=[0,0,0,0,0];
         var generalAmort = [];
         for (var i = 0; i < ammortissement.length; i++) {
             for (var j = 0; j < ammortissement[i].chargeAmorti.length; j++) {
                 generalAmort.push(ammortissement[i].chargeAmorti[j]);
+                total[j]=total[j]+ammortissement[i].chargeAmorti[j];
             }
             generalAmort.push("change");
+
+        }
+
+        for(var i=0;i<total.length;i++){
+            generalAmort.push(total[i]);
         }
         return generalAmort;
 
@@ -39,7 +46,7 @@ var modeleManager= {
         }
 
         for (var i = 0; i < 5; i++) {
-            tva.push((mE.petrole * pibchoix) / mP.impot.tva_petrole);
+            tva.push((mE.petrole * pibchoix) / (mP.impot.tva_petrole/100));
         }
 
         return{
@@ -88,4 +95,82 @@ var modeleManager= {
         };
         return employer;
     },
+    taxe_creance : function (mE, mP, pibchoix) {
+        //-------------------------------
+        var chargeFin = [];
+        var taux = [];
+        var irc = [];
+        //contribution forfaitaires
+
+        for (var i = 0; i < 5; i++) {
+            chargeFin.push(Math.trunc(mE.chargeFinanciere * pibchoix));
+        }
+
+        for (var i = 0; i < 5; i++) {
+            taux.push(mP.impot.irc);
+        }
+
+        for (var i = 0; i < 5; i++) {
+            irc.push(Math.trunc((mE.chargeFinanciere * pibchoix) / (mP.impot.irc/100)));
+        }
+
+        return{
+            chargeFinance:chargeFin,
+            taux:taux,
+            irc:irc
+
+        }
+        //--------------------------------------
+    },
+   /* comptaresult : function(mE,pibchoix,mod){
+        let i;
+        let vente = [];
+        let achats = [];
+        let petrole=[];
+        let tva_petrole=[];
+        let depense_admin=[];
+        let depense_pub=[];
+        let depense_entretien=[];
+        let salaire_cadre=[];
+        let salaire_secreataire=[];
+        let salaire_ouvrier=[];
+        let CFE=[]
+        let chargeFinancier=[];
+        let amortissement=[];
+        let benefice_comptable = [];
+        let taux_marge_avant__IS_ISMF = [];
+        for (i = 0; i < 5; i++) {
+            vente.push(Math.trunc(mE.vente * pibchoix));
+        }
+        for (i = 0; i < 5; i++) {
+            achats.push(Math.trunc(mE.achat * pibchoix));
+        }
+        for (i = 0; i < 5; i++) {
+            petrole.push(Math.trunc(mE.petrole * pibchoix));
+        }
+
+        tva_petrole=mod.taxeAjout.tva;
+        for (i = 0; i < 5; i++) {
+            depense_admin.push(Math.trunc(mE.depenseAdministrative * pibchoix));
+        }
+        for (i = 0; i < 5; i++) {
+            depense_pub.push(Math.trunc(mE.depensePub * pibchoix));
+        }
+        for (i = 0; i < 5; i++) {
+            depense_entretien.push(Math.trunc(mE.depenseEntretien * pibchoix));
+        }
+
+            salaire_cadre=mod.employer.salaire_cadre;
+            salaire_secreataire=mod.employer.salaire_secretaire;
+            salaire_ouvrier=mod.employer.salaire_ouvrier;
+            CFE=mod.employer.reel_CFE;
+        for (i = 0; i < 5; i++) {
+            chargeFinancier.push(Math.trunc(mE.chargeFinanciere * pibchoix));
+        }
+        amortissement=mod.
+
+
+
+
+    }*/
 }

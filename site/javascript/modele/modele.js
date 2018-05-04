@@ -8,6 +8,7 @@ modele= function(){
 	var generalAmort=modeleManager.ammortGen(amortissement);
     var taxeValAjout=modeleManager.taxe_val_ajout(mE,mP,pibchoix);
     var employer=modeleManager.contributioForfEmploie(mE,mP,pibchoix);
+    var taxeCreance=modeleManager.taxe_creance(mE,mP,pibchoix);
 	//-------------------------------
 	//amortissement exceptionnel
 	var invesAmortex;
@@ -23,8 +24,10 @@ modele= function(){
 		amortissement:amortissement,
         taxeAjout:taxeValAjout,
 		employer:employer,
+        taxeCreance:taxeCreance,
 		getAmmortHtml:function(){
     		var cpt=0;
+
 
             var html="<div class='panel panel-info'><div class=\"panel-heading\">ammortissement</div><div class=\"panel-body\">";
 			html+="<table class='table'><thead></thead></thead><tbody><tr><td>Construction</td><td>FCFA</td>";
@@ -47,9 +50,9 @@ modele= function(){
                         case 3 :
                             html+="<td>bureau</td><td>FCFA</td>";
                             break;
-                        /*default:
-                            html+="<td>Equipement</td><td>FCFA</td>";
-                            break;*/
+                        default:
+                            html+="<td>total</td><td>FCFA</td>";
+                            break;
 					}
 					cpt++;
                 }

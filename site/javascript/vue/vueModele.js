@@ -11,3 +11,4 @@ for(var i=0;i<monm.amortissement.length;i++){
 document.getElementById("pet").innerHTML=genererVue.petroleHtml(monm.taxeAjout);
 document.getElementById("ammort").innerHTML=amm;
 document.getElementById("emp").innerHTML=genererVue.emploieHtml(monm);
+document.getElementById("creance").innerHTML=genererVue.chargeFinancierHtml(monm.taxeCreance);
