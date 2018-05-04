@@ -102,7 +102,7 @@ var genererVue={
 		result+="</div></div></div>";
 		return result
 	},
-	donnéesEconomique:function(donne,pin,pays,regimE){
+	donneesEconomique:function(donne,pin,pays,regimE){
 		//mis en place des données economiques
 		//pays
 		var result="<div class='panel panel-default'><div class='panel-heading'><h1>données economiques</h1></div>";
@@ -151,7 +151,7 @@ var genererVue={
 		return "<p> Pour les amortissemEnt exceptionnels, le taux depend de l'investissemEnts, il y a une limitation par rapport au bénéfice annuels et a donc une durée comptai en année";
 		
 	},
-	donnéesFiscal:function(){
+	donneesFiscal:function(){
 		 //mis en place des données fiscales
 		var result="<div class='panel panel-default'><div class='panel-heading'><h1>données fiscales</h1></div>";
 		result+="<div class='panel-body'>";
@@ -169,8 +169,8 @@ var genererVue={
 	},
 	bodyHtml:function(donne,pin,pays,regimE){
 		var bodyglo= "<div class='container'><div class='row'><div class='col-sm-10'>"+this.resultatHtml(regimE);
-		bodyglo+=this.donnéesEconomique(donne,pin,pays,regimE);
-		bodyglo+=this.donnéesFiscal()+"</div>";
+		bodyglo+=this.donneesEconomique(donne,pin,pays,regimE);
+		bodyglo+=this.donneesFiscal()+"</div>";
 		return bodyglo;
 		
 	},
@@ -193,7 +193,7 @@ var genererVue={
 			mE=fabrique.entreprise(donne);
 			console.log(pays);
 			var randPays=mesPays();
-			console.log(randPays.length)
+			console.log(randPays.length);
 			for(var i=0;i<randPays.length;i++){
 				if(randPays[i].nom==pays){
 					console.log("vrai");
@@ -213,4 +213,4 @@ var genererVue={
 			//prompt(global)
 			return result;
 	}
-}
+};

@@ -66,41 +66,60 @@ var fabrique={
 		else{
 			alert("pas encore fait")
 		}
-		return
+
 		
 	},
-	armortirModele:function(prix,durLin,coefdegr){
-		var dureeRestante=[durLin];
-		var baseAmortissable=[prix];
+	armortirModele:function(prix,durLin,coef,nom){
+		var dureeRestante=[];
+		var  baseAmortissable=[];
+        var tauxLineaire=[];
+        var tauxDegressif=[];
+        var chargeAmorti=[];
+        var purcent;
+        var coefdegr;
+        if(nom=="equipement"){
+        	coefdegr=coef;
+		}
+		else{
+        	coefdegr=1;
+		}
+		dureeRestante.push(durLin);
+		baseAmortissable.push(Math.trunc(prix));
 		if(durLin>0){
-			var tauxLineaire=[(1/durLin)*100];	
-		}else{var tauxLineaire=[0];}
-		if(durLin=0){
-			var tauxDegressif=[0];
+			tauxLineaire.push(Math.round(((1/durLin)*100)*100)/100);
+		}else{tauxLineaire.push(0);}
+		if(durLin==0){
+			tauxDegressif.push(0);
 		}else {
-			if(tauxLineaire[0]=100){
-				var tauxDegressif=[100];
+			if(tauxLineaire[0]==100){
+				tauxDegressif.push(100);
 			}
 			else{
-				var tauxDegressif=[durLin*coefdegr];
+				if(coefdegr*tauxLineaire[0]>tauxLineaire[0]){
+					tauxDegressif.push(Math.round((coefdegr*(tauxLineaire[0]))*100)/100);
+				}
+				else{
+                    tauxDegressif.push(tauxLineaire[0])
+				}
 			}
 		}
-		var chargeAmorti=[baseAmortissable[0]*tauxDegressif[0]];
+		chargeAmorti.push(Math.trunc(baseAmortissable[0]*(tauxDegressif[0]/100)));
 		for(var i=1; i<5;i++){
+			console.log(dureeRestante[i-1]-1);
 			if(dureeRestante[i-1]>0){
 					dureeRestante.push(dureeRestante[i-1]-1);
 			}
 			else{
 				dureeRestante.push(0);
 			}
-			baseAmortissable.push(baseAmortissable[i-1]-chargeAmorti[i-1]);
+			baseAmortissable.push(Math.trunc(baseAmortissable[i-1]-chargeAmorti[i-1]));
 			if(dureeRestante[i]>0){
-				tauxLineaire.push((1/dureeRestante[i])*100);
+				tauxLineaire.push(Math.round(((1/dureeRestante[i])*100)*100)/100);
 			}
 			else{
 					tauxLineaire.push(0);
 			}
-			if(dureeRestante[i]=0){
+			if(dureeRestante[i]==0){
 				tauxDegressif.push(0);
 			}
 			else{
@@ -109,14 +128,16 @@ var fabrique={
 				}
 				else{
 					if(coefdegr*tauxLineaire[0]>tauxLineaire[i]){
-						tauxDegressif.push(durLin*coefdegr);
+						tauxDegressif.push(Math.round((durLin*coefdegr)*100)/100);
 					}
 					else{
 						tauxDegressif.push(tauxLineaire[i]);
 					}
 				}
 			}
-			chargeAmorti.push(baseAmortissable[i]*tauxDegressif[i]);
+			purcent=tauxDegressif[i]/100;
+			console.log(baseAmortissable[i]*purcent);
+			chargeAmorti.push(Math.trunc(baseAmortissable[i]*purcent));
 		}
 	
 		return{
@@ -125,6 +146,40 @@ var fabrique={
 			tauxLineaire:tauxLineaire,
 			tauxDegressif:tauxDegressif,
 			chargeAmorti:chargeAmorti,
+			nom:nom,
+			getHtml:function(){
+				/*<div class='panel panel-default'>
+  <div class="panel-heading">Panel Heading</div>
+  <div class="panel-body">Panel Content</div>
+</div>*/
+				var html="<div class='panel panel-info'><div class=\"panel-heading\">";
+				html+="<table class='table'><thead><tr><th>"+this.nom+"</th><th>FCFA</th><th>"+this.baseAmortissable[0]+"</th></tr></thead>";
+				html+="<tbody><tr><td>duree linneaire</td><td>annee</td><td>"+this.dureeRestante[0]+"</td></tr>";
+            	html+="<tr><td>coef degressif</td><td>coef</td><td>"+coefdegr+"</td></tr></tbody></table>";
+            	html+="</div> <div class='panel-body'>";
+                html+="<table class='table'><thead><tr><th>duree restante</th><th>Annee</th>";
+                for(var i=0;i<5;i++){
+                    html+="<th>"+this.dureeRestante[i]+"</th>";
+                }
+                html+="</thead><tbody><tr><td>Base Amortissable</td><td>FCFA</td>";
+                for(var i=0;i<5;i++){
+                    html+="<td>"+this.baseAmortissable[i]+"</td>";
+                }
+                html+="</tr><tr><td>Taux Unitaire</td><td>%</td>";
+                for(var i=0;i<5;i++){
+                    html+="<td>"+this.tauxLineaire[i]+"</td>";
+                }
+                html+="</tr><tr><td>Taux degressif</td><td>%</td>";
+                for(var i=0;i<5;i++){
+                    html+="<td>"+this.tauxDegressif[i]+"</td>";
+                }
+                html+="</tr><tr><td>charge Amortissement</td><td>FCFAS</td>";
+                for(var i=0;i<5;i++){
+                    html+="<td>"+this.chargeAmorti[i]+"</td>";
+                }
+                html+="</tr></tbody></table></div></div>";
+                return html;
+			}
 		};
 	},
 };
