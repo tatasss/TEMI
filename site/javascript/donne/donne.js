@@ -9,7 +9,7 @@ donne=function(){
         if(randPays[i].nom==pays){
 
             var mP=randPays[i];
-            localStorage.setItem('mP',mP);
+            //localStorage.setItem('mP',mP);
             break;
 
         }
@@ -32,7 +32,7 @@ donne=function(){
         mE:mE,
         mP:mP,
         pibChoisi:pibChoisi,
-
+        regime:regime
 
     }
 }

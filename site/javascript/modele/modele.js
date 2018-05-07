@@ -3,65 +3,56 @@ modele= function(){
     var mE=donne().mE;
     var mP=donne().mP;
     var pibchoix= donne().pibChoisi;
-	var investissement=modeleManager.investissementModele(mE,pibchoix);
+	var investissement=Math.trunc(modeleManager.investissementModele(mE,pibchoix));
 	var amortissement=modeleManager.ammortissment(mE,mP,pibchoix);
 	var generalAmort=modeleManager.ammortGen(amortissement);
     var taxeValAjout=modeleManager.taxe_val_ajout(mE,mP,pibchoix);
-    var employer=modeleManager.contributioForfEmploie(mE,mP,pibchoix);
-    var taxeCreance=modeleManager.taxe_creance(mE,mP,pibchoix);
-	//-------------------------------
-	//amortissement exceptionnel
-	var invesAmortex;
-	var tauxAmortEx;
-	var limitationEx;
-	var duree;
-	//Un tableau
-	//Taxe maintenant
+    var emploi=modeleManager.contributionForfEmploie(mE,mP,pibchoix);
 
+    var taxeCreance=modeleManager.taxe_creance(mE,mP,pibchoix);
+    var resultCompta=modeleManager.comptableResult(mE,pibchoix,taxeValAjout.tva,emploi.salaire_cadre,emploi.salaire_secretaire,emploi.salaire_ouvrier,emploi.reel_CFE,generalAmort);
+    var ammortExcep=modeleManager.ammortExcept(mP,resultCompta.benefice_comptable,donne().regime);
+    var resultImpot=modeleManager.impotResult(resultCompta.benefice_comptable,ammortExcep.chargeAmorti);
+    var impotSociete=[];
+    var impotIMF=[];
+    var impotIRVM=[];
+    var actualisation=[];
+
+    for (var i=0;i<5;i++){
+        actualisation.push(Math.round(((1/Math.pow(1+(mE.actuali/100),i))*100)*10)/10);
+    }
+    for (var i=0;i<5;i++){
+        impotSociete.push(resultImpot.benImpo[i]*(mP.impots.isImp/100));
+        //console.log(resultImpot.benImpo[i]*mP.impots.isImp)
+    }
+    for (var i=0;i<5;i++){
+        impotIMF.push(Math.round(resultCompta.vente[i]*(mP.impots.imf/100)));
+        //console.log(resultImpot.benImpo[i]*mP.impots.isImp)
+    } for (var i=0;i<5;i++){
+        impotIRVM.push(Math.round(resultCompta.benefice_comptable[i]*(mP.impots.irvm/100)*(mE.dividende/100)));
+
+        //console.log(impotIRVM[i]);
+    }
+    console.log(emploi);
+    var isimf=modeleManager.iSIMFtab(impotSociete,impotIMF);
+    var impotTaxeCourent=modeleManager.impotTaxeCourent(emploi,isimf,impotIRVM,taxeCreance,taxeValAjout);
 
     return{
     	investissement:investissement,
+        amortissementGeneral:generalAmort,
 		amortissement:amortissement,
         taxeAjout:taxeValAjout,
-		employer:employer,
+		employer:emploi,
+        impotIMF:impotIMF,
+        impotIRVM:impotIRVM,
+        ammortExcep:ammortExcep,
         taxeCreance:taxeCreance,
-		getAmmortHtml:function(){
-    		var cpt=0;
-
-
-            var html="<div class='panel panel-info'><div class=\"panel-heading\">ammortissement</div><div class=\"panel-body\">";
-			html+="<table class='table'><thead></thead></thead><tbody><tr><td>Construction</td><td>FCFA</td>";
-			for(var i=0;i<generalAmort.length;i++) {
-                if (generalAmort[i] != "change") {
-                    html += "<td>" + generalAmort[i] + "</td>";
-                }
-                else {
-                    html += "</tr><tr>";
-                    switch (cpt){
-						case 0 :
-							html+="<td>Equipement</td><td>FCFA</td>";
-							break;
-                        case 1 :
-                            html+="<td>Camion</td><td>FCFA</td>";
-                            break;
-                        case 2 :
-                            html+="<td>informatique</td><td>FCFA</td>";
-                            break;
-                        case 3 :
-                            html+="<td>bureau</td><td>FCFA</td>";
-                            break;
-                        default:
-                            html+="<td>total</td><td>FCFA</td>";
-                            break;
-					}
-					cpt++;
-                }
-            }
-            html+="</tr></tbody></table></div></div>";
-
-
-		return html;
-		}
+        resultCompta:resultCompta,
+        resultImpot:resultImpot,
+        actualisation:actualisation,
+        impotSociete:impotSociete,
+        isImf:isimf,
+        impotTaxeCourent:impotTaxeCourent,
 	}
 
 	
