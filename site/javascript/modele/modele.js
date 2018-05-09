@@ -20,6 +20,7 @@ modele= function(){
 
     for (var i=0;i<5;i++){
         actualisation.push(Math.round(((1/Math.pow(1+(mE.actuali/100),i))*100)*10)/10);
+       // console.log(Math.round(((1/Math.pow(1+(mE.actuali/100),i))*100)*10)/10);
     }
     for (var i=0;i<5;i++){
         impotSociete.push(resultImpot.benImpo[i]*(mP.impots.isImp/100));
@@ -33,10 +34,20 @@ modele= function(){
 
         //console.log(impotIRVM[i]);
     }
-    console.log(emploi);
+    //console.log(emploi);
     var isimf=modeleManager.iSIMFtab(impotSociete,impotIMF);
-    var impotTaxeCourent=modeleManager.impotTaxeCourent(emploi,isimf,impotIRVM,taxeCreance,taxeValAjout);
-
+    var impotTaxeCourent=modeleManager.impotTaxeCourent(mE.actuali,emploi,isimf,impotIRVM,taxeCreance,taxeValAjout);
+    var impotTaxeActu=modeleManager.impotTaxeActu(actualisation,emploi,isimf,impotIRVM,taxeCreance,taxeValAjout);
+    var fluxTresSansImp=modeleManager.fluxTresoriesI(mE,pibchoix,resultCompta,actualisation);
+    var fluxeffMoyC=modeleManager.tauxEffectifCour(fluxTresSansImp.courant,impotTaxeCourent);
+    var fluxeffMoyA=modeleManager.tauxEffectifCour(fluxTresSansImp.actu,impotTaxeActu);
+    var fluxTresSansISIMF=modeleManager.fluxTresoriesImp(fluxTresSansImp,impotTaxeCourent.isimf,impotTaxeActu.isimf,mE.actuali);
+    var fluxTresApresImpot=modeleManager.fluxTresoriesImp(fluxTresSansImp,impotTaxeCourent.total,impotTaxeActu.total,mE.actuali);
+    var tauxRendInterneSImp=modeleManager.tauxRendementInterne(fluxTresSansImp.courant);
+    var tauxRendInterneSISIMF=modeleManager.tauxRendementInterne(fluxTresSansISIMF.courant);
+    var tauxRendInterneAImp=modeleManager.tauxRendementInterne(fluxTresApresImpot.courant);
+    var tauxEffMargImpApIsImf=modeleManager.tauxEffectifMarginaux(tauxRendInterneSImp,tauxRendInterneSISIMF);
+    var tauxEffMargImpApImp=modeleManager.tauxEffectifMarginaux(tauxRendInterneSImp,tauxRendInterneAImp);
     return{
     	investissement:investissement,
         amortissementGeneral:generalAmort,
@@ -53,6 +64,17 @@ modele= function(){
         impotSociete:impotSociete,
         isImf:isimf,
         impotTaxeCourent:impotTaxeCourent,
+        impotTaxeActu:impotTaxeActu,
+        fluxTresSansImp:fluxTresSansImp,
+        fluxeffMoyCourent:fluxeffMoyC,
+        fluxeffMoyActualise:fluxeffMoyA,
+        fluxTresSansISIMF:fluxTresSansISIMF,
+        fluxTresApresImpot:fluxTresApresImpot,
+        tauxRendInterneSImp:tauxRendInterneSImp,
+        tauxRendInterneSISIMF:tauxRendInterneSISIMF,
+        tauxRendInterneAImp:tauxRendInterneAImp,
+        tauxEffMargImpApIsImf:tauxEffMargImpApIsImf,
+        tauxEffMargImpApImp:tauxEffMargImpApImp
 	}
 
 	

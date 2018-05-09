@@ -544,12 +544,100 @@ var genererVue={
         return html;
 
     },
-	tabImpotEtTaxe:function(mom){
+	tabImpotEtTaxe:function(monm){
+	    //console.log(monm)
+	    //console.log("on rentre dans impot et taxe");
         var html="<div class='panel panel-default'><div class='panel-body'><table class='table'>";
         html+="<tbody>";
+        html+="<tr><td>CFE</td><td>FCFA</td>"
+        for(var i=0;i<monm.cfe.length;i++){
+            html+="<td>"+monm.cfe[i]+"</td>";
+        }
+        html+="</tr><tr><td>IS/IMF</td><td>FCFA</td>"
+        for(var i=0;i<monm.isimf.length;i++){
+            html+="<td>"+monm.isimf[i]+"</td>";
+        }
+        html+="</tr><tr><td>IRVM</td><td>FCFA</td>"
+        for(var i=0;i<monm.irvm.length;i++){
+            html+="<td>"+monm.irvm[i]+"</td>";
+        }
+        html+="</tr><tr><td>IRC</td><td>FCFA</td>"
+        for(var i=0;i<monm.irc.length;i++){
+            html+="<td>"+monm.irc[i]+"</td>";
+        }
+        html+="</tr><tr><td>TVA Petrole</td><td>FCFA</td>"
+        for(var i=0;i<monm.tvaPetrole.length;i++){
+            html+="<td>"+monm.tvaPetrole[i]+"</td>";
+        }
+        html+="</tr><tr><td>Total</td><td>FCFA</td>"
+        for(var i=0;i<monm.total.length;i++){
+            html+="<td>"+monm.total[i]+"</td>";
+        }
+        html+="</tr></tbody></table></div></div>";
+        return html;
 
 
-	}
+
+	},
+    tabTauxEffectifMoy:function(monm){
+        //console.log(monm)
+        //console.log("on rentre dans impot et taxe");
+        var html="<div class='panel panel-default'><div class='panel-body'><table class='table'>";
+        html+="<tbody>";
+        html+="<tr><td>CFE</td><td>% flux de trésorie</td>"
+        for(var i=0;i<monm.cfe.length;i++){
+            html+="<td>"+monm.cfe[i]+"</td>";
+        }
+        html+="</tr><tr><td>IS/IMF</td><td>% flux de trésorie</td>"
+        for(var i=0;i<monm.isimf.length;i++){
+            html+="<td>"+monm.isimf[i]+"</td>";
+        }
+        html+="</tr><tr><td>IRVM</td><td>% flux de trésorie</td>"
+        for(var i=0;i<monm.irvm.length;i++){
+            html+="<td>"+monm.irvm[i]+"</td>";
+        }
+        html+="</tr><tr><td>IRC</td><td>% flux de trésorie</td>"
+        for(var i=0;i<monm.irc.length;i++){
+            html+="<td>"+monm.irc[i]+"</td>";
+        }
+        html+="</tr><tr><td>TVA Petrole</td><td>% flux de trésorie</td>"
+        for(var i=0;i<monm.tvaPetrole.length;i++){
+            html+="<td>"+monm.tvaPetrole[i]+"</td>";
+        }
+        html+="</tr><tr><td>Total</td><td>% flux de trésorie</td>"
+        for(var i=0;i<monm.total.length;i++){
+            html+="<td>"+monm.total[i]+"</td>";
+        }
+        html+="</tr></tbody></table></div></div>";
+        return html;
+
+
+
+    },
+	tabFluxTresorie:function(tab){
+        var html="<div class='panel panel-default'><div class='panel-body'><table class='table'>";
+        html+="<tbody>";
+        html+="<tr><td>Courants</td><td>FCFA</td>";
+        for(var i=0;i<tab.courant.length;i++){
+            html+="<td>"+tab.courant[i]+"</td>";
+        }
+        html+="</tr><tr><td>Actualisés</td><td>FCFA</td>"
+        for(var i=0;i<tab.actu.length;i++){
+            html+="<td>"+tab.actu[i]+"</td>";
+        }
+        html+="</tr></tbody></table></div></div>";
+        return html;
+    },
+    tauxRendementInt:function(tab){
+        var html="<div class='panel panel-default'><div class='panel-body'><table class='table'>";
+        html+="<tbody>";
+        html+="<tr><td>Courants</td><td>%</td>";
+        for(var i=0;i<tab.length;i++){
+            html+="<td>"+tab[i]+"</td>";
+        }
+        html+="</tr></tbody></table></div></div>";
+        return html;
+    }
 
 };
 
