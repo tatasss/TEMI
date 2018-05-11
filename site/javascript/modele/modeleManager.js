@@ -30,7 +30,7 @@ var modeleManager= {
         return generalAmort;
 
     },
-    taxe_val_ajout : function (mE, mP, pibchoix) {
+    taxe_val_ajout : function (mE, impot, pibchoix) {
         //-------------------------------
         var petrole = [];
         var taux = [];
@@ -42,13 +42,15 @@ var modeleManager= {
         }
 
         for (var i = 0; i < 5; i++) {
-            taux.push(mP.impots.tva_petrole);
+            taux.push(impot.tvaPetrole);
         }
 
         for (var i = 0; i < 5; i++) {
-            tva.push((mE.petrole * pibchoix) / (mP.impots.tva_petrole/100));
+            tva.push((mE.petrole * pibchoix)*(impot.tvaPetrole/100));
         }
-
+    if(tva.length===6){
+            tva.pop();
+    }
         return{
             petrole:petrole,
             taux:taux,
@@ -57,18 +59,18 @@ var modeleManager= {
         }
         //--------------------------------------
     },
-    contributionForfEmploie :function (mE, mP, pibchoix) {
+    contributionForfEmploie :function (mE, mP, pibchoix,impot) {
         var salaireCadre = []
         for (var i = 0; i < 5; i++) {
-            salaireCadre.push(Math.trunc(mE.cadre * mE.indice_cadre * pibchoix));
+            salaireCadre.push(Math.round(mE.cadre * mE.indice_cadre * pibchoix));
         }
         var salaireSecretaire = []
         for (var i = 0; i < 5; i++) {
-            salaireSecretaire.push(Math.trunc(mE.secretaire * mE.indice_secretaire * pibchoix));
+            salaireSecretaire.push(Math.round(mE.secretaire * mE.indice_secretaire * pibchoix));
         }
         var salaireOuvrier = []
         for (var i = 0; i < 5; i++) {
-            salaireOuvrier.push(Math.trunc(mE.ouvrier * mE.indice_ouvrier * pibchoix));
+            salaireOuvrier.push(Math.round(mE.ouvrier * mE.indice_ouvrier * pibchoix));
         }
         var masseSalarial = []
         for (var i = 0; i < 5; i++) {
@@ -76,11 +78,12 @@ var modeleManager= {
         }
         var taux = [];
         for (var i = 0; i < 5; i++) {
-            taux.push(mP.impots.cfe);
+            taux.push(impot.cfe);
+
         }
         var reelCFE = [];
         for (var i = 0; i < 5; i++) {
-            reelCFE.push(Math.trunc(masseSalarial[i] * (taux[i] / 100)));
+            reelCFE.push(Math.round(masseSalarial[i] * (taux[i] / 100)));
         }
 
 
@@ -95,7 +98,120 @@ var modeleManager= {
         };
         return employer;
     },
-    taxe_creance : function (mE, mP, pibchoix) {
+    selectTaxe:function(mP){
+        //console.log ("on entre")
+        var cfe,is,imf,irvm,irc,tvaPetrole;
+
+
+        if(donne.get().regime=="gen"){
+            cfe=mP.impots.cfe;
+            is=mP.impots.isImp;
+            imf=mP.impots.imf;
+            irvm=mP.impots.irvm;
+            irc=mP.impots.irc;
+            tvaPetrole=mP.impots.tva_petrole;
+
+        }
+        else{
+            if(mP.investissement.duree<5){
+                cfe=mP.impots.cfe;
+                is=mP.impots.isImp;
+                imf=mP.impots.imf;
+                irvm=mP.impots.irvm;
+                irc=mP.impots.irc;
+                tvaPetrole=mP.impots.tva_petrole;
+            }
+            else{
+                if(mP.investissement.cfe.taux!=null){
+                    cfe=mP.investissement.cfe.taux;
+                }
+                else{
+                    if(mP.investissement.cfe.reducexo!=null){
+                        cfe=((1-(mP.investissement.cfe.reducexo/100))*(mP.impots.cfe/100))*100;
+                    }
+                    else{
+                        cfe=mP.impots.cfe;
+                    }
+
+                }
+                if(mP.investissement.isamort.taux!=null){
+                    is=mP.investissement.isamort.taux;
+                }
+                else{
+                    if(mP.investissement.isamort.reducexo!=null){
+
+                        is=Math.round((((1-(mP.investissement.isamort.reducexo/100))*(mP.impots.isImp/100))*100)*100)/100;
+                        //console.log((1-(mP.investissement.isamort.reducexo/100)));
+                    }
+                    else{
+                        is=mP.impots.isImp;
+                    }
+
+                }
+                if(mP.investissement.imf.taux!=null){
+                    imf=mP.investissement.imf.taux;
+                }
+                else{
+                    if(mP.investissement.imf.reducexo!=null){
+                        imf=((1-(mP.investissement.imf.reducexo/100))*(mP.impots.imf/100))*100;
+                    }
+                    else{
+                        imf=mP.impots.imf;
+                    }
+
+                }
+                if(mP.investissement.irvm.taux!=null){
+                    irvm=mP.investissement.irvm.taux;
+                }
+                else{
+                    if(mP.investissement.irvm.reducexo!=null){
+                        irvm=((1-(mP.investissement.irvm.reducexo/100))*(mP.impots.irvm/100))*100;
+                    }
+                    else{
+                        irvm=mP.impots.irvm;
+                    }
+
+                }
+                if(mP.investissement.irc.taux!=null){
+                    irc=mP.investissement.irc.taux;
+                }
+                else{
+                    if(mP.investissement.irc.reducexo!=null){
+                        irc=((1-(mP.investissement.irc.reducexo/100))*(mP.impots.irc/100))*100;
+                    }
+                    else{
+                        irc=mP.impots.irc;
+                    }
+
+                }
+                if(mP.investissement.tvaPetrole.taux!=null){
+                    tvaPetrole=mP.investissement.tvaPetrole.taux;
+                }
+                else{
+                    if(mP.investissement.irc.reducexo!=null){
+                        tvaPetrole=((1-(mP.investissement.tvaPetrole.reducexo/100))*(mP.impots.tva_petrole/100))*100;
+                    }
+                    else{
+                        tvaPetrole=mP.impots.tva_petrole;
+                    }
+
+                }
+            }
+
+
+        }
+        //console.log(is);
+        return {
+            cfe: cfe,
+            is: is,
+            imf: imf,
+            irvm: irvm,
+            irc: irc,
+            tvaPetrole: tvaPetrole,
+        }
+
+    },
+    taxe_creance : function (mE, impot, pibchoix) {
         //-------------------------------
         var chargeFin = [];
         var taux = [];
@@ -103,15 +219,15 @@ var modeleManager= {
         //contribution forfaitaires
 
         for (var i = 0; i < 5; i++) {
-            chargeFin.push(Math.trunc(mE.chargeFinanciere * pibchoix));
+            chargeFin.push(Math.round(mE.chargeFinanciere * pibchoix));
         }
 
         for (var i = 0; i < 5; i++) {
-            taux.push(mP.impots.irc);
+            taux.push(impot.irc);
         }
 
         for (var i = 0; i < 5; i++) {
-            irc.push(Math.trunc((mE.chargeFinanciere * pibchoix) * (mP.impots.irc/100)));
+            irc.push(Math.round((mE.chargeFinanciere * pibchoix) * (impot.irc/100)));
         }
 
         return{
@@ -159,13 +275,13 @@ var modeleManager= {
         }
 
         for ( i = 0; i < 5; i++) {
-            vente.push(Math.trunc(mE.vente * pibchoix));
-            achats.push(Math.trunc(mE.achat * pibchoix));
-            petrole.push(Math.trunc(mE.petrole * pibchoix));
-            depense_admin.push(Math.trunc(mE.depenseAdministrative * pibchoix));
-            depense_pub.push(Math.trunc(mE.depensePub * pibchoix));
-            depense_entretien.push(Math.trunc(mE.depenseEntretien * pibchoix));
-            chargeFinancier.push(Math.trunc(mE.chargeFinanciere * pibchoix));
+            vente.push(Math.round(mE.vente * pibchoix));
+            achats.push(Math.round(mE.achat * pibchoix));
+            petrole.push(Math.round(mE.petrole * pibchoix));
+            depense_admin.push(Math.round(mE.depenseAdministrative * pibchoix));
+            depense_pub.push(Math.round(mE.depensePub * pibchoix));
+            depense_entretien.push(Math.round(mE.depenseEntretien * pibchoix));
+            chargeFinancier.push(Math.round(mE.chargeFinanciere * pibchoix));
 
         }
         for ( i = 0; i < 5; i++) {
@@ -208,7 +324,7 @@ var modeleManager= {
     },
     ammortExcept:function(mP,benCompta,regime){
         //amortissement exceptionnel
-        var investissment=Math.round((donne().mE.terrain+donne().mE.construction+donne().mE.equipement+donne().mE.camion+donne().mE.info+donne().mE.bureau)*donne().pibChoisi);
+        var investissment=Math.round((donne.get().mE.terrain+donne.get().mE.construction+donne.get().mE.equipement+donne.get().mE.camion+donne.get().mE.info+donne.get().mE.bureau)*donne.get().pibChoisi);
         var taux;
         var limitation;
         var duree;
@@ -296,13 +412,18 @@ var modeleManager= {
     },
     impotTaxeCourent:function(actu,employer,isImf,impotIRVM,taxeCreance,taxeAjout){
 
-        var cfe=employer.reel_CFE;
-        var isimf=isImf;
-        var irvm=impotIRVM;
-        var irc=taxeCreance.irc;
-        var tvaPetrole=taxeAjout.tva;
+        var cfe=[];
+        var isimf=[];
+        var irvm=[];
+        var irc=[];
+        var tvaPetrole=[];
         var total=[];
         for(var i=0;i<5;i++){
+            cfe.push(employer.reel_CFE[i]);
+            isimf.push(isImf[i]);
+            irvm.push(impotIRVM[i]);
+            irc.push(taxeCreance.irc[i]);
+            tvaPetrole.push(taxeAjout.tva[i]);
             total.push(Math.round(cfe[i]+isimf[i]+irc[i]+irvm[i]+tvaPetrole[i]));
         }
         cfe.push(Math.round(this.van(actu/100,cfe)));

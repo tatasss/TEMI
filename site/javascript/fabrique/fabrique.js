@@ -30,8 +30,8 @@ var fabrique={
 			bureau:bureau,
 		}
 	},
-	entreprise : function(donne){
-		if(donne=="Djankov"){
+	entreprise : function(actu,marge){
+		/*if(donne=="Djankov"){*/
 			return{
 				nom:"Djankov",
 				terrain:30,
@@ -47,7 +47,7 @@ var fabrique={
 				detteLongTerme:43,
 				detteCourtTerme:55,
 				detteFournisseur:50,
-				achat:875,
+				achat:Math.round(1050/(1+marge/100)),
 				petrole:0,
 				depenseAdministrative:10,
 				depensePub:10.5,
@@ -61,21 +61,23 @@ var fabrique={
 				indice_secretaire:1.25,
 				indice_ouvrier:1,
 				dividende:50,
-				actuali:8
+				actuali:actu
 			}
-		}
+		/*}
 		else{
 			alert("pas encore fait")
 		}
 		return
-		
+		*/
 	},
-	investir:function(cfe,isammmort,imf,irvm){
+	investir:function(cfe,isammmort,imf,irvm,irc,tvaPetrole){
 		return{
 			cfe:cfe,
 			isamort:isammmort,
 			imf:imf,
-			irvm:irvm
+			irvm:irvm,
+			irc:irc,
+			tvaPetrole:tvaPetrole
 		};
 	},
 	impotPays:function(duree,taux,reductonEcume){
@@ -103,33 +105,33 @@ var fabrique={
         var chargeAmorti=[];
         var purcent;
         var coefdegr;
-        if(nom=="Equipement"){
+        if(nom==="Equipement"){
         	coefdegr=coef;
 		}
 		else{
         	coefdegr=1;
 		}
 		dureeRestante.push(durLin);
-		baseAmortissable.push(Math.trunc(prix));
+		baseAmortissable.push(Math.round(prix));
 		if(durLin>0){
-			tauxLineaire.push(Math.round(((1/durLin)*100)*100)/100);
+			tauxLineaire.push(((1/durLin)*100));
 		}else{tauxLineaire.push(0);}
-		if(durLin==0){
+		if(durLin===0){
 			tauxDegressif.push(0);
 		}else {
-			if(tauxLineaire[0]==100){
+			if(tauxLineaire[0]===100){
 				tauxDegressif.push(100);
 			}
 			else{
 				if(coefdegr*tauxLineaire[0]>tauxLineaire[0]){
-					tauxDegressif.push(Math.round((coefdegr*(tauxLineaire[0]))*100)/100);
+					tauxDegressif.push((coefdegr*(tauxLineaire[0])));
 				}
 				else{
                     tauxDegressif.push(tauxLineaire[0])
 				}
 			}
 		}
-		chargeAmorti.push(Math.trunc(baseAmortissable[0]*(tauxDegressif[0]/100)));
+		chargeAmorti.push(Math.round(baseAmortissable[0]*(tauxDegressif[0]/100)));
 		for(var i=1; i<5;i++){
 
 			if(dureeRestante[i-1]>0){
@@ -138,9 +140,9 @@ var fabrique={
 			else{
 				dureeRestante.push(0);
 			}
-			baseAmortissable.push(Math.trunc(baseAmortissable[i-1]-chargeAmorti[i-1]));
+			baseAmortissable.push(baseAmortissable[i-1]-chargeAmorti[i-1]);
 			if(dureeRestante[i]>0){
-				tauxLineaire.push(Math.round(((1/dureeRestante[i])*100)*100)/100);
+				tauxLineaire.push(((1/dureeRestante[i])*100));
 			}
 			else{
 					tauxLineaire.push(0);
@@ -177,33 +179,25 @@ var fabrique={
 				/*<div class='panel panel-default'>
   <div class="panel-heading">Panel Heading</div>
   <div class="panel-body">Panel Content</div>
-</div>*/
-				var html="<div class='panel panel-info'><div class=\"panel-heading\">"
-				html+="<table class='table'><thead><tr><th>"+this.nom+"</th><th>FCFA</th><th>"+this.baseAmortissable[0]+"</th></tr></thead>";
-				html+="<tbody><tr><td>Durée linéaire</td><td>Année</td><td>"+this.dureeRestante[0]+"</td></tr>";
-            	html+="<tr><td>Coef dégréssif</td><td>Coef</td><td>"+coefdegr+"</td></tr></tbody></table>";
+</div>*/		var cote2=["Base amortissable</td><td>FCFA","Taux unitaire</td><td>%","Taux dégréssif</td><td>%","Charge amortissement</td><td>FCFAS"];
+				var html="<div class='panel panel-info'><div class=\"panel-heading\">";
+				var cote1=["Durée linéaire</td><td>Année","Coef dégréssif</td><td>Coef"];
+				var head="<thead><tr><th>"+this.nom+"</th><th>FCFA</th><th>"+this.baseAmortissable[0]+"</th></tr></thead>";
+				html+=bootstrap.tableSE(cote1,head,[this.dureeRestante[0]],[coefdegr]);
             	html+="</div> <div class='panel-body'>"
-                html+="<table class='table'><thead><tr><th>Durée restante</th><th>Annee</th>";
+                var head2="<thead><tr><th>Durée restante</th><th>Annee</th>";
                 for(var i=0;i<5;i++){
-                    html+="<th>"+this.dureeRestante[i]+"</th>";
+                    head2+="<th>"+this.dureeRestante[i]+"</th>";
                 }
-                html+="</thead><tbody><tr><td>Base amortissable</td><td>FCFA</td>";
-                for(var i=0;i<5;i++){
-                    html+="<td>"+this.baseAmortissable[i]+"</td>";
-                }
-                html+="</tr><tr><td>Taux unitaire</td><td>%</td>"
-                for(var i=0;i<5;i++){
-                    html+="<td>"+this.tauxLineaire[i]+"</td>";
-                }
-                html+="</tr><tr><td>Taux dégréssif</td><td>%</td>";
-                for(var i=0;i<5;i++){
-                    html+="<td>"+this.tauxDegressif[i]+"</td>";
-                }
-                html+="</tr><tr><td>Charge amortissement</td><td>FCFAS</td>";
-                for(var i=0;i<5;i++){
-                    html+="<td>"+this.chargeAmorti[i]+"</td>";
-                }
-                html+="</tr></tbody></table></div></div>";
+                head2+="</thead>";
+                var tauxLin=[];
+                var tauxDegr=[];
+                for(var i=0;i<this.tauxLineaire.length;i++){
+                	tauxLin.push(Math.round(this.tauxLineaire[i]*100)/100);
+                	tauxDegr.push(Math.round(this.tauxDegressif[i]*100)/100);
+				}
+                html+=bootstrap.tableSE(cote2,head2,this.baseAmortissable,tauxLin,tauxDegr,this.chargeAmorti);
+                html+="</div></div>";
                 return html;
 			}
 		};
@@ -211,18 +205,18 @@ var fabrique={
 };
 function mesPays(){
 	var Pays=[];
-    var ben=fabrique.investir(fabrique.impotPays(null,null,null),fabrique.isImpotPays(5,null,100,null,null),fabrique.impotPays(null,null,null),fabrique.impotPays(null,null,null));
-	var bfa=fabrique.investir(fabrique.impotPays(5,null,100),fabrique.isImpotPays(5,null,null,50,50),fabrique.impotPays(null,null,null),fabrique.impotPays(null,null,null));
-	var cmr=fabrique.investir(fabrique.impotPays(null,null,null),fabrique.isImpotPays(5,null,50,null,null),fabrique.impotPays(null,null,null),fabrique.impotPays(5,null,50));
-	var caf=fabrique.investir(fabrique.impotPays(null,null,null),fabrique.isImpotPays(3,null,100,null,null),fabrique.impotPays(null,null,null),fabrique.impotPays(null,null,null));
-	var cog=fabrique.investir(fabrique.impotPays(null,null,null),fabrique.isImpotPays(3,null,100,null,null),fabrique.impotPays(null,null,null),fabrique.impotPays(null,null,null));
-	var civ=fabrique.investir(fabrique.impotPays(7,2.7,null),fabrique.isImpotPays(7,null,100,null,null),fabrique.impotPays(null,null,null),fabrique.impotPays(null,null,null));
-    var gab=fabrique.investir(fabrique.impotPays(null,null,null),fabrique.isImpotPays(5,null,100,null,null),fabrique.impotPays(null,null,null),fabrique.impotPays(null,null,null));
-	var mli=fabrique.investir(fabrique.impotPays(null,null,null),fabrique.isImpotPays(7,25,null,null,null),fabrique.impotPays(null,null,null),fabrique.impotPays(null,null,null));
-    var ner=fabrique.investir(fabrique.impotPays(null,null,null),fabrique.isImpotPays(null,null,null,null,null),fabrique.impotPays(6,null,100),fabrique.impotPays(null,null,null));
-    var sen=fabrique.investir(fabrique.impotPays(5,null,100),fabrique.isImpotPays(5,null,null,40,50),fabrique.impotPays(null,null,null),fabrique.impotPays(null,null,null));
-    var tcd=fabrique.investir(fabrique.impotPays(null,null,null),fabrique.isImpotPays(5,null,100,null,null),fabrique.impotPays(5,null,100),fabrique.impotPays(null,null,null));
-    var tgo=fabrique.investir(fabrique.impotPays(5,2,null),fabrique.isImpotPays(2,40,50,null,null),fabrique.impotPays(null,null,null),fabrique.impotPays(null,null,null));
+    var ben=fabrique.investir(fabrique.impotPays(null,null,null),fabrique.isImpotPays(5,null,100,null,null),fabrique.impotPays(null,null,null),fabrique.impotPays(null,null,null),fabrique.impotPays(null,null,null),fabrique.impotPays(null,null,null));
+	var bfa=fabrique.investir(fabrique.impotPays(5,null,100),fabrique.isImpotPays(5,null,null,50,50),fabrique.impotPays(null,null,null),fabrique.impotPays(null,null,null),fabrique.impotPays(null,null,null),fabrique.impotPays(null,null,null));
+	var cmr=fabrique.investir(fabrique.impotPays(null,null,null),fabrique.isImpotPays(5,null,50,null,null),fabrique.impotPays(null,null,null),fabrique.impotPays(5,null,50),fabrique.impotPays(null,null,null),fabrique.impotPays(null,null,null));
+	var caf=fabrique.investir(fabrique.impotPays(null,null,null),fabrique.isImpotPays(3,null,100,null,null),fabrique.impotPays(null,null,null),fabrique.impotPays(null,null,null),fabrique.impotPays(null,null,null),fabrique.impotPays(null,null,null));
+	var cog=fabrique.investir(fabrique.impotPays(null,null,null),fabrique.isImpotPays(3,null,100,null,null),fabrique.impotPays(null,null,null),fabrique.impotPays(null,null,null),fabrique.impotPays(null,null,null),fabrique.impotPays(null,null,null));
+	var civ=fabrique.investir(fabrique.impotPays(7,2.2,null),fabrique.isImpotPays(7,null,100,null,null),fabrique.impotPays(null,null,null),fabrique.impotPays(null,null,null),fabrique.impotPays(null,null,null),fabrique.impotPays(null,null,null));
+    var gab=fabrique.investir(fabrique.impotPays(null,null,null),fabrique.isImpotPays(5,null,100,null,null),fabrique.impotPays(null,null,null),fabrique.impotPays(null,null,null),fabrique.impotPays(null,null,null),fabrique.impotPays(null,null,null));
+	var mli=fabrique.investir(fabrique.impotPays(null,null,null),fabrique.isImpotPays(7,25,null,null,null),fabrique.impotPays(null,null,null),fabrique.impotPays(null,null,null),fabrique.impotPays(null,null,null),fabrique.impotPays(null,null,null));
+    var ner=fabrique.investir(fabrique.impotPays(null,null,null),fabrique.isImpotPays(null,null,null,null,null),fabrique.impotPays(6,null,100),fabrique.impotPays(null,null,null),fabrique.impotPays(null,null,null),fabrique.impotPays(null,null,null));
+    var sen=fabrique.investir(fabrique.impotPays(5,null,100),fabrique.isImpotPays(5,null,null,40,50),fabrique.impotPays(null,null,null),fabrique.impotPays(null,null,null),fabrique.impotPays(null,null,null),fabrique.impotPays(null,null,null));
+    var tcd=fabrique.investir(fabrique.impotPays(null,null,null),fabrique.isImpotPays(5,null,100,null,null),fabrique.impotPays(5,null,100),fabrique.impotPays(null,null,null),fabrique.impotPays(null,null,null),fabrique.impotPays(null,null,null));
+    var tgo=fabrique.investir(fabrique.impotPays(5,2,null),fabrique.isImpotPays(5,null,2,40,50),fabrique.impotPays(null,null,null),fabrique.impotPays(null,null,null),fabrique.impotPays(null,null,null),fabrique.impotPays(null,null,null));
     Pays.push(fabrique.pays(446686.610403263,443922.063555894,"BEN","Benin",fabrique.impot(4,30,0.75,10,15,18),fabrique.ammortissement(20,10,2.5,3,2,10),ben));
 	Pays.push(fabrique.pays(352538.787047328,348520.408267351,"BFA","Burkina Faso",fabrique.impot(3,27.5,0.5,12.5,25,18),fabrique.ammortissement(20,10,2.5,3,2,10),bfa));
 	Pays.push(fabrique.pays(695841.358548324,689556.462319832,"CMR","Cameroun",fabrique.impot(2.5,33,2.2,16.5,16.5,19.25),fabrique.ammortissement(20,10,1,3,4,10),cmr));
@@ -234,7 +228,7 @@ function mesPays(){
 	Pays.push(fabrique.pays(9353479.8395634,4755006.03129549,"GNQ","Guinée équatoriale","pas d'impot","pas d'ammortissement","pas d'investissment"));
 	Pays.push(fabrique.pays(348319.045959615,328489.97164378,"MLI","Mali",fabrique.impot(7.5,30,1,10,13,18),fabrique.ammortissement(20,10,2.5,3,2,10),mli));
 	Pays.push(fabrique.pays(211299.740610518,205366.832074831,"NER","Niger",fabrique.impot(3,30,1.5,10,20,19),fabrique.ammortissement(20,10,1,4,2,10),ner));
-	Pays.push(fabrique.pays(527605.945821168,520918.056941268,"SEN","Sénégal",fabrique.impot(3,30,0.5,10,16,18),fabrique.ammortissement(20,10,2.5,3,2,10),sen));
+	Pays.push(fabrique.pays(527605.945821168,520918.056941268,"SEN","Senegal",fabrique.impot(3,30,0.5,10,16,18),fabrique.ammortissement(20,10,2.5,3,2,10),sen));
 	Pays.push(fabrique.pays(506611.404253741,481513.982465513,"TCD","Tchad",fabrique.impot(8.7,35,1.5,20,20,18),fabrique.ammortissement(20,10,1,3,3,10),tcd));
 	Pays.push(fabrique.pays(313975.411596333,282665.90659975,"TGO","Togo",fabrique.impot(3,29,1,13,6,18),fabrique.ammortissement(20,10,2.5,3,2,10),tgo));
 	return Pays;

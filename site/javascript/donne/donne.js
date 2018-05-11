@@ -1,12 +1,13 @@
-donne=function(){
-    var donne= localStorage.getItem("entreprise");
+var Donne=function(){};
+Donne.prototype.get=function(){
+    // var donne= localStorage.getItem("entreprise");
     var pibpnb= localStorage.getItem("pin");
     var pays=localStorage.getItem("pays");
     var regime=localStorage.getItem("regimE");
     var randPays=mesPays();
 
     for(var i=0;i<randPays.length;i++){
-        if(randPays[i].nom==pays){
+        if(randPays[i].nom===pays){
 
             var mP=randPays[i];
             //localStorage.setItem('mP',mP);
@@ -15,9 +16,11 @@ donne=function(){
         }
 
     }
-    var mE=fabrique.entreprise(donne);
+    var actu=localStorage.getItem("actu");
+    var marge=localStorage.getItem("marge");
+    var mE=fabrique.entreprise(actu,marge);
     var pibChoisi;
-    if(pibpnb=="PIB/Tete"){
+    if(pibpnb==="PIB/Tete"){
 
         pibChoisi=mP.pib;
     }
@@ -35,10 +38,13 @@ donne=function(){
         regime:regime
 
     }
-}
-donneRef=function(donne,pin,pays,regimE){
-    localStorage.setItem("entreprise",donne);
+};
+Donne.prototype.donneRef=function(pin,pays,regime,actu,marge){
+    localStorage.setItem("actu",actu);
+    localStorage.setItem("marge",marge);
     localStorage.setItem("pin",pin);
     localStorage.setItem("pays",pays);
-    localStorage.setItem("regimE",regimE);
-}
+    localStorage.setItem("regime",regime);
+};
+
+var donne=new Donne();

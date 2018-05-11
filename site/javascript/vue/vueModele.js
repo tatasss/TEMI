@@ -8,6 +8,8 @@ for(var i=0;i<monm.amortissement.length;i++){
     amm+=monm.amortissement[i].getHtml()+"<br/>";
 
 }
+
+
 document.getElementById("pet").innerHTML=genererVue.petroleHtml(monm.taxeAjout);
 document.getElementById("ammort").innerHTML=amm;
 document.getElementById("ammortExp").innerHTML=genererVue.ammortExcepHtml(monm);
@@ -33,3 +35,4 @@ document.getElementById("tauxRendInterneAi").innerHTML=genererVue.tauxRendementI
 document.getElementById("tauxEffMargImpApIsImf").innerHTML=genererVue.tauxRendementInt(monm.tauxEffMargImpApIsImf);
 document.getElementById("tauxEffMargImpApImp").innerHTML=genererVue.tauxRendementInt(monm.tauxEffMargImpApImp);
 //console.log(modeleManager.tauxRendementInterne(monm.fluxTresSansImp.courant));
+

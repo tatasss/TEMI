@@ -2,18 +2,31 @@
 
 function validateForm() {
 
-
-			var donne = $("#donne").val();
+            var actualisation=$("#actualisation").val();
+            actualisation=verifPourcent(actualisation);
+            var marge=$("#marge").val();
+            marge=verifPourcent(marge)
+			//var donne = $("#donne").val();
 			var pibpnb=$("#PIBPNB").val();
 			var pays =$("#PAYS").val();
 			var regime=$("#REGIME").val();
-			var x =donne + "\n"+pibpnb+ "\n"+pays+"\n"+regime;
-			
-			
-			document.getElementById("result").innerHTML=genererVue.mainHTML(donne,pibpnb,pays,regime);
+			//var x =donne + "\n"+pibpnb+ "\n"+pays+"\n"+regime;
+			donne.donneRef(pibpnb,pays,regime,actualisation,marge);
+			//console.log(marge);
+			document.getElementById("result").innerHTML=genererVue.mainHTML(pibpnb,pays,regime,actualisation,marge);
 		
 		
 			
+}
+function verifPourcent(nombre){
+    nombre=parseFloat(nombre);
+    if(nombre>100){
+        throw new Error("le chiffre est supérieur à 100");
+    }
+    if(nombre<0){
+        throw new Error("le chiffre est inférieur à 00");
+    }
+    return nombre;
 }
 
 
@@ -48,9 +61,9 @@ function testModele1(){
 function testModele2(){
 	var amortissement=[];
 	var html="<p>";
-	var mE=donne().mE;
-	var mP=donne().mP;
-	var pibchoix=donne().pibChoisi;
+	var mE=donne.get().mE;
+	var mP=donne.get().mP;
+	var pibchoix=donne.get().pibChoisi;
     amortissement.push(fabrique.armortirModele(Math.trunc(mE.construction*pibchoix),mP.ammort.construction,mP.ammort.coefdegressif,"construction"));
     amortissement.push(fabrique.armortirModele(mE.equipement*pibchoix,mP.ammort.equipement,mP.ammort.coefdegressif,"equipement"));
     amortissement.push(fabrique.armortirModele(mE.camion*pibchoix,mP.ammort.camion,mP.ammort.coefdegressif,"camion"));
