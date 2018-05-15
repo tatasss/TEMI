@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <title>modele</title>
+
+    <script src="../javascript/debut/reference.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="../javascript/vue/BootstrapVue.js"></script>
+    <script src="../javascript/modele/MyMath.js"></script>
+
+    <script src="../javascript/modele/modele.js"></script>
+    <script src="../javascript/modele/modeleManager.js"></script>
+    <script src="../javascript/fabrique/fabrique.js"></script>
+    <script src="../javascript/vue/genererVue.js"></script>
+
+
+    <script src="../javascript/donne/Donne.js"></script>
+    <script src="../javascript/debut/script.js"></script>
+
+
+
+</head>
+<body>
+
+    <nav class='navbar navbar-inverse '>
+        <div class='container-fluid'>
+            <div class='navbar-header'>
+                <a class='navbar-brand' href='index.html'>Cerdi</a>
+            </div></div>
+    </nav>
+    <div class="container">
+        <h2>Modéle</h2>
+        <div>mon pays est : <div id="param"></div></div>
+        <p> Le régime fiscal simulé peut être celui du code général des impôts ou celui du code des investissements.
+            Le TEMI est évalué à partir d’un modèle de flux de trésorerie suivant la méthodologie développée par Djankov et al.
+            (2010). Les différents régimes fiscaux sont appliqués aux données comptables d’une entreprise représentative .
+            Cette entreprise est supposée être localisée dans la plus grande ville du pays, employer 60 salariés
+            et vendre la totalité de sa production sur le marché local. La charge fiscale supportée par la société est
+            calculée sur cinq ans et intègre quatre impôts (CFE, IS, IMF et IRCM). L’entreprise est modélisée d’après
+            les coefficients de Djankov (2010). Ces coefficients sont multipliés par le PNB/tête des pays, dont les
+            chiffres datent de 2014 et sont issus des World Development Indicators (Banque Mondiale). Le modèle ainsi
+            construit permet de connaître le TEMI selon la législation de chaque pays. </p>
+        <div class="panel-group" id="accordion">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4 class="panel-title">
+                        <a data-toggle="collapse" data-parent="#accordion" href="#collapse1">Investissement</a>
+                    </h4>
+                </div>
+                <div id="collapse1" class="panel-collapse collapse in">
+                    <div class="panel-body" id="invest"></div>
+                </div>
+            </div>
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4 class="panel-title">
+                        <a data-toggle="collapse" data-parent="#accordion" href="#collapse2">Amortissement</a>
+                    </h4>
+                </div>
+                <div id="collapse2" class="panel-collapse collapse">
+                    <div class="panel-body" id="ammort"></div>
+                </div>
+            </div>
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4 class="panel-title">
+                        <a data-toggle="collapse" data-parent="#accordion" href="#collapse3">Amortissement exceptionnel</a>
+                    </h4>
+                </div>
+                <div id="collapse3" class="panel-collapse collapse">
+                    <div class="panel-body" id="ammortExp"></div>
+                </div>
+            </div>
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4 class="panel-title">
+                        <a data-toggle="collapse" data-parent="#accordion" href="#collapse4">Taxe sur la valeur ajoutée petrole</a>
+                    </h4>
+                </div>
+                <div id="collapse4" class="panel-collapse collapse">
+                    <div class="panel-body" id="pet"></div>
+                </div>
+            </div>
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4 class="panel-title">
+                        <a data-toggle="collapse" data-parent="#accordion" href="#collapse5">Contribution forfaitaire employeurs</a>
+                    </h4>
+                </div>
+                <div id="collapse5" class="panel-collapse collapse">
+                    <div class="panel-body" id="emp"></div>
+                </div>
+            </div>
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4 class="panel-title">
+                        <a data-toggle="collapse" data-parent="#accordion" href="#collapse6">Impot sur le revenu des creances</a>
+                    </h4>
+                </div>
+                <div id="collapse6" class="panel-collapse collapse">
+                    <div class="panel-body" id="creance"></div>
+                </div>
+            </div>
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4 class="panel-title">
+                        <a data-toggle="collapse" data-parent="#accordion" href="#collapse7">Resultat comptable</a>
+                    </h4>
+                </div>
+                <div id="collapse7" class="panel-collapse collapse">
+                    <div class="panel-body" id="compta"></div>
+                </div>
+            </div>
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4 class="panel-title">
+                        <a data-toggle="collapse" data-parent="#accordion" href="#collapse8">Resultat imposable</a>
+                    </h4>
+                </div>
+                <div id="collapse8" class="panel-collapse collapse">
+                    <div class="panel-body" id="impot"></div>
+                </div>
+            </div>
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4 class="panel-title">
+                        <a data-toggle="collapse" data-parent="#accordion" href="#collapse9">Impot sur les societes</a>
+                    </h4>
+                </div>
+                <div id="collapse9" class="panel-collapse collapse">
+                    <div class="panel-body" id="impotSoc">lol</div>
+                </div>
+            </div>
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4 class="panel-title">
+                        <a data-toggle="collapse" data-parent="#accordion" href="#collapse10">Impot sur les minimum forfaitaires</a>
+                    </h4>
+                </div>
+                <div id="collapse10" class="panel-collapse collapse">
+                    <div class="panel-body" id="impotfor"></div>
+                </div>
+            </div>
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4 class="panel-title">
+                        <a data-toggle="collapse" data-parent="#accordion" href="#collapse11">IS/IMF</a>
+
+                    </h4>
+                </div>
+                <div id="collapse11" class="panel-collapse collapse">
+                    <div class="panel-body" id="ISIMF"></div>
+                </div>
+            </div>
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4 class="panel-title">
+                        <a data-toggle="collapse" data-parent="#accordion" href="#collapse12">Impot sur le revenu des valeurs mobiliéres</a>
+
+                    </h4>
+                </div>
+                <div id="collapse12" class="panel-collapse collapse">
+                    <div class="panel-body" id="irvm"></div>
+                </div>
+            </div>
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4 class="panel-title">
+                        <a data-toggle="collapse" data-parent="#accordion" href="#collapse13"> Actualisation</a>
+
+                    </h4>
+                </div>
+                <div id="collapse13" class="panel-collapse collapse">
+                    <div class="panel-body" id="actu"></div>
+                </div>
+            </div>
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4 class="panel-title">
+                        <a data-toggle="collapse" data-parent="#accordion" href="#collapse14">Impôts et taxes</a>
+
+                    </h4>
+                </div>
+                <div id="collapse14" class="panel-collapse collapse">
+                    <div class="panel-body" >
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <div class="row">
+                                    <div class="col-sm-6">Courants</div>
+                                    <div class="col-sm-4"></div>
+                                    <div class="col-sm-2">VAN</div>
+                                </div>
+                            </div>
+                            <div class="panel-body" id="impTaxeC" ></div>
+                        </div>
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <div class="row">
+                                    <div class="col-sm-6">Actualise</div>
+                                    <div class="col-sm-4"></div>
+                                    <div class="col-sm-2">Somme</div>
+                                </div>
+                            </div>
+                            <div class="panel-body" id="impTaxeA" ></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4 class="panel-title">
+                        <a data-toggle="collapse" data-parent="#accordion" href="#collapse15">Taux effectifs moyen d'imposition</a>
+
+                    </h4>
+                </div>
+                <div id="collapse15" class="panel-collapse collapse">
+                    <div class="panel-body"  >
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <div class="row">
+                                    <div class="col-sm-6">Courants</div>
+                                    <div class="col-sm-4"></div>
+                                    <div class="col-sm-2">VAN</div>
+                                </div>
+                            </div>
+                            <div class="panel-body" id="fluxeffmoyC" ></div>
+                        </div>
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <div class="row">
+                                    <div class="col-sm-6">Actualise</div>
+                                    <div class="col-sm-4"></div>
+                                    <div class="col-sm-2">Somme</div>
+                                </div>
+                            </div>
+                            <div class="panel-body" id="fluxeffmoyA" ></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4 class="panel-title">
+                        <a data-toggle="collapse" data-parent="#accordion" href="#collapse16">Flut de tresorie sans Impôts</a>
+
+                    </h4>
+                </div>
+                <div id="collapse16" class="panel-collapse collapse">
+                    <div class="panel-body" id="fluxTresSaImp">
+
+                    </div>
+                </div>
+            </div>
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4 class="panel-title">
+                        <a data-toggle="collapse" data-parent="#accordion" href="#collapse17">Flut de tresorie sans IS/IMF</a>
+
+                    </h4>
+                </div>
+                <div id="collapse17" class="panel-collapse collapse">
+                    <div class="panel-body" id="fluxTresSaISIMF" ></div>
+                </div>
+            </div>
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4 class="panel-title">
+                        <a data-toggle="collapse" data-parent="#accordion" href="#collapse18">Flut de tresorie après Impôts</a>
+
+                    </h4>
+                </div>
+                <div id="collapse18" class="panel-collapse collapse">
+                    <div class="panel-body" id="fluxTresAvImpot" ></div>
+                </div>
+            </div>
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4 class="panel-title">
+                        <a data-toggle="collapse" data-parent="#accordion" href="#collapse19">Taux de rendement interne sans Impôts</a>
+
+                    </h4>
+                </div>
+                <div id="collapse19" class="panel-collapse collapse">
+                    <div class="panel-body" id="tauxRendInterneSi"></div>
+                </div>
+            </div>
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4 class="panel-title">
+                        <a data-toggle="collapse" data-parent="#accordion" href="#collapse20">Taux de rendement interne sans IS/IMF</a>
+
+                    </h4>
+                </div>
+                <div id="collapse20" class="panel-collapse collapse">
+                    <div class="panel-body" id="tauxRendInterneSISIMF"></div>
+                </div>
+            </div>
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4 class="panel-title">
+                        <a data-toggle="collapse" data-parent="#accordion" href="#collapse21">Taux de rendement interne après Impôts</a>
+
+                    </h4>
+                </div>
+                <div id="collapse21" class="panel-collapse collapse">
+                    <div class="panel-body" id="tauxRendInterneAi"></div>
+                </div>
+            </div>
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4 class="panel-title">
+                        <a data-toggle="collapse" data-parent="#accordion" href="#collapse22">Taux effectifs marginaux d'imposition après IS/IMF</a>
+
+                    </h4>
+                </div>
+                <div id="collapse22" class="panel-collapse collapse">
+                    <div class="panel-body" id="tauxEffMargImpApIsImf" ></div>
+                </div>
+            </div>
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4 class="panel-title">
+                        <a data-toggle="collapse" data-parent="#accordion" href="#collapse23">Taux effectifs marginaux d'imposition après Impôts</a>
+
+                    </h4>
+                </div>
+                <div id="collapse23" class="panel-collapse collapse">
+                    <div class="panel-body" id="tauxEffMargImpApImp" ></div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+
+    <script src="../javascript/vue/vueModele.js"></script>
+</body>
+</html>

@@ -1,9 +1,10 @@
 
 modele= function(){
-    var mE=donne.get().mE;
-    var mP=donne.get().mP;
+    var mE=donne.entreprise;
+    var mP=donne.pays;
+    //console.log(donne.entreprise);
     var impotSelected=modeleManager.selectTaxe(mP);
-    var pibchoix= donne.get().pibChoisi;
+    var pibchoix= donne.pays.pib;
 	var investissement=Math.trunc(modeleManager.investissementModele(mE,pibchoix));
 	var amortissement=modeleManager.ammortissment(mE,mP,pibchoix);
 	var generalAmort=modeleManager.ammortGen(amortissement);
@@ -13,7 +14,7 @@ modele= function(){
 
     var taxeCreance=modeleManager.taxe_creance(mE,impotSelected,pibchoix);
     var resultCompta=modeleManager.comptableResult(mE,pibchoix,taxeValAjout.tva,emploi.salaire_cadre,emploi.salaire_secretaire,emploi.salaire_ouvrier,emploi.reel_CFE,generalAmort);
-    var ammortExcep=modeleManager.ammortExcept(mP,resultCompta.benefice_comptable,donne.get().regime);
+    var ammortExcep=modeleManager.ammortExcept(mP,resultCompta.benefice_comptable,donne.regime);
     var resultImpot=modeleManager.impotResult(resultCompta.benefice_comptable,ammortExcep.chargeAmorti);
     var impotSociete=[];
     var impotIMF=[];

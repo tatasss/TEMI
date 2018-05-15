@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="fr" xmlns="http://www.w3.org/1999/html">
+<head>
+<title>index</title>
+<meta charset="utf-8">
+    <script src="../javascript/debut/reference.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../css/general.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="../javascript/vue/BootstrapVue.js"></script>
+    <script src="../javascript/modele/MyMath.js"></script>
+    <script src="../javascript/modele/modele.js"></script>
+    <script src="../javascript/modele/modeleManager.js"></script>
+    <script src="../javascript/fabrique/fabrique.js"></script>
+    <script src="../javascript/vue/genererVue.js"></script>
+    <script src="../javascript/donne/Donne.js"></script>
+    <script src="../javascript/debut/script.js"></script>
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+</head>
+<body>
+<nav class="navbar navbar-inverse ">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="./index.html">Cerdi</a>
+    </div>
+  </div>
+</nav>
+<div class="container">
+
+<div class="form-group">
+
+    <div id="formPays"></div>
+</div>
+<div class="form-group">
+  <label for="sel1">Regime:</label>
+  <select class="form-control" id="REGIME">
+    <option value="gen">Régime général</option>
+    <option value="nongen">Régime des investissements</option>
+  </select>
+</div>
+  <div class="form-group">
+
+    <label for="sel1">Taux d'actualisation:</label>
+    <input type="text" class="form-control" id="actualisation"/>
+  </div>
+  <div class="form-group">
+
+    <label for="sel1">Taux de marge de l'entreprise:</label>
+    <input type="text" class="form-control" id="marge"/>
+
+
+  </div>
+<button type="valider données" class="btn btn-default" onclick="validateForm()">valider</button>
+<div>
+<br/>
+<div id="result"></div>
+
+</div>
+</div>
+<script src="../javascript/vue/VueFormulaire.js"></script>
+</body>
+</html>

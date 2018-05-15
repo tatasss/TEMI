@@ -1,5 +1,4 @@
-let BootstrapVue = function () {
-};
+
 BootstrapVue.prototype.tableSE =function (colOne_head_lig) {
     let args = arguments;
     let html;
