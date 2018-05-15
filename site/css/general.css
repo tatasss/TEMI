@@ -21,3 +21,7 @@
 thead {
     font-weight:normal;
 }
+.monTab{
+    border-left:1px solid black;
+    border-right:1px solid black;
+}

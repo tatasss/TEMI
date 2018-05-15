@@ -3,13 +3,13 @@ let investPart = "<p>investissement : " + monm.investissement + "</p>";
 
 document.getElementById("invest").innerHTML = investPart;
 let amm=genererVue.getAmmortGenneralHtml(monm);
-amm+="<br/>"
-for(var i=0;i<monm.amortissement.length;i++){
+amm+="<br/>";
+for(let i=0;i<monm.amortissement.length;i++){
     amm+=monm.amortissement[i].getHtml()+"<br/>";
 
 }
 
-
+console.log(donne.get().mP.pib)
 document.getElementById("pet").innerHTML=genererVue.petroleHtml(monm.taxeAjout);
 document.getElementById("ammort").innerHTML=amm;
 document.getElementById("ammortExp").innerHTML=genererVue.ammortExcepHtml(monm);

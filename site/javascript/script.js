@@ -1,23 +1,60 @@
-
+var startTime = new Date().getTime();
+var elapsedTime = 0;
 
 function validateForm() {
 
+// votre code à mesurer ici
+
+
             var actualisation=$("#actualisation").val();
-            actualisation=verifPourcent(actualisation);
             var marge=$("#marge").val();
-            marge=verifPourcent(marge)
+            try{
+                actualisation=verifPourcent(actualisation);
+            }
+            catch{
+                alert("Le taux d'actualisation doit être compris entre 0 et 100");
+            }
+
+    try{
+        marge=verifPourcent(marge);
+    }
+    catch{
+        alert("Le taux de marge doit être compris entre 0 et 100");
+    }
+
+
 			//var donne = $("#donne").val();
-			var pibpnb=$("#PIBPNB").val();
 			var pays =$("#PAYS").val();
 			var regime=$("#REGIME").val();
 			//var x =donne + "\n"+pibpnb+ "\n"+pays+"\n"+regime;
-			donne.donneRef(pibpnb,pays,regime,actualisation,marge);
+			donne.donneRef(pays,regime,actualisation,marge);
 			//console.log(marge);
-			document.getElementById("result").innerHTML=genererVue.mainHTML(pibpnb,pays,regime,actualisation,marge);
-		
+			document.getElementById("result").innerHTML=genererVue.mainHTML(pays,regime,actualisation,marge);
+    elapsedTime = new Date().getTime() - startTime;
+
+    console.log(elapsedTime);
 		
 			
-}
+};
+function getXMLHttpRequest() {
+    var xhr = null;
+    if (window.XMLHttpRequest || window.ActiveXObject) {
+        if (window.ActiveXObject) {
+            try {
+                xhr = new ActiveXObject("Msxml2.XMLHTTP");
+            } catch(e) {
+                xhr = new ActiveXObject("Microsoft.XMLHTTP");
+            }
+        } else {
+            xhr = new XMLHttpRequest();
+        }
+    } else {
+        alert("Votre navigateur ne supporte pas l'objet XMLHTTPRequest...");
+        return null;
+    }
+
+    return xhr;
+};
 function verifPourcent(nombre){
     nombre=parseFloat(nombre);
     if(nombre>100){
@@ -27,9 +64,9 @@ function verifPourcent(nombre){
         throw new Error("le chiffre est inférieur à 00");
     }
     return nombre;
-}
+};
 
-
+/*
 function testModele1(){
 
 	var monTest= fabrique.armortirModele(26801197,10,2.5,"equipement");
@@ -116,4 +153,4 @@ function testModele4(){
     html+="</tr></tbody></table>";
 
     document.getElementById("test4").innerHTML=html;
-}
+}*/

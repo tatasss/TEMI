@@ -1,8 +1,53 @@
+
 var fabrique={
-	pays: function(pIB,pNB,code,nom,impot,ammort,investissment){
+	pibFind: function(code){
+		var pib=0;
+        var xhr=getXMLHttpRequest();
+        xhr.onreadystatechange = function() {
+
+            if (xhr.readyState == 4 && (xhr.status == 200)) {
+
+               // console.log( xhr.responseXML.getElementsByTagName("wb:data")[0].childNodes[3].childNodes[5].firstChild.nodeValue.toString());
+                //monPib=readPib(xhr.responseXML);
+                try {
+                	if(xhr.responseXML.getElementsByTagName("wb:data")[0].childNodes[3].childNodes[5].firstChild.nodeValue.toString()===code){
+                		if( localStorage.getItem("xmlPib : "+code)===xhr.responseXML.getElementsByTagName("wb:data")[0].childNodes[5].childNodes[9].firstChild.nodeValue.toString()){
+                			return
+						}
+                        localStorage.setItem("xmlPib : "+xhr.responseXML.getElementsByTagName("wb:data")[0].childNodes[3].childNodes[5].firstChild.nodeValue.toString(), xhr.responseXML.getElementsByTagName("wb:data")[0].childNodes[5].childNodes[9].firstChild.nodeValue.toString());
+
+					}
+
+
+                    //console.log(xhr.responseXML.getElementsByTagName("wb:data")[0].childNodes[3].childNodes[9].firstChild.nodeValue.toString());
+                }catch (e) {
+                    console.log("Une erreur XML de l'api de workbank est apparu");
+                }
+                // noinspection JSAnnotator
+                return;
+                //console.log(xhr.responseXML.getElementsByTagName("wb:data")[0].childNodes[3].childNodes[9].firstChild.nodeValue.toString());
+            }
+        };
+        //console.log(localStorage.getItem("xmlPib : "+code));
+
+        //console.log(monPib);
+        xhr.open("GET", "http://api.worldbank.org/v2/countries/"+code+"/indicators/NY.GDP.PCAP.CD", true);
+        xhr.send(null);
+
+        //console.log("http://api.worldbank.org/v2/countries/"+code+"/indicators/NY.GDP.MKTP.CD" + "--> "+cpt );
+
+		if(pib===0){
+            pib=parseFloat(localStorage.getItem("xmlPib : "+code))*582.79;
+		}
+         return pib;
+
+	},
+	pays: function(code,nom,impot,ammort,investissment){
+        //localStorage.setItem("xmlPib","0");
+
+		//console.log(parseFloat(localStorage.getItem("xmlPib"))*582.79);
 		return {
-			pib:pIB,
-			pnb:pNB,
+			pib:this.pibFind(code),
 			code:code,
 			nom:nom,
 			impots:impot,
@@ -31,6 +76,7 @@ var fabrique={
 		}
 	},
 	entreprise : function(actu,marge){
+
 		/*if(donne=="Djankov"){*/
 			return{
 				nom:"Djankov",
@@ -203,33 +249,4 @@ var fabrique={
 		};
 	},
 };
-function mesPays(){
-	var Pays=[];
-    var ben=fabrique.investir(fabrique.impotPays(null,null,null),fabrique.isImpotPays(5,null,100,null,null),fabrique.impotPays(null,null,null),fabrique.impotPays(null,null,null),fabrique.impotPays(null,null,null),fabrique.impotPays(null,null,null));
-	var bfa=fabrique.investir(fabrique.impotPays(5,null,100),fabrique.isImpotPays(5,null,null,50,50),fabrique.impotPays(null,null,null),fabrique.impotPays(null,null,null),fabrique.impotPays(null,null,null),fabrique.impotPays(null,null,null));
-	var cmr=fabrique.investir(fabrique.impotPays(null,null,null),fabrique.isImpotPays(5,null,50,null,null),fabrique.impotPays(null,null,null),fabrique.impotPays(5,null,50),fabrique.impotPays(null,null,null),fabrique.impotPays(null,null,null));
-	var caf=fabrique.investir(fabrique.impotPays(null,null,null),fabrique.isImpotPays(3,null,100,null,null),fabrique.impotPays(null,null,null),fabrique.impotPays(null,null,null),fabrique.impotPays(null,null,null),fabrique.impotPays(null,null,null));
-	var cog=fabrique.investir(fabrique.impotPays(null,null,null),fabrique.isImpotPays(3,null,100,null,null),fabrique.impotPays(null,null,null),fabrique.impotPays(null,null,null),fabrique.impotPays(null,null,null),fabrique.impotPays(null,null,null));
-	var civ=fabrique.investir(fabrique.impotPays(7,2.2,null),fabrique.isImpotPays(7,null,100,null,null),fabrique.impotPays(null,null,null),fabrique.impotPays(null,null,null),fabrique.impotPays(null,null,null),fabrique.impotPays(null,null,null));
-    var gab=fabrique.investir(fabrique.impotPays(null,null,null),fabrique.isImpotPays(5,null,100,null,null),fabrique.impotPays(null,null,null),fabrique.impotPays(null,null,null),fabrique.impotPays(null,null,null),fabrique.impotPays(null,null,null));
-	var mli=fabrique.investir(fabrique.impotPays(null,null,null),fabrique.isImpotPays(7,25,null,null,null),fabrique.impotPays(null,null,null),fabrique.impotPays(null,null,null),fabrique.impotPays(null,null,null),fabrique.impotPays(null,null,null));
-    var ner=fabrique.investir(fabrique.impotPays(null,null,null),fabrique.isImpotPays(null,null,null,null,null),fabrique.impotPays(6,null,100),fabrique.impotPays(null,null,null),fabrique.impotPays(null,null,null),fabrique.impotPays(null,null,null));
-    var sen=fabrique.investir(fabrique.impotPays(5,null,100),fabrique.isImpotPays(5,null,null,40,50),fabrique.impotPays(null,null,null),fabrique.impotPays(null,null,null),fabrique.impotPays(null,null,null),fabrique.impotPays(null,null,null));
-    var tcd=fabrique.investir(fabrique.impotPays(null,null,null),fabrique.isImpotPays(5,null,100,null,null),fabrique.impotPays(5,null,100),fabrique.impotPays(null,null,null),fabrique.impotPays(null,null,null),fabrique.impotPays(null,null,null));
-    var tgo=fabrique.investir(fabrique.impotPays(5,2,null),fabrique.isImpotPays(5,null,2,40,50),fabrique.impotPays(null,null,null),fabrique.impotPays(null,null,null),fabrique.impotPays(null,null,null),fabrique.impotPays(null,null,null));
-    Pays.push(fabrique.pays(446686.610403263,443922.063555894,"BEN","Benin",fabrique.impot(4,30,0.75,10,15,18),fabrique.ammortissement(20,10,2.5,3,2,10),ben));
-	Pays.push(fabrique.pays(352538.787047328,348520.408267351,"BFA","Burkina Faso",fabrique.impot(3,27.5,0.5,12.5,25,18),fabrique.ammortissement(20,10,2.5,3,2,10),bfa));
-	Pays.push(fabrique.pays(695841.358548324,689556.462319832,"CMR","Cameroun",fabrique.impot(2.5,33,2.2,16.5,16.5,19.25),fabrique.ammortissement(20,10,1,3,4,10),cmr));
-	Pays.push(fabrique.pays(177266.484115533,178004.935333146,"CAF","Republique Centraficaine",fabrique.impot(0,30,1.85,15,15,19),fabrique.ammortissement(20,10,1,3,4,10),caf));
-	Pays.push(fabrique.pays(1555959.36758179,1288336.46183605,"COG","Republique du Congo",fabrique.impot(7.5,30,1,15,15,18.9),fabrique.ammortissement(20,10,1,3,4,10),cog));
-	Pays.push(fabrique.pays(764337.037161964,734803.305020822,"CIV","Côte d'Ivoire",fabrique.impot(2.8,25,0.5,15,18,9),fabrique.ammortissement(20,5,2,3,2,10),civ));
-	Pays.push(fabrique.pays(5325868.9119871,4714968.57762138,"GAB","Gabon",fabrique.impot(5,30,1,20,20,18),fabrique.ammortissement(20,10,1,3,4,10),gab));
-	Pays.push(fabrique.pays(280739.989103106,280507.620772524,"GNB","Guinée Bissao","pas d'impot","pas d'ammortissement","pas d'investissment"));
-	Pays.push(fabrique.pays(9353479.8395634,4755006.03129549,"GNQ","Guinée équatoriale","pas d'impot","pas d'ammortissement","pas d'investissment"));
-	Pays.push(fabrique.pays(348319.045959615,328489.97164378,"MLI","Mali",fabrique.impot(7.5,30,1,10,13,18),fabrique.ammortissement(20,10,2.5,3,2,10),mli));
-	Pays.push(fabrique.pays(211299.740610518,205366.832074831,"NER","Niger",fabrique.impot(3,30,1.5,10,20,19),fabrique.ammortissement(20,10,1,4,2,10),ner));
-	Pays.push(fabrique.pays(527605.945821168,520918.056941268,"SEN","Senegal",fabrique.impot(3,30,0.5,10,16,18),fabrique.ammortissement(20,10,2.5,3,2,10),sen));
-	Pays.push(fabrique.pays(506611.404253741,481513.982465513,"TCD","Tchad",fabrique.impot(8.7,35,1.5,20,20,18),fabrique.ammortissement(20,10,1,3,3,10),tcd));
-	Pays.push(fabrique.pays(313975.411596333,282665.90659975,"TGO","Togo",fabrique.impot(3,29,1,13,6,18),fabrique.ammortissement(20,10,2.5,3,2,10),tgo));
-	return Pays;
-}
+

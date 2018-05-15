@@ -1,7 +1,6 @@
 var Donne=function(){};
 Donne.prototype.get=function(){
     // var donne= localStorage.getItem("entreprise");
-    var pibpnb= localStorage.getItem("pin");
     var pays=localStorage.getItem("pays");
     var regime=localStorage.getItem("regimE");
     var randPays=mesPays();
@@ -20,14 +19,9 @@ Donne.prototype.get=function(){
     var marge=localStorage.getItem("marge");
     var mE=fabrique.entreprise(actu,marge);
     var pibChoisi;
-    if(pibpnb==="PIB/Tete"){
+
 
         pibChoisi=mP.pib;
-    }
-    else{
-
-        pibChoisi=mP.pnb;
-    }
     /*localStorage.setItem("pin",pin);
     localStorage.setItem("pays",pays);
     localStorage.setItem("regimE",regimE);*/
@@ -39,10 +33,9 @@ Donne.prototype.get=function(){
 
     }
 };
-Donne.prototype.donneRef=function(pin,pays,regime,actu,marge){
+Donne.prototype.donneRef=function(pays,regime,actu,marge){
     localStorage.setItem("actu",actu);
     localStorage.setItem("marge",marge);
-    localStorage.setItem("pin",pin);
     localStorage.setItem("pays",pays);
     localStorage.setItem("regime",regime);
 };

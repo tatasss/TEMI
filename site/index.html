@@ -16,6 +16,7 @@
     <script src="javascript/donne/Donne.js"></script>
     <script src="./javascript/script.js"></script>
 
+
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
 </head>
@@ -30,28 +31,8 @@
 <div class="container">
 
 <div class="form-group">
-  <label for="sel1">PIB ou PNB</label>
-  <select class="form-control" id="PIBPNB">
-    <option>PIB/Tete</option>
-    <option>PNB/Tete</option>
-  </select>
-</div>
-<div class="form-group">
-  <label for="sel1">Pays:</label>
-  <select class="form-control" id="PAYS">
-    <option value="Benin">Benin</option>
-    <option value="Burkina Faso">Burkina Faso</option>
-    <option value="Cameroun">Cameroun</option>
-    <option value="Republique Centraficaine">République centrafricaine</option>
-	<option value="Republique du Congo">République du Congo</option>
-	<option value="Côte d'Ivoire">Côte d'Ivoire</option>
-	<option value="Gabon">Gabon</option>
-	<option value="Mali">Mali</option>
-	<option value="Niger">Niger</option>
-	<option value="Senegal">Senegal</option>
-	<option value="Tchad">Tchad</option>
-	<option value="Togo">Togo</option>
-  </select>
+
+    <div id="formPays"></div>
 </div>
 <div class="form-group">
   <label for="sel1">Regime:</label>
@@ -79,5 +60,6 @@
 
 </div>
 </div>
+<script src="javascript/vue/VueFormulaire.js"></script>
 </body>
 </html>
