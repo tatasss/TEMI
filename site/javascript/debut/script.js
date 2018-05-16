@@ -4,6 +4,7 @@ var donne=new Donne();
 if(localStorage.getItem("donne "+1)!==undefined){
     donne.donne2(1);
 }
+console.log(donne.pays.pib);
 //console.log(donne);
 function mesPays(){
 

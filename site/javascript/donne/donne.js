@@ -29,7 +29,7 @@ Donne.prototype.donneRef=function(pays,regime,actu,marge){
 Donne.prototype.donne2=function(numberdonne){
     var lol=localStorage.getItem("donne "+numberdonne);
     lol=lol.split(",");
-    //console.log(lol);
+
     var randPays=mesPays();
 
     for(var i=0;i<randPays.length;i++){

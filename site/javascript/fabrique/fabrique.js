@@ -232,8 +232,8 @@ Fabrique.prototype.armortirModele=function(prix,durLin,coef,nom){
 </div>*/		var cote2=["Base amortissable</td><td>FCFA","Taux unitaire</td><td>%","Taux dégréssif</td><td>%","Charge amortissement</td><td>FCFAS"];
 			var html="<div class='panel panel-info'><div class=\"panel-heading\">";
 			var cote1=["Durée linéaire</td><td>Année","Coef dégréssif</td><td>Coef"];
-			var head="<thead><tr><th>"+this.nom+"</th><th>FCFA</th><th>"+this.baseAmortissable[0]+"</th></tr></thead>";
-			html+=bootstrap.tableSE(cote1,head,[this.dureeRestante[0]],[coefdegr]);
+			var head="<thead><tr><th>"+this.nom+"</th><th>FCFA</th><th class='blue'>"+this.baseAmortissable[0]+"</th></tr></thead>";
+			html+=bootstrap.tableSE(cote1,head,{tab:[this.dureeRestante[0]],color:"yellow"},{tab:[coefdegr],color:"yellow"});
 			html+="</div> <div class='panel-body'>"
 			var head2="<thead><tr><th>Durée restante</th><th>Annee</th>";
 			for(var i=0;i<5;i++){
@@ -246,7 +246,7 @@ Fabrique.prototype.armortirModele=function(prix,durLin,coef,nom){
 				tauxLin.push(Math.round(this.tauxLineaire[i]*100)/100);
 				tauxDegr.push(Math.round(this.tauxDegressif[i]*100)/100);
 			}
-			html+=bootstrap.tableSE(cote2,head2,this.baseAmortissable,tauxLin,tauxDegr,this.chargeAmorti);
+			html+=bootstrap.tableSE(cote2,head2,{tab:this.baseAmortissable,color:""},{tab:tauxLin,color:""},{tab:tauxDegr,color:""},{tab:this.chargeAmorti,color:""});
 			html+="</div></div>";
 			return html;
 		}

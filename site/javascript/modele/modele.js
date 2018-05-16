@@ -22,7 +22,7 @@ modele= function(){
     var actualisation=[];
 
     for (var i=0;i<5;i++){
-        actualisation.push(Math.round(((1/Math.pow(1+(mE.actuali/100),i))*100)*10)/10);
+        actualisation.push(1/Math.pow(1+(mE.actuali/100),i)*100);
        // console.log(Math.round(((1/Math.pow(1+(mE.actuali/100),i))*100)*10)/10);
     }
     for (var i=0;i<5;i++){
@@ -30,10 +30,10 @@ modele= function(){
         //console.log(resultImpot.benImpo[i]*mP.impots.isImp)
     }
     for (var i=0;i<5;i++){
-        impotIMF.push(Math.round(resultCompta.vente[i]*(impotSelected.imf/100)));
+        impotIMF.push(resultCompta.vente[i]*(impotSelected.imf/100));
         //console.log(resultImpot.benImpo[i]*mP.impots.isImp)
     } for (var i=0;i<5;i++){
-        impotIRVM.push(Math.round(resultCompta.benefice_comptable[i]*(impotSelected.irvm/100)*(mE.dividende/100)));
+        impotIRVM.push(resultCompta.benefice_comptable[i]*(impotSelected.irvm/100)*(mE.dividende/100));
 
         //console.log(impotIRVM[i]);
     }
@@ -42,10 +42,16 @@ modele= function(){
     var impotTaxeCourent=modeleManager.impotTaxeCourent(mE.actuali,emploi,isimf,impotIRVM,taxeCreance,taxeValAjout);
     var impotTaxeActu=modeleManager.impotTaxeActu(actualisation,emploi,isimf,impotIRVM,taxeCreance,taxeValAjout);
     var fluxTresSansImp=modeleManager.fluxTresoriesI(mE,pibchoix,resultCompta,actualisation);
-    var fluxeffMoyC=modeleManager.tauxEffectifCour(fluxTresSansImp.courant,impotTaxeCourent);
-    var fluxeffMoyA=modeleManager.tauxEffectifCour(fluxTresSansImp.actu,impotTaxeActu);
+    //console.log("model le flux de tresorie sans imp :"+fluxTresSansImp.courant.toString());//console.log("model le flux de tresorie sans imp fin");
     var fluxTresSansISIMF=modeleManager.fluxTresoriesImp(fluxTresSansImp,impotTaxeCourent.isimf,impotTaxeActu.isimf,mE.actuali);
+    //console.log("model le flux de tresorie sans ISIMF :"+fluxTresSansISIMF.courant.toString());
     var fluxTresApresImpot=modeleManager.fluxTresoriesImp(fluxTresSansImp,impotTaxeCourent.total,impotTaxeActu.total,mE.actuali);
+    //console.log(fluxTresSansImp.courant);
+   // console.log(fluxTresApresImpot.courant[fluxTresApresImpot.courant.length-1]);
+
+    var tauxeffMoyC=modeleManager.tauxEffectif(fluxTresSansImp.courant[fluxTresSansImp.courant.length-1],fluxTresApresImpot.courant[fluxTresApresImpot.courant.length-1]);
+    var tauxeffMoyA=modeleManager.tauxEffectif(fluxTresSansImp.actu[fluxTresSansImp.actu.length-1],fluxTresApresImpot.actu[fluxTresApresImpot.actu.length-1]);
+
     var tauxRendInterneSImp=modeleManager.tauxRendementInterne(fluxTresSansImp.courant);
     var tauxRendInterneSISIMF=modeleManager.tauxRendementInterne(fluxTresSansISIMF.courant);
     var tauxRendInterneAImp=modeleManager.tauxRendementInterne(fluxTresApresImpot.courant);
@@ -70,8 +76,8 @@ modele= function(){
         impotTaxeCourent:impotTaxeCourent,
         impotTaxeActu:impotTaxeActu,
         fluxTresSansImp:fluxTresSansImp,
-        fluxeffMoyCourent:fluxeffMoyC,
-        fluxeffMoyActualise:fluxeffMoyA,
+        tauxeffMoyCourent:tauxeffMoyC,
+        tauxeffMoyActualise:tauxeffMoyA,
         fluxTresSansISIMF:fluxTresSansISIMF,
         fluxTresApresImpot:fluxTresApresImpot,
         tauxRendInterneSImp:tauxRendInterneSImp,

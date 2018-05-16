@@ -65,13 +65,20 @@ MyMath.prototype.tri=function(tab){
         return x + 0.01;
     };
 MyMath.prototype.van=function(actu, tab){
-    var lol=0;
-    for(var i=0;i<tab.length;i++){
-        lol+=(tab[i]/Math.pow((1+actu),i));
+    //console.log(actu);
+   /* console.log("on entre dans le calcul VAN");
+    console.log(tab.toString());
+    console.log(tab[0]);*/
+    var lol=-tab[0];
+    var somme=0;
+    for(var i=1;i<tab.length;i++){
+        somme+=(tab[i]/Math.pow((1+actu),i));
 
     }
-    lol= lol/(1+actu);
-    // console.log(lol);
+    //lol= lol/(1+actu);
+
+    lol=lol+somme;
+    //console.log("on sort du calcul VAN");
     return Math.round(lol);
 };
 
@@ -94,3 +101,21 @@ MyMath.prototype.divisionTabPurcent=function(tabDiv,tabDive){
     }
     return tot;
 };
+MyMath.prototype.arrondirTabUnit=function(tab,numberDec){
+    if(numberDec==null){
+        numberDec=0;
+    }
+    if(numberDec==undefined){
+        numberDec=0;
+    }
+    if(numberDec<0){
+        numberDec=0;
+    }
+    var tabArr=[];
+    for (let i=0;i<tab.length;i++){
+        tabArr.push(Math.round(tab[i]*Math.pow(10,numberDec))/(Math.pow(10,numberDec)));
+    }
+    // console.log(tabArr);
+    return tabArr;
+};
+

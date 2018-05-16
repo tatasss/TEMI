@@ -9,7 +9,9 @@
     padding: 12px; /* Add some padding */
     text-decoration: none; /* Remove underline from links */
 }
+.monTab{
 
+}
 .vertical-menu a:hover {
     background-color: #ccc; /* Dark grey background on mouse-over */
 }
@@ -21,7 +23,18 @@
 thead {
     font-weight:normal;
 }
-.monTab{
-    border-left:1px solid black;
-    border-right:1px solid black;
+.bottomBorder{
+    border-bottom: 1px solid black;
+}
+.blue{
+    background-color: #3eb1d0;
+}
+.fontred{
+    color : #c82829;
+}
+.red{
+    background-color: #c82829;
+}
+.yellow{
+    background-color: #b9ca4a;
 }
