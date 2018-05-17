@@ -1,4 +1,4 @@
-const monm = modele();
+const monm = modele.mesdon();
 let investPart = "<p>investissement : " + monm.investissement + "</p>";
 
 document.getElementById("invest").innerHTML = investPart;
@@ -9,7 +9,7 @@ for(let i=0;i<monm.amortissement.length;i++){
 
 }
 
-//console.log(donne.get().mP.pib)
+//console.log(data.get().mP.pib)
 document.getElementById("pet").innerHTML=genererVue.petroleHtml(monm.taxeAjout);
 document.getElementById("ammort").innerHTML=amm;
 document.getElementById("ammortExp").innerHTML=genererVue.ammortExcepHtml(monm);

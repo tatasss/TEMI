@@ -1,11 +1,22 @@
 var startTime = new Date().getTime();
+
 var elapsedTime = 0;
 var donne=new Donne();
-if(localStorage.getItem("donne "+1)!==undefined){
-    donne.donne2(1);
+var modele=new Modele(donne);
+if(localStorage.getItem("donne "+1)!==undefined ){
+    if(localStorage.getItem("donne "+1)!==null){
+
+        donne.donne2(1);
+    }
 }
-console.log(donne.pays.pib);
-//console.log(donne);
+if(donne.pays!=undefined ){
+    if(donne.pays!=null){
+        console.log(donne);
+        console.log(donne.pays.pib);
+    }
+}
+
+//console.log(data);
 function mesPays(){
 
     var Pays=[];
@@ -36,8 +47,56 @@ function mesPays(){
     Pays.push(fabrique.pays("TCD","Tchad",fabrique.impot(8.7,35,1.5,20,20,18),fabrique.ammortissement(20,10,1,3,3,10),tcd));
     Pays.push(fabrique.pays("TGO","Togo",fabrique.impot(3,29,1,13,6,18),fabrique.ammortissement(20,10,2.5,3,2,10),tgo));
     return Pays;
-};
+}
 
+function showModal(){
+
+    $("#myBtn").click(function(){
+        $("#myModal").modal();
+
+
+    });
+    $("#myCont").click(function(){
+        //$("#myModal").modal("hide");
+
+        debutCompa($("#actualistionCompa").val() ,$("#REGIMECmpta").val());
+    });
+
+
+
+
+
+}
+function debutCompa(actu,regime){
+    console.log("ici");
+
+ try{
+
+     actu=verifPourcent(actu);
+     localStorage.setItem("compaActu",actu);
+     localStorage.setItem("compatRegime",regime);
+
+     //url.replace("/graphForm.html");
+     var stateObj = { foo: "bar" };
+     history.pushState(stateObj, "some useless title", "/site/html/graphForm.html");
+
+
+
+
+ }catch (e) {
+     alert(e.toString());
+     document.location.href="./index.html"
+ }
+
+
+    //document.location.assign("./graphForm.html");
+    //document.open("./graphForm.html");
+
+}
+function  htmlGraphFormFunction(actu,regime){
+
+
+}
 function validateForm() {
 
 // votre code à mesurer ici
@@ -60,10 +119,10 @@ function validateForm() {
     }
 
 
-			//var donne = $("#donne").val();
+			//var data = $("#data").val();
 			var pays =$("#PAYS").val();
 			var regime=$("#REGIME").val();
-			//var x =donne + "\n"+pibpnb+ "\n"+pays+"\n"+regime;
+			//var x =data + "\n"+pibpnb+ "\n"+pays+"\n"+regime;
 			donne.donneRef(pays,regime,actualisation,marge);
 			//console.log(marge);
 			document.getElementById("result").innerHTML=genererVue.mainHTML(pays,regime,actualisation,marge);
@@ -93,6 +152,21 @@ function getXMLHttpRequest() {
     return xhr;
 };
 function verifPourcent(nombre){
+  //console.log(nombre);
+    var regex1 = /^[0-9]*$/;
+    if(!regex1.test(nombre)){
+        throw new Error("Veuillez entrer un pourcentage");
+    }
+  if(nombre===""){
+      throw new Error("Veuillez entrer quelque chose");
+  }
+    if(nombre===undefined){
+        throw new Error("Veuillez entrer quelque chose");
+    }
+    if(nombre===null){
+        throw new Error("Veuillez entrer quelque chose");
+    }
+
     nombre=parseFloat(nombre);
     if(nombre>100){
         throw new Error("le chiffre est supérieur à 100");
@@ -106,7 +180,7 @@ function verifPourcent(nombre){
 /*
 function testModele1(){
 
-	var monTest= fabrique.armortirModele(26801197,10,2.5,"equipement");
+	var monTest= manaufacturing.armortirModele(26801197,10,2.5,"equipement");
     var html="<p>"+monTest.nom+"</p>"
 	html+="<table class='table'><thead><tr><th>duree restante</th>";
 	for(var i=0;i<5;i++){
@@ -135,14 +209,14 @@ function testModele1(){
 function testModele2(){
 	var amortissement=[];
 	var html="<p>";
-	var mE=donne.get().mE;
-	var mP=donne.get().mP;
-	var pibchoix=donne.get().pibChoisi;
-    amortissement.push(fabrique.armortirModele(Math.trunc(mE.construction*pibchoix),mP.ammort.construction,mP.ammort.coefdegressif,"construction"));
-    amortissement.push(fabrique.armortirModele(mE.equipement*pibchoix,mP.ammort.equipement,mP.ammort.coefdegressif,"equipement"));
-    amortissement.push(fabrique.armortirModele(mE.camion*pibchoix,mP.ammort.camion,mP.ammort.coefdegressif,"camion"));
-    amortissement.push(fabrique.armortirModele(mE.info*pibchoix,mP.ammort.info,mP.ammort.coefdegressif,"informatique"));
-    amortissement.push(fabrique.armortirModele(mE.bureau*pibchoix,mP.ammort.bureau,mP.ammort.coefdegressif,"bureau"));
+	var mE=data.get().mE;
+	var mP=data.get().mP;
+	var pibchoix=data.get().pibChoisi;
+    amortissement.push(manaufacturing.armortirModele(Math.trunc(mE.construction*pibchoix),mP.ammort.construction,mP.ammort.coefdegressif,"construction"));
+    amortissement.push(manaufacturing.armortirModele(mE.equipement*pibchoix,mP.ammort.equipement,mP.ammort.coefdegressif,"equipement"));
+    amortissement.push(manaufacturing.armortirModele(mE.camion*pibchoix,mP.ammort.camion,mP.ammort.coefdegressif,"camion"));
+    amortissement.push(manaufacturing.armortirModele(mE.info*pibchoix,mP.ammort.info,mP.ammort.coefdegressif,"informatique"));
+    amortissement.push(manaufacturing.armortirModele(mE.bureau*pibchoix,mP.ammort.bureau,mP.ammort.coefdegressif,"bureau"));
     for(var i=0;i<amortissement.length;i++){
     	html+=amortissement[i].getHtml()+"<br/>";
 	}
@@ -150,7 +224,7 @@ function testModele2(){
     document.getElementById("test2").innerHTML=html;
 }
 function testModele3(){
-	var monm=modele();
+	var monm=model();
 
 	var html="<h1>investissment</h1><p>investissement : "+monm.investissement+"</p><h1>Ammortissment :</h1>"+monm.getAmmortHtml();
     for(var i=0;i<monm.amortissement.length;i++){
@@ -160,7 +234,7 @@ function testModele3(){
 
 }
 function testModele4(){
-    var monm=modele();
+    var monm=model();
     var html="<p>contribution employer</p>";
     html+="<table class='table'><thead></thead>";
     html+="<tbody><tr><td>Salaire des cadres</td><td>FCFA</td>";

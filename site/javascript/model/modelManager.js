@@ -324,9 +324,14 @@ ModeleManager.prototype.impotResult=function(benCompta,amortExep){
         benImpo:benImpo,
     };
 };
-ModeleManager.prototype.ammortExcept=function(mP,benCompta,regime){
+ModeleManager.prototype.ammortExcept=function(mP,benCompta,regime,donneRef){
     //amortissement exceptionnel
-    var investissment=(donne.entreprise.terrain+donne.entreprise.construction+donne.entreprise.equipement+donne.entreprise.camion+donne.entreprise.info+donne.entreprise.bureau)*donne.pays.pib;
+   // console.log(donneRef);
+
+
+
+
+    var investissment=(donneRef.entreprise.terrain+donneRef.entreprise.construction+donneRef.entreprise.equipement+donneRef.entreprise.camion+donneRef.entreprise.info+donneRef.entreprise.bureau)*donneRef.pays.pib;
     var taux;
     var limitation;
     var duree;

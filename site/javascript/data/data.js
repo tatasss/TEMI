@@ -1,17 +1,14 @@
 
 var cptDonne=1;
 Donne.prototype.donneRef=function(pays,regime,actu,marge){
-    /*localStorage.setItem("actu",actu);
-    localStorage.setItem("marge",marge);
-    localStorage.setItem("pays",pays);
-    localStorage.setItem("regime",regime);*/
+
     var randPays=mesPays();
 
     for(var i=0;i<randPays.length;i++){
-        if(randPays[i].nom===pays){
+        if(randPays[i].code===pays){
 
             var mP=randPays[i];
-            //localStorage.setItem('mP',mP);
+
             break;
 
         }
@@ -25,6 +22,29 @@ Donne.prototype.donneRef=function(pays,regime,actu,marge){
     localStorage.setItem("donne "+cptDonne,[pays,regime,actu,marge]);
     cptDonne++;
 };
+Donne.prototype.donneRefCompa=function(pays,regime,actu,marge){
+
+    var randPays=mesPays();
+
+    for(var i=0;i<randPays.length;i++){
+        if(randPays[i].code===pays){
+
+            var mP=randPays[i];
+
+            break;
+
+        }
+
+    }
+    return{
+        pays:mP,
+        regime:regime,
+        actu:actu,
+        marge:marge,
+        entreprise:fabrique.entreprise(actu,marge),
+    }
+
+};
 
 Donne.prototype.donne2=function(numberdonne){
     var lol=localStorage.getItem("donne "+numberdonne);
@@ -33,10 +53,9 @@ Donne.prototype.donne2=function(numberdonne){
     var randPays=mesPays();
 
     for(var i=0;i<randPays.length;i++){
-        if(randPays[i].nom===lol[0]){
+        if(randPays[i].code===lol[0]){
 
             var mP=randPays[i];
-            //localStorage.setItem('mP',mP);
             break;
 
         }

@@ -1,6 +1,11 @@
 Fabrique.prototype.pibFind= function(code){
 	var pib=0;
 	var xhr=getXMLHttpRequest();
+	if(localStorage.getItem("xmlPib : "+code)!==undefined){
+        if(localStorage.getItem("xmlPib : "+code)!==null){
+			return parseFloat(localStorage.getItem("xmlPib : "+code))*582.79;
+        }
+	}
 	xhr.onreadystatechange = function() {
 
 		if (xhr.readyState == 4 && (xhr.status == 200)) {
@@ -47,9 +52,7 @@ Fabrique.prototype.pibFind= function(code){
 
 };
 Fabrique.prototype.pays= function(code,nom,impot,ammort,investissment){
-	//localStorage.setItem("xmlPib","0");
 
-	//console.log(parseFloat(localStorage.getItem("xmlPib"))*582.79);
 	return {
 		pib:this.pibFind(code),
 		code:code,
@@ -81,7 +84,7 @@ Fabrique.prototype.ammortissement=function(construction,equipement,coefdegressif
 };
 Fabrique.prototype.entreprise = function(actu,marge){
 
-	/*if(donne=="Djankov"){*/
+	/*if(data=="Djankov"){*/
 		return{
 			nom:"Djankov",
 			terrain:30,
