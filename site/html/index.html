@@ -40,21 +40,21 @@
     <div id="formPays"></div>
 </div>
 <div class="form-group">
-  <label for="sel1">Regime fiscale:</label>
-  <select class="form-control" id="REGIME">
+  <label>Regime fiscale:</label>
+    <label for="REGIME"/><select class="form-control" id="REGIME">
     <option value="gen">code général des impots</option>
     <option value="nongen">code des investissements</option>
   </select>
 </div>
   <div class="form-group">
 
-    <label for="sel1">Taux d'actualisation:</label>
-    <input type="text" class="form-control" id="actualisation"/>
+    <label >Taux d'actualisation:</label>
+      <label for="actualisation"><input type="text" class="form-control" id="actualisation"/></label>
   </div>
   <div class="form-group">
 
-    <label for="sel1">Taux de marge de l'entreprise:</label>
-    <input type="text" class="form-control" id="marge"/>
+    <label>Taux de marge de l'entreprise:</label>
+      <label for="marge"><input type="text" class="form-control" id="marge"/></label>
 
 
   </div>
@@ -77,21 +77,22 @@
                     <form role="form">
                         <div class="form-group">
                             <label>Veuillez saisir le taux d'actualisation</label>
-                            <input type="text" class="form-control" id="actualistionCompa">
+                            <label for="actualistionCompa"><input type="text" class="form-control" id="actualistionCompa"></label>
                         </div>
                         <div class="form-group">
                             <label >Regime fiscale:</label>
-                            <select class="form-control" id="REGIMECmpta">
+                            <label for="REGIMECmpta"><select class="form-control" id="REGIMECmpta">
                                 <option value="gen">code général des impots</option>
                                 <option value="nongen">code des investissements</option>
-                            </select>
+                            </select></label>
                         </div>
 
                         <button type="submit" class="btn btn-success btn-block" id="myCont" >continuer</button>
                     </form>
                 </div>
                 <div class="modal-footer">
-                    <button type="submit" class="btn btn-danger btn-default pull-left" data-dismiss="modal"><span class="glyphicon glyphicon-remove"></span> Cancel</button>
+                    <button type="submit" class="btn btn-danger btn-default pull-left" data-dismiss="modal"><span
+                            class="glyphicon glyphicon-remove"/> Cancel</button>
                 </div>
             </div>
 
@@ -107,7 +108,6 @@
 <br/>
 <div id="result"></div>
 
-</div>
 </div>
 <script src="../javascript/view/directlyChange/ViewManufacturing.js"></script>
 </body>

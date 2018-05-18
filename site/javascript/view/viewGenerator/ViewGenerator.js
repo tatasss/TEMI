@@ -18,15 +18,15 @@ GenererVue.prototype.resultatHtml= function (regime) {
 
     let head = "<thead><tr><th/><th colspan=3 align=center>Taux statuaire</th><th colspan=2>Taux effectifs moyens</th><th colspan=2>Taux effectifs marginaux</th></tr>";
     head += "<tr><th/><th>Taux plein</th><th>Taux reduit</th><th>Durée</th><th>First Year</th><th>Five Year</th><th>First Year</th><th>Five Year</th></tr></thead>";
-    let cfe = this.recupDonneTab(false, donne.pays.investissement.cfe, donne.pays.impots.cfe, false, false, false);
-    let is = this.recupDonneTab(false, donne.pays.investissement.isamort, donne.pays.impots.isImp, true, false, false);
-    let imf = this.recupDonneTab(false, donne.pays.investissement.imf, donne.pays.impots.imf, false, true, false);
-    let irvm = this.recupDonneTab(false, donne.pays.investissement.irvm, donne.pays.impots.irvm, false, false, false);
-    let irc = this.recupDonneTab(false, donne.pays.investissement.irc, donne.pays.impots.irc, false, false, false);
-    let tva = this.recupDonneTab(false, donne.pays.investissement.tvaPetrole, donne.pays.impots.tva_petrole, false, false, false);
-    let tot = this.recupDonneTab(modele.mesdon().tauxeffMoyCourent, donne.pays.investissement.total, donne.pays.impots.imf, false, false, true);
+    let cfe = this.recupDonneTab(false, this.modele.donnee.pays.investissement.cfe, this.modele.donnee.pays.impots.cfe, false, false, false);
+    let is = this.recupDonneTab(false, this.modele.donnee.pays.investissement.isamort, this.modele.donnee.pays.impots.isImp, true, false, false);
+    let imf = this.recupDonneTab(false, this.modele.donnee.pays.investissement.imf, this.modele.donnee.pays.impots.imf, false, true, false);
+    let irvm = this.recupDonneTab(false, this.modele.donnee.pays.investissement.irvm, this.modele.donnee.pays.impots.irvm, false, false, false);
+    let irc = this.recupDonneTab(false, this.modele.donnee.pays.investissement.irc, this.modele.donnee.pays.impots.irc, false, false, false);
+    let tva = this.recupDonneTab(false, this.modele.donnee.pays.investissement.tvaPetrole, this.modele.donnee.pays.impots.tva_petrole, false, false, false);
+    let tot = this.recupDonneTab(this.modele.mesdon().tauxeffMoyCourent, this.modele.donnee.pays.investissement.total, this.modele.donnee.pays.impots.imf, false, false, true);
     let bodyTest = bootstrap.tableSE(
-        [`CFE</td><td>${donne.pays.impots.cfe}`, `IS</td><td class=\"fontred\">${this.mP.impots.isImp}`, `IMF</td><td class=\"fontred\">${this.mP.impots.imf}`, `IRVM</td><td>${this.mP.impots.irvm}`, `IRC</td><td>${this.mP.impots.irc}`, `TVA Petrole</td><td>${this.mP.impots.tva_petrole}`, "total</td><td>"],
+        [`CFE</td><td>${this.modele.donnee.pays.impots.cfe}`, `IS</td><td class=\"fontred\">${this.mP.impots.isImp}`, `IMF</td><td class=\"fontred\">${this.mP.impots.imf}`, `IRVM</td><td>${this.mP.impots.irvm}`, `IRC</td><td>${this.mP.impots.irc}`, `TVA Petrole</td><td>${this.mP.impots.tva_petrole}`, "total</td><td>"],
         head,
         {tab:cfe,color:""},
         {tab:is,color:"",font_color:"red",numTabdep:0},
@@ -46,12 +46,12 @@ GenererVue.prototype.recupDonneTab= function (effMoy, impDonne, donneImp, isIs, 
         result.push(null);
         /*result.push( effMoy[0]);
         result .push(effMoy[effMoy.length - 1]);*/
-        result.push(modele.mesdon().tauxEffMargImpApImp[0]);
-        result.push(modele.mesdon().tauxEffMargImpApImp[modele.mesdon().tauxEffMargImpApImp.length - 1]);
+        result.push(this.modele.mesdon().tauxEffMargImpApImp[0]);
+        result.push(this.modele.mesdon().tauxEffMargImpApImp[this.modele.mesdon().tauxEffMargImpApImp.length - 1]);
         return result;
     }
     else {
-        if (donne.regime !== "Gen") {
+        if (this.modele.donnee.regime !== "Gen") {
             if (impDonne.taux != null) {
                 result.push(impDonne.taux);
             }
@@ -72,8 +72,8 @@ GenererVue.prototype.recupDonneTab= function (effMoy, impDonne, donneImp, isIs, 
         if (isIs) {
             /*result.push(effMoy[0]);
             result.push(effMoy[effMoy.length - 1]);*/
-            result.push(modele.mesdon().tauxEffMargImpApIsImf[0]);
-            result.push(modele.mesdon().tauxEffMargImpApIsImf[modele.mesdon().tauxEffMargImpApIsImf.length - 1]);
+            result.push(this.modele.mesdon().tauxEffMargImpApIsImf[0]);
+            result.push(this.modele.mesdon().tauxEffMargImpApIsImf[this.modele.mesdon().tauxEffMargImpApIsImf.length - 1]);
         }
         else {
             if (!isImf) {
@@ -88,9 +88,7 @@ GenererVue.prototype.recupDonneTab= function (effMoy, impDonne, donneImp, isIs, 
 };
 GenererVue.prototype.pinbHTML= function (pays) {
 
-    result = `<p>Le PIB par tête dans le pays ${pays} est de : ${Math.round(this.mP.pib)} FCFA</p>`;
-    this.pibchoix = this.mP.pib;
-    return result;
+    return `<p>Le PIB par tête dans le pays ${pays} est de : ${Math.round(this.mP.pib)} FCFA</p>`;
 };
 GenererVue.prototype.entrepriseHTML= function () {
     let result = "<p>L'entreprise simulée est supposée être localisée dans la plus grande ville du pays, employer " + (this.mE.cadre + this.mE.secretaire + this.mE.ouvrier) + " salariés et vendre la totalité de sa production sur le marché local. ";
@@ -146,7 +144,7 @@ GenererVue.prototype.donneesEconomique= function (pin, pays) {
     let result = this.pinbHTML(pin, pays);
     result += this.entrepriseHTML();
     result += this.bilanHtml();
-    result += this.compteHtml(donne);
+    result += this.compteHtml(this.modele.donnee);
     return bootstrap.pan("default", "<h1>Données economiques</h1>", result);
 };
 /**
@@ -192,7 +190,7 @@ GenererVue.prototype.donneesFiscal= function () {
     //mis en place des données fiscales
 
     //fin
-    let pannelBody = bootstrap.pan("default", null, this.ImpotHtml(modele.mesdon()));
+    let pannelBody = bootstrap.pan("default", null, this.ImpotHtml(this.modele.mesdon()));
     pannelBody += this.amortissemEntHtml();
     pannelBody += this.amortiExcepHTML();
     return bootstrap.pan("default", "<h1>données fiscales</h1>", pannelBody);
@@ -219,8 +217,8 @@ GenererVue.prototype.navigationHtml= function (pays, regimE, actu, marge) {
     return result;
 };
 GenererVue.prototype.mainHTML= function (pays, regimE, actu, marge) {
-    this.mP = donne.pays;
-    this.mE = donne.entreprise;
+    this.mP = this.modele.donnee.pays;
+    this.mE = this.modele.donnee.entreprise;
     return bootstrap.container(bootstrap.GridNavCote(this.bodyHtml(pays, regimE), this.navigationHtml(pays, regimE, actu, marge)));
 };
 GenererVue.prototype. petroleHtml= function (taxeAjout) {
@@ -372,8 +370,8 @@ GenererVue.prototype.impotRevenuValeurMobilieres= function (monm) {
     let div = [];
     let irvm = [];
     for (let i = 0; i < 5; i++) {
-        div.push(donne.entreprise.dividende);
-        irvm.push(donne.pays.impots.irvm);
+        div.push(this.modele.donnee.entreprise.dividende);
+        irvm.push(this.modele.donnee.pays.impots.irvm);
     }
     let cote = ["Bénéfice après IS/IMF</td><td>FCFA", "Distribution anuelle</td><td>% des bénéfice après IS/IMF", "taux</td><td>% des bénéfice après IS/IMF", "IRVM</td><td>FCFA"];
     let tab = bootstrap.tableSE(cote, null, {tab:myMath.arrondirTabUnit(monm.resultCompta.benefice_comptable),color:""},{tab: myMath.arrondirTabUnit(div, 2),color:"yellow"},{tab: myMath.arrondirTabUnit(irvm, 2),color:"blue"},{tab: myMath.arrondirTabUnit(monm.impotIRVM),color:""});

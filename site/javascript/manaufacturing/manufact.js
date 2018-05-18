@@ -1,6 +1,6 @@
 Fabrique.prototype.pibFind= function(code){
-	var pib=0;
-	var xhr=getXMLHttpRequest();
+	let pib=0;
+	let xhr=getXMLHttpRequest();
 	if(localStorage.getItem("xmlPib : "+code)!==undefined){
         if(localStorage.getItem("xmlPib : "+code)!==null){
 			return parseFloat(localStorage.getItem("xmlPib : "+code))*582.79;
@@ -8,7 +8,7 @@ Fabrique.prototype.pibFind= function(code){
 	}
 	xhr.onreadystatechange = function() {
 
-		if (xhr.readyState == 4 && (xhr.status == 200)) {
+		if (xhr.readyState === 4 && (xhr.status === 200)) {
 
 		   // console.log( xhr.responseXML.getElementsByTagName("wb:data")[0].childNodes[3].childNodes[5].firstChild.nodeValue.toString());
 			//monPib=readPib(xhr.responseXML);
@@ -27,7 +27,7 @@ Fabrique.prototype.pibFind= function(code){
 				console.log("Une erreur XML de l'api de workbank est apparu");
 			}
 			// noinspection JSAnnotator
-			return;
+
 			//console.log(xhr.responseXML.getElementsByTagName("wb:data")[0].childNodes[3].childNodes[9].firstChild.nodeValue.toString());
 		}
 	};
@@ -151,13 +151,13 @@ Fabrique.prototype.isImpotPays=function(duree,taux,reductonEcume,ammortTauxEx,am
 };
 
 Fabrique.prototype.armortirModele=function(prix,durLin,coef,nom){
-	var dureeRestante=[];
-	var  baseAmortissable=[];
-	var tauxLineaire=[];
-	var tauxDegressif=[];
-	var chargeAmorti=[];
-	var purcent;
-	var coefdegr;
+	let dureeRestante=[];
+	let  baseAmortissable=[];
+	let tauxLineaire=[];
+	let tauxDegressif=[];
+	let chargeAmorti=[];
+	let purcent;
+	let coefdegr;
 	if(nom==="Equipement"){
 		coefdegr=coef;
 	}
@@ -185,7 +185,7 @@ Fabrique.prototype.armortirModele=function(prix,durLin,coef,nom){
 		}
 	}
 	chargeAmorti.push(Math.round(baseAmortissable[0]*(tauxDegressif[0]/100)));
-	for(var i=1; i<5;i++){
+	for(let i=1; i<5;i++){
 
 		if(dureeRestante[i-1]>0){
 				dureeRestante.push(dureeRestante[i-1]-1);
@@ -200,7 +200,7 @@ Fabrique.prototype.armortirModele=function(prix,durLin,coef,nom){
 		else{
 				tauxLineaire.push(0);
 		}
-		if(dureeRestante[i]==0){
+		if(dureeRestante[i]===0){
 			tauxDegressif.push(0);
 		}
 		else{
@@ -232,20 +232,20 @@ Fabrique.prototype.armortirModele=function(prix,durLin,coef,nom){
 			/*<div class='panel panel-default'>
 <div class="panel-heading">Panel Heading</div>
 <div class="panel-body">Panel Content</div>
-</div>*/		var cote2=["Base amortissable</td><td>FCFA","Taux unitaire</td><td>%","Taux dégréssif</td><td>%","Charge amortissement</td><td>FCFAS"];
-			var html="<div class='panel panel-info'><div class=\"panel-heading\">";
-			var cote1=["Durée linéaire</td><td>Année","Coef dégréssif</td><td>Coef"];
-			var head="<thead><tr><th>"+this.nom+"</th><th>FCFA</th><th class='blue'>"+this.baseAmortissable[0]+"</th></tr></thead>";
+</div>*/		let cote2=["Base amortissable</td><td>FCFA","Taux unitaire</td><td>%","Taux dégréssif</td><td>%","Charge amortissement</td><td>FCFAS"];
+			let html="<div class='panel panel-info'><div class=\"panel-heading\">";
+			let cote1=["Durée linéaire</td><td>Année","Coef dégréssif</td><td>Coef"];
+			let head=`<thead><tr><th>${this.nom}</th><th>FCFA</th><th class='blue'>${this.baseAmortissable[0]}</th></tr></thead>`;
 			html+=bootstrap.tableSE(cote1,head,{tab:[this.dureeRestante[0]],color:"yellow"},{tab:[coefdegr],color:"yellow"});
-			html+="</div> <div class='panel-body'>"
-			var head2="<thead><tr><th>Durée restante</th><th>Annee</th>";
-			for(var i=0;i<5;i++){
-				head2+="<th>"+this.dureeRestante[i]+"</th>";
+			html+="</div> <div class='panel-body'>";
+			let head2="<thead><tr><th>Durée restante</th><th>Annee</th>";
+			for(let i=0;i<5;i++){
+				head2+=`<th>${this.dureeRestante[i]}</th>`;
 			}
 			head2+="</thead>";
-			var tauxLin=[];
-			var tauxDegr=[];
-			for(var i=0;i<this.tauxLineaire.length;i++){
+			let tauxLin=[];
+			let tauxDegr=[];
+			for(let i=0;i<this.tauxLineaire.length;i++){
 				tauxLin.push(Math.round(this.tauxLineaire[i]*100)/100);
 				tauxDegr.push(Math.round(this.tauxDegressif[i]*100)/100);
 			}

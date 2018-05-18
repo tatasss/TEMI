@@ -1,37 +1,31 @@
-var startTime = new Date().getTime();
+let startTime = new Date().getTime();
 
-var elapsedTime = 0;
-var donne=new Donne();
-var modele=new Modele(donne);
-if(localStorage.getItem("donne "+1)!==undefined ){
-    if(localStorage.getItem("donne "+1)!==null){
+let elapsedTime = 0;
+let monModele;
+if(localStorage.getItem("don")!==undefined && localStorage.getItem("don")!==null){
+    let tab = localStorage.getItem("don").split(",");
 
-        donne.donne2(1);
-    }
+    monModele = new Modele(new Donne(tab[0], tab[1], tab[2], tab[3]));
 }
-if(donne.pays!=undefined ){
-    if(donne.pays!=null){
-        console.log(donne);
-        console.log(donne.pays.pib);
-    }
-}
+
+
 
 //console.log(data);
 function mesPays(){
 
-    var Pays=[];
-    var ben=fabrique.investir(fabrique.impotPays(null,null,null),fabrique.isImpotPays(5,null,100,null,null),fabrique.impotPays(null,null,null),fabrique.impotPays(null,null,null),fabrique.impotPays(null,null,null),fabrique.impotPays(null,null,null));
-    var bfa=fabrique.investir(fabrique.impotPays(5,null,100),fabrique.isImpotPays(5,null,null,50,50),fabrique.impotPays(null,null,null),fabrique.impotPays(null,null,null),fabrique.impotPays(null,null,null),fabrique.impotPays(null,null,null));
-    var cmr=fabrique.investir(fabrique.impotPays(null,null,null),fabrique.isImpotPays(5,null,50,null,null),fabrique.impotPays(null,null,null),fabrique.impotPays(5,null,50),fabrique.impotPays(null,null,null),fabrique.impotPays(null,null,null));
-    var caf=fabrique.investir(fabrique.impotPays(null,null,null),fabrique.isImpotPays(3,null,100,null,null),fabrique.impotPays(null,null,null),fabrique.impotPays(null,null,null),fabrique.impotPays(null,null,null),fabrique.impotPays(null,null,null));
-    var cog=fabrique.investir(fabrique.impotPays(null,null,null),fabrique.isImpotPays(3,null,100,null,null),fabrique.impotPays(null,null,null),fabrique.impotPays(null,null,null),fabrique.impotPays(null,null,null),fabrique.impotPays(null,null,null));
-    var civ=fabrique.investir(fabrique.impotPays(7,2.2,null),fabrique.isImpotPays(7,null,100,null,null),fabrique.impotPays(null,null,null),fabrique.impotPays(null,null,null),fabrique.impotPays(null,null,null),fabrique.impotPays(null,null,null));
-    var gab=fabrique.investir(fabrique.impotPays(null,null,null),fabrique.isImpotPays(5,null,100,null,null),fabrique.impotPays(null,null,null),fabrique.impotPays(null,null,null),fabrique.impotPays(null,null,null),fabrique.impotPays(null,null,null));
-    var mli=fabrique.investir(fabrique.impotPays(null,null,null),fabrique.isImpotPays(7,25,null,null,null),fabrique.impotPays(null,null,null),fabrique.impotPays(null,null,null),fabrique.impotPays(null,null,null),fabrique.impotPays(null,null,null));
-    var ner=fabrique.investir(fabrique.impotPays(null,null,null),fabrique.isImpotPays(null,null,null,null,null),fabrique.impotPays(6,null,100),fabrique.impotPays(null,null,null),fabrique.impotPays(null,null,null),fabrique.impotPays(null,null,null));
-    var sen=fabrique.investir(fabrique.impotPays(5,null,100),fabrique.isImpotPays(5,null,null,40,50),fabrique.impotPays(null,null,null),fabrique.impotPays(null,null,null),fabrique.impotPays(null,null,null),fabrique.impotPays(null,null,null));
-    var tcd=fabrique.investir(fabrique.impotPays(null,null,null),fabrique.isImpotPays(5,null,100,null,null),fabrique.impotPays(5,null,100),fabrique.impotPays(null,null,null),fabrique.impotPays(null,null,null),fabrique.impotPays(null,null,null));
-    var tgo=fabrique.investir(fabrique.impotPays(5,2,null),fabrique.isImpotPays(5,null,2,40,50),fabrique.impotPays(null,null,null),fabrique.impotPays(null,null,null),fabrique.impotPays(null,null,null),fabrique.impotPays(null,null,null));
+    let Pays = [];
+    let ben=fabrique.investir(fabrique.impotPays(null,null,null),fabrique.isImpotPays(5,null,100,null,null),fabrique.impotPays(null,null,null),fabrique.impotPays(null,null,null),fabrique.impotPays(null,null,null),fabrique.impotPays(null,null,null));
+    let bfa = fabrique.investir(fabrique.impotPays(5, null, 100), fabrique.isImpotPays(5, null, null, 50, 50), fabrique.impotPays(null, null, null), fabrique.impotPays(null, null, null), fabrique.impotPays(null, null, null), fabrique.impotPays(null, null, null));
+    let cmr=fabrique.investir(fabrique.impotPays(null,null,null),fabrique.isImpotPays(5,null,50,null,null),fabrique.impotPays(null,null,null),fabrique.impotPays(5,null,50),fabrique.impotPays(null,null,null),fabrique.impotPays(null,null,null));
+    let caf=fabrique.investir(fabrique.impotPays(null,null,null),fabrique.isImpotPays(3,null,100,null,null),fabrique.impotPays(null,null,null),fabrique.impotPays(null,null,null),fabrique.impotPays(null,null,null),fabrique.impotPays(null,null,null));
+    let cog=fabrique.investir(fabrique.impotPays(null,null,null),fabrique.isImpotPays(3,null,100,null,null),fabrique.impotPays(null,null,null),fabrique.impotPays(null,null,null),fabrique.impotPays(null,null,null),fabrique.impotPays(null,null,null));
+    let civ=fabrique.investir(fabrique.impotPays(7,2.2,null),fabrique.isImpotPays(7,null,100,null,null),fabrique.impotPays(null,null,null),fabrique.impotPays(null,null,null),fabrique.impotPays(null,null,null),fabrique.impotPays(null,null,null));
+    let gab=fabrique.investir(fabrique.impotPays(null,null,null),fabrique.isImpotPays(5,null,100,null,null),fabrique.impotPays(null,null,null),fabrique.impotPays(null,null,null),fabrique.impotPays(null,null,null),fabrique.impotPays(null,null,null));
+    let mli=fabrique.investir(fabrique.impotPays(null,null,null),fabrique.isImpotPays(7,25,null,null,null),fabrique.impotPays(null,null,null),fabrique.impotPays(null,null,null),fabrique.impotPays(null,null,null),fabrique.impotPays(null,null,null));
+    let ner=fabrique.investir(fabrique.impotPays(null,null,null),fabrique.isImpotPays(null,null,null,null,null),fabrique.impotPays(6,null,100),fabrique.impotPays(null,null,null),fabrique.impotPays(null,null,null),fabrique.impotPays(null,null,null));
+    let sen=fabrique.investir(fabrique.impotPays(5,null,100),fabrique.isImpotPays(5,null,null,40,50),fabrique.impotPays(null,null,null),fabrique.impotPays(null,null,null),fabrique.impotPays(null,null,null),fabrique.impotPays(null,null,null));
+    let tcd=fabrique.investir(fabrique.impotPays(null,null,null),fabrique.isImpotPays(5,null,100,null,null),fabrique.impotPays(5,null,100),fabrique.impotPays(null,null,null),fabrique.impotPays(null,null,null),fabrique.impotPays(null,null,null));
+    let tgo=fabrique.investir(fabrique.impotPays(5,2,null),fabrique.isImpotPays(5,null,2,40,50),fabrique.impotPays(null,null,null),fabrique.impotPays(null,null,null),fabrique.impotPays(null,null,null),fabrique.impotPays(null,null,null));
     Pays.push(fabrique.pays("BEN","Benin",fabrique.impot(4,30,0.75,10,15,18),fabrique.ammortissement(20,10,2.5,3,2,10),ben));
     Pays.push(fabrique.pays("BFA","Burkina Faso",fabrique.impot(3,27.5,0.5,12.5,25,18),fabrique.ammortissement(20,10,2.5,3,2,10),bfa));
     Pays.push(fabrique.pays("CMR","Cameroun",fabrique.impot(2.5,33,2.2,16.5,16.5,19.25),fabrique.ammortissement(20,10,1,3,4,10),cmr));
@@ -77,7 +71,7 @@ function debutCompa(actu,regime){
      localStorage.setItem("compatRegime",regime);
 
      //url.replace("/graphForm.html");
-     var stateObj = { foo: "bar" };
+     let stateObj = { foo: "bar" };
      history.pushState(stateObj, "some useless title", "/site/html/graphForm.html");
 
 
@@ -93,26 +87,21 @@ function debutCompa(actu,regime){
     //document.open("./graphForm.html");
 
 }
-function  htmlGraphFormFunction(actu,regime){
-
-
-}
 function validateForm() {
 
 // votre code à mesurer ici
 
-
-            var actualisation=$("#actualisation").val();
-            var marge=$("#marge").val();
-            try{
-                actualisation=verifPourcent(actualisation);
-            } catch (e) {
-                alert("Le taux d'actualisation doit être compris entre 0 et 100");
-                return;
-            }
-
-    try{
-        marge=verifPourcent(marge);
+    let actualisation = $("#actualisation").val();
+    let marge = $("#marge").val();
+    try {
+        actualisation = verifPourcent(actualisation);
+    }
+    catch (e) {
+        alert("Le taux d'actualisation doit être compris entre 0 et 100");
+        return;
+    }
+    try {
+        marge = verifPourcent(marge);
     }
     catch (e) {
         alert("Le taux de marge doit être compris entre 0 et 100 ");
@@ -120,13 +109,23 @@ function validateForm() {
     }
 
 
-			//var data = $("#data").val();
-			var pays =$("#PAYS").val();
-			var regime=$("#REGIME").val();
-			//var x =data + "\n"+pibpnb+ "\n"+pays+"\n"+regime;
-			donne.donneRef(pays,regime,actualisation,marge);
-			//console.log(marge);
-			document.getElementById("result").innerHTML=genererVue.mainHTML(pays,regime,actualisation,marge);
+    //var data = $("#data").val();
+    let pays = $("#PAYS").val();
+    let regime = $("#REGIME").val();
+    //var x =data + "\n"+pibpnb+ "\n"+pays+"\n"+regime;
+    localStorage.setItem("don", [pays, regime, actualisation, marge].toString());
+    let donne = new Donne(pays, regime, actualisation, marge);
+    if (donne.pays !== undefined) {
+        if (donne.pays != null) {
+            console.log(parseFloat(localStorage.getItem("xmlPib : " + donne.pays.code)) * 582.79);
+            //console.log(donne);
+            console.log(donne.pays);
+        }
+    }
+    monModele = new Modele(donne);
+    let genererVue = new GenererVue(monModele);
+    //console.log(marge);
+    document.getElementById("result").innerHTML = genererVue.mainHTML(pays, regime, actualisation, marge);
     elapsedTime = new Date().getTime() - startTime;
 
     //console.log(elapsedTime);
@@ -134,7 +133,7 @@ function validateForm() {
 
 }
 function getXMLHttpRequest() {
-    var xhr = null;
+    let xhr = null;
     if (window.XMLHttpRequest || window.ActiveXObject) {
         if (window.ActiveXObject) {
             try {
@@ -154,7 +153,7 @@ function getXMLHttpRequest() {
 }
 function verifPourcent(nombre){
   //console.log(nombre);
-    var regex1 = /^[0-9]*.?[0-9]*$/;
+    let regex1 = /^[0-9]*.?[0-9]*$/;
     if(!regex1.test(nombre)){
         throw new Error("Veuillez entrer un pourcentage");
     }
@@ -177,6 +176,7 @@ function verifPourcent(nombre){
     }
     return nombre;
 }
+
 /*
 function testModele1(){
 

@@ -1,7 +1,10 @@
-const monm = modele.mesdon();
+
+const monm =monModele.mesdon();
+const genererVue=new GenererVue(monModele);
 let investPart = "<p>investissement : " + monm.investissement + "</p>";
 
 document.getElementById("invest").innerHTML = investPart;
+
 let amm=genererVue.getAmmortGenneralHtml(monm);
 amm+="<br/>";
 for(let i=0;i<monm.amortissement.length;i++){

@@ -1,8 +1,8 @@
 
-MyMath.prototype.pascalTriangle=function(nombrePuiss){
-    retour=[];
-    var lol=function (nombrePuiss) {
-        var tab=[];
+/*MyMath.prototype.pascalTriangle=function(nombrePuiss){
+    let retour=[];
+    let lol=function (nombrePuiss) {
+        let tab=[];
         if(nombrePuiss===1){
             tab.push(1);
             return tab;
@@ -12,9 +12,9 @@ MyMath.prototype.pascalTriangle=function(nombrePuiss){
             tab.push(1);
             return tab;
         }
-        var tabPrece=lol(nombrePuiss-1);
+        let tabPrece=lol(nombrePuiss-1);
         tab.push(1);
-        for(var i=1;i<tabPrece.length;i++){
+        for(let i=1;i<tabPrece.length;i++){
             //console.log(tabPrece[i]+tabPrece[i-1]);
             tab.push(tabPrece[i]+tabPrece[i-1]);
         }
@@ -26,12 +26,12 @@ MyMath.prototype.pascalTriangle=function(nombrePuiss){
     return retour;
 
 
-};
+};*/
 MyMath.prototype.tri=function(tab){
 
-    var numberOfTries = 1;
+    let numberOfTries = 1;
     // Cash flow values must contain at least one positive value and one negative value
-    var positive, negative;
+    let positive, negative;
     Array.prototype.slice.call(tab).forEach(function (value) {
         if (value > 0) positive = true;
         if (value < 0) negative = true;
@@ -42,18 +42,18 @@ MyMath.prototype.tri=function(tab){
         if (numberOfTries > 1000) {
             throw new Error('IRR can\'t find a result');
         }
-        var rrate = (1 + rate/100);
-        var npv = tab[0];
-        for (var i = 1; i < tab.length; i++) {
+        let rrate = (1 + rate/100);
+        let npv = tab[0];
+        for (let i = 1; i < tab.length; i++) {
             npv += (tab[i] / Math.pow(rrate, i));
         }
         return npv;
     }
     return Math.round(triReel(npv) * 100) / 100;
-},
+};
     triReel=function(fn)  {
         //console.log("on entre dans seekzero");
-        var x = 1;
+        let x = 1;
 
         //console.log(fn(x));
         while (fn(x) > 0) {
@@ -69,10 +69,10 @@ MyMath.prototype.van=function(actu, tab){
    /* console.log("on entre dans le calcul VAN");
     console.log(tab.toString());
     console.log(tab[0]);*/
-    //console.log((tab[0]));
-    var lol = tab[0];
-    var somme=0;
-    for(var i=1;i<tab.length;i++){
+   //console.log((tab[0]));
+    let lol=tab[0];
+    let somme=0;
+    for(let i=1;i<tab.length;i++){
         somme+=(tab[i]/Math.pow((1+actu),i));
 
     }
@@ -84,35 +84,35 @@ MyMath.prototype.van=function(actu, tab){
 };
 
 MyMath.prototype.sommeTab=function (tab) {
-    var tot=0;
-    for(var i=0;i<tab.length;i++){
+    let tot=0;
+    for(let i=0;i<tab.length;i++){
         tot+=tab[i];
     }
     return tot;
 };
-MyMath.prototype.divisionTabPurcent=function(tabDiv,tabDive){
-    var tot=[];
+/*MyMath.prototype.divisionTabPurcent=function(tabDiv,tabDive){
+    let tot=[];
     if(tabDiv.length!==tabDive.length){
         alert("lol, les tables ne sont  pas de même tailles\n"+tabDiv.length+"\n"+tabDive.length+"\ntaille tab");
         return null;
     }
-    for(var i=0;i<=tabDiv.length;i++){
+    for(let i=0;i<=tabDiv.length;i++){
         //console.log(Math.round((tabDiv[i]/tabDive[i])*1000));
         tot.push(Math.round((tabDiv[i]/tabDive[i])*1000)/10);
     }
     return tot;
-};
+};*/
 MyMath.prototype.arrondirTabUnit=function(tab,numberDec){
     if(numberDec==null){
         numberDec=0;
     }
-    if (numberDec === undefined) {
+    if(numberDec===undefined){
         numberDec=0;
     }
     if(numberDec<0){
         numberDec=0;
     }
-    var tabArr=[];
+    let tabArr=[];
     for (let i=0;i<tab.length;i++){
         tabArr.push(Math.round(tab[i]*Math.pow(10,numberDec))/(Math.pow(10,numberDec)));
     }
