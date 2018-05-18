@@ -26,21 +26,30 @@
     var mmax=100;
     var n=0;
     var donne=[];
+    var donne2 = [];
     var label=[];
     var color=[];
+    var color2 = [];
     for (var i=0;i<mmax;i++){
         donne.push(n);
         label.push(donne[i].toString());
         n++;
+        color2.push('rgba(255, 99, 132, 0.5)');
         color.push('rgba(255, 99, 132, 1)');
+        color2.push('rgba(54, 162, 235, 0.5)');
         color.push('rgba(54, 162, 235, 1)');
+        color2.push('rgba(255, 206, 86, 0.5)');
         color.push('rgba(255, 206, 86, 1)');
+        color2.push('rgba(75, 192, 192, 0.5)');
         color.push('rgba(75, 192, 192, 1)');
+        color2.push('rgba(153, 102, 255, 0.5)');
         color.push('rgba(153, 102, 255, 1)');
+        color2.push('rgba(255, 159, 64, 0.5)');
         color.push('rgba(255, 159, 64, 1)');
         if(n>10){
             n=0;
         }
+        donne2.push(donne[i] % 4);
 
 
     }
@@ -54,7 +63,12 @@
                 label: '# of Votes',
                 data: donne,
                 backgroundColor:color,
-            }]
+            },
+                {
+                    label: 'lol',
+                    data: donne2,
+                    backgroundColor: color2,
+                }]
         },
         options: {
             scales: {

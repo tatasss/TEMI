@@ -35,7 +35,7 @@ MyMath.prototype.tri=function(tab){
     Array.prototype.slice.call(tab).forEach(function (value) {
         if (value > 0) positive = true;
         if (value < 0) negative = true;
-    })
+    });
     if (!positive || !negative) throw new Error('TRI a besoin de valeur positif et negatif');
     function npv(rate) {
         numberOfTries++;
@@ -69,7 +69,8 @@ MyMath.prototype.van=function(actu, tab){
    /* console.log("on entre dans le calcul VAN");
     console.log(tab.toString());
     console.log(tab[0]);*/
-    var lol=-tab[0];
+    //console.log((tab[0]));
+    var lol = tab[0];
     var somme=0;
     for(var i=1;i<tab.length;i++){
         somme+=(tab[i]/Math.pow((1+actu),i));
@@ -105,7 +106,7 @@ MyMath.prototype.arrondirTabUnit=function(tab,numberDec){
     if(numberDec==null){
         numberDec=0;
     }
-    if(numberDec==undefined){
+    if (numberDec === undefined) {
         numberDec=0;
     }
     if(numberDec<0){

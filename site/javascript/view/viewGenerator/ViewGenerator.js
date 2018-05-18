@@ -18,13 +18,13 @@ GenererVue.prototype.resultatHtml= function (regime) {
 
     let head = "<thead><tr><th/><th colspan=3 align=center>Taux statuaire</th><th colspan=2>Taux effectifs moyens</th><th colspan=2>Taux effectifs marginaux</th></tr>";
     head += "<tr><th/><th>Taux plein</th><th>Taux reduit</th><th>Durée</th><th>First Year</th><th>Five Year</th><th>First Year</th><th>Five Year</th></tr></thead>";
-    let cfe = this.recupDonneTab(modele.mesdon().tauxeffMoyActualise.cfe, donne.pays.investissement.cfe, donne.pays.impots.cfe, false, false, false);
-    let is = this.recupDonneTab(modele.mesdon().tauxeffMoyActualise.isimf, donne.pays.investissement.isamort, donne.pays.impots.isImp, true, false, false);
-    let imf = this.recupDonneTab(modele.mesdon().tauxeffMoyActualise.isimf, donne.pays.investissement.imf, donne.pays.impots.imf, false, true, false);
-    let irvm = this.recupDonneTab(modele.mesdon().tauxeffMoyActualise.irvm, donne.pays.investissement.irvm, donne.pays.impots.irvm, false, false, false);
-    let irc = this.recupDonneTab(modele.mesdon().tauxeffMoyActualise.irc, donne.pays.investissement.irc, donne.pays.impots.irc, false, false, false);
-    let tva = this.recupDonneTab(modele.mesdon().tauxeffMoyActualise.tvaPetrole, donne.pays.investissement.tvaPetrole, donne.pays.impots.tva_petrole, false, false, false);
-    let tot = this.recupDonneTab(modele.mesdon().tauxeffMoyActualise.total, donne.pays.investissement.total, donne.pays.impots.imf, false, false, true);
+    let cfe = this.recupDonneTab(false, donne.pays.investissement.cfe, donne.pays.impots.cfe, false, false, false);
+    let is = this.recupDonneTab(false, donne.pays.investissement.isamort, donne.pays.impots.isImp, true, false, false);
+    let imf = this.recupDonneTab(false, donne.pays.investissement.imf, donne.pays.impots.imf, false, true, false);
+    let irvm = this.recupDonneTab(false, donne.pays.investissement.irvm, donne.pays.impots.irvm, false, false, false);
+    let irc = this.recupDonneTab(false, donne.pays.investissement.irc, donne.pays.impots.irc, false, false, false);
+    let tva = this.recupDonneTab(false, donne.pays.investissement.tvaPetrole, donne.pays.impots.tva_petrole, false, false, false);
+    let tot = this.recupDonneTab(modele.mesdon().tauxeffMoyCourent, donne.pays.investissement.total, donne.pays.impots.imf, false, false, true);
     let bodyTest = bootstrap.tableSE(
         [`CFE</td><td>${donne.pays.impots.cfe}`, `IS</td><td class=\"fontred\">${this.mP.impots.isImp}`, `IMF</td><td class=\"fontred\">${this.mP.impots.imf}`, `IRVM</td><td>${this.mP.impots.irvm}`, `IRC</td><td>${this.mP.impots.irc}`, `TVA Petrole</td><td>${this.mP.impots.tva_petrole}`, "total</td><td>"],
         head,
@@ -214,7 +214,6 @@ GenererVue.prototype.navigationHtml= function (pays, regimE, actu, marge) {
     }
     let pannel = bootstrap.pan("default", "Paramétres", ref.donnerNomPays(pays) + "<br/>" + regime + "</br>" + actu + "</br>" + marge);
     let result = "<div class='vertical-menu'>" + pannel;
-    result += bootstrap.buttonBalA("./graph.html", "voir graphique en cours");
     result += bootstrap.buttonBalA("./model.html", "voir model");
     result += bootstrap.buttonBalA("./index.html", "retour") + "</div>";
     return result;

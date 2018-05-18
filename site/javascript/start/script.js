@@ -106,16 +106,17 @@ function validateForm() {
             var marge=$("#marge").val();
             try{
                 actualisation=verifPourcent(actualisation);
-            }
-            catch{
+            } catch (e) {
                 alert("Le taux d'actualisation doit être compris entre 0 et 100");
+                return;
             }
 
     try{
         marge=verifPourcent(marge);
     }
-    catch{
-        alert("Le taux de marge doit être compris entre 0 et 100");
+    catch (e) {
+        alert("Le taux de marge doit être compris entre 0 et 100 ");
+        return;
     }
 
 
@@ -129,9 +130,9 @@ function validateForm() {
     elapsedTime = new Date().getTime() - startTime;
 
     //console.log(elapsedTime);
-		
-			
-};
+
+
+}
 function getXMLHttpRequest() {
     var xhr = null;
     if (window.XMLHttpRequest || window.ActiveXObject) {
@@ -150,10 +151,10 @@ function getXMLHttpRequest() {
     }
 
     return xhr;
-};
+}
 function verifPourcent(nombre){
   //console.log(nombre);
-    var regex1 = /^[0-9]*$/;
+    var regex1 = /^[0-9]*.?[0-9]*$/;
     if(!regex1.test(nombre)){
         throw new Error("Veuillez entrer un pourcentage");
     }
@@ -175,8 +176,7 @@ function verifPourcent(nombre){
         throw new Error("le chiffre est inférieur à 00");
     }
     return nombre;
-};
-
+}
 /*
 function testModele1(){
 

@@ -25,9 +25,14 @@ Modele.prototype.mesdon=function(){
         actualisation.push(1/Math.pow(1+(mE.actuali/100),i)*100);
        // console.log(Math.round(((1/Math.pow(1+(mE.actuali/100),i))*100)*10)/10);
     }
+    var lol, lol2;
     for (var i=0;i<5;i++){
-        impotSociete.push(resultImpot.benImpo[i]*(impotSelected.is/100));
-        //console.log(resultImpot.benImpo[i]*mP.impots.isImp)
+        lol = resultImpot.benImpo[i];
+        lol2 = (impotSelected.is / 100);
+        impotSociete.push(lol * lol2);
+        console.log(lol);
+        console.log(lol2);
+        console.log(lol * lol2);
     }
     for (var i=0;i<5;i++){
         impotIMF.push(resultCompta.vente[i]*(impotSelected.imf/100));
@@ -46,11 +51,9 @@ Modele.prototype.mesdon=function(){
     var fluxTresSansISIMF=modeleManager.fluxTresoriesImp(fluxTresSansImp,impotTaxeCourent.isimf,impotTaxeActu.isimf,mE.actuali);
     //console.log("model le flux de tresorie sans ISIMF :"+fluxTresSansISIMF.courant.toString());
     var fluxTresApresImpot=modeleManager.fluxTresoriesImp(fluxTresSansImp,impotTaxeCourent.total,impotTaxeActu.total,mE.actuali);
-    //console.log(fluxTresSansImp.courant);
-   // console.log(fluxTresApresImpot.courant[fluxTresApresImpot.courant.length-1]);
+    // console.log(taxeValAjout);
 
     var tauxeffMoyC=modeleManager.tauxEffectif(fluxTresSansImp.courant[fluxTresSansImp.courant.length-1],fluxTresApresImpot.courant[fluxTresApresImpot.courant.length-1]);
-    var tauxeffMoyA=modeleManager.tauxEffectif(fluxTresSansImp.actu[fluxTresSansImp.actu.length-1],fluxTresApresImpot.actu[fluxTresApresImpot.actu.length-1]);
 
     var tauxRendInterneSImp=modeleManager.tauxRendementInterne(fluxTresSansImp.courant);
     var tauxRendInterneSISIMF=modeleManager.tauxRendementInterne(fluxTresSansISIMF.courant);
@@ -77,7 +80,6 @@ Modele.prototype.mesdon=function(){
         impotTaxeActu:impotTaxeActu,
         fluxTresSansImp:fluxTresSansImp,
         tauxeffMoyCourent:tauxeffMoyC,
-        tauxeffMoyActualise:tauxeffMoyA,
         fluxTresSansISIMF:fluxTresSansISIMF,
         fluxTresApresImpot:fluxTresApresImpot,
         tauxRendInterneSImp:tauxRendInterneSImp,
