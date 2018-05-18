@@ -1,5 +1,5 @@
 # TEMI
-Je suis tatasss et je bosse sur ce projet dans le cadre de mon stage en dut
+Je suis tatasss et je travaille sur ce projet dans le cadre de mon stage en dut
 
 Le résultat attendu  en cours de ce est une page web qui sera attachée au site du CERDI 
 et qui présentera les simulations de TEMI pour un ou plusieurs pays donnés au choix de l’utilisateur. 
