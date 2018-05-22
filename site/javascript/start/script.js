@@ -27,7 +27,10 @@ function showModal() {
 
 
 }
-
+function getWindowPath() {
+    return window.location.href;
+}
+//console.log(document.);
 function debutCompa(actu, regime) {
     console.log("ici");
 
@@ -39,7 +42,13 @@ function debutCompa(actu, regime) {
 
         //url.replace("/graphForm.html");
         let stateObj = {foo: "bar"};
-        history.pushState(stateObj, "some useless title", "/site/html/graphForm.html");
+        let url= window.location.hostname;
+        history.pushState(stateObj, window.location.href);
+        console.log(history.state);
+        window.location.href="./graphForm.html";
+        history.replaceState(stateObj, "some useless title","./graphForm.html");
+
+       //document.location.href="./graphForm.html";
 
 
     } catch (e) {
