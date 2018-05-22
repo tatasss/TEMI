@@ -1,13 +1,11 @@
 let htmlFormPays = "<label for=\"sel1\">Pays:</label> <select class=\"form-control\" id=\"PAYS\">";
-for(let i=0; i<mesPays().length; i++){
-    if(mesPays()[i].nom!=="Guinée Bissao"){
-        if(mesPays()[i].nom!=="Guinée équatoriale"){
-            htmlFormPays+=`<option value=${mesPays()[i].code}>${mesPays()[i].nom}</option> `;
-            //console.log(mesPays()[i].code)
+mesPays().forEach(function (item) {
+    if (item.nom !== "Guinée Bissao") {
+        if (item.nom !== "Guinée équatoriale") {
+            htmlFormPays += `<option value=${item.code}>${item.nom}</option> `;
         }
     }
-
-}
-htmlFormPays+="</select>";
-document.getElementById("formPays").innerHTML=htmlFormPays;
+});
+htmlFormPays += "</select>";
+document.getElementById("formPays").innerHTML = htmlFormPays;
 

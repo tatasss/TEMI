@@ -1,18 +1,18 @@
 <!DOCTYPE html>
 <html lang="fr" xmlns="http://www.w3.org/1999/html">
 <head>
-<title>index</title>
-<meta charset="utf-8">
+    <title>index</title>
+    <meta charset="utf-8">
     <script>
         localStorage.clear();
     </script>
     <script src="../javascript/start/reference.js"></script>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  <link rel="stylesheet" href="../css/general.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-  <script src="../javascript/view/viewGenerator/bootstrapView.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/general.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="../javascript/view/viewGenerator/bootstrapView.js"></script>
     <script src="../javascript/model/anotherFunctiun/myMath.js"></script>
     <script src="../javascript/model/model.js"></script>
     <script src="../javascript/model/modelManager.js"></script>
@@ -22,44 +22,44 @@
     <script src="../javascript/start/script.js"></script>
 
 
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
 </head>
 <body>
 <nav class="navbar navbar-inverse ">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <a class="navbar-brand" href="./index.html">Cerdi</a>
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="./index.html">Cerdi</a>
+        </div>
     </div>
-  </div>
 </nav>
 <div class="container">
 
-<div class="form-group">
+    <div class="form-group">
 
-    <div id="formPays"></div>
-</div>
-<div class="form-group">
-  <label>Regime fiscale:</label>
-    <label for="REGIME"/><select class="form-control" id="REGIME">
-    <option value="gen">code général des impots</option>
-    <option value="nongen">code des investissements</option>
-  </select>
-</div>
-  <div class="form-group">
+        <div id="formPays"></div>
+    </div>
+    <div class="form-group">
+        <label>Regime fiscale:</label>
+        <select class="form-control" id="REGIME" title="regime Fiscale">
+            <option value="gen">code général des impots</option>
+            <option value="nongen">code des investissements</option>
+        </select>
+    </div>
+    <div class="form-group">
 
-    <label >Taux d'actualisation:</label>
-      <label for="actualisation"><input type="text" class="form-control" id="actualisation"/></label>
-  </div>
-  <div class="form-group">
+        <label>Taux d'actualisation:</label>
+        <input type="text" class="form-control" id="actualisation" title="actualisation"/>
+    </div>
+    <div class="form-group">
 
-    <label>Taux de marge de l'entreprise:</label>
-      <label for="marge"><input type="text" class="form-control" id="marge"/></label>
+        <label>Taux de marge de l'entreprise:</label>
+        <input type="text" class="form-control" id="marge" title="marge"/>
 
 
-  </div>
-<button type="submit" class="btn btn-default" onclick="validateForm()">valider</button>
-    <button type="submit" class="btn btn-default" id="myBtn" onclick="showModal()" >Demarrer Comparaison</button>
+    </div>
+    <button type="submit" class="btn btn-default" onclick="validateForm()">valider</button>
+    <button type="submit" class="btn btn-default" id="myBtn" onclick="showModal()">Demarrer Comparaison</button>
 
     <!-- Modal -->
     <div class="modal fade" id="myModal" role="dialog">
@@ -77,22 +77,23 @@
                     <form role="form">
                         <div class="form-group">
                             <label>Veuillez saisir le taux d'actualisation</label>
-                            <label for="actualistionCompa"><input type="text" class="form-control" id="actualistionCompa"></label>
+                            <input type="text" class="form-control" id="actualistionCompa" title="actualisation">
                         </div>
                         <div class="form-group">
-                            <label >Regime fiscale:</label>
-                            <label for="REGIMECmpta"><select class="form-control" id="REGIMECmpta">
+                            <label>Regime fiscale:</label>
+                           <select class="form-control" id="REGIMECmpta" title="regime fiscale">
                                 <option value="gen">code général des impots</option>
                                 <option value="nongen">code des investissements</option>
-                            </select></label>
+                            </select>
                         </div>
 
-                        <button type="submit" class="btn btn-success btn-block" id="myCont" >continuer</button>
+                        <button type="submit" class="btn btn-success btn-block" id="myCont">continuer</button>
                     </form>
                 </div>
                 <div class="modal-footer">
                     <button type="submit" class="btn btn-danger btn-default pull-left" data-dismiss="modal"><span
-                            class="glyphicon glyphicon-remove"/> Cancel</button>
+                            class="glyphicon glyphicon-remove"/> Cancel
+                    </button>
                 </div>
             </div>
 
@@ -105,8 +106,8 @@
 </script>
 
 <div>
-<br/>
-<div id="result"></div>
+    <br/>
+    <div id="result"></div>
 
 </div>
 <script src="../javascript/view/directlyChange/ViewManufacturing.js"></script>

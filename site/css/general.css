@@ -18,13 +18,14 @@
     background-color: #4CAF50; /* Add a green color to the "active/current" link */
     color: white;
 }
-.vertical-form{
+
+.vertical-form {
     width: 100%;
 }
-.test{
+
+.test {
     border: 1px solid black;
 }
-
 
 .vertical-form button.active {
     background-color: #4CAF50; /* Add a green color to the "active/current" link */
@@ -38,25 +39,31 @@
     padding: 12px; /* Add some padding */
     text-decoration: none; /* Remove underline from links */
 }
-.monTab{
+
+.monTab {
 
 }
 
 thead {
-    font-weight:normal;
+    font-weight: normal;
 }
-.bottomBorder{
+
+.bottomBorder {
     border-bottom: 1px solid black;
 }
-.blue{
+
+.blue {
     background-color: #3eb1d0;
 }
-.fontred{
-    color : #c82829;
+
+.fontred {
+    color: #c82829;
 }
-.red{
+
+.red {
     background-color: #c82829;
 }
-.yellow{
+
+.yellow {
     background-color: #b9ca4a;
 }

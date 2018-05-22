@@ -1,4 +1,3 @@
-
 ModeleManager.prototype.investissementModele = function (mE, pibchoix) {
     return (mE.terrain + mE.construction + mE.equipement + mE.camion + mE.info + mE.bureau) * pibchoix;
 };
@@ -14,21 +13,18 @@ ModeleManager.prototype.ammortissment = function (mE, mP, pibchoix) {
 
 };
 ModeleManager.prototype.ammortGen = function (ammortissement) {
-    let i;
     let total = [0, 0, 0, 0, 0];
     let generalAmort = [];
-    for (i = 0; i < ammortissement.length; i++) {
-        for (let j = 0; j < ammortissement[i].chargeAmorti.length; j++) {
-            generalAmort.push(ammortissement[i].chargeAmorti[j]);
-            total[j] = total[j] + ammortissement[i].chargeAmorti[j];
-        }
+    ammortissement.forEach(function (item) {
+        item.chargeAmorti.forEach(function (items, index) {
+            generalAmort.push(items);
+            total[index] += items;
+        });
         generalAmort.push("change");
-
-    }
-
-    for (i = 0; i < total.length; i++) {
-        generalAmort.push(total[i]);
-    }
+    });
+    total.forEach(function (item) {
+        generalAmort.push(item);
+    });
     return generalAmort;
 
 };
@@ -243,7 +239,7 @@ ModeleManager.prototype.taxe_creance = function (mE, impot, pibchoix) {
     }
     //--------------------------------------
 };
-ModeleManager.prototype.comptableResult = function (mE, pibchoix, tva, salaire_cadre, salaire_secretaire, salaire_ouvrier, reel_CFE, amortissemment) {
+ModeleManager.prototype.comptableResult = function (mE, pibchoix, tva, salaire_cadre, salaire_secretaire, salaire_ouvrier, reel_CFE, ammortissemment) {
     //console.log("on entre dans compta");
     let i;
     let vente = [];
@@ -265,19 +261,19 @@ ModeleManager.prototype.comptableResult = function (mE, pibchoix, tva, salaire_c
     let taux_marge_avant__IS_ISMF = [];
 
     let cpt = 0;
-    for (i = 0; i < amortissemment.length; i++) {
+    ammortissemment.forEach(function (item) {
         //console.log(cpt);
-        if (amortissemment[i] === "change") {
+        if (item === "change") {
             cpt++;
         }
         else {
             if (cpt > 4) {
                 //console.log("ici");
-                amortissement.push(amortissemment[i]);
+                amortissement.push(item);
             }
         }
 
-    }
+    });
 
     for (i = 0; i < 5; i++) {
         vente.push(mE.vente * pibchoix);
@@ -501,7 +497,6 @@ ModeleManager.prototype.tauxEffectif = function (vanSI, vanAI) {
 
 };
 ModeleManager.prototype.fluxTresoriesI = function (entreprise, pin, compta, actu) {
-    let i;
     let courant = [];
     let courantBis = [];
     let actuel = [];
@@ -510,25 +505,27 @@ ModeleManager.prototype.fluxTresoriesI = function (entreprise, pin, compta, actu
     //console.log(entreprise);
     courant.push(-(entreprise.capitalSocial + entreprise.detteLongTerme + entreprise.detteCourtTerme + entreprise.detteFournisseur) * pin);
     actuel.push(-(entreprise.capitalSocial + entreprise.detteLongTerme + entreprise.detteCourtTerme + entreprise.detteFournisseur) * pin);
-    for (i = 0; i < compta.vente.length; i++) {
+    compta.vente.forEach(function (item, index) {
 
-        //console.log(compta.vente[i]-compta.achats[i]-compta.petrole[i]-compta.depense_entretien[i]-compta.depense_admin[i]-compta.depense_pub[i]-compta.salaire_ouvrier[i]-compta.salaire_cadre[i]-compta.salaire_secreataire[i]-compta.chargeFinanciere);
+        courant.push(item - compta.achats[index] - compta.petrole[index] - compta.depense_entretien[index] - compta.depense_admin[index] - compta.depense_pub[index] - compta.salaire_ouvrier[index] - compta.salaire_cadre[index] - compta.salaire_secreataire[index] - compta.chargeFinanciere[index]);
 
-        courant.push(compta.vente[i] - compta.achats[i] - compta.petrole[i] - compta.depense_entretien[i] - compta.depense_admin[i] - compta.depense_pub[i] - compta.salaire_ouvrier[i] - compta.salaire_cadre[i] - compta.salaire_secreataire[i] - compta.chargeFinanciere[i]);
+    });
+
+    //console.log(compta.vente[i]-compta.achats[i]-compta.petrole[i]-compta.depense_entretien[i]-compta.depense_admin[i]-compta.depense_pub[i]-compta.salaire_ouvrier[i]-compta.salaire_cadre[i]-compta.salaire_secreataire[i]-compta.chargeFinanciere);
 
 
-    }
     courantBis.push(courant[0]);
     actuelBis.push(actuel[0]);
-    for (i = 1; i < courant.length; i++) {
-        totactu = (actu[i - 1]);
-        courantBis.push(courant[i]);
-        actuel.push(courant[i] * (totactu / 100));
-        actuelBis.push(actuel[i]);
-        //console.log(((totactu*10))/1000));
-    }
-    //console.log("fluxTresoriesI");
-    //console.log(courantBis);
+    courant.forEach(function (item, index) {
+        if (index !== 0) {
+            totactu = (actu[index - 1]);
+            courantBis.push(item);
+            actuel.push(item * (totactu / 100));
+            actuelBis.push(actuel[index]);
+        }
+
+    });
+
     //console.log("fluxTresoriesI fin");
     courant.push(myMath.van(entreprise.actuali / 100, courantBis));
     actuel.push(myMath.sommeTab(actuelBis));
@@ -539,27 +536,21 @@ ModeleManager.prototype.fluxTresoriesI = function (entreprise, pin, compta, actu
     };
 };
 ModeleManager.prototype.fluxTresoriesImp = function (fluxTresorie, tabImpotC, tabImpotA, actuel) {
-    let i;
     let actu = [];
     let courant = [];
     courant.push(fluxTresorie.courant[0]);
     actu.push(fluxTresorie.actu[0]);
-
-    for (i = 1; i < fluxTresorie.actu.length - 1; i++) {
-        actu.push(fluxTresorie.actu[i] - tabImpotA[i - 1]);
-    }
-
+    fluxTresorie.actu.forEach(function (item, index) {
+        if (index > 0 && index < fluxTresorie.actu.length - 1) {
+            actu.push(item - tabImpotA[index - 1]);
+        }
+    });
+    fluxTresorie.courant.forEach(function (item, index) {
+        if (index > 0 && index < fluxTresorie.courant.length - 1) {
+            courant.push(item - tabImpotC[index - 1]);
+        }
+    });
     actu.push(myMath.sommeTab(actu));
-    //console.log(actu)
-    for (i = 1; i < fluxTresorie.courant.length - 1; i++) {
-        courant.push(fluxTresorie.courant[i] - tabImpotC[i - 1]);
-
-    }
-
-    /*console.log("fluxTresoriesImp");
-      console.log(courant);
-        console.log("fluxTresoriesImp fin");*/
-
     courant.push(myMath.van(actuel / 100, courant));
     return {
         courant: courant,
@@ -573,36 +564,38 @@ ModeleManager.prototype.tauxRendementInterne = function (tab) {
     let tau;
     let tabBis = [];
     tabBis.push(tab[0]);
+    tab.forEach(function (item, index) {
+        if (index > 0 && index < tab.length - 1) {
+            tabBis.push(item);
+            try {
+                tau = myMath.tri(tabBis);
+            } catch (e) {
+                tau = 0;
+            }
 
-    for (let i = 1; i < tab.length - 1; i++) {
 
-        tabBis.push(tab[i]);
-        try {
-            tau = myMath.tri(tabBis);
-        } catch (e) {
-            tau = 0;
+            if (tau < 0) {
+                tau = 0;
+            }
+
+            taux.push(tau);
         }
 
+    });
 
-        if (tau < 0) {
-            tau = 0;
-        }
-
-        taux.push(tau);
-    }
     //console.log(this.tri(tabBis));
     return taux;
 };
 ModeleManager.prototype.tauxEffectifMarginaux = function (tabSi, tabAi) {
     let tot = [];
-    for (let i = 0; i < tabSi.length; i++) {
-        if (tabSi[i] > 0) {
-            tot.push((((tabSi[i] - tabAi[i]) / tabSi[i]) * 100));
+    tabSi.forEach(function (item, index) {
+        if (item > 0) {
+            tot.push((((item - tabAi[index]) / item) * 100));
         }
         else {
             tot.push(0);
         }
-    }
+    });
     return tot;
 };
 
