@@ -1,3 +1,11 @@
+/**
+ * @constructs
+ * @param {string} pays - the code of the land use
+ * @param {string} regime - the tax regime want be used
+ * @param {float} actu - a discount rate want be used
+ * @param {float} marge - margin rate want be used
+ * @description  Constructor of the Class Donne , the speciality of this class is to create the object with a primal information to make a model
+ */
 let Donne = function (pays, regime, actu, marge) {
     let randPays = mesPays();
     let mP;

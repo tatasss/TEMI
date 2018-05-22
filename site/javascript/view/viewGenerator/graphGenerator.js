@@ -1,3 +1,9 @@
+/**function create a graphique with a module Chart.js
+ * @param {Array} modeleTab is the array of the modele use to put a graphique
+ * @param {string} id is a element on document identification
+ * @param {string} regime is a regime of the modele
+ * return nothing but touch the html with id parameter
+ */
 Graph.prototype.graphique = function (modeleTab, id, regime) {
     document.getElementById("graph-container").innerHTML = `<canvas id=${id}><canvas>`;
 
@@ -34,13 +40,13 @@ Graph.prototype.graphique = function (modeleTab, id, regime) {
                 });
             });
             let realColor;
-            let entre = []
+            let entre = [];
             entreprise.forEach(function (item, index) {
                 realColor = [];
                 item.forEach(function () {
                     realColor.push(color[index]);
                 });
-                entre.push("entreprise " + (index + 1) );
+                entre.push("entreprise " + (index + 1));
                 dataset.push({
                     label: "entreprise " + (index + 1) + " taux de marge avant impot = " + modeleTab[0][index].donne.marge + " % ",
                     data: item,
@@ -53,7 +59,7 @@ Graph.prototype.graphique = function (modeleTab, id, regime) {
             });
             //----------------------------------------------------------------------------------------------------------
             //ici la parti sur le tableau des temi
-            document.getElementById("tabTemi").innerHTML = bootstrap.bootstrapTemiTabSpe(entre,paysChoisi, entreprise);
+            document.getElementById("tabTemi").innerHTML = bootstrap.bootstrapTemiTabSpe(entre, paysChoisi, entreprise);
             //----------------------------------------------------------------------------------------------------------
             //console.log(color);
             new Chart(ctx, {
@@ -97,7 +103,7 @@ Graph.prototype.graphique = function (modeleTab, id, regime) {
             myChart.clear();
             $(id).remove();
             $('iframe.chartjs-hidden-iframe').remove();
-            document.getElementById("tabTemi").innerHTML=" ";
+            document.getElementById("tabTemi").innerHTML = " ";
 
         }
     }
@@ -107,11 +113,15 @@ Graph.prototype.graphique = function (modeleTab, id, regime) {
         myChart.clear();
         $(id).remove();
         $('iframe.chartjs-hidden-iframe').remove();
-        document.getElementById("tabTemi").innerHTML=" "
+        document.getElementById("tabTemi").innerHTML = " "
     }
 
 };
 
+/**function create a random color array
+ * @param {number} number is the number of color u want
+ * @return {Array} colors  is an array with all color tab
+ */
 function createColorSet(number) {
     let colors = [],
         step = 3 * 256 / (number + 1),
@@ -131,57 +141,11 @@ function createColorSet(number) {
     return colors;
 }
 
+/**function create a chart.js color with an array of color
+ * @param {Object} tab is the color (r,g b)
+ * @return {string} the colors of chart.js
+ */
 function getColorString(tab) {
     return 'rgba(' + tab.r + ',' + tab.g + ',' + tab.b + ', 1)';
 }
 
-BootstrapVue.prototype.bootstrapTemiTabSpe = function (cote, head, tab) {
-    let myTab=[];
-    var cpt=0;
-    for(let i=0; i<head.length/6;i++){
-        myTab.push("<br/><table class='table'><thead><tr><th/>")
-    }
-
-    head.forEach(function (item,index) {
-        if(index%6===0 && index >0){
-            myTab[cpt]+="</tr></thread><tbody>";
-            cpt++;
-        }
-        myTab[cpt] += "<th>";
-        myTab[cpt]+= item;
-        myTab[cpt]+= "</th>";
-
-    });
-    /*for(let i=0; i<head.length/6;i++){
-        myTab[i]+="</th></thread><tbody>";
-    }*/
-
-    tab.forEach(function (item, index) {
-        cpt=0;
-        myTab[cpt]  += "<tr><td>";
-        myTab[cpt]  += cote[index] + "</td>";
-
-        item.forEach(function (items,indexs) {
-            if(indexs%6===0 && indexs>0){
-                myTab[cpt]  +="</tr>";
-                cpt++;
-                myTab[cpt]+="<tr><td>";
-                myTab[cpt]  += cote[index] + "</td>";
-            }
-            myTab[cpt]  +=  "<td>";
-            myTab[cpt]  +=  Math.round(items*100)/100;
-            myTab[cpt]  +=  " % </td>";
-        });
-        myTab[cpt]  +=  "</tr>\n";
-    });
-    for(let i=0; i<head.length/6;i++){
-        myTab[i]+="</tbody></table>";
-    }
-    var html="<h1>Tableau des TEMI de chaque pays :</h1>";
-    myTab.forEach(function(item){
-        html+=item;
-    });
-    return html;
-
-
-};
