@@ -1,5 +1,5 @@
-Graph.prototype.graphique=function(modeleTab,id,regime){
-    document.getElementById("graph-container").innerHTML=`<canvas id=${id}><canvas>`;
+Graph.prototype.graphique = function (modeleTab, id, regime) {
+    document.getElementById("graph-container").innerHTML = `<canvas id=${id}><canvas>`;
 
     let dataset = [];
     let colorDif;
@@ -7,63 +7,48 @@ Graph.prototype.graphique=function(modeleTab,id,regime){
     let targetCanvas = document.getElementById(id);
     let ctx = targetCanvas.getContext('2d');
     let myChart;
-    if(modeleTab.length!==0){
-        if(modeleTab[0].length!==0){
-            colorDif=createColorSet(modeleTab[0].length);
-            color=[];
+    if (modeleTab.length !== 0) {
+        if (modeleTab[0].length !== 0) {
+            colorDif = createColorSet(modeleTab[0].length);
+            color = [];
+            colorDif.forEach(function (item) {
+                color.push(getColorString(item));
+            });
 
-            for(let i=0;i<colorDif.length;i++){
-                color.push(getColorString(colorDif[i]));
-            }
 
             let pays = [];
             let donneDataset = [];
-            for(let i=0;i<modeleTab.length;i++) {
-                pays.push(modeleTab[i]);
+            modeleTab.forEach(function (item, index) {
+                pays.push(item);
                 donneDataset.push([]);
-                for (let j = 0; j < pays[i].length; j++) {
+                pays[index].forEach(function (item2) {
+                    donneDataset[index].push(item2.modele.mesdon().tauxeffMoyCourent);
+                })
 
-                    donneDataset[i].push(pays[i][j].modele.mesdon().tauxeffMoyCourent);
-                    /*console.log(pays[i][j].donne.pays.nom)
-                    console.log(pays[i][j].modele.mesdon().fluxTresApresImpot)
-                    console.log(pays[i][j].modele.mesdon().tauxeffMoyCourent)*/
-                }
-            }
+            });
             let entreprise = [];
-            for (let i=0;i<donneDataset[0].length;i++){
+            donneDataset[0].forEach(function (lol, index) {
                 entreprise.push([]);
-                for (let j=0;j<donneDataset.length;j++){
-                    entreprise[i].push(donneDataset[j][i]);
-
-                }
-
-            }
-            let realColor;
-            console.log(entreprise);
-
-            for(let i=0;i<entreprise.length;i++){
-                realColor=[];
-                for (let j=0;j<entreprise[i].length;j++){
-                    realColor.push(color[i]);
-                    //console.log(color[i]);
-                }
-                dataset.push({
-                    label:"entreprise "+(i+1) +" taux de marge avant impot = "+modeleTab[0][i].donne.marge + " % ",
-                    data:entreprise[i],
-                    backgroundColor:realColor,
+                donneDataset.forEach(function (item) {
+                    entreprise[index].push(item[index]);
                 });
-
-
-            }
+            });
+            let realColor;
+            entreprise.forEach(function (item, index) {
+                realColor = [];
+                item.forEach(function () {
+                    realColor.push(color[index]);
+                });
+                dataset.push({
+                    label: "entreprise " + (index + 1) + " taux de marge avant impot = " + modeleTab[0][index].donne.marge + " % ",
+                    data: item,
+                    backgroundColor: realColor,
+                });
+            });
             let payTab = [];
-
-            for (let i=0;i<modeleTab.length;i++){
-                payTab.push(modeleTab[i][0].donne.pays.nom);
-            }
-
-
-
-
+            modeleTab.forEach(function (item) {
+                payTab.push(item[0].donne.pays.nom);
+            });
             //console.log(color);
             new Chart(ctx, {
                 type: 'bar',
@@ -76,9 +61,9 @@ Graph.prototype.graphique=function(modeleTab,id,regime){
                     scales: {
                         yAxes: [{
                             ticks: {
-                                beginAtZero:true,
-                                stepValue:0.1,
-                                max:100
+                                beginAtZero: true,
+                                stepValue: 0.1,
+                                max: 100
                             },
                             scaleLabel: {
                                 display: true,
@@ -87,37 +72,38 @@ Graph.prototype.graphique=function(modeleTab,id,regime){
                         }],
                         xAxes: [{
                             display: true,
-                            ticks:{
+                            ticks: {
                                 autoSkip: false,
                             }
                         }]
                     },
                     title: {
                         display: true,
-                        text: 'TEMI Global avec le regime fiscal :'+regime
+                        text: 'TEMI Global avec le regime fiscal :' + regime
                     }
                 }
             });
 
         }
-        else{
-            ctx.clearRect(0,0, targetCanvas.width, targetCanvas.height);
-            myChart= new Chart(ctx,null);
+        else {
+            ctx.clearRect(0, 0, targetCanvas.width, targetCanvas.height);
+            myChart = new Chart(ctx, null);
             myChart.clear();
             $(id).remove();
             $('iframe.chartjs-hidden-iframe').remove();
 
         }
     }
-    else{
-        ctx.clearRect(0,0, targetCanvas.width, targetCanvas.height);
-        myChart= new Chart(ctx,null);
+    else {
+        ctx.clearRect(0, 0, targetCanvas.width, targetCanvas.height);
+        myChart = new Chart(ctx, null);
         myChart.clear();
         $(id).remove();
         $('iframe.chartjs-hidden-iframe').remove();
     }
 
 };
+
 function createColorSet(number) {
     let colors = [],
         step = 3 * 256 / (number + 1),
@@ -136,6 +122,7 @@ function createColorSet(number) {
     }
     return colors;
 }
-function getColorString(tab){
-    return 'rgba('+tab.r+','+tab.g+','+tab.b+', 1)'
+
+function getColorString(tab) {
+    return 'rgba(' + tab.r + ',' + tab.g + ',' + tab.b + ', 1)';
 }

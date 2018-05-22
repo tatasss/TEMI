@@ -82,8 +82,6 @@ Fabrique.prototype.ammortissement = function (construction, equipement, coefdegr
     }
 };
 Fabrique.prototype.entreprise = function (actu, marge) {
-
-    /*if(data=="Djankov"){*/
     return {
         nom: "Djankov",
         terrain: 30,
@@ -115,12 +113,7 @@ Fabrique.prototype.entreprise = function (actu, marge) {
         dividende: 50,
         actuali: actu
     }
-    /*}
-    else{
-        alert("pas encore fait")
-    }
-    return
-    */
+
 };
 Fabrique.prototype.investir = function (cfe, isammmort, imf, irvm, irc, tvaPetrole) {
     return {
@@ -230,10 +223,7 @@ Fabrique.prototype.armortirModele = function (prix, durLin, coef, nom) {
         chargeAmorti: chargeAmorti,
         nom: nom,
         getHtml: function () {
-            /*<div class='panel panel-default'>
-<div class="panel-heading">Panel Heading</div>
-<div class="panel-body">Panel Content</div>
-</div>*/
+
             let cote2 = ["Base amortissable</td><td>FCFA", "Taux unitaire</td><td>%", "Taux dégréssif</td><td>%", "Charge amortissement</td><td>FCFAS"];
             let html = "<div class='panel panel-info'><div class=\"panel-heading\">";
             let cote1 = ["Durée linéaire</td><td>Année", "Coef dégréssif</td><td>Coef"];

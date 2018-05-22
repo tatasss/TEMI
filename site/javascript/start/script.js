@@ -180,7 +180,7 @@ function mesPays() {
 /*
 function testModele1(){
 
-	var monTest= manaufacturing.armortirModele(26801197,10,2.5,"equipement");
+	var monTest= manufacturing.armortirModele(26801197,10,2.5,"equipement");
     var html="<p>"+monTest.nom+"</p>"
 	html+="<table class='table'><thead><tr><th>duree restante</th>";
 	for(var i=0;i<5;i++){
@@ -212,11 +212,11 @@ function testModele2(){
 	var mE=data.get().mE;
 	var mP=data.get().mP;
 	var pibchoix=data.get().pibChoisi;
-    amortissement.push(manaufacturing.armortirModele(Math.trunc(mE.construction*pibchoix),mP.ammort.construction,mP.ammort.coefdegressif,"construction"));
-    amortissement.push(manaufacturing.armortirModele(mE.equipement*pibchoix,mP.ammort.equipement,mP.ammort.coefdegressif,"equipement"));
-    amortissement.push(manaufacturing.armortirModele(mE.camion*pibchoix,mP.ammort.camion,mP.ammort.coefdegressif,"camion"));
-    amortissement.push(manaufacturing.armortirModele(mE.info*pibchoix,mP.ammort.info,mP.ammort.coefdegressif,"informatique"));
-    amortissement.push(manaufacturing.armortirModele(mE.bureau*pibchoix,mP.ammort.bureau,mP.ammort.coefdegressif,"bureau"));
+    amortissement.push(manufacturing.armortirModele(Math.trunc(mE.construction*pibchoix),mP.ammort.construction,mP.ammort.coefdegressif,"construction"));
+    amortissement.push(manufacturing.armortirModele(mE.equipement*pibchoix,mP.ammort.equipement,mP.ammort.coefdegressif,"equipement"));
+    amortissement.push(manufacturing.armortirModele(mE.camion*pibchoix,mP.ammort.camion,mP.ammort.coefdegressif,"camion"));
+    amortissement.push(manufacturing.armortirModele(mE.info*pibchoix,mP.ammort.info,mP.ammort.coefdegressif,"informatique"));
+    amortissement.push(manufacturing.armortirModele(mE.bureau*pibchoix,mP.ammort.bureau,mP.ammort.coefdegressif,"bureau"));
     for(var i=0;i<amortissement.length;i++){
     	html+=amortissement[i].getHtml()+"<br/>";
 	}

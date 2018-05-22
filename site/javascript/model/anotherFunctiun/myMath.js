@@ -70,7 +70,9 @@ MyMath.prototype.van = function (actu, tab) {
     let lol = tab[0];
     let somme = 0;
     tab.forEach(function (item, index) {
-        somme += (item / Math.pow((1 + actu), index));
+        if (index > 0) {
+            somme += (item / Math.pow((1 + actu), index));
+        }
     });
     //lol= lol/(1+actu);
 

@@ -121,7 +121,7 @@ GenererVue.prototype. bilanHtml= function () {
     return bootstrap.pan("default", null, tab);
 };
 GenererVue.prototype.compteHtml= function () {
-    let cote = ["Achats", "Petrole", "Depenses administratives", "Depenses publicitaires", "Depences d'entretien", "<strong>Impôts et taxes</strong>", "<strong>Masse Salariale</strong>", "Cadres", "Secrétaires", "Ouvriers", "<strong>Charges financières</strong>", "Charges financières", "<strong>Amortissement</strong>"];
+    let cote = ["Achats", "Petrole", "Depenses administratives", "Depenses publicitaires", "Depenses d'entretien", "<strong>Impôts et taxes</strong>", "<strong>Masse Salariale</strong>", "Cadres", "Secrétaires", "Ouvriers", "<strong>Charges financières</strong>", "Charges financières", "<strong>Amortissement</strong>"];
     let head = "<thead><tr><th colspan=3> Compte de résultat<th/></tr><tr><th colspan=2>Charges</th><th colspan=2>Produit</th></tr></thead>";
     let lin0 = {tab:[this.mE.achat, "Ventes", this.mE.vente],color:""};
     let lin1 = {tab:[this.mE.petrole, null, null],color:""};
@@ -151,7 +151,7 @@ GenererVue.prototype.donneesEconomique= function (pin, pays) {
  * @return {string}
  */
 GenererVue.prototype.ImpotHtml= function (monm) {
-    let head = " <thead><tr><th colspan=5> Impot<th/></tr>";
+    let head = "<thead><tr><th colspan=5> Impot<th/></tr>";
     head += "<tr><th/><th>1</th><th>2</th><th>3</th><th>4</th><th>5</th></tr>";
     head += "</thead>";
     let cfe = [];
@@ -252,7 +252,7 @@ GenererVue.prototype.comptableHtml= function (monm) {
     cote.push("TVA pétrole</td><td>FCFA");
     cote.push("Dépenses administratives</td><td>FCFA");
     cote.push("Dépenses publicitaires</td><td>FCFA");
-    cote.push("Dépenses Dépenes d'entretien</td><td class=\"bottomBorder\">FCFA");
+    cote.push("Dépenses d'entretien</td><td class=\"bottomBorder\">FCFA");
     cote.push("Salaires des cadres</td><td>FCFA");
     cote.push("Salaires des secrétaires</td><td>FCFA");
     cote.push("Salaires des ouvriers</td><td>FCFA");

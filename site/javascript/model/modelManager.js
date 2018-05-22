@@ -527,7 +527,7 @@ ModeleManager.prototype.fluxTresoriesI = function (entreprise, pin, compta, actu
     });
 
     //console.log("fluxTresoriesI fin");
-    courant.push(myMath.van(entreprise.actuali / 100, courantBis));
+    courant.push(myMath.van(entreprise.actuali / 100, courant));
     actuel.push(myMath.sommeTab(actuelBis));
     //console.log(courant);
     return {
