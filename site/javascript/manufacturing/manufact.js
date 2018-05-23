@@ -132,7 +132,7 @@ Fabrique.prototype.impotPays = function (duree, taux, reductonEcume) {
         reducexo: reductonEcume
     };
 };
-//lol
+//lol on ecris pour le conflit
 Fabrique.prototype.isImpotPays = function (duree, taux, reductonEcume, ammortTauxEx, ammortLimit) {
     return {
         duree: duree,
