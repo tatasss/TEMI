@@ -1,7 +1,8 @@
-/**function create a graphique with a module Chart.js
+/**
  * @param {Array} modeleTab is the array of the modele use to put a graphique
  * @param {string} id is a element on document identification
  * @param {string} regime is a regime of the modele
+ * @description function create a graphique with a module Chart.js
  * return nothing but touch the html with id parameter
  */
 Graph.prototype.graphique = function (modeleTab, id, regime) {
