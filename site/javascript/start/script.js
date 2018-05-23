@@ -8,10 +8,6 @@ if (localStorage.getItem("don") !== undefined && localStorage.getItem("don") !==
     monModele = new Modele(new Donne(tab[0], tab[1], tab[2], tab[3]));
 }
 
-
-//console.log(data);
-
-
 function showModal() {
 
     $("#myBtn").click(function () {
@@ -27,10 +23,7 @@ function showModal() {
 
 
 }
-function getWindowPath() {
-    return window.location.href;
-}
-//console.log(document.);
+
 function debutCompa(actu, regime) {
     console.log("ici");
 
@@ -39,33 +32,19 @@ function debutCompa(actu, regime) {
         actu = verifPourcent(actu);
         localStorage.setItem("compaActu", actu);
         localStorage.setItem("compatRegime", regime);
-
-        //url.replace("/graphForm.html");
         let stateObj = {foo: "bar"};
-        let url= window.location.hostname;
+
         history.pushState(stateObj, window.location.href);
         console.log(history.state);
-        window.location.href="./graphForm.html";
-        history.replaceState(stateObj, "some useless title","./graphForm.html");
-
-       //document.location.href="./graphForm.html";
-
-
+        window.location.href = "./graphForm.html";
+        history.replaceState(stateObj, "some useless title", "./graphForm.html");
     } catch (e) {
         alert(e.toString());
         document.location.href = "./index.html"
     }
-
-
-    //document.location.assign("./graphForm.html");
-    //document.open("./graphForm.html");
-
 }
 
 function validateForm() {
-
-// votre code à mesurer ici
-
     let actualisation = $("#actualisation").val();
     let marge = $("#marge").val();
     try {
@@ -82,9 +61,6 @@ function validateForm() {
         alert("Le taux de marge doit être compris entre 0 et 100 ");
         return;
     }
-
-
-    //var data = $("#data").val();
     let pays = $("#PAYS").val();
     let regime = $("#REGIME").val();
     //var x =data + "\n"+pibpnb+ "\n"+pays+"\n"+regime;
@@ -99,13 +75,8 @@ function validateForm() {
     }
     monModele = new Modele(donne);
     let genererVue = new GenererVue(monModele);
-    //console.log(marge);
     document.getElementById("result").innerHTML = genererVue.mainHTML(pays, regime, actualisation, marge);
     elapsedTime = new Date().getTime() - startTime;
-
-    //console.log(elapsedTime);
-
-
 }
 
 function getXMLHttpRequest() {
