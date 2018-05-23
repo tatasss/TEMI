@@ -132,6 +132,7 @@ Fabrique.prototype.impotPays = function (duree, taux, reductonEcume) {
         reducexo: reductonEcume
     };
 };
+//lol
 Fabrique.prototype.isImpotPays = function (duree, taux, reductonEcume, ammortTauxEx, ammortLimit) {
     return {
         duree: duree,
