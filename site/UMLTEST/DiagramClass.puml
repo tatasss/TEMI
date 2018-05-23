@@ -1,26 +1,140 @@
 @startuml
+package "data" <<folder>>{
+    class Donne
+}
+package "manufacturing" <<folder>>{
+    package "Fabrique" <<frame>>{
+        class Fabrique{
+            pibFind()
+            Fabrique()
+        }
+        class Pays{
+           code
+           nom
+           pib
+           Pays(code,nom,impot,ammort,investissement)
+        }
+        class Impot{
+            cfe
+            isImp
+            imf
+            irvm
+            irc
+            tva_petrole
+            Impot(cfe,is,imf,irvm,tva_petrole)
+        }
+        class Ammortissement{
+            construction
+            equipement
+            coefDegressif
+            camion
+            bureau
+            Ammortissement(construction, equipement ,coedDegressif,camion,info,bureau)
+        }
+        class Entreprise{
+            nom
+            terrain
+            construction
+            equipement
+            camion
+            info
+            bureau
+            stocks
+            creanceCli
+            dispoBanque
+            capitalSocial
+            detteLongterme
+            detteCourtTerme
+            detteFournisseur
+            achat
+            petrole
+            depenseAdministrative
+            depensePub
+            depenseEntretien
+            depenseFinanciere
+            vente
+            cadre
+            secretaire
+            ouvrier
+            indice_cadre
+            indice_secretaire
+            indice_ouvrier
+            dividende
+            actuali
+            Entreprise(actu,marge)
+        }
+        class Investir{
 
-abstract class AbstractList
-abstract AbstractCollection
-interface List
-interface Collection
+            Investir(cfe,isammort,imf,irvm,irc,tvaPetrole)
+        }
+        class ImpotPays{
+            duree
+            taux
+            reducexo
+            ImpotPays(duree,taux,reducexo)
+        }
+        class IsImpotPays{
+            ammortTauxEx
+            ammortLimit
+            IsImpotPays(duree,taux,reducexo,ammortTauxEx,ammortLimit)
+        }
+        class AmortirModele{
+            AmortirModele(prix,durLin,coef,nom)
+            dureeRestante
+            baseAmortissable
+            tauxLineaire
+            tauxDegressif
+            chargeAmorti
+            nom
+            getHtml():String
+        }
+    }
+}
+Impot-left->Pays
+Ammortissement -down->Pays
+Investir -up->Pays
+ImpotPays "5"-up->Investir
+IsImpotPays -up->Investir
+IsImpotPays -up--|>ImpotPays
+Pays-left->Fabrique
+Impot-left->Fabrique
+Entreprise-right->Fabrique
+AmortirModele-down->Fabrique
+Investir-up->Fabrique
+ImpotPays-up->Fabrique
+IsImpotPays-up->Fabrique
+Ammortissement->Fabrique
 
-List <|-- AbstractList
-Collection <|-- AbstractCollection
 
-Collection <|- List
-AbstractCollection <|- AbstractList
-AbstractList <|-- ArrayList
+package "model" <<folder>>{
+    package "anotherFunctiun" <<folder>>{
+        class MyMath
+    }
+    class Modele
+    class ModeleManager
+}
+package "start" <<folder>>{
+    class Ref
+    Object script
+}
+package "view" <<folder>>{
+    package "viewGenerator" <<folder>>{
+    class GenererVue
+    class BootstrapVue
 
-class ArrayList {
-Object[] elementData
-size()
+    class Graph
+    }
+    package  "directlyChange" <<folder>>{
+    ObjectGraphFormView.js
+    Object ModeleView.js
+    Object ViewManufacturing.js
+    note as N1
+         this object is on reality a file with a comportement view
+        end note
+    }
+
 }
 
-enum TimeUnit {
-DAYS
-HOURS
-MINUTES
-}
+
 
 @enduml
