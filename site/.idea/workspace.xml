@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b3a60719-0c36-46df-a883-0678b82012a7" name="Default" comment="Mis en place du tableau ce Temi en dessous du gra">
+    <list default="true" id="b3a60719-0c36-46df-a883-0678b82012a7" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/javascript/view/viewGenerator/graphGenerator.js" beforeDir="false" afterPath="$PROJECT_DIR$/javascript/view/viewGenerator/graphGenerator.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -532,21 +531,27 @@
       <option name="project" value="LOCAL" />
       <updated>1527003773208</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="debut sceance">
+      <created>1527076199877</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1527076199877</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="309363000" />
+    <option name="totallyTimeSpent" value="309709000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1696" height="1026" extended-state="6" />
-    <editor active="true" />
+    <frame x="-8" y="-8" width="1696" height="1026" extended-state="7" />
     <layout>
       <window_info anchor="right" id="PlantUML" order="3" weight="0.3386308" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.23471883" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.23471883" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" x="0" y="447" width="1680" height="116" id="Event Log" order="7" sideWeight="0.50061125" side_tool="true" weight="0.32995495" />
+      <window_info active="true" anchor="bottom" x="0" y="447" width="1680" height="116" id="Event Log" order="7" sideWeight="0.50061125" side_tool="true" visible="true" weight="0.32995495" />
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -608,7 +613,8 @@
     <MESSAGE value="Mis en place du tableau ce Temi en dessous du graphique" />
     <MESSAGE value="fin de sceance" />
     <MESSAGE value="lol" />
-    <option name="LAST_COMMIT_MESSAGE" value="lol" />
+    <MESSAGE value="debut sceance" />
+    <option name="LAST_COMMIT_MESSAGE" value="debut sceance" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1536,7 +1542,7 @@
             <node x="" y="">assert</node>
             <node x="" y="">browserify</node>
             <node x="" y="">cartesian/</node>
-            <node x="" y="">$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external/lib.es5.d.ts#exec#33572;</node>
+            <node x="" y="" />
             <node x="" y="">class2type</node>
             <node x="" y="">concat</node>
             <node x="" y="">document</node>
