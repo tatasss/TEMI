@@ -270,13 +270,13 @@ GenererVue.prototype.comptableHtml= function (monm) {
         {tab:myMath.arrondirTabUnit(monm.resultCompta.depense_pub),color:"blue"},
         {tab:myMath.arrondirTabUnit(monm.resultCompta.depense_entretien),color:"blue",bottomBorder:"true"},
         {tab:myMath.arrondirTabUnit(monm.resultCompta.salaire_cadre),color:"blue"},
-        {tab:myMath.arrondirTabUnit(monm.resultCompta.salaire_secreataire),color:"blue"},
+        {tab:myMath.arrondirTabUnit(monm.resultCompta.salaire_secretaire),color:"blue"},
         {tab:myMath.arrondirTabUnit(monm.resultCompta.salaire_ouvrier),color:"blue"},
         {tab:myMath.arrondirTabUnit(monm.resultCompta.cfe),color:"",bottomBorder:"true"},
         {tab:myMath.arrondirTabUnit(monm.resultCompta.chargeFinanciere),color:"blue",bottomBorder:"true"},
         {tab:myMath.arrondirTabUnit(monm.resultCompta.amortissement),color:"",bottomBorder:"true"},
         {tab:myMath.arrondirTabUnit(monm.resultCompta.benefice_comptable),color:""},
-        {tab:myMath.arrondirTabUnit(monm.resultCompta.taux_marge_avant__IS_ISMF, 1),color:""});
+        {tab:myMath.arrondirTabUnit(monm.resultCompta.taux_marge_avant__IS_IMF, 1),color:""});
     return bootstrap.pan("default", null, tab);
 };
 GenererVue.prototype.ammortExcepHtml= function (monm) {
@@ -363,7 +363,7 @@ GenererVue.prototype.impotForfaitHtml= function (monm) {
 };
 GenererVue.prototype.isImfHtml= function (monm) {
     let cote = ["IS/IMF</td><td>FCFA", "Bénéfice après IS/IMF</td><td>FCFA", "Taux de marge  aprés IS/IMF</td><td>%CA"];
-    let tab = bootstrap.tableSE(cote, null,{tab: myMath.arrondirTabUnit(monm.isImf),color:""},{tab: myMath.arrondirTabUnit(monm.resultCompta.benefice_comptable),color:""},{tab: myMath.arrondirTabUnit(monm.resultCompta.taux_marge_avant__IS_ISMF, 1),color:""});
+    let tab = bootstrap.tableSE(cote, null,{tab: myMath.arrondirTabUnit(monm.isImf),color:""},{tab: myMath.arrondirTabUnit(monm.resultCompta.benefice_comptable),color:""},{tab: myMath.arrondirTabUnit(monm.resultCompta.taux_marge_avant__IS_IMF, 1),color:""});
     return bootstrap.pan("default", null, tab);
 };
 GenererVue.prototype.impotRevenuValeurMobilieres= function (monm) {

@@ -298,7 +298,7 @@ ModeleManager.prototype.comptableResult = function (mE, pibchoix, tva, salaire_c
         depense_admin: depense_admin,
         depense_pub: depense_pub,
         salaire_ouvrier: salaireOuvrier,
-        salaire_secreataire: salaire_secreataire,
+        salaire_secretaire: salaire_secreataire,
         salaire_cadre: salaireCadre,
         cfe: CFE,//non
 
@@ -306,7 +306,7 @@ ModeleManager.prototype.comptableResult = function (mE, pibchoix, tva, salaire_c
         //fin
         amortissement: amortissement,
         benefice_comptable: benefice_comptable,
-        taux_marge_avant__IS_ISMF: taux_marge_avant__IS_ISMF
+        taux_marge_avant__IS_IMF: taux_marge_avant__IS_ISMF
     };
 
 
@@ -507,11 +507,11 @@ ModeleManager.prototype.fluxTresoriesI = function (entreprise, pin, compta, actu
     actuel.push(-(entreprise.capitalSocial + entreprise.detteLongTerme + entreprise.detteCourtTerme + entreprise.detteFournisseur) * pin);
     compta.vente.forEach(function (item, index) {
 
-        courant.push(item - compta.achats[index] - compta.petrole[index] - compta.depense_entretien[index] - compta.depense_admin[index] - compta.depense_pub[index] - compta.salaire_ouvrier[index] - compta.salaire_cadre[index] - compta.salaire_secreataire[index] - compta.chargeFinanciere[index]);
+        courant.push(item - compta.achats[index] - compta.petrole[index] - compta.depense_entretien[index] - compta.depense_admin[index] - compta.depense_pub[index] - compta.salaire_ouvrier[index] - compta.salaire_cadre[index] - compta.salaire_secretaire[index] - compta.chargeFinanciere[index]);
 
     });
 
-    //console.log(compta.vente[i]-compta.achats[i]-compta.petrole[i]-compta.depense_entretien[i]-compta.depense_admin[i]-compta.depense_pub[i]-compta.salaire_ouvrier[i]-compta.salaire_cadre[i]-compta.salaire_secreataire[i]-compta.chargeFinanciere);
+    //console.log(compta.vente[i]-compta.achats[i]-compta.petrole[i]-compta.depense_entretien[i]-compta.depense_admin[i]-compta.depense_pub[i]-compta.salaire_ouvrier[i]-compta.salaire_cadre[i]-compta.salaire_secretaire[i]-compta.chargeFinanciere);
 
 
     courantBis.push(courant[0]);
