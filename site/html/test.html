@@ -3,11 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" href="../css/general.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script src="../node_modules/excellentexport/dist/excellentexport.js"></script>
+    <script>
+
+    </script>
+
 
 <body>
-<a download="somedata.xls" href="#" onclick="return ExcellentExport.excel(this, 'datatable', 'Sheet Name Here');">Export to Excel</a>
 <table id="datatable">
     <tr>
         <th>Column 1</th>
@@ -24,7 +30,7 @@
     <tr>
         <td>400</td>
         <td>500</td>
-        <td>Chinese chars: 解决导出csv中文乱码问题</td>
+        <td>lol</td>
         <td>àèìòù</td>
     </tr>
     <tr>
@@ -35,5 +41,7 @@
         <td>ç ñ ÄËÏÖÜ äëïöü</td>
     </tr>
 </table>
+<a class="btn btn-default " download="temi" href="#" id="anchorNewApi-xls" onclick="return newApi('xls');">Export to Excel</a>
+<br/>
 </body>
 </html>

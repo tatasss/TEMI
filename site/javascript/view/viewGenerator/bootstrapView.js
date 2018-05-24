@@ -277,6 +277,8 @@ BootstrapVue.prototype.bootstrapTemiTabSpe = function (cote, head, tab) {
     myTab.forEach(function (item) {
         html += item;
     });
+    html+=
+        `<a class="btn btn-default " download="temi" href="#" id="anchorNewApi-xls" onClick="return newApi('xls');">Export to Excel</a>`;
     return html;
 
 
