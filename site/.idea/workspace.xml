@@ -2,9 +2,891 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b3a60719-0c36-46df-a883-0678b82012a7" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/../Documentation/DiagramClass.png" beforeDir="false" afterPath="$PROJECT_DIR$/../Documentation/DiagramClass.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/doc/DiagramClass.puml" beforeDir="false" afterPath="$PROJECT_DIR$/doc/DiagramClass.puml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/chart.js/.editorconfig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/chart.js/.eslintignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/chart.js/.eslintrc.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/chart.js/.htmllintrc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/chart.js/.npmignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/chart.js/LICENSE.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/chart.js/MAINTAINING.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/chart.js/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/chart.js/book.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/chart.js/bower.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/chart.js/composer.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/chart.js/dist/Chart.bundle.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/chart.js/dist/Chart.bundle.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/chart.js/dist/Chart.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/chart.js/dist/Chart.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/chart.js/dist/docs/axes/cartesian/category.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/chart.js/dist/docs/axes/cartesian/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/chart.js/dist/docs/axes/cartesian/linear.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/chart.js/dist/docs/axes/cartesian/logarithmic.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/chart.js/dist/docs/axes/cartesian/time.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/chart.js/dist/docs/axes/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/chart.js/dist/docs/axes/labelling.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/chart.js/dist/docs/axes/radial/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/chart.js/dist/docs/axes/radial/linear.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/chart.js/dist/docs/axes/styling.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/chart.js/dist/docs/charts/area.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/chart.js/dist/docs/charts/bar.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/chart.js/dist/docs/charts/bubble.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/chart.js/dist/docs/charts/doughnut.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/chart.js/dist/docs/charts/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/chart.js/dist/docs/charts/line.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/chart.js/dist/docs/charts/mixed.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/chart.js/dist/docs/charts/polar.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/chart.js/dist/docs/charts/radar.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/chart.js/dist/docs/charts/scatter.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/chart.js/dist/docs/configuration/animations.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/chart.js/dist/docs/configuration/elements.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/chart.js/dist/docs/configuration/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/chart.js/dist/docs/configuration/layout.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/chart.js/dist/docs/configuration/legend.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/chart.js/dist/docs/configuration/title.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/chart.js/dist/docs/configuration/tooltip.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/chart.js/dist/docs/developers/api.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/chart.js/dist/docs/developers/axes.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/chart.js/dist/docs/developers/charts.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/chart.js/dist/docs/developers/contributing.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/chart.js/dist/docs/developers/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/chart.js/dist/docs/developers/plugins.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/chart.js/dist/docs/developers/updates.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/chart.js/dist/docs/general/colors.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/chart.js/dist/docs/general/device-pixel-ratio.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/chart.js/dist/docs/general/fonts.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/chart.js/dist/docs/general/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/chart.js/dist/docs/general/interactions/events.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/chart.js/dist/docs/general/interactions/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/chart.js/dist/docs/general/interactions/modes.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/chart.js/dist/docs/general/options.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/chart.js/dist/docs/general/responsive.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/chart.js/dist/docs/getting-started/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/chart.js/dist/docs/getting-started/installation.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/chart.js/dist/docs/getting-started/integration.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/chart.js/dist/docs/getting-started/usage.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/chart.js/dist/docs/gitbook/fonts/fontawesome/FontAwesome.otf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/chart.js/dist/docs/gitbook/fonts/fontawesome/fontawesome-webfont.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/chart.js/dist/docs/gitbook/fonts/fontawesome/fontawesome-webfont.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/chart.js/dist/docs/gitbook/fonts/fontawesome/fontawesome-webfont.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/chart.js/dist/docs/gitbook/fonts/fontawesome/fontawesome-webfont.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/chart.js/dist/docs/gitbook/fonts/fontawesome/fontawesome-webfont.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/chart.js/dist/docs/gitbook/gitbook-plugin-anchorjs/anchor-style.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/chart.js/dist/docs/gitbook/gitbook-plugin-chartjs/Chart.bundle.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/chart.js/dist/docs/gitbook/gitbook-plugin-chartjs/Chart.bundle.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/chart.js/dist/docs/gitbook/gitbook-plugin-chartjs/Chart.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/chart.js/dist/docs/gitbook/gitbook-plugin-chartjs/Chart.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/chart.js/dist/docs/gitbook/gitbook-plugin-chartjs/chartjs-plugin-deferred.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/chart.js/dist/docs/gitbook/gitbook-plugin-chartjs/chartjs-plugin-deferred.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/chart.js/dist/docs/gitbook/gitbook-plugin-chartjs/style.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/chart.js/dist/docs/gitbook/gitbook-plugin-fontsettings/fontsettings.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/chart.js/dist/docs/gitbook/gitbook-plugin-fontsettings/website.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/chart.js/dist/docs/gitbook/gitbook-plugin-ga/plugin.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/chart.js/dist/docs/gitbook/gitbook-plugin-highlight/ebook.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/chart.js/dist/docs/gitbook/gitbook-plugin-highlight/website.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/chart.js/dist/docs/gitbook/gitbook-plugin-search-plus/jquery.mark.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/chart.js/dist/docs/gitbook/gitbook-plugin-search-plus/search.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/chart.js/dist/docs/gitbook/gitbook-plugin-search-plus/search.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/chart.js/dist/docs/gitbook/gitbook-plugin-sharing/buttons.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/chart.js/dist/docs/gitbook/gitbook.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/chart.js/dist/docs/gitbook/images/apple-touch-icon-precomposed-152.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/chart.js/dist/docs/gitbook/images/favicon.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/chart.js/dist/docs/gitbook/style.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/chart.js/dist/docs/gitbook/theme.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/chart.js/dist/docs/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/chart.js/dist/docs/notes/comparison.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/chart.js/dist/docs/notes/extensions.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/chart.js/dist/docs/notes/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/chart.js/dist/docs/notes/license.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/chart.js/dist/docs/search_plus_index.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/chart.js/dist/docs/style.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/chart.js/docs/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/chart.js/docs/SUMMARY.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/chart.js/docs/axes/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/chart.js/docs/axes/cartesian/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/chart.js/docs/axes/cartesian/category.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/chart.js/docs/axes/cartesian/linear.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/chart.js/docs/axes/cartesian/logarithmic.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/chart.js/docs/axes/cartesian/time.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/chart.js/docs/axes/labelling.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/chart.js/docs/axes/radial/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/chart.js/docs/axes/radial/linear.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/chart.js/docs/axes/styling.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/chart.js/docs/charts/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/chart.js/docs/charts/area.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/chart.js/docs/charts/bar.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/chart.js/docs/charts/bubble.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/chart.js/docs/charts/doughnut.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/chart.js/docs/charts/line.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/chart.js/docs/charts/mixed.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/chart.js/docs/charts/polar.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/chart.js/docs/charts/radar.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/chart.js/docs/charts/scatter.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/chart.js/docs/configuration/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/chart.js/docs/configuration/animations.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/chart.js/docs/configuration/elements.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/chart.js/docs/configuration/layout.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/chart.js/docs/configuration/legend.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/chart.js/docs/configuration/title.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/chart.js/docs/configuration/tooltip.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/chart.js/docs/developers/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/chart.js/docs/developers/api.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/chart.js/docs/developers/axes.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/chart.js/docs/developers/charts.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/chart.js/docs/developers/contributing.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/chart.js/docs/developers/plugins.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/chart.js/docs/developers/updates.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/chart.js/docs/general/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/chart.js/docs/general/colors.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/chart.js/docs/general/device-pixel-ratio.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/chart.js/docs/general/fonts.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/chart.js/docs/general/interactions/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/chart.js/docs/general/interactions/events.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/chart.js/docs/general/interactions/modes.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/chart.js/docs/general/options.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/chart.js/docs/general/responsive.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/chart.js/docs/getting-started/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/chart.js/docs/getting-started/installation.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/chart.js/docs/getting-started/integration.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/chart.js/docs/getting-started/usage.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/chart.js/docs/notes/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/chart.js/docs/notes/comparison.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/chart.js/docs/notes/extensions.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/chart.js/docs/notes/license.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/chart.js/docs/style.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/chart.js/gulpfile.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/chart.js/karma.conf.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/chart.js/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/chart.js/samples/.eslintrc.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/chart.js/samples/advanced/data-labelling.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/chart.js/samples/advanced/progress-bar.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/chart.js/samples/charts/area/analyser.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/chart.js/samples/charts/area/line-boundaries.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/chart.js/samples/charts/area/line-datasets.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/chart.js/samples/charts/area/line-stacked.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/chart.js/samples/charts/area/radar.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/chart.js/samples/charts/bar/horizontal.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/chart.js/samples/charts/bar/multi-axis.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/chart.js/samples/charts/bar/stacked-group.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/chart.js/samples/charts/bar/stacked.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/chart.js/samples/charts/bar/vertical.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/chart.js/samples/charts/bubble.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/chart.js/samples/charts/combo-bar-line.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/chart.js/samples/charts/doughnut.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/chart.js/samples/charts/line/basic.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/chart.js/samples/charts/line/interpolation-modes.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/chart.js/samples/charts/line/line-styles.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/chart.js/samples/charts/line/multi-axis.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/chart.js/samples/charts/line/point-sizes.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/chart.js/samples/charts/line/point-styles.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/chart.js/samples/charts/line/skip-points.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/chart.js/samples/charts/line/stepped.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/chart.js/samples/charts/pie.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/chart.js/samples/charts/polar-area.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/chart.js/samples/charts/radar-skip-points.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/chart.js/samples/charts/radar.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/chart.js/samples/charts/scatter/basic.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/chart.js/samples/charts/scatter/multi-axis.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/chart.js/samples/favicon.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/chart.js/samples/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/chart.js/samples/legend/point-style.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/chart.js/samples/legend/positioning.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/chart.js/samples/logo.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/chart.js/samples/samples.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/chart.js/samples/scales/filtering-labels.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/chart.js/samples/scales/gridlines-display.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/chart.js/samples/scales/gridlines-style.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/chart.js/samples/scales/linear/min-max-suggested.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/chart.js/samples/scales/linear/min-max.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/chart.js/samples/scales/linear/step-size.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/chart.js/samples/scales/logarithmic/line.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/chart.js/samples/scales/logarithmic/scatter.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/chart.js/samples/scales/multiline-labels.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/chart.js/samples/scales/non-numeric-y.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/chart.js/samples/scales/time/combo.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/chart.js/samples/scales/time/financial.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/chart.js/samples/scales/time/line-point-data.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/chart.js/samples/scales/time/line.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/chart.js/samples/scales/toggle-scale-type.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/chart.js/samples/scriptable/bubble.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/chart.js/samples/style.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/chart.js/samples/tooltips/border.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/chart.js/samples/tooltips/callbacks.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/chart.js/samples/tooltips/custom-line.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/chart.js/samples/tooltips/custom-pie.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/chart.js/samples/tooltips/custom-points.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/chart.js/samples/tooltips/interactions.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/chart.js/samples/tooltips/positioning.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/chart.js/samples/utils.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/chart.js/scripts/deploy.sh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/chart.js/scripts/release.sh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/chart.js/src/chart.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/chart.js/src/charts/Chart.Bar.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/chart.js/src/charts/Chart.Bubble.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/chart.js/src/charts/Chart.Doughnut.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/chart.js/src/charts/Chart.Line.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/chart.js/src/charts/Chart.PolarArea.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/chart.js/src/charts/Chart.Radar.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/chart.js/src/charts/Chart.Scatter.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/chart.js/src/controllers/controller.bar.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/chart.js/src/controllers/controller.bubble.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/chart.js/src/controllers/controller.doughnut.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/chart.js/src/controllers/controller.line.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/chart.js/src/controllers/controller.polarArea.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/chart.js/src/controllers/controller.radar.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/chart.js/src/controllers/controller.scatter.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/chart.js/src/core/core.animation.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/chart.js/src/core/core.controller.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/chart.js/src/core/core.datasetController.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/chart.js/src/core/core.defaults.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/chart.js/src/core/core.element.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/chart.js/src/core/core.helpers.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/chart.js/src/core/core.interaction.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/chart.js/src/core/core.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/chart.js/src/core/core.layouts.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/chart.js/src/core/core.plugins.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/chart.js/src/core/core.scale.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/chart.js/src/core/core.scaleService.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/chart.js/src/core/core.ticks.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/chart.js/src/core/core.tooltip.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/chart.js/src/elements/element.arc.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/chart.js/src/elements/element.line.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/chart.js/src/elements/element.point.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/chart.js/src/elements/element.rectangle.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/chart.js/src/elements/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/chart.js/src/helpers/helpers.canvas.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/chart.js/src/helpers/helpers.core.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/chart.js/src/helpers/helpers.easing.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/chart.js/src/helpers/helpers.options.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/chart.js/src/helpers/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/chart.js/src/platforms/platform.basic.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/chart.js/src/platforms/platform.dom.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/chart.js/src/platforms/platform.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/chart.js/src/plugins/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/chart.js/src/plugins/plugin.filler.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/chart.js/src/plugins/plugin.legend.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/chart.js/src/plugins/plugin.title.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/chart.js/src/scales/scale.category.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/chart.js/src/scales/scale.linear.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/chart.js/src/scales/scale.linearbase.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/chart.js/src/scales/scale.logarithmic.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/chart.js/src/scales/scale.radialLinear.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/chart.js/src/scales/scale.time.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/chart.js/test/.eslintrc.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/chart.js/test/fixtures/controller.bar/bar-thickness-absolute.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/chart.js/test/fixtures/controller.bar/bar-thickness-absolute.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/chart.js/test/fixtures/controller.bar/bar-thickness-flex-offset.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/chart.js/test/fixtures/controller.bar/bar-thickness-flex-offset.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/chart.js/test/fixtures/controller.bar/bar-thickness-flex.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/chart.js/test/fixtures/controller.bar/bar-thickness-flex.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/chart.js/test/fixtures/controller.bar/bar-thickness-max.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/chart.js/test/fixtures/controller.bar/bar-thickness-max.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/chart.js/test/fixtures/controller.bar/bar-thickness-min-interval.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/chart.js/test/fixtures/controller.bar/bar-thickness-min-interval.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/chart.js/test/fixtures/controller.bar/bar-thickness-multiple.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/chart.js/test/fixtures/controller.bar/bar-thickness-multiple.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/chart.js/test/fixtures/controller.bar/bar-thickness-no-overlap.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/chart.js/test/fixtures/controller.bar/bar-thickness-no-overlap.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/chart.js/test/fixtures/controller.bar/bar-thickness-offset.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/chart.js/test/fixtures/controller.bar/bar-thickness-offset.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/chart.js/test/fixtures/controller.bar/bar-thickness-single-xy.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/chart.js/test/fixtures/controller.bar/bar-thickness-single-xy.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/chart.js/test/fixtures/controller.bar/bar-thickness-single.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/chart.js/test/fixtures/controller.bar/bar-thickness-single.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/chart.js/test/fixtures/controller.bar/bar-thickness-stacked.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/chart.js/test/fixtures/controller.bar/bar-thickness-stacked.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/chart.js/test/fixtures/core.scale/label-offset-vertical-axes.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/chart.js/test/fixtures/core.scale/label-offset-vertical-axes.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/chart.js/test/fixtures/plugin.filler/fill-line-boundary-end-span.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/chart.js/test/fixtures/plugin.filler/fill-line-boundary-end-span.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/chart.js/test/fixtures/plugin.filler/fill-line-boundary-end.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/chart.js/test/fixtures/plugin.filler/fill-line-boundary-end.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/chart.js/test/fixtures/plugin.filler/fill-line-boundary-origin-span.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/chart.js/test/fixtures/plugin.filler/fill-line-boundary-origin-span.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/chart.js/test/fixtures/plugin.filler/fill-line-boundary-origin-spline-span.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/chart.js/test/fixtures/plugin.filler/fill-line-boundary-origin-spline-span.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/chart.js/test/fixtures/plugin.filler/fill-line-boundary-origin-spline.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/chart.js/test/fixtures/plugin.filler/fill-line-boundary-origin-spline.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/chart.js/test/fixtures/plugin.filler/fill-line-boundary-origin-stepped-span.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/chart.js/test/fixtures/plugin.filler/fill-line-boundary-origin-stepped-span.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/chart.js/test/fixtures/plugin.filler/fill-line-boundary-origin-stepped.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/chart.js/test/fixtures/plugin.filler/fill-line-boundary-origin-stepped.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/chart.js/test/fixtures/plugin.filler/fill-line-boundary-origin.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/chart.js/test/fixtures/plugin.filler/fill-line-boundary-origin.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/chart.js/test/fixtures/plugin.filler/fill-line-boundary-start-span.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/chart.js/test/fixtures/plugin.filler/fill-line-boundary-start-span.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/chart.js/test/fixtures/plugin.filler/fill-line-boundary-start.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/chart.js/test/fixtures/plugin.filler/fill-line-boundary-start.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/chart.js/test/fixtures/plugin.filler/fill-line-dataset-span.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/chart.js/test/fixtures/plugin.filler/fill-line-dataset-span.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/chart.js/test/fixtures/plugin.filler/fill-line-dataset-spline-span.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/chart.js/test/fixtures/plugin.filler/fill-line-dataset-spline-span.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/chart.js/test/fixtures/plugin.filler/fill-line-dataset-spline.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/chart.js/test/fixtures/plugin.filler/fill-line-dataset-spline.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/chart.js/test/fixtures/plugin.filler/fill-line-dataset.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/chart.js/test/fixtures/plugin.filler/fill-line-dataset.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/chart.js/test/fixtures/plugin.filler/fill-radar-boundary-origin-spline.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/chart.js/test/fixtures/plugin.filler/fill-radar-boundary-origin-spline.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/chart.js/test/fixtures/plugin.filler/fill-radar-boundary-origin.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/chart.js/test/fixtures/plugin.filler/fill-radar-boundary-origin.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/chart.js/test/jasmine.context.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/chart.js/test/jasmine.index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/chart.js/test/jasmine.matchers.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/chart.js/test/jasmine.utils.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/chart.js/test/specs/controller.bar.tests.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/chart.js/test/specs/controller.bubble.tests.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/chart.js/test/specs/controller.doughnut.tests.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/chart.js/test/specs/controller.line.tests.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/chart.js/test/specs/controller.polarArea.tests.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/chart.js/test/specs/controller.radar.tests.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/chart.js/test/specs/controller.scatter.test.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/chart.js/test/specs/core.controller.tests.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/chart.js/test/specs/core.datasetController.tests.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/chart.js/test/specs/core.element.tests.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/chart.js/test/specs/core.helpers.tests.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/chart.js/test/specs/core.interaction.tests.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/chart.js/test/specs/core.layouts.tests.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/chart.js/test/specs/core.plugin.tests.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/chart.js/test/specs/core.scale.tests.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/chart.js/test/specs/core.scaleService.tests.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/chart.js/test/specs/core.ticks.tests.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/chart.js/test/specs/core.tooltip.tests.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/chart.js/test/specs/element.arc.tests.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/chart.js/test/specs/element.line.tests.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/chart.js/test/specs/element.point.tests.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/chart.js/test/specs/element.rectangle.tests.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/chart.js/test/specs/global.defaults.tests.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/chart.js/test/specs/global.deprecations.tests.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/chart.js/test/specs/helpers.canvas.tests.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/chart.js/test/specs/helpers.core.tests.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/chart.js/test/specs/helpers.easing.tests.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/chart.js/test/specs/helpers.options.tests.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/chart.js/test/specs/platform.dom.tests.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/chart.js/test/specs/plugin.filler.tests.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/chart.js/test/specs/plugin.legend.tests.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/chart.js/test/specs/plugin.title.tests.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/chart.js/test/specs/scale.category.tests.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/chart.js/test/specs/scale.linear.tests.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/chart.js/test/specs/scale.logarithmic.tests.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/chart.js/test/specs/scale.radialLinear.tests.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/chart.js/test/specs/scale.time.tests.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/chartjs-color-string/.travis.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/chartjs-color-string/CHANGELOG.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/chartjs-color-string/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/chartjs-color-string/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/chartjs-color-string/color-string.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/chartjs-color-string/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/chartjs-color-string/test/basic.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/chartjs-color/CHANGELOG.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/chartjs-color/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/chartjs-color/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/chartjs-color/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/chartjs-color/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/color-convert/.travis.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/color-convert/CHANGELOG.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/color-convert/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/color-convert/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/color-convert/component.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/color-convert/conversions.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/color-convert/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/color-convert/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/color-convert/test/basic.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/color-convert/test/speed.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/color-name/.eslintrc.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/color-name/.npmignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/color-name/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/color-name/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/color-name/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/color-name/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/color-name/test.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/jquery/AUTHORS.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/jquery/LICENSE.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/jquery/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/jquery/bower.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/jquery/dist/core.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/jquery/dist/jquery.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/jquery/dist/jquery.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/jquery/dist/jquery.min.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/jquery/dist/jquery.slim.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/jquery/dist/jquery.slim.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/jquery/dist/jquery.slim.min.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/jquery/external/sizzle/LICENSE.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/jquery/external/sizzle/dist/sizzle.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/jquery/external/sizzle/dist/sizzle.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/jquery/external/sizzle/dist/sizzle.min.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/jquery/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/jquery/src/.eslintrc.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/jquery/src/ajax.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/jquery/src/ajax/jsonp.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/jquery/src/ajax/load.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/jquery/src/ajax/parseXML.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/jquery/src/ajax/script.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/jquery/src/ajax/var/location.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/jquery/src/ajax/var/nonce.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/jquery/src/ajax/var/rquery.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/jquery/src/ajax/xhr.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/jquery/src/attributes.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/jquery/src/attributes/attr.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/jquery/src/attributes/classes.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/jquery/src/attributes/prop.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/jquery/src/attributes/support.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/jquery/src/attributes/val.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/jquery/src/callbacks.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/jquery/src/core.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/jquery/src/core/DOMEval.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/jquery/src/core/access.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/jquery/src/core/camelCase.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/jquery/src/core/init.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/jquery/src/core/nodeName.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/jquery/src/core/parseHTML.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/jquery/src/core/ready-no-deferred.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/jquery/src/core/ready.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/jquery/src/core/readyException.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/jquery/src/core/stripAndCollapse.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/jquery/src/core/support.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/jquery/src/core/toType.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/jquery/src/core/var/rsingleTag.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/jquery/src/css.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/jquery/src/css/addGetHookIf.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/jquery/src/css/adjustCSS.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/jquery/src/css/curCSS.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/jquery/src/css/hiddenVisibleSelectors.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/jquery/src/css/showHide.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/jquery/src/css/support.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/jquery/src/css/var/cssExpand.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/jquery/src/css/var/getStyles.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/jquery/src/css/var/isHiddenWithinTree.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/jquery/src/css/var/rboxStyle.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/jquery/src/css/var/rnumnonpx.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/jquery/src/css/var/swap.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/jquery/src/data.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/jquery/src/data/Data.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/jquery/src/data/var/acceptData.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/jquery/src/data/var/dataPriv.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/jquery/src/data/var/dataUser.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/jquery/src/deferred.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/jquery/src/deferred/exceptionHook.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/jquery/src/deprecated.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/jquery/src/dimensions.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/jquery/src/effects.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/jquery/src/effects/Tween.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/jquery/src/effects/animatedSelector.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/jquery/src/event.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/jquery/src/event/ajax.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/jquery/src/event/alias.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/jquery/src/event/focusin.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/jquery/src/event/support.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/jquery/src/event/trigger.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/jquery/src/exports/amd.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/jquery/src/exports/global.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/jquery/src/jquery.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/jquery/src/manipulation.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/jquery/src/manipulation/_evalUrl.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/jquery/src/manipulation/buildFragment.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/jquery/src/manipulation/getAll.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/jquery/src/manipulation/setGlobalEval.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/jquery/src/manipulation/support.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/jquery/src/manipulation/var/rcheckableType.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/jquery/src/manipulation/var/rscriptType.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/jquery/src/manipulation/var/rtagName.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/jquery/src/manipulation/wrapMap.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/jquery/src/offset.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/jquery/src/queue.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/jquery/src/queue/delay.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/jquery/src/selector-native.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/jquery/src/selector-sizzle.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/jquery/src/selector.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/jquery/src/serialize.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/jquery/src/traversing.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/jquery/src/traversing/findFilter.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/jquery/src/traversing/var/dir.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/jquery/src/traversing/var/rneedsContext.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/jquery/src/traversing/var/siblings.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/jquery/src/var/ObjectFunctionString.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/jquery/src/var/arr.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/jquery/src/var/class2type.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/jquery/src/var/concat.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/jquery/src/var/document.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/jquery/src/var/documentElement.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/jquery/src/var/fnToString.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/jquery/src/var/getProto.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/jquery/src/var/hasOwn.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/jquery/src/var/indexOf.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/jquery/src/var/isFunction.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/jquery/src/var/isWindow.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/jquery/src/var/pnum.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/jquery/src/var/push.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/jquery/src/var/rcssNum.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/jquery/src/var/rnothtmlwhite.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/jquery/src/var/slice.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/jquery/src/var/support.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/jquery/src/var/toString.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/jquery/src/wrap.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/moment/CHANGELOG.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/moment/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/moment/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/moment/ender.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/moment/locale/af.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/moment/locale/ar-dz.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/moment/locale/ar-kw.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/moment/locale/ar-ly.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/moment/locale/ar-ma.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/moment/locale/ar-sa.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/moment/locale/ar-tn.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/moment/locale/ar.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/moment/locale/az.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/moment/locale/be.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/moment/locale/bg.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/moment/locale/bm.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/moment/locale/bn.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/moment/locale/bo.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/moment/locale/br.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/moment/locale/bs.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/moment/locale/ca.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/moment/locale/cs.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/moment/locale/cv.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/moment/locale/cy.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/moment/locale/da.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/moment/locale/de-at.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/moment/locale/de-ch.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/moment/locale/de.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/moment/locale/dv.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/moment/locale/el.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/moment/locale/en-au.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/moment/locale/en-ca.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/moment/locale/en-gb.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/moment/locale/en-ie.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/moment/locale/en-il.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/moment/locale/en-nz.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/moment/locale/eo.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/moment/locale/es-do.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/moment/locale/es-us.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/moment/locale/es.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/moment/locale/et.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/moment/locale/eu.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/moment/locale/fa.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/moment/locale/fi.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/moment/locale/fo.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/moment/locale/fr-ca.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/moment/locale/fr-ch.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/moment/locale/fr.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/moment/locale/fy.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/moment/locale/gd.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/moment/locale/gl.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/moment/locale/gom-latn.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/moment/locale/gu.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/moment/locale/he.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/moment/locale/hi.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/moment/locale/hr.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/moment/locale/hu.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/moment/locale/hy-am.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/moment/locale/id.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/moment/locale/is.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/moment/locale/it.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/moment/locale/ja.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/moment/locale/jv.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/moment/locale/ka.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/moment/locale/kk.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/moment/locale/km.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/moment/locale/kn.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/moment/locale/ko.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/moment/locale/ky.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/moment/locale/lb.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/moment/locale/lo.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/moment/locale/lt.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/moment/locale/lv.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/moment/locale/me.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/moment/locale/mi.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/moment/locale/mk.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/moment/locale/ml.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/moment/locale/mn.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/moment/locale/mr.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/moment/locale/ms-my.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/moment/locale/ms.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/moment/locale/mt.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/moment/locale/my.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/moment/locale/nb.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/moment/locale/ne.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/moment/locale/nl-be.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/moment/locale/nl.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/moment/locale/nn.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/moment/locale/pa-in.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/moment/locale/pl.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/moment/locale/pt-br.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/moment/locale/pt.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/moment/locale/ro.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/moment/locale/ru.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/moment/locale/sd.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/moment/locale/se.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/moment/locale/si.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/moment/locale/sk.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/moment/locale/sl.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/moment/locale/sq.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/moment/locale/sr-cyrl.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/moment/locale/sr.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/moment/locale/ss.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/moment/locale/sv.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/moment/locale/sw.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/moment/locale/ta.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/moment/locale/te.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/moment/locale/tet.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/moment/locale/tg.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/moment/locale/th.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/moment/locale/tl-ph.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/moment/locale/tlh.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/moment/locale/tr.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/moment/locale/tzl.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/moment/locale/tzm-latn.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/moment/locale/tzm.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/moment/locale/ug-cn.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/moment/locale/uk.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/moment/locale/ur.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/moment/locale/uz-latn.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/moment/locale/uz.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/moment/locale/vi.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/moment/locale/x-pseudo.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/moment/locale/yo.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/moment/locale/zh-cn.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/moment/locale/zh-hk.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/moment/locale/zh-tw.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/moment/min/locales.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/moment/min/locales.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/moment/min/moment-with-locales.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/moment/min/moment-with-locales.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/moment/min/moment.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/moment/moment.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/moment/moment.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/moment/package.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/moment/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/moment/src/lib/create/check-overflow.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/moment/src/lib/create/date-from-array.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/moment/src/lib/create/from-anything.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/moment/src/lib/create/from-array.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/moment/src/lib/create/from-object.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/moment/src/lib/create/from-string-and-array.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/moment/src/lib/create/from-string-and-format.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/moment/src/lib/create/from-string.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/moment/src/lib/create/local.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/moment/src/lib/create/parsing-flags.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/moment/src/lib/create/utc.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/moment/src/lib/create/valid.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/moment/src/lib/duration/abs.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/moment/src/lib/duration/add-subtract.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/moment/src/lib/duration/as.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/moment/src/lib/duration/bubble.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/moment/src/lib/duration/clone.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/moment/src/lib/duration/constructor.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/moment/src/lib/duration/create.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/moment/src/lib/duration/duration.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/moment/src/lib/duration/get.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/moment/src/lib/duration/humanize.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/moment/src/lib/duration/iso-string.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/moment/src/lib/duration/prototype.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/moment/src/lib/duration/valid.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/moment/src/lib/format/format.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/moment/src/lib/locale/base-config.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/moment/src/lib/locale/calendar.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/moment/src/lib/locale/constructor.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/moment/src/lib/locale/en.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/moment/src/lib/locale/formats.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/moment/src/lib/locale/invalid.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/moment/src/lib/locale/lists.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/moment/src/lib/locale/locale.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/moment/src/lib/locale/locales.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/moment/src/lib/locale/ordinal.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/moment/src/lib/locale/pre-post-format.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/moment/src/lib/locale/prototype.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/moment/src/lib/locale/relative.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/moment/src/lib/locale/set.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/moment/src/lib/moment/add-subtract.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/moment/src/lib/moment/calendar.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/moment/src/lib/moment/clone.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/moment/src/lib/moment/compare.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/moment/src/lib/moment/constructor.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/moment/src/lib/moment/creation-data.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/moment/src/lib/moment/diff.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/moment/src/lib/moment/format.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/moment/src/lib/moment/from.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/moment/src/lib/moment/get-set.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/moment/src/lib/moment/locale.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/moment/src/lib/moment/min-max.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/moment/src/lib/moment/moment.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/moment/src/lib/moment/now.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/moment/src/lib/moment/prototype.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/moment/src/lib/moment/start-end-of.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/moment/src/lib/moment/to-type.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/moment/src/lib/moment/to.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/moment/src/lib/moment/valid.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/moment/src/lib/parse/regex.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/moment/src/lib/parse/token.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/moment/src/lib/units/aliases.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/moment/src/lib/units/constants.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/moment/src/lib/units/day-of-month.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/moment/src/lib/units/day-of-week.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/moment/src/lib/units/day-of-year.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/moment/src/lib/units/hour.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/moment/src/lib/units/millisecond.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/moment/src/lib/units/minute.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/moment/src/lib/units/month.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/moment/src/lib/units/offset.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/moment/src/lib/units/priorities.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/moment/src/lib/units/quarter.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/moment/src/lib/units/second.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/moment/src/lib/units/timestamp.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/moment/src/lib/units/timezone.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/moment/src/lib/units/units.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/moment/src/lib/units/week-calendar-utils.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/moment/src/lib/units/week-year.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/moment/src/lib/units/week.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/moment/src/lib/units/year.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/moment/src/lib/utils/abs-ceil.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/moment/src/lib/utils/abs-floor.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/moment/src/lib/utils/abs-round.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/moment/src/lib/utils/compare-arrays.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/moment/src/lib/utils/defaults.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/moment/src/lib/utils/deprecate.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/moment/src/lib/utils/extend.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/moment/src/lib/utils/has-own-prop.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/moment/src/lib/utils/hooks.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/moment/src/lib/utils/index-of.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/moment/src/lib/utils/is-array.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/moment/src/lib/utils/is-date.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/moment/src/lib/utils/is-function.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/moment/src/lib/utils/is-number.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/moment/src/lib/utils/is-object-empty.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/moment/src/lib/utils/is-object.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/moment/src/lib/utils/is-undefined.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/moment/src/lib/utils/keys.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/moment/src/lib/utils/map.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/moment/src/lib/utils/mod.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/moment/src/lib/utils/some.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/moment/src/lib/utils/to-int.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/moment/src/lib/utils/zero-fill.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/moment/src/locale/af.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/moment/src/locale/ar-dz.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/moment/src/locale/ar-kw.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/moment/src/locale/ar-ly.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/moment/src/locale/ar-ma.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/moment/src/locale/ar-sa.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/moment/src/locale/ar-tn.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/moment/src/locale/ar.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/moment/src/locale/az.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/moment/src/locale/be.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/moment/src/locale/bg.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/moment/src/locale/bm.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/moment/src/locale/bn.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/moment/src/locale/bo.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/moment/src/locale/br.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/moment/src/locale/bs.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/moment/src/locale/ca.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/moment/src/locale/cs.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/moment/src/locale/cv.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/moment/src/locale/cy.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/moment/src/locale/da.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/moment/src/locale/de-at.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/moment/src/locale/de-ch.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/moment/src/locale/de.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/moment/src/locale/dv.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/moment/src/locale/el.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/moment/src/locale/en-au.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/moment/src/locale/en-ca.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/moment/src/locale/en-gb.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/moment/src/locale/en-ie.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/moment/src/locale/en-il.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/moment/src/locale/en-nz.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/moment/src/locale/eo.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/moment/src/locale/es-do.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/moment/src/locale/es-us.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/moment/src/locale/es.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/moment/src/locale/et.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/moment/src/locale/eu.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/moment/src/locale/fa.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/moment/src/locale/fi.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/moment/src/locale/fo.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/moment/src/locale/fr-ca.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/moment/src/locale/fr-ch.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/moment/src/locale/fr.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/moment/src/locale/fy.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/moment/src/locale/gd.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/moment/src/locale/gl.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/moment/src/locale/gom-latn.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/moment/src/locale/gu.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/moment/src/locale/he.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/moment/src/locale/hi.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/moment/src/locale/hr.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/moment/src/locale/hu.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/moment/src/locale/hy-am.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/moment/src/locale/id.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/moment/src/locale/is.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/moment/src/locale/it.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/moment/src/locale/ja.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/moment/src/locale/jv.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/moment/src/locale/ka.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/moment/src/locale/kk.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/moment/src/locale/km.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/moment/src/locale/kn.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/moment/src/locale/ko.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/moment/src/locale/ky.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/moment/src/locale/lb.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/moment/src/locale/lo.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/moment/src/locale/lt.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/moment/src/locale/lv.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/moment/src/locale/me.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/moment/src/locale/mi.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/moment/src/locale/mk.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/moment/src/locale/ml.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/moment/src/locale/mn.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/moment/src/locale/mr.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/moment/src/locale/ms-my.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/moment/src/locale/ms.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/moment/src/locale/mt.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/moment/src/locale/my.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/moment/src/locale/nb.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/moment/src/locale/ne.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/moment/src/locale/nl-be.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/moment/src/locale/nl.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/moment/src/locale/nn.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/moment/src/locale/pa-in.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/moment/src/locale/pl.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/moment/src/locale/pt-br.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/moment/src/locale/pt.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/moment/src/locale/ro.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/moment/src/locale/ru.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/moment/src/locale/sd.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/moment/src/locale/se.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/moment/src/locale/si.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/moment/src/locale/sk.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/moment/src/locale/sl.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/moment/src/locale/sq.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/moment/src/locale/sr-cyrl.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/moment/src/locale/sr.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/moment/src/locale/ss.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/moment/src/locale/sv.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/moment/src/locale/sw.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/moment/src/locale/ta.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/moment/src/locale/te.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/moment/src/locale/tet.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/moment/src/locale/tg.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/moment/src/locale/th.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/moment/src/locale/tl-ph.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/moment/src/locale/tlh.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/moment/src/locale/tr.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/moment/src/locale/tzl.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/moment/src/locale/tzm-latn.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/moment/src/locale/tzm.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/moment/src/locale/ug-cn.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/moment/src/locale/uk.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/moment/src/locale/ur.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/moment/src/locale/uz-latn.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/moment/src/locale/uz.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/moment/src/locale/vi.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/moment/src/locale/x-pseudo.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/moment/src/locale/yo.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/moment/src/locale/zh-cn.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/moment/src/locale/zh-hk.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/moment/src/locale/zh-tw.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/moment/src/moment.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -18,89 +900,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/html/index.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="modelManager.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/javascript/model/modelManager.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="8466">
-              <caret line="498" column="73" selection-start-line="498" selection-start-column="73" selection-end-line="498" selection-end-column="73" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="graphFormView.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/javascript/view/directlyChange/graphFormView.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2550">
-              <caret line="150" column="42" selection-start-line="150" selection-start-column="42" selection-end-line="150" selection-end-column="42" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ViewGenerator.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/javascript/view/viewGenerator/ViewGenerator.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="133">
-              <caret line="173" column="32" selection-start-line="173" selection-start-column="32" selection-end-line="173" selection-end-column="32" />
-              <folding>
-                <element signature="n#!!doc" expanded="true" />
-                <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#span#0;n#strong#0;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DiagramClass.puml" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/doc/DiagramClass.puml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="77" column="40" selection-start-line="77" selection-start-column="40" selection-end-line="77" selection-end-column="40" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="reference.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/javascript/start/reference.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="476">
-              <caret line="28" selection-start-line="28" selection-end-line="28" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="model.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/javascript/model/model.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="578">
-              <caret line="34" column="40" selection-start-line="34" selection-start-column="40" selection-end-line="34" selection-end-column="40" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="bootstrapView.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/javascript/view/viewGenerator/bootstrapView.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="152" column="25" lean-forward="true" selection-start-line="152" selection-start-column="25" selection-end-line="152" selection-end-column="25" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ViewManufacturing.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/javascript/view/directlyChange/ViewManufacturing.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="11" selection-start-line="11" selection-end-line="11" />
+            <state relative-caret-position="297">
+              <caret line="282" column="2" selection-start-line="282" selection-start-column="2" selection-end-line="282" selection-end-column="2" />
             </state>
           </provider>
         </entry>
@@ -108,8 +912,53 @@
       <file leaf-file-name="graphGenerator.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/javascript/view/viewGenerator/graphGenerator.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="125" column="23" lean-forward="true" selection-start-line="125" selection-start-column="23" selection-end-line="125" selection-end-column="23" />
+            <state relative-caret-position="280">
+              <caret line="151" selection-start-line="151" selection-end-line="151" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="myMath.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/javascript/model/anotherFunctiun/myMath.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="119">
+              <caret line="57" selection-start-line="57" selection-end-line="57" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="script.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/javascript/start/script.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="297">
+              <caret line="166" column="11" selection-start-line="166" selection-start-column="11" selection-end-line="166" selection-end-column="11" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="graphFormView.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/javascript/view/directlyChange/graphFormView.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="297">
+              <caret line="158" selection-start-line="158" selection-end-line="158" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ModeleView.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/javascript/view/directlyChange/ModeleView.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="297">
+              <caret line="35" selection-start-line="35" selection-end-line="35" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ViewManufacturing.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/javascript/view/directlyChange/ViewManufacturing.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="187">
+              <caret line="11" selection-start-line="11" selection-end-line="11" />
             </state>
           </provider>
         </entry>
@@ -189,6 +1038,7 @@
         <option value="$PROJECT_DIR$/javascript/start/reference.js" />
         <option value="$PROJECT_DIR$/javascript/view/directlyChange/graphFormView.js" />
         <option value="$PROJECT_DIR$/javascript/view/directlyChange/ViewManufacturing.js" />
+        <option value="$PROJECT_DIR$/javascript/model/modelManager.js" />
         <option value="$PROJECT_DIR$/javascript/model/anotherFunctiun/myMath.js" />
         <option value="$PROJECT_DIR$/html/model.html" />
         <option value="$PROJECT_DIR$/html/index.html" />
@@ -199,11 +1049,9 @@
         <option value="$PROJECT_DIR$/javascript/view/viewGenerator/graphGenerator.js" />
         <option value="$PROJECT_DIR$/javascript/start/script.js" />
         <option value="$PROJECT_DIR$/javascript/data/data.js" />
-        <option value="$PROJECT_DIR$/javascript/manufacturing/manufact.js" />
-        <option value="$PROJECT_DIR$/javascript/model/modelManager.js" />
         <option value="$PROJECT_DIR$/UMLTEST/DiagramClass.puml" />
+        <option value="$PROJECT_DIR$/javascript/manufacturing/manufact.js" />
         <option value="$PROJECT_DIR$/javascript/view/viewGenerator/ViewGenerator.js" />
-        <option value="$PROJECT_DIR$/doc/DiagramClass.puml" />
       </list>
     </option>
   </component>
@@ -219,15 +1067,12 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
+  <component name="NodeModulesDirectoryManager">
+    <handled-path value="$PROJECT_DIR$/node_modules" />
+  </component>
   <component name="NodePackageJsonFileManager">
     <packageJsonPaths>
-      <path value="$PROJECT_DIR$/node_modules/chart.js/package.json" />
-      <path value="$PROJECT_DIR$/node_modules/chartjs-color-string/package.json" />
-      <path value="$PROJECT_DIR$/node_modules/chartjs-color/package.json" />
-      <path value="$PROJECT_DIR$/node_modules/color-convert/package.json" />
-      <path value="$PROJECT_DIR$/node_modules/color-name/package.json" />
-      <path value="$PROJECT_DIR$/node_modules/jquery/package.json" />
-      <path value="$PROJECT_DIR$/node_modules/moment/package.json" />
+      <path value="$PROJECT_DIR$/package.json" />
     </packageJsonPaths>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
@@ -242,7 +1087,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -320,14 +1164,16 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="full.screen.before.presentation.mode" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Documentation" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/html" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
+    <property name="nodejs_package_manager_path" value="npm" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
     <property name="settings.editor.selected.configurable" value="preferences.keymap" />
   </component>
@@ -357,7 +1203,9 @@
           <option name="mySupportsDeletion" value="false" />
           <option name="myCanBeAbsent" value="false" />
           <option name="myId" value="UPDATED" />
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/../Documentation/DiagramClass.png</PATH>
           <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/workspace.xml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/doc/DiagramClass.puml</PATH>
         </FILE-GROUP>
         <FILE-GROUP>
           <option name="myUpdateName" value="Created" />
@@ -365,7 +1213,6 @@
           <option name="mySupportsDeletion" value="false" />
           <option name="myCanBeAbsent" value="false" />
           <option name="myId" value="CREATED" />
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/doc/DiagramClass.puml</PATH>
         </FILE-GROUP>
         <FILE-GROUP>
           <option name="myUpdateName" value="Deleted" />
@@ -373,7 +1220,6 @@
           <option name="mySupportsDeletion" value="false" />
           <option name="myCanBeAbsent" value="true" />
           <option name="myId" value="REMOVED_FROM_REPOSITORY" />
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/UMLTEST/DiagramClass.puml</PATH>
         </FILE-GROUP>
         <FILE-GROUP>
           <option name="myUpdateName" value="Restored" />
@@ -504,9 +1350,8 @@
       <workItem from="1527065536239" duration="948000" />
       <workItem from="1527066636256" duration="6531000" />
       <workItem from="1527073306265" duration="219000" />
-      <workItem from="1527076008588" duration="778000" />
-      <workItem from="1527090493306" duration="14000" />
-      <workItem from="1527145325492" duration="6457000" />
+      <workItem from="1527076008588" duration="11547000" />
+      <workItem from="1527145491685" duration="7914000" />
     </task>
     <task id="LOCAL-00001" summary="mis en place d'un code propre">
       <created>1526980633672</created>
@@ -550,39 +1395,26 @@
       <option name="project" value="LOCAL" />
       <updated>1527073197850</updated>
     </task>
-    <task id="LOCAL-00007" summary="Continuation UML">
-      <created>1527089366579</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1527089366579</updated>
-    </task>
-    <task id="LOCAL-00008" summary="problemeUML">
-      <created>1527148396177</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1527148396177</updated>
-    </task>
-    <option name="localTasksCounter" value="9" />
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="329775000" />
+    <option name="totallyTimeSpent" value="328902000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1696" height="1026" extended-state="6" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info anchor="right" id="PlantUML" order="3" visible="true" weight="0.44559902" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24816626" />
+      <window_info anchor="right" id="PlantUML" order="3" weight="0.33812407" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24583964" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" x="0" y="447" width="1680" height="116" id="Event Log" order="7" sideWeight="0.50183374" side_tool="true" visible="true" weight="0.32875144" />
-      <window_info active="true" anchor="bottom" id="Find" order="1" sideWeight="0.49816626" visible="true" weight="0.32875144" />
+      <window_info anchor="bottom" x="0" y="447" width="1680" height="116" id="Event Log" order="7" sideWeight="0.505295" side_tool="true" visible="true" weight="0.13705584" />
+      <window_info anchor="bottom" id="Find" order="1" sideWeight="0.49848714" weight="0.3282572" />
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Terminal" order="7" sideWeight="0.49511003" weight="0.16494845" />
+      <window_info anchor="bottom" id="Terminal" order="7" sideWeight="0.494705" visible="true" weight="0.13705584" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="TypeScript" order="8" />
@@ -628,9 +1460,7 @@
     <MESSAGE value="Mis en place du tableau ce Temi en dessous du graphique" />
     <MESSAGE value="fin de sceance" />
     <MESSAGE value="Debut UML et Fin Matiné" />
-    <MESSAGE value="Continuation UML" />
-    <MESSAGE value="problemeUML" />
-    <option name="LAST_COMMIT_MESSAGE" value="problemeUML" />
+    <option name="LAST_COMMIT_MESSAGE" value="Debut UML et Fin Matiné" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -638,27 +1468,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/javascript/view/directlyChange/ModeleView.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="13" column="79" selection-start-line="13" selection-start-column="79" selection-end-line="13" selection-end-column="79" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/javascript/model/model.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="918">
-          <caret line="54" column="34" lean-forward="true" selection-start-line="54" selection-start-column="34" selection-end-line="54" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/javascript/manufacturing/manufact.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2346">
-          <caret line="138" selection-start-line="138" selection-end-line="138" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/html/test.html" />
     <entry file="file://$PROJECT_DIR$/javascript/model/modelManager.js">
       <provider selected="true" editor-type-id="text-editor">
@@ -698,13 +1507,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/javascript/model/anotherFunctiun/myMath.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-374">
-          <caret line="41" column="35" lean-forward="true" selection-start-line="41" selection-start-column="35" selection-end-line="41" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/html/model.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1870">
@@ -716,13 +1518,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
           <caret line="2" column="1" selection-start-line="2" selection-start-column="1" selection-end-line="2" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/javascript/view/directlyChange/ModeleView.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-66">
-          <caret line="6" selection-start-line="6" selection-end-line="6" />
         </state>
       </provider>
     </entry>
@@ -1626,13 +2421,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/html/graphForm.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1428">
-          <caret line="84" selection-start-line="84" selection-end-line="84" />
-        </state>
-      </provider>
-    </entry>
     <entry file="uml://JavaScript-modules-diagram/C:/Users/matgaydu/Documents/stage/TEMI/site/html/graphForm.html">
       <provider selected="true" editor-type-id="UmlEditorProvider">
         <state>
@@ -1661,67 +2449,7 @@
           </nodes>
           <notes />
           <edges>
-            <edge source="$PROJECT_DIR$/html/graphForm.html" target="$PROJECT_DIR$/javascript/view/viewGenerator/ViewGenerator.js">
-              <point x="0.0" y="0.0" />
-              <point x="0.0" y="0.0" />
-            </edge>
-            <edge source="$PROJECT_DIR$/html/graphForm.html" target="$PROJECT_DIR$/css/tabCS.css">
-              <point x="0.0" y="0.0" />
-              <point x="0.0" y="0.0" />
-            </edge>
-            <edge source="$PROJECT_DIR$/html/graphForm.html" target="$APPLICATION_CONFIG_DIR$/javascript/extLibs/http_maxcdn.bootstrapcdn.com_bootstrap_3.3.7_js_bootstrap.js">
-              <point x="0.0" y="0.0" />
-              <point x="0.0" y="0.0" />
-            </edge>
-            <edge source="$PROJECT_DIR$/html/graphForm.html" target="$PROJECT_DIR$/node_modules/chart.js/dist/Chart.bundle.min.js">
-              <point x="0.0" y="0.0" />
-              <point x="0.0" y="0.0" />
-            </edge>
-            <edge source="$PROJECT_DIR$/html/graphForm.html" target="$PROJECT_DIR$/javascript/model/model.js">
-              <point x="0.0" y="0.0" />
-              <point x="0.0" y="0.0" />
-            </edge>
-            <edge source="$PROJECT_DIR$/html/graphForm.html" target="$PROJECT_DIR$/node_modules/chart.js/dist/Chart.min.js">
-              <point x="0.0" y="0.0" />
-              <point x="0.0" y="0.0" />
-            </edge>
-            <edge source="$PROJECT_DIR$/html/graphForm.html" target="$PROJECT_DIR$/javascript/view/directlyChange/graphFormView.js">
-              <point x="0.0" y="0.0" />
-              <point x="0.0" y="0.0" />
-            </edge>
-            <edge source="$PROJECT_DIR$/html/graphForm.html" target="$PROJECT_DIR$/javascript/view/viewGenerator/graphGenerator.js">
-              <point x="0.0" y="0.0" />
-              <point x="0.0" y="0.0" />
-            </edge>
-            <edge source="$PROJECT_DIR$/html/graphForm.html" target="$PROJECT_DIR$/javascript/manufacturing/manufact.js">
-              <point x="0.0" y="0.0" />
-              <point x="0.0" y="0.0" />
-            </edge>
-            <edge source="$PROJECT_DIR$/html/graphForm.html" target="$PROJECT_DIR$/javascript/view/viewGenerator/bootstrapView.js">
-              <point x="0.0" y="0.0" />
-              <point x="0.0" y="0.0" />
-            </edge>
-            <edge source="$PROJECT_DIR$/html/graphForm.html" target="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-              <point x="0.0" y="0.0" />
-              <point x="0.0" y="0.0" />
-            </edge>
-            <edge source="$PROJECT_DIR$/html/graphForm.html" target="$PROJECT_DIR$/javascript/start/reference.js">
-              <point x="0.0" y="0.0" />
-              <point x="0.0" y="0.0" />
-            </edge>
-            <edge source="$PROJECT_DIR$/html/graphForm.html" target="$PROJECT_DIR$/css/general.css">
-              <point x="0.0" y="0.0" />
-              <point x="0.0" y="0.0" />
-            </edge>
-            <edge source="$PROJECT_DIR$/html/graphForm.html" target="$PROJECT_DIR$/javascript/start/script.js">
-              <point x="0.0" y="0.0" />
-              <point x="0.0" y="0.0" />
-            </edge>
             <edge source="$PROJECT_DIR$/html/graphForm.html" target="$PROJECT_DIR$/javascript/model/modelManager.js">
-              <point x="0.0" y="0.0" />
-              <point x="0.0" y="0.0" />
-            </edge>
-            <edge source="$PROJECT_DIR$/html/graphForm.html" target="$APPLICATION_CONFIG_DIR$/javascript/extLibs/http_ajax.googleapis.com_ajax_libs_jquery_3.3.1_jquery.js">
               <point x="0.0" y="0.0" />
               <point x="0.0" y="0.0" />
             </edge>
@@ -1730,6 +2458,66 @@
               <point x="0.0" y="0.0" />
             </edge>
             <edge source="$PROJECT_DIR$/html/graphForm.html" target="$PROJECT_DIR$/javascript/data/data.js">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="$PROJECT_DIR$/html/graphForm.html" target="$PROJECT_DIR$/css/tabCS.css">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="$PROJECT_DIR$/html/graphForm.html" target="$PROJECT_DIR$/javascript/start/reference.js">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="$PROJECT_DIR$/html/graphForm.html" target="$PROJECT_DIR$/javascript/view/viewGenerator/bootstrapView.js">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="$PROJECT_DIR$/html/graphForm.html" target="$PROJECT_DIR$/javascript/manufacturing/manufact.js">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="$PROJECT_DIR$/html/graphForm.html" target="$PROJECT_DIR$/javascript/model/model.js">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="$PROJECT_DIR$/html/graphForm.html" target="$PROJECT_DIR$/javascript/view/viewGenerator/graphGenerator.js">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="$PROJECT_DIR$/html/graphForm.html" target="$PROJECT_DIR$/css/general.css">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="$PROJECT_DIR$/html/graphForm.html" target="$APPLICATION_CONFIG_DIR$/javascript/extLibs/http_ajax.googleapis.com_ajax_libs_jquery_3.3.1_jquery.js">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="$PROJECT_DIR$/html/graphForm.html" target="$PROJECT_DIR$/node_modules/chart.js/dist/Chart.bundle.min.js">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="$PROJECT_DIR$/html/graphForm.html" target="$PROJECT_DIR$/javascript/view/directlyChange/graphFormView.js">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="$PROJECT_DIR$/html/graphForm.html" target="$PROJECT_DIR$/javascript/start/script.js">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="$PROJECT_DIR$/html/graphForm.html" target="$PROJECT_DIR$/javascript/view/viewGenerator/ViewGenerator.js">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="$PROJECT_DIR$/html/graphForm.html" target="$APPLICATION_CONFIG_DIR$/javascript/extLibs/http_maxcdn.bootstrapcdn.com_bootstrap_3.3.7_js_bootstrap.js">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="$PROJECT_DIR$/html/graphForm.html" target="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="$PROJECT_DIR$/html/graphForm.html" target="$PROJECT_DIR$/node_modules/chart.js/dist/Chart.min.js">
               <point x="0.0" y="0.0" />
               <point x="0.0" y="0.0" />
             </edge>
@@ -1761,6 +2549,13 @@
           </Categories>
           <SCOPE>All</SCOPE>
           <VISIBILITY>Details</VISIBILITY>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/html/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
         </state>
       </provider>
     </entry>
@@ -1844,59 +2639,31 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/javascript/data/data.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="127">
-          <caret line="9" column="29" selection-start-line="9" selection-start-column="29" selection-end-line="9" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/javascript/start/script.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="680">
-          <caret line="155" column="22" selection-start-line="155" selection-start-column="22" selection-end-line="155" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/javascript/manufacturing/manufact.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-901">
-          <caret line="79" column="18" selection-start-line="79" selection-start-column="18" selection-end-line="79" selection-end-column="18" />
+        <state relative-caret-position="1428">
+          <caret line="84" column="12" selection-start-line="84" selection-start-column="12" selection-end-line="84" selection-end-column="12" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/javascript/model/model.js">
+    <entry file="file://$PROJECT_DIR$/javascript/data/data.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="578">
-          <caret line="34" column="40" selection-start-line="34" selection-start-column="40" selection-end-line="34" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/javascript/view/directlyChange/ViewManufacturing.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" selection-start-line="11" selection-end-line="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/javascript/view/directlyChange/graphFormView.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2550">
-          <caret line="150" column="42" selection-start-line="150" selection-start-column="42" selection-end-line="150" selection-end-column="42" />
+        <state relative-caret-position="459">
+          <caret line="27" selection-start-line="27" selection-end-line="27" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/javascript/model/modelManager.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="8466">
-          <caret line="498" column="73" selection-start-line="498" selection-start-column="73" selection-end-line="498" selection-end-column="73" />
+        <state relative-caret-position="10234">
+          <caret line="602" selection-start-line="602" selection-end-line="602" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/UMLTEST/DiagramClass.puml">
+    <entry file="file://$PROJECT_DIR$/javascript/model/model.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2179">
-          <caret line="285" column="11" selection-start-line="285" selection-start-column="11" selection-end-line="285" selection-end-column="11" />
+        <state relative-caret-position="1088">
+          <caret line="64" column="26" selection-start-line="64" selection-start-column="26" selection-end-line="64" selection-end-column="26" />
         </state>
       </provider>
     </entry>
@@ -1907,24 +2674,21 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/html/index.html">
+    <entry file="file://$PROJECT_DIR$/UMLTEST/DiagramClass.puml" />
+    <entry file="file://$PROJECT_DIR$/html/graphForm.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+        <state relative-caret-position="95">
+          <caret line="84" selection-start-line="84" selection-end-line="84" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/javascript/view/viewGenerator/bootstrapView.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="152" column="25" lean-forward="true" selection-start-line="152" selection-start-column="25" selection-end-line="152" selection-end-column="25" />
-        </state>
-      </provider>
+    <entry file="file://$PROJECT_DIR$/doc/DiagramClass.puml">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/javascript/view/viewGenerator/ViewGenerator.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="133">
-          <caret line="173" column="32" selection-start-line="173" selection-start-column="32" selection-end-line="173" selection-end-column="32" />
+        <state relative-caret-position="297">
+          <caret line="417" selection-start-line="417" selection-end-line="417" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
             <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
@@ -1934,34 +2698,63 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/javascript/view/viewGenerator/bootstrapView.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="297">
+          <caret line="282" column="2" selection-start-line="282" selection-start-column="2" selection-end-line="282" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/javascript/view/viewGenerator/graphGenerator.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="125" column="23" lean-forward="true" selection-start-line="125" selection-start-column="23" selection-end-line="125" selection-end-column="23" />
+        <state relative-caret-position="280">
+          <caret line="151" selection-start-line="151" selection-end-line="151" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/doc/DiagramClass.puml">
+    <entry file="file://$PROJECT_DIR$/javascript/model/anotherFunctiun/myMath.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="77" column="40" selection-start-line="77" selection-start-column="40" selection-end-line="77" selection-end-column="40" />
+        <state relative-caret-position="119">
+          <caret line="57" selection-start-line="57" selection-end-line="57" />
         </state>
       </provider>
     </entry>
-  </component>
-  <component name="masterDetails">
-    <states>
-      <state key="Copyright.UI">
-        <settings>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-    </states>
+    <entry file="file://$PROJECT_DIR$/javascript/start/script.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="297">
+          <caret line="166" column="11" selection-start-line="166" selection-start-column="11" selection-end-line="166" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/javascript/view/directlyChange/graphFormView.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="297">
+          <caret line="158" selection-start-line="158" selection-end-line="158" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/javascript/view/directlyChange/ModeleView.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="297">
+          <caret line="35" selection-start-line="35" selection-end-line="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/my-office-add-in-manifest.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/package.json">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/package-lock.json">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/javascript/view/directlyChange/ViewManufacturing.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" selection-start-line="11" selection-end-line="11" />
+        </state>
+      </provider>
+    </entry>
   </component>
 </project>
