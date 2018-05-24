@@ -1,5 +1,4 @@
 @startUml
- @startuml
 
  package "start" <<folder>>{
       class Ref{
@@ -12,7 +11,29 @@
   }
 package "view" <<folder>>{
        package "viewGenerator" <<folder>>{
-       class GenererVue
+       class GenererVue{
+                   GenererVue(modele:Modele)
+                   modele:Modele
+                   resultatHtml(regime:string):string
+                   recupDonneTab(effMoy:Array,impDonne:ImpotPays,donneImp:float,isIs:boolean,isIMF:boolean,isTot:boolean):Array
+                   pinbHtml(pays:string):string
+                   entrepriseHtml():string
+                   bilanHtml():string
+                   compteHtml():string
+                   donneesEconomiques(pin:float,pays:string):string
+                   ImpotHtml(monm:modele):string
+                   amortissementHTML():string
+                   amortiExcepHtml():string
+                   donneesFiscal():string
+                   bodyHTML(pin:float,pays:string,regimE:string):string
+                   navigationHtml(pays:string,regime:string,actu:float,marge:float):string
+                   mainHtml(pays:string,regime:string,actu:float,marge:float):string
+                   petroleHtml(taxeAjout:valAjout):string
+                   chargeFinancierHtml(taxeAjout:VlaCreanceCLi):string
+                   emploieHtml(monm:Modele):string
+
+
+      }
        class BootstrapVue
 
        class Graph

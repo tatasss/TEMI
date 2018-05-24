@@ -171,7 +171,7 @@ GenererVue.prototype.ImpotHtml= function (monm) {
     let cote = ["CFE", "IS", "IMF", "IRVM", "IRC", "TVA Petrole"];
     return bootstrap.tableSE(cote, head, {tab:cfe,color:""}, {tab:is,color:""}, {tab:imf,color:""}, {tab:irvm,color:""}, {tab:irc,color:""},{tab: tva,color:""});
 };
-GenererVue.prototype.amortissemEntHtml= function () {
+GenererVue.prototype.amortissementHtml= function () {
     let head = "<thead><tr><th colspan=2> Amortissement<th/></tr><tr><th/><th>Durée Linéaire</th><th>Coef dégressif</th></tr></thead>";
     let cote = ["Construction", "Equipement", "Camion", "Matériel informatique", "Matériel bureau"];
     let lin1 = {tab:[this.mP.ammort.construction, this.mP.ammort.coefdegressif],color:""};
@@ -191,7 +191,7 @@ GenererVue.prototype.donneesFiscal= function () {
 
     //fin
     let pannelBody = bootstrap.pan("default", null, this.ImpotHtml(this.modele.mesdon()));
-    pannelBody += this.amortissemEntHtml();
+    pannelBody += this.amortissementHtml();
     pannelBody += this.amortiExcepHTML();
     return bootstrap.pan("default", "<h1>données fiscales</h1>", pannelBody);
 };
@@ -219,7 +219,7 @@ GenererVue.prototype.navigationHtml= function (pays, regimE, actu, marge) {
 GenererVue.prototype.mainHTML= function (pays, regimE, actu, marge) {
     this.mP = this.modele.donnee.pays;
     this.mE = this.modele.donnee.entreprise;
-    return bootstrap.container(bootstrap.GridNavCote(this.bodyHtml(pays, regimE), this.navigationHtml(pays, regimE, actu, marge)));
+    return bootstrap.container(bootstrap.GridNavCote(this.bodyHtml(this.mP.nom, regimE), this.navigationHtml(pays, regimE, actu, marge)));
 };
 GenererVue.prototype. petroleHtml= function (taxeAjout) {
     let cote = ["Pétrole</td><td>FCFA", "Taux</td><td>%", "TVA Petrole</td><td>FCFA"];
