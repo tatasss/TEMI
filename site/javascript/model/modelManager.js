@@ -85,8 +85,6 @@ ModeleManager.prototype.contributionForfEmploie = function (mE, mP, pibchoix, im
     for (i = 0; i < 5; i++) {
         reelCFE.push(masseSalarial[i] * (taux[i] / 100));
     }
-
-
     return {
         salaire_cadre: salaireCadre,
         salaire_secretaire: salaireSecretaire,
@@ -286,7 +284,9 @@ ModeleManager.prototype.comptableResult = function (mE, pibchoix, tva, salaire_c
 
     }
     for (i = 0; i < 5; i++) {
-        benefice_comptable.push(vente[i] - (achats[i] + petrole[i] + tva_petrole[i] + depense_admin[i] + depense_pub[i] + depense_entretien[i] + salaireCadre[i] + salaireOuvrier[i] + salaire_secreataire[i] + CFE[i] + chargeFinancier[i] + amortissement[i]));
+        benefice_comptable.push(vente[i] - (achats[i] + petrole[i] + tva_petrole[i] + depense_admin[i]
+            + depense_pub[i] + depense_entretien[i] + salaireCadre[i] + salaireOuvrier[i] + salaire_secreataire[i]
+            + CFE[i] + chargeFinancier[i] + amortissement[i]));
         taux_marge_avant__IS_ISMF.push((benefice_comptable[i] / vente[i]) * 100);
     }
     return {
@@ -328,7 +328,9 @@ ModeleManager.prototype.ammortExcept = function (mP, benCompta, regime, donneRef
 // console.log(donneRef);
 
 
-    let investissment = (donneRef.entreprise.terrain + donneRef.entreprise.construction + donneRef.entreprise.equipement + donneRef.entreprise.camion + donneRef.entreprise.info + donneRef.entreprise.bureau) * donneRef.pays.pib;
+    let investissment = (donneRef.entreprise.terrain + donneRef.entreprise.construction
+        + donneRef.entreprise.equipement + donneRef.entreprise.camion + donneRef.entreprise.info
+        + donneRef.entreprise.bureau) * donneRef.pays.pib;
     let taux;
     let limitation;
     let duree;
@@ -507,12 +509,11 @@ ModeleManager.prototype.fluxTresoriesI = function (entreprise, pin, compta, actu
     actuel.push(-(entreprise.capitalSocial + entreprise.detteLongTerme + entreprise.detteCourtTerme + entreprise.detteFournisseur) * pin);
     compta.vente.forEach(function (item, index) {
 
-        courant.push(item - compta.achats[index] - compta.petrole[index] - compta.depense_entretien[index] - compta.depense_admin[index] - compta.depense_pub[index] - compta.salaire_ouvrier[index] - compta.salaire_cadre[index] - compta.salaire_secretaire[index] - compta.chargeFinanciere[index]);
+        courant.push(item - compta.achats[index] - compta.petrole[index] - compta.depense_entretien[index]
+            - compta.depense_admin[index] - compta.depense_pub[index] - compta.salaire_ouvrier[index]
+            - compta.salaire_cadre[index] - compta.salaire_secretaire[index] - compta.chargeFinanciere[index]);
 
     });
-
-    //console.log(compta.vente[i]-compta.achats[i]-compta.petrole[i]-compta.depense_entretien[i]-compta.depense_admin[i]-compta.depense_pub[i]-compta.salaire_ouvrier[i]-compta.salaire_cadre[i]-compta.salaire_secretaire[i]-compta.chargeFinanciere);
-
 
     courantBis.push(courant[0]);
     actuelBis.push(actuel[0]);

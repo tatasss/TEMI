@@ -50,7 +50,7 @@ Fabrique.prototype.pibFind = function (code) {
     return pib;
 
 };
-Fabrique.prototype.pays = function (code, nom, impot, ammort, investissment,dispoDerog,source) {
+Fabrique.prototype.pays = function (code, nom, impot, ammort, investissment, dispoDerog, source) {
 
     return {
         pib: this.pibFind(code),
@@ -59,8 +59,8 @@ Fabrique.prototype.pays = function (code, nom, impot, ammort, investissment,disp
         impots: impot,
         ammort: ammort,
         investissement: investissment,
-        dispoDerog:dispoDerog,
-        source:source
+        dispoDerog: dispoDerog,
+        source: source
     };
 };
 Fabrique.prototype.impot = function (cFE, iS, iMF, iRVM, iRC, tVA_Petrole) {
@@ -231,10 +231,14 @@ Fabrique.prototype.armortirModele = function (prix, durLin, coef, nom) {
             let html = "<div class='panel panel-info'><div class=\"panel-heading\">";
             let cote1 = ["Durée linéaire</td><td>Année", "Coef dégréssif</td><td>Coef"];
             let head = `<thead><tr><th>${this.nom}</th><th>FCFA</th><th class='blue'>${this.baseAmortissable[0]}</th></tr></thead>`;
-            html += bootstrap.tableSE(cote1, head, {tab: [this.dureeRestante[0]], color: "yellow"}, {
-                tab: [coefdegr],
-                color: "yellow"
-            });
+            html += bootstrap.tableSE(cote1, head, {
+                    tab: [this.dureeRestante[0]],
+                    color: "yellow"
+                },
+                {
+                    tab: [coefdegr],
+                    color: "yellow"
+                });
             html += "</div> <div class='panel-body'>";
             let head2 = "<thead><tr><th>Durée restante</th><th>Annee</th>";
             for (let i = 0; i < 5; i++) {
@@ -249,10 +253,22 @@ Fabrique.prototype.armortirModele = function (prix, durLin, coef, nom) {
             this.tauxDegressif.forEach(function (item) {
                 tauxDegr.push(Math.round(item * 100) / 100);
             });
-            html += bootstrap.tableSE(cote2, head2, {tab: this.baseAmortissable, color: ""}, {
-                tab: tauxLin,
-                color: ""
-            }, {tab: tauxDegr, color: ""}, {tab: this.chargeAmorti, color: ""});
+            html += bootstrap.tableSE(cote2, head2, {
+                    tab: this.baseAmortissable,
+                    color: ""
+                },
+                {
+                    tab: tauxLin,
+                    color: ""
+                },
+                {
+                    tab: tauxDegr,
+                    color: ""
+                },
+                {
+                    tab: this.chargeAmorti,
+                    color: ""
+                });
             html += "</div></div>";
             return html;
         }

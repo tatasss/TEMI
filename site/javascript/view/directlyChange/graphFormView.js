@@ -97,7 +97,8 @@ $("body").delegate("button", "click", function () {
             bool = false;
 
             let madon = `<strong>entreprise ${cptEnt + 1} :</strong><br/>taux de marge:<br/>${$('#marge').val()} % `;
-            madon += bootstrap.buttonBaBu("danger", `supelemEnt('${$('#marge').val()}')`, "<spam class='glyphicon glyphicon-remove'/> supprimer", $('#marge').val());
+            madon += bootstrap.buttonBaBu("danger", `supelemEnt('${$('#marge').val()}')`, "<spam class='glyphicon " +
+                "glyphicon-remove'/> supprimer", $('#marge').val());
             margeTab.forEach(function (item) {
                 if (item === $('#marge').val()) {
                     bool = true
@@ -119,7 +120,8 @@ $("body").delegate("button", "click", function () {
     }
     paysChoisiHtml = [];
     paysChoisi.forEach(function (item) {
-        paysChoisiHtml.push(item + bootstrap.buttonBaBu("danger", `supelemPays('${ref.donnerCodePays(item)}')`, "<spam class='glyphicon glyphicon-remove'/> supprimer", ref.donnerCodePays(item)));
+        paysChoisiHtml.push(item + bootstrap.buttonBaBu("danger", `supelemPays('${ref.donnerCodePays(item)}')`,
+            "<spam class='glyphicon glyphicon-remove'/> supprimer", ref.donnerCodePays(item)));
 
     });
 
@@ -131,7 +133,8 @@ $("body").delegate("button", "click", function () {
     paysChoisi.forEach(function (item, index) {
         donneTab.push([]);
         margeTab.forEach(function (items) {
-            donneTab[index].push(new Donne(ref.donnerCodePays(item), localStorage.getItem("compatRegime"), localStorage.getItem("compaActu"), items))
+            donneTab[index].push(new Donne(ref.donnerCodePays(item), localStorage.getItem("compatRegime"),
+                localStorage.getItem("compaActu"), items))
         })
     });
     donneTab.forEach(function (item, index) {
@@ -154,5 +157,6 @@ if (localStorage.getItem("compatRegime") === "gen") {
 else {
     reg = "codes des investissements";
 }
-document.getElementById("info").innerHTML = `<p>Le taux d'actualisation pour toutes les entreprises est de ${localStorage.getItem("compaActu")} %.<br/> Le regime dans tous les pays utilisé par les entreprises est : ${reg} .`;
+document.getElementById("info").innerHTML = `<p>Le taux d'actualisation pour toutes les entreprises est `
+    +`de ${localStorage.getItem("compaActu")} %.<br/> Le regime dans tous les pays utilisé par les entreprises est : ${reg} .`;
 //[pays][entreprise]

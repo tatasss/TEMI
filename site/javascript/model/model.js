@@ -12,7 +12,8 @@ Modele.prototype.mesdon = function () {
     let emploi = modeleManager.contributionForfEmploie(mE, mP, pibchoix, impotSelected);
 
     let taxeCreance = modeleManager.taxe_creance(mE, impotSelected, pibchoix);
-    let resultCompta = modeleManager.comptableResult(mE, pibchoix, taxeValAjout.tva, emploi.salaire_cadre, emploi.salaire_secretaire, emploi.salaire_ouvrier, emploi.reel_CFE, generalAmort);
+    let resultCompta = modeleManager.comptableResult(mE, pibchoix, taxeValAjout.tva, emploi.salaire_cadre,
+        emploi.salaire_secretaire, emploi.salaire_ouvrier, emploi.reel_CFE, generalAmort);
     let ammortExcep = modeleManager.ammortExcept(mP, resultCompta.benefice_comptable, this.donnee.regime, this.donnee);
     let resultImpot = modeleManager.impotResult(resultCompta.benefice_comptable, ammortExcep.chargeAmorti);
     let impotSociete = [];
@@ -50,7 +51,8 @@ Modele.prototype.mesdon = function () {
     let fluxTresApresImpot = modeleManager.fluxTresoriesImp(fluxTresSansImp, impotTaxeCourent.total, impotTaxeActu.total, mE.actuali);
     // console.log(taxeValAjout);
 
-    let tauxeffMoyC = modeleManager.tauxEffectif(fluxTresSansImp.courant[fluxTresSansImp.courant.length - 1], fluxTresApresImpot.courant[fluxTresApresImpot.courant.length - 1]);
+    let tauxeffMoyC = modeleManager.tauxEffectif(fluxTresSansImp.courant[fluxTresSansImp.courant.length - 1],
+        fluxTresApresImpot.courant[fluxTresApresImpot.courant.length - 1]);
 
     let tauxRendInterneSImp = modeleManager.tauxRendementInterne(fluxTresSansImp.courant);
     let tauxRendInterneSISIMF = modeleManager.tauxRendementInterne(fluxTresSansISIMF.courant);
