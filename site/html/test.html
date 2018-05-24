@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="../css/general.css">
+    <script src="../node_modules/excellentexport/dist/excellentexport.js"></script>
+
+<body>
+<a download="somedata.xls" href="#" onclick="return ExcellentExport.excel(this, 'datatable', 'Sheet Name Here');">Export to Excel</a>
+<table id="datatable">
+    <tr>
+        <th>Column 1</th>
+        <th>Column "cool" 2</th>
+        <th>Column 3</th>
+        <th>Column 4</th>
+    </tr>
+    <tr>
+        <td>100,111</td>
+        <td>200</td>
+        <td>030</td>
+        <td>áéíóú</td>
+    </tr>
+    <tr>
+        <td>400</td>
+        <td>500</td>
+        <td>Chinese chars: 解决导出csv中文乱码问题</td>
+        <td>àèìòù</td>
+    </tr>
+    <tr>
+        <td>Text</td>
+        <td>More text</td>
+        <td>Text with
+            new line</td>
+        <td>ç ñ ÄËÏÖÜ äëïöü</td>
+    </tr>
+</table>
+</body>
+</html>
