@@ -1,6 +1,7 @@
-/**Function create an Bootstrap Tabs
+/**
+ * @Description Function create an Bootstrap Tabs
  * @return {string} html
- * @param colOne_head_lig the left on the array , the head of the array and all the row ({array },{ string},{arrays})
+ * @param colOne_head_lig - the left on the array , the head of the array and all the row ({array },{ string},{array,attr...})
  * take all arguments u put (1 array = 1row)
  */
 BootstrapVue.prototype.tableSE = function (colOne_head_lig) {
@@ -127,10 +128,11 @@ BootstrapVue.prototype.tableSE = function (colOne_head_lig) {
     html += "</tbody></table>";
     return html;
 };
-/**function create a bootstrap pannel
- * @param {string} type of pannel (look doc on the site : https://www.w3schools.com/bootstrap/bootstrap_panels.asp)
- * @param {string} head of the pannel if he is null, the pannel is generate without head
- * @param {string} body of the pannel
+/**
+ * @Description function create a bootstrap pannel
+ * @param {string} type - type of pannel (look doc on the site : https://www.w3schools.com/bootstrap/bootstrap_panels.asp)
+ * @param {string} head - head of the pannel if he is null, the pannel is generate without head
+ * @param {string} body - body of the pannel
  * @return {string} html
  */
 BootstrapVue.prototype.pan = function (type, head, body) {
@@ -146,16 +148,18 @@ BootstrapVue.prototype.pan = function (type, head, body) {
     result += "</div></div>";
     return result;
 };
-/**function create the body of the page html
- * @param {string} body of the page without topNav
+/**
+ * @Description function create the body of the page html
+ * @param {string} body - the body of the page without topNav
  * @return {string} html
  */
 BootstrapVue.prototype.container = function (body) {
     return "<div class='container'>" + body + "</div>";
 };
-/**Function use a grid basic bootstrap 10-2 mode.
- * @param {string} body is the string template ready inserted in the col to take 10/12 of the grid
- * @param {string} nav is the string html template  ready inserted in the column 2/12 on the right on the grid
+/**
+ * @Description Function use a grid basic bootstrap 10-2 mode.
+ * @param {string} body - the string template ready inserted in the col to take 10/12 of the grid
+ * @param {string} nav - the string html template  ready inserted in the column 2/12 on the right on the grid
  * @return {string} html
  */
 BootstrapVue.prototype.GridNavCote = function (body, nav) {
@@ -166,26 +170,29 @@ BootstrapVue.prototype.GridNavCote = function (body, nav) {
     result += "</div></div>";
     return result;
 };
-/**Function create a button created with a tag <a>
- * @param {string} href  is the location where u want to go
- * @param {string} html is the entitled of your tag
+/**
+ * @Description Function create a button created with a tag <a>
+ * @param {string} href  - the location where u want to go
+ * @param {string} html - the entitled of your tag
  * @return {string} html
  */
 BootstrapVue.prototype.buttonBalA = function (href, html) {
     return `<a  class='btn btn-default' type='submit' href='${href}'>${html}</a>`;
 };
-/**Function create a button created with a tag <button>
- * @param {string} type of button (look doc on the site : https://www.w3schools.com/bootstrap/bootstrap_ref_css_buttons.asp)
- * @param {function()} onclick is the callback where you want to use
- * @param {string} html is the entitled of your tag
- * @param {string} value is the value of your tag
+/**
+ * @Description Function create a button created with a tag <button>
+ * @param {string} type - the type of button (look doc on the site : https://www.w3schools.com/bootstrap/bootstrap_ref_css_buttons.asp)
+ * @param {function()} onclick - the callback where you want to use
+ * @param {string} html - the entitled of your tag
+ * @param {string} value - the value of your tag
  * @return {string} html
  */
 BootstrapVue.prototype.buttonBaBu = function (type, onclick, html, value) {
     return `<button class='btn btn-${type}' type='button' onclick="${onclick}" value="${value}" '>${html}</button>`;
 };
-/**function create a liste-vertical-group on bootstrap.
- * @param {array}tab is the array of your list
+/**
+ * @Description function create a liste-vertical-group on bootstrap.
+ * @param {array}tab - the array of your list
  * @return {string} html
  */
 BootstrapVue.prototype.listeItem = function (tab) {
@@ -195,8 +202,9 @@ BootstrapVue.prototype.listeItem = function (tab) {
     });
     return html;
 };
-/**function create a collapse group pannel on bootstrap
- * @param {string} objCollapse is the obj of your collapse
+/**
+ * @Description function create a collapse group pannel on bootstrap
+ * @param {string} objCollapse -the obj of your collapse
  * (take all args ,collapse obj ={title:'yourTitle',body:'yourBody'})
  * @return {string} html
  */
@@ -225,12 +233,13 @@ BootstrapVue.prototype.collapse = function (objCollapse) {
     }
     return html;//+"</div>";
 };
-/**function create an array for My temi (he is a little specific but U can use it
- * @param {Array} cote is a Array on the first column of array
- * @param {Array} head is a Array on the first Line of array
- * @param {Array} tab is A Double Dimension Array he is the body of the array
- * @param maMarge
- * @param titre
+/**
+ * @Description function create an array for My temi (he is a little specific but U can use it
+ * @param {Array} cote - a Array on the first column of array
+ * @param {Array} head - a Array on the first Line of array
+ * @param {Array} tab - A Double Dimension Array he is the body of the array
+ * @param {Array} maMarge - is a array of marges rate
+ * @param {string} titre - a filename of the excel Document
  * @return {string} html
  */
 BootstrapVue.prototype.bootstrapTemiTabSpe = function (cote, head, tab,maMarge,titre) {
@@ -320,37 +329,3 @@ BootstrapVue.prototype.bootstrapTemiTabSpe = function (cote, head, tab,maMarge,t
 
 
 };
-function newApi(format, tab,titre) {
-    console.log("on entre");
-    let args=tab.split(",");
-    let tabExcel=[];
-    let cpt=0;
-    let regex1 = /^entreprise.*$/;
-    tabExcel.push([]);
-    tabExcel[0].push(" ");
-    for (let i=0;i<args.length;i++){
-        if(regex1.test(args[i])){
-            tabExcel.push([]);
-            cpt++;
-        }
-        if(args[i]==="ligne"){
-            tabExcel.push([]);
-            cpt++;
-        }
-        else{
-            tabExcel[cpt].push(args[i]);
-        }
-
-    }
-    console.log(tabExcel);
-    return ExcellentExport.convert({
-        anchor: 'anchorNewApi-' + format,
-        filename: titre ,
-        format: format
-    }, [{
-        name: 'feuille TEMI',
-        from: {
-            array:tabExcel
-        }
-    }]);
-}

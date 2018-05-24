@@ -1,5 +1,5 @@
 ﻿A faire avant Amelioration:
-	-sorti Excel et xml du temi
+	-xml du temi
 	-JsDoc
 	-cahier des charges
 	-sequence

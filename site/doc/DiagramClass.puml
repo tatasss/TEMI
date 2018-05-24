@@ -60,12 +60,12 @@ package "view" <<folder>>{
                    buttonBaBu(type:string,onclick:callable(),html:string,value:Object)
                    listeItem(tab:Array):string
                    collapse(...:collapseType):string
-                   bootstrapTemiTabSpe(cote:Array,head:Array,tab:Array):string
+                   bootstrapTemiTabSpe(cote:Array,head:Array,tab:Array,maMarge:Array,titre:String):string
        }
 
        class Graph{
             Graph()
-            graphique(modeleTab:Array,id:string,regime:string):void
+            graphique(modeleTab:Array,id:string,regime:string,maMarge:Array,titre:String):void
         }
        Object graphGenerator.js{
             createColorSet(number:float):Array
