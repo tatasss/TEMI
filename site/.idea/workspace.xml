@@ -3,10 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="b3a60719-0c36-46df-a883-0678b82012a7" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/../Documentation/DiagramClass.png" beforeDir="false" afterPath="$PROJECT_DIR$/../Documentation/DiagramClass.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dictionaries/matgaydu.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dictionaries/matgaydu.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/doc/DiagramClass.puml" beforeDir="false" afterPath="$PROJECT_DIR$/doc/DiagramClass.puml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/javascript/view/viewGenerator/ViewGenerator.js" beforeDir="false" afterPath="$PROJECT_DIR$/javascript/view/viewGenerator/ViewGenerator.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -65,8 +63,8 @@
       <file leaf-file-name="DiagramClass.puml" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/doc/DiagramClass.puml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-51">
-              <caret line="33" column="19" selection-start-line="33" selection-start-column="19" selection-end-line="33" selection-end-column="19" />
+            <state relative-caret-position="238">
+              <caret line="77" column="40" selection-start-line="77" selection-start-column="40" selection-end-line="77" selection-end-column="40" />
             </state>
           </provider>
         </entry>
@@ -92,8 +90,8 @@
       <file leaf-file-name="bootstrapView.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/javascript/view/viewGenerator/bootstrapView.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="640">
-              <caret line="235" column="16" selection-start-line="235" selection-start-column="16" selection-end-line="235" selection-end-column="16" />
+            <state relative-caret-position="34">
+              <caret line="152" column="25" lean-forward="true" selection-start-line="152" selection-start-column="25" selection-end-line="152" selection-end-column="25" />
             </state>
           </provider>
         </entry>
@@ -110,8 +108,8 @@
       <file leaf-file-name="graphGenerator.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/javascript/view/viewGenerator/graphGenerator.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="4" column="66" selection-start-line="4" selection-start-column="66" selection-end-line="4" selection-end-column="66" />
+            <state relative-caret-position="34">
+              <caret line="125" column="23" lean-forward="true" selection-start-line="125" selection-start-column="23" selection-end-line="125" selection-end-column="23" />
             </state>
           </provider>
         </entry>
@@ -508,7 +506,7 @@
       <workItem from="1527073306265" duration="219000" />
       <workItem from="1527076008588" duration="778000" />
       <workItem from="1527090493306" duration="14000" />
-      <workItem from="1527145325492" duration="2988000" />
+      <workItem from="1527145325492" duration="6457000" />
     </task>
     <task id="LOCAL-00001" summary="mis en place d'un code propre">
       <created>1526980633672</created>
@@ -559,25 +557,32 @@
       <option name="project" value="LOCAL" />
       <updated>1527089366579</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="problemeUML">
+      <created>1527148396177</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1527148396177</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="326306000" />
+    <option name="totallyTimeSpent" value="329775000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1696" height="1026" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info anchor="right" id="PlantUML" order="3" visible="true" weight="0.33801955" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24816626" />
+      <window_info anchor="right" id="PlantUML" order="3" visible="true" weight="0.44559902" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24816626" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" x="0" y="447" width="1680" height="116" id="Event Log" order="7" sideWeight="0.50488997" side_tool="true" visible="true" weight="0.16609393" />
+      <window_info anchor="bottom" x="0" y="447" width="1680" height="116" id="Event Log" order="7" sideWeight="0.50183374" side_tool="true" visible="true" weight="0.32875144" />
+      <window_info active="true" anchor="bottom" id="Find" order="1" sideWeight="0.49816626" visible="true" weight="0.32875144" />
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Terminal" order="7" sideWeight="0.49511003" visible="true" weight="0.16609393" />
+      <window_info anchor="bottom" id="Terminal" order="7" sideWeight="0.49511003" weight="0.16494845" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="TypeScript" order="8" />
@@ -588,7 +593,6 @@
       <window_info anchor="bottom" id="Inspection Results" order="8" sideWeight="0.49880952" weight="0.32924107" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Find" order="1" sideWeight="0.4987775" weight="0.32882884" />
     </layout>
     <layout-to-restore>
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -625,7 +629,8 @@
     <MESSAGE value="fin de sceance" />
     <MESSAGE value="Debut UML et Fin Matiné" />
     <MESSAGE value="Continuation UML" />
-    <option name="LAST_COMMIT_MESSAGE" value="Continuation UML" />
+    <MESSAGE value="problemeUML" />
+    <option name="LAST_COMMIT_MESSAGE" value="problemeUML" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1911,15 +1916,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/javascript/view/viewGenerator/bootstrapView.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="640">
-          <caret line="235" column="16" selection-start-line="235" selection-start-column="16" selection-end-line="235" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/javascript/view/viewGenerator/graphGenerator.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="66" selection-start-line="4" selection-start-column="66" selection-end-line="4" selection-end-column="66" />
+        <state relative-caret-position="34">
+          <caret line="152" column="25" lean-forward="true" selection-start-line="152" selection-start-column="25" selection-end-line="152" selection-end-column="25" />
         </state>
       </provider>
     </entry>
@@ -1936,10 +1934,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/javascript/view/viewGenerator/graphGenerator.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="125" column="23" lean-forward="true" selection-start-line="125" selection-start-column="23" selection-end-line="125" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/doc/DiagramClass.puml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-51">
-          <caret line="33" column="19" selection-start-line="33" selection-start-column="19" selection-end-line="33" selection-end-column="19" />
+        <state relative-caret-position="238">
+          <caret line="77" column="40" selection-start-line="77" selection-start-column="40" selection-end-line="77" selection-end-column="40" />
         </state>
       </provider>
     </entry>

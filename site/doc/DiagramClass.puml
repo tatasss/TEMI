@@ -1,4 +1,4 @@
-@startUml
+@startuml
 
  package "start" <<folder>>{
       class Ref{
@@ -7,7 +7,14 @@
          donnerCodePays(nom:string):string
       }
       Object reference.js
-      Object script.js
+      Object script.js{
+        showModal():void
+        debutCompta(actu:float,regime:string):void
+        validateForm():void
+        getXMLHttpRequest():XMLHttpRequest
+        verifPourcent(nombre:float):float
+        mesPays():Array
+      }
   }
 package "view" <<folder>>{
        package "viewGenerator" <<folder>>{
@@ -31,15 +38,45 @@ package "view" <<folder>>{
                    petroleHtml(taxeAjout:valAjout):string
                    chargeFinancierHtml(taxeAjout:VlaCreanceCLi):string
                    emploieHtml(monm:Modele):string
-
-
+                   comptableHtml(monm:Modele):string
+                   ammortExcepHtml(monm:Modele):string
+                   resultatImpotHtml(monm:Modele):string
+                   getAmmortGenneralHtml(monm:Modele):string
+                   impotSocieteHtml(monm:Modele):string
+                   impotForfaitHtml(monm:Modele):string
+                   impotRevenuValeurMobilieres(monm:Modele):string
+                   actualisationHtml(monm:Modele):string
+                   tabImpotEtTaxe(monm:ImpotTab):string
+                   tabTauxEffectifMoy(monm:float):string
+                   tabFluxTresorie(tab:FluxTresorie,color:string):string
+                   tauxRendementInt(tab:Array):string
       }
-       class BootstrapVue
+       class BootstrapVue{
+                   tableSe(cote:Array,head:string,...:TabType):string
+                   pan(type:string,head:string,body:string):string
+                   container(body:string):string
+                   gridNavCote(body:string,nav:string):string
+                   buttonBalA(href:string,html:string):string
+                   buttonBaBu(type:string,onclick:callable(),html:string,value:Object)
+                   listeItem(tab:Array):string
+                   collapse(...:collapseType):string
+                   bootstrapTemiTabSpe(cote:Array,head:Array,tab:Array):string
+       }
 
-       class Graph
+       class Graph{
+            Graph()
+            graphique(modeleTab:Array,id:string,regime:string):void
+        }
+       Object graphGenerator.js{
+            createColorSet(number:float):Array
+            getColorString(tab:Array):string
+       }
        }
        package  "directlyChange" <<folder>>{
-       Object GraphFormView.js
+       Object GraphFormView.js{
+            supelemPays(code:string):void
+            supelemEnt(marge:float):void
+       }
        Object ModeleView.js
        Object ViewManufacturing.js
        note as N1
@@ -155,6 +192,9 @@ package "data" <<folder>>{
             van(actu:float,tab:Array):float
             sommeTab(tab:Array):float
             arrondirTabUnit(tab:Array,numberDec:float):Array
+         }
+         Object myMath.js{
+            triReel(fn:callable()):float
          }
      }
 
