@@ -50,7 +50,7 @@ Fabrique.prototype.pibFind = function (code) {
     return pib;
 
 };
-Fabrique.prototype.pays = function (code, nom, impot, ammort, investissment) {
+Fabrique.prototype.pays = function (code, nom, impot, ammort, investissment,dispoDerog,source) {
 
     return {
         pib: this.pibFind(code),
@@ -59,6 +59,8 @@ Fabrique.prototype.pays = function (code, nom, impot, ammort, investissment) {
         impots: impot,
         ammort: ammort,
         investissement: investissment,
+        dispoDerog:dispoDerog,
+        source:source
     };
 };
 Fabrique.prototype.impot = function (cFE, iS, iMF, iRVM, iRC, tVA_Petrole) {

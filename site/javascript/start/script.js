@@ -140,20 +140,32 @@ function mesPays() {
     let sen = fabrique.investir(fabrique.impotPays(5, null, 100), fabrique.isImpotPays(5, null, null, 40, 50), fabrique.impotPays(null, null, null), fabrique.impotPays(null, null, null), fabrique.impotPays(null, null, null), fabrique.impotPays(null, null, null));
     let tcd = fabrique.investir(fabrique.impotPays(null, null, null), fabrique.isImpotPays(5, null, 100, null, null), fabrique.impotPays(5, null, 100), fabrique.impotPays(null, null, null), fabrique.impotPays(null, null, null), fabrique.impotPays(null, null, null));
     let tgo = fabrique.investir(fabrique.impotPays(5, 2, null), fabrique.isImpotPays(5, null, 2, 40, 50), fabrique.impotPays(null, null, null), fabrique.impotPays(null, null, null), fabrique.impotPays(null, null, null), fabrique.impotPays(null, null, null));
-    Pays.push(fabrique.pays("BEN", "Benin", fabrique.impot(4, 30, 0.75, 10, 15, 18), fabrique.ammortissement(20, 10, 2.5, 3, 2, 10), ben));
-    Pays.push(fabrique.pays("BFA", "Burkina Faso", fabrique.impot(3, 27.5, 0.5, 12.5, 25, 18), fabrique.ammortissement(20, 10, 2.5, 3, 2, 10), bfa));
-    Pays.push(fabrique.pays("CMR", "Cameroun", fabrique.impot(2.5, 33, 2.2, 16.5, 16.5, 19.25), fabrique.ammortissement(20, 10, 1, 3, 4, 10), cmr));
-    Pays.push(fabrique.pays("CAF", "Republique Centraficaine", fabrique.impot(0, 30, 1.85, 15, 15, 19), fabrique.ammortissement(20, 10, 1, 3, 4, 10), caf));
-    Pays.push(fabrique.pays("COG", "Republique du Congo", fabrique.impot(7.5, 30, 1, 15, 15, 18.9), fabrique.ammortissement(20, 10, 1, 3, 4, 10), cog));
-    Pays.push(fabrique.pays("CIV", "Côte d'Ivoire", fabrique.impot(2.8, 25, 0.5, 15, 18, 9), fabrique.ammortissement(20, 5, 2, 3, 2, 10), civ));
-    Pays.push(fabrique.pays("GAB", "Gabon", fabrique.impot(5, 30, 1, 20, 20, 18), fabrique.ammortissement(20, 10, 1, 3, 4, 10), gab));
-    Pays.push(fabrique.pays("GNB", "Guinée Bissao", "pas d'impot", "pas d'ammortissement", "pas d'investissment"));
-    Pays.push(fabrique.pays("GNQ", "Guinée équatoriale", "pas d'impot", "pas d'ammortissement", "pas d'investissment"));
-    Pays.push(fabrique.pays("MLI", "Mali", fabrique.impot(7.5, 30, 1, 10, 13, 18), fabrique.ammortissement(20, 10, 2.5, 3, 2, 10), mli));
-    Pays.push(fabrique.pays("NER", "Niger", fabrique.impot(3, 30, 1.5, 10, 20, 19), fabrique.ammortissement(20, 10, 1, 4, 2, 10), ner));
-    Pays.push(fabrique.pays("SEN", "Senegal", fabrique.impot(3, 30, 0.5, 10, 16, 18), fabrique.ammortissement(20, 10, 2.5, 3, 2, 10), sen));
-    Pays.push(fabrique.pays("TCD", "Tchad", fabrique.impot(8.7, 35, 1.5, 20, 20, 18), fabrique.ammortissement(20, 10, 1, 3, 3, 10), tcd));
-    Pays.push(fabrique.pays("TGO", "Togo", fabrique.impot(3, 29, 1, 13, 6, 18), fabrique.ammortissement(20, 10, 2.5, 3, 2, 10), tgo));
+    Pays.push(fabrique.pays("BEN", "Benin", fabrique.impot(4, 30, 0.75, 10, 15, 18), fabrique.ammortissement(20, 10, 2.5, 3, 2, 10), ben,"Exonération d’IS pendant 5 ans","Code des investissements <br/>régime A<br/> zone 1\n"));
+    Pays.push(fabrique.pays("BFA", "Burkina Faso", fabrique.impot(3, 27.5, 0.5, 12.5, 25, 18), fabrique.ammortissement(20, 10, 2.5, 3, 2, 10), bfa,"– Exonération de la taxe patronale d’apprentissage pendant 5 ans.\n" +
+        "– Déduction d’IS pendant 5 ans, à hauteur de 50% de l’investissement, dans la limite de 50% du bénéfice imposable.\n","Code des investissements\n" +
+        "<br/>régime A<br/> zone normale,<br/>" +
+        "bien que le seuil d’investissement de 100 millions de FCFA ne soit pas atteint.\n"));
+    Pays.push(fabrique.pays("CMR", "Cameroun", fabrique.impot(2.5, 33, 2.2, 16.5, 16.5, 19.25), fabrique.ammortissement(20, 10, 1, 3, 4, 10), cmr,"– Réduction de 50% de l’IS pendant 5 ans.\n" +
+        "– Réduction de 50% de l’IRVM sur les dividendes pendant 5 ans\n","Modalités d’application des incitations à l’investissement privé" +
+        "<br/>catégorie A"));
+    Pays.push(fabrique.pays("CAF", "Republique Centraficaine", fabrique.impot(0, 30, 1.85, 15, 15, 19), fabrique.ammortissement(20, 10, 1, 3, 4, 10), caf,"Exonération d’IS pendant 3 ans","Charte des investissements\n" +
+        "<br/>zone normale.\n"));
+    Pays.push(fabrique.pays("COG", "Republique du Congo", fabrique.impot(7.5, 30, 1, 15, 15, 18.9), fabrique.ammortissement(20, 10, 1, 3, 4, 10), cog,"– Exonération d’IS pendant 3 ans.","Modalités d’application de la charte des investissements\n" +
+        "<br/>régime général G<br/> zone unique<br/>"));
+    Pays.push(fabrique.pays("CIV", "Côte d'Ivoire", fabrique.impot(2.8, 25, 0.5, 15, 18, 9), fabrique.ammortissement(20, 5, 2, 3, 2, 10), civ,"– Réduction de 50% de la contribution nationale pour le développement économique, culturel et social de la nation pendant 7 ans.,– Exonération d’IS pendant 7 ans.","Code des investissements\n" +
+        "<br/>régime d’agrément élargi aux PME<br/> zone A.\n"));
+    Pays.push(fabrique.pays("GAB", "Gabon", fabrique.impot(5, 30, 1, 20, 20, 18), fabrique.ammortissement(20, 10, 1, 3, 4, 10), gab,"Exonération d’IS pendant 5 ans.","Promotion des PME et PMI,<br/>" +
+        "bien que le chiffre d’affaires annuel dépasse 2 milliards de FCFA.\n"));
+    Pays.push(fabrique.pays("GNB", "Guinée Bissao", "pas d'impot", "pas d'ammortissement", "pas d'investissment","",""));
+    Pays.push(fabrique.pays("GNQ", "Guinée équatoriale", "pas d'impot", "pas d'ammortissement", "pas d'investissment","",""));
+    Pays.push(fabrique.pays("MLI", "Mali", fabrique.impot(7.5, 30, 1, 10, 13, 18), fabrique.ammortissement(20, 10, 2.5, 3, 2, 10), mli,"Taux réduit d’IS (25% au lieu de 30%) pendant 7 ans.","Code des investissements\n" +
+        "<br/>régime A<br/>zone unique\n"));
+    Pays.push(fabrique.pays("NER", "Niger", fabrique.impot(3, 30, 1.5, 10, 20, 19), fabrique.ammortissement(20, 10, 1, 4, 2, 10), ner,"Exonération d’IMF pendant 6 ans","Code des investissements\n" +
+        "<br/>régime promotionnel<br/>\n" +
+        "zone normale"));
+    Pays.push(fabrique.pays("SEN", "Senegal", fabrique.impot(3, 30, 0.5, 10, 16, 18), fabrique.ammortissement(20, 10, 2.5, 3, 2, 10), sen,"",""));
+    Pays.push(fabrique.pays("TCD", "Tchad", fabrique.impot(8.7, 35, 1.5, 20, 20, 18), fabrique.ammortissement(20, 10, 1, 3, 3, 10), tcd,"",""));
+    Pays.push(fabrique.pays("TGO", "Togo", fabrique.impot(3, 29, 1, 13, 6, 18), fabrique.ammortissement(20, 10, 2.5, 3, 2, 10), tgo,"",""));
     return Pays;
 }
 

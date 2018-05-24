@@ -10,6 +10,10 @@
       <w>actualisés</w>
       <w>actuel</w>
       <w>administratives</w>
+      <w>affaires</w>
+      <w>afin</w>
+      <w>agit</w>
+      <w>agrément</w>
       <w>ainsi</w>
       <w>ajout</w>
       <w>ajouter</w>
@@ -31,19 +35,24 @@
       <w>années</w>
       <w>anuelle</w>
       <w>apparu</w>
+      <w>appelé</w>
       <w>appliqués</w>
+      <w>apprentissage</w>
       <w>apres</w>
       <w>après</w>
       <w>aprés</w>
       <w>armortir</w>
       <w>arrondir</w>
+      <w>atteint</w>
       <w>avant</w>
+      <w>avantageux</w>
       <w>avec</w>
       <w>avez</w>
       <w>ayant</w>
       <w>bancaires</w>
       <w>banque</w>
       <w>besoin</w>
+      <w>bien</w>
       <w>bilan</w>
       <w>bissao</w>
       <w>bodyglo</w>
@@ -54,12 +63,16 @@
       <w>calculée</w>
       <w>cameroun</w>
       <w>camion</w>
+      <w>capacités</w>
+      <w>capitale</w>
       <w>capitaux</w>
+      <w>catégorie</w>
       <w>celui</w>
       <w>centraficaine</w>
       <w>cerdi</w>
       <w>cette</w>
       <w>chaque</w>
+      <w>charte</w>
       <w>chartjs</w>
       <w>chiffre</w>
       <w>chiffres</w>
@@ -78,6 +91,9 @@
       <w>comptable</w>
       <w>comptables</w>
       <w>compte</w>
+      <w>concerne</w>
+      <w>conduisent</w>
+      <w>conflit</w>
       <w>connaître</w>
       <w>construit</w>
       <w>continuer</w>
@@ -86,6 +102,8 @@
       <w>courent</w>
       <w>creance</w>
       <w>creances</w>
+      <w>crée</w>
+      <w>culturel</w>
       <w>côte</w>
       <w>dataset</w>
       <w>datasets</w>
@@ -95,6 +113,7 @@
       <w>demarrer</w>
       <w>depense</w>
       <w>depenses</w>
+      <w>derog</w>
       <w>dette</w>
       <w>dettes</w>
       <w>différentes</w>
@@ -112,18 +131,25 @@
       <w>dont</w>
       <w>duree</w>
       <w>durée</w>
+      <w>déduction</w>
       <w>dégressif</w>
       <w>dégréssif</w>
+      <w>déjà</w>
+      <w>dépasse</w>
       <w>dépenses</w>
+      <w>déterminer</w>
+      <w>développement</w>
       <w>développée</w>
       <w>economique</w>
       <w>economiques</w>
+      <w>ecris</w>
       <w>ecume</w>
       <w>effectif</w>
       <w>effectifs</w>
       <w>elles</w>
       <w>emploi</w>
       <w>emploie</w>
+      <w>emplois</w>
       <w>employeurs</w>
       <w>engagé</w>
       <w>entre</w>
@@ -138,6 +164,9 @@
       <w>exceptionnel</w>
       <w>exceptionnels</w>
       <w>exep</w>
+      <w>existante</w>
+      <w>exonération</w>
+      <w>exportatrice</w>
       <w>fabrique</w>
       <w>fait</w>
       <w>faso</w>
@@ -147,6 +176,7 @@
       <w>financières</w>
       <w>financiéres</w>
       <w>fiscale</w>
+      <w>fiscalement</w>
       <w>fiscales</w>
       <w>fiscaux</w>
       <w>flut</w>
@@ -167,7 +197,9 @@
       <w>graphique</w>
       <w>guinée</w>
       <w>général</w>
+      <w>généralement</w>
       <w>générales</w>
+      <w>hypothèses</w>
       <w>iframe</w>
       <w>immobilisé</w>
       <w>implicite</w>
@@ -176,10 +208,12 @@
       <w>impotfor</w>
       <w>impots</w>
       <w>impôts</w>
+      <w>incitations</w>
       <w>indexs</w>
       <w>indice</w>
       <w>informatique</w>
       <w>inférieur</w>
+      <w>insuffisante</w>
       <w>interne</w>
       <w>intègre</w>
       <w>investir</w>
@@ -193,6 +227,7 @@
       <w>isimf</w>
       <w>issus</w>
       <w>ivoire</w>
+      <w>limite</w>
       <w>lineaire</w>
       <w>linéaire</w>
       <w>liste</w>
@@ -211,11 +246,15 @@
       <w>mktp</w>
       <w>mobilieres</w>
       <w>mobiliéres</w>
+      <w>modalités</w>
       <w>modele</w>
       <w>modèle</w>
       <w>modélisée</w>
+      <w>modélisées</w>
+      <w>moins</w>
       <w>mondiale</w>
       <w>monm</w>
+      <w>montant</w>
       <w>mota</w>
       <w>moyen</w>
       <w>moyens</w>
@@ -224,12 +263,16 @@
       <w>mytab</w>
       <w>méthodologie</w>
       <w>même</w>
+      <w>nationale</w>
       <w>navbar</w>
       <w>navigateur</w>
       <w>negatif</w>
       <w>nombre</w>
       <w>nongen</w>
+      <w>normale</w>
+      <w>nouvelle</w>
       <w>ntaille</w>
+      <w>nécessaire</w>
       <w>onreadystatechange</w>
       <w>ouvrier</w>
       <w>ouvriers</w>
@@ -238,6 +281,7 @@
       <w>parti</w>
       <w>partir</w>
       <w>passif</w>
+      <w>patronale</w>
       <w>pcap</w>
       <w>permet</w>
       <w>petrole</w>
@@ -246,18 +290,25 @@
       <w>pibpnb</w>
       <w>pinb</w>
       <w>plein</w>
+      <w>plusieurs</w>
       <w>positif</w>
       <w>pourcent</w>
       <w>pourcentage</w>
       <w>prece</w>
+      <w>premières</w>
+      <w>privilégié</w>
+      <w>privé</w>
       <w>prix</w>
       <w>produit</w>
+      <w>promotionnel</w>
       <w>propre</w>
+      <w>prétendre</w>
       <w>publicitaires</w>
       <w>puiss</w>
       <w>purcent</w>
       <w>pétrole</w>
       <w>quatre</w>
+      <w>quel</w>
       <w>quelque</w>
       <w>recup</w>
       <w>reducexo</w>
@@ -269,9 +320,12 @@
       <w>republique</w>
       <w>restante</w>
       <w>resultat</w>
+      <w>retenir</w>
       <w>retour</w>
       <w>revenu</w>
       <w>rrate</w>
+      <w>réduction</w>
+      <w>réduit</w>
       <w>régime</w>
       <w>régimes</w>
       <w>résultat</w>
@@ -288,12 +342,16 @@
       <w>secrétaires</w>
       <w>seekzero</w>
       <w>selon</w>
+      <w>seuil</w>
       <w>simulé</w>
       <w>simulée</w>
+      <w>située</w>
       <w>societe</w>
       <w>societes</w>
       <w>société</w>
+      <w>soit</w>
       <w>sont</w>
+      <w>souvent</w>
       <w>statuaire</w>
       <w>suivant</w>
       <w>supelem</w>
@@ -302,7 +360,9 @@
       <w>supposée</w>
       <w>supprimer</w>
       <w>supérieur</w>
+      <w>supérieurs</w>
       <w>tabdep</w>
+      <w>taille</w>
       <w>tailles</w>
       <w>taux</w>
       <w>tauxeff</w>
@@ -337,6 +397,9 @@
       <w>vous</w>
       <w>workbank</w>
       <w>xmlhttp</w>
+      <w>économique</w>
+      <w>élargi</w>
+      <w>éligible</w>
       <w>équatoriale</w>
       <w>évalué</w>
       <w>être</w>
