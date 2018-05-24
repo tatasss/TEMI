@@ -229,15 +229,18 @@ BootstrapVue.prototype.collapse = function (objCollapse) {
  * @param {Array} cote is a Array on the first column of array
  * @param {Array} head is a Array on the first Line of array
  * @param {Array} tab is A Double Dimension Array he is the body of the array
+ * @param maMarge
+ * @param titre
  * @return {string} html
  */
-BootstrapVue.prototype.bootstrapTemiTabSpe = function (cote, head, tab) {
+BootstrapVue.prototype.bootstrapTemiTabSpe = function (cote, head, tab,maMarge,titre) {
     let myTab = [];
+    let tabExcel=[];
     let cpt = 0;
+    console.log(maMarge);
     for (let i = 0; i < head.length / 6; i++) {
-        myTab.push("<br/><table class='table'><thead><tr><th/>")
+        myTab.push("<br/><table class='table' id='maTable"+cpt+"'><thead><tr><th/>")
     }
-
     head.forEach(function (item, index) {
         if (index % 6 === 0 && index > 0) {
             myTab[cpt] += "</tr></thread><tbody>";
@@ -246,6 +249,7 @@ BootstrapVue.prototype.bootstrapTemiTabSpe = function (cote, head, tab) {
         myTab[cpt] += "<th>";
         myTab[cpt] += item;
         myTab[cpt] += "</th>";
+        tabExcel.push(item);
 
     });
     /*for(let i=0; i<head.length/6;i++){
@@ -257,6 +261,7 @@ BootstrapVue.prototype.bootstrapTemiTabSpe = function (cote, head, tab) {
         myTab[cpt] += "<tr><td>";
         myTab[cpt] += cote[index] + "</td>";
 
+        tabExcel.push(cote[index]);
         item.forEach(function (items, indexs) {
             if (indexs % 6 === 0 && indexs > 0) {
                 myTab[cpt] += "</tr>";
@@ -267,6 +272,9 @@ BootstrapVue.prototype.bootstrapTemiTabSpe = function (cote, head, tab) {
             myTab[cpt] += "<td>";
             myTab[cpt] += Math.round(items * 100) / 100;
             myTab[cpt] += " % </td>";
+            tabExcel.push(Math.round(items * 100) / 100);
+
+
         });
         myTab[cpt] += "</tr>\n";
     });
@@ -277,9 +285,72 @@ BootstrapVue.prototype.bootstrapTemiTabSpe = function (cote, head, tab) {
     myTab.forEach(function (item) {
         html += item;
     });
+    console.log(tabExcel.toString());
+    tabExcel.push("ligne");
+    tabExcel.push("entreprise");
+    tabExcel.push("marge %");
+
+
+
+    maMarge.forEach(function(item,index){
+        tabExcel.push("entreprise "+(index+1));
+        tabExcel.push(item);
+    });
+    tabExcel.push("ligne");
+    tabExcel.push("ligne");
+    tabExcel.push("actualisation");
+    tabExcel.push(localStorage.getItem("compaActu")+"%");
+    let reg;
+    reg = " ";
+    if (localStorage.getItem("compatRegime") === "gen") {
+        reg = "codes générales des impots";
+    }
+    else {
+        reg = "codes des investissements";
+    }
+    tabExcel.push("ligne");
+    tabExcel.push("ligne");
+    tabExcel.push("regime Fiscal");
+    tabExcel.push(reg);
+
+
     html+=
-        `<a class="btn btn-default " download="temi" href="#" id="anchorNewApi-xls" onClick="return newApi('xls');">Export to Excel</a>`;
+        `<a class="btn btn-default " download="&{titre}.xls" href="#" id="anchorNewApi-xls" onClick="newApi('xls','${tabExcel.toString()}','${titre}')">Export to Excel</a>`;
     return html;
 
 
 };
+function newApi(format, tab,titre) {
+    console.log("on entre");
+    let args=tab.split(",");
+    let tabExcel=[];
+    let cpt=0;
+    let regex1 = /^entreprise.*$/;
+    tabExcel.push([]);
+    tabExcel[0].push(" ");
+    for (let i=0;i<args.length;i++){
+        if(regex1.test(args[i])){
+            tabExcel.push([]);
+            cpt++;
+        }
+        if(args[i]==="ligne"){
+            tabExcel.push([]);
+            cpt++;
+        }
+        else{
+            tabExcel[cpt].push(args[i]);
+        }
+
+    }
+    console.log(tabExcel);
+    return ExcellentExport.convert({
+        anchor: 'anchorNewApi-' + format,
+        filename: titre ,
+        format: format
+    }, [{
+        name: 'feuille TEMI',
+        from: {
+            array:tabExcel
+        }
+    }]);
+}

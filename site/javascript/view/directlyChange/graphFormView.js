@@ -4,8 +4,19 @@ let paysChoisiHtml = [];
 let margeTab = [];
 let ent = [];
 let posIn = 0;
-
-
+let entre=[];
+let titre="";
+let reg;
+reg = " ";
+if (localStorage.getItem("compatRegime") === "gen") {
+    reg = "codes générales des impots";
+}
+else {
+    reg = "codes des investissements";
+}
+document.getElementById("info").innerHTML = `<p>Le taux d'actualisation pour toutes les entreprises est `
+    +`de ${localStorage.getItem("compaActu")} %.<br/> Le regime dans tous les pays utilisé par les entreprises est : ${reg} .`;
+//[pays][entreprise]
 supelemPays = function (code) {
 
     // console.log("code de :" + code)
@@ -27,6 +38,7 @@ supelemEnt = function (marge) {
     let madon;
     let cptEnt2 = 0;
     ent = [];
+    entre=[];
     margeTab.forEach(function (item, index) {
         if (item === marge) {
             margeTab.splice(index, 1);
@@ -38,6 +50,7 @@ supelemEnt = function (marge) {
         madon = `<strong>entreprise ${cptEnt2 + 1} :</strong><br/>taux de marge:<br/>${item} % `;
         madon += bootstrap.buttonBaBu("danger", `supelemEnt('${item}')`, "<spam class='glyphicon glyphicon-remove'/> supprimer", item);
         ent.push(madon);
+        entre.push(`entreprise ${cptEnt2 + 1} `);
         cptEnt2 += 1;
     });
     //console.log(margeTab);
@@ -58,7 +71,7 @@ mesPays().forEach(function (item) {
 });
 htmlFormPays += "</select>";
 document.getElementById("formPays").innerHTML = htmlFormPays;
-let reg;
+
 $("body").delegate("button", "click", function () {
     let bool;
     if ($(this).parents('div').attr('id') === "addPays") {
@@ -110,7 +123,9 @@ $("body").delegate("button", "click", function () {
             if (bool === false) {
                 margeTab.push($('#marge').val());
                 ent.push(madon);
+                entre.push(`entreprise ${cptEnt + 1}` );
                 cptEnt += 1;
+
             }
         }
         catch (e) {
@@ -143,20 +158,13 @@ $("body").delegate("button", "click", function () {
             modeleTab[index].push({donne: items, modele: new Modele(items)})
         });
     });
-    graph.graphique(modeleTab, "chartCompa", reg);
+    titre="TEMItauxActualisation:"+localStorage.getItem("compaActu")+"%regimeFiscale:"+reg+"%";
+
+    graph.graphique(modeleTab, "chartCompa", reg,margeTab,titre);
     document.getElementById("param").innerHTML = bootstrap.collapse(posIn, {
             tittle: "pays",
             body: bootstrap.listeItem(paysChoisiHtml)
         },
         {tittle: "entreprise :", body: bootstrap.listeItem(ent)});
 });
-reg = " ";
-if (localStorage.getItem("compatRegime") === "gen") {
-    reg = "codes générales des impots";
-}
-else {
-    reg = "codes des investissements";
-}
-document.getElementById("info").innerHTML = `<p>Le taux d'actualisation pour toutes les entreprises est `
-    +`de ${localStorage.getItem("compaActu")} %.<br/> Le regime dans tous les pays utilisé par les entreprises est : ${reg} .`;
-//[pays][entreprise]
+

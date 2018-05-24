@@ -101,7 +101,7 @@ function getXMLHttpRequest() {
 
 function verifPourcent(nombre) {
     //console.log(nombre);
-    let regex1 = /^[0-9]*.?[0-9]*$/;
+    let regex1 = /^[0-9]*[.]?[0-9]*$/;
     if (!regex1.test(nombre)) {
         throw new Error("Veuillez entrer un pourcentage");
     }
@@ -152,7 +152,7 @@ function mesPays() {
         "<br/>zone normale.\n"));
     Pays.push(fabrique.pays("COG", "Republique du Congo", fabrique.impot(7.5, 30, 1, 15, 15, 18.9), fabrique.ammortissement(20, 10, 1, 3, 4, 10), cog,"– Exonération d’IS pendant 3 ans.","Modalités d’application de la charte des investissements\n" +
         "<br/>régime général G<br/> zone unique<br/>"));
-    Pays.push(fabrique.pays("CIV", "Côte d'Ivoire", fabrique.impot(2.8, 25, 0.5, 15, 18, 9), fabrique.ammortissement(20, 5, 2, 3, 2, 10), civ,"– Réduction de 50% de la contribution nationale pour le développement économique, culturel et social de la nation pendant 7 ans.,– Exonération d’IS pendant 7 ans.","Code des investissements\n" +
+    Pays.push(fabrique.pays("CIV", "Côte d Ivoire", fabrique.impot(2.8, 25, 0.5, 15, 18, 9), fabrique.ammortissement(20, 5, 2, 3, 2, 10), civ,"– Réduction de 50% de la contribution nationale pour le développement économique, culturel et social de la nation pendant 7 ans.,– Exonération d’IS pendant 7 ans.","Code des investissements\n" +
         "<br/>régime d’agrément élargi aux PME<br/> zone A.\n"));
     Pays.push(fabrique.pays("GAB", "Gabon", fabrique.impot(5, 30, 1, 20, 20, 18), fabrique.ammortissement(20, 10, 1, 3, 4, 10), gab,"Exonération d’IS pendant 5 ans.","Promotion des PME et PMI,<br/>" +
         "bien que le chiffre d’affaires annuel dépasse 2 milliards de FCFA.\n"));

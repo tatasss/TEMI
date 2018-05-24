@@ -5,7 +5,7 @@
  * @description function create a graphique with a module Chart.js
  * return nothing but touch the html with id parameter
  */
-Graph.prototype.graphique = function (modeleTab, id, regime) {
+Graph.prototype.graphique = function (modeleTab, id, regime,maMarge,titre) {
     document.getElementById("graph-container").innerHTML = `<canvas id=${id}><canvas>`;
 
     let dataset = [];
@@ -60,7 +60,8 @@ Graph.prototype.graphique = function (modeleTab, id, regime) {
             });
             //----------------------------------------------------------------------------------------------------------
             //ici la parti sur le tableau des temi
-            document.getElementById("tabTemi").innerHTML = bootstrap.bootstrapTemiTabSpe(entre, paysChoisi, entreprise);
+            console.log(maMarge);
+            document.getElementById("tabTemi").innerHTML = bootstrap.bootstrapTemiTabSpe(entre, paysChoisi, entreprise,maMarge,titre);
             //----------------------------------------------------------------------------------------------------------
             //console.log(color);
             new Chart(ctx, {
