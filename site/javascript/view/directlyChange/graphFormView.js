@@ -39,7 +39,7 @@ supelemPays = function (code) {
     //paysChoisi=monTab;
 };
 /**
- * @description This function delete firm of the liste to make a graoh
+ * @description This function delete firm of the liste to make a graph
  * @param {number} marge - the margin rate on the firm
  */
 supelemEnt = function (marge) {
