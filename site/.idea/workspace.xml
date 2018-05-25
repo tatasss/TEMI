@@ -1,7 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BookmarkManager">
+    <bookmark url="file://$PROJECT_DIR$/doc/DiagramClass.puml" line="105" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="b89c5143-0212-42c0-b73b-81dad73db30d" name="Default" comment="" />
+    <list default="true" id="b89c5143-0212-42c0-b73b-81dad73db30d" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/doc/UseCase.puml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/DiagramClass.puml" beforeDir="false" afterPath="$PROJECT_DIR$/doc/DiagramClass.puml" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -28,15 +34,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="-1389">
               <caret line="69" selection-start-line="69" selection-end-line="69" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ViewManufacturing.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/javascript/view/directlyChange/ViewManufacturing.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="11" selection-start-line="11" selection-end-line="11" />
             </state>
           </provider>
         </entry>
@@ -85,17 +82,26 @@
       <file leaf-file-name="DiagramClass.puml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/doc/DiagramClass.puml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="476">
-              <caret line="73" column="8" lean-forward="true" selection-start-line="73" selection-start-column="8" selection-end-line="73" selection-end-column="8" />
+            <state relative-caret-position="-1003">
+              <caret line="52" column="48" selection-start-line="52" selection-start-column="48" selection-end-line="52" selection-end-column="48" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Sequence.puml" pinned="false" current-in-tab="true">
+      <file leaf-file-name="UseCase.puml" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/doc/UseCase.puml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="170">
+              <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Sequence.puml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/doc/Sequence.puml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1088">
-              <caret line="64" column="50" lean-forward="true" selection-start-line="64" selection-start-column="50" selection-end-line="64" selection-end-column="50" />
+            <state relative-caret-position="198">
+              <caret line="18" column="7" lean-forward="true" selection-start-line="18" selection-start-column="7" selection-end-line="18" selection-end-column="7" />
             </state>
           </provider>
         </entry>
@@ -119,6 +125,7 @@
         <option value="CSS File" />
         <option value="UML Class" />
         <option value="UML Sequence" />
+        <option value="UML Use Case" />
       </list>
     </option>
   </component>
@@ -131,7 +138,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/modele.js" />
         <option value="$PROJECT_DIR$/modeleManger.js" />
         <option value="$PROJECT_DIR$/resultat.html" />
         <option value="$PROJECT_DIR$/javascript/vue/VueFormulaire.js" />
@@ -167,7 +173,6 @@
         <option value="$PROJECT_DIR$/node_modules/excellentexport/dist/excellentexport.js" />
         <option value="$PROJECT_DIR$/html/test.html" />
         <option value="$PROJECT_DIR$/html/graphForm.html" />
-        <option value="$PROJECT_DIR$/doc/DiagramClass.puml" />
         <option value="$PROJECT_DIR$/javascript/view/directlyChange/ModeleView.js" />
         <option value="$PROJECT_DIR$/html/model.html" />
         <option value="$PROJECT_DIR$/javascript/manufacturing/manufact.js" />
@@ -182,6 +187,8 @@
         <option value="$PROJECT_DIR$/javascript/view/viewGenerator/graphGenerator.js" />
         <option value="$PROJECT_DIR$/javascript/view/viewGenerator/ViewGenerator.js" />
         <option value="$PROJECT_DIR$/doc/Sequence.puml" />
+        <option value="$PROJECT_DIR$/doc/DiagramClass.puml" />
+        <option value="$PROJECT_DIR$/doc/UseCase.puml" />
       </list>
     </option>
   </component>
@@ -369,6 +376,16 @@
       </pane>
     </panes>
   </component>
+  <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="full.screen.before.presentation.mode" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Documentation" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
+    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
+  </component>
   <component name="RestoreUpdateTree" date="Moments ago" ActionInfo="_Update">
     <UpdatedFiles>
       <FILE-GROUP>
@@ -535,7 +552,7 @@
       <workItem from="1527145491685" duration="8323000" />
       <workItem from="1527160747269" duration="2971000" />
       <workItem from="1527231440831" duration="12326000" />
-      <workItem from="1527246807819" duration="9674000" />
+      <workItem from="1527246807819" duration="11832000" />
     </task>
     <task id="LOCAL-00001" summary="mis en place d'un code propre">
       <created>1526980633672</created>
@@ -639,20 +656,21 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="363256000" />
+    <option name="totallyTimeSpent" value="365414000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1696" height="1026" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info anchor="right" id="PlantUML" order="3" visible="true" weight="0.33801955" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.1301956" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1002445" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" x="0" y="447" width="1680" height="116" id="Event Log" order="7" sideWeight="0.50733495" side_tool="true" visible="true" weight="0.3344788" />
       <window_info anchor="bottom" id="Version Control" order="7" sideWeight="0.4987775" weight="0.3298969" />
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="7" sideWeight="0.49266502" visible="true" weight="0.3344788" />
+      <window_info anchor="bottom" id="Terminal" order="7" sideWeight="0.49266502" visible="true" weight="0.3344788" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="TypeScript" order="8" />
@@ -709,7 +727,6 @@
     <option name="LAST_COMMIT_MESSAGE" value="Diagramme sequence générale" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/javascript/finance.js" />
     <entry file="file://$PROJECT_DIR$/html/graph.html" />
     <entry file="file://$PROJECT_DIR$/node_modules/chart.js/dist/Chart.js" />
     <entry file="uml://JavaScript-modules-diagram/C:/Users/matgaydu/Documents/stage/TEMI/site/html/index.html">
@@ -1990,17 +2007,24 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/doc/DiagramClass.puml">
+    <entry file="file://$PROJECT_DIR$/doc/Sequence.puml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="476">
-          <caret line="73" column="8" lean-forward="true" selection-start-line="73" selection-start-column="8" selection-end-line="73" selection-end-column="8" />
+        <state relative-caret-position="198">
+          <caret line="18" column="7" lean-forward="true" selection-start-line="18" selection-start-column="7" selection-end-line="18" selection-end-column="7" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/doc/Sequence.puml">
+    <entry file="file://$PROJECT_DIR$/doc/DiagramClass.puml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1088">
-          <caret line="64" column="50" lean-forward="true" selection-start-line="64" selection-start-column="50" selection-end-line="64" selection-end-column="50" />
+        <state relative-caret-position="-1003">
+          <caret line="52" column="48" selection-start-line="52" selection-start-column="48" selection-end-line="52" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/doc/UseCase.puml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
         </state>
       </provider>
     </entry>

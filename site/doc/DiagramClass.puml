@@ -50,6 +50,7 @@ package "view" <<folder>>{
                    tabTauxEffectifMoy(monm:float):string
                    tabFluxTresorie(tab:FluxTresorie,color:string):string
                    tauxRendementInt(tab:Array):string
+                   investissementRegime():string
       }
        class BootstrapVue{
                    tableSe(cote:Array,head:string,...:TabType):string
@@ -103,7 +104,9 @@ package "data" <<folder>>{
             code:String
             nom:String
             pib:float
-            Pays(string code,string nom,Impot impot,Amortissement ammort,Investir investissement)
+            dispoDerog:String
+            source:String
+            Pays(string code,string nom,Impot impot,Amortissement ammort,Investir investissement,string dispoDerog,string source)
          }
          class Impot{
              cfe:float
@@ -195,6 +198,9 @@ package "data" <<folder>>{
          }
          Object myMath.js{
             triReel(fn:callable()):float
+         }
+         Object Excel.js{
+            newAPI(format String,tab :String,titre: string):File
          }
      }
 
