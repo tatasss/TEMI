@@ -1,5 +1,4 @@
 ﻿A faire avant Amelioration:
-	-cahier des charges
 	-sequence
 	-pofinner diagramme class
 	-cas d'utilisation
