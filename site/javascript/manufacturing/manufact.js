@@ -1,3 +1,8 @@
+/**
+ *@Description This function find the pib of the land with the landCode and the worldBank API
+ * @param {string} code - the code of the land
+ * @return {number} Pib
+ */
 Fabrique.prototype.pibFind = function (code) {
     let pib = 0;
     let xhr = getXMLHttpRequest();
@@ -50,6 +55,18 @@ Fabrique.prototype.pibFind = function (code) {
     return pib;
 
 };
+/**
+ * @Construct
+ * @Description The Constructor of Land
+ * @param {string} code - the code of the land
+ * @param {string} nom - the name of the land
+ * @param {Object} impot - the impots rates of the land (cfe,is,imf,irvm,irc,tva_petrole)
+ * @param {Object} ammort - the depreciation of the land
+ * @param {Object} investissment - the parameters of the invest-government of the land
+ * @param {string} dispoDerog - the parameters of the invest-government of the land(but texte)
+ * @param {string} source - zone and government type use by firm on the land
+ * @return {{pib: number, code: string, nom: string , impots: Object, ammort: Object, investissement: Object, dispoDerog: string, source: string}}
+ */
 Fabrique.prototype.pays = function (code, nom, impot, ammort, investissment, dispoDerog, source) {
 
     return {
@@ -63,6 +80,17 @@ Fabrique.prototype.pays = function (code, nom, impot, ammort, investissment, dis
         source: source
     };
 };
+/**
+ * @constructs
+ * @Description This function is the constructor of the Impot Class
+ * @param {number} cFE - the  CFE Impot Rates
+ * @param {number} iS - the IS Impot Rates
+ * @param {number} iMF - the IMF Impot Rates
+ * @param {number} iRVM - the IRVM Impot Rates
+ * @param {number} iRC - the IRC Impot Rates
+ * @param {number} tVA_Petrole - The TVA on Petrole Rates
+ * @return {{cfe: number, isImp: number, imf: number, irvm: number, irc: number, tva_petrole: number}}
+ */
 Fabrique.prototype.impot = function (cFE, iS, iMF, iRVM, iRC, tVA_Petrole) {
     return {
         cfe: cFE,
@@ -73,6 +101,17 @@ Fabrique.prototype.impot = function (cFE, iS, iMF, iRVM, iRC, tVA_Petrole) {
         tva_petrole: tVA_Petrole,
     }
 };
+/**
+ * @constructs
+ * @Description This function is a constructor of the Ammortissement Class
+ * @param {number} construction - the coef of the construct
+ * @param {number} equipement - the  coef of the equipement
+ * @param {number} coefdegressif - the coef declining
+ * @param {number} camion - the coef of the truck
+ * @param {number} info - the coef odf the hardware
+ * @param {number} bureau - the coef of the office equipment
+ * @return {{construction: number, equipement: number, coefdegressif: number , camion: number , info: number , bureau: number}}
+ */
 Fabrique.prototype.ammortissement = function (construction, equipement, coefdegressif, camion, info, bureau) {
     return {
         construction: construction,
@@ -83,6 +122,13 @@ Fabrique.prototype.ammortissement = function (construction, equipement, coefdegr
         bureau: bureau,
     }
 };
+/**
+ * @Construct
+ * @Description This function is the construct of the firm
+ * @param {number} actu - the rates of the update
+ * @param {number} marge - the rates of the margin
+ * @return {{nom: string, terrain: number, construction: number, equipement: number, camion: number, info: number, bureau: number, stocks: number, creanceCli: number, dispoBanque: number, capitalSocial: number, detteLongTerme: number, detteCourtTerme: number, detteFournisseur: number, achat: number, petrole: number, depenseAdministrative: number, depensePub: number, depenseEntretien: number, chargeFinanciere: number, vente: number, cadre: number, secretaire: number, ouvrier: number, indice_cadre: number, indice_secretaire: number, indice_ouvrier: number, dividende: number, actuali: number}}
+ */
 Fabrique.prototype.entreprise = function (actu, marge) {
     return {
         nom: "Djankov",
@@ -117,6 +163,17 @@ Fabrique.prototype.entreprise = function (actu, marge) {
     }
 
 };
+/**
+ * @constructs
+ * @Description This function is the constructor of the Investir Class
+ * @param {number} cfe - the  CFE Impot Rates
+ * @param {number} isammmort - the IS Impot Rates
+ * @param {number} imf - the IMF Impot Rates
+ * @param {number} irvm - the IRVM Impot Rates
+ * @param {number} irc - the IRC Impot Rates
+ * @param {number} tvaPetrole - The TVA on Petrole Rates
+ * @return {{cfe: number, isamort: number, imf: number, irvm: number, irc: number, tvaPetrole: number}}
+ */
 Fabrique.prototype.investir = function (cfe, isammmort, imf, irvm, irc, tvaPetrole) {
     return {
         cfe: cfe,
@@ -127,6 +184,14 @@ Fabrique.prototype.investir = function (cfe, isammmort, imf, irvm, irc, tvaPetro
         tvaPetrole: tvaPetrole
     };
 };
+/**
+ * @constructs
+ * @Description The function is the construct of the ImpotPays Class
+ * @param {number} duree - the time of the Impot
+ * @param {number} taux - the rates of the Impot
+ * @param {number} reductonEcume - the reduc of the Impot
+ * @return {{duree: number, taux:number, reducexo: number}}
+ */
 Fabrique.prototype.impotPays = function (duree, taux, reductonEcume) {
     return {
         duree: duree,
@@ -134,7 +199,16 @@ Fabrique.prototype.impotPays = function (duree, taux, reductonEcume) {
         reducexo: reductonEcume
     };
 };
-//lol on ecris pour le conflit
+/**
+ * @constructs
+ * @Description The function is the construct of the ImpotPays Class
+ * @param {number} duree - the time of the Impot
+ * @param {number} taux - the rates of the Impot
+ * @param {number} reductonEcume - the reduc of the Impot
+ * @param {number} ammortTauxEx - the rate of the Impot with ammortExcep
+ * @param {number} ammortLimit - the limit of the ammort
+ * @return {{duree: number , taux: number , reducexo: number , ammortTauxEx: number , ammortLimit: number}}
+ */
 Fabrique.prototype.isImpotPays = function (duree, taux, reductonEcume, ammortTauxEx, ammortLimit) {
     return {
         duree: duree,
@@ -144,7 +218,15 @@ Fabrique.prototype.isImpotPays = function (duree, taux, reductonEcume, ammortTau
         ammortLimit: ammortLimit
     };
 };
-
+/**
+ * @constructs
+ * @Description This function is the construct of the AmortirModele Class
+ * @param {number} prix - the price u have to start the function
+ * @param {number} durLin - the time of the amortissement
+ * @param {number} coef - the coef of the amortissement
+ * @param {string} nom - the name of the amortissement
+ * @return {{dureeRestante: Array, baseAmortissable: Array, tauxLineaire: Array, tauxDegressif: Array, chargeAmorti: Array, nom: string, getHtml: (function(): string)}}
+ */
 Fabrique.prototype.armortirModele = function (prix, durLin, coef, nom) {
     let dureeRestante = [];
     let baseAmortissable = [];
@@ -225,6 +307,10 @@ Fabrique.prototype.armortirModele = function (prix, durLin, coef, nom) {
         tauxDegressif: tauxDegressif,
         chargeAmorti: chargeAmorti,
         nom: nom,
+        /**
+         * @Description This function create the html code of the Amortir class
+         * @return {string} html
+         */
         getHtml: function () {
 
             let cote2 = ["Base amortissable</td><td>FCFA", "Taux unitaire</td><td>%", "Taux dégréssif</td><td>%", "Charge amortissement</td><td>FCFAS"];
