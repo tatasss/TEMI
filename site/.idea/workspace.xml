@@ -285,6 +285,11 @@
       <path value="$PROJECT_DIR$/node_modules/xlsx/package.json" />
     </packageJsonPaths>
   </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="833" />
+    <option name="width" value="854" />
+    <option name="height" value="1017" />
+  </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator proportions="" version="1">
@@ -417,7 +422,7 @@
           <option name="mySupportsDeletion" value="false" />
           <option name="myCanBeAbsent" value="true" />
           <option name="myId" value="REMOVED_FROM_REPOSITORY" />
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../Documentation/Cahier des charges.docx</PATH>
+          <PATH vcs="Git" revision="" />
         </FILE-GROUP>
         <FILE-GROUP>
           <option name="myUpdateName" value="Restored" />
@@ -1506,7 +1511,7 @@
             <node x="" y="">assert</node>
             <node x="" y="">browserify</node>
             <node x="" y="">cartesian/</node>
-            <node x="" y="">$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external/lib.es5.d.ts#exec#33572;</node>
+            <node x="" y="" />
             <node x="" y="">class2type</node>
             <node x="" y="">concat</node>
             <node x="" y="">document</node>

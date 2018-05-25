@@ -833,7 +833,7 @@ GenererVue.prototype.actualisationHtml = function (monm) {
 };
 /**
  * @description This function create a HTML to give All Impot and Taxe used by a Modele
- * @param  @param {Object} monm - The impot use by the modele use to generate a Html
+ * @param  {Object} monm - The impot use by the modele use to generate a Html
  * @return {string}
  */
 GenererVue.prototype.tabImpotEtTaxe = function (monm) {
