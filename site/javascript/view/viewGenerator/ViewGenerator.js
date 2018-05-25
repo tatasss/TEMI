@@ -1,3 +1,8 @@
+/**
+ * @description This function create a html to resultat in the index
+ * @param {string} regime - the government choose by the user
+ * @return {string}
+ */
 GenererVue.prototype.resultatHtml = function (regime) {
     //mis en place du tableaux des resultat
     let impotStatDuree = [];
@@ -67,6 +72,16 @@ GenererVue.prototype.resultatHtml = function (regime) {
     return this.investissementRegime() + bootstrap.pan("default", "<h1>Resultat</h1>", pannelTab);
 
 };
+/**
+ * @description This function create a tab for resultatHtml
+ * @param {Array} effMoy - the mean effectif tab
+ * @param {Object} impDonne - the Impot of the land
+ * @param {number} donneImp - the Impot Rate
+ * @param {Boolean} isIs - Defined if the impot is IS
+ * @param {Boolean } isImf - Defined if the impot is IMF
+ * @param {Boolean} isTot -Defined If we make A total Row
+ * @return {Array}
+ */
 GenererVue.prototype.recupDonneTab = function (effMoy, impDonne, donneImp, isIs, isImf, isTot) {
     let result = [];
     if (isTot) {
@@ -114,10 +129,19 @@ GenererVue.prototype.recupDonneTab = function (effMoy, impDonne, donneImp, isIs,
         return result;
     }
 };
+/**
+ * @description This function create a html to give the gdp on the pays
+ * @param {Object} pays - The name of the land
+ * @return {string}
+ */
 GenererVue.prototype.pinbHTML = function (pays) {
 
     return `<p>Le PIB par tête dans le pays ${pays} est de : ${Math.round(this.mP.pib)} FCFA</p>`;
 };
+/**
+ * @description This function creat a html to give a firm information
+ * @return {string}
+ */
 GenererVue.prototype.entrepriseHTML = function () {
     let result = "<p>L'entreprise simulée est supposée être localisée dans la plus grande ville du pays, employer "
         + (this.mE.cadre + this.mE.secretaire + this.mE.ouvrier) + " salariés et vendre la totalité de sa " +
@@ -131,6 +155,10 @@ GenererVue.prototype.entrepriseHTML = function () {
     result += "</p>";
     return result;
 };
+/**
+ * @description This function create a html to give a bilan Array on the firm used by the modele
+ * @return {string}
+ */
 GenererVue.prototype.bilanHtml = function () {
     let actif = this.mE.terrain + this.mE.construction + this.mE.equipement + this.mE.camion + this.mE.info +
         this.mE.bureau + this.mE.stocks + this.mE.creanceCli + this.mE.dispoBanque;
@@ -192,6 +220,10 @@ GenererVue.prototype.bilanHtml = function () {
     let tab = bootstrap.tableSE(col1, head, lin1, lin2, lin3, lin4, lin5, lin6, lin7, lin8, lin9, lin10, lin11, lin12);
     return bootstrap.pan("default", null, tab);
 };
+/**
+ * @description This function create a html to give a compte Array of the firm used to create a model
+ * @return {string}
+ */
 GenererVue.prototype.compteHtml = function () {
     let cote = ["Achats", "Petrole", "Depenses administratives", "Depenses publicitaires", "Depenses d'entretien",
         "<strong>Impôts et taxes</strong>", "<strong>Masse Salariale</strong>", "Cadres", "Secrétaires", "Ouvriers",
@@ -253,6 +285,12 @@ GenererVue.prototype.compteHtml = function () {
     let tab = bootstrap.tableSE(cote, head, lin0, lin1, lin2, lin3, lin4, lin5, lin6, lin7, lin8, lin9, lin10, lin11, lin12);
     return bootstrap.pan("default", null, tab);
 };
+/**
+ * @description This function create a html to give A economic data
+ * @param {number} pin - the Pib of the land choose to make a model
+ * @param {String} pays - the name of the land choose to make a model
+ * @return {string}
+ */
 GenererVue.prototype.donneesEconomique = function (pin, pays) {
     let result = this.pinbHTML(pin, pays);
     result += this.entrepriseHTML();
@@ -261,6 +299,8 @@ GenererVue.prototype.donneesEconomique = function (pin, pays) {
     return bootstrap.pan("default", "<h1>Données economiques</h1>", result);
 };
 /**
+ * @description This function create a html to give the Impot of the land
+ * @param {Object} monm - The modele use
  * @return {string}
  */
 GenererVue.prototype.ImpotHtml = function (monm) {
@@ -306,6 +346,10 @@ GenererVue.prototype.ImpotHtml = function (monm) {
             color: ""
         });
 };
+/**
+ * @description This function create the HTML to ammortissement
+ * @return {string}
+ */
 GenererVue.prototype.amortissementHtml = function () {
     let head = "<thead><tr><th colspan=2> Amortissement<th/></tr><tr><th/><th>Durée Linéaire</th><th>Coef dégressif</th></tr></thead>";
     let cote = ["Construction", "Equipement", "Camion", "Matériel informatique", "Matériel bureau"];
@@ -332,11 +376,19 @@ GenererVue.prototype.amortissementHtml = function () {
     let tab = bootstrap.tableSE(cote, head, lin1, lin2, lin3, lin4, lin5);
     return bootstrap.pan("default", null, tab);
 };
+/**
+ * @description This function create the HTML to ammortissement Excep
+ * @return {string}
+ */
 GenererVue.prototype.amortiExcepHTML = function () {
     return "<p> Pour les amortissements exceptionnels, le taux depend de l'investissement, il y a une limitation par" +
         " rapport au bénéfice annuel et l'unité de la durée est l'année</p>";
 
 };
+/**
+ * @description This function create the HTML to give a Fiscal Data
+ * @return {string}
+ */
 GenererVue.prototype.donneesFiscal = function () {
     //mis en place des données fiscales
 
@@ -346,6 +398,13 @@ GenererVue.prototype.donneesFiscal = function () {
     pannelBody += this.amortiExcepHTML();
     return bootstrap.pan("default", "<h1>données fiscales</h1>", pannelBody);
 };
+/**
+ * @description This function create a  HTML to make a body
+ * @param {float} pin - the PIB of the land choose
+ * @param {string} pays - the name of the land
+ * @param {string} regimE - the government of the model
+ * @return {string}
+ */
 GenererVue.prototype.bodyHtml = function (pin, pays, regimE) {
     let bodyglo = this.resultatHtml(regimE);
     bodyglo += this.donneesEconomique(pin, pays, regimE);
@@ -353,6 +412,14 @@ GenererVue.prototype.bodyHtml = function (pin, pays, regimE) {
     return bodyglo;
 
 };
+/**
+ * @description This function create the HTML to give the parameters and make any Button to navigate on the Modele DATA
+ * @param {string} pays - the name of the land
+ * @param {string} regimE - the government of the model
+ * @param {float} actu - the actu rates
+ * @param {float} marge -teh margin Rates
+ * @return {string}
+ */
 GenererVue.prototype.navigationHtml = function (pays, regimE, actu, marge) {
     let regime;
     if (regimE === "gen") {
@@ -363,15 +430,28 @@ GenererVue.prototype.navigationHtml = function (pays, regimE, actu, marge) {
     }
     let pannel = bootstrap.pan("default", "Paramétres", ref.donnerNomPays(pays) + "<br/>" + regime + "</br>" + actu + "</br>" + marge);
     let result = "<div class='vertical-menu'>" + pannel;
-    result += bootstrap.buttonBalA("./model.html", "voir model");
+    result += bootstrap.buttonBalA("./model.html", "voir résultat");
     result += bootstrap.buttonBalA("./index.html", "retour") + "</div>";
     return result;
 };
+/**
+ * @description This function is the main to create a Data modele View on html
+ * @param {string} pays - the name of the land
+ * @param {string} regimE - the government of the model
+ * @param {float} actu - the actu rates
+ * @param {float} marge -teh margin Rates
+ * @return {string}
+ */
 GenererVue.prototype.mainHTML = function (pays, regimE, actu, marge) {
     this.mP = this.modele.donnee.pays;
     this.mE = this.modele.donnee.entreprise;
     return bootstrap.container(bootstrap.GridNavCote(this.bodyHtml(this.mP.nom, regimE), this.navigationHtml(pays, regimE, actu, marge)));
 };
+/**
+ * @description This function create a HTML to the petrole Tva Taxe on modele
+ * @param {Object} taxeAjout -the Taxe Ajout on the model
+ * @return {string}
+ */
 GenererVue.prototype.petroleHtml = function (taxeAjout) {
     let cote = ["Pétrole</td><td>FCFA", "Taux</td><td>%", "TVA Petrole</td><td>FCFA"];
     let tab = bootstrap.tableSE(cote, null, {tab: taxeAjout.petrole, color: "blue"}, {
@@ -384,6 +464,11 @@ GenererVue.prototype.petroleHtml = function (taxeAjout) {
         });
     return bootstrap.pan("default", null, tab);
 };
+/**
+ * @description This function create a HTML for the Financial Taxe
+ * @param {Object }taxeAjout - the charge Finance Modele Object
+ * @return {string}
+ */
 GenererVue.prototype.chargeFinancierHtml = function (taxeAjout) {
     let cote = ["Charges financiéres</td><td>FCFA", "Taux</td><td>%", "IRC</td><td>FCFA"];
     let tab = bootstrap.tableSE(cote, null, {
@@ -400,6 +485,11 @@ GenererVue.prototype.chargeFinancierHtml = function (taxeAjout) {
         });
     return bootstrap.pan("default", null, tab);
 };
+/**
+ * @description This function create the HTML to give the REAL cost on working force
+ * @param {Object} monm - the modele used to create the view
+ * @return {string}
+ */
 GenererVue.prototype.emploieHtml = function (monm) {
     let cote = ["Salaire des cadres</td><td>FCFA", "Salaire des secrétaires</td><td>FCFA", "Salaire des ouvriers</td><td>FCFA"];
     cote.push("Masse Salariale</td><td>FCFA");
@@ -432,6 +522,11 @@ GenererVue.prototype.emploieHtml = function (monm) {
         });
     return bootstrap.pan("default", null, tab);
 };
+/**
+ * @description This function create the HTML to give the Comptability Result Array
+ * @param {Object} monm - The modele used to create a view
+ * @return {string}
+ */
 GenererVue.prototype.comptableHtml = function (monm) {
     let cote = ["Vente</td><td class=\"bottomBorder\">FCFA"];
     cote.push("Achats</td><td>FCFA");
@@ -516,6 +611,11 @@ GenererVue.prototype.comptableHtml = function (monm) {
         });
     return bootstrap.pan("default", null, tab);
 };
+/**
+ * @description This function create a HTML to give a amortissement Excep
+ * @param {Object} monm - The modele use to generate a Html
+ * @return {string}
+ */
 GenererVue.prototype.ammortExcepHtml = function (monm) {
     let coteHead = ["Investissement</td><td>FCFA", "Taux</td><td>% Investissement", "Limitation</td><td>% Bénéfice comptable", "Durée</td><td>Années"];
     let tabHead = bootstrap.tableSE(coteHead, null,
@@ -552,6 +652,11 @@ GenererVue.prototype.ammortExcepHtml = function (monm) {
         });
     return bootstrap.pan("info", tabHead, tabBody);
 };
+/**
+ * @description this function create a HTML to give a Impot Result Array
+ *  @param {Object} monm - The modele use to generate a Html
+ * @return {string}
+ */
 GenererVue.prototype.resultatImpotHtml = function (monm) {
     let cote = ["Bénéfice comptable</td><td>FCFA", "Amortissement exceptionnel</td><td>FCFA", "Bénéfice imposable</td><td>FCFA"];
     let tab = bootstrap.tableSE(cote, null, {
@@ -568,6 +673,11 @@ GenererVue.prototype.resultatImpotHtml = function (monm) {
         });
     return bootstrap.pan("default", null, tab);
 };
+/**
+ * @description This function create a HTML to give the general Amortissement
+ *  @param {Object} monm - The modele use to generate a Html
+ * @return {string}
+ */
 GenererVue.prototype.getAmmortGenneralHtml = function (monm) {
     let cpt = 0;
     let tab = "<table class='table'><thead/></thead><tbody><tr><td>Construction</td><td>FCFA</td>";
@@ -600,6 +710,11 @@ GenererVue.prototype.getAmmortGenneralHtml = function (monm) {
     tab += "</tr></tbody></table>";
     return bootstrap.pan("info", "Amortissment", tab);
 };
+/**
+ * @description This function create a HTML to give a IS impot Array
+ * @param {Object} monm - The modele use to generate a Html
+ * @return {string}
+ */
 GenererVue.prototype.impotSocieteHtml = function (monm) {
     let is = [];
     let impSoc = [];
@@ -625,6 +740,11 @@ GenererVue.prototype.impotSocieteHtml = function (monm) {
     ;
     return bootstrap.pan("default", null, tab);
 };
+/**
+ * @description This function create a HTML to give a IMF Impot on modele
+ * @param {Object} monm - The modele use to generate a Html
+ * @return {string}
+ */
 GenererVue.prototype.impotForfaitHtml = function (monm) {
     let imf = [];
     let impIMF = [];
@@ -647,6 +767,11 @@ GenererVue.prototype.impotForfaitHtml = function (monm) {
         });
     return bootstrap.pan("default", null, tab);
 };
+/**
+ * @description This function create a HTML to give the IS/IMF Array
+ * @param {Object} monm - The modele use to generate a Html
+ * @return {string}
+ */
 GenererVue.prototype.isImfHtml = function (monm) {
     let cote = ["IS/IMF</td><td>FCFA", "Bénéfice après IS/IMF</td><td>FCFA", "Taux de marge  aprés IS/IMF</td><td>%CA"];
     let tab = bootstrap.tableSE(cote, null, {
@@ -663,6 +788,11 @@ GenererVue.prototype.isImfHtml = function (monm) {
         });
     return bootstrap.pan("default", null, tab);
 };
+/**
+ * @description This function create the HTML to give the IRVM Impot on modele
+ * @param {Object} monm - The modele use to generate a Html
+ * @return {string}
+ */
 GenererVue.prototype.impotRevenuValeurMobilieres = function (monm) {
     let div = [];
     let irvm = [];
@@ -689,6 +819,11 @@ GenererVue.prototype.impotRevenuValeurMobilieres = function (monm) {
         });
     return bootstrap.pan("default", null, tab);
 };
+/**
+ * @description This function create a HTML to give a Actualisation Array
+ *  @param {Object} monm - The modele use to generate a Html
+ * @return {string}
+ */
 GenererVue.prototype.actualisationHtml = function (monm) {
     let tab = bootstrap.tableSE(["actualisation"], null, {
         tab: myMath.arrondirTabUnit(monm.actualisation, 1),
@@ -696,6 +831,11 @@ GenererVue.prototype.actualisationHtml = function (monm) {
     });
     return bootstrap.pan("default", null, tab);
 };
+/**
+ * @description This function create a HTML to give All Impot and Taxe used by a Modele
+ * @param  @param {Object} monm - The impot use by the modele use to generate a Html
+ * @return {string}
+ */
 GenererVue.prototype.tabImpotEtTaxe = function (monm) {
     let cote = ["CFE</td><td>FCFA", "IS/IMF</td><td>FCFA", "IRVM</td><td>FCFA", "IRC</td><td>FCFA", "TVA Petrole</td><td>FCFA", "Total</td><td>FCFA"];
     let tab = bootstrap.tableSE(cote, null,
@@ -726,10 +866,21 @@ GenererVue.prototype.tabImpotEtTaxe = function (monm) {
     );
     return bootstrap.pan("default", null, tab);
 };
+/**
+ * @description This function create the HTML to Give The TEMI By a land on a firm
+ *  @param {Object} monm - The TEMI on the modele use to generate a Html
+ * @return {string}
+ */
 GenererVue.prototype.tabTauxEffectifMoy = function (monm) {
     let tab = `<p> le TEMI est de ${Math.round(monm * 100) / 100} %</p>`;
     return bootstrap.pan("default", null, tab);
 };
+/**
+ * @description This function create a HTML to give a cash FLOW ARRAY
+ * @param {Object} tab - The Table of cash Flow Array
+ * @param {String} color -The Color Of the year 0 Cash Flow Data
+ * @return {string}
+ */
 GenererVue.prototype.tabFluxTresorie = function (tab, color) {
     let cote = ["Courants</td><td>FCFA", "Actualisés</td><td>FCFA", " "];
     let lol = [null, null, null, null, null, null, null, "Somme"];
@@ -753,12 +904,21 @@ GenererVue.prototype.tabFluxTresorie = function (tab, color) {
         });
     return bootstrap.pan("default", null, mota);
 };
+/**
+ * @description This function create a HTML to give a return rate Array
+ * @param {Array} tab -the Array of the return rate
+ * @return {string}
+ */
 GenererVue.prototype.tauxRendementInt = function (tab) {
     return bootstrap.pan("default", null, bootstrap.tableSE(["courants"], null, {
         tab: myMath.arrondirTabUnit(tab, 2),
         color: ""
     }));
 };
+/**
+ *@description This function create the HTML to give the Investissement Government Describe
+ * @return {string}
+ */
 GenererVue.prototype.investissementRegime = function () {
     let html = "<p>";
     if (this.modele.donnee.regime !== "gen") {

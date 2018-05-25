@@ -9,6 +9,7 @@ amm += "<br/>";
 monm.amortissement.forEach(function (item) {
     amm += item.getHtml() + "<br/>";
 });
+document.getElementById("param").innerHTML =genererVue.modele.donnee.pays.nom;
 document.getElementById("pet").innerHTML = genererVue.petroleHtml(monm.taxeAjout);
 document.getElementById("ammort").innerHTML = amm;
 document.getElementById("ammortExp").innerHTML = genererVue.ammortExcepHtml(monm);
@@ -23,8 +24,11 @@ document.getElementById("irvm").innerHTML = genererVue.impotRevenuValeurMobilier
 document.getElementById("actu").innerHTML = genererVue.actualisationHtml(monm);
 document.getElementById("impTaxeC").innerHTML = genererVue.tabImpotEtTaxe(monm.impotTaxeCourent);
 document.getElementById("impTaxeA").innerHTML = genererVue.tabImpotEtTaxe(monm.impotTaxeActu);
-document.getElementById("fluxTresSaImp").innerHTML = genererVue.tabFluxTresorie(monm.fluxTresSansImp, "red");
+
+
+
 document.getElementById("fluxeffmoyC").innerHTML = genererVue.tabTauxEffectifMoy(monm.tauxeffMoyCourent);
+document.getElementById("fluxTresSaImp").innerHTML = genererVue.tabFluxTresorie(monm.fluxTresSansImp, "red");
 document.getElementById("fluxTresSaISIMF").innerHTML = genererVue.tabFluxTresorie(monm.fluxTresSansISIMF, "blue");
 document.getElementById("fluxTresAvImpot").innerHTML = genererVue.tabFluxTresorie(monm.fluxTresApresImpot, "blue");
 document.getElementById("tauxRendInterneSi").innerHTML = genererVue.tauxRendementInt(monm.tauxRendInterneSImp);

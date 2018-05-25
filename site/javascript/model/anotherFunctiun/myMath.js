@@ -1,4 +1,9 @@
-/*MyMath.prototype.pascalTriangle=function(nombrePuiss){
+/*
+* @description The Function Create the Array with a Pascal Triangle Line on the number enter
+ * @param {number} nombrePuiss - the number of the pow want be used
+ * @return {Array} pascal
+
+MyMath.prototype.pascalTriangle=function(nombrePuiss){
     let retour=[];
     let lol=function (nombrePuiss) {
         let tab=[];
@@ -26,6 +31,11 @@
 
 
 };*/
+/**
+ * @description This function compute the return rate
+ * @param {array} tab - the tab want to be use to find the return rate
+ * @return {number} tri
+ */
 MyMath.prototype.tri = function (tab) {
 
     let numberOfTries = 1;
@@ -37,6 +47,11 @@ MyMath.prototype.tri = function (tab) {
     });
     if (!positive || !negative) throw new Error('TRI a besoin de valeur positif et negatif');
 
+    /**
+     * @description This function compute the NPV(Net Present Value)
+     * @param {number} rate - the rate of the actu
+     * @return {number}
+     */
     function npv(rate) {
         numberOfTries++;
         if (numberOfTries > 1000) {
@@ -52,6 +67,11 @@ MyMath.prototype.tri = function (tab) {
 
     return Math.round(triReel(npv) * 100) / 100;
 };
+/**
+ * @description This function is used by MyMath.tri to find  the real tri with a van
+ * @param {function():number} fn the van
+ * @return {number} tri
+ */
 triReel = function (fn) {
     //console.log("on entre dans seekzero");
     let x = 1;
@@ -65,6 +85,12 @@ triReel = function (fn) {
     }
     return x + 0.01;
 };
+/**
+ * @description This function compute the Net Present Value of the tab
+ * @param {number} actu - the actu rates
+ * @param {array} tab - the array of value want to be used to find the NPV
+ * @return {number} NPV
+ */
 MyMath.prototype.van = function (actu, tab) {
 
     let lol = tab[0];
@@ -80,7 +106,11 @@ MyMath.prototype.van = function (actu, tab) {
     //console.log("on sort du calcul VAN");
     return Math.round(lol);
 };
-
+/**
+ * @description This function sum the value of the array
+ * @param {array} tab -the array used to make a sum
+ * @return {number} sum
+ */
 MyMath.prototype.sommeTab = function (tab) {
     let tot = 0;
     tab.forEach(function (item) {
@@ -88,7 +118,12 @@ MyMath.prototype.sommeTab = function (tab) {
     });
     return tot;
 };
-/*MyMath.prototype.divisionTabPurcent=function(tabDiv,tabDive){
+/*
+ * @Description This function divide the value of 2 array
+ * @param {array} tabDiv -the array used to make a divide
+ * @param {array} tabDive -the array used to make a divide
+ * @return {number} div
+MyMath.prototype.divisionTabPurcent=function(tabDiv,tabDive){
     let tot=[];
     if(tabDiv.length!==tabDive.length){
         alert("lol, les tables ne sont  pas de même tailles\n"+tabDiv.length+"\n"+tabDive.length+"\ntaille tab");
@@ -100,6 +135,12 @@ MyMath.prototype.sommeTab = function (tab) {
     }
     return tot;
 };*/
+/**
+ * @description The function Round all the value Of a Tab on Unit choose
+ * @param {array} tab - the tab want to be used to round it
+ * @param {number} numberDec -the number of decimal want be round
+ * @return {Array} tab
+ */
 MyMath.prototype.arrondirTabUnit = function (tab, numberDec) {
     if (numberDec == null) {
         numberDec = 0;

@@ -1,5 +1,5 @@
 /**
- * @Description Function create an Bootstrap Tabs
+ * @description This function create an Bootstrap Tabs
  * @return {string} html
  * @param colOne_head_lig - the left on the array , the head of the array and all the row ({array },{ string},{array,attr...})
  * take all arguments u put (1 array = 1row)
@@ -129,7 +129,7 @@ BootstrapVue.prototype.tableSE = function (colOne_head_lig) {
     return html;
 };
 /**
- * @Description function create a bootstrap pannel
+ * @description This function create a bootstrap pannel
  * @param {string} type - type of pannel (look doc on the site : https://www.w3schools.com/bootstrap/bootstrap_panels.asp)
  * @param {string} head - head of the pannel if he is null, the pannel is generate without head
  * @param {string} body - body of the pannel
@@ -149,7 +149,7 @@ BootstrapVue.prototype.pan = function (type, head, body) {
     return result;
 };
 /**
- * @Description function create the body of the page html
+ * @description This function create the body of the page html
  * @param {string} body - the body of the page without topNav
  * @return {string} html
  */
@@ -157,7 +157,7 @@ BootstrapVue.prototype.container = function (body) {
     return "<div class='container'>" + body + "</div>";
 };
 /**
- * @Description Function use a grid basic bootstrap 10-2 mode.
+ * @description this function use a grid basic bootstrap 10-2 mode.
  * @param {string} body - the string template ready inserted in the col to take 10/12 of the grid
  * @param {string} nav - the string html template  ready inserted in the column 2/12 on the right on the grid
  * @return {string} html
@@ -171,7 +171,7 @@ BootstrapVue.prototype.GridNavCote = function (body, nav) {
     return result;
 };
 /**
- * @Description Function create a button created with a tag <a>
+ * @description this function create a button created with a tag <a>
  * @param {string} href  - the location where u want to go
  * @param {string} html - the entitled of your tag
  * @return {string} html
@@ -180,7 +180,7 @@ BootstrapVue.prototype.buttonBalA = function (href, html) {
     return `<a  class='btn btn-default' type='submit' href='${href}'>${html}</a>`;
 };
 /**
- * @Description Function create a button created with a tag <button>
+ * @description This unction create a button created with a tag <button>
  * @param {string} type - the type of button (look doc on the site : https://www.w3schools.com/bootstrap/bootstrap_ref_css_buttons.asp)
  * @param {function()} onclick - the callback where you want to use
  * @param {string} html - the entitled of your tag
@@ -191,7 +191,7 @@ BootstrapVue.prototype.buttonBaBu = function (type, onclick, html, value) {
     return `<button class='btn btn-${type}' type='button' onclick="${onclick}" value="${value}" '>${html}</button>`;
 };
 /**
- * @Description function create a liste-vertical-group on bootstrap.
+ * @description This function create a liste-vertical-group on bootstrap.
  * @param {array}tab - the array of your list
  * @return {string} html
  */
@@ -203,7 +203,7 @@ BootstrapVue.prototype.listeItem = function (tab) {
     return html;
 };
 /**
- * @Description function create a collapse group pannel on bootstrap
+ * @description This function create a collapse group pannel on bootstrap
  * @param {string} objCollapse -the obj of your collapse
  * (take all args ,collapse obj ={title:'yourTitle',body:'yourBody'})
  * @return {string} html
@@ -234,7 +234,7 @@ BootstrapVue.prototype.collapse = function (objCollapse) {
     return html;//+"</div>";
 };
 /**
- * @Description function create an array for My temi (he is a little specific but U can use it
+ * @description This function create an array for My temi (he is a little specific but U can use it
  * @param {Array} cote - a Array on the first column of array
  * @param {Array} head - a Array on the first Line of array
  * @param {Array} tab - A Double Dimension Array he is the body of the array

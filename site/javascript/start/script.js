@@ -8,6 +8,9 @@ if (localStorage.getItem("don") !== undefined && localStorage.getItem("don") !==
     monModele = new Modele(new Donne(tab[0], tab[1], tab[2], tab[3]));
 }
 
+/**
+ * @description This function show a modal when u click on the button "demarrer comparaison"
+ */
 function showModal() {
 
     $("#myBtn").click(function () {
@@ -24,6 +27,11 @@ function showModal() {
 
 }
 
+/**
+ * @description This function load a graphForm page anf load on memory actu and regime
+ * @param {number} actu - the actu rates of the firm
+ * @param {string} regime - the regime use by the user
+ */
 function debutCompa(actu, regime) {
     console.log("ici");
 
@@ -44,6 +52,9 @@ function debutCompa(actu, regime) {
     }
 }
 
+/**
+ * @description This function start the calcul with a parameters enter on html page
+ */
 function validateForm() {
     let actualisation = $("#actualisation").val();
     let marge = $("#marge").val();
@@ -79,6 +90,10 @@ function validateForm() {
     elapsedTime = new Date().getTime() - startTime;
 }
 
+/**
+ * @description This function give the XMLHttpRequest Object
+ * @return {XMLHttpRequest}
+ */
 function getXMLHttpRequest() {
     let xhr = null;
     if (window.XMLHttpRequest || window.ActiveXObject) {
@@ -99,6 +114,11 @@ function getXMLHttpRequest() {
     return xhr;
 }
 
+/**
+ * @description This function verify if the the number is a purcent
+ * @param {number} nombre - the number wold u verify if it's a purcent number
+ * @return {number }
+ */
 function verifPourcent(nombre) {
     //console.log(nombre);
     let regex1 = /^[0-9]*[.]?[0-9]*$/;
@@ -125,6 +145,10 @@ function verifPourcent(nombre) {
     return nombre;
 }
 
+/**
+ * @description This function create all the land and put it on an Array
+ * @return {Array}
+ */
 function mesPays() {
 
     let Pays = [];

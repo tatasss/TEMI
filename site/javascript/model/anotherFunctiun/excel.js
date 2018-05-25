@@ -1,3 +1,10 @@
+/**
+ * @description The function create the XLS Excel File
+ * @param {string} format - the format of the Excel File
+ * @param {array} tab - the array want to be put in the excel file
+ * @param {string} titre - the FileName of the Excel File
+ * @return {File}
+ */
 function newApi(format, tab, titre) {
     console.log("on entre");
     let args = tab.split(",");

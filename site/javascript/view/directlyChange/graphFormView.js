@@ -17,6 +17,10 @@ else {
 document.getElementById("info").innerHTML = `<p>Le taux d'actualisation pour toutes les entreprises est `
     +`de ${localStorage.getItem("compaActu")} %.<br/> Le regime dans tous les pays utilisé par les entreprises est : ${reg} .`;
 //[pays][entreprise]
+/**
+ * @description This function delete land of the liste to make a graph
+ * @param {string} code - The code of the land
+ */
 supelemPays = function (code) {
 
     // console.log("code de :" + code)
@@ -34,6 +38,10 @@ supelemPays = function (code) {
     //console.log(index);
     //paysChoisi=monTab;
 };
+/**
+ * @description This function delete firm of the liste to make a graoh
+ * @param {number} marge - the margin rate on the firm
+ */
 supelemEnt = function (marge) {
     let madon;
     let cptEnt2 = 0;
