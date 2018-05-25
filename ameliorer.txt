@@ -1,5 +1,4 @@
 ﻿A faire avant Amelioration:
-	-JsDoc
 	-cahier des charges
 	-sequence
 	-pofinner diagramme class

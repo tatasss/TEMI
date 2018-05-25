@@ -6,20 +6,7 @@
     <bookmark url="file://$PROJECT_DIR$/javascript/view/viewGenerator/bootstrapView.js" line="3" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b89c5143-0212-42c0-b73b-81dad73db30d" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/javascript/manufacturing/manufact.js" beforeDir="false" afterPath="$PROJECT_DIR$/javascript/manufacturing/manufact.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/javascript/model/anotherFunctiun/excel.js" beforeDir="false" afterPath="$PROJECT_DIR$/javascript/model/anotherFunctiun/excel.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/javascript/model/anotherFunctiun/myMath.js" beforeDir="false" afterPath="$PROJECT_DIR$/javascript/model/anotherFunctiun/myMath.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/javascript/model/model.js" beforeDir="false" afterPath="$PROJECT_DIR$/javascript/model/model.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/javascript/model/modelManager.js" beforeDir="false" afterPath="$PROJECT_DIR$/javascript/model/modelManager.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/javascript/start/reference.js" beforeDir="false" afterPath="$PROJECT_DIR$/javascript/start/reference.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/javascript/start/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/javascript/start/script.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/javascript/view/directlyChange/graphFormView.js" beforeDir="false" afterPath="$PROJECT_DIR$/javascript/view/directlyChange/graphFormView.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/javascript/view/viewGenerator/ViewGenerator.js" beforeDir="false" afterPath="$PROJECT_DIR$/javascript/view/viewGenerator/ViewGenerator.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/javascript/view/viewGenerator/bootstrapView.js" beforeDir="false" afterPath="$PROJECT_DIR$/javascript/view/viewGenerator/bootstrapView.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/javascript/view/viewGenerator/graphGenerator.js" beforeDir="false" afterPath="$PROJECT_DIR$/javascript/view/viewGenerator/graphGenerator.js" afterDir="false" />
-    </list>
+    <list default="true" id="b89c5143-0212-42c0-b73b-81dad73db30d" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -108,7 +95,7 @@
       <file leaf-file-name="ViewGenerator.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/javascript/view/viewGenerator/ViewGenerator.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="464">
+            <state relative-caret-position="396">
               <caret line="946" lean-forward="true" selection-start-line="946" selection-end-line="946" />
               <folding>
                 <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
@@ -486,7 +473,7 @@
       <workItem from="1527145491685" duration="8323000" />
       <workItem from="1527160747269" duration="2971000" />
       <workItem from="1527231440831" duration="12326000" />
-      <workItem from="1527246807819" duration="5238000" />
+      <workItem from="1527246807819" duration="5910000" />
     </task>
     <task id="LOCAL-00001" summary="mis en place d'un code propre">
       <created>1526980633672</created>
@@ -572,25 +559,31 @@
       <option name="project" value="LOCAL" />
       <updated>1527243503460</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="JSDOC fin">
+      <created>1527252159501</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1527252159501</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="358820000" />
+    <option name="totallyTimeSpent" value="359492000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1696" height="1026" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info anchor="right" id="PlantUML" order="3" weight="0.33812407" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1301956" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.1301956" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" x="0" y="447" width="1680" height="116" id="Event Log" order="7" sideWeight="0.50733495" side_tool="true" visible="true" weight="0.3344788" />
       <window_info anchor="bottom" id="Version Control" order="7" sideWeight="0.4987775" weight="0.3298969" />
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Terminal" order="7" sideWeight="0.49266502" visible="true" weight="0.3344788" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="7" sideWeight="0.49266502" visible="true" weight="0.3344788" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="TypeScript" order="8" />
@@ -642,7 +635,8 @@
     <MESSAGE value="JSDOC&#10;package :&#10;-&gt; Data&#10;-&gt; MODEL" />
     <MESSAGE value="JSDOC&#10;package :&#10;-&gt; Data&#10;-&gt; MODEL&#10;(J'oublit toujours de me relire mdr)" />
     <MESSAGE value="JSDOC&#10;package :&#10;-&gt; Data&#10;-&gt; MODEL&#10;(Dernier Commit matin)" />
-    <option name="LAST_COMMIT_MESSAGE" value="JSDOC&#10;package :&#10;-&gt; Data&#10;-&gt; MODEL&#10;(Dernier Commit matin)" />
+    <MESSAGE value="JSDOC fin" />
+    <option name="LAST_COMMIT_MESSAGE" value="JSDOC fin" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1929,7 +1923,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/javascript/view/viewGenerator/ViewGenerator.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="464">
+        <state relative-caret-position="396">
           <caret line="946" lean-forward="true" selection-start-line="946" selection-end-line="946" />
           <folding>
             <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
