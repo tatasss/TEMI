@@ -32,7 +32,7 @@ MyMath.prototype.pascalTriangle=function(nombrePuiss){
 
 };*/
 /**
- * @Description This function compute the return rate
+ * @description This function compute the return rate
  * @param {array} tab - the tab want to be use to find the return rate
  * @return {number} tri
  */
@@ -48,7 +48,7 @@ MyMath.prototype.tri = function (tab) {
     if (!positive || !negative) throw new Error('TRI a besoin de valeur positif et negatif');
 
     /**
-     * @Description This function compute the NPV(Net Present Value)
+     * @description This function compute the NPV(Net Present Value)
      * @param {number} rate - the rate of the actu
      * @return {number}
      */
@@ -68,7 +68,7 @@ MyMath.prototype.tri = function (tab) {
     return Math.round(triReel(npv) * 100) / 100;
 };
 /**
- * This function is used by MyMath.tri to find  the real tri with a van
+ * @description This function is used by MyMath.tri to find  the real tri with a van
  * @param {function():number} fn the van
  * @return {number} tri
  */
@@ -86,7 +86,7 @@ triReel = function (fn) {
     return x + 0.01;
 };
 /**
- * @Description This function compute the Net Present Value of the tab
+ * @description This function compute the Net Present Value of the tab
  * @param {number} actu - the actu rates
  * @param {array} tab - the array of value want to be used to find the NPV
  * @return {number} NPV
@@ -107,7 +107,7 @@ MyMath.prototype.van = function (actu, tab) {
     return Math.round(lol);
 };
 /**
- * @Description This function sum the value of the array
+ * @description This function sum the value of the array
  * @param {array} tab -the array used to make a sum
  * @return {number} sum
  */
@@ -136,7 +136,7 @@ MyMath.prototype.divisionTabPurcent=function(tabDiv,tabDive){
     return tot;
 };*/
 /**
- * @Description The function Round all the value Of a Tab on Unit choose
+ * @description The function Round all the value Of a Tab on Unit choose
  * @param {array} tab - the tab want to be used to round it
  * @param {number} numberDec -the number of decimal want be round
  * @return {Array} tab

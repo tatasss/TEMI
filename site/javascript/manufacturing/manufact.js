@@ -1,5 +1,5 @@
 /**
- *@Description This function find the pib of the land with the landCode and the worldBank API
+ *@description This function find the pib of the land with the landCode and the worldBank API
  * @param {string} code - the code of the land
  * @return {number} Pib
  */
@@ -57,7 +57,7 @@ Fabrique.prototype.pibFind = function (code) {
 };
 /**
  * @Construct
- * @Description The Constructor of Land
+ * @description The Constructor of Land
  * @param {string} code - the code of the land
  * @param {string} nom - the name of the land
  * @param {Object} impot - the impots rates of the land (cfe,is,imf,irvm,irc,tva_petrole)
@@ -82,7 +82,7 @@ Fabrique.prototype.pays = function (code, nom, impot, ammort, investissment, dis
 };
 /**
  * @constructs
- * @Description This function is the constructor of the Impot Class
+ * @description This function is the constructor of the Impot Class
  * @param {number} cFE - the  CFE Impot Rates
  * @param {number} iS - the IS Impot Rates
  * @param {number} iMF - the IMF Impot Rates
@@ -103,7 +103,7 @@ Fabrique.prototype.impot = function (cFE, iS, iMF, iRVM, iRC, tVA_Petrole) {
 };
 /**
  * @constructs
- * @Description This function is a constructor of the Ammortissement Class
+ * @description This function is a constructor of the Ammortissement Class
  * @param {number} construction - the coef of the construct
  * @param {number} equipement - the  coef of the equipement
  * @param {number} coefdegressif - the coef declining
@@ -124,7 +124,7 @@ Fabrique.prototype.ammortissement = function (construction, equipement, coefdegr
 };
 /**
  * @Construct
- * @Description This function is the construct of the firm
+ * @description This function is the construct of the firm
  * @param {number} actu - the rates of the update
  * @param {number} marge - the rates of the margin
  * @return {{nom: string, terrain: number, construction: number, equipement: number, camion: number, info: number, bureau: number, stocks: number, creanceCli: number, dispoBanque: number, capitalSocial: number, detteLongTerme: number, detteCourtTerme: number, detteFournisseur: number, achat: number, petrole: number, depenseAdministrative: number, depensePub: number, depenseEntretien: number, chargeFinanciere: number, vente: number, cadre: number, secretaire: number, ouvrier: number, indice_cadre: number, indice_secretaire: number, indice_ouvrier: number, dividende: number, actuali: number}}
@@ -165,7 +165,7 @@ Fabrique.prototype.entreprise = function (actu, marge) {
 };
 /**
  * @constructs
- * @Description This function is the constructor of the Investir Class
+ * @description This function is the constructor of the Investir Class
  * @param {Object} cfe - the  CFE Impot Rates
  * @param {Object} isammmort - the IS Impot Rates
  * @param {Object} imf - the IMF Impot Rates
@@ -186,7 +186,7 @@ Fabrique.prototype.investir = function (cfe, isammmort, imf, irvm, irc, tvaPetro
 };
 /**
  * @constructs
- * @Description The function is the construct of the ImpotPays Class
+ * @description The function is the construct of the ImpotPays Class
  * @param {number} duree - the time of the Impot
  * @param {number} taux - the rates of the Impot
  * @param {number} reductonEcume - the reduc of the Impot
@@ -201,7 +201,7 @@ Fabrique.prototype.impotPays = function (duree, taux, reductonEcume) {
 };
 /**
  * @constructs
- * @Description The function is the construct of the ImpotPays Class
+ * @description The function is the construct of the ImpotPays Class
  * @param {number} duree - the time of the Impot
  * @param {number} taux - the rates of the Impot
  * @param {number} reductonEcume - the reduc of the Impot
@@ -220,7 +220,7 @@ Fabrique.prototype.isImpotPays = function (duree, taux, reductonEcume, ammortTau
 };
 /**
  * @constructs
- * @Description This function is the construct of the AmortirModele Class
+ * @description This function is the construct of the AmortirModele Class
  * @param {number} prix - the price u have to start the function
  * @param {number} durLin - the time of the amortissement
  * @param {number} coef - the coef of the amortissement
@@ -308,7 +308,7 @@ Fabrique.prototype.armortirModele = function (prix, durLin, coef, nom) {
         chargeAmorti: chargeAmorti,
         nom: nom,
         /**
-         * @Description This function create the html code of the Amortir class
+         * @description This function create the html code of the Amortir class
          * @return {string} html
          */
         getHtml: function () {

@@ -1,5 +1,5 @@
 /**
- * @Description This function give the Invest on the modele
+ * @description This function give the Invest on the modele
  * @param {Object } mE - the firm used by the modele
  * @param {number} pibchoix - the pib want be used
  * @return {number} invest
@@ -8,7 +8,7 @@ ModeleManager.prototype.investissementModele = function (mE, pibchoix) {
     return (mE.terrain + mE.construction + mE.equipement + mE.camion + mE.info + mE.bureau) * pibchoix;
 };
 /**
- * @Description This function give the amortissement o the modele
+ * @description This function give the amortissement o the modele
  * @param {Object} mE - the firm used by the modele
  * @param {Object} mP - the Land used by the modele
  * @param {number} pibchoix - the pib want be used
@@ -25,7 +25,7 @@ ModeleManager.prototype.ammortissment = function (mE, mP, pibchoix) {
 
 };
 /**
- *@Description This function give a general overview of the amortissement
+ *@description This function give a general overview of the amortissement
  * @param {array} ammortissement - the array of the amortissment
  * @return {Array} amortGeneral
  */
@@ -46,7 +46,7 @@ ModeleManager.prototype.ammortGen = function (ammortissement) {
 
 };
 /**
- *@Description This function give the tva on petrole real
+ *@description This function give the tva on petrole real
  * @param {Object } mE  - the firm used by the model
  * @param {Object} impot - the impot used on the land
  * @param {number} pibchoix - the pib want be used
@@ -83,7 +83,7 @@ ModeleManager.prototype.taxe_val_ajout = function (mE, impot, pibchoix) {
     //--------------------------------------
 };
 /**
- * @Description This function give the tab Of the real price of the working force
+ * @description This function give the tab Of the real price of the working force
  * @param {Object } mE  - the firm used by the model
  * @param {Object } mP  - the land used by the model
  * @param {number} pibchoix - the pib want be used
@@ -128,7 +128,7 @@ ModeleManager.prototype.contributionForfEmploie = function (mE, mP, pibchoix, im
     };
 };
 /**
- * @Description this function give the real taxe Rate
+ * @description this function give the real taxe Rate
  * @param {Object } mP  - the land used by the model
  * @param {Object} donne - the Donne used by the model
  * @return {{cfe: number, is: number, imf: number, irvm: number, irc: number, tvaPetrole: number}}
@@ -248,7 +248,7 @@ ModeleManager.prototype.selectTaxe = function (mP, donne) {
 
 };
 /**
- * @Description This function give the real price of the Creance used by the modele
+ * @description This function give the real price of the Creance used by the modele
  * @param {Object } mE  - the firm used by the model
  * @param {Object} impot - the impot used on the land
  * @param {number} pibchoix - the pib want be used
@@ -283,7 +283,7 @@ ModeleManager.prototype.taxe_creance = function (mE, impot, pibchoix) {
     //--------------------------------------
 };
 /**
- * @Description this function give the result of the comptability
+ * @description this function give the result of the comptability
  * @param {Object } mE  - the firm used by the model
  * @param {number} pibchoix - the pib want be used
  * @param {Array } tva - the tva on petrole used by the model
@@ -369,7 +369,7 @@ ModeleManager.prototype.comptableResult = function (mE, pibchoix, tva, salaire_c
 
 };
 /**
- *@Description This function give the result of impot
+ *@description This function give the result of impot
  * @param {Array} benCompta - the profit of the comptability
  * @param {Array} amortExep - the amortissement Excep used by a model
  * @return {{benCompta: Array, amortExep: Array, benImpo: Array}}
@@ -386,7 +386,7 @@ ModeleManager.prototype.impotResult = function (benCompta, amortExep) {
     };
 };
 /**
- *@Description This function give the Amortissement Exep
+ *@description This function give the Amortissement Exep
  * @param {Object } mP  - the land used by the model
  * @param {Array} benCompta - the profit of the comptability
  * @param {String} regime - the government used by the modem
@@ -476,7 +476,7 @@ ModeleManager.prototype.ammortExcept = function (mP, benCompta, regime, donneRef
     }
 };
 /**
- *@Description This function give the real impot (is or imf ) paid by the Firm
+ *@description This function give the real impot (is or imf ) paid by the Firm
  * @param {Array}  is - the real Is Impot give by the model
  * @param {Array}  imf - the real imf Impot give by the model
  * @return {Array}
@@ -494,7 +494,7 @@ ModeleManager.prototype.iSIMFtab = function (is, imf) {
     return monTab;
 };
 /**
- *@Description  This function give the real price of all taxe paid
+ *@description  This function give the real price of all taxe paid
  * @param {number} actu - a discount rate want be used
  * @param {Object} employer - a Real Price of Working Force used by a model
  * @param {Array}  isImf -  the real IS or IMF Impot give by the model
@@ -537,7 +537,7 @@ ModeleManager.prototype.impotTaxeCourent = function (actu, employer, isImf, impo
 
 };
 /**
- *@Description  This function give the real price of all taxe paid with actu
+ *@description  This function give the real price of all taxe paid with actu
  * @param {number} actu - a discount rate want be used
  * @param {Object} employer - a Real Price of Working Force used by a model
  * @param {Array}  isImf -  the real IS or IMF Impot give by the model
@@ -586,7 +586,7 @@ ModeleManager.prototype.impotTaxeActu = function (actu, employer, isImf, impotIR
 
 };
 /**
- *@Description This function give the TEMI
+ *@description This function give the TEMI
  * @param {number} vanSI - a NPV Without Taxe
  * @param {number} vanAI - a NPV with Taxe
  * @return {number}
@@ -601,7 +601,7 @@ ModeleManager.prototype.tauxEffectif = function (vanSI, vanAI) {
 
 };
 /**
- * @Description This function give the cash Flow of the firm on the land without Taxe
+ * @description This function give the cash Flow of the firm on the land without Taxe
  *  @param {Object } entreprise  - the land used by the model
  * @param {number} pin - the pib want be used
  * @param {Object} compta - The comptability result in the modele
@@ -647,7 +647,7 @@ ModeleManager.prototype.fluxTresoriesI = function (entreprise, pin, compta, actu
     };
 };
 /**
- *@Description This function give the cash FLow of the firm in the land with taxe
+ *@description This function give the cash FLow of the firm in the land with taxe
  * @param {Object }  fluxTresorie - the cash FLow of the firm in the land without taxe
  * @param {Array} tabImpotC - Taxe Of the land on the firm
  * @param {Array} tabImpotA - Taxe Of the land on the firm actu
@@ -679,7 +679,7 @@ ModeleManager.prototype.fluxTresoriesImp = function (fluxTresorie, tabImpotC, ta
 
 };
 /**
- *@Description This function give a return rates evolution Table
+ *@description This function give a return rates evolution Table
  * @param {Array} tab - the array want to compute this
  * @return {Array}
  */
@@ -711,7 +711,7 @@ ModeleManager.prototype.tauxRendementInterne = function (tab) {
     return taux;
 };
 /**
- *@Description This function give the effective rate
+ *@description This function give the effective rate
  * @param {Array} tabSi - An Array want to be calc (cashFlow) without Taxe
  * @param {Array} tabAi -  An Array Want to be calc(cashFlow) with Taxe
  * @return {Array}

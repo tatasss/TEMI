@@ -4,7 +4,7 @@
  * @param {string} regime - a regime of the modele
  * @param {Array} maMarge - A Array of the marge Rate
  * @param {string} titre - a filename of the excel outPut
- * @description function create a graphique with a module Chart.js
+ * @description This function create a graphique with a module Chart.js
  * return nothing but touch the html with id parameter
  */
 Graph.prototype.graphique = function (modeleTab, id, regime,maMarge,titre) {
@@ -123,7 +123,7 @@ Graph.prototype.graphique = function (modeleTab, id, regime,maMarge,titre) {
 };
 
 /**
- * @Description function create a random color array
+ * @description This function create a random color array
  * @param {number} number - the number of color u want
  * @return {Array} colors  - an array with all color tab
  */
@@ -147,7 +147,7 @@ function createColorSet(number) {
 }
 
 /**
- * @Description function create a chart.js color with an array of color
+ * @description This function create a chart.js color with an array of color
  * @param {Object} tab - the color (r,g b)
  * @return {string} the colors of chart.js
  */
