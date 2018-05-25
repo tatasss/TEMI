@@ -166,12 +166,12 @@ Fabrique.prototype.entreprise = function (actu, marge) {
 /**
  * @constructs
  * @Description This function is the constructor of the Investir Class
- * @param {number} cfe - the  CFE Impot Rates
- * @param {number} isammmort - the IS Impot Rates
- * @param {number} imf - the IMF Impot Rates
- * @param {number} irvm - the IRVM Impot Rates
- * @param {number} irc - the IRC Impot Rates
- * @param {number} tvaPetrole - The TVA on Petrole Rates
+ * @param {Object} cfe - the  CFE Impot Rates
+ * @param {Object} isammmort - the IS Impot Rates
+ * @param {Object} imf - the IMF Impot Rates
+ * @param {Object} irvm - the IRVM Impot Rates
+ * @param {Object} irc - the IRC Impot Rates
+ * @param {Object} tvaPetrole - The TVA on Petrole Rates
  * @return {{cfe: number, isamort: number, imf: number, irvm: number, irc: number, tvaPetrole: number}}
  */
 Fabrique.prototype.investir = function (cfe, isammmort, imf, irvm, irc, tvaPetrole) {

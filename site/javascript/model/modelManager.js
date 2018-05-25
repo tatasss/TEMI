@@ -389,8 +389,7 @@ ModeleManager.prototype.impotResult = function (benCompta, amortExep) {
  *@Description This function give the Amortissement Exep
  * @param {Object } mP  - the land used by the model
  * @param {Array} benCompta - the profit of the comptability
- * @param {String} benCompta - the government used by the model
- * @param regime
+ * @param {String} regime - the government used by the modem
  * @param {Object} donneRef - the Donne used by the model
  * @return {{duree: number, investissement: number, taux: number, limitation: number, dureeTab: Array, baseAmorti: Array, chargeAmorti: Array}}
  */
