@@ -172,7 +172,7 @@ Fabrique.prototype.entreprise = function (actu, marge) {
  * @param {Object} irvm - the IRVM Impot Rates
  * @param {Object} irc - the IRC Impot Rates
  * @param {Object} tvaPetrole - The TVA on Petrole Rates
- * @return {{cfe: number, isamort: number, imf: number, irvm: number, irc: number, tvaPetrole: number}}
+ * @return {{cfe: Object, isamort: Object, imf: Object, irvm: Object, irc: Object, tvaPetrole: Object}}
  */
 Fabrique.prototype.investir = function (cfe, isammmort, imf, irvm, irc, tvaPetrole) {
     return {

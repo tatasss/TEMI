@@ -48,7 +48,7 @@ MyMath.prototype.tri = function (tab) {
     if (!positive || !negative) throw new Error('TRI a besoin de valeur positif et negatif');
 
     /**
-     * This function compute the NPV(Net Present Value)
+     * @Description This function compute the NPV(Net Present Value)
      * @param {number} rate - the rate of the actu
      * @return {number}
      */
