@@ -363,7 +363,7 @@ GenererVue.prototype.navigationHtml = function (pays, regimE, actu, marge) {
     }
     let pannel = bootstrap.pan("default", "Paramétres", ref.donnerNomPays(pays) + "<br/>" + regime + "</br>" + actu + "</br>" + marge);
     let result = "<div class='vertical-menu'>" + pannel;
-    result += bootstrap.buttonBalA("./model.html", "voir model");
+    result += bootstrap.buttonBalA("./model.html", "voir résultat");
     result += bootstrap.buttonBalA("./index.html", "retour") + "</div>";
     return result;
 };
