@@ -1,0 +1,72 @@
+@startuml
+actor User
+entity VueHtml
+entity javascript
+alt option1
+    User -> VueHtml: Choisie "Pays"
+    User -> VueHtml: Choisie "regime Fiscale"
+    User ->VueHtml: entre "Taux actualisation"
+    User -> VueHtml :entre "Taux de marge de l'entreprise"
+    User ->VueHtml:valider Selection
+    VueHtml->javascript:envoie Selection
+    alt succées
+        javascript->javascript:creer modele
+        VueHtml<-javascript:envoie resultHtml
+        VueHtml->User:montre premier Resultat
+        alt ModeleButton
+            User -> VueHtml :click
+            VueHtml->javascript : demande modele
+            VueHtml<--javascript : envoie modele HTML
+        else Retour
+            User -> VueHtml :click
+            VueHtml->javascript : demande retour
+            VueHtml<--javascript : charge VueHtml debut
+        end
+    else marge n'est pas un pourcentage
+        User<- VueHtml:marge noPurcent
+        VueHtml<-javascript:marge noPurcent
+    else actualisation n'est pas un pourcentage
+        User<-VueHtml:actu noPurcent
+        VueHtml<-javascript:actu noPurcent
+    end
+else option 2
+    User ->VueHtml : clique sur demarrer comparatif
+    VueHtml->javascript : demande comparatif
+    javascript->VueHtml : demande information
+    VueHtml->User : montre modal
+    alt retour boutton
+        User->VueHtml:click
+        VueHtml->javascript : demande retour
+        VueHtml<--javascript : charge VueHtml debut
+    else continuer
+        User->VueHtml :saisie "taux Actualisation"
+        User->VueHtml:choisie "regime Fiscale"
+        User->VueHtml : click boutton Continuer
+        VueHtml->javascript :demande comparaison avec donne
+        javascript->VueHtml: change Page
+        VueHtml->User : montre autre Formulaire
+        loop true
+            alt Pays
+                User->VueHtml: Ajoute Pays
+                VueHtml->javascript:notifie add Pays
+                javascript->javascript:ajoute Pays
+            else marge
+                User->VueHtml: Ajoute Entreprise
+                VueHtml->javascript:notifie add Entreprise
+                javascript->javascript:ajoute Entreprise
+            end
+            javascript->javascript:faire Graph
+            javascript->javascript:faire tableau
+            javascript->VueHtml:envoie graph +tableau
+            VueHtml->User:montre graph + tableau
+            alt excelOutput
+                User->VueHtml:Click button Excel
+                VueHtml->javascript:demande Excel
+                javascript->javascript:faire Excel
+                javascript-> User: envoie Excel
+            end
+        end
+    end
+end
+
+@enduml
