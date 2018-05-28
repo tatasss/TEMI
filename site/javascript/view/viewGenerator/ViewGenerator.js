@@ -5,7 +5,7 @@
 GenererVue.prototype.resultatHtml = function () {
     //mis en place du tableaux des resultat
     let impotStatDuree = [];
-    if (this.modele.donnee.regime === "gen") {
+    if (this.modele.donnee.regime() === "gen") {
         for (let i = 0; i < 5; i++) {
             impotStatDuree.push(" ");
         }
@@ -16,23 +16,23 @@ GenererVue.prototype.resultatHtml = function () {
 
     let head = "<thead><tr><th/><th colspan=3 align=center>Taux statuaire</th><th colspan=2>Taux effectifs marginaux</th></tr>";
     head += "<tr><th/><th>Taux plein</th><th>Taux reduit</th><th>Durée</th><th>First Year</th><th>Five Year</th></tr></thead>";
-    let cfe = this.recupDonneTab(false, this.modele.donnee.pays.investissement.cfe, this.modele.donnee.pays.impots.cfe,
+    let cfe = this.recupDonneTab(false, this.modele.donnee.pays().investissement.cfe, this.modele.donnee.pays().impots.cfe,
         false, false, false);
-    let is = this.recupDonneTab(false, this.modele.donnee.pays.investissement.isamort,
-        this.modele.donnee.pays.impots.isImp, true, false, false);
+    let is = this.recupDonneTab(false, this.modele.donnee.pays().investissement.isamort,
+        this.modele.donnee.pays().impots.isImp, true, false, false);
 
-    let imf = this.recupDonneTab(false, this.modele.donnee.pays.investissement.imf, this.modele.donnee.pays.impots.imf,
+    let imf = this.recupDonneTab(false, this.modele.donnee.pays().investissement.imf, this.modele.donnee.pays().impots.imf,
         false, true, false);
-    let irvm = this.recupDonneTab(false, this.modele.donnee.pays.investissement.irvm,
-        this.modele.donnee.pays.impots.irvm, false, false, false);
-    let irc = this.recupDonneTab(false, this.modele.donnee.pays.investissement.irc, this.modele.donnee.pays.impots.irc,
+    let irvm = this.recupDonneTab(false, this.modele.donnee.pays().investissement.irvm,
+        this.modele.donnee.pays().impots.irvm, false, false, false);
+    let irc = this.recupDonneTab(false, this.modele.donnee.pays().investissement.irc, this.modele.donnee.pays().impots.irc,
         false, false, false);
-    let tva = this.recupDonneTab(false, this.modele.donnee.pays.investissement.tvaPetrole,
-        this.modele.donnee.pays.impots.tva_petrole, false, false, false);
-    let tot = this.recupDonneTab(this.modele.mesdon().tauxeffMoyCourent, this.modele.donnee.pays.investissement.total,
-        this.modele.donnee.pays.impots.imf, false, false, true);
+    let tva = this.recupDonneTab(false, this.modele.donnee.pays().investissement.tvaPetrole,
+        this.modele.donnee.pays().impots.tva_petrole, false, false, false);
+    let tot = this.recupDonneTab(this.modele.mesdon().tauxeffMoyCourent, this.modele.donnee.pays().investissement.total,
+        this.modele.donnee.pays().impots.imf, false, false, true);
     let bodyTest = bootstrap.tableSE(
-        [`CFE</td><td>${this.modele.donnee.pays.impots.cfe}`, `IS</td><td class=\"fontred\">${this.mP.impots.isImp}`,
+        [`CFE</td><td>${this.modele.donnee.pays().impots.cfe}`, `IS</td><td class=\"fontred\">${this.mP.impots.isImp}`,
             `IMF</td><td class=\"fontred\">${this.mP.impots.imf}`, `IRVM</td><td>${this.mP.impots.irvm}`,
             `IRC</td><td>${this.mP.impots.irc}`, `TVA Petrole</td><td>${this.mP.impots.tva_petrole}`, "total</td><td>"],
         head,
@@ -94,7 +94,7 @@ GenererVue.prototype.recupDonneTab = function (effMoy, impDonne, donneImp, isIs,
         return result;
     }
     else {
-        if (this.modele.donnee.regime !== "Gen") {
+        if (this.modele.donnee.regime() !== "Gen") {
             if (impDonne.taux != null) {
                 result.push(impDonne.taux);
             }
@@ -314,12 +314,12 @@ GenererVue.prototype.ImpotHtml = function () {
     let irc = [];
     let tva = [];
     for (let i = 0; i < 5; i++) {
-        cfe.push(this.modele.mesdon().impotSelected.cfe + "%");
-        is.push(this.modele.mesdon().impotSelected.is + "%");
-        imf.push(this.modele.mesdon().impotSelected.imf + "%");
-        irvm.push(this.modele.mesdon().impotSelected.irvm + "%");
-        irc.push(this.modele.mesdon().impotSelected.irc + "%");
-        tva.push(this.modele.mesdon().impotSelected.tvaPetrole + "%");
+        cfe.push(this.modele.mesdon().impotSelected().cfe + "%");
+        is.push(this.modele.mesdon().impotSelected().is + "%");
+        imf.push(this.modele.mesdon().impotSelected().imf + "%");
+        irvm.push(this.modele.mesdon().impotSelected().irvm + "%");
+        irc.push(this.modele.mesdon().impotSelected().irc + "%");
+        tva.push(this.modele.mesdon().impotSelected().tvaPetrole + "%");
     }
     let cote = ["CFE", "IS", "IMF", "IRVM", "IRC", "TVA Petrole"];
     return bootstrap.tableSE(cote, head, {
@@ -415,15 +415,15 @@ GenererVue.prototype.bodyHtml = function () {
  */
 GenererVue.prototype.navigationHtml = function () {
     let regime;
-    if (this.modele.donnee.regime === "gen") {
+    if (this.modele.donnee.regime() === "gen") {
         regime = "code général des impots";
     }
     else {
         regime = "code des investissements";
     }
-    let pannel = bootstrap.pan("default", "Paramétres", this.modele.donnee.pays.nom + "<br/>" + regime + "</br>" + this.modele.donnee.actu + "</br>" + this.modele.donnee.marge);
+    let pannel = bootstrap.pan("default", "Paramétres", this.modele.donnee.pays().nom + "<br/>" + regime + "</br>" + this.modele.donnee.actu() + "</br>" + this.modele.donnee.marge());
     let result = "<div class='vertical-menu'>" + pannel;
-    result += bootstrap.buttonBalA("./model.html", "voir résultat");
+    result += bootstrap.buttonBalA("./model.html", "voire résultat");
     result += bootstrap.buttonBalA("./index.html", "retour") + "</div>";
     return result;
 };
@@ -432,8 +432,8 @@ GenererVue.prototype.navigationHtml = function () {
  * @return {string}
  */
 GenererVue.prototype.mainHTML = function () {
-    this.mP = this.modele.donnee.pays;
-    this.mE = this.modele.donnee.entreprise;
+    this.mP = this.modele.donnee.pays();
+    this.mE = this.modele.donnee.entreprise();
     return bootstrap.container(bootstrap.GridNavCote(this.bodyHtml(), this.navigationHtml()));
 };
 /**
@@ -443,15 +443,15 @@ GenererVue.prototype.mainHTML = function () {
 GenererVue.prototype.petroleHtml = function () {
     let cote = ["Pétrole</td><td>FCFA", "Taux</td><td>%", "TVA Petrole</td><td>FCFA"];
     let tab = bootstrap.tableSE(cote, null, {
-            tab: this.modele.mesdon().taxeAjout.petrole,
+            tab: this.modele.mesdon().taxeAjout().petrole,
             color: "blue"
         },
         {
-            tab: this.modele.mesdon().taxeAjout.taux,
+            tab: this.modele.mesdon().taxeAjout().taux,
             color: "yellow"
         },
         {
-            tab: this.modele.mesdon().taxeAjout.tva,
+            tab: this.modele.mesdon().taxeAjout().tva,
             color: ""
         });
     return bootstrap.pan("default", null, tab);
@@ -463,15 +463,15 @@ GenererVue.prototype.petroleHtml = function () {
 GenererVue.prototype.chargeFinancierHtml = function () {
     let cote = ["Charges financiéres</td><td>FCFA", "Taux</td><td>%", "IRC</td><td>FCFA"];
     let tab = bootstrap.tableSE(cote, null, {
-            tab: myMath.arrondirTabUnit(this.modele.mesdon().taxeCreance.chargeFinance),
+            tab: myMath.arrondirTabUnit(this.modele.mesdon().taxeCreance().chargeFinance),
             color: "blue"
         },
         {
-            tab: myMath.arrondirTabUnit(this.modele.mesdon().taxeCreance.taux, 2),
+            tab: myMath.arrondirTabUnit(this.modele.mesdon().taxeCreance().taux, 2),
             color: "yellow"
         },
         {
-            tab: myMath.arrondirTabUnit(this.modele.mesdon().taxeCreance.irc),
+            tab: myMath.arrondirTabUnit(this.modele.mesdon().taxeCreance().irc),
             color: ""
         });
     return bootstrap.pan("default", null, tab);
@@ -487,27 +487,27 @@ GenererVue.prototype.emploieHtml = function () {
     cote.push("CFE</td><td>FCFA");
     let tab = bootstrap.tableSE(cote, null,
         {
-            tab: myMath.arrondirTabUnit(this.modele.mesdon().employer.salaire_cadre, 0),
+            tab: myMath.arrondirTabUnit(this.modele.mesdon().employer().salaire_cadre, 0),
             color: "blue"
         },
         {
-            tab: myMath.arrondirTabUnit(this.modele.mesdon().employer.salaire_secretaire),
+            tab: myMath.arrondirTabUnit(this.modele.mesdon().employer().salaire_secretaire),
             color: "blue"
         },
         {
-            tab: myMath.arrondirTabUnit(this.modele.mesdon().employer.salaire_ouvrier),
+            tab: myMath.arrondirTabUnit(this.modele.mesdon().employer().salaire_ouvrier),
             color: "blue"
         },
         {
-            tab: myMath.arrondirTabUnit(this.modele.mesdon().employer.masse_salarial),
+            tab: myMath.arrondirTabUnit(this.modele.mesdon().employer().masse_salarial),
             color: ""
         },
         {
-            tab: myMath.arrondirTabUnit(this.modele.mesdon().employer.tauxCfe, 2),
+            tab: myMath.arrondirTabUnit(this.modele.mesdon().employer().tauxCfe, 2),
             color: "yellow"
         },
         {
-            tab: myMath.arrondirTabUnit(this.modele.mesdon().employer.reel_CFE),
+            tab: myMath.arrondirTabUnit(this.modele.mesdon().employer().reel_CFE),
             color: ""
         });
     return bootstrap.pan("default", null, tab);
@@ -534,68 +534,68 @@ GenererVue.prototype.comptableHtml = function () {
     cote.push("Taux de marge  avant IS/IMF</td><td>%CA");
     let tab = bootstrap.tableSE(cote, null,
         {
-            tab: myMath.arrondirTabUnit(this.modele.mesdon().resultCompta.vente),
+            tab: myMath.arrondirTabUnit(this.modele.mesdon().resultCompta().vente),
             color: "blue",
             bottomBorder: "true"
         },
         {
-            tab: myMath.arrondirTabUnit(this.modele.mesdon().resultCompta.achats),
+            tab: myMath.arrondirTabUnit(this.modele.mesdon().resultCompta().achats),
             color: "blue"
         },
         {
-            tab: myMath.arrondirTabUnit(this.modele.mesdon().resultCompta.petrole),
+            tab: myMath.arrondirTabUnit(this.modele.mesdon().resultCompta().petrole),
             color: "blue"
         },
         {
-            tab: myMath.arrondirTabUnit(this.modele.mesdon().resultCompta.tva_petrole),
+            tab: myMath.arrondirTabUnit(this.modele.mesdon().resultCompta().tva_petrole),
             color: ""
         },
         {
-            tab: myMath.arrondirTabUnit(this.modele.mesdon().resultCompta.depense_admin),
+            tab: myMath.arrondirTabUnit(this.modele.mesdon().resultCompta().depense_admin),
             color: "blue"
         },
         {
-            tab: myMath.arrondirTabUnit(this.modele.mesdon().resultCompta.depense_pub),
+            tab: myMath.arrondirTabUnit(this.modele.mesdon().resultCompta().depense_pub),
             color: "blue"
         },
         {
-            tab: myMath.arrondirTabUnit(this.modele.mesdon().resultCompta.depense_entretien),
+            tab: myMath.arrondirTabUnit(this.modele.mesdon().resultCompta().depense_entretien),
             color: "blue",
             bottomBorder: "true"
         },
         {
-            tab: myMath.arrondirTabUnit(this.modele.mesdon().resultCompta.salaire_cadre),
+            tab: myMath.arrondirTabUnit(this.modele.mesdon().resultCompta().salaire_cadre),
             color: "blue"
         },
         {
-            tab: myMath.arrondirTabUnit(this.modele.mesdon().resultCompta.salaire_secretaire),
+            tab: myMath.arrondirTabUnit(this.modele.mesdon().resultCompta().salaire_secretaire),
             color: "blue"
         },
         {
-            tab: myMath.arrondirTabUnit(this.modele.mesdon().resultCompta.salaire_ouvrier),
+            tab: myMath.arrondirTabUnit(this.modele.mesdon().resultCompta().salaire_ouvrier),
             color: "blue"
         },
         {
-            tab: myMath.arrondirTabUnit(this.modele.mesdon().resultCompta.cfe),
+            tab: myMath.arrondirTabUnit(this.modele.mesdon().resultCompta().cfe),
             color: "",
             bottomBorder: "true"
         },
         {
-            tab: myMath.arrondirTabUnit(this.modele.mesdon().resultCompta.chargeFinanciere),
+            tab: myMath.arrondirTabUnit(this.modele.mesdon().resultCompta().chargeFinanciere),
             color: "blue",
             bottomBorder: "true"
         },
         {
-            tab: myMath.arrondirTabUnit(this.modele.mesdon().resultCompta.amortissement),
+            tab: myMath.arrondirTabUnit(this.modele.mesdon().resultCompta().amortissement),
             color: "",
             bottomBorder: "true"
         },
         {
-            tab: myMath.arrondirTabUnit(this.modele.mesdon().resultCompta.benefice_comptable),
+            tab: myMath.arrondirTabUnit(this.modele.mesdon().resultCompta().benefice_comptable),
             color: ""
         },
         {
-            tab: myMath.arrondirTabUnit(this.modele.mesdon().resultCompta.taux_marge_avant__IS_IMF, 1),
+            tab: myMath.arrondirTabUnit(this.modele.mesdon().resultCompta().taux_marge_avant__IS_IMF, 1),
             color: ""
         });
     return bootstrap.pan("default", null, tab);
@@ -608,19 +608,19 @@ GenererVue.prototype.ammortExcepHtml = function () {
     let coteHead = ["Investissement</td><td>FCFA", "Taux</td><td>% Investissement", "Limitation</td><td>% Bénéfice comptable", "Durée</td><td>Années"];
     let tabHead = bootstrap.tableSE(coteHead, null,
         {
-            tab: [Math.round(this.modele.mesdon().ammortExcep.investissement)],
+            tab: [Math.round(this.modele.mesdon().ammortExcep().investissement)],
             color: "blue"
         },
         {
-            tab: myMath.arrondirTabUnit([this.modele.mesdon().ammortExcep.taux], 2),
+            tab: myMath.arrondirTabUnit([this.modele.mesdon().ammortExcep().taux], 2),
             color: "yellow"
         },
         {
-            tab: myMath.arrondirTabUnit([this.modele.mesdon().ammortExcep.limitation], 2),
+            tab: myMath.arrondirTabUnit([this.modele.mesdon().ammortExcep().limitation], 2),
             color: "yellow"
         },
         {
-            tab: myMath.arrondirTabUnit([this.modele.mesdon().ammortExcep.duree]),
+            tab: myMath.arrondirTabUnit([this.modele.mesdon().ammortExcep().duree]),
             color: "yellow"
         });
 
@@ -628,14 +628,14 @@ GenererVue.prototype.ammortExcepHtml = function () {
     let coteBody = ["Durée restante</td><td>Années", "Base amortissable</td><td>FCFA", "Charge d'amortissement</td><td>FCFA"];
     let tabBody = bootstrap.tableSE(coteBody, null,
         {
-            tab: this.modele.mesdon().ammortExcep.dureeTab,
+            tab: this.modele.mesdon().ammortExcep().dureeTab,
             color: ""
         },
         {
-            tab: this.modele.mesdon().ammortExcep.baseAmorti, color: ""
+            tab: this.modele.mesdon().ammortExcep().baseAmorti, color: ""
         },
         {
-            tab: this.modele.mesdon().ammortExcep.chargeAmorti,
+            tab: this.modele.mesdon().ammortExcep().chargeAmorti,
             color: ""
         });
     return bootstrap.pan("info", tabHead, tabBody);
@@ -647,15 +647,15 @@ GenererVue.prototype.ammortExcepHtml = function () {
 GenererVue.prototype.resultatImpotHtml = function () {
     let cote = ["Bénéfice comptable</td><td>FCFA", "Amortissement exceptionnel</td><td>FCFA", "Bénéfice imposable</td><td>FCFA"];
     let tab = bootstrap.tableSE(cote, null, {
-            tab: myMath.arrondirTabUnit(this.modele.mesdon().resultImpot.benCompta),
+            tab: myMath.arrondirTabUnit(this.modele.mesdon().resultImpot().benCompta),
             color: ""
         },
         {
-            tab: myMath.arrondirTabUnit(this.modele.mesdon().resultImpot.amortExep),
+            tab: myMath.arrondirTabUnit(this.modele.mesdon().resultImpot().amortExep),
             color: ""
         },
         {
-            tab: myMath.arrondirTabUnit(this.modele.mesdon().resultImpot.benImpo),
+            tab: myMath.arrondirTabUnit(this.modele.mesdon().resultImpot().benImpo),
             color: ""
         });
     return bootstrap.pan("default", null, tab);
@@ -667,9 +667,9 @@ GenererVue.prototype.resultatImpotHtml = function () {
 GenererVue.prototype.getAmmortGenneralHtml = function () {
     let cpt = 0;
     let tab = "<table class='table'><thead/></thead><tbody><tr><td>Construction</td><td>FCFA</td>";
-    for (let i = 0; i < this.modele.mesdon().amortissementGeneral.length; i++) {
-        if (this.modele.mesdon().amortissementGeneral[i] !== "change") {
-            tab += `<td>${Math.round(this.modele.mesdon().amortissementGeneral[i])}</td>`;
+    for (let i = 0; i < this.modele.mesdon().amortissementGeneral().length; i++) {
+        if (this.modele.mesdon().amortissementGeneral()[i] !== "change") {
+            tab += `<td>${Math.round(this.modele.mesdon().amortissementGeneral()[i])}</td>`;
         }
         else {
             tab += "</tr><tr>";
@@ -704,13 +704,13 @@ GenererVue.prototype.impotSocieteHtml = function () {
     let is = [];
     let impSoc = [];
     for (let i = 0; i < 5; i++) {
-        is.push(this.modele.mesdon().impotSelected.is);
-        impSoc.push(Math.round(this.modele.mesdon().impotSociete[i]));
+        is.push(this.modele.mesdon().impotSelected().is);
+        impSoc.push(Math.round(this.modele.mesdon().impotSociete()[i]));
     }
     let cote = ["Benefice imposable</td><td>FCFA", "Taux</td><td>% bénéfice imposable", "IS</td><td>FCFA"];
     let tab = bootstrap.tableSE(cote, null,
         {
-            tab: myMath.arrondirTabUnit(this.modele.mesdon().resultImpot.benImpo),
+            tab: myMath.arrondirTabUnit(this.modele.mesdon().resultImpot().benImpo),
             color: "",
         },
         {
@@ -733,12 +733,12 @@ GenererVue.prototype.impotForfaitHtml = function () {
     let imf = [];
     let impIMF = [];
     for (let i = 0; i < 5; i++) {
-        imf.push(this.modele.mesdon().impotSelected.is);
-        impIMF.push(Math.round(this.modele.mesdon().impotIMF[i]));
+        imf.push(this.modele.mesdon().impotSelected().is);
+        impIMF.push(Math.round(this.modele.mesdon().impotIMF()[i]));
     }
     let cote = ["Ventes</td><td>FCFA", "Taux</td><td>%CA", "IMF</td><td>FCFA"];
     let tab = bootstrap.tableSE(cote, null, {
-            tab: myMath.arrondirTabUnit(this.modele.mesdon().resultCompta.vente),
+            tab: myMath.arrondirTabUnit(this.modele.mesdon().resultCompta().vente),
             color: ""
         },
         {
@@ -758,15 +758,15 @@ GenererVue.prototype.impotForfaitHtml = function () {
 GenererVue.prototype.isImfHtml = function () {
     let cote = ["IS/IMF</td><td>FCFA", "Bénéfice après IS/IMF</td><td>FCFA", "Taux de marge  aprés IS/IMF</td><td>%CA"];
     let tab = bootstrap.tableSE(cote, null, {
-            tab: myMath.arrondirTabUnit(this.modele.mesdon().isImf),
+            tab: myMath.arrondirTabUnit(this.modele.mesdon().isImf()),
             color: ""
         },
         {
-            tab: myMath.arrondirTabUnit(this.modele.mesdon().resultCompta.benefice_comptable),
+            tab: myMath.arrondirTabUnit(this.modele.mesdon().resultCompta().benefice_comptable),
             color: ""
         },
         {
-            tab: myMath.arrondirTabUnit(this.modele.mesdon().resultCompta.taux_marge_avant__IS_IMF, 1),
+            tab: myMath.arrondirTabUnit(this.modele.mesdon().resultCompta().taux_marge_avant__IS_IMF, 1),
             color: ""
         });
     return bootstrap.pan("default", null, tab);
@@ -779,12 +779,12 @@ GenererVue.prototype.impotRevenuValeurMobilieres = function () {
     let div = [];
     let irvm = [];
     for (let i = 0; i < 5; i++) {
-        div.push(this.modele.donnee.entreprise.dividende);
-        irvm.push(this.modele.donnee.pays.impots.irvm);
+        div.push(this.modele.donnee.entreprise().dividende);
+        irvm.push(this.modele.donnee.pays().impots.irvm);
     }
     let cote = ["Bénéfice après IS/IMF</td><td>FCFA", "Distribution anuelle</td><td>% des bénéfice après IS/IMF", "taux</td><td>% des bénéfice après IS/IMF", "IRVM</td><td>FCFA"];
     let tab = bootstrap.tableSE(cote, null, {
-            tab: myMath.arrondirTabUnit(this.modele.mesdon().resultCompta.benefice_comptable),
+            tab: myMath.arrondirTabUnit(this.modele.mesdon().resultCompta().benefice_comptable),
             color: ""
         },
         {
@@ -796,7 +796,7 @@ GenererVue.prototype.impotRevenuValeurMobilieres = function () {
             color: "blue"
         },
         {
-            tab: myMath.arrondirTabUnit(this.modele.mesdon().impotIRVM),
+            tab: myMath.arrondirTabUnit(this.modele.mesdon().impotIRVM()),
             color: ""
         });
     return bootstrap.pan("default", null, tab);
@@ -807,7 +807,7 @@ GenererVue.prototype.impotRevenuValeurMobilieres = function () {
  */
 GenererVue.prototype.actualisationHtml = function () {
     let tab = bootstrap.tableSE(["actualisation"], null, {
-        tab: myMath.arrondirTabUnit(this.modele.mesdon().actualisation, 1),
+        tab: myMath.arrondirTabUnit(this.modele.mesdon().actualisation(), 1),
         color: ""
     });
     return bootstrap.pan("default", null, tab);
@@ -852,7 +852,7 @@ GenererVue.prototype.tabImpotEtTaxe = function (monm) {
  * @return {string}
  */
 GenererVue.prototype.tabTauxEffectifMoy = function () {
-    let tab = `<p> le TEMI est de ${Math.round(this.modele.mesdon().tauxeffMoyCourent * 100) / 100} %</p>`;
+    let tab = `<p> le TEMI est de ${Math.round(this.modele.mesdon().tauxeffMoyCourent() * 100) / 100} %</p>`;
     return bootstrap.pan("default", null, tab);
 };
 /**
@@ -901,7 +901,7 @@ GenererVue.prototype.tauxRendementInt = function (tab) {
  */
 GenererVue.prototype.investissementRegime = function () {
     let html = "<p>";
-    if (this.modele.donnee.regime !== "gen") {
+    if (this.modele.donnee.regime() !== "gen") {
         html += "La formulation de plusieurs hypothèses a été nécessaire afin de déterminer à quel régime privilégié " +
             "l’entreprise modélisée peut prétendre. L’investissement concerne une entreprise nouvelle. Il ne s’agit " +
             "pas d’un investissement d’extension des capacités de production d’une entreprise déjà existante. " +
@@ -916,7 +916,7 @@ GenererVue.prototype.investissementRegime = function () {
             "pour être éligible aux régimes supérieurs.";
         html += "</p><p>";
 
-        html += this.modele.donnee.pays.source;
+        html += this.modele.donnee.pays().source;
     }
     html += "</p>";
     return html;

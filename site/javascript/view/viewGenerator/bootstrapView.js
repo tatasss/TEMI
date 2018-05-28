@@ -324,7 +324,7 @@ BootstrapVue.prototype.bootstrapTemiTabSpe = function (cote, head, tab,maMarge,t
 
 
     html+=
-        `<a class="btn btn-default " download="&{titre}.xls" href="#" id="anchorNewApi-xls" onClick="newApi('xls','${tabExcel.toString()}','${titre}')">Export to Excel</a>`;
+        `<a class="btn btn-default " download="&{titre}.xls" href="#" id="anchorNewApi-xls" onClick="newApi('xls','${tabExcel.toString()}','${titre}')">Récupérer Excel</a>`;
     return html;
 
 

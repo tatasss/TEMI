@@ -138,7 +138,7 @@ ModeleManager.prototype.selectTaxe = function (mP, donne) {
     let cfe, is, imf, irvm, irc, tvaPetrole;
     //console.log(mP);
 
-    if (donne.regime === "gen") {
+    if (donne.regime() === "gen") {
         cfe = mP.impots.cfe;
         is = mP.impots.isImp;
         imf = mP.impots.imf;

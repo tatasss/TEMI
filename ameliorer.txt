@@ -3,15 +3,73 @@
 	-Si demande supplementaire du Chef de projet, le faire passer devant
 A ameliorer :
 	-BOttstrap une fonction qui regroupe tout les tableau different(doit être améliorable)
-	-Vue des class methode et attribut au sein du projet
 	-OPtimiser les fichiers(en ajouter et ou supprimer) pour que la page html ne telecharge que les fichiers js contenant le strict minimum necessaire a la page
 	-renomer le nom des class (pour tout develloper du monde et non uniquement dde france doit comprendre rien qu'avec le nom de la class et ou methode)
 	-bootstrpa button function d'assmblement des diff type
 	-graphique de Graph (ajout de l'id du texte)
 	-function ext ajout dans les objet approprier
 	-eviter la duplicaation de code (si on voit 2 fois le même code , en faire une methode generale)
+	-mis en mémoire du taux d'actualisition mis en default dans le modale(de même pour le regime)
 Ajout Optionnel:
 	-package String contenant tous les texte ecrit dans le projet(comme en Android)
 	-mis En place de pattern de qulité supérieur
 	-Vue (amélioration ergonomique)
 	-graph en ajax
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/***
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+B. 1. LA CHARTE GRAPHIQUE :
+
+/**Ajoutez avec votre cahier des charges tous les documents concernant l’identité visuelle de votre entreprise (les codes couleurs, le logo et ces variations, les règles de conception etc.).
+
+•	Précisez vos exigences concernant les couleurs et les effets de votre site ?
+•	Quelles sont les polices à utiliser ?
+•	Quels sont les éléments à conserver ?
+……………………………………………………………………………………..…… …………………………………………………………………………………..……… ……………………………………………………………………………………..…… ……………………………………………………………………………………..…… ………………………………………………………………………………………..…
+
+
+
+
+
+Ajoutez également à votre cahier des charges des exemples de sites avec un commentaire, les choses que vous aimez bien sur ces sites (éléments, animation, couleurs, architecture d’informations, fonctionnalités etc.) …………
+……………………………………………………………………………………..…… …………………………………………………………………………………..……… ……………………………………………………………………………………..…… ……………………………………………………………………………………..…… ………………………………………………………………………………………..… ……………………………………………………………………………………..…… ……………………………………………………………………………………..…… ……………………………………………………………………………………..……
+………………………………………………………………………………………..… ………………………………………………………………………………………..… …………………………………………………………………………………………..
+……………………………………………………………………………………..……
+……………………………………………………………………………………..……
+**/
+**/

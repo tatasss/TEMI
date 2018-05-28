@@ -31,7 +31,7 @@ Graph.prototype.graphique = function (modeleTab, id, regime,maMarge,titre) {
                 pays.push(item);
                 donneDataset.push([]);
                 pays[index].forEach(function (item2) {
-                    donneDataset[index].push(item2.modele.mesdon().tauxeffMoyCourent);
+                    donneDataset[index].push(item2.modele.mesdon().tauxeffMoyCourent());
                 })
 
             });
@@ -51,14 +51,14 @@ Graph.prototype.graphique = function (modeleTab, id, regime,maMarge,titre) {
                 });
                 entre.push("entreprise " + (index + 1));
                 dataset.push({
-                    label: "entreprise " + (index + 1) + " taux de marge avant impot = " + modeleTab[0][index].donne.marge + " % ",
+                    label: "entreprise " + (index + 1) + " taux de marge avant impot = " + modeleTab[0][index].donne.marge() + " % ",
                     data: item,
                     backgroundColor: realColor,
                 });
             });
             let payTab = [];
             modeleTab.forEach(function (item) {
-                payTab.push(item[0].donne.pays.nom);
+                payTab.push(item[0].donne.pays().nom);
             });
             //----------------------------------------------------------------------------------------------------------
             //ici la parti sur le tableau des temi
