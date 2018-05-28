@@ -16,6 +16,7 @@
       <w>agrément</w>
       <w>ainsi</w>
       <w>ajout</w>
+      <w>ajoute</w>
       <w>ajouter</w>
       <w>ajoutée</w>
       <w>ammort</w>
@@ -24,6 +25,7 @@
       <w>ammortissment</w>
       <w>amort</w>
       <w>amorti</w>
+      <w>amortir</w>
       <w>amortissable</w>
       <w>amortissem</w>
       <w>amortissement</w>
@@ -34,6 +36,7 @@
       <w>année</w>
       <w>années</w>
       <w>anuelle</w>
+      <w>apli</w>
       <w>apparu</w>
       <w>appelé</w>
       <w>appliqués</w>
@@ -44,6 +47,7 @@
       <w>armortir</w>
       <w>arrondir</w>
       <w>atteint</w>
+      <w>autre</w>
       <w>avant</w>
       <w>avantageux</w>
       <w>avec</w>
@@ -57,6 +61,8 @@
       <w>bilan</w>
       <w>bissao</w>
       <w>bodyglo</w>
+      <w>bonne</w>
+      <w>boutton</w>
       <w>burkina</w>
       <w>bénéfice</w>
       <w>bénéfices</w>
@@ -78,6 +84,7 @@
       <w>chiffre</w>
       <w>chiffres</w>
       <w>choisi</w>
+      <w>choisie</w>
       <w>cinq</w>
       <w>cmpta</w>
       <w>coef</w>
@@ -85,10 +92,13 @@
       <w>coefdegressif</w>
       <w>compa</w>
       <w>comparaison</w>
+      <w>comparatif</w>
       <w>compat</w>
       <w>comporte</w>
+      <w>comportement</w>
       <w>compris</w>
       <w>compta</w>
+      <w>comptability</w>
       <w>comptable</w>
       <w>comptables</w>
       <w>compte</w>
@@ -103,6 +113,7 @@
       <w>courent</w>
       <w>creance</w>
       <w>creances</w>
+      <w>creer</w>
       <w>crée</w>
       <w>culturel</w>
       <w>côte</w>
@@ -110,8 +121,10 @@
       <w>datasets</w>
       <w>datatable</w>
       <w>datent</w>
+      <w>definit</w>
       <w>degr</w>
       <w>degressif</w>
+      <w>demande</w>
       <w>demarrer</w>
       <w>depense</w>
       <w>depenses</w>
@@ -154,6 +167,7 @@
       <w>emploie</w>
       <w>emplois</w>
       <w>employeurs</w>
+      <w>enduml</w>
       <w>engagé</w>
       <w>entre</w>
       <w>entreprise</w>
@@ -161,6 +175,7 @@
       <w>entrer</w>
       <w>entretien</w>
       <w>entrée</w>
+      <w>envoie</w>
       <w>equipement</w>
       <w>erreur</w>
       <w>excellentexport</w>
@@ -173,6 +188,7 @@
       <w>exportatrice</w>
       <w>extern</w>
       <w>fabrique</w>
+      <w>faire</w>
       <w>fait</w>
       <w>faso</w>
       <w>fcfa</w>
@@ -193,6 +209,7 @@
       <w>forfait</w>
       <w>forfaitaire</w>
       <w>forfaitaires</w>
+      <w>formulaire</w>
       <w>fournisseur</w>
       <w>fournisseurs</w>
       <w>ftab</w>
@@ -230,6 +247,7 @@
       <w>ircm</w>
       <w>irvm</w>
       <w>isammmort</w>
+      <w>isammort</w>
       <w>isamort</w>
       <w>isimf</w>
       <w>issus</w>
@@ -242,6 +260,7 @@
       <w>linéaire</w>
       <w>liste</w>
       <w>localisée</w>
+      <w>longterme</w>
       <w>législation</w>
       <w>madon</w>
       <w>manufact</w>
@@ -266,6 +285,7 @@
       <w>mondiale</w>
       <w>monm</w>
       <w>montant</w>
+      <w>montre</w>
       <w>mota</w>
       <w>moyen</w>
       <w>moyens</w>
@@ -281,6 +301,7 @@
       <w>nombre</w>
       <w>nongen</w>
       <w>normale</w>
+      <w>notifie</w>
       <w>nouvelle</w>
       <w>ntaille</w>
       <w>nécessaire</w>
@@ -322,6 +343,7 @@
       <w>quel</w>
       <w>quelque</w>
       <w>recup</w>
+      <w>reduc</w>
       <w>reducexo</w>
       <w>reducton</w>
       <w>reduit</w>
@@ -335,11 +357,13 @@
       <w>retour</w>
       <w>revenu</w>
       <w>rrate</w>
+      <w>récuperer</w>
       <w>réduction</w>
       <w>réduit</w>
       <w>régime</w>
       <w>régimes</w>
       <w>résultat</w>
+      <w>saisie</w>
       <w>saisir</w>
       <w>salaire</w>
       <w>salaires</w>
@@ -364,7 +388,9 @@
       <w>somedata</w>
       <w>sont</w>
       <w>souvent</w>
+      <w>startuml</w>
       <w>statuaire</w>
+      <w>succées</w>
       <w>suivant</w>
       <w>supelem</w>
       <w>supporte</w>
@@ -383,6 +409,7 @@
       <w>tchad</w>
       <w>temi</w>
       <w>terme</w>
+      <w>texte</w>
       <w>thead</w>
       <w>totactu</w>
       <w>totalité</w>

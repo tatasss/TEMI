@@ -2,7 +2,6 @@
 	-scenario nominal reussite
 	-Si demande supplementaire du Chef de projet, le faire passer devant
 A ameliorer :
-	-GenererVue peut utiliser des modéles exterieur a celui qu'il posséde (a modifié)
 	-BOttstrap une fonction qui regroupe tout les tableau different(doit être améliorable)
 	-Vue des class methode et attribut au sein du projet
 	-OPtimiser les fichiers(en ajouter et ou supprimer) pour que la page html ne telecharge que les fichiers js contenant le strict minimum necessaire a la page
