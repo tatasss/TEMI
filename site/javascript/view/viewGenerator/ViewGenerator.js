@@ -108,10 +108,10 @@ GenererVue.prototype.recupDonneTab = function (effMoy, impDonne, donneImp, isIs,
                     result.push(null);
                 }
             }
-            if (impDonne.taux != null){
+            if (impDonne.taux != null) {
                 result.push(impDonne.duree);
             }
-            if(impDonne.reducexo != null){
+            if (impDonne.reducexo != null) {
                 result.push(impDonne.duree);
             }
         }
@@ -852,7 +852,7 @@ GenererVue.prototype.tabImpotEtTaxe = function (monm) {
  * @return {string}
  */
 GenererVue.prototype.tabTauxEffectifMoy = function () {
-    let tab = `<p> le TEMI est de ${Math.round(this.modele.mesdon().tauxeffMoyCourent* 100) / 100} %</p>`;
+    let tab = `<p> le TEMI est de ${Math.round(this.modele.mesdon().tauxeffMoyCourent * 100) / 100} %</p>`;
     return bootstrap.pan("default", null, tab);
 };
 /**

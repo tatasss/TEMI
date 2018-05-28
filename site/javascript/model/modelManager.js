@@ -399,9 +399,9 @@ ModeleManager.prototype.ammortExcept = function (mP, benCompta, regime, donneRef
 // console.log(donneRef);
 
 
-    let investissment = (donneRef.entreprise.terrain + donneRef.entreprise.construction
-        + donneRef.entreprise.equipement + donneRef.entreprise.camion + donneRef.entreprise.info
-        + donneRef.entreprise.bureau) * donneRef.pays.pib;
+    let investissment = (donneRef.entreprise().terrain + donneRef.entreprise().construction
+        + donneRef.entreprise().equipement + donneRef.entreprise().camion + donneRef.entreprise().info
+        + donneRef.entreprise().bureau) * donneRef.pays().pib;
     let taux;
     let limitation;
     let duree;

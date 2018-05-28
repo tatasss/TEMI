@@ -19,9 +19,39 @@ let Donne = function (pays, regime, actu, marge) {
         }
 
     }
-    this.pays = mP;
-    this.regime = regime;
-    this.actu = actu;
-    this.marge = marge;
-    this.entreprise = fabrique.entreprise(actu, marge);
+    /**
+     *@description The getter of land
+     * @return {Object}
+     */
+    this.pays =function(){
+        return mP;
+    };
+    /**
+     * @description The getter of regime
+     * @return {string}
+     */
+    this.regime =function(){
+        return regime;
+    };
+    /**
+     * @description The getter of actu
+     * @return {number}
+     */
+    this.actu =function(){
+        return actu;
+    };
+    /**
+     * @description The getter of marge
+     * @return {number}
+     */
+    this.marge =function(){
+        return marge;
+    };
+    /**
+     * @description The getter of firm
+     * @return {{nom: string, terrain: number, construction: number, equipement: number, camion: number, info: number, bureau: number, stocks: number, creanceCli: number, dispoBanque: number, capitalSocial: number, detteLongTerme: number, detteCourtTerme: number, detteFournisseur: number, achat: number, petrole: number, depenseAdministrative: number, depensePub: number, depenseEntretien: number, chargeFinanciere: number, vente: number, cadre: number, secretaire: number, ouvrier: number, indice_cadre: number, indice_secretaire: number, indice_ouvrier: number, dividende: number, actuali: number}}
+     */
+    this.entreprise =function(){
+        return fabrique.entreprise(actu, marge);
+    }
 };

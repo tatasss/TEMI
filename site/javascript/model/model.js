@@ -1,13 +1,13 @@
 /**
  * @description This function Keep all the ModeleData
- * @return {{impotSelected: {cfe, is, imf, irvm, irc, tvaPetrole}, investissement: number, amortissementGeneral: Array, amortissement: Array, taxeAjout: {petrole, taux, tva}, employer: {salaire_cadre, salaire_secretaire, salaire_ouvrier, masse_salarial, tauxCfe, reel_CFE}, impotIMF: Array, impotIRVM: Array, ammortExcep: {duree, investissement, taux, limitation, dureeTab, baseAmorti, chargeAmorti}, taxeCreance: {chargeFinance, taux, irc}, resultCompta: {vente, achats, petrole, tva_petrole, depense_entretien, depense_admin, depense_pub, salaire_ouvrier, salaire_secretaire, salaire_cadre, cfe, chargeFinanciere, amortissement, benefice_comptable, taux_marge_avant__IS_IMF}, resultImpot: {benCompta, amortExep, benImpo}, actualisation: Array, impotSociete: Array, isImf: Array, impotTaxeCourent: {cfe, isimf, irvm, irc, tvaPetrole, total}, impotTaxeActu: {cfe, isimf, irvm, irc, tvaPetrole, total}, fluxTresSansImp: {courant, actu}, tauxeffMoyCourent: *, fluxTresSansISIMF: {courant, actu}, fluxTresApresImpot: {courant, actu}, tauxRendInterneSImp: Array, tauxRendInterneSISIMF: Array, tauxRendInterneAImp: Array, tauxEffMargImpApIsImf: Array, tauxEffMargImpApImp: Array}}
+ * @return {{impotSelected: {cfe, is, imf, irvm, irc, tvaPetrole}, investissement: number, amortissementGeneral: Array, amortissement: Array, taxeAjout: {petrole, taux, tva}, employer: {salaire_cadre, salaire_secretaire, salaire_ouvrier, masse_salarial, tauxCfe, reel_CFE}, impotIMF: Array, impotIRVM: Array, ammortExcep: {duree, investissement, taux, limitation, dureeTab, baseAmorti, chargeAmorti}, taxeCreance: {chargeFinance, taux, irc}, resultCompta: {vente, achats, petrole, tva_petrole, depense_entretien, depense_admin, depense_pub, salaire_ouvrier, salaire_secretaire, salaire_cadre, cfe, chargeFinanciere, amortissement, benefice_comptable, taux_marge_avant__IS_IMF}, resultImpot: {benCompta, amortExep, benImpo}, actualisation: Array, impotSociete: Array, isImf: Array, impotTaxeCourent: {cfe, isimf, irvm, irc, tvaPetrole, total}, impotTaxeActu: {cfe, isimf, irvm, irc, tvaPetrole, total}, fluxTresSansImp: {courant, actu}, tauxeffMoy: *, fluxTresSansISIMF: {courant, actu}, fluxTresApresImpot: {courant, actu}, tauxRendInterneSImp: Array, tauxRendInterneSISIMF: Array, tauxRendInterneAImp: Array, tauxEffMargImpApIsImf: Array, tauxEffMargImpApImp: Array}}
  */
 Modele.prototype.mesdon = function () {
-    let mE = this.donnee.entreprise;
-    let mP = this.donnee.pays;
+    let mE = this.donnee.entreprise();
+    let mP = this.donnee.pays();
     //console.log(donnee.entreprise);
     let impotSelected = modeleManager.selectTaxe(mP, this.donnee);
-    let pibchoix = this.donnee.pays.pib;
+    let pibchoix = this.donnee.pays().pib;
     let investissement = Math.trunc(modeleManager.investissementModele(mE, pibchoix));
     let amortissement = modeleManager.ammortissment(mE, mP, pibchoix);
     let generalAmort = modeleManager.ammortGen(amortissement);
@@ -18,7 +18,7 @@ Modele.prototype.mesdon = function () {
     let taxeCreance = modeleManager.taxe_creance(mE, impotSelected, pibchoix);
     let resultCompta = modeleManager.comptableResult(mE, pibchoix, taxeValAjout.tva, emploi.salaire_cadre,
         emploi.salaire_secretaire, emploi.salaire_ouvrier, emploi.reel_CFE, generalAmort);
-    let ammortExcep = modeleManager.ammortExcept(mP, resultCompta.benefice_comptable, this.donnee.regime, this.donnee);
+    let ammortExcep = modeleManager.ammortExcept(mP, resultCompta.benefice_comptable, this.donnee.regime(), this.donnee);
     let resultImpot = modeleManager.impotResult(resultCompta.benefice_comptable, ammortExcep.chargeAmorti);
     let impotSociete = [];
     let impotIMF = [];
@@ -64,32 +64,85 @@ Modele.prototype.mesdon = function () {
     let tauxEffMargImpApIsImf = modeleManager.tauxEffectifMarginaux(tauxRendInterneSImp, tauxRendInterneSISIMF);
     let tauxEffMargImpApImp = modeleManager.tauxEffectifMarginaux(tauxRendInterneSImp, tauxRendInterneAImp);
     return {
-        impotSelected: impotSelected,
-        investissement: investissement,
-        amortissementGeneral: generalAmort,
-        amortissement: amortissement,
-        taxeAjout: taxeValAjout,
-        employer: emploi,
-        impotIMF: impotIMF,
-        impotIRVM: impotIRVM,
-        ammortExcep: ammortExcep,
-        taxeCreance: taxeCreance,
-        resultCompta: resultCompta,
-        resultImpot: resultImpot,
-        actualisation: actualisation,
-        impotSociete: impotSociete,
-        isImf: isimf,
-        impotTaxeCourent: impotTaxeCourent,
-        impotTaxeActu: impotTaxeActu,
-        fluxTresSansImp: fluxTresSansImp,
-        tauxeffMoyCourent: tauxeffMoyC,
-        fluxTresSansISIMF: fluxTresSansISIMF,
-        fluxTresApresImpot: fluxTresApresImpot,
-        tauxRendInterneSImp: tauxRendInterneSImp,
-        tauxRendInterneSISIMF: tauxRendInterneSISIMF,
-        tauxRendInterneAImp: tauxRendInterneAImp,
-        tauxEffMargImpApIsImf: tauxEffMargImpApIsImf,
-        tauxEffMargImpApImp: tauxEffMargImpApImp
+        impotSelected: function () {
+            return impotSelected;
+        },
+        investissement: function () {
+            return investissement;
+        },
+        amortissementGeneral: function () {
+            return generalAmort;
+        },
+        amortissement: function () {
+            return amortissement;
+        },
+        taxeAjout: function () {
+            return taxeValAjout;
+        },
+        employer: function () {
+            return emploi;
+        },
+        impotIMF: function () {
+            return impotIMF;
+        },
+        impotIRVM: function () {
+            return impotIRVM;
+        },
+        ammortExcep: function () {
+            return ammortExcep;
+        },
+        taxeCreance: function () {
+            return taxeCreance
+        },
+        resultCompta: function () {
+            return resultCompta;
+        },
+        resultImpot: function () {
+            return resultImpot;
+
+        },
+        actualisation: function () {
+            return actualisation;
+        },
+        impotSociete: function () {
+            return impotSociete;
+        },
+        isImf: function () {
+            return isimf;
+        },
+        impotTaxeCourent: function () {
+            return impotTaxeCourent
+        },
+        impotTaxeActu: function () {
+            return impotTaxeActu;
+        },
+        fluxTresSansImp: function () {
+            return fluxTresSansImp;
+        },
+        tauxeffMoyCourent: function () {
+            return tauxeffMoyC;
+        },
+        fluxTresSansISIMF:function() {
+            return fluxTresSansISIMF;
+        },
+        fluxTresApresImpot:function(){
+            return fluxTresApresImpot;
+        },
+        tauxRendInterneSImp:function(){
+            return tauxRendInterneSImp;
+        },
+        tauxRendInterneSISIMF: function(){
+            return tauxRendInterneSISIMF;
+        },
+        tauxRendInterneAImp: function(){
+            return tauxRendInterneAImp;
+        },
+        tauxEffMargImpApIsImf: function(){
+            return tauxEffMargImpApIsImf;
+        },
+        tauxEffMargImpApImp: function(){
+            return tauxEffMargImpApImp;
+        }
     }
 
 
