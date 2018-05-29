@@ -59,15 +59,15 @@ Ref.prototype.pibFind = function (code) {
  * @Construct
  * @description The Constructor of Land
  * @param {string} code - the code of the land
- * @param {string} nom - the name of the land
- * @param {Object} impot - the impots rates of the land (cfe,is,imf,irvm,irc,tva_petrole)
- * @param {Object} ammort - the depreciation of the land
- * @param {Object} investissment - the parameters of the invest-government of the land
- * @param {string} dispoDerog - the parameters of the invest-government of the land(but texte)
+ * @param {string} name - the name of the land
+ * @param {Object} tax - the tax rates of the land (cfe,is,imf,irvm,irc,tva_petrole)
+ * @param {Object} amortization - the depreciation of the land
+ * @param {Object} investment - the parameters of the invest-government of the land
+ * @param {string} override - the parameters of the invest-government of the land(but texte)
  * @param {string} source - zone and government type use by firm on the land
- * @return {{pib: number, code: string, nom: string , impots: Object, ammort: Object, investissement: Object, dispoDerog: string, source: string}}
+ * @return {{pib: number, code: string, name: string , taxes: Object, amortization: Object, investissement: Object, override: string, source: string}}
  */
-Fabrique.prototype.pays = function (code, nom, impot, ammort, investissment, dispoDerog, source) {
+Manufactor.prototype.land = function (code, name, tax, amortization, investment, override, source) {
 
     return {
         pib: ref.pibFind(code),
@@ -79,39 +79,39 @@ Fabrique.prototype.pays = function (code, nom, impot, ammort, investissment, dis
             return code;
         },
         /**
-         * @description the getter of nom
+         * @description the getter of name
          * @return {string}
          */
-        nom: function () {
-            return nom;
+        name: function () {
+            return name;
         },
         /**
-         * @description the getter of impots
+         * @description the getter of taxes
          * @return {Object}
          */
         impots: function () {
-            return impot;
+            return tax;
         },
         /**
-         * @description the getter of ammort
+         * @description the getter of amortization
          * @return {Object}
          */
-        ammort: function () {
-            return ammort;
+        amortization: function () {
+            return amortization;
         },
         /**
          * @description the getter of investissement
          * @return {Object}
          */
-        investissement: function () {
-            return investissment;
+        investment: function () {
+            return investment;
         },
         /**
-         * @description the getter of dispoDerog
+         * @description the getter of override
          * @return {string}
          */
-        dispoDerog: function () {
-            return dispoDerog;
+        override: function () {
+            return override;
         },
         /**
          * @description the getter of source
@@ -133,7 +133,7 @@ Fabrique.prototype.pays = function (code, nom, impot, ammort, investissment, dis
  * @param {number} tVA_Petrole - The TVA on Petrole Rates
  * @return {{cfe: number, isImp: number, imf: number, irvm: number, irc: number, tva_petrole: number}}
  */
-Fabrique.prototype.impot = function (cFE, iS, iMF, iRVM, iRC, tVA_Petrole) {
+Manufactor.prototype.impot = function (cFE, iS, iMF, iRVM, iRC, tVA_Petrole) {
     return {
         /**
          * @description the getter of cfe
@@ -190,7 +190,7 @@ Fabrique.prototype.impot = function (cFE, iS, iMF, iRVM, iRC, tVA_Petrole) {
  * @param {number} bureau - the coef of the office equipment
  * @return {{construction: number, equipement: number, coefdegressif: number , camion: number , info: number , bureau: number}}
  */
-Fabrique.prototype.ammortissement = function (construction, equipement, coefdegressif, camion, info, bureau) {
+Manufactor.prototype.ammortissement = function (construction, equipement, coefdegressif, camion, info, bureau) {
     return {
         /**
          * @description the getter of construction
@@ -241,15 +241,15 @@ Fabrique.prototype.ammortissement = function (construction, equipement, coefdegr
  * @description This function is the construct of the firm
  * @param {number} actu - the rates of the update
  * @param {number} marge - the rates of the margin
- * @return {{nom: string, terrain: number, construction: number, equipement: number, camion: number, info: number, bureau: number, stocks: number, creanceCli: number, dispoBanque: number, capitalSocial: number, detteLongTerme: number, detteCourtTerme: number, detteFournisseur: number, achat: number, petrole: number, depenseAdministrative: number, depensePub: number, depenseEntretien: number, chargeFinanciere: number, vente: number, cadre: number, secretaire: number, ouvrier: number, indice_cadre: number, indice_secretaire: number, indice_ouvrier: number, dividende: number, actuali: number}}
+ * @return {{name: string, terrain: number, construction: number, equipement: number, camion: number, info: number, bureau: number, stocks: number, creanceCli: number, dispoBanque: number, capitalSocial: number, detteLongTerme: number, detteCourtTerme: number, detteFournisseur: number, achat: number, petrole: number, depenseAdministrative: number, depensePub: number, depenseEntretien: number, chargeFinanciere: number, vente: number, cadre: number, secretaire: number, ouvrier: number, indice_cadre: number, indice_secretaire: number, indice_ouvrier: number, dividende: number, actuali: number}}
  */
-Fabrique.prototype.entreprise = function (actu, marge) {
+Manufactor.prototype.firm = function (actu, marge) {
     return {
         /**
-         * @description the getter of nom
+         * @description the getter of name
          * @return {string}
          */
-        nom: function () {
+        name: function () {
             return "Djankov";
         },
         /**
@@ -462,7 +462,7 @@ Fabrique.prototype.entreprise = function (actu, marge) {
  * @param {Object} tvaPetrole - The TVA on Petrole Rates
  * @return {{cfe: Object, isamort: Object, imf: Object, irvm: Object, irc: Object, tvaPetrole: Object}}
  */
-Fabrique.prototype.investir = function (cfe, isammmort, imf, irvm, irc, tvaPetrole) {
+Manufactor.prototype.investir = function (cfe, isammmort, imf, irvm, irc, tvaPetrole) {
     return {
         /**
          * @description the getter of cfe
@@ -516,7 +516,7 @@ Fabrique.prototype.investir = function (cfe, isammmort, imf, irvm, irc, tvaPetro
  * @param {number} reductonEcume - the reduc of the Impot
  * @return {{duree: number, taux:number, reducexo: number}}
  */
-Fabrique.prototype.impotPays = function (duree, taux, reductonEcume) {
+Manufactor.prototype.impotPays = function (duree, taux, reductonEcume) {
     return {
         /**
          * @description the getter of duree
@@ -548,10 +548,10 @@ Fabrique.prototype.impotPays = function (duree, taux, reductonEcume) {
  * @param {number} taux - the rates of the Impot
  * @param {number} reductonEcume - the reduc of the Impot
  * @param {number} ammortTauxEx - the rate of the Impot with ammortExcep
- * @param {number} ammortLimit - the limit of the ammort
+ * @param {number} ammortLimit - the limit of the amortization
  * @return {{duree: number , taux: number , reducexo: number , ammortTauxEx: number , ammortLimit: number}}
  */
-Fabrique.prototype.isImpotPays = function (duree, taux, reductonEcume, ammortTauxEx, ammortLimit) {
+Manufactor.prototype.isImpotPays = function (duree, taux, reductonEcume, ammortTauxEx, ammortLimit) {
     return {
         /**
          * @description the getter of duree
@@ -597,9 +597,9 @@ Fabrique.prototype.isImpotPays = function (duree, taux, reductonEcume, ammortTau
  * @param {number} durLin - the time of the amortissement
  * @param {number} coef - the coef of the amortissement
  * @param {string} nom - the name of the amortissement
- * @return {{dureeRestante: Array, baseAmortissable: Array, tauxLineaire: Array, tauxDegressif: Array, chargeAmorti: Array, nom: string, getHtml: (function(): string)}}
+ * @return {{dureeRestante: Array, baseAmortissable: Array, tauxLineaire: Array, tauxDegressif: Array, chargeAmorti: Array, name: string, getHtml: (function(): string)}}
  */
-Fabrique.prototype.armortirModele = function (prix, durLin, coef, nom) {
+Manufactor.prototype.armortirModele = function (prix, durLin, coef, nom) {
     let dureeRestante = [];
     let baseAmortissable = [];
     let tauxLineaire = [];
@@ -709,10 +709,10 @@ Fabrique.prototype.armortirModele = function (prix, durLin, coef, nom) {
             return chargeAmorti
         },
         /**
-         * @description the getter of nom
+         * @description the getter of name
          * @return {string}
          */
-        nom: function () {
+        name: function () {
             return nom;
         },
         /**
@@ -724,7 +724,7 @@ Fabrique.prototype.armortirModele = function (prix, durLin, coef, nom) {
             let cote2 = ["Base amortissable</td><td>FCFA", "Taux unitaire</td><td>%", "Taux dégréssif</td><td>%", "Charge amortissement</td><td>FCFAS"];
             let html = "<div class='panel panel-info'><div class=\"panel-heading\">";
             let cote1 = ["Durée linéaire</td><td>Année", "Coef dégréssif</td><td>Coef"];
-            let head = `<thead><tr><th>${this.nom()}</th><th>FCFA</th><th class='blue'>${this.baseAmortissable()[0]}</th></tr></thead>`;
+            let head = `<thead><tr><th>${this.name()}</th><th>FCFA</th><th class='blue'>${this.baseAmortissable()[0]}</th></tr></thead>`;
             html += bootstrap.tableSE(cote1, head, {
                     tab: [this.dureeRestante()[0]],
                     color: "yellow"

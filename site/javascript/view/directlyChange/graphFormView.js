@@ -16,7 +16,7 @@ else {
 }
 document.getElementById("info").innerHTML = `<p>Le taux d'actualisation pour toutes les entreprises est `
     +`de ${localStorage.getItem("compaActu")} %.<br/> Le regime dans tous les pays utilisé par les entreprises est : ${reg} .`;
-//[pays][entreprise]
+//[land][firm]
 /**
  * @description This function delete land of the liste to make a graph
  * @param {string} code - The code of the land
@@ -69,9 +69,9 @@ let htmlFormPays = "<label for=\"sel1\">Pays:</label> <select class=\"form-contr
 htmlFormPays += `<option value='tousPays'>Tous les Pays</option> `;
 
 mesPays().forEach(function (item) {
-    if (item.nom !== "Guinée Bissao") {
-        if (item.nom !== "Guinée équatoriale") {
-            htmlFormPays += `<option value=${item.code}>${item.nom}</option> `;
+    if (item.name !== "Guinée Bissao") {
+        if (item.name !== "Guinée équatoriale") {
+            htmlFormPays += `<option value=${item.code()}>${item.name()}</option> `;
         }
     }
 
@@ -88,9 +88,9 @@ $("body").delegate("button", "click", function () {
         if ($("#PAYS").val() === "tousPays") {
             paysChoisi = [];
             mesPays().forEach(function (item) {
-                if (item.nom !== "Guinée Bissao") {
-                    if (item.nom !== "Guinée équatoriale") {
-                        paysChoisi.push(item.nom);
+                if (item.name() !== "Guinée Bissao") {
+                    if (item.name() !== "Guinée équatoriale") {
+                        paysChoisi.push(item.name());
                     }
                 }
             });
@@ -118,8 +118,8 @@ $("body").delegate("button", "click", function () {
             bool = false;
 
             let madon = `<strong>entreprise ${cptEnt + 1} :</strong><br/>taux de marge:<br/>${$('#marge').val()} % `;
-            madon += bootstrap.buttonBaBu("danger", `supelemEnt('${$('#marge').val()}')`, "<spam class='glyphicon " +
-                "glyphicon-remove'/> supprimer", $('#marge').val());
+            madon += bootstrap.buttonBaBu("danger", `supelemEnt('${$('#margin').val()}')`, "<spam class='glyphicon " +
+                "glyphicon-remove'/> supprimer", $('#margin').val());
             margeTab.forEach(function (item) {
                 if (item === $('#marge').val()) {
                     bool = true
@@ -156,14 +156,14 @@ $("body").delegate("button", "click", function () {
     paysChoisi.forEach(function (item, index) {
         donneTab.push([]);
         margeTab.forEach(function (items) {
-            donneTab[index].push(new Donne(ref.donnerCodePays(item), localStorage.getItem("compatRegime"),
+            donneTab[index].push(new Data(ref.donnerCodePays(item), localStorage.getItem("compatRegime"),
                 localStorage.getItem("compaActu"), items))
         })
     });
     donneTab.forEach(function (item, index) {
         modeleTab.push([]);
         item.forEach(function (items) {
-            modeleTab[index].push({donne: items, modele: new Modele(items)})
+            modeleTab[index].push({donne: items, modele: new Model(items)})
         });
     });
     titre="TEMItauxActualisation:"+localStorage.getItem("compaActu")+"%regimeFiscale:"+reg+"%";
@@ -173,6 +173,9 @@ $("body").delegate("button", "click", function () {
             tittle: "pays",
             body: bootstrap.listeItem(paysChoisiHtml)
         },
-        {tittle: "entreprise :", body: bootstrap.listeItem(ent)});
+        {
+            tittle: "entreprise:",
+            body: bootstrap.listeItem(ent)
+        });
 });
 

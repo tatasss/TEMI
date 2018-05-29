@@ -4,7 +4,7 @@
  * @param colOne_head_lig - the left on the array , the head of the array and all the row ({array },{ string},{array,attr...})
  * take all arguments u put (1 array = 1row)
  */
-BootstrapVue.prototype.tableSE = function (colOne_head_lig) {
+BootstrapView.prototype.tableSE = function (colOne_head_lig) {
     let color;
     let args = arguments;
     let html;
@@ -135,7 +135,7 @@ BootstrapVue.prototype.tableSE = function (colOne_head_lig) {
  * @param {string} body - body of the pannel
  * @return {string} html
  */
-BootstrapVue.prototype.pan = function (type, head, body) {
+BootstrapView.prototype.pan = function (type, head, body) {
 
     let result = "<div class='panel panel-" + type + " '>";
     if (head !== null) {
@@ -153,7 +153,7 @@ BootstrapVue.prototype.pan = function (type, head, body) {
  * @param {string} body - the body of the page without topNav
  * @return {string} html
  */
-BootstrapVue.prototype.container = function (body) {
+BootstrapView.prototype.container = function (body) {
     return "<div class='container'>" + body + "</div>";
 };
 /**
@@ -162,7 +162,7 @@ BootstrapVue.prototype.container = function (body) {
  * @param {string} nav - the string html template  ready inserted in the column 2/12 on the right on the grid
  * @return {string} html
  */
-BootstrapVue.prototype.GridNavCote = function (body, nav) {
+BootstrapView.prototype.GridNavCote = function (body, nav) {
     let result = "<div class='row'><div class='col-sm-10'>";
     result += body;
     result += "</div><div class='col-sm-2'>";
@@ -176,7 +176,7 @@ BootstrapVue.prototype.GridNavCote = function (body, nav) {
  * @param {string} html - the entitled of your tag
  * @return {string} html
  */
-BootstrapVue.prototype.buttonBalA = function (href, html) {
+BootstrapView.prototype.buttonBalA = function (href, html) {
     return `<a  class='btn btn-default' type='submit' href='${href}'>${html}</a>`;
 };
 /**
@@ -187,7 +187,7 @@ BootstrapVue.prototype.buttonBalA = function (href, html) {
  * @param {string} value - the value of your tag
  * @return {string} html
  */
-BootstrapVue.prototype.buttonBaBu = function (type, onclick, html, value) {
+BootstrapView.prototype.buttonBaBu = function (type, onclick, html, value) {
     return `<button class='btn btn-${type}' type='button' onclick="${onclick}" value="${value}" '>${html}</button>`;
 };
 /**
@@ -195,7 +195,7 @@ BootstrapVue.prototype.buttonBaBu = function (type, onclick, html, value) {
  * @param {array}tab - the array of your list
  * @return {string} html
  */
-BootstrapVue.prototype.listeItem = function (tab) {
+BootstrapView.prototype.listeItem = function (tab) {
     let html = "<ul class='list-group vertical-form'>";
     tab.forEach(function (item) {
         html += `<li class="list-group-item">${item}</li>`;
@@ -208,7 +208,7 @@ BootstrapVue.prototype.listeItem = function (tab) {
  * (take all args ,collapse obj ={title:'yourTitle',body:'yourBody'})
  * @return {string} html
  */
-BootstrapVue.prototype.collapse = function (objCollapse) {
+BootstrapView.prototype.collapse = function (objCollapse) {
     let args = arguments;
     let int;
 
@@ -242,7 +242,7 @@ BootstrapVue.prototype.collapse = function (objCollapse) {
  * @param {string} titre - a filename of the excel Document
  * @return {string} html
  */
-BootstrapVue.prototype.bootstrapTemiTabSpe = function (cote, head, tab,maMarge,titre) {
+BootstrapView.prototype.bootstrapTemiTabSpe = function (cote, head, tab, maMarge, titre) {
     let myTab = [];
     let tabExcel=[];
     let cpt = 0;
@@ -319,7 +319,7 @@ BootstrapVue.prototype.bootstrapTemiTabSpe = function (cote, head, tab,maMarge,t
     }
     tabExcel.push("ligne");
     tabExcel.push("ligne");
-    tabExcel.push("regime Fiscal");
+    tabExcel.push("régime Fiscal");
     tabExcel.push(reg);
 
 

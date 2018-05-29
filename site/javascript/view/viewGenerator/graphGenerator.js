@@ -1,8 +1,8 @@
 /**
  * @param {Array} modeleTab - the array of the modele use to put a graphique
  * @param {string} id - a element on document identification
- * @param {string} regime - a regime of the modele
- * @param {Array} maMarge - A Array of the marge Rate
+ * @param {string} regime - a government of the modele
+ * @param {Array} maMarge - A Array of the margin Rate
  * @param {string} titre - a filename of the excel outPut
  * @description This function create a graphique with a module Chart.js
  * return nothing but touch the html with id parameter
@@ -51,14 +51,14 @@ Graph.prototype.graphique = function (modeleTab, id, regime,maMarge,titre) {
                 });
                 entre.push("entreprise " + (index + 1));
                 dataset.push({
-                    label: "entreprise " + (index + 1) + " taux de marge avant impot = " + modeleTab[0][index].donne.marge() + " % ",
+                    label: "entreprise " + (index + 1) + " taux de marge avant impot = " + modeleTab[0][index].donne.margin() + " % ",
                     data: item,
                     backgroundColor: realColor,
                 });
             });
             let payTab = [];
             modeleTab.forEach(function (item) {
-                payTab.push(item[0].donne.pays().nom);
+                payTab.push(item[0].donne.land().name());
             });
             //----------------------------------------------------------------------------------------------------------
             //ici la parti sur le tableau des temi
@@ -95,7 +95,7 @@ Graph.prototype.graphique = function (modeleTab, id, regime,maMarge,titre) {
                     },
                     title: {
                         display: true,
-                        text: 'TEMI Global avec le regime fiscal :' + regime
+                        text: 'TEMI Global avec le government fiscal :' + regime
                     }
                 }
             });

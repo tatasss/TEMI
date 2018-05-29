@@ -5,7 +5,7 @@ let monModele;
 if (localStorage.getItem("don") !== undefined && localStorage.getItem("don") !== null) {
     let tab = localStorage.getItem("don").split(",");
 
-    monModele = new Modele(new Donne(tab[0], tab[1], tab[2], tab[3]));
+    monModele = new Model(new Data(tab[0], tab[1], tab[2], tab[3]));
 }
 
 /**
@@ -28,9 +28,9 @@ function showModal() {
 }
 
 /**
- * @description This function load a graphForm page anf load on memory actu and regime
- * @param {number} actu - the actu rates of the firm
- * @param {string} regime - the regime use by the user
+ * @description This function load a graphForm page anf load on memory topic and government
+ * @param {number} actu - the topic rates of the firm
+ * @param {string} regime - the government use by the user
  */
 function debutCompa(actu, regime) {
     console.log("ici");
@@ -74,21 +74,21 @@ function validateForm() {
     }
     let pays = $("#PAYS").val();
     let regime = $("#REGIME").val();
-    //var x =data + "\n"+pibpnb+ "\n"+pays+"\n"+regime;
+    //var x =data + "\n"+pibpnb+ "\n"+land+"\n"+government;
     localStorage.setItem("don", [pays, regime, actualisation, marge].toString());
-    let donne = new Donne(pays, regime, actualisation, marge);
-    if (donne.pays() !== undefined) {
-        if (donne.pays() != null) {
-            //let XD=donne.pays().code();
+    let donne = new Data(pays, regime, actualisation, marge);
+    if (donne.land() !== undefined) {
+        if (donne.land() != null) {
+            //let XD=donne.land().code();
             //while(localStorage.getItem("xmlPib : " +XD)==null) {
 
-                console.log("pib du pays : "+donne.pays().pib.toString());
+                console.log("pib du land : "+donne.land().pib.toString());
 
             //}
         }
     }
-    monModele = new Modele(donne);
-    let genererVue = new GenererVue(monModele);
+    monModele = new Model(donne);
+    let genererVue = new ViewGenerator(monModele);
     document.getElementById("result").innerHTML = genererVue.mainHTML(pays, regime, actualisation, marge);
     elapsedTime = new Date().getTime() - startTime;
 }
@@ -155,44 +155,44 @@ function verifPourcent(nombre) {
 function mesPays() {
 
     let Pays = [];
-    let ben = fabrique.investir(fabrique.impotPays(null, null, null), fabrique.isImpotPays(5, null, 100, null, null), fabrique.impotPays(null, null, null), fabrique.impotPays(null, null, null), fabrique.impotPays(null, null, null), fabrique.impotPays(null, null, null));
-    let bfa = fabrique.investir(fabrique.impotPays(5, null, 100), fabrique.isImpotPays(5, null, null, 50, 50), fabrique.impotPays(null, null, null), fabrique.impotPays(null, null, null), fabrique.impotPays(null, null, null), fabrique.impotPays(null, null, null));
-    let cmr = fabrique.investir(fabrique.impotPays(null, null, null), fabrique.isImpotPays(5, null, 50, null, null), fabrique.impotPays(null, null, null), fabrique.impotPays(5, null, 50), fabrique.impotPays(null, null, null), fabrique.impotPays(null, null, null));
-    let caf = fabrique.investir(fabrique.impotPays(null, null, null), fabrique.isImpotPays(3, null, 100, null, null), fabrique.impotPays(null, null, null), fabrique.impotPays(null, null, null), fabrique.impotPays(null, null, null), fabrique.impotPays(null, null, null));
-    let cog = fabrique.investir(fabrique.impotPays(null, null, null), fabrique.isImpotPays(3, null, 100, null, null), fabrique.impotPays(null, null, null), fabrique.impotPays(null, null, null), fabrique.impotPays(null, null, null), fabrique.impotPays(null, null, null));
-    let civ = fabrique.investir(fabrique.impotPays(7, 2.2, null), fabrique.isImpotPays(7, null, 100, null, null), fabrique.impotPays(null, null, null), fabrique.impotPays(null, null, null), fabrique.impotPays(null, null, null), fabrique.impotPays(null, null, null));
-    let gab = fabrique.investir(fabrique.impotPays(null, null, null), fabrique.isImpotPays(5, null, 100, null, null), fabrique.impotPays(null, null, null), fabrique.impotPays(null, null, null), fabrique.impotPays(null, null, null), fabrique.impotPays(null, null, null));
-    let mli = fabrique.investir(fabrique.impotPays(null, null, null), fabrique.isImpotPays(7, 25, null, null, null), fabrique.impotPays(null, null, null), fabrique.impotPays(null, null, null), fabrique.impotPays(null, null, null), fabrique.impotPays(null, null, null));
-    let ner = fabrique.investir(fabrique.impotPays(null, null, null), fabrique.isImpotPays(null, null, null, null, null), fabrique.impotPays(6, null, 100), fabrique.impotPays(null, null, null), fabrique.impotPays(null, null, null), fabrique.impotPays(null, null, null));
-    let sen = fabrique.investir(fabrique.impotPays(5, null, 100), fabrique.isImpotPays(5, null, null, 40, 50), fabrique.impotPays(null, null, null), fabrique.impotPays(null, null, null), fabrique.impotPays(null, null, null), fabrique.impotPays(null, null, null));
-    let tcd = fabrique.investir(fabrique.impotPays(null, null, null), fabrique.isImpotPays(5, null, 100, null, null), fabrique.impotPays(5, null, 100), fabrique.impotPays(null, null, null), fabrique.impotPays(null, null, null), fabrique.impotPays(null, null, null));
-    let tgo = fabrique.investir(fabrique.impotPays(5, 2, null), fabrique.isImpotPays(5, null, 2, 40, 50), fabrique.impotPays(null, null, null), fabrique.impotPays(null, null, null), fabrique.impotPays(null, null, null), fabrique.impotPays(null, null, null));
-    Pays.push(fabrique.pays("BEN", "Benin", fabrique.impot(4, 30, 0.75, 10, 15, 18), fabrique.ammortissement(20, 10, 2.5, 3, 2, 10), ben,"Exonération d’IS pendant 5 ans","Code des investissements <br/>régime A<br/> zone 1\n"));
-    Pays.push(fabrique.pays("BFA", "Burkina Faso", fabrique.impot(3, 27.5, 0.5, 12.5, 25, 18), fabrique.ammortissement(20, 10, 2.5, 3, 2, 10), bfa,"– Exonération de la taxe patronale d’apprentissage pendant 5 ans.\n" +
+    let ben = maker.investir(maker.impotPays(null, null, null), maker.isImpotPays(5, null, 100, null, null), maker.impotPays(null, null, null), maker.impotPays(null, null, null), maker.impotPays(null, null, null), maker.impotPays(null, null, null));
+    let bfa = maker.investir(maker.impotPays(5, null, 100), maker.isImpotPays(5, null, null, 50, 50), maker.impotPays(null, null, null), maker.impotPays(null, null, null), maker.impotPays(null, null, null), maker.impotPays(null, null, null));
+    let cmr = maker.investir(maker.impotPays(null, null, null), maker.isImpotPays(5, null, 50, null, null), maker.impotPays(null, null, null), maker.impotPays(5, null, 50), maker.impotPays(null, null, null), maker.impotPays(null, null, null));
+    let caf = maker.investir(maker.impotPays(null, null, null), maker.isImpotPays(3, null, 100, null, null), maker.impotPays(null, null, null), maker.impotPays(null, null, null), maker.impotPays(null, null, null), maker.impotPays(null, null, null));
+    let cog = maker.investir(maker.impotPays(null, null, null), maker.isImpotPays(3, null, 100, null, null), maker.impotPays(null, null, null), maker.impotPays(null, null, null), maker.impotPays(null, null, null), maker.impotPays(null, null, null));
+    let civ = maker.investir(maker.impotPays(7, 2.2, null), maker.isImpotPays(7, null, 100, null, null), maker.impotPays(null, null, null), maker.impotPays(null, null, null), maker.impotPays(null, null, null), maker.impotPays(null, null, null));
+    let gab = maker.investir(maker.impotPays(null, null, null), maker.isImpotPays(5, null, 100, null, null), maker.impotPays(null, null, null), maker.impotPays(null, null, null), maker.impotPays(null, null, null), maker.impotPays(null, null, null));
+    let mli = maker.investir(maker.impotPays(null, null, null), maker.isImpotPays(7, 25, null, null, null), maker.impotPays(null, null, null), maker.impotPays(null, null, null), maker.impotPays(null, null, null), maker.impotPays(null, null, null));
+    let ner = maker.investir(maker.impotPays(null, null, null), maker.isImpotPays(null, null, null, null, null), maker.impotPays(6, null, 100), maker.impotPays(null, null, null), maker.impotPays(null, null, null), maker.impotPays(null, null, null));
+    let sen = maker.investir(maker.impotPays(5, null, 100), maker.isImpotPays(5, null, null, 40, 50), maker.impotPays(null, null, null), maker.impotPays(null, null, null), maker.impotPays(null, null, null), maker.impotPays(null, null, null));
+    let tcd = maker.investir(maker.impotPays(null, null, null), maker.isImpotPays(5, null, 100, null, null), maker.impotPays(5, null, 100), maker.impotPays(null, null, null), maker.impotPays(null, null, null), maker.impotPays(null, null, null));
+    let tgo = maker.investir(maker.impotPays(5, 2, null), maker.isImpotPays(5, null, 2, 40, 50), maker.impotPays(null, null, null), maker.impotPays(null, null, null), maker.impotPays(null, null, null), maker.impotPays(null, null, null));
+    Pays.push(maker.land("BEN", "Benin", maker.impot(4, 30, 0.75, 10, 15, 18), maker.ammortissement(20, 10, 2.5, 3, 2, 10), ben,"Exonération d’IS pendant 5 ans","Code des investissements <br/>régime A<br/> zone 1\n"));
+    Pays.push(maker.land("BFA", "Burkina Faso", maker.impot(3, 27.5, 0.5, 12.5, 25, 18), maker.ammortissement(20, 10, 2.5, 3, 2, 10), bfa,"– Exonération de la taxe patronale d’apprentissage pendant 5 ans.\n" +
         "– Déduction d’IS pendant 5 ans, à hauteur de 50% de l’investissement, dans la limite de 50% du bénéfice imposable.\n","Code des investissements\n" +
         "<br/>régime A<br/> zone normale,<br/>" +
         "bien que le seuil d’investissement de 100 millions de FCFA ne soit pas atteint.\n"));
-    Pays.push(fabrique.pays("CMR", "Cameroun", fabrique.impot(2.5, 33, 2.2, 16.5, 16.5, 19.25), fabrique.ammortissement(20, 10, 1, 3, 4, 10), cmr,"– Réduction de 50% de l’IS pendant 5 ans.\n" +
+    Pays.push(maker.land("CMR", "Cameroun", maker.impot(2.5, 33, 2.2, 16.5, 16.5, 19.25), maker.ammortissement(20, 10, 1, 3, 4, 10), cmr,"– Réduction de 50% de l’IS pendant 5 ans.\n" +
         "– Réduction de 50% de l’IRVM sur les dividendes pendant 5 ans\n","Modalités d’application des incitations à l’investissement privé" +
         "<br/>catégorie A"));
-    Pays.push(fabrique.pays("CAF", "Republique Centraficaine", fabrique.impot(0, 30, 1.85, 15, 15, 19), fabrique.ammortissement(20, 10, 1, 3, 4, 10), caf,"Exonération d’IS pendant 3 ans","Charte des investissements\n" +
+    Pays.push(maker.land("CAF", "Republique Centraficaine", maker.impot(0, 30, 1.85, 15, 15, 19), maker.ammortissement(20, 10, 1, 3, 4, 10), caf,"Exonération d’IS pendant 3 ans","Charte des investissements\n" +
         "<br/>zone normale.\n"));
-    Pays.push(fabrique.pays("COG", "Republique du Congo", fabrique.impot(7.5, 30, 1, 15, 15, 18.9), fabrique.ammortissement(20, 10, 1, 3, 4, 10), cog,"– Exonération d’IS pendant 3 ans.","Modalités d’application de la charte des investissements\n" +
+    Pays.push(maker.land("COG", "Republique du Congo", maker.impot(7.5, 30, 1, 15, 15, 18.9), maker.ammortissement(20, 10, 1, 3, 4, 10), cog,"– Exonération d’IS pendant 3 ans.","Modalités d’application de la charte des investissements\n" +
         "<br/>régime général G<br/> zone unique<br/>"));
-    Pays.push(fabrique.pays("CIV", "Côte d Ivoire", fabrique.impot(2.8, 25, 0.5, 15, 18, 9), fabrique.ammortissement(20, 5, 2, 3, 2, 10), civ,"– Réduction de 50% de la contribution nationale pour le développement économique, culturel et social de la nation pendant 7 ans.,– Exonération d’IS pendant 7 ans.","Code des investissements\n" +
+    Pays.push(maker.land("CIV", "Côte d Ivoire", maker.impot(2.8, 25, 0.5, 15, 18, 9), maker.ammortissement(20, 5, 2, 3, 2, 10), civ,"– Réduction de 50% de la contribution nationale pour le développement économique, culturel et social de la nation pendant 7 ans.,– Exonération d’IS pendant 7 ans.","Code des investissements\n" +
         "<br/>régime d’agrément élargi aux PME<br/> zone A.\n"));
-    Pays.push(fabrique.pays("GAB", "Gabon", fabrique.impot(5, 30, 1, 20, 20, 18), fabrique.ammortissement(20, 10, 1, 3, 4, 10), gab,"Exonération d’IS pendant 5 ans.","Promotion des PME et PMI,<br/>" +
+    Pays.push(maker.land("GAB", "Gabon", maker.impot(5, 30, 1, 20, 20, 18), maker.ammortissement(20, 10, 1, 3, 4, 10), gab,"Exonération d’IS pendant 5 ans.","Promotion des PME et PMI,<br/>" +
         "bien que le chiffre d’affaires annuel dépasse 2 milliards de FCFA.\n"));
-    Pays.push(fabrique.pays("GNB", "Guinée Bissao", "pas d'impot", "pas d'ammortissement", "pas d'investissment","",""));
-    Pays.push(fabrique.pays("GNQ", "Guinée équatoriale", "pas d'impot", "pas d'ammortissement", "pas d'investissment","",""));
-    Pays.push(fabrique.pays("MLI", "Mali", fabrique.impot(7.5, 30, 1, 10, 13, 18), fabrique.ammortissement(20, 10, 2.5, 3, 2, 10), mli,"Taux réduit d’IS (25% au lieu de 30%) pendant 7 ans.","Code des investissements\n" +
+    Pays.push(maker.land("GNB", "Guinée Bissao", "pas d'impot", "pas d'ammortissement", "pas d'investissment","",""));
+    Pays.push(maker.land("GNQ", "Guinée équatoriale", "pas d'impot", "pas d'ammortissement", "pas d'investissment","",""));
+    Pays.push(maker.land("MLI", "Mali", maker.impot(7.5, 30, 1, 10, 13, 18), maker.ammortissement(20, 10, 2.5, 3, 2, 10), mli,"Taux réduit d’IS (25% au lieu de 30%) pendant 7 ans.","Code des investissements\n" +
         "<br/>régime A<br/>zone unique\n"));
-    Pays.push(fabrique.pays("NER", "Niger", fabrique.impot(3, 30, 1.5, 10, 20, 19), fabrique.ammortissement(20, 10, 1, 4, 2, 10), ner,"Exonération d’IMF pendant 6 ans","Code des investissements\n" +
+    Pays.push(maker.land("NER", "Niger", maker.impot(3, 30, 1.5, 10, 20, 19), maker.ammortissement(20, 10, 1, 4, 2, 10), ner,"Exonération d’IMF pendant 6 ans","Code des investissements\n" +
         "<br/>régime promotionnel<br/>\n" +
         "zone normale"));
-    Pays.push(fabrique.pays("SEN", "Senegal", fabrique.impot(3, 30, 0.5, 10, 16, 18), fabrique.ammortissement(20, 10, 2.5, 3, 2, 10), sen,"",""));
-    Pays.push(fabrique.pays("TCD", "Tchad", fabrique.impot(8.7, 35, 1.5, 20, 20, 18), fabrique.ammortissement(20, 10, 1, 3, 3, 10), tcd,"",""));
-    Pays.push(fabrique.pays("TGO", "Togo", fabrique.impot(3, 29, 1, 13, 6, 18), fabrique.ammortissement(20, 10, 2.5, 3, 2, 10), tgo,"",""));
+    Pays.push(maker.land("SEN", "Senegal", maker.impot(3, 30, 0.5, 10, 16, 18), maker.ammortissement(20, 10, 2.5, 3, 2, 10), sen,"",""));
+    Pays.push(maker.land("TCD", "Tchad", maker.impot(8.7, 35, 1.5, 20, 20, 18), maker.ammortissement(20, 10, 1, 3, 3, 10), tcd,"",""));
+    Pays.push(maker.land("TGO", "Togo", maker.impot(3, 29, 1, 13, 6, 18), maker.ammortissement(20, 10, 2.5, 3, 2, 10), tgo,"",""));
     return Pays;
 }
 
@@ -200,7 +200,7 @@ function mesPays() {
 function testModele1(){
 
 	var monTest= manufacturing.armortirModele(26801197,10,2.5,"equipement");
-    var html="<p>"+monTest.nom+"</p>"
+    var html="<p>"+monTest.name+"</p>"
 	html+="<table class='table'><thead><tr><th>duree restante</th>";
 	for(var i=0;i<5;i++){
 		html+="<th>"+monTest.dureeRestante[i]+"</th>";
@@ -231,11 +231,11 @@ function testModele2(){
 	var mE=data.get().mE;
 	var mP=data.get().mP;
 	var pibchoix=data.get().pibChoisi;
-    amortissement.push(manufacturing.armortirModele(Math.trunc(mE.construction*pibchoix),mP.ammort.construction,mP.ammort.coefdegressif,"construction"));
-    amortissement.push(manufacturing.armortirModele(mE.equipement*pibchoix,mP.ammort.equipement,mP.ammort.coefdegressif,"equipement"));
-    amortissement.push(manufacturing.armortirModele(mE.camion*pibchoix,mP.ammort.camion,mP.ammort.coefdegressif,"camion"));
-    amortissement.push(manufacturing.armortirModele(mE.info*pibchoix,mP.ammort.info,mP.ammort.coefdegressif,"informatique"));
-    amortissement.push(manufacturing.armortirModele(mE.bureau*pibchoix,mP.ammort.bureau,mP.ammort.coefdegressif,"bureau"));
+    amortissement.push(manufacturing.armortirModele(Math.trunc(mE.construction*pibchoix),mP.amortization.construction,mP.amortization.coefdegressif,"construction"));
+    amortissement.push(manufacturing.armortirModele(mE.equipement*pibchoix,mP.amortization.equipement,mP.amortization.coefdegressif,"equipement"));
+    amortissement.push(manufacturing.armortirModele(mE.camion*pibchoix,mP.amortization.camion,mP.amortization.coefdegressif,"camion"));
+    amortissement.push(manufacturing.armortirModele(mE.info*pibchoix,mP.amortization.info,mP.amortization.coefdegressif,"informatique"));
+    amortissement.push(manufacturing.armortirModele(mE.bureau*pibchoix,mP.amortization.bureau,mP.amortization.coefdegressif,"bureau"));
     for(var i=0;i<amortissement.length;i++){
     	html+=amortissement[i].getHtml()+"<br/>";
 	}

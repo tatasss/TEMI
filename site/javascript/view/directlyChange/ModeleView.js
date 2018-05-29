@@ -1,4 +1,4 @@
-const genererVue = new GenererVue(monModele);
+const genererVue = new ViewGenerator(monModele);
 let investPart = "<p>investissement : " + genererVue.modele.mesdon().investissement() + "</p>";
 
 document.getElementById("invest").innerHTML = investPart;
@@ -8,9 +8,9 @@ amm += "<br/>";
 genererVue.modele.mesdon().amortissement().forEach(function (item) {
     amm += item.getHtml() + "<br/>";
 });
-document.getElementById("param").innerHTML =genererVue.modele.donnee.pays().nom();
+document.getElementById("param").innerHTML =genererVue.modele.donnee.land().name();
 document.getElementById("pet").innerHTML = genererVue.petroleHtml();
-document.getElementById("ammort").innerHTML = amm;
+document.getElementById("amortization").innerHTML = amm;
 document.getElementById("ammortExp").innerHTML = genererVue.ammortExcepHtml();
 document.getElementById("emp").innerHTML = genererVue.emploieHtml();
 document.getElementById("creance").innerHTML = genererVue.chargeFinancierHtml();
@@ -20,7 +20,7 @@ document.getElementById("impotSoc").innerHTML = genererVue.impotSocieteHtml();
 document.getElementById("impotfor").innerHTML = genererVue.impotForfaitHtml();
 document.getElementById("ISIMF").innerHTML = genererVue.isImfHtml();
 document.getElementById("irvm").innerHTML = genererVue.impotRevenuValeurMobilieres();
-document.getElementById("actu").innerHTML = genererVue.actualisationHtml();
+document.getElementById("topic").innerHTML = genererVue.actualisationHtml();
 document.getElementById("impTaxeC").innerHTML = genererVue.tabImpotEtTaxe(genererVue.modele.mesdon().impotTaxeCourent());
 document.getElementById("impTaxeA").innerHTML = genererVue.tabImpotEtTaxe(genererVue.modele.mesdon().impotTaxeActu());
 

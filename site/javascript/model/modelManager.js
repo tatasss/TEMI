@@ -4,7 +4,7 @@
  * @param {number} pibchoix - the pib want be used
  * @return {number} invest
  */
-ModeleManager.prototype.investissementModele = function (mE, pibchoix) {
+ModelManager.prototype.investissementModele = function (mE, pibchoix) {
     return (mE.terrain() + mE.construction() + mE.equipement() + mE.camion() + mE.info() + mE.bureau()) * pibchoix;
 };
 /**
@@ -12,15 +12,15 @@ ModeleManager.prototype.investissementModele = function (mE, pibchoix) {
  * @param {Object} mE - the firm used by the modele
  * @param {Object} mP - the Land used by the modele
  * @param {number} pibchoix - the pib want be used
- * @return {Array} ammort
+ * @return {Array} amortization
  */
-ModeleManager.prototype.ammortissment = function (mE, mP, pibchoix) {
+ModelManager.prototype.ammortissment = function (mE, mP, pibchoix) {
     let amortissement = [];
-    amortissement.push(fabrique.armortirModele(mE.construction() * pibchoix, mP.ammort().construction(), mP.ammort().coefdegressif(), "Construction"));
-    amortissement.push(fabrique.armortirModele(mE.equipement() * pibchoix, mP.ammort().equipement(), mP.ammort().coefdegressif(), "Equipement"));
-    amortissement.push(fabrique.armortirModele(mE.camion() * pibchoix, mP.ammort().camion(), mP.ammort().coefdegressif(), "Camion"));
-    amortissement.push(fabrique.armortirModele(mE.info() * pibchoix, mP.ammort().info(), mP.ammort().coefdegressif(), "Informatique"));
-    amortissement.push(fabrique.armortirModele(mE.bureau() * pibchoix, mP.ammort().bureau(), mP.ammort().coefdegressif(), "Bureau"));
+    amortissement.push(maker.armortirModele(mE.construction() * pibchoix, mP.amortization().construction(), mP.amortization().coefdegressif(), "Construction"));
+    amortissement.push(maker.armortirModele(mE.equipement() * pibchoix, mP.amortization().equipement(), mP.amortization().coefdegressif(), "Equipement"));
+    amortissement.push(maker.armortirModele(mE.camion() * pibchoix, mP.amortization().camion(), mP.amortization().coefdegressif(), "Camion"));
+    amortissement.push(maker.armortirModele(mE.info() * pibchoix, mP.amortization().info(), mP.amortization().coefdegressif(), "Informatique"));
+    amortissement.push(maker.armortirModele(mE.bureau() * pibchoix, mP.amortization().bureau(), mP.amortization().coefdegressif(), "Bureau"));
     return amortissement;
 
 };
@@ -29,7 +29,7 @@ ModeleManager.prototype.ammortissment = function (mE, mP, pibchoix) {
  * @param {array} ammortissement - the array of the amortissment
  * @return {Array} amortGeneral
  */
-ModeleManager.prototype.ammortGen = function (ammortissement) {
+ModelManager.prototype.ammortGen = function (ammortissement) {
     let total = [0, 0, 0, 0, 0];
     let generalAmort = [];
     ammortissement.forEach(function (item) {
@@ -52,7 +52,7 @@ ModeleManager.prototype.ammortGen = function (ammortissement) {
  * @param {number} pibchoix - the pib want be used
  * @return {{petrole: Array, taux: Array, tva: Array}}
  */
-ModeleManager.prototype.taxe_val_ajout = function (mE, impot, pibchoix) {
+ModelManager.prototype.taxe_val_ajout = function (mE, impot, pibchoix) {
     let i;
 //-------------------------------
     let petrole = [];
@@ -108,7 +108,7 @@ ModeleManager.prototype.taxe_val_ajout = function (mE, impot, pibchoix) {
  * @param {Object} impot - the impot used on the land
  * @return {{salaire_cadre: Array, salaire_secretaire: Array, salaire_ouvrier: Array, masse_salarial: Array, tauxCfe: Array, reel_CFE: Array}}
  */
-ModeleManager.prototype.contributionForfEmploie = function (mE, mP, pibchoix, impot) {
+ModelManager.prototype.contributionForfEmploie = function (mE, mP, pibchoix, impot) {
     let i;
     let salaireCadre = [];
     for (i = 0; i < 5; i++) {
@@ -184,15 +184,15 @@ ModeleManager.prototype.contributionForfEmploie = function (mE, mP, pibchoix, im
 /**
  * @description this function give the real taxe Rate
  * @param {Object } mP  - the land used by the model
- * @param {Object} donne - the Donne used by the model
+ * @param {Object} donne - the Data used by the model
  * @return {{cfe: number, is: number, imf: number, irvm: number, irc: number, tvaPetrole: number}}
  */
-ModeleManager.prototype.selectTaxe = function (mP, donne) {
+ModelManager.prototype.selectTaxe = function (mP, donne) {
     //console.log ("on entre")
     let cfe, is, imf, irvm, irc, tvaPetrole;
     //console.log(mP);
 
-    if (donne.regime() === "gen") {
+    if (donne.government() === "gen") {
         cfe = mP.impots().cfe();
         is = mP.impots().isImp();
         imf = mP.impots().imf();
@@ -203,7 +203,7 @@ ModeleManager.prototype.selectTaxe = function (mP, donne) {
     }
     else {
 
-        if (mP.investissement().duree < 5) {
+        if (mP.investment().duree < 5) {
             cfe = mP.impots().cfe();
             is = mP.impots().isImp();
             imf = mP.impots().imf();
@@ -212,74 +212,74 @@ ModeleManager.prototype.selectTaxe = function (mP, donne) {
             tvaPetrole = mP.impots().tva_petrole();
         }
         else {
-            if (mP.investissement().cfe().taux() != null) {
-                cfe = mP.investissement().cfe().taux();
+            if (mP.investment().cfe().taux() != null) {
+                cfe = mP.investment().cfe().taux();
             }
             else {
-                if (mP.investissement().cfe().reducexo() != null) {
-                    cfe = ((1 - (mP.investissement().cfe().reducexo() / 100)) * (mP.impots().cfe() / 100)) * 100;
+                if (mP.investment().cfe().reducexo() != null) {
+                    cfe = ((1 - (mP.investment().cfe().reducexo() / 100)) * (mP.impots().cfe() / 100)) * 100;
                 }
                 else {
                     cfe = mP.impots().cfe();
                 }
 
             }
-            if (mP.investissement().isamort().taux() != null) {
-                is = mP.investissement().isamort().taux();
+            if (mP.investment().isamort().taux() != null) {
+                is = mP.investment().isamort().taux();
             }
             else {
-                if (mP.investissement().isamort().reducexo() != null) {
+                if (mP.investment().isamort().reducexo() != null) {
 
-                    is = (((1 - (mP.investissement().isamort().reducexo() / 100)) * (mP.impots().isImp() / 100)) * 100);
-                    //console.log((1-(mP.investissement().isamort.reducexo/100)));
+                    is = (((1 - (mP.investment().isamort().reducexo() / 100)) * (mP.impots().isImp() / 100)) * 100);
+                    //console.log((1-(mP.investment().isamort.reducexo/100)));
                 }
                 else {
                     is = mP.impots().isImp();
                 }
 
             }
-            if (mP.investissement().imf().taux() != null) {
-                imf = mP.investissement().imf().taux();
+            if (mP.investment().imf().taux() != null) {
+                imf = mP.investment().imf().taux();
             }
             else {
-                if (mP.investissement().imf().reducexo() != null) {
-                    imf = ((1 - (mP.investissement().imf().reducexo() / 100)) * (mP.impots().imf() / 100)) * 100;
+                if (mP.investment().imf().reducexo() != null) {
+                    imf = ((1 - (mP.investment().imf().reducexo() / 100)) * (mP.impots().imf() / 100)) * 100;
                 }
                 else {
                     imf = mP.impots().imf();
                 }
 
             }
-            if (mP.investissement().irvm().taux() != null) {
-                irvm = mP.investissement().irvm().taux;
+            if (mP.investment().irvm().taux() != null) {
+                irvm = mP.investment().irvm().taux;
             }
             else {
-                if (mP.investissement().irvm().reducexo() != null) {
-                    irvm = ((1 - (mP.investissement().irvm().reducexo() / 100)) * (mP.impots().irvm() / 100)) * 100;
+                if (mP.investment().irvm().reducexo() != null) {
+                    irvm = ((1 - (mP.investment().irvm().reducexo() / 100)) * (mP.impots().irvm() / 100)) * 100;
                 }
                 else {
                     irvm = mP.impots().irvm();
                 }
 
             }
-            if (mP.investissement().irc().taux() != null) {
-                irc = mP.investissement().irc().taux();
+            if (mP.investment().irc().taux() != null) {
+                irc = mP.investment().irc().taux();
             }
             else {
-                if (mP.investissement().irc().reducexo != null) {
-                    irc = ((1 - (mP.investissement().irc().reducexo() / 100)) * (mP.impots().irc() / 100)) * 100;
+                if (mP.investment().irc().reducexo != null) {
+                    irc = ((1 - (mP.investment().irc().reducexo() / 100)) * (mP.impots().irc() / 100)) * 100;
                 }
                 else {
                     irc = mP.impots().irc();
                 }
 
             }
-            if (mP.investissement().tvaPetrole().taux() != null) {
-                tvaPetrole = mP.investissement().tvaPetrole().taux();
+            if (mP.investment().tvaPetrole().taux() != null) {
+                tvaPetrole = mP.investment().tvaPetrole().taux();
             }
             else {
-                if (mP.investissement().irc().reducexo() != null) {
-                    tvaPetrole = ((1 - (mP.investissement().tvaPetrole().reducexo() / 100)) * (mP.impots().tva_petrole() / 100)) * 100;
+                if (mP.investment().irc().reducexo() != null) {
+                    tvaPetrole = ((1 - (mP.investment().tvaPetrole().reducexo() / 100)) * (mP.impots().tva_petrole() / 100)) * 100;
                 }
                 else {
                     tvaPetrole = mP.impots().tva_petrole();
@@ -344,7 +344,7 @@ ModeleManager.prototype.selectTaxe = function (mP, donne) {
  * @param {number} pibchoix - the pib want be used
  * @return {{chargeFinance: Array, taux: Array, irc: Array}}
  */
-ModeleManager.prototype.taxe_creance = function (mE, impot, pibchoix) {
+ModelManager.prototype.taxe_creance = function (mE, impot, pibchoix) {
     let i;
 //-------------------------------
     let chargeFin = [];
@@ -402,7 +402,7 @@ ModeleManager.prototype.taxe_creance = function (mE, impot, pibchoix) {
  * @param {Array } ammortissemment -the  amortissment of the model
  * @return {{vente: Array, achats: Array, petrole: Array, tva_petrole: Array, depense_entretien: Array, depense_admin: Array, depense_pub: Array, salaire_ouvrier: Array, salaire_secretaire: Array, salaire_cadre: Array, cfe: Array, chargeFinanciere: Array, amortissement: Array, benefice_comptable: Array, taux_marge_avant__IS_IMF: Array}}
  */
-ModeleManager.prototype.comptableResult = function (mE, pibchoix, tva, salaire_cadre, salaire_secretaire, salaire_ouvrier, reel_CFE, ammortissemment) {
+ModelManager.prototype.comptableResult = function (mE, pibchoix, tva, salaire_cadre, salaire_secretaire, salaire_ouvrier, reel_CFE, ammortissemment) {
     //console.log("on entre dans compta");
     let i;
     let vente = [];
@@ -571,7 +571,7 @@ ModeleManager.prototype.comptableResult = function (mE, pibchoix, tva, salaire_c
  * @param {Array} amortExep - the amortissement Excep used by a model
  * @return {{benCompta: Array, amortExep: Array, benImpo: Array}}
  */
-ModeleManager.prototype.impotResult = function (benCompta, amortExep) {
+ModelManager.prototype.impotResult = function (benCompta, amortExep) {
     let benImpo = [];
     for (let i = 0; i < 5; i++) {
         benImpo.push(benCompta[i] - amortExep[i]);
@@ -605,18 +605,18 @@ ModeleManager.prototype.impotResult = function (benCompta, amortExep) {
  * @param {Object } mP  - the land used by the model
  * @param {Array} benCompta - the profit of the comptability
  * @param {String} regime - the government used by the modem
- * @param {Object} donneRef - the Donne used by the model
- * @return {{duree: number, investissement: number, taux: number, limitation: number, dureeTab: Array, baseAmorti: Array, chargeAmorti: Array}}
+ * @param {Object} donneRef - the Data used by the model
+ * @return {{duree: number, investment: number, taux: number, limitation: number, dureeTab: Array, baseAmorti: Array, chargeAmorti: Array}}
  */
-ModeleManager.prototype.ammortExcept = function (mP, benCompta, regime, donneRef) {
+ModelManager.prototype.ammortExcept = function (mP, benCompta, regime, donneRef) {
     //amortissement exceptionnel
     let i;
 // console.log(donneRef);
 
 
-    let investissment = (donneRef.entreprise().terrain() + donneRef.entreprise().construction()
-        + donneRef.entreprise().equipement() + donneRef.entreprise().camion() + donneRef.entreprise().info()
-        + donneRef.entreprise().bureau()) * donneRef.pays().pib;
+    let investissment = (donneRef.firm().terrain() + donneRef.firm().construction()
+        + donneRef.firm().equipement() + donneRef.firm().camion() + donneRef.firm().info()
+        + donneRef.firm().bureau()) * donneRef.land().pib;
     let taux;
     let limitation;
     let duree;
@@ -625,20 +625,20 @@ ModeleManager.prototype.ammortExcept = function (mP, benCompta, regime, donneRef
     let chargeAmorti = [];
     // console.log(investissment);
     if (regime === "nongen") {
-        if (mP.investissement().isamort().ammortTauxEx() != null) {
-            taux = mP.investissement().isamort().ammortTauxEx();
+        if (mP.investment().isamort().ammortTauxEx() != null) {
+            taux = mP.investment().isamort().ammortTauxEx();
         }
         else {
             taux = 0;
         }
-        if (mP.investissement().isamort().ammortLimit() != null) {
-            limitation = mP.investissement().isamort().ammortLimit();
+        if (mP.investment().isamort().ammortLimit() != null) {
+            limitation = mP.investment().isamort().ammortLimit();
         }
         else {
             limitation = 0;
         }
-        if (mP.investissement().isamort().duree() != null) {
-            duree = mP.investissement().isamort().duree();
+        if (mP.investment().isamort().duree() != null) {
+            duree = mP.investment().isamort().duree();
         }
         else {
             duree = 0;
@@ -690,10 +690,10 @@ ModeleManager.prototype.ammortExcept = function (mP, benCompta, regime, donneRef
             return duree;
         },
         /**
-         * @description the getter of investissement
+         * @description the getter of investment
          * @return {number}
          */
-        investissement: function () {
+        investment: function () {
             return investissment;
         },
         /**
@@ -739,7 +739,7 @@ ModeleManager.prototype.ammortExcept = function (mP, benCompta, regime, donneRef
  * @param {Array}  imf - the real imf Impot give by the model
  * @return {Array}
  */
-ModeleManager.prototype.iSIMFtab = function (is, imf) {
+ModelManager.prototype.iSIMFtab = function (is, imf) {
     let monTab = [];
     for (let i = 0; i < 5; i++) {
         if (is[i] >= imf[i]) {
@@ -761,7 +761,7 @@ ModeleManager.prototype.iSIMFtab = function (is, imf) {
  * @param {Object} taxeAjout - the real Val Ajout taxe used by a model
  * @return {{cfe: Array, isimf: Array, irvm: Array, irc: Array, tvaPetrole: Array, total: Array}}
  */
-ModeleManager.prototype.impotTaxeCourent = function (actu, employer, isImf, impotIRVM, taxeCreance, taxeAjout) {
+ModelManager.prototype.impotTaxeCourent = function (actu, employer, isImf, impotIRVM, taxeCreance, taxeAjout) {
 
     let cfe = [];
     let isimf = [];
@@ -831,7 +831,7 @@ ModeleManager.prototype.impotTaxeCourent = function (actu, employer, isImf, impo
 
 };
 /**
- *@description  This function give the real price of all taxe paid with actu
+ *@description  This function give the real price of all taxe paid with topic
  * @param {number} actu - a discount rate want be used
  * @param {Object} employer - a Real Price of Working Force used by a model
  * @param {Array}  isImf -  the real IS or IMF Impot give by the model
@@ -840,7 +840,7 @@ ModeleManager.prototype.impotTaxeCourent = function (actu, employer, isImf, impo
  * @param {Object} taxeAjout - the real Val Ajout taxe used by a model
  * @return {{cfe: Array, isimf: Array, irvm: Array, irc: Array, tvaPetrole: Array, total: Array}}
  */
-ModeleManager.prototype.impotTaxeActu = function (actu, employer, isImf, impotIRVM, taxeCreance, taxeAjout) {
+ModelManager.prototype.impotTaxeActu = function (actu, employer, isImf, impotIRVM, taxeCreance, taxeAjout) {
     let cfe = [];
 
     let isimf = [];
@@ -921,7 +921,7 @@ ModeleManager.prototype.impotTaxeActu = function (actu, employer, isImf, impotIR
  * @param {number} vanAI - a NPV with Taxe
  * @return {number}
  */
-ModeleManager.prototype.tauxEffectif = function (vanSI, vanAI) {
+ModelManager.prototype.tauxEffectif = function (vanSI, vanAI) {
     /*console.log("on entre dans taux effectif");
     console.log(vanSI);
     console.log(vanAI);
@@ -936,15 +936,15 @@ ModeleManager.prototype.tauxEffectif = function (vanSI, vanAI) {
  * @param {number} pin - the pib want be used
  * @param {Object} compta - The comptability result in the modele
  * @param {number} actu - a discount rate want be used
- * @return {{courant: Array, actu: Array}}
+ * @return {{courant: Array, topic: Array}}
  */
-ModeleManager.prototype.fluxTresoriesI = function (entreprise, pin, compta, actu) {
+ModelManager.prototype.fluxTresoriesI = function (entreprise, pin, compta, actu) {
     let courant = [];
     let courantBis = [];
     let actuel = [];
     let actuelBis = [];
     let totactu;
-    //console.log(entreprise);
+    //console.log(firm);
     courant.push(-(entreprise.capitalSocial() + entreprise.detteLongTerme() + entreprise.detteCourtTerme() + entreprise.detteFournisseur()) * pin);
     actuel.push(-(entreprise.capitalSocial() + entreprise.detteLongTerme() + entreprise.detteCourtTerme() + entreprise.detteFournisseur()) * pin);
     compta.vente().forEach(function (item, index) {
@@ -980,10 +980,10 @@ ModeleManager.prototype.fluxTresoriesI = function (entreprise, pin, compta, actu
             return courant;
         },
         /**
-         * @description the getter of actu
+         * @description the getter of topic
          * @return {Array}
          */
-        actu: function () {
+        topic: function () {
             return actuel;
         },
     };
@@ -992,17 +992,17 @@ ModeleManager.prototype.fluxTresoriesI = function (entreprise, pin, compta, actu
  *@description This function give the cash FLow of the firm in the land with taxe
  * @param {Object }  fluxTresorie - the cash FLow of the firm in the land without taxe
  * @param {Array} tabImpotC - Taxe Of the land on the firm
- * @param {Array} tabImpotA - Taxe Of the land on the firm actu
+ * @param {Array} tabImpotA - Taxe Of the land on the firm topic
  * @param {number} actuel - a discount rate want be used
- * @return {{courant: Array, actu: Array}}
+ * @return {{courant: Array, topic: Array}}
  */
-ModeleManager.prototype.fluxTresoriesImp = function (fluxTresorie, tabImpotC, tabImpotA, actuel) {
+ModelManager.prototype.fluxTresoriesImp = function (fluxTresorie, tabImpotC, tabImpotA, actuel) {
     let actu = [];
     let courant = [];
     courant.push(fluxTresorie.courant()[0]);
-    actu.push(fluxTresorie.actu()[0]);
-    fluxTresorie.actu().forEach(function (item, index) {
-        if (index > 0 && index < fluxTresorie.actu().length - 1) {
+    actu.push(fluxTresorie.topic()[0]);
+    fluxTresorie.topic().forEach(function (item, index) {
+        if (index > 0 && index < fluxTresorie.topic().length - 1) {
             actu.push(item - tabImpotA[index - 1]);
         }
     });
@@ -1022,11 +1022,11 @@ ModeleManager.prototype.fluxTresoriesImp = function (fluxTresorie, tabImpotC, ta
             return courant;
         },
         /**
-         * @description the getter of actu
+         * @description the getter of topic
          * @return {Array}
          */
-        actu: function () {
-            return actuel;
+        topic: function () {
+            return actu;
         },
     };
 
@@ -1037,7 +1037,7 @@ ModeleManager.prototype.fluxTresoriesImp = function (fluxTresorie, tabImpotC, ta
  * @param {Array} tab - the array want to compute this
  * @return {Array}
  */
-ModeleManager.prototype.tauxRendementInterne = function (tab) {
+ModelManager.prototype.tauxRendementInterne = function (tab) {
     let taux = [];
     let tau;
     let tabBis = [];
@@ -1070,7 +1070,7 @@ ModeleManager.prototype.tauxRendementInterne = function (tab) {
  * @param {Array} tabAi -  An Array Want to be calc(cashFlow) with Taxe
  * @return {Array}
  */
-ModeleManager.prototype.tauxEffectifMarginaux = function (tabSi, tabAi) {
+ModelManager.prototype.tauxEffectifMarginaux = function (tabSi, tabAi) {
     let tot = [];
     tabSi.forEach(function (item, index) {
         if (item > 0) {

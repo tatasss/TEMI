@@ -2,10 +2,10 @@
  * @description This function create a html to resultat in the index
  * @return {string}
  */
-GenererVue.prototype.resultatHtml = function () {
+ViewGenerator.prototype.resultatHtml = function () {
     //mis en place du tableaux des resultat
     let impotStatDuree = [];
-    if (this.modele.donnee.regime() === "gen") {
+    if (this.modele.donnee.government() === "gen") {
         for (let i = 0; i < 5; i++) {
             impotStatDuree.push(" ");
         }
@@ -13,27 +13,27 @@ GenererVue.prototype.resultatHtml = function () {
     else {
 
     }
-    //console.log( this.modele.donnee.pays())
+    //console.log( this.modele.donnee.land())
     let head = "<thead><tr><th/><th colspan=3 align=center>Taux statuaire</th><th colspan=2>Taux effectifs marginaux</th></tr>";
     head += "<tr><th/><th>Taux plein</th><th>Taux reduit</th><th>Durée</th><th>First Year</th><th>Five Year</th></tr></thead>";
-    //console.log( this.modele.donnee.pays().investissement().isamort());
-    let cfe = this.recupDonneTab(false, this.modele.donnee.pays().investissement().cfe(), this.modele.donnee.pays().impots().cfe(),
+    //console.log( this.modele.donnee.land().investment().isamort());
+    let cfe = this.recupDonneTab(false, this.modele.donnee.land().investment().cfe(), this.modele.donnee.land().impots().cfe(),
         false, false, false);
-    let is = this.recupDonneTab(false, this.modele.donnee.pays().investissement().isamort(),
-        this.modele.donnee.pays().impots().isImp(), true, false, false);
+    let is = this.recupDonneTab(false, this.modele.donnee.land().investment().isamort(),
+        this.modele.donnee.land().impots().isImp(), true, false, false);
 
-    let imf = this.recupDonneTab(false, this.modele.donnee.pays().investissement().imf(), this.modele.donnee.pays().impots().imf(),
+    let imf = this.recupDonneTab(false, this.modele.donnee.land().investment().imf(), this.modele.donnee.land().impots().imf(),
         false, true, false);
-    let irvm = this.recupDonneTab(false, this.modele.donnee.pays().investissement().irvm(),
-        this.modele.donnee.pays().impots().irvm(), false, false, false);
-    let irc = this.recupDonneTab(false, this.modele.donnee.pays().investissement().irc(), this.modele.donnee.pays().impots().irc(),
+    let irvm = this.recupDonneTab(false, this.modele.donnee.land().investment().irvm(),
+        this.modele.donnee.land().impots().irvm(), false, false, false);
+    let irc = this.recupDonneTab(false, this.modele.donnee.land().investment().irc(), this.modele.donnee.land().impots().irc(),
         false, false, false);
-    let tva = this.recupDonneTab(false, this.modele.donnee.pays().investissement().tvaPetrole(),
-        this.modele.donnee.pays().impots().tva_petrole(), false, false, false);
-    let tot = this.recupDonneTab(this.modele.mesdon().tauxeffMoyCourent, this.modele.donnee.pays().investissement().total,
-        this.modele.donnee.pays().impots().imf(), false, false, true);
+    let tva = this.recupDonneTab(false, this.modele.donnee.land().investment().tvaPetrole(),
+        this.modele.donnee.land().impots().tva_petrole(), false, false, false);
+    let tot = this.recupDonneTab(this.modele.mesdon().tauxeffMoyCourent, this.modele.donnee.land().investment().total,
+        this.modele.donnee.land().impots().imf(), false, false, true);
     let bodyTest = bootstrap.tableSE(
-        [`CFE</td><td>${this.modele.donnee.pays().impots().cfe()}`, `IS</td><td class=\"fontred\">${this.mP.impots().isImp()}`,
+        [`CFE</td><td>${this.modele.donnee.land().impots().cfe()}`, `IS</td><td class=\"fontred\">${this.mP.impots().isImp()}`,
             `IMF</td><td class=\"fontred\">${this.mP.impots().imf()}`, `IRVM</td><td>${this.mP.impots().irvm()}`,
             `IRC</td><td>${this.mP.impots().irc()}`, `TVA Petrole</td><td>${this.mP.impots().tva_petrole()}`, "total</td><td>"],
         head,
@@ -83,7 +83,7 @@ GenererVue.prototype.resultatHtml = function () {
  * @param {Boolean} isTot -Defined If we make A total Row
  * @return {Array}
  */
-GenererVue.prototype.recupDonneTab = function (effMoy, impDonne, donneImp, isIs, isImf, isTot) {
+ViewGenerator.prototype.recupDonneTab = function (effMoy, impDonne, donneImp, isIs, isImf, isTot) {
     let result = [];
     if (isTot) {
         result.push(null);
@@ -95,7 +95,7 @@ GenererVue.prototype.recupDonneTab = function (effMoy, impDonne, donneImp, isIs,
         return result;
     }
     else {
-        if (this.modele.donnee.regime() !== "Gen") {
+        if (this.modele.donnee.government() !== "Gen") {
             if (impDonne.taux() != null) {
                 result.push(impDonne.taux());
             }
@@ -136,19 +136,19 @@ GenererVue.prototype.recupDonneTab = function (effMoy, impDonne, donneImp, isIs,
     }
 };
 /**
- * @description This function create a html to give the gdp on the pays
+ * @description This function create a html to give the gdp on the land
  * @return {string}
  */
-GenererVue.prototype.pinbHTML = function () {
+ViewGenerator.prototype.pinbHTML = function () {
     //console.log(this.mP);
-    return `<p>Le PIB par tête dans le pays ${this.mP.nom()} est de : ${Math.round(this.mP.pib)} FCFA</p>`;
+    return `<p>Le PIB par tête dans le pays ${this.mP.name()} est de : ${Math.round(this.mP.pib)} FCFA</p>`;
 };
 /**
  * @description This function create a html to give a firm information
  * @return {string}
  */
-GenererVue.prototype.entrepriseHTML = function () {
-    let result = "<p>L'entreprise simulée est supposée être localisée dans la plus grande ville du pays, employer "
+ViewGenerator.prototype.entrepriseHTML = function () {
+    let result = "<p>L'firm simulée est supposée être localisée dans la plus grande ville du land, employer "
         + (this.mE.cadre() + this.mE.secretaire() + this.mE.ouvrier()) + " salariés et vendre la totalité de sa " +
         "production sur le marché local. ";
     result += "<br/>Elles comporte donc " + this.mE.cadre() + " cadre(s) dont l'indice salarial est de "
@@ -164,7 +164,7 @@ GenererVue.prototype.entrepriseHTML = function () {
  * @description This function create a html to give a bilan Array on the firm used by the modele
  * @return {string}
  */
-GenererVue.prototype.bilanHtml = function () {
+ViewGenerator.prototype.bilanHtml = function () {
     let actif = this.mE.terrain() + this.mE.construction() + this.mE.equipement() + this.mE.camion() + this.mE.info() +
         this.mE.bureau() + this.mE.stocks() + this.mE.creanceCli() + this.mE.dispoBanque();
     let passif = this.mE.capitalSocial() + this.mE.detteLongTerme() +
@@ -229,7 +229,7 @@ GenererVue.prototype.bilanHtml = function () {
  * @description This function create a html to give a compte Array of the firm used to create a model
  * @return {string}
  */
-GenererVue.prototype.compteHtml = function () {
+ViewGenerator.prototype.compteHtml = function () {
     let cote = ["Achats", "Petrole", "Depenses administratives", "Depenses publicitaires", "Depenses d'entretien",
         "<strong>Impôts et taxes</strong>", "<strong>Masse Salariale</strong>", "Cadres", "Secrétaires", "Ouvriers",
         "<strong>Charges financières</strong>", "Charges financières", "<strong>Amortissement</strong>"];
@@ -294,7 +294,7 @@ GenererVue.prototype.compteHtml = function () {
  * @description This function create a html to give A economic data
  * @return {string}
  */
-GenererVue.prototype.donneesEconomique = function () {
+ViewGenerator.prototype.donneesEconomique = function () {
     let result = this.pinbHTML();
     result += this.entrepriseHTML();
     result += this.bilanHtml();
@@ -305,7 +305,7 @@ GenererVue.prototype.donneesEconomique = function () {
  * @description This function create a html to give the Impot of the land
  * @return {string}
  */
-GenererVue.prototype.ImpotHtml = function () {
+ViewGenerator.prototype.ImpotHtml = function () {
     let head = "<thead><tr><th colspan=5> Impot<th/></tr>";
     head += "<tr><th/><th>1</th><th>2</th><th>3</th><th>4</th><th>5</th></tr>";
     head += "</thead>";
@@ -352,27 +352,27 @@ GenererVue.prototype.ImpotHtml = function () {
  * @description This function create the HTML to ammortissement
  * @return {string}
  */
-GenererVue.prototype.amortissementHtml = function () {
+ViewGenerator.prototype.amortissementHtml = function () {
     let head = "<thead><tr><th colspan=2> Amortissement<th/></tr><tr><th/><th>Durée Linéaire</th><th>Coef dégressif</th></tr></thead>";
     let cote = ["Construction", "Equipement", "Camion", "Matériel informatique", "Matériel bureau"];
     let lin1 = {
-        tab: [this.mP.ammort().construction(), this.mP.ammort().coefdegressif()],
+        tab: [this.mP.amortization().construction(), this.mP.amortization().coefdegressif()],
         color: ""
     };
     let lin2 = {
-        tab: [this.mP.ammort().equipement(), this.mP.ammort().coefdegressif()],
+        tab: [this.mP.amortization().equipement(), this.mP.amortization().coefdegressif()],
         color: ""
     };
     let lin3 = {
-        tab: [this.mP.ammort().camion(), this.mP.ammort().coefdegressif()],
+        tab: [this.mP.amortization().camion(), this.mP.amortization().coefdegressif()],
         color: ""
     };
     let lin4 = {
-        tab: [this.mP.ammort().info(), this.mP.ammort().coefdegressif()],
+        tab: [this.mP.amortization().info(), this.mP.amortization().coefdegressif()],
         color: ""
     };
     let lin5 = {
-        tab: [this.mP.ammort().bureau(), this.mP.ammort().coefdegressif()],
+        tab: [this.mP.amortization().bureau(), this.mP.amortization().coefdegressif()],
         color: ""
     };
     let tab = bootstrap.tableSE(cote, head, lin1, lin2, lin3, lin4, lin5);
@@ -382,8 +382,8 @@ GenererVue.prototype.amortissementHtml = function () {
  * @description This function create the HTML to ammortissement Excep
  * @return {string}
  */
-GenererVue.prototype.amortiExcepHTML = function () {
-    return "<p> Pour les amortissements exceptionnels, le taux depend de l'investissement, il y a une limitation par" +
+ViewGenerator.prototype.amortiExcepHTML = function () {
+    return "<p> Pour les amortissements exceptionnels, le taux depend de l'investment, il y a une limitation par" +
         " rapport au bénéfice annuel et l'unité de la durée est l'année</p>";
 
 };
@@ -391,7 +391,7 @@ GenererVue.prototype.amortiExcepHTML = function () {
  * @description This function create the HTML to give a Fiscal Data
  * @return {string}
  */
-GenererVue.prototype.donneesFiscal = function () {
+ViewGenerator.prototype.donneesFiscal = function () {
     //mis en place des données fiscales
 
     //fin
@@ -404,7 +404,7 @@ GenererVue.prototype.donneesFiscal = function () {
  * @description This function create a  HTML to make a body
  * @return {string}
  */
-GenererVue.prototype.bodyHtml = function () {
+ViewGenerator.prototype.bodyHtml = function () {
     let bodyglo = this.resultatHtml();
     bodyglo += this.donneesEconomique();
     bodyglo += this.donneesFiscal();
@@ -412,18 +412,18 @@ GenererVue.prototype.bodyHtml = function () {
 
 };
 /**
- * @description This function create the HTML to give the parameters and make any Button to navigate on the Modele DATA
+ * @description This function create the HTML to give the parameters and make any Button to navigate on the Model DATA
  * @return {string}
  */
-GenererVue.prototype.navigationHtml = function () {
+ViewGenerator.prototype.navigationHtml = function () {
     let regime;
-    if (this.modele.donnee.regime() === "gen") {
+    if (this.modele.donnee.government() === "gen") {
         regime = "code général des impots";
     }
     else {
         regime = "code des investissements";
     }
-    let pannel = bootstrap.pan("default", "Paramétres", this.modele.donnee.pays().nom() + "<br/>" + regime + "</br>" + this.modele.donnee.actu() + "</br>" + this.modele.donnee.marge());
+    let pannel = bootstrap.pan("default", "Paramétres", this.modele.donnee.land().name() + "<br/>" + regime + "</br>" + this.modele.donnee.topic() + "</br>" + this.modele.donnee.margin());
     let result = "<div class='vertical-menu'>" + pannel;
     result += bootstrap.buttonBalA("./model.html", "voire résultat");
     result += bootstrap.buttonBalA("./index.html", "retour") + "</div>";
@@ -433,16 +433,16 @@ GenererVue.prototype.navigationHtml = function () {
  * @description This function is the main to create a Data modele View on html
  * @return {string}
  */
-GenererVue.prototype.mainHTML = function () {
-    this.mP = this.modele.donnee.pays();
-    this.mE = this.modele.donnee.entreprise();
+ViewGenerator.prototype.mainHTML = function () {
+    this.mP = this.modele.donnee.land();
+    this.mE = this.modele.donnee.firm();
     return bootstrap.container(bootstrap.GridNavCote(this.bodyHtml(), this.navigationHtml()));
 };
 /**
  * @description This function create a HTML to the petrole Tva Taxe on modele
  * @return {string}
  */
-GenererVue.prototype.petroleHtml = function () {
+ViewGenerator.prototype.petroleHtml = function () {
     let cote = ["Pétrole</td><td>FCFA", "Taux</td><td>%", "TVA Petrole</td><td>FCFA"];
     let tab = bootstrap.tableSE(cote, null, {
             tab: this.modele.mesdon().taxeAjout().petrole(),
@@ -462,7 +462,7 @@ GenererVue.prototype.petroleHtml = function () {
  * @description This function create a HTML for the Financial Taxe
  * @return {string}
  */
-GenererVue.prototype.chargeFinancierHtml = function () {
+ViewGenerator.prototype.chargeFinancierHtml = function () {
     let cote = ["Charges financiéres</td><td>FCFA", "Taux</td><td>%", "IRC</td><td>FCFA"];
     let tab = bootstrap.tableSE(cote, null, {
             tab: myMath.arrondirTabUnit(this.modele.mesdon().taxeCreance().chargeFinance()),
@@ -482,7 +482,7 @@ GenererVue.prototype.chargeFinancierHtml = function () {
  * @description This function create the HTML to give the REAL cost on working force
  * @return {string}
  */
-GenererVue.prototype.emploieHtml = function () {
+ViewGenerator.prototype.emploieHtml = function () {
     let cote = ["Salaire des cadres</td><td>FCFA", "Salaire des secrétaires</td><td>FCFA", "Salaire des ouvriers</td><td>FCFA"];
     cote.push("Masse Salariale</td><td>FCFA");
     cote.push("Taux</td><td>%");
@@ -518,7 +518,7 @@ GenererVue.prototype.emploieHtml = function () {
  * @description This function create the HTML to give the Comptability Result Array
  * @return {string}
  */
-GenererVue.prototype.comptableHtml = function () {
+ViewGenerator.prototype.comptableHtml = function () {
     let cote = ["Vente</td><td class=\"bottomBorder\">FCFA"];
     cote.push("Achats</td><td>FCFA");
     cote.push("Pétrole</td><td>FCFA");
@@ -533,7 +533,7 @@ GenererVue.prototype.comptableHtml = function () {
     cote.push("Charges financières</td><td class=\"bottomBorder\">FCFA");
     cote.push("Amortissement</td><td class=\"bottomBorder\">FCFA");
     cote.push("Bénéfice comptable</td><td>FCFA");
-    cote.push("Taux de marge  avant IS/IMF</td><td>%CA");
+    cote.push("Taux de margin  avant IS/IMF</td><td>%CA");
     let tab = bootstrap.tableSE(cote, null,
         {
             tab: myMath.arrondirTabUnit(this.modele.mesdon().resultCompta().vente()),
@@ -606,11 +606,11 @@ GenererVue.prototype.comptableHtml = function () {
  * @description This function create a HTML to give a amortissement Excep
  * @return {string}
  */
-GenererVue.prototype.ammortExcepHtml = function () {
-    let coteHead = ["Investissement</td><td>FCFA", "Taux</td><td>% Investissement", "Limitation</td><td>% Bénéfice comptable", "Durée</td><td>Années"];
+ViewGenerator.prototype.ammortExcepHtml = function () {
+    let coteHead = ["investment</td><td>FCFA", "Taux</td><td>% investment", "Limitation</td><td>% Bénéfice comptable", "Durée</td><td>Années"];
     let tabHead = bootstrap.tableSE(coteHead, null,
         {
-            tab: [Math.round(this.modele.mesdon().ammortExcep().investissement())],
+            tab: [Math.round(this.modele.mesdon().ammortExcep().investment())],
             color: "blue"
         },
         {
@@ -646,7 +646,7 @@ GenererVue.prototype.ammortExcepHtml = function () {
  * @description this function create a HTML to give a Impot Result Array
  * @return {string}
  */
-GenererVue.prototype.resultatImpotHtml = function () {
+ViewGenerator.prototype.resultatImpotHtml = function () {
     let cote = ["Bénéfice comptable</td><td>FCFA", "Amortissement exceptionnel</td><td>FCFA", "Bénéfice imposable</td><td>FCFA"];
     let tab = bootstrap.tableSE(cote, null, {
             tab: myMath.arrondirTabUnit(this.modele.mesdon().resultImpot().benCompta()),
@@ -666,7 +666,7 @@ GenererVue.prototype.resultatImpotHtml = function () {
  * @description This function create a HTML to give the general Amortissement
  * @return {string}
  */
-GenererVue.prototype.getAmmortGenneralHtml = function () {
+ViewGenerator.prototype.getAmmortGenneralHtml = function () {
     let cpt = 0;
     let tab = "<table class='table'><thead/></thead><tbody><tr><td>Construction</td><td>FCFA</td>";
     for (let i = 0; i < this.modele.mesdon().amortissementGeneral().length; i++) {
@@ -702,7 +702,7 @@ GenererVue.prototype.getAmmortGenneralHtml = function () {
  * @description This function create a HTML to give a IS impot Array
  * @return {string}
  */
-GenererVue.prototype.impotSocieteHtml = function () {
+ViewGenerator.prototype.impotSocieteHtml = function () {
     let is = [];
     let impSoc = [];
     for (let i = 0; i < 5; i++) {
@@ -731,7 +731,7 @@ GenererVue.prototype.impotSocieteHtml = function () {
  * @description This function create a HTML to give a IMF Impot on modele
  * @return {string}
  */
-GenererVue.prototype.impotForfaitHtml = function () {
+ViewGenerator.prototype.impotForfaitHtml = function () {
     let imf = [];
     let impIMF = [];
     for (let i = 0; i < 5; i++) {
@@ -757,8 +757,8 @@ GenererVue.prototype.impotForfaitHtml = function () {
  * @description This function create a HTML to give the IS/IMF Array
  * @return {string}
  */
-GenererVue.prototype.isImfHtml = function () {
-    let cote = ["IS/IMF</td><td>FCFA", "Bénéfice après IS/IMF</td><td>FCFA", "Taux de marge  aprés IS/IMF</td><td>%CA"];
+ViewGenerator.prototype.isImfHtml = function () {
+    let cote = ["IS/IMF</td><td>FCFA", "Bénéfice après IS/IMF</td><td>FCFA", "Taux de margin  aprés IS/IMF</td><td>%CA"];
     let tab = bootstrap.tableSE(cote, null, {
             tab: myMath.arrondirTabUnit(this.modele.mesdon().isImf()),
             color: ""
@@ -777,12 +777,12 @@ GenererVue.prototype.isImfHtml = function () {
  * @description This function create the HTML to give the IRVM Impot on modele
  * @return {string}
  */
-GenererVue.prototype.impotRevenuValeurMobilieres = function () {
+ViewGenerator.prototype.impotRevenuValeurMobilieres = function () {
     let div = [];
     let irvm = [];
     for (let i = 0; i < 5; i++) {
-        div.push(this.modele.donnee.entreprise().dividende());
-        irvm.push(this.modele.donnee.pays().impots().irvm());
+        div.push(this.modele.donnee.firm().dividende());
+        irvm.push(this.modele.donnee.land().impots().irvm());
     }
     let cote = ["Bénéfice après IS/IMF</td><td>FCFA", "Distribution anuelle</td><td>% des bénéfice après IS/IMF", "taux</td><td>% des bénéfice après IS/IMF", "IRVM</td><td>FCFA"];
     let tab = bootstrap.tableSE(cote, null, {
@@ -807,7 +807,7 @@ GenererVue.prototype.impotRevenuValeurMobilieres = function () {
  * @description This function create a HTML to give a Actualisation Array
  * @return {string}
  */
-GenererVue.prototype.actualisationHtml = function () {
+ViewGenerator.prototype.actualisationHtml = function () {
     let tab = bootstrap.tableSE(["actualisation"], null, {
         tab: myMath.arrondirTabUnit(this.modele.mesdon().actualisation(), 1),
         color: ""
@@ -815,11 +815,11 @@ GenererVue.prototype.actualisationHtml = function () {
     return bootstrap.pan("default", null, tab);
 };
 /**
- * @description This function create a HTML to give All Impot and Taxe used by a Modele
+ * @description This function create a HTML to give All Impot and Taxe used by a Model
  * @param  {Object} monm - The impot use by the modele use to generate a Html
  * @return {string}
  */
-GenererVue.prototype.tabImpotEtTaxe = function (monm) {
+ViewGenerator.prototype.tabImpotEtTaxe = function (monm) {
     let cote = ["CFE</td><td>FCFA", "IS/IMF</td><td>FCFA", "IRVM</td><td>FCFA", "IRC</td><td>FCFA", "TVA Petrole</td><td>FCFA", "Total</td><td>FCFA"];
     let tab = bootstrap.tableSE(cote, null,
         {
@@ -853,7 +853,7 @@ GenererVue.prototype.tabImpotEtTaxe = function (monm) {
  * @description This function create the HTML to Give The TEMI By a land on a firm
  * @return {string}
  */
-GenererVue.prototype.tabTauxEffectifMoy = function () {
+ViewGenerator.prototype.tabTauxEffectifMoy = function () {
     let tab = `<p> le TEMI est de ${Math.round(this.modele.mesdon().tauxeffMoyCourent() * 100) / 100} %</p>`;
     return bootstrap.pan("default", null, tab);
 };
@@ -863,7 +863,7 @@ GenererVue.prototype.tabTauxEffectifMoy = function () {
  * @param {String} color -The Color Of the year 0 Cash Flow Data
  * @return {string}
  */
-GenererVue.prototype.tabFluxTresorie = function (tab, color) {
+ViewGenerator.prototype.tabFluxTresorie = function (tab, color) {
     let cote = ["Courants</td><td>FCFA", "Actualisés</td><td>FCFA", " "];
     let lol = [null, null, null, null, null, null, null, "Somme"];
     //console.log(color);
@@ -875,7 +875,7 @@ GenererVue.prototype.tabFluxTresorie = function (tab, color) {
             fontColorLastCase: "selectedPosNegNumber"
         },
         {
-            tab: myMath.arrondirTabUnit(tab.actu()),
+            tab: myMath.arrondirTabUnit(tab.topic()),
             color: "",
             colorFirstCase: color,
             fontColorLastCase: "selectedPosNegNumber"
@@ -891,34 +891,34 @@ GenererVue.prototype.tabFluxTresorie = function (tab, color) {
  * @param {Array} tab -the Array of the return rate
  * @return {string}
  */
-GenererVue.prototype.tauxRendementInt = function (tab) {
+ViewGenerator.prototype.tauxRendementInt = function (tab) {
     return bootstrap.pan("default", null, bootstrap.tableSE(["courants"], null, {
         tab: myMath.arrondirTabUnit(tab, 2),
         color: ""
     }));
 };
 /**
- *@description This function create the HTML to give the Investissement Government Describe
+ *@description This function create the HTML to give the investment Government Describe
  * @return {string}
  */
-GenererVue.prototype.investissementRegime = function () {
+ViewGenerator.prototype.investissementRegime = function () {
     let html = "<p>";
-    if (this.modele.donnee.regime() !== "gen") {
+    if (this.modele.donnee.government() !== "gen") {
         html += "La formulation de plusieurs hypothèses a été nécessaire afin de déterminer à quel régime privilégié " +
-            "l’entreprise modélisée peut prétendre. L’investissement concerne une entreprise nouvelle. Il ne s’agit " +
-            "pas d’un investissement d’extension des capacités de production d’une entreprise déjà existante. " +
+            "l’firm modélisée peut prétendre. L’investissement concerne une firm nouvelle. Il ne s’agit " +
+            "pas d’un investment d’extension des capacités de production d’une firm déjà existante. " +
             " Le montant d’investissement éligible au code des investissements correspond à l’actif immobilisé de " +
-            "l’entreprise, soit 145×PNB/tête.  L’entreprise est située dans la capitale du pays.  L’entreprise" +
-            " crée 60 emplois.  L’entreprise n’est pas exportatrice. Elle vend la totalité de sa production sur" +
-            " le marché national. L’entreprise commence sa phase d’exploitation : les cinq années modélisées " +
-            "sont les cinq premières années d’exploitation de l’entreprise nouvelle, l’investissement a déjà eu lieu.";
+            "l’firm, soit 145×PNB/tête.  L’firm est située dans la capitale du land.  L’firm" +
+            " crée 60 emplois.  L’firm n’est pas exportatrice. Elle vend la totalité de sa production sur" +
+            " le marché national. L’firm commence sa phase d’exploitation : les cinq années modélisées " +
+            "sont les cinq premières années d’exploitation de l’firm nouvelle, l’investissement a déjà eu lieu.";
         html += "<br/>";
         html += "Ces hypothèses conduisent généralement à retenir le régime du code des investissements le moins " +
-            "avantageux fiscalement (souvent appelé régime A), car la taille de l’entreprise est insuffisante " +
+            "avantageux fiscalement (souvent appelé régime A), car la taille de l’firm est insuffisante " +
             "pour être éligible aux régimes supérieurs.";
         html += "</p><p>";
 
-        html += this.modele.donnee.pays().source();
+        html += this.modele.donnee.land().source();
     }
     html += "</p>";
     return html;

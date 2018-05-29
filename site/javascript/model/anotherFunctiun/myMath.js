@@ -49,7 +49,7 @@ MyMath.prototype.tri = function (tab) {
 
     /**
      * @description This function compute the NPV(Net Present Value)
-     * @param {number} rate - the rate of the actu
+     * @param {number} rate - the rate of the topic
      * @return {number}
      */
     function npv(rate) {
@@ -87,7 +87,7 @@ triReel = function (fn) {
 };
 /**
  * @description This function compute the Net Present Value of the tab
- * @param {number} actu - the actu rates
+ * @param {number} actu - the topic rates
  * @param {array} tab - the array of value want to be used to find the NPV
  * @return {number} NPV
  */
@@ -100,7 +100,7 @@ MyMath.prototype.van = function (actu, tab) {
             somme += (item / Math.pow((1 + actu), index));
         }
     });
-    //lol= lol/(1+actu);
+    //lol= lol/(1+topic);
 
     lol = lol + somme;
     //console.log("on sort du calcul VAN");

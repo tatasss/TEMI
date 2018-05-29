@@ -1,21 +1,21 @@
 /**
  * @constructs
- * @param {string} pays - the code of the land use
- * @param {string} regime - the tax regime want be used
- * @param {number} actu - a discount rate want be used
- * @param {number} marge - margin rate want be used
- * @description  Constructor of the Class Donne , the speciality of this class is to create the object with a primal information to make a model
+ * @param {string} landName - the code of the land use
+ * @param {string} government - the tax government want be used
+ * @param {number} topic - a discount rate want be used
+ * @param {number} margin - margin rate want be used
+ * @description  Constructor of the Class Data , the speciality of this class is to create the object with a primal information to make a model
  */
-let Donne = function (pays, regime, actu, marge) {
-    let randPays = mesPays();
+let Data = function (landName, government, topic, margin) {
+    let randLands = mesPays();
     //console.log(mesPays());
     let mP;
 
-    for (let i = 0; i < randPays.length; i++) {
+    for (let i = 0; i < randLands.length; i++) {
 
-        if (randPays[i].code() === pays) {
+        if (randLands[i].code() === landName) {
 
-            mP = randPays[i];
+            mP = randLands[i];
 
             break;
 
@@ -26,35 +26,35 @@ let Donne = function (pays, regime, actu, marge) {
      *@description The getter of land
      * @return {Object}
      */
-    this.pays =function(){
+    this.land =function(){
         return mP;
     };
     /**
-     * @description The getter of regime
+     * @description The getter of government
      * @return {string}
      */
-    this.regime =function(){
-        return regime;
+    this.government =function(){
+        return government;
     };
     /**
-     * @description The getter of actu
+     * @description The getter of topic
      * @return {number}
      */
-    this.actu =function(){
-        return actu;
+    this.topic =function(){
+        return topic;
     };
     /**
-     * @description The getter of marge
+     * @description The getter of margin
      * @return {number}
      */
-    this.marge =function(){
-        return marge;
+    this.margin =function(){
+        return margin;
     };
     /**
      * @description The getter of firm
-     * @return {{nom: string, terrain: number, construction: number, equipement: number, camion: number, info: number, bureau: number, stocks: number, creanceCli: number, dispoBanque: number, capitalSocial: number, detteLongTerme: number, detteCourtTerme: number, detteFournisseur: number, achat: number, petrole: number, depenseAdministrative: number, depensePub: number, depenseEntretien: number, chargeFinanciere: number, vente: number, cadre: number, secretaire: number, ouvrier: number, indice_cadre: number, indice_secretaire: number, indice_ouvrier: number, dividende: number, actuali: number}}
+     * @return {{name: string, terrain: number, construction: number, equipement: number, camion: number, info: number, bureau: number, stocks: number, creanceCli: number, dispoBanque: number, capitalSocial: number, detteLongTerme: number, detteCourtTerme: number, detteFournisseur: number, achat: number, petrole: number, depenseAdministrative: number, depensePub: number, depenseEntretien: number, chargeFinanciere: number, vente: number, cadre: number, secretaire: number, ouvrier: number, indice_cadre: number, indice_secretaire: number, indice_ouvrier: number, dividende: number, actuali: number}}
      */
-    this.entreprise =function(){
-        return fabrique.entreprise(actu, marge);
+    this.firm =function(){
+        return maker.firm(topic, margin);
     }
 };

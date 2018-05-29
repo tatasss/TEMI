@@ -5,38 +5,38 @@
 let MyMath = function () {
 };
 /**
- * @description This function is a constructor of ModeleManager Class
+ * @description This function is a constructor of ModelManager Class
  * @constructor
  */
-let ModeleManager = function () {
+let ModelManager = function () {
 };
 /**
- * @description This function is a constructor of BootstrapVue Class
+ * @description This function is a constructor of BootstrapView Class
  * @constructor
  */
-let BootstrapVue = function () {
+let BootstrapView = function () {
 };
 /**
- * @description This function is a constructor of Fabrique Class
+ * @description This function is a constructor of Manufactor Class
  * @constructor
  */
-let Fabrique = function () {
+let Manufactor = function () {
 };
 /**
- * @description This function is a constructor of GenererVue Class
- * @param {Modele} modele - the modele use by this class to generate view
+ * @description This function is a constructor of ViewGenerator Class
+ * @param {Model} modele - the modele use by this class to generate view
  * @constructor
  */
-let GenererVue = function (modele) {
+let ViewGenerator = function (modele) {
     this.modele = modele
 };
 
 /**
- * @description This function is a constructor of Modele class
- * @param {Donne} donnee - the donne used to construct the model
+ * @description This function is a constructor of Model class
+ * @param {Data} donnee - the donne used to construct the model
  * @constructor
  */
-let Modele = function (donnee) {
+let Model = function (donnee) {
     this.donnee = donnee;
 };
 /**
@@ -59,17 +59,17 @@ let Graph = function () {
  */
 let myMath = new MyMath();
 /**
- * @type {ModeleManager}
+ * @type {ModelManager}
  */
-let modeleManager = new ModeleManager();
+let modelManager = new ModelManager();
 /**
- * @type {BootstrapVue}
+ * @type {BootstrapView}
  */
-let bootstrap = new BootstrapVue();
+let bootstrap = new BootstrapView();
 /**
- * @type {Fabrique}
+ * @type {Manufactor}
  */
-let fabrique = new Fabrique();
+let maker = new Manufactor();
 /**
  * @type {Ref}
  */
@@ -92,7 +92,7 @@ Ref.prototype.donnerNomPays = function (code) {
     for (let i = 0; i < randPays.length; i++) {
         if (randPays[i].code() === code) {
 
-            return randPays[i].nom();
+            return randPays[i].name();
 
         }
 
@@ -107,7 +107,7 @@ Ref.prototype.donnerCodePays = function (nom) {
     let randPays = mesPays();
 
     for (let i = 0; i < randPays.length; i++) {
-        if (randPays[i].nom() === nom) {
+        if (randPays[i].name() === nom) {
 
             return randPays[i].code();
 
