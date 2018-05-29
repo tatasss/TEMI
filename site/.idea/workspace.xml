@@ -6,19 +6,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b89c5143-0212-42c0-b73b-81dad73db30d" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/../Documentation/DebutDiagrammeDeClasse.mdj" beforeDir="false" afterPath="$PROJECT_DIR$/../Documentation/DebutDiagrammeDeClasse.mdj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Documentation/cdc-site.docx" beforeDir="false" afterPath="$PROJECT_DIR$/../Documentation/cdc-site.docx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dictionaries/matgaydu.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dictionaries/matgaydu.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/html/world bank research.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/world bank research.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/javascript/data/data.js" beforeDir="false" afterPath="$PROJECT_DIR$/javascript/data/data.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/javascript/manufacturing/manufact.js" beforeDir="false" afterPath="$PROJECT_DIR$/javascript/manufacturing/manufact.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/javascript/model/model.js" beforeDir="false" afterPath="$PROJECT_DIR$/javascript/model/model.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/javascript/model/modelManager.js" beforeDir="false" afterPath="$PROJECT_DIR$/javascript/model/modelManager.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/javascript/start/reference.js" beforeDir="false" afterPath="$PROJECT_DIR$/javascript/start/reference.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/javascript/start/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/javascript/start/script.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/javascript/view/directlyChange/ModeleView.js" beforeDir="false" afterPath="$PROJECT_DIR$/javascript/view/directlyChange/ModeleView.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/javascript/view/directlyChange/ViewManufacturing.js" beforeDir="false" afterPath="$PROJECT_DIR$/javascript/view/directlyChange/ViewManufacturing.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/javascript/view/viewGenerator/ViewGenerator.js" beforeDir="false" afterPath="$PROJECT_DIR$/javascript/view/viewGenerator/ViewGenerator.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/javascript/worldBankresearch.js" beforeDir="false" afterPath="$PROJECT_DIR$/javascript/worldBankresearch.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -41,52 +35,25 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="script.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/javascript/start/script.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="4114">
-              <caret line="251" column="5" lean-forward="true" selection-start-line="251" selection-start-column="5" selection-end-line="251" selection-end-column="5" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="manufact.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/javascript/manufacturing/manufact.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="161">
-              <caret line="25" column="22" selection-start-line="25" selection-start-column="22" selection-end-line="25" selection-end-column="22" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="data.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/javascript/data/data.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="10" column="6" selection-start-line="10" selection-start-column="6" selection-end-line="10" selection-end-column="6" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="model.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/javascript/model/model.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="408">
-              <caret line="24" column="23" lean-forward="true" selection-start-line="24" selection-start-column="23" selection-end-line="24" selection-end-column="23" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ViewGenerator.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="ViewGenerator.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/javascript/view/viewGenerator/ViewGenerator.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="118" column="14" selection-start-line="118" selection-start-column="14" selection-end-line="118" selection-end-column="14" />
+            <state relative-caret-position="1861">
+              <caret line="877" column="50" selection-start-line="877" selection-start-column="50" selection-end-line="877" selection-end-column="50" />
               <folding>
                 <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#span#0;n#strong#0;n#!!top" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="script.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/javascript/start/script.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="266">
+              <caret line="81" column="14" selection-start-line="81" selection-start-column="14" selection-end-line="81" selection-end-column="14" />
             </state>
           </provider>
         </entry>
@@ -100,11 +67,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="modelManager.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/javascript/model/modelManager.js">
+      <file leaf-file-name="ModeleView.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/javascript/view/directlyChange/ModeleView.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
-              <caret line="331" lean-forward="true" selection-start-line="331" selection-end-line="331" />
+            <state relative-caret-position="17">
+              <caret line="10" column="81" selection-start-line="10" selection-start-column="81" selection-end-line="10" selection-end-column="81" />
             </state>
           </provider>
         </entry>
@@ -118,11 +85,38 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ModeleView.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/javascript/view/directlyChange/ModeleView.js">
+      <file leaf-file-name="model.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/javascript/model/model.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="10" column="81" selection-start-line="10" selection-start-column="81" selection-end-line="10" selection-end-column="81" />
+            <state relative-caret-position="481">
+              <caret line="247" column="9" lean-forward="true" selection-start-line="247" selection-start-column="9" selection-end-line="247" selection-end-column="9" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="modelManager.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/javascript/model/modelManager.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="736">
+              <caret line="1029" column="10" selection-start-line="1029" selection-start-column="10" selection-end-line="1029" selection-end-column="10" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="bootstrapView.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/javascript/view/viewGenerator/bootstrapView.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="351">
+              <caret line="326" column="159" lean-forward="true" selection-start-line="326" selection-start-column="159" selection-end-line="326" selection-end-column="159" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="reference.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/javascript/start/reference.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-1015">
+              <caret line="32" lean-forward="true" selection-start-line="32" selection-end-line="32" />
             </state>
           </provider>
         </entry>
@@ -195,13 +189,13 @@
         <option value="$PROJECT_DIR$/doc/lol.graphql" />
         <option value="$PROJECT_DIR$/javascript/view/directlyChange/ViewManufacturing.js" />
         <option value="$PROJECT_DIR$/javascript/start/reference.js" />
-        <option value="$PROJECT_DIR$/javascript/model/model.js" />
-        <option value="$PROJECT_DIR$/javascript/model/modelManager.js" />
         <option value="$PROJECT_DIR$/javascript/view/directlyChange/ModeleView.js" />
-        <option value="$PROJECT_DIR$/javascript/manufacturing/manufact.js" />
         <option value="$PROJECT_DIR$/javascript/data/data.js" />
-        <option value="$PROJECT_DIR$/javascript/start/script.js" />
         <option value="$PROJECT_DIR$/javascript/view/viewGenerator/ViewGenerator.js" />
+        <option value="$PROJECT_DIR$/javascript/model/model.js" />
+        <option value="$PROJECT_DIR$/javascript/manufacturing/manufact.js" />
+        <option value="$PROJECT_DIR$/javascript/start/script.js" />
+        <option value="$PROJECT_DIR$/javascript/model/modelManager.js" />
       </list>
     </option>
   </component>
@@ -358,6 +352,13 @@
               <item name="site" type="b2602c69:ProjectViewProjectNode" />
               <item name="site" type="462c0819:PsiDirectoryNode" />
               <item name="javascript" type="462c0819:PsiDirectoryNode" />
+              <item name="model" type="462c0819:PsiDirectoryNode" />
+              <item name="anotherFunctiun" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="site" type="b2602c69:ProjectViewProjectNode" />
+              <item name="site" type="462c0819:PsiDirectoryNode" />
+              <item name="javascript" type="462c0819:PsiDirectoryNode" />
               <item name="start" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -464,7 +465,7 @@
       <workItem from="1527231440831" duration="12326000" />
       <workItem from="1527246807819" duration="13015000" />
       <workItem from="1527490486776" duration="20083000" />
-      <workItem from="1527576806086" duration="8652000" />
+      <workItem from="1527576806086" duration="19632000" />
     </task>
     <task id="LOCAL-00001" summary="mis en place d'un code propre">
       <created>1526980633672</created>
@@ -568,7 +569,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="395971000" />
+    <option name="totallyTimeSpent" value="406951000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1761,13 +1762,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/javascript/model/anotherFunctiun/excel.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="5">
-          <caret line="16" column="35" selection-start-line="16" selection-start-column="35" selection-end-line="16" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/css/tabCS.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
@@ -1786,20 +1780,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="198">
           <caret line="57" column="38" selection-start-line="57" selection-start-column="38" selection-end-line="57" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/javascript/model/anotherFunctiun/myMath.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1037">
-          <caret line="93" column="18" selection-start-line="93" selection-start-column="18" selection-end-line="93" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/javascript/view/viewGenerator/bootstrapView.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="5542">
-          <caret line="326" column="156" selection-start-line="326" selection-start-column="156" selection-end-line="326" selection-end-column="156" />
         </state>
       </provider>
     </entry>
@@ -1834,13 +1814,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/javascript/start/reference.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="130">
-          <caret line="32" lean-forward="true" selection-start-line="32" selection-end-line="32" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/html/model.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
@@ -1850,15 +1823,50 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/html/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-867">
-          <caret line="12" column="65" selection-start-line="12" selection-start-column="65" selection-end-line="12" selection-end-column="65" />
+        <state relative-caret-position="238">
+          <caret line="25" lean-forward="true" selection-start-line="25" selection-end-line="25" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/javascript/model/model.js">
+    <entry file="file://$PROJECT_DIR$/javascript/data/data.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="24" column="23" lean-forward="true" selection-start-line="24" selection-start-column="23" selection-end-line="24" selection-end-column="23" />
+        <state relative-caret-position="-451">
+          <caret line="10" column="6" selection-start-line="10" selection-start-column="6" selection-end-line="10" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/javascript/manufacturing/manufact.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-573">
+          <caret line="711" column="41" selection-start-line="711" selection-start-column="41" selection-end-line="711" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/javascript/model/anotherFunctiun/excel.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="5">
+          <caret line="16" column="35" selection-start-line="16" selection-start-column="35" selection-end-line="16" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/javascript/model/anotherFunctiun/myMath.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-743">
+          <caret line="93" column="18" selection-start-line="93" selection-start-column="18" selection-end-line="93" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/javascript/start/reference.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1015">
+          <caret line="32" lean-forward="true" selection-start-line="32" selection-end-line="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/javascript/start/script.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="266">
+          <caret line="81" column="14" selection-start-line="81" selection-start-column="14" selection-end-line="81" selection-end-column="14" />
         </state>
       </provider>
     </entry>
@@ -1869,24 +1877,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/javascript/view/viewGenerator/graphGenerator.js">
+    <entry file="file://$PROJECT_DIR$/javascript/view/directlyChange/ModeleView.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="504">
-          <caret line="60" column="48" selection-start-line="60" selection-start-column="48" selection-end-line="60" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/javascript/manufacturing/manufact.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="161">
-          <caret line="25" column="22" selection-start-line="25" selection-start-column="22" selection-end-line="25" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/javascript/data/data.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="10" column="6" selection-start-line="10" selection-start-column="6" selection-end-line="10" selection-end-column="6" />
+        <state relative-caret-position="17">
+          <caret line="10" column="81" selection-start-line="10" selection-start-column="81" selection-end-line="10" selection-end-column="81" />
         </state>
       </provider>
     </entry>
@@ -1897,36 +1891,43 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/javascript/start/script.js">
+    <entry file="file://$PROJECT_DIR$/javascript/view/viewGenerator/bootstrapView.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4114">
-          <caret line="251" column="5" lean-forward="true" selection-start-line="251" selection-start-column="5" selection-end-line="251" selection-end-column="5" />
+        <state relative-caret-position="351">
+          <caret line="326" column="159" lean-forward="true" selection-start-line="326" selection-start-column="159" selection-end-line="326" selection-end-column="159" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/javascript/model/modelManager.js">
+    <entry file="file://$PROJECT_DIR$/javascript/view/viewGenerator/graphGenerator.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="331" lean-forward="true" selection-start-line="331" selection-end-line="331" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/javascript/view/directlyChange/ModeleView.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="10" column="81" selection-start-line="10" selection-start-column="81" selection-end-line="10" selection-end-column="81" />
+        <state relative-caret-position="504">
+          <caret line="60" column="48" selection-start-line="60" selection-start-column="48" selection-end-line="60" selection-end-column="48" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/javascript/view/viewGenerator/ViewGenerator.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="118" column="14" selection-start-line="118" selection-start-column="14" selection-end-line="118" selection-end-column="14" />
+        <state relative-caret-position="1861">
+          <caret line="877" column="50" selection-start-line="877" selection-start-column="50" selection-end-line="877" selection-end-column="50" />
           <folding>
             <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#span#0;n#strong#0;n#!!top" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/javascript/model/model.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="481">
+          <caret line="247" column="9" lean-forward="true" selection-start-line="247" selection-start-column="9" selection-end-line="247" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/javascript/model/modelManager.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="736">
+          <caret line="1029" column="10" selection-start-line="1029" selection-start-column="10" selection-end-line="1029" selection-end-column="10" />
         </state>
       </provider>
     </entry>

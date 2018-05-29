@@ -79,7 +79,7 @@ function validateForm() {
     let donne = new Donne(pays, regime, actualisation, marge);
     if (donne.pays() !== undefined) {
         if (donne.pays() != null) {
-            let XD=donne.pays().code();
+            //let XD=donne.pays().code();
             //while(localStorage.getItem("xmlPib : " +XD)==null) {
 
                 console.log("pib du pays : "+donne.pays().pib.toString());

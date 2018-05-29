@@ -71,24 +71,52 @@ Fabrique.prototype.pays = function (code, nom, impot, ammort, investissment, dis
 
     return {
         pib: ref.pibFind(code),
+        /**
+         * @description the getter of code
+         * @return {string}
+         */
         code: function () {
             return code;
         },
+        /**
+         * @description the getter of nom
+         * @return {string}
+         */
         nom: function () {
             return nom;
         },
+        /**
+         * @description the getter of impots
+         * @return {Object}
+         */
         impots: function () {
             return impot;
         },
+        /**
+         * @description the getter of ammort
+         * @return {Object}
+         */
         ammort: function () {
             return ammort;
         },
+        /**
+         * @description the getter of investissement
+         * @return {Object}
+         */
         investissement: function () {
             return investissment;
         },
+        /**
+         * @description the getter of dispoDerog
+         * @return {string}
+         */
         dispoDerog: function () {
             return dispoDerog;
         },
+        /**
+         * @description the getter of source
+         * @return {string}
+         */
         source: function () {
             return source;
         }
@@ -107,21 +135,45 @@ Fabrique.prototype.pays = function (code, nom, impot, ammort, investissment, dis
  */
 Fabrique.prototype.impot = function (cFE, iS, iMF, iRVM, iRC, tVA_Petrole) {
     return {
+        /**
+         * @description the getter of cfe
+         * @return {number}
+         */
         cfe: function () {
             return cFE;
         },
+        /**
+         * @description the getter of isImp
+         * @return {number}
+         */
         isImp: function () {
             return iS;
         },
+        /**
+         * @description the getter of imf
+         * @return {number}
+         */
         imf: function () {
             return iMF;
         },
+        /**
+         * @description the getter of irvm
+         * @return {number}
+         */
         irvm: function () {
             return iRVM;
         },
+        /**
+         * @description the getter of irc
+         * @return {number}
+         */
         irc: function () {
             return iRC
         },
+        /**
+         * @description the getter of tva_petrole
+         * @return {number}
+         */
         tva_petrole: function () {
             return tVA_Petrole;
         },
@@ -140,12 +192,48 @@ Fabrique.prototype.impot = function (cFE, iS, iMF, iRVM, iRC, tVA_Petrole) {
  */
 Fabrique.prototype.ammortissement = function (construction, equipement, coefdegressif, camion, info, bureau) {
     return {
-        construction: construction,
-        equipement: equipement,
-        coefdegressif: coefdegressif,
-        camion: camion,
-        info: info,
-        bureau: bureau,
+        /**
+         * @description the getter of construction
+         * @return {number}
+         */
+        construction: function () {
+            return construction;
+        },
+        /**
+         * @description the getter of equipement
+         * @return {number}
+         */
+        equipement: function () {
+            return equipement;
+        },
+        /**
+         * @description the getter of coefdegressif
+         * @return {number}
+         */
+        coefdegressif: function () {
+            return coefdegressif;
+        },
+        /**
+         * @description the getter of camion
+         * @return {number}
+         */
+        camion: function () {
+            return camion;
+        },
+        /**
+         * @description the getter of info
+         * @return {number}
+         */
+        info: function () {
+            return info;
+        },
+        /**
+         * @description the getter of bureau
+         * @return {number}
+         */
+        bureau: function () {
+            return bureau;
+        },
     }
 };
 /**
@@ -157,35 +245,209 @@ Fabrique.prototype.ammortissement = function (construction, equipement, coefdegr
  */
 Fabrique.prototype.entreprise = function (actu, marge) {
     return {
-        nom: "Djankov",
-        terrain: 30,
-        construction: 40,
-        equipement: 60,
-        camion: 5,
-        info: 5,
-        bureau: 5,
-        stocks: 35,
-        creanceCli: 50,
-        dispoBanque: 20,
-        capitalSocial: 102,
-        detteLongTerme: 43,
-        detteCourtTerme: 55,
-        detteFournisseur: 50,
-        achat: Math.round(1050 / (1 + marge / 100)),
-        petrole: 0,
-        depenseAdministrative: 10,
-        depensePub: 10.5,
-        depenseEntretien: 3,
-        chargeFinanciere: 5.5,
-        vente: 1050,
-        cadre: 4,
-        secretaire: 8,
-        ouvrier: 48,
-        indice_cadre: 2.25,
-        indice_secretaire: 1.25,
-        indice_ouvrier: 1,
-        dividende: 50,
-        actuali: actu
+        /**
+         * @description the getter of nom
+         * @return {string}
+         */
+        nom: function () {
+            return "Djankov";
+        },
+        /**
+         * @description the getter of terrain
+         * @return {number}
+         */
+        terrain: function () {
+            return 30
+        },
+        /**
+         * @description the getter of construction
+         * @return {number}
+         */
+        construction: function () {
+            return 40;
+        },
+        /**
+         * @description the getter of equipement
+         * @return {number}
+         */
+        equipement: function () {
+            return 60;
+        },
+        /**
+         * @description the getter of camion
+         * @return {number}
+         */
+        camion: function () {
+            return 5;
+        },
+        /**
+         * @description the getter of info
+         * @return {number}
+         */
+        info: function () {
+            return 5
+        },
+        /**
+         * @description the getter of bureau
+         * @return {number}
+         */
+        bureau: function () {
+            return 5;
+        },
+        /**
+         * @description the getter of stocks
+         * @return {number}
+         */
+        stocks: function () {
+            return 35;
+        },
+        /**
+         * @description the getter of creanceCli
+         * @return {number}
+         */
+        creanceCli: function () {
+            return 50;
+        },
+        /**
+         * @description the getter of dispoBanque
+         * @return {number}
+         */
+        dispoBanque: function () {
+            return 20;
+        },
+        /**
+         * @description the getter of capitalSocial
+         * @return {number}
+         */
+        capitalSocial: function () {
+            return 102;
+        },
+        /**
+         * @description the getter of detteLongTerme
+         * @return {number}
+         */
+        detteLongTerme: function () {
+            return 43;
+        },
+        /**
+         * @description the getter of detteCourtTerme
+         * @return {number}
+         */
+        detteCourtTerme: function () {
+            return 55;
+        },
+        /**
+         * @description the getter of detteFournisseur
+         * @return {number}
+         */
+        detteFournisseur: function () {
+            return 50;
+        },
+        /**
+         * @description the getter of achat
+         * @return {number}
+         */
+        achat: function () {
+            return Math.round(1050 / (1 + marge / 100));
+        },
+        /**
+         * @description the getter of petrole
+         * @return {number}
+         */
+        petrole: function () {
+            return 0;
+        },
+        /**
+         * @description the getter of depenseAdministrative
+         * @return {number}
+         */
+        depenseAdministrative: function () {
+            return 10;
+        },
+        /**
+         * @description the getter of depensePub
+         * @return {number}
+         */
+        depensePub: function () {
+            return 10.5;
+        },
+        /**
+         * @description the getter of depenseEntretien
+         * @return {number}
+         */
+        depenseEntretien: function () {
+            return 3;
+        },
+        /**
+         * @description the getter of chargeFinanciere
+         * @return {number}
+         */
+        chargeFinanciere: function () {
+            return 5.5;
+        },
+        /**
+         * @description the getter of vente
+         * @return {number}
+         */
+        vente: function () {
+            return 1050;
+        },
+        /**
+         * @description the getter of cadre
+         * @return {number}
+         */
+        cadre: function () {
+            return 4;
+        },
+        /**
+         * @description the getter of secretaire
+         * @return {number}
+         */
+        secretaire: function () {
+            return 8;
+        },
+        /**
+         * @description the getter of ouvrier
+         * @return {number}
+         */
+        ouvrier: function () {
+            return 48;
+        },
+        /**
+         * @description the getter of indice_cadre
+         * @return {number}
+         */
+        indice_cadre: function () {
+            return 2.25;
+        },
+        /**
+         * @description the getter of indice_secretaire
+         * @return {number}
+         */
+        indice_secretaire: function () {
+            return 1.25;
+        },
+        /**
+         * @description the getter of indice_ouvrier
+         * @return {number}
+         */
+        indice_ouvrier: function () {
+            return 1;
+        },
+        /**
+         * @description the getter of dividende
+         * @return {number}
+         */
+        dividende: function () {
+            return 50;
+        },
+        /**
+         * @description the getter of actuali
+         * @return {number}
+         */
+        actuali: function () {
+            return actu;
+        }
     }
 
 };
@@ -202,12 +464,48 @@ Fabrique.prototype.entreprise = function (actu, marge) {
  */
 Fabrique.prototype.investir = function (cfe, isammmort, imf, irvm, irc, tvaPetrole) {
     return {
-        cfe: cfe,
-        isamort: isammmort,
-        imf: imf,
-        irvm: irvm,
-        irc: irc,
-        tvaPetrole: tvaPetrole
+        /**
+         * @description the getter of cfe
+         * @return {Object}
+         */
+        cfe: function () {
+            return cfe;
+        },
+        /**
+         * @description the getter of isamort
+         * @return {Object}
+         */
+        isamort: function () {
+            return isammmort
+        },
+        /**
+         * @description the getter of imf
+         * @return {Object}
+         */
+        imf: function () {
+            return imf;
+        },
+        /**
+         * @description the getter of irvm
+         * @return {Object}
+         */
+        irvm: function () {
+            return irvm;
+        },
+        /**
+         * @description the getter of irc
+         * @return {Object}
+         */
+        irc: function () {
+            return irc;
+        },
+        /**
+         * @description the getter of tvaPetrole
+         * @return {Object}
+         */
+        tvaPetrole: function () {
+            return tvaPetrole;
+        },
     };
 };
 /**
@@ -220,9 +518,27 @@ Fabrique.prototype.investir = function (cfe, isammmort, imf, irvm, irc, tvaPetro
  */
 Fabrique.prototype.impotPays = function (duree, taux, reductonEcume) {
     return {
-        duree: duree,
-        taux: taux,
-        reducexo: reductonEcume
+        /**
+         * @description the getter of duree
+         * @return {number}
+         */
+        duree: function () {
+            return duree;
+        },
+        /**
+         * @description the getter of taux
+         * @return {number}
+         */
+        taux: function () {
+            return taux;
+        },
+        /**
+         * @description the getter of reducexo
+         * @return {number}
+         */
+        reducexo: function () {
+            return reductonEcume;
+        },
     };
 };
 /**
@@ -237,11 +553,41 @@ Fabrique.prototype.impotPays = function (duree, taux, reductonEcume) {
  */
 Fabrique.prototype.isImpotPays = function (duree, taux, reductonEcume, ammortTauxEx, ammortLimit) {
     return {
-        duree: duree,
-        taux: taux,
-        reducexo: reductonEcume,
-        ammortTauxEx: ammortTauxEx,
-        ammortLimit: ammortLimit
+        /**
+         * @description the getter of duree
+         * @return {number}
+         */
+        duree: function () {
+            return duree;
+        },
+        /**
+         * @description the getter of taux
+         * @return {number}
+         */
+        taux: function () {
+            return taux;
+        },
+        /**
+         * @description the getter of reductonEcume
+         * @return {number}
+         */
+        reducexo: function () {
+            return reductonEcume;
+        },
+        /**
+         * @description the getter of ammortTauxEx
+         * @return {number}
+         */
+        ammortTauxEx: function () {
+            return ammortTauxEx;
+        },
+        /**
+         * @description the getter of ammortLimit
+         * @return {number}
+         */
+        ammortLimit: function () {
+            return ammortLimit;
+        },
     };
 };
 /**
@@ -327,12 +673,48 @@ Fabrique.prototype.armortirModele = function (prix, durLin, coef, nom) {
     }
 
     return {
-        dureeRestante: dureeRestante,
-        baseAmortissable: baseAmortissable,
-        tauxLineaire: tauxLineaire,
-        tauxDegressif: tauxDegressif,
-        chargeAmorti: chargeAmorti,
-        nom: nom,
+        /**
+         * @description the getter of dureeRestante
+         * @return {Array}
+         */
+        dureeRestante: function () {
+            return dureeRestante;
+        },
+        /**
+         * @description the getter of baseAmortissable
+         * @return {Array}
+         */
+        baseAmortissable: function () {
+            return baseAmortissable;
+        },
+        /**
+         * @description the getter of tauxLineaire
+         * @return {Array}
+         */
+        tauxLineaire: function () {
+            return tauxLineaire;
+        },
+        /**
+         * @description the getter of tauxDegressif
+         * @return {Array}
+         */
+        tauxDegressif: function () {
+            return tauxDegressif;
+        },
+        /**
+         * @description the getter of chargeAmorti
+         * @return {Array}
+         */
+        chargeAmorti: function () {
+            return chargeAmorti
+        },
+        /**
+         * @description the getter of nom
+         * @return {string}
+         */
+        nom: function () {
+            return nom;
+        },
         /**
          * @description This function create the html code of the Amortir class
          * @return {string} html
@@ -342,9 +724,9 @@ Fabrique.prototype.armortirModele = function (prix, durLin, coef, nom) {
             let cote2 = ["Base amortissable</td><td>FCFA", "Taux unitaire</td><td>%", "Taux dégréssif</td><td>%", "Charge amortissement</td><td>FCFAS"];
             let html = "<div class='panel panel-info'><div class=\"panel-heading\">";
             let cote1 = ["Durée linéaire</td><td>Année", "Coef dégréssif</td><td>Coef"];
-            let head = `<thead><tr><th>${this.nom}</th><th>FCFA</th><th class='blue'>${this.baseAmortissable[0]}</th></tr></thead>`;
+            let head = `<thead><tr><th>${this.nom()}</th><th>FCFA</th><th class='blue'>${this.baseAmortissable()[0]}</th></tr></thead>`;
             html += bootstrap.tableSE(cote1, head, {
-                    tab: [this.dureeRestante[0]],
+                    tab: [this.dureeRestante()[0]],
                     color: "yellow"
                 },
                 {
@@ -354,19 +736,19 @@ Fabrique.prototype.armortirModele = function (prix, durLin, coef, nom) {
             html += "</div> <div class='panel-body'>";
             let head2 = "<thead><tr><th>Durée restante</th><th>Annee</th>";
             for (let i = 0; i < 5; i++) {
-                head2 += `<th>${this.dureeRestante[i]}</th>`;
+                head2 += `<th>${this.dureeRestante()[i]}</th>`;
             }
             head2 += "</thead>";
             let tauxLin = [];
             let tauxDegr = [];
-            this.tauxLineaire.forEach(function (item) {
+            this.tauxLineaire().forEach(function (item) {
                 tauxLin.push(Math.round(item * 100) / 100);
             });
-            this.tauxDegressif.forEach(function (item) {
+            this.tauxDegressif().forEach(function (item) {
                 tauxDegr.push(Math.round(item * 100) / 100);
             });
             html += bootstrap.tableSE(cote2, head2, {
-                    tab: this.baseAmortissable,
+                    tab: this.baseAmortissable(),
                     color: ""
                 },
                 {
@@ -378,7 +760,7 @@ Fabrique.prototype.armortirModele = function (prix, durLin, coef, nom) {
                     color: ""
                 },
                 {
-                    tab: this.chargeAmorti,
+                    tab: this.chargeAmorti(),
                     color: ""
                 });
             html += "</div></div>";

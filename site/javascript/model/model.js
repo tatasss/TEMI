@@ -16,131 +16,234 @@ Modele.prototype.mesdon = function () {
     let emploi = modeleManager.contributionForfEmploie(mE, mP, pibchoix, impotSelected);
 
     let taxeCreance = modeleManager.taxe_creance(mE, impotSelected, pibchoix);
-    let resultCompta = modeleManager.comptableResult(mE, pibchoix, taxeValAjout.tva, emploi.salaire_cadre,
-        emploi.salaire_secretaire, emploi.salaire_ouvrier, emploi.reel_CFE, generalAmort);
-    let ammortExcep = modeleManager.ammortExcept(mP, resultCompta.benefice_comptable, this.donnee.regime(), this.donnee);
-    let resultImpot = modeleManager.impotResult(resultCompta.benefice_comptable, ammortExcep.chargeAmorti);
+    let resultCompta = modeleManager.comptableResult(mE, pibchoix, taxeValAjout.tva(), emploi.salaire_cadre(),
+        emploi.salaire_secretaire(), emploi.salaire_ouvrier(), emploi.reel_CFE(), generalAmort);
+    let ammortExcep = modeleManager.ammortExcept(mP, resultCompta.benefice_comptable(), this.donnee.regime(), this.donnee);
+    let resultImpot = modeleManager.impotResult(resultCompta.benefice_comptable(), ammortExcep.chargeAmorti());
     let impotSociete = [];
     let impotIMF = [];
     let impotIRVM = [];
     let actualisation = [];
 
     for (let i = 0; i < 5; i++) {
-        actualisation.push(1 / Math.pow(1 + (mE.actuali / 100), i) * 100);
+        actualisation.push(1 / Math.pow(1 + (mE.actuali() / 100), i) * 100);
         // console.log(Math.round(((1/Math.pow(1+(mE.actuali/100),i))*100)*10)/10);
     }
     let lol, lol2;
     for (let i = 0; i < 5; i++) {
-        lol = resultImpot.benImpo[i];
-        lol2 = (impotSelected.is / 100);
+        lol = resultImpot.benImpo()[i];
+        lol2 = (impotSelected.is() / 100);
         impotSociete.push(lol * lol2);
     }
     for (let i = 0; i < 5; i++) {
-        impotIMF.push(resultCompta.vente[i] * (impotSelected.imf / 100));
+        impotIMF.push(resultCompta.vente()[i] * (impotSelected.imf() / 100));
         //console.log(resultImpot.benImpo[i]*mP.impots.isImp)
     }
     for (let i = 0; i < 5; i++) {
-        impotIRVM.push(resultCompta.benefice_comptable[i] * (impotSelected.irvm / 100) * (mE.dividende / 100));
+        impotIRVM.push(resultCompta.benefice_comptable()[i] * (impotSelected.irvm() / 100) * (mE.dividende() / 100));
 
         //console.log(impotIRVM[i]);
     }
     //console.log(emploi);
     let isimf = modeleManager.iSIMFtab(impotSociete, impotIMF);
-    let impotTaxeCourent = modeleManager.impotTaxeCourent(mE.actuali, emploi, isimf, impotIRVM, taxeCreance, taxeValAjout);
+    let impotTaxeCourent = modeleManager.impotTaxeCourent(mE.actuali(), emploi, isimf, impotIRVM, taxeCreance, taxeValAjout);
     let impotTaxeActu = modeleManager.impotTaxeActu(actualisation, emploi, isimf, impotIRVM, taxeCreance, taxeValAjout);
     let fluxTresSansImp = modeleManager.fluxTresoriesI(mE, pibchoix, resultCompta, actualisation);
     //console.log("model le flux de tresorie sans imp :"+fluxTresSansImp.courant.toString());//console.log("model le flux de tresorie sans imp fin");
-    let fluxTresSansISIMF = modeleManager.fluxTresoriesImp(fluxTresSansImp, impotTaxeCourent.isimf, impotTaxeActu.isimf, mE.actuali);
+    let fluxTresSansISIMF = modeleManager.fluxTresoriesImp(fluxTresSansImp, impotTaxeCourent.isimf(), impotTaxeActu.isimf(), mE.actuali());
     //console.log("model le flux de tresorie sans ISIMF :"+fluxTresSansISIMF.courant.toString());
-    let fluxTresApresImpot = modeleManager.fluxTresoriesImp(fluxTresSansImp, impotTaxeCourent.total, impotTaxeActu.total, mE.actuali);
+    let fluxTresApresImpot = modeleManager.fluxTresoriesImp(fluxTresSansImp, impotTaxeCourent.total(), impotTaxeActu.total(), mE.actuali());
     // console.log(taxeValAjout);
 
-    let tauxeffMoyC = modeleManager.tauxEffectif(fluxTresSansImp.courant[fluxTresSansImp.courant.length - 1],
-        fluxTresApresImpot.courant[fluxTresApresImpot.courant.length - 1]);
+    let tauxeffMoyC = modeleManager.tauxEffectif(fluxTresSansImp.courant()[fluxTresSansImp.courant().length - 1],
+        fluxTresApresImpot.courant()[fluxTresApresImpot.courant().length - 1]);
 
-    let tauxRendInterneSImp = modeleManager.tauxRendementInterne(fluxTresSansImp.courant);
-    let tauxRendInterneSISIMF = modeleManager.tauxRendementInterne(fluxTresSansISIMF.courant);
-    let tauxRendInterneAImp = modeleManager.tauxRendementInterne(fluxTresApresImpot.courant);
+    let tauxRendInterneSImp = modeleManager.tauxRendementInterne(fluxTresSansImp.courant());
+    let tauxRendInterneSISIMF = modeleManager.tauxRendementInterne(fluxTresSansISIMF.courant());
+    let tauxRendInterneAImp = modeleManager.tauxRendementInterne(fluxTresApresImpot.courant());
     let tauxEffMargImpApIsImf = modeleManager.tauxEffectifMarginaux(tauxRendInterneSImp, tauxRendInterneSISIMF);
     let tauxEffMargImpApImp = modeleManager.tauxEffectifMarginaux(tauxRendInterneSImp, tauxRendInterneAImp);
     return {
+        /**
+         * @description the getter of impotSelected
+         * @return {{cfe: number, is: number, imf: number, irvm: number, irc: number, tvaPetrole: number}}
+         */
         impotSelected: function () {
             return impotSelected;
         },
+        /**
+         * @description the getter of investissement
+         * @return {number}
+         */
         investissement: function () {
             return investissement;
         },
+        /**
+         * @description the getter of ammortissementGeneral
+         * @return {Array}
+         */
         amortissementGeneral: function () {
             return generalAmort;
         },
+        /**
+         * @description the getter of the getter of amortissement
+         * @return {Array}
+         */
         amortissement: function () {
             return amortissement;
         },
+        /**
+         * @description the getter of taxeAjout
+         * @return {{petrole: Array, taux: Array, tva: Array}}
+         */
         taxeAjout: function () {
             return taxeValAjout;
         },
+        /**
+         * @description the getter of employer
+         * @return {{salaire_cadre: Array, salaire_secretaire: Array, salaire_ouvrier: Array, masse_salarial: Array, tauxCfe: Array, reel_CFE: Array}}
+         */
         employer: function () {
             return emploi;
         },
+        /**
+         * @description the getter of impotIMF
+         * @return {Array}
+         */
         impotIMF: function () {
             return impotIMF;
         },
+        /**
+         * @description the getter of impotIRVM
+         * @return {Array}
+         */
         impotIRVM: function () {
             return impotIRVM;
         },
+        /**
+         * @description the getter of ammortExcep
+         * @return {{duree: number, investissement: number, taux: number, limitation: number, dureeTab: Array, baseAmorti: Array, chargeAmorti: Array}}
+         */
         ammortExcep: function () {
             return ammortExcep;
         },
+        /**
+         * @description the getter of taxe creance
+         * @return {{chargeFinance: Array, taux: Array, irc: Array}}
+         */
         taxeCreance: function () {
             return taxeCreance
         },
+        /**
+         * @description the getter of resultCompta
+         * @return {{vente: Array, achats: Array, petrole: Array, tva_petrole: Array, depense_entretien: Array, depense_admin: Array, depense_pub: Array, salaire_ouvrier: Array, salaire_secretaire: Array, salaire_cadre: Array, cfe: Array, chargeFinanciere: Array, amortissement: Array, benefice_comptable: Array, taux_marge_avant__IS_IMF: Array}}
+         */
         resultCompta: function () {
             return resultCompta;
         },
+        /**
+         * @description the getter of resultImpot
+         * @return {{benCompta: Array, amortExep: Array, benImpo: Array}}
+         */
         resultImpot: function () {
             return resultImpot;
-
         },
+        /**
+         * @description the getter of actualisation
+         * @return {Array}
+         */
         actualisation: function () {
             return actualisation;
         },
+        /**
+         * @description the getter of impotSociete
+         * @return {Array}
+         */
         impotSociete: function () {
             return impotSociete;
         },
+        /**
+         * @description the getter of isImf
+         * @return {Array}
+         */
         isImf: function () {
             return isimf;
         },
+        /**
+         * @description the getter of impotTaxeCourent
+         * @return {{cfe: Array, isimf: Array, irvm: Array, irc: Array, tvaPetrole: Array, total: Array}}
+         */
         impotTaxeCourent: function () {
             return impotTaxeCourent
         },
+        /**
+         * @description the getter of impotTaxeActu
+         * @return {{cfe: Array, isimf: Array, irvm: Array, irc: Array, tvaPetrole: Array, total: Array}}
+         */
         impotTaxeActu: function () {
             return impotTaxeActu;
         },
+        /**
+         * @description the getter of fluxTresSansImp
+         * @return {{courant: Array, actu: Array}}
+         */
         fluxTresSansImp: function () {
             return fluxTresSansImp;
         },
+        /**
+         * @description the getter of tauxeffMoyCourent
+         * @return {number}
+         */
         tauxeffMoyCourent: function () {
             return tauxeffMoyC;
         },
-        fluxTresSansISIMF:function() {
+        /**
+         * @description the getter of fluxTresSansISIMF
+         * @return {{courant: Array, actu: Array}}
+         */
+        fluxTresSansISIMF: function () {
             return fluxTresSansISIMF;
         },
-        fluxTresApresImpot:function(){
+        /**
+         * @description the getter of fluxTresApresImpot
+         * @return {{courant: Array, actu: Array}}
+         */
+        fluxTresApresImpot: function () {
             return fluxTresApresImpot;
         },
-        tauxRendInterneSImp:function(){
+        /**
+         * @description the getter of tauxRendInterneSImp
+         * @return {Array}
+         */
+        tauxRendInterneSImp: function () {
             return tauxRendInterneSImp;
         },
-        tauxRendInterneSISIMF: function(){
+        /**
+         * @description the getter of tauxRendInterneSISIMF
+         * @return {Array}
+         */
+        tauxRendInterneSISIMF: function () {
             return tauxRendInterneSISIMF;
         },
-        tauxRendInterneAImp: function(){
+        /**
+         * @description the getter of tauxRendInterneAImp
+         * @return {Array}
+         */
+        tauxRendInterneAImp: function () {
             return tauxRendInterneAImp;
         },
-        tauxEffMargImpApIsImf: function(){
+        /**
+         * @description the getter of tauxEffMArgImpApIsIMF
+         * @return {Array}
+         */
+        tauxEffMargImpApIsImf: function () {
             return tauxEffMargImpApIsImf;
         },
-        tauxEffMargImpApImp: function(){
+        /**
+         * @description the getter of tauxEffMargImpApImp
+         * @return {Array}
+         */
+        tauxEffMargImpApImp: function () {
             return tauxEffMargImpApImp;
         }
     }

@@ -5,7 +5,7 @@
  * @return {number} invest
  */
 ModeleManager.prototype.investissementModele = function (mE, pibchoix) {
-    return (mE.terrain + mE.construction + mE.equipement + mE.camion + mE.info + mE.bureau) * pibchoix;
+    return (mE.terrain() + mE.construction() + mE.equipement() + mE.camion() + mE.info() + mE.bureau()) * pibchoix;
 };
 /**
  * @description This function give the amortissement o the modele
@@ -16,11 +16,11 @@ ModeleManager.prototype.investissementModele = function (mE, pibchoix) {
  */
 ModeleManager.prototype.ammortissment = function (mE, mP, pibchoix) {
     let amortissement = [];
-    amortissement.push(fabrique.armortirModele(mE.construction * pibchoix, mP.ammort().construction, mP.ammort().coefdegressif, "Construction"));
-    amortissement.push(fabrique.armortirModele(mE.equipement * pibchoix, mP.ammort().equipement, mP.ammort().coefdegressif, "Equipement"));
-    amortissement.push(fabrique.armortirModele(mE.camion * pibchoix, mP.ammort().camion, mP.ammort().coefdegressif, "Camion"));
-    amortissement.push(fabrique.armortirModele(mE.info * pibchoix, mP.ammort().info, mP.ammort().coefdegressif, "Informatique"));
-    amortissement.push(fabrique.armortirModele(mE.bureau * pibchoix, mP.ammort().bureau, mP.ammort().coefdegressif, "Bureau"));
+    amortissement.push(fabrique.armortirModele(mE.construction() * pibchoix, mP.ammort().construction(), mP.ammort().coefdegressif(), "Construction"));
+    amortissement.push(fabrique.armortirModele(mE.equipement() * pibchoix, mP.ammort().equipement(), mP.ammort().coefdegressif(), "Equipement"));
+    amortissement.push(fabrique.armortirModele(mE.camion() * pibchoix, mP.ammort().camion(), mP.ammort().coefdegressif(), "Camion"));
+    amortissement.push(fabrique.armortirModele(mE.info() * pibchoix, mP.ammort().info(), mP.ammort().coefdegressif(), "Informatique"));
+    amortissement.push(fabrique.armortirModele(mE.bureau() * pibchoix, mP.ammort().bureau(), mP.ammort().coefdegressif(), "Bureau"));
     return amortissement;
 
 };
@@ -33,7 +33,7 @@ ModeleManager.prototype.ammortGen = function (ammortissement) {
     let total = [0, 0, 0, 0, 0];
     let generalAmort = [];
     ammortissement.forEach(function (item) {
-        item.chargeAmorti.forEach(function (items, index) {
+        item.chargeAmorti().forEach(function (items, index) {
             generalAmort.push(items);
             total[index] += items;
         });
@@ -61,23 +61,41 @@ ModeleManager.prototype.taxe_val_ajout = function (mE, impot, pibchoix) {
     //contribution forfaitaires
 
     for (i = 0; i < 5; i++) {
-        petrole.push(mE.petrole * pibchoix);
+        petrole.push(mE.petrole() * pibchoix);
     }
 
     for (i = 0; i < 5; i++) {
-        taux.push(impot.tvaPetrole);
+        taux.push(impot.tvaPetrole());
     }
 
     for (i = 0; i < 5; i++) {
-        tva.push((mE.petrole * pibchoix) * (impot.tvaPetrole / 100));
+        tva.push((mE.petrole() * pibchoix) * (impot.tvaPetrole() / 100));
     }
     if (tva.length === 6) {
         tva.pop();
     }
     return {
-        petrole: petrole,
-        taux: taux,
-        tva: tva
+        /**
+         * @description the getter of petrole
+         * @return {Array}
+         */
+        petrole: function () {
+            return petrole;
+        },
+        /**
+         * @description the getter of taux
+         * @return {Array}
+         */
+        taux: function () {
+            return taux;
+        },
+        /**
+         * @description the getter of tva
+         * @return {Array}
+         */
+        tva: function () {
+            return tva;
+        },
 
     }
     //--------------------------------------
@@ -94,15 +112,15 @@ ModeleManager.prototype.contributionForfEmploie = function (mE, mP, pibchoix, im
     let i;
     let salaireCadre = [];
     for (i = 0; i < 5; i++) {
-        salaireCadre.push(mE.cadre * mE.indice_cadre * pibchoix);
+        salaireCadre.push(mE.cadre() * mE.indice_cadre() * pibchoix);
     }
     let salaireSecretaire = [];
     for (i = 0; i < 5; i++) {
-        salaireSecretaire.push(mE.secretaire * mE.indice_secretaire * pibchoix);
+        salaireSecretaire.push(mE.secretaire() * mE.indice_secretaire() * pibchoix);
     }
     let salaireOuvrier = [];
     for (i = 0; i < 5; i++) {
-        salaireOuvrier.push(mE.ouvrier * mE.indice_ouvrier * pibchoix);
+        salaireOuvrier.push(mE.ouvrier() * mE.indice_ouvrier() * pibchoix);
     }
     let masseSalarial = [];
     for (i = 0; i < 5; i++) {
@@ -110,7 +128,7 @@ ModeleManager.prototype.contributionForfEmploie = function (mE, mP, pibchoix, im
     }
     let taux = [];
     for (i = 0; i < 5; i++) {
-        taux.push(impot.cfe);
+        taux.push(impot.cfe());
 
     }
     let reelCFE = [];
@@ -118,12 +136,48 @@ ModeleManager.prototype.contributionForfEmploie = function (mE, mP, pibchoix, im
         reelCFE.push(masseSalarial[i] * (taux[i] / 100));
     }
     return {
-        salaire_cadre: salaireCadre,
-        salaire_secretaire: salaireSecretaire,
-        salaire_ouvrier: salaireOuvrier,
-        masse_salarial: masseSalarial,
-        tauxCfe: taux,
-        reel_CFE: reelCFE
+        /**
+         * @description the getter of salaire_cadre
+         * @return {Array}
+         */
+        salaire_cadre: function () {
+            return salaireCadre;
+        },
+        /**
+         * @description the getter of salaire_secretaire
+         * @return {Array}
+         */
+        salaire_secretaire: function () {
+            return salaireSecretaire;
+        },
+        /**
+         * @description the getter of salaire_ouvrier
+         * @return {Array}
+         */
+        salaire_ouvrier: function () {
+            return salaireOuvrier;
+        },
+        /**
+         * @description the getter of masse_salarial
+         * @return {Array}
+         */
+        masse_salarial: function () {
+            return masseSalarial;
+        },
+        /**
+         * @description the getter of tauxCfe
+         * @return {Array}
+         */
+        tauxCfe: function () {
+            return taux;
+        },
+        /**
+         * @description the getter of reel_CFE
+         * @return {Array}
+         */
+        reel_CFE: function () {
+            return reelCFE;
+        },
 
     };
 };
@@ -158,25 +212,25 @@ ModeleManager.prototype.selectTaxe = function (mP, donne) {
             tvaPetrole = mP.impots().tva_petrole();
         }
         else {
-            if (mP.investissement().cfe.taux != null) {
-                cfe = mP.investissement().cfe.taux;
+            if (mP.investissement().cfe().taux() != null) {
+                cfe = mP.investissement().cfe().taux();
             }
             else {
-                if (mP.investissement().cfe.reducexo != null) {
-                    cfe = ((1 - (mP.investissement().cfe.reducexo / 100)) * (mP.impots().cfe() / 100)) * 100;
+                if (mP.investissement().cfe().reducexo() != null) {
+                    cfe = ((1 - (mP.investissement().cfe().reducexo() / 100)) * (mP.impots().cfe() / 100)) * 100;
                 }
                 else {
                     cfe = mP.impots().cfe();
                 }
 
             }
-            if (mP.investissement().isamort.taux != null) {
-                is = mP.investissement().isamort.taux;
+            if (mP.investissement().isamort().taux() != null) {
+                is = mP.investissement().isamort().taux();
             }
             else {
-                if (mP.investissement().isamort.reducexo != null) {
+                if (mP.investissement().isamort().reducexo() != null) {
 
-                    is = (((1 - (mP.investissement().isamort.reducexo / 100)) * (mP.impots().isImp() / 100)) * 100);
+                    is = (((1 - (mP.investissement().isamort().reducexo() / 100)) * (mP.impots().isImp() / 100)) * 100);
                     //console.log((1-(mP.investissement().isamort.reducexo/100)));
                 }
                 else {
@@ -184,48 +238,48 @@ ModeleManager.prototype.selectTaxe = function (mP, donne) {
                 }
 
             }
-            if (mP.investissement().imf.taux != null) {
-                imf = mP.investissement().imf.taux;
+            if (mP.investissement().imf().taux() != null) {
+                imf = mP.investissement().imf().taux();
             }
             else {
-                if (mP.investissement().imf.reducexo != null) {
-                    imf = ((1 - (mP.investissement().imf.reducexo / 100)) * (mP.impots().imf() / 100)) * 100;
+                if (mP.investissement().imf().reducexo() != null) {
+                    imf = ((1 - (mP.investissement().imf().reducexo() / 100)) * (mP.impots().imf() / 100)) * 100;
                 }
                 else {
                     imf = mP.impots().imf();
                 }
 
             }
-            if (mP.investissement().irvm.taux != null) {
-                irvm = mP.investissement().irvm.taux;
+            if (mP.investissement().irvm().taux() != null) {
+                irvm = mP.investissement().irvm().taux;
             }
             else {
-                if (mP.investissement().irvm.reducexo != null) {
-                    irvm = ((1 - (mP.investissement().irvm.reducexo / 100)) * (mP.impots().irvm() / 100)) * 100;
+                if (mP.investissement().irvm().reducexo() != null) {
+                    irvm = ((1 - (mP.investissement().irvm().reducexo() / 100)) * (mP.impots().irvm() / 100)) * 100;
                 }
                 else {
                     irvm = mP.impots().irvm();
                 }
 
             }
-            if (mP.investissement().irc.taux != null) {
-                irc = mP.investissement().irc.taux;
+            if (mP.investissement().irc().taux() != null) {
+                irc = mP.investissement().irc().taux();
             }
             else {
-                if (mP.investissement().irc.reducexo != null) {
-                    irc = ((1 - (mP.investissement().irc.reducexo / 100)) * (mP.impots().irc() / 100)) * 100;
+                if (mP.investissement().irc().reducexo != null) {
+                    irc = ((1 - (mP.investissement().irc().reducexo() / 100)) * (mP.impots().irc() / 100)) * 100;
                 }
                 else {
                     irc = mP.impots().irc();
                 }
 
             }
-            if (mP.investissement().tvaPetrole.taux != null) {
-                tvaPetrole = mP.investissement().tvaPetrole.taux;
+            if (mP.investissement().tvaPetrole().taux() != null) {
+                tvaPetrole = mP.investissement().tvaPetrole().taux();
             }
             else {
-                if (mP.investissement().irc.reducexo != null) {
-                    tvaPetrole = ((1 - (mP.investissement().tvaPetrole.reducexo / 100)) * (mP.impots().tva_petrole() / 100)) * 100;
+                if (mP.investissement().irc().reducexo() != null) {
+                    tvaPetrole = ((1 - (mP.investissement().tvaPetrole().reducexo() / 100)) * (mP.impots().tva_petrole() / 100)) * 100;
                 }
                 else {
                     tvaPetrole = mP.impots().tva_petrole();
@@ -238,12 +292,48 @@ ModeleManager.prototype.selectTaxe = function (mP, donne) {
     }
     //console.log(is);
     return {
-        cfe: cfe,
-        is: is,
-        imf: imf,
-        irvm: irvm,
-        irc: irc,
-        tvaPetrole: tvaPetrole,
+        /**
+         * @description the getter of cfe
+         * @return {number}
+         */
+        cfe: function () {
+            return cfe;
+        },
+        /**
+         * @description the getter of is
+         * @return {number}
+         */
+        is: function () {
+            return is;
+        },
+        /**
+         * @description the getter of imf
+         * @return {number}
+         */
+        imf: function () {
+            return imf;
+        },
+        /**
+         * @description the getter of irvm
+         * @return {number}
+         */
+        irvm: function () {
+            return irvm;
+        },
+        /**
+         * @description the getter of irc
+         * @return {number}
+         */
+        irc: function () {
+            return irc;
+        },
+        /**
+         * @description the getter of tvaPetrole
+         * @return {number}
+         */
+        tvaPetrole: function () {
+            return tvaPetrole;
+        },
     }
 
 };
@@ -263,21 +353,39 @@ ModeleManager.prototype.taxe_creance = function (mE, impot, pibchoix) {
     //contribution forfaitaires
 
     for (i = 0; i < 5; i++) {
-        chargeFin.push(mE.chargeFinanciere * pibchoix);
+        chargeFin.push(mE.chargeFinanciere() * pibchoix);
     }
 
     for (i = 0; i < 5; i++) {
-        taux.push(impot.irc);
+        taux.push(impot.irc());
     }
 
     for (i = 0; i < 5; i++) {
-        irc.push((mE.chargeFinanciere * pibchoix) * (impot.irc / 100));
+        irc.push((mE.chargeFinanciere() * pibchoix) * (impot.irc() / 100));
     }
 
     return {
-        chargeFinance: chargeFin,
-        taux: taux,
-        irc: irc
+        /**
+         * @description the getter of chargeFinance
+         * @return {Array}
+         */
+        chargeFinance: function () {
+            return chargeFin;
+        },
+        /**
+         * @description the getter of taux
+         * @return {Array}
+         */
+        taux: function () {
+            return taux;
+        },
+        /**
+         * @description the getter of irc
+         * @return {Array}
+         */
+        irc: function () {
+            return irc;
+        },
 
     }
     //--------------------------------------
@@ -331,13 +439,13 @@ ModeleManager.prototype.comptableResult = function (mE, pibchoix, tva, salaire_c
     });
 
     for (i = 0; i < 5; i++) {
-        vente.push(mE.vente * pibchoix);
-        achats.push(mE.achat * pibchoix);
-        petrole.push(mE.petrole * pibchoix);
-        depense_admin.push(mE.depenseAdministrative * pibchoix);
-        depense_pub.push(mE.depensePub * pibchoix);
-        depense_entretien.push(mE.depenseEntretien * pibchoix);
-        chargeFinancier.push(mE.chargeFinanciere * pibchoix);
+        vente.push(mE.vente() * pibchoix);
+        achats.push(mE.achat() * pibchoix);
+        petrole.push(mE.petrole() * pibchoix);
+        depense_admin.push(mE.depenseAdministrative() * pibchoix);
+        depense_pub.push(mE.depensePub() * pibchoix);
+        depense_entretien.push(mE.depenseEntretien() * pibchoix);
+        chargeFinancier.push(mE.chargeFinanciere() * pibchoix);
 
     }
     for (i = 0; i < 5; i++) {
@@ -347,23 +455,112 @@ ModeleManager.prototype.comptableResult = function (mE, pibchoix, tva, salaire_c
         taux_marge_avant__IS_ISMF.push((benefice_comptable[i] / vente[i]) * 100);
     }
     return {
-        vente: vente,
-        achats: achats,
-        petrole: petrole,
-        tva_petrole: tva_petrole,//non
-        depense_entretien: depense_entretien,
-        depense_admin: depense_admin,
-        depense_pub: depense_pub,
-        salaire_ouvrier: salaireOuvrier,
-        salaire_secretaire: salaire_secreataire,
-        salaire_cadre: salaireCadre,
-        cfe: CFE,//non
-
-        chargeFinanciere: chargeFinancier,
+        /**
+         * @description the getter of vente
+         * @return {Array}
+         */
+        vente: function () {
+            return vente;
+        },
+        /**
+         * @description the getter of achats
+         * @return {Array}
+         */
+        achats: function () {
+            return achats;
+        },
+        /**
+         * @description the getter of petrole
+         * @return {Array}
+         */
+        petrole: function () {
+            return petrole;
+        },
+        /**
+         * @description the getter of tva_petrole
+         * @return {Array}
+         */
+        tva_petrole: function () {
+            return tva_petrole;
+        },//non
+        /**
+         * @description the getter of depense-entretien
+         * @return {Array}
+         */
+        depense_entretien: function () {
+            return depense_entretien;
+        },
+        /**
+         * @description the getter of depense_admin
+         * @return {Array}
+         */
+        depense_admin: function () {
+            return depense_admin;
+        },
+        /**
+         * @description the getter of depense_pub
+         * @return {Array}
+         */
+        depense_pub: function () {
+            return depense_pub;
+        },
+        /**
+         * @description the getter of salaire_ouvrier
+         * @return {Array}
+         */
+        salaire_ouvrier: function () {
+            return salaireOuvrier;
+        },
+        /**
+         * @description the getter of salaire_secretaire
+         * @return {Array}
+         */
+        salaire_secretaire: function () {
+            return salaire_secreataire;
+        },
+        /**
+         * @description the getter of salaire_cadre
+         * @return {Array}
+         */
+        salaire_cadre: function () {
+            return salaireCadre;
+        },
+        /**
+         * @description the getter of cfe
+         * @return {Array}
+         */
+        cfe: function () {
+            return CFE;
+        },//non
+        /**
+         * @description the getter of chargeFinanciere
+         * @return {Array}
+         */
+        chargeFinanciere: function () {
+            return chargeFinancier;
+        },
         //fin
-        amortissement: amortissement,
-        benefice_comptable: benefice_comptable,
-        taux_marge_avant__IS_IMF: taux_marge_avant__IS_ISMF
+        /**
+         * @description the getter of amortissment
+         * @return {Array}
+         */
+        amortissement: function () {
+            return amortissement;
+        },
+        /**
+         * @description the getter of benefice_comptable
+         * @return {Array}
+         */
+        benefice_comptable: function () {
+            return benefice_comptable;
+        },
+        /**
+         * @description the getter of taux_marge_avant__IS_IMF
+         * @return {Array}
+         */
+        taux_marge_avant__IS_IMF: function () {
+            return taux_marge_avant__IS_ISMF;
+        },
     };
 
 
@@ -380,9 +577,27 @@ ModeleManager.prototype.impotResult = function (benCompta, amortExep) {
         benImpo.push(benCompta[i] - amortExep[i]);
     }
     return {
-        benCompta: benCompta,
-        amortExep: amortExep,
-        benImpo: benImpo,
+        /**
+         * @description the getter of benCompta
+         * @return {Array}
+         */
+        benCompta: function () {
+            return benCompta;
+        },
+        /**
+         * @description the getter of amortExep
+         * @return {Array}
+         */
+        amortExep: function () {
+            return amortExep;
+        },
+        /**
+         * @description the getter of benImpo
+         * @return {Array}
+         */
+        benImpo: function () {
+            return benImpo;
+        },
     };
 };
 /**
@@ -399,9 +614,9 @@ ModeleManager.prototype.ammortExcept = function (mP, benCompta, regime, donneRef
 // console.log(donneRef);
 
 
-    let investissment = (donneRef.entreprise().terrain + donneRef.entreprise().construction
-        + donneRef.entreprise().equipement + donneRef.entreprise().camion + donneRef.entreprise().info
-        + donneRef.entreprise().bureau) * donneRef.pays().pib;
+    let investissment = (donneRef.entreprise().terrain() + donneRef.entreprise().construction()
+        + donneRef.entreprise().equipement() + donneRef.entreprise().camion() + donneRef.entreprise().info()
+        + donneRef.entreprise().bureau()) * donneRef.pays().pib;
     let taux;
     let limitation;
     let duree;
@@ -410,20 +625,20 @@ ModeleManager.prototype.ammortExcept = function (mP, benCompta, regime, donneRef
     let chargeAmorti = [];
     // console.log(investissment);
     if (regime === "nongen") {
-        if (mP.investissement().isamort.ammortTauxEx != null) {
-            taux = mP.investissement().isamort.ammortTauxEx;
+        if (mP.investissement().isamort().ammortTauxEx() != null) {
+            taux = mP.investissement().isamort().ammortTauxEx();
         }
         else {
             taux = 0;
         }
-        if (mP.investissement().isamort.ammortLimit != null) {
-            limitation = mP.investissement().isamort.ammortLimit;
+        if (mP.investissement().isamort().ammortLimit() != null) {
+            limitation = mP.investissement().isamort().ammortLimit();
         }
         else {
             limitation = 0;
         }
-        if (mP.investissement().isamort.duree != null) {
-            duree = mP.investissement().isamort.duree;
+        if (mP.investissement().isamort().duree() != null) {
+            duree = mP.investissement().isamort().duree();
         }
         else {
             duree = 0;
@@ -465,14 +680,57 @@ ModeleManager.prototype.ammortExcept = function (mP, benCompta, regime, donneRef
         }
 
     }
+
     return {
-        duree: duree,
-        investissement: investissment,
-        taux: taux,
-        limitation: limitation,
-        dureeTab: tDuree,
-        baseAmorti: baseAmorti,
-        chargeAmorti: chargeAmorti
+        /**
+         * @description the getter of duree
+         * @return {number}
+         */
+        duree: function () {
+            return duree;
+        },
+        /**
+         * @description the getter of investissement
+         * @return {number}
+         */
+        investissement: function () {
+            return investissment;
+        },
+        /**
+         * @description the getter of taux
+         * @return {number}
+         */
+        taux: function () {
+            return taux;
+        },
+        /**
+         * @description the getter of limitation
+         * @return {number}
+         */
+        limitation: function () {
+            return limitation;
+        },
+        /**
+         * @description the getter of dureeTab
+         * @return {Array}
+         */
+        dureeTab: function () {
+            return tDuree;
+        },
+        /**
+         * @description the getter of baseAmorti
+         * @return {Array}
+         */
+        baseAmorti: function () {
+            return baseAmorti;
+        },
+        /**
+         * @description the getter of chargeAmorti
+         * @return {Array}
+         */
+        chargeAmorti: function () {
+            return chargeAmorti;
+        },
     }
 };
 /**
@@ -512,11 +770,11 @@ ModeleManager.prototype.impotTaxeCourent = function (actu, employer, isImf, impo
     let tvaPetrole = [];
     let total = [];
     for (let i = 0; i < 5; i++) {
-        cfe.push(employer.reel_CFE[i]);
+        cfe.push(employer.reel_CFE()[i]);
         isimf.push(isImf[i]);
         irvm.push(impotIRVM[i]);
-        irc.push(taxeCreance.irc[i]);
-        tvaPetrole.push(taxeAjout.tva[i]);
+        irc.push(taxeCreance.irc()[i]);
+        tvaPetrole.push(taxeAjout.tva()[i]);
         total.push(cfe[i] + isimf[i] + irc[i] + irvm[i] + tvaPetrole[i]);
     }
     cfe.push(myMath.van(actu / 100, cfe));
@@ -526,12 +784,48 @@ ModeleManager.prototype.impotTaxeCourent = function (actu, employer, isImf, impo
     tvaPetrole.push(myMath.van(actu / 100, tvaPetrole));
     total.push(myMath.van(actu / 100, total));
     return {
-        cfe: cfe,
-        isimf: isimf,
-        irvm: irvm,
-        irc: irc,
-        tvaPetrole: tvaPetrole,
-        total: total
+        /**
+         * @description the getter of cfe
+         * @return {Array}
+         */
+        cfe: function () {
+            return cfe;
+        },
+        /**
+         * @description the getter of isimf
+         * @return {Array}
+         */
+        isimf: function () {
+            return isimf;
+        },
+        /**
+         * @description the getter of irvm
+         * @return {Array}
+         */
+        irvm: function () {
+            return irvm;
+        },
+        /**
+         * @description the getter of irc
+         * @return {Array}
+         */
+        irc: function () {
+            return irc;
+        },
+        /**
+         * @description the getter of tvaPetrole
+         * @return {Array}
+         */
+        tvaPetrole: function () {
+            return tvaPetrole;
+        },
+        /**
+         * @description the getter of total
+         * @return {Array}
+         */
+        total: function () {
+            return total;
+        },
     }
 
 
@@ -559,12 +853,12 @@ ModeleManager.prototype.impotTaxeActu = function (actu, employer, isImf, impotIR
     for (let i = 0; i < 5; i++) {
         totactu = actu[i];
 
-        cfe.push(employer.reel_CFE[i] * (totactu / 100));
+        cfe.push(employer.reel_CFE()[i] * (totactu / 100));
         //console.log(employer.reel_CFE[i]);
         isimf.push(isImf[i] * (totactu / 100));
         irvm.push(impotIRVM[i] * (totactu / 100));
-        irc.push(taxeCreance.irc[i] * (totactu / 100));
-        tvaPetrole.push(taxeAjout.tva[i] * (totactu / 100));
+        irc.push(taxeCreance.irc()[i] * (totactu / 100));
+        tvaPetrole.push(taxeAjout.tva()[i] * (totactu / 100));
         total.push(cfe[i] + isimf[i] + irc[i] + irvm[i] + tvaPetrole[i]);
     }
     cfe.push(myMath.sommeTab(cfe));
@@ -576,12 +870,48 @@ ModeleManager.prototype.impotTaxeActu = function (actu, employer, isImf, impotIR
 
 
     return {
-        cfe: cfe,
-        isimf: isimf,
-        irvm: irvm,
-        irc: irc,
-        tvaPetrole: tvaPetrole,
-        total: total
+        /**
+         * @description the getter of cfe
+         * @return {Array}
+         */
+        cfe: function () {
+            return cfe;
+        },
+        /**
+         * @description the getter of isimf
+         * @return {Array}
+         */
+        isimf: function () {
+            return isimf;
+        },
+        /**
+         * @description the getter of irvm
+         * @return {Array}
+         */
+        irvm: function () {
+            return irvm;
+        },
+        /**
+         * @description the getter of irc
+         * @return {Array}
+         */
+        irc: function () {
+            return irc;
+        },
+        /**
+         * @description the getter of tvaPetrole
+         * @return {Array}
+         */
+        tvaPetrole: function () {
+            return tvaPetrole;
+        },
+        /**
+         * @description the getter of total
+         * @return {Array}
+         */
+        total: function () {
+            return total;
+        },
     }
 
 };
@@ -615,13 +945,13 @@ ModeleManager.prototype.fluxTresoriesI = function (entreprise, pin, compta, actu
     let actuelBis = [];
     let totactu;
     //console.log(entreprise);
-    courant.push(-(entreprise.capitalSocial + entreprise.detteLongTerme + entreprise.detteCourtTerme + entreprise.detteFournisseur) * pin);
-    actuel.push(-(entreprise.capitalSocial + entreprise.detteLongTerme + entreprise.detteCourtTerme + entreprise.detteFournisseur) * pin);
-    compta.vente.forEach(function (item, index) {
+    courant.push(-(entreprise.capitalSocial() + entreprise.detteLongTerme() + entreprise.detteCourtTerme() + entreprise.detteFournisseur()) * pin);
+    actuel.push(-(entreprise.capitalSocial() + entreprise.detteLongTerme() + entreprise.detteCourtTerme() + entreprise.detteFournisseur()) * pin);
+    compta.vente().forEach(function (item, index) {
 
-        courant.push(item - compta.achats[index] - compta.petrole[index] - compta.depense_entretien[index]
-            - compta.depense_admin[index] - compta.depense_pub[index] - compta.salaire_ouvrier[index]
-            - compta.salaire_cadre[index] - compta.salaire_secretaire[index] - compta.chargeFinanciere[index]);
+        courant.push(item - compta.achats()[index] - compta.petrole()[index] - compta.depense_entretien()[index]
+            - compta.depense_admin()[index] - compta.depense_pub()[index] - compta.salaire_ouvrier()[index]
+            - compta.salaire_cadre()[index] - compta.salaire_secretaire()[index] - compta.chargeFinanciere()[index]);
 
     });
 
@@ -638,12 +968,24 @@ ModeleManager.prototype.fluxTresoriesI = function (entreprise, pin, compta, actu
     });
 
     //console.log("fluxTresoriesI fin");
-    courant.push(myMath.van(entreprise.actuali / 100, courant));
+    courant.push(myMath.van(entreprise.actuali() / 100, courant));
     actuel.push(myMath.sommeTab(actuelBis));
     //console.log(courant);
     return {
-        courant: courant,
-        actu: actuel,
+        /**
+         * @description the getter of courant
+         * @return {Array}
+         */
+        courant: function () {
+            return courant;
+        },
+        /**
+         * @description the getter of actu
+         * @return {Array}
+         */
+        actu: function () {
+            return actuel;
+        },
     };
 };
 /**
@@ -657,23 +999,35 @@ ModeleManager.prototype.fluxTresoriesI = function (entreprise, pin, compta, actu
 ModeleManager.prototype.fluxTresoriesImp = function (fluxTresorie, tabImpotC, tabImpotA, actuel) {
     let actu = [];
     let courant = [];
-    courant.push(fluxTresorie.courant[0]);
-    actu.push(fluxTresorie.actu[0]);
-    fluxTresorie.actu.forEach(function (item, index) {
-        if (index > 0 && index < fluxTresorie.actu.length - 1) {
+    courant.push(fluxTresorie.courant()[0]);
+    actu.push(fluxTresorie.actu()[0]);
+    fluxTresorie.actu().forEach(function (item, index) {
+        if (index > 0 && index < fluxTresorie.actu().length - 1) {
             actu.push(item - tabImpotA[index - 1]);
         }
     });
-    fluxTresorie.courant.forEach(function (item, index) {
-        if (index > 0 && index < fluxTresorie.courant.length - 1) {
+    fluxTresorie.courant().forEach(function (item, index) {
+        if (index > 0 && index < fluxTresorie.courant().length - 1) {
             courant.push(item - tabImpotC[index - 1]);
         }
     });
     actu.push(myMath.sommeTab(actu));
     courant.push(myMath.van(actuel / 100, courant));
     return {
-        courant: courant,
-        actu: actu,
+        /**
+         * @description the getter of courant
+         * @return {Array}
+         */
+        courant: function () {
+            return courant;
+        },
+        /**
+         * @description the getter of actu
+         * @return {Array}
+         */
+        actu: function () {
+            return actuel;
+        },
     };
 
 

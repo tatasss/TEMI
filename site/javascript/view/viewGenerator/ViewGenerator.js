@@ -16,18 +16,19 @@ GenererVue.prototype.resultatHtml = function () {
     //console.log( this.modele.donnee.pays())
     let head = "<thead><tr><th/><th colspan=3 align=center>Taux statuaire</th><th colspan=2>Taux effectifs marginaux</th></tr>";
     head += "<tr><th/><th>Taux plein</th><th>Taux reduit</th><th>Durée</th><th>First Year</th><th>Five Year</th></tr></thead>";
-    let cfe = this.recupDonneTab(false, this.modele.donnee.pays().investissement().cfe, this.modele.donnee.pays().impots().cfe(),
+    //console.log( this.modele.donnee.pays().investissement().isamort());
+    let cfe = this.recupDonneTab(false, this.modele.donnee.pays().investissement().cfe(), this.modele.donnee.pays().impots().cfe(),
         false, false, false);
-    let is = this.recupDonneTab(false, this.modele.donnee.pays().investissement().isamort,
+    let is = this.recupDonneTab(false, this.modele.donnee.pays().investissement().isamort(),
         this.modele.donnee.pays().impots().isImp(), true, false, false);
 
-    let imf = this.recupDonneTab(false, this.modele.donnee.pays().investissement().imf, this.modele.donnee.pays().impots().imf(),
+    let imf = this.recupDonneTab(false, this.modele.donnee.pays().investissement().imf(), this.modele.donnee.pays().impots().imf(),
         false, true, false);
-    let irvm = this.recupDonneTab(false, this.modele.donnee.pays().investissement().irvm,
+    let irvm = this.recupDonneTab(false, this.modele.donnee.pays().investissement().irvm(),
         this.modele.donnee.pays().impots().irvm(), false, false, false);
-    let irc = this.recupDonneTab(false, this.modele.donnee.pays().investissement().irc, this.modele.donnee.pays().impots().irc(),
+    let irc = this.recupDonneTab(false, this.modele.donnee.pays().investissement().irc(), this.modele.donnee.pays().impots().irc(),
         false, false, false);
-    let tva = this.recupDonneTab(false, this.modele.donnee.pays().investissement().tvaPetrole,
+    let tva = this.recupDonneTab(false, this.modele.donnee.pays().investissement().tvaPetrole(),
         this.modele.donnee.pays().impots().tva_petrole(), false, false, false);
     let tot = this.recupDonneTab(this.modele.mesdon().tauxeffMoyCourent, this.modele.donnee.pays().investissement().total,
         this.modele.donnee.pays().impots().imf(), false, false, true);
@@ -95,12 +96,12 @@ GenererVue.prototype.recupDonneTab = function (effMoy, impDonne, donneImp, isIs,
     }
     else {
         if (this.modele.donnee.regime() !== "Gen") {
-            if (impDonne.taux != null) {
-                result.push(impDonne.taux);
+            if (impDonne.taux() != null) {
+                result.push(impDonne.taux());
             }
             else {
-                if (impDonne.reducexo != null) {
-                    result.push(((1 - (impDonne.reducexo / 100)) * (donneImp / 100)) * 100);
+                if (impDonne.reducexo() != null) {
+                    result.push(((1 - (impDonne.reducexo() / 100)) * (donneImp / 100)) * 100);
                     // console.log(donneImp);
                 }
                 else {
@@ -108,11 +109,11 @@ GenererVue.prototype.recupDonneTab = function (effMoy, impDonne, donneImp, isIs,
                     result.push(null);
                 }
             }
-            if (impDonne.taux != null) {
-                result.push(impDonne.duree);
+            if (impDonne.taux() != null) {
+                result.push(impDonne.duree());
             }
-            if (impDonne.reducexo != null) {
-                result.push(impDonne.duree);
+        if (impDonne.reducexo() != null) {
+                result.push(impDonne.duree());
             }
         }
         if (isIs) {
@@ -148,14 +149,14 @@ GenererVue.prototype.pinbHTML = function () {
  */
 GenererVue.prototype.entrepriseHTML = function () {
     let result = "<p>L'entreprise simulée est supposée être localisée dans la plus grande ville du pays, employer "
-        + (this.mE.cadre + this.mE.secretaire + this.mE.ouvrier) + " salariés et vendre la totalité de sa " +
+        + (this.mE.cadre() + this.mE.secretaire() + this.mE.ouvrier()) + " salariés et vendre la totalité de sa " +
         "production sur le marché local. ";
-    result += "<br/>Elles comporte donc " + this.mE.cadre + " cadre(s) dont l'indice salarial est de "
-        + this.mE.indice_cadre;
-    result += " , " + this.mE.secretaire + " secrétaire(s) dont l'indice salarial est de " + this.mE.indice_secretaire;
-    result += " , " + this.mE.ouvrier + " ouvrier(s) dont l'indice salarial est de " + this.mE.indice_ouvrier + ".";
-    result += "<br/>Elle verse " + this.mE.dividende + "% de ces bénéfices dans les dividendes";
-    result += "<br/>Elle a un taux d'actualisation de " + this.mE.actuali + " %";
+    result += "<br/>Elles comporte donc " + this.mE.cadre() + " cadre(s) dont l'indice salarial est de "
+        + this.mE.indice_cadre();
+    result += " , " + this.mE.secretaire() + " secrétaire(s) dont l'indice salarial est de " + this.mE.indice_secretaire();
+    result += " , " + this.mE.ouvrier() + " ouvrier(s) dont l'indice salarial est de " + this.mE.indice_ouvrier() + ".";
+    result += "<br/>Elle verse " + this.mE.dividende() + "% de ces bénéfices dans les dividendes";
+    result += "<br/>Elle a un taux d'actualisation de " + this.mE.actuali() + " %";
     result += "</p>";
     return result;
 };
@@ -164,10 +165,10 @@ GenererVue.prototype.entrepriseHTML = function () {
  * @return {string}
  */
 GenererVue.prototype.bilanHtml = function () {
-    let actif = this.mE.terrain + this.mE.construction + this.mE.equipement + this.mE.camion + this.mE.info +
-        this.mE.bureau + this.mE.stocks + this.mE.creanceCli + this.mE.dispoBanque;
-    let passif = this.mE.capitalSocial + this.mE.detteLongTerme +
-        this.mE.detteCourtTerme + this.mE.detteFournisseur;
+    let actif = this.mE.terrain() + this.mE.construction() + this.mE.equipement() + this.mE.camion() + this.mE.info() +
+        this.mE.bureau() + this.mE.stocks() + this.mE.creanceCli() + this.mE.dispoBanque();
+    let passif = this.mE.capitalSocial() + this.mE.detteLongTerme() +
+        this.mE.detteCourtTerme() + this.mE.detteFournisseur();
     let col1 = ["<span style='font-size: smaller; '><strong>Actif immobilisé</strong></span>",
         "Terrain", "Constructions", "Equipement", "Camion", "Matériel informatique", "Matériel de Bureau",
         "<span style='font-size: smaller; '><strong>Actif circulant</strong></span>", "Stocks", "Creances Clients",
@@ -177,27 +178,27 @@ GenererVue.prototype.bilanHtml = function () {
         color: ""
     };
     let lin2 = {
-        tab: [this.mE.terrain, "Capital social", this.mE.capitalSocial],
+        tab: [this.mE.terrain(), "Capital social", this.mE.capitalSocial()],
         color: ""
     };
     let lin3 = {
-        tab: [this.mE.construction, null, null],
+        tab: [this.mE.construction(), null, null],
         color: ""
     };
     let lin4 = {
-        tab: [this.mE.equipement, null, null],
+        tab: [this.mE.equipement(), null, null],
         color: ""
     };
     let lin5 = {
-        tab: [this.mE.camion, null, null],
+        tab: [this.mE.camion(), null, null],
         color: ""
     };
     let lin6 = {
-        tab: [this.mE.info, null, null],
+        tab: [this.mE.info(), null, null],
         color: ""
     };
     let lin7 = {
-        tab: [this.mE.bureau, null, null],
+        tab: [this.mE.bureau(), null, null],
         color: ""
     };
     let lin8 = {
@@ -205,15 +206,15 @@ GenererVue.prototype.bilanHtml = function () {
         color: ""
     };
     let lin9 = {
-        tab: [this.mE.stocks, "Dettes long terme", this.mE.detteLongTerme],
+        tab: [this.mE.stocks(), "Dettes long terme", this.mE.detteLongTerme()],
         color: ""
     };
     let lin10 = {
-        tab: [this.mE.creanceCli, "Dettes court terme", this.mE.detteCourtTerme],
+        tab: [this.mE.creanceCli(), "Dettes court terme", this.mE.detteCourtTerme()],
         color: ""
     };
     let lin11 = {
-        tab: [this.mE.dispoBanque, "Dettes fournisseurs", this.mE.detteFournisseur],
+        tab: [this.mE.dispoBanque(), "Dettes fournisseurs", this.mE.detteFournisseur()],
         color: ""
     };
     let lin12 = {
@@ -234,23 +235,23 @@ GenererVue.prototype.compteHtml = function () {
         "<strong>Charges financières</strong>", "Charges financières", "<strong>Amortissement</strong>"];
     let head = "<thead><tr><th colspan=3> Compte de résultat<th/></tr><tr><th colspan=2>Charges</th><th colspan=2>Produit</th></tr></thead>";
     let lin0 = {
-        tab: [this.mE.achat, "Ventes", this.mE.vente],
+        tab: [this.mE.achat(), "Ventes", this.mE.vente()],
         color: ""
     };
     let lin1 = {
-        tab: [this.mE.petrole, null, null],
+        tab: [this.mE.petrole(), null, null],
         color: ""
     };
     let lin2 = {
-        tab: [this.mE.depenseAdministrative, null, null],
+        tab: [this.mE.depenseAdministrative(), null, null],
         color: ""
     };
     let lin3 = {
-        tab: [this.mE.depensePub, null, null],
+        tab: [this.mE.depensePub(), null, null],
         color: ""
     };
     let lin4 = {
-        tab: [this.mE.depenseEntretien, null, null],
+        tab: [this.mE.depenseEntretien(), null, null],
         color: ""
     };
     let lin5 = {
@@ -262,15 +263,15 @@ GenererVue.prototype.compteHtml = function () {
         color: ""
     };
     let lin7 = {
-        tab: [this.mE.cadre, null, null],
+        tab: [this.mE.cadre(), null, null],
         color: ""
     };
     let lin8 = {
-        tab: [this.mE.secretaire, null, null],
+        tab: [this.mE.secretaire(), null, null],
         color: ""
     };
     let lin9 = {
-        tab: [this.mE.ouvrier, null, null],
+        tab: [this.mE.ouvrier(), null, null],
         color: ""
     };
     let lin10 = {
@@ -278,7 +279,7 @@ GenererVue.prototype.compteHtml = function () {
         color: ""
     };
     let lin11 = {
-        tab: [this.mE.chargeFinanciere, null, null],
+        tab: [this.mE.chargeFinanciere(), null, null],
         color: ""
     };
     let lin12 = {
@@ -315,12 +316,12 @@ GenererVue.prototype.ImpotHtml = function () {
     let irc = [];
     let tva = [];
     for (let i = 0; i < 5; i++) {
-        cfe.push(this.modele.mesdon().impotSelected().cfe + "%");
-        is.push(this.modele.mesdon().impotSelected().is + "%");
-        imf.push(this.modele.mesdon().impotSelected().imf + "%");
-        irvm.push(this.modele.mesdon().impotSelected().irvm + "%");
-        irc.push(this.modele.mesdon().impotSelected().irc + "%");
-        tva.push(this.modele.mesdon().impotSelected().tvaPetrole + "%");
+        cfe.push(this.modele.mesdon().impotSelected().cfe() + "%");
+        is.push(this.modele.mesdon().impotSelected().is() + "%");
+        imf.push(this.modele.mesdon().impotSelected().imf() + "%");
+        irvm.push(this.modele.mesdon().impotSelected().irvm() + "%");
+        irc.push(this.modele.mesdon().impotSelected().irc() + "%");
+        tva.push(this.modele.mesdon().impotSelected().tvaPetrole() + "%");
     }
     let cote = ["CFE", "IS", "IMF", "IRVM", "IRC", "TVA Petrole"];
     return bootstrap.tableSE(cote, head, {
@@ -355,23 +356,23 @@ GenererVue.prototype.amortissementHtml = function () {
     let head = "<thead><tr><th colspan=2> Amortissement<th/></tr><tr><th/><th>Durée Linéaire</th><th>Coef dégressif</th></tr></thead>";
     let cote = ["Construction", "Equipement", "Camion", "Matériel informatique", "Matériel bureau"];
     let lin1 = {
-        tab: [this.mP.ammort().construction, this.mP.ammort().coefdegressif],
+        tab: [this.mP.ammort().construction(), this.mP.ammort().coefdegressif()],
         color: ""
     };
     let lin2 = {
-        tab: [this.mP.ammort().equipement, this.mP.ammort().coefdegressif],
+        tab: [this.mP.ammort().equipement(), this.mP.ammort().coefdegressif()],
         color: ""
     };
     let lin3 = {
-        tab: [this.mP.ammort().camion, this.mP.ammort().coefdegressif],
+        tab: [this.mP.ammort().camion(), this.mP.ammort().coefdegressif()],
         color: ""
     };
     let lin4 = {
-        tab: [this.mP.ammort().info, this.mP.ammort().coefdegressif],
+        tab: [this.mP.ammort().info(), this.mP.ammort().coefdegressif()],
         color: ""
     };
     let lin5 = {
-        tab: [this.mP.ammort().bureau, this.mP.ammort().coefdegressif],
+        tab: [this.mP.ammort().bureau(), this.mP.ammort().coefdegressif()],
         color: ""
     };
     let tab = bootstrap.tableSE(cote, head, lin1, lin2, lin3, lin4, lin5);
@@ -444,15 +445,15 @@ GenererVue.prototype.mainHTML = function () {
 GenererVue.prototype.petroleHtml = function () {
     let cote = ["Pétrole</td><td>FCFA", "Taux</td><td>%", "TVA Petrole</td><td>FCFA"];
     let tab = bootstrap.tableSE(cote, null, {
-            tab: this.modele.mesdon().taxeAjout().petrole,
+            tab: this.modele.mesdon().taxeAjout().petrole(),
             color: "blue"
         },
         {
-            tab: this.modele.mesdon().taxeAjout().taux,
+            tab: this.modele.mesdon().taxeAjout().taux(),
             color: "yellow"
         },
         {
-            tab: this.modele.mesdon().taxeAjout().tva,
+            tab: this.modele.mesdon().taxeAjout().tva(),
             color: ""
         });
     return bootstrap.pan("default", null, tab);
@@ -464,15 +465,15 @@ GenererVue.prototype.petroleHtml = function () {
 GenererVue.prototype.chargeFinancierHtml = function () {
     let cote = ["Charges financiéres</td><td>FCFA", "Taux</td><td>%", "IRC</td><td>FCFA"];
     let tab = bootstrap.tableSE(cote, null, {
-            tab: myMath.arrondirTabUnit(this.modele.mesdon().taxeCreance().chargeFinance),
+            tab: myMath.arrondirTabUnit(this.modele.mesdon().taxeCreance().chargeFinance()),
             color: "blue"
         },
         {
-            tab: myMath.arrondirTabUnit(this.modele.mesdon().taxeCreance().taux, 2),
+            tab: myMath.arrondirTabUnit(this.modele.mesdon().taxeCreance().taux(), 2),
             color: "yellow"
         },
         {
-            tab: myMath.arrondirTabUnit(this.modele.mesdon().taxeCreance().irc),
+            tab: myMath.arrondirTabUnit(this.modele.mesdon().taxeCreance().irc()),
             color: ""
         });
     return bootstrap.pan("default", null, tab);
@@ -488,27 +489,27 @@ GenererVue.prototype.emploieHtml = function () {
     cote.push("CFE</td><td>FCFA");
     let tab = bootstrap.tableSE(cote, null,
         {
-            tab: myMath.arrondirTabUnit(this.modele.mesdon().employer().salaire_cadre, 0),
+            tab: myMath.arrondirTabUnit(this.modele.mesdon().employer().salaire_cadre(), 0),
             color: "blue"
         },
         {
-            tab: myMath.arrondirTabUnit(this.modele.mesdon().employer().salaire_secretaire),
+            tab: myMath.arrondirTabUnit(this.modele.mesdon().employer().salaire_secretaire()),
             color: "blue"
         },
         {
-            tab: myMath.arrondirTabUnit(this.modele.mesdon().employer().salaire_ouvrier),
+            tab: myMath.arrondirTabUnit(this.modele.mesdon().employer().salaire_ouvrier()),
             color: "blue"
         },
         {
-            tab: myMath.arrondirTabUnit(this.modele.mesdon().employer().masse_salarial),
+            tab: myMath.arrondirTabUnit(this.modele.mesdon().employer().masse_salarial()),
             color: ""
         },
         {
-            tab: myMath.arrondirTabUnit(this.modele.mesdon().employer().tauxCfe, 2),
+            tab: myMath.arrondirTabUnit(this.modele.mesdon().employer().tauxCfe(), 2),
             color: "yellow"
         },
         {
-            tab: myMath.arrondirTabUnit(this.modele.mesdon().employer().reel_CFE),
+            tab: myMath.arrondirTabUnit(this.modele.mesdon().employer().reel_CFE()),
             color: ""
         });
     return bootstrap.pan("default", null, tab);
@@ -535,68 +536,68 @@ GenererVue.prototype.comptableHtml = function () {
     cote.push("Taux de marge  avant IS/IMF</td><td>%CA");
     let tab = bootstrap.tableSE(cote, null,
         {
-            tab: myMath.arrondirTabUnit(this.modele.mesdon().resultCompta().vente),
+            tab: myMath.arrondirTabUnit(this.modele.mesdon().resultCompta().vente()),
             color: "blue",
             bottomBorder: "true"
         },
         {
-            tab: myMath.arrondirTabUnit(this.modele.mesdon().resultCompta().achats),
+            tab: myMath.arrondirTabUnit(this.modele.mesdon().resultCompta().achats()),
             color: "blue"
         },
         {
-            tab: myMath.arrondirTabUnit(this.modele.mesdon().resultCompta().petrole),
+            tab: myMath.arrondirTabUnit(this.modele.mesdon().resultCompta().petrole()),
             color: "blue"
         },
         {
-            tab: myMath.arrondirTabUnit(this.modele.mesdon().resultCompta().tva_petrole),
+            tab: myMath.arrondirTabUnit(this.modele.mesdon().resultCompta().tva_petrole()),
             color: ""
         },
         {
-            tab: myMath.arrondirTabUnit(this.modele.mesdon().resultCompta().depense_admin),
+            tab: myMath.arrondirTabUnit(this.modele.mesdon().resultCompta().depense_admin()),
             color: "blue"
         },
         {
-            tab: myMath.arrondirTabUnit(this.modele.mesdon().resultCompta().depense_pub),
+            tab: myMath.arrondirTabUnit(this.modele.mesdon().resultCompta().depense_pub()),
             color: "blue"
         },
         {
-            tab: myMath.arrondirTabUnit(this.modele.mesdon().resultCompta().depense_entretien),
+            tab: myMath.arrondirTabUnit(this.modele.mesdon().resultCompta().depense_entretien()),
             color: "blue",
             bottomBorder: "true"
         },
         {
-            tab: myMath.arrondirTabUnit(this.modele.mesdon().resultCompta().salaire_cadre),
+            tab: myMath.arrondirTabUnit(this.modele.mesdon().resultCompta().salaire_cadre()),
             color: "blue"
         },
         {
-            tab: myMath.arrondirTabUnit(this.modele.mesdon().resultCompta().salaire_secretaire),
+            tab: myMath.arrondirTabUnit(this.modele.mesdon().resultCompta().salaire_secretaire()),
             color: "blue"
         },
         {
-            tab: myMath.arrondirTabUnit(this.modele.mesdon().resultCompta().salaire_ouvrier),
+            tab: myMath.arrondirTabUnit(this.modele.mesdon().resultCompta().salaire_ouvrier()),
             color: "blue"
         },
         {
-            tab: myMath.arrondirTabUnit(this.modele.mesdon().resultCompta().cfe),
+            tab: myMath.arrondirTabUnit(this.modele.mesdon().resultCompta().cfe()),
             color: "",
             bottomBorder: "true"
         },
         {
-            tab: myMath.arrondirTabUnit(this.modele.mesdon().resultCompta().chargeFinanciere),
+            tab: myMath.arrondirTabUnit(this.modele.mesdon().resultCompta().chargeFinanciere()),
             color: "blue",
             bottomBorder: "true"
         },
         {
-            tab: myMath.arrondirTabUnit(this.modele.mesdon().resultCompta().amortissement),
+            tab: myMath.arrondirTabUnit(this.modele.mesdon().resultCompta().amortissement()),
             color: "",
             bottomBorder: "true"
         },
         {
-            tab: myMath.arrondirTabUnit(this.modele.mesdon().resultCompta().benefice_comptable),
+            tab: myMath.arrondirTabUnit(this.modele.mesdon().resultCompta().benefice_comptable()),
             color: ""
         },
         {
-            tab: myMath.arrondirTabUnit(this.modele.mesdon().resultCompta().taux_marge_avant__IS_IMF, 1),
+            tab: myMath.arrondirTabUnit(this.modele.mesdon().resultCompta().taux_marge_avant__IS_IMF(), 1),
             color: ""
         });
     return bootstrap.pan("default", null, tab);
@@ -609,19 +610,19 @@ GenererVue.prototype.ammortExcepHtml = function () {
     let coteHead = ["Investissement</td><td>FCFA", "Taux</td><td>% Investissement", "Limitation</td><td>% Bénéfice comptable", "Durée</td><td>Années"];
     let tabHead = bootstrap.tableSE(coteHead, null,
         {
-            tab: [Math.round(this.modele.mesdon().ammortExcep().investissement)],
+            tab: [Math.round(this.modele.mesdon().ammortExcep().investissement())],
             color: "blue"
         },
         {
-            tab: myMath.arrondirTabUnit([this.modele.mesdon().ammortExcep().taux], 2),
+            tab: myMath.arrondirTabUnit([this.modele.mesdon().ammortExcep().taux()], 2),
             color: "yellow"
         },
         {
-            tab: myMath.arrondirTabUnit([this.modele.mesdon().ammortExcep().limitation], 2),
+            tab: myMath.arrondirTabUnit([this.modele.mesdon().ammortExcep().limitation()], 2),
             color: "yellow"
         },
         {
-            tab: myMath.arrondirTabUnit([this.modele.mesdon().ammortExcep().duree]),
+            tab: myMath.arrondirTabUnit([this.modele.mesdon().ammortExcep().duree()]),
             color: "yellow"
         });
 
@@ -629,14 +630,14 @@ GenererVue.prototype.ammortExcepHtml = function () {
     let coteBody = ["Durée restante</td><td>Années", "Base amortissable</td><td>FCFA", "Charge d'amortissement</td><td>FCFA"];
     let tabBody = bootstrap.tableSE(coteBody, null,
         {
-            tab: this.modele.mesdon().ammortExcep().dureeTab,
+            tab: this.modele.mesdon().ammortExcep().dureeTab(),
             color: ""
         },
         {
-            tab: this.modele.mesdon().ammortExcep().baseAmorti, color: ""
+            tab: this.modele.mesdon().ammortExcep().baseAmorti(), color: ""
         },
         {
-            tab: this.modele.mesdon().ammortExcep().chargeAmorti,
+            tab: this.modele.mesdon().ammortExcep().chargeAmorti(),
             color: ""
         });
     return bootstrap.pan("info", tabHead, tabBody);
@@ -648,15 +649,15 @@ GenererVue.prototype.ammortExcepHtml = function () {
 GenererVue.prototype.resultatImpotHtml = function () {
     let cote = ["Bénéfice comptable</td><td>FCFA", "Amortissement exceptionnel</td><td>FCFA", "Bénéfice imposable</td><td>FCFA"];
     let tab = bootstrap.tableSE(cote, null, {
-            tab: myMath.arrondirTabUnit(this.modele.mesdon().resultImpot().benCompta),
+            tab: myMath.arrondirTabUnit(this.modele.mesdon().resultImpot().benCompta()),
             color: ""
         },
         {
-            tab: myMath.arrondirTabUnit(this.modele.mesdon().resultImpot().amortExep),
+            tab: myMath.arrondirTabUnit(this.modele.mesdon().resultImpot().amortExep()),
             color: ""
         },
         {
-            tab: myMath.arrondirTabUnit(this.modele.mesdon().resultImpot().benImpo),
+            tab: myMath.arrondirTabUnit(this.modele.mesdon().resultImpot().benImpo()),
             color: ""
         });
     return bootstrap.pan("default", null, tab);
@@ -705,13 +706,13 @@ GenererVue.prototype.impotSocieteHtml = function () {
     let is = [];
     let impSoc = [];
     for (let i = 0; i < 5; i++) {
-        is.push(this.modele.mesdon().impotSelected().is);
+        is.push(this.modele.mesdon().impotSelected().is());
         impSoc.push(Math.round(this.modele.mesdon().impotSociete()[i]));
     }
     let cote = ["Benefice imposable</td><td>FCFA", "Taux</td><td>% bénéfice imposable", "IS</td><td>FCFA"];
     let tab = bootstrap.tableSE(cote, null,
         {
-            tab: myMath.arrondirTabUnit(this.modele.mesdon().resultImpot().benImpo),
+            tab: myMath.arrondirTabUnit(this.modele.mesdon().resultImpot().benImpo()),
             color: "",
         },
         {
@@ -734,12 +735,12 @@ GenererVue.prototype.impotForfaitHtml = function () {
     let imf = [];
     let impIMF = [];
     for (let i = 0; i < 5; i++) {
-        imf.push(this.modele.mesdon().impotSelected().is);
+        imf.push(this.modele.mesdon().impotSelected().imf());
         impIMF.push(Math.round(this.modele.mesdon().impotIMF()[i]));
     }
     let cote = ["Ventes</td><td>FCFA", "Taux</td><td>%CA", "IMF</td><td>FCFA"];
     let tab = bootstrap.tableSE(cote, null, {
-            tab: myMath.arrondirTabUnit(this.modele.mesdon().resultCompta().vente),
+            tab: myMath.arrondirTabUnit(this.modele.mesdon().resultCompta().vente()),
             color: ""
         },
         {
@@ -763,11 +764,11 @@ GenererVue.prototype.isImfHtml = function () {
             color: ""
         },
         {
-            tab: myMath.arrondirTabUnit(this.modele.mesdon().resultCompta().benefice_comptable),
+            tab: myMath.arrondirTabUnit(this.modele.mesdon().resultCompta().benefice_comptable()),
             color: ""
         },
         {
-            tab: myMath.arrondirTabUnit(this.modele.mesdon().resultCompta().taux_marge_avant__IS_IMF, 1),
+            tab: myMath.arrondirTabUnit(this.modele.mesdon().resultCompta().taux_marge_avant__IS_IMF(), 1),
             color: ""
         });
     return bootstrap.pan("default", null, tab);
@@ -780,12 +781,12 @@ GenererVue.prototype.impotRevenuValeurMobilieres = function () {
     let div = [];
     let irvm = [];
     for (let i = 0; i < 5; i++) {
-        div.push(this.modele.donnee.entreprise().dividende);
+        div.push(this.modele.donnee.entreprise().dividende());
         irvm.push(this.modele.donnee.pays().impots().irvm());
     }
     let cote = ["Bénéfice après IS/IMF</td><td>FCFA", "Distribution anuelle</td><td>% des bénéfice après IS/IMF", "taux</td><td>% des bénéfice après IS/IMF", "IRVM</td><td>FCFA"];
     let tab = bootstrap.tableSE(cote, null, {
-            tab: myMath.arrondirTabUnit(this.modele.mesdon().resultCompta().benefice_comptable),
+            tab: myMath.arrondirTabUnit(this.modele.mesdon().resultCompta().benefice_comptable()),
             color: ""
         },
         {
@@ -822,27 +823,27 @@ GenererVue.prototype.tabImpotEtTaxe = function (monm) {
     let cote = ["CFE</td><td>FCFA", "IS/IMF</td><td>FCFA", "IRVM</td><td>FCFA", "IRC</td><td>FCFA", "TVA Petrole</td><td>FCFA", "Total</td><td>FCFA"];
     let tab = bootstrap.tableSE(cote, null,
         {
-            tab: myMath.arrondirTabUnit(monm.cfe),
+            tab: myMath.arrondirTabUnit(monm.cfe()),
             color: ""
         },
         {
-            tab: myMath.arrondirTabUnit(monm.isimf),
+            tab: myMath.arrondirTabUnit(monm.isimf()),
             color: ""
         },
         {
-            tab: myMath.arrondirTabUnit(monm.irvm),
+            tab: myMath.arrondirTabUnit(monm.irvm()),
             color: ""
         },
         {
-            tab: myMath.arrondirTabUnit(monm.irc),
+            tab: myMath.arrondirTabUnit(monm.irc()),
             color: ""
         },
         {
-            tab: myMath.arrondirTabUnit(monm.tvaPetrole),
+            tab: myMath.arrondirTabUnit(monm.tvaPetrole()),
             color: ""
         },
         {
-            tab: myMath.arrondirTabUnit(monm.total),
+            tab: myMath.arrondirTabUnit(monm.total()),
             color: ""
         }
     );
@@ -868,13 +869,13 @@ GenererVue.prototype.tabFluxTresorie = function (tab, color) {
     //console.log(color);
     let mota = bootstrap.tableSE(cote, "<thead><tr><th/><th/><th/><th/><th/><th/><th/><th/><th>VAN</th></tr></thead>",
         {
-            tab: myMath.arrondirTabUnit(tab.courant),
+            tab: myMath.arrondirTabUnit(tab.courant()),
             color: "",
             colorFirstCase: color,
             fontColorLastCase: "selectedPosNegNumber"
         },
         {
-            tab: myMath.arrondirTabUnit(tab.actu),
+            tab: myMath.arrondirTabUnit(tab.actu()),
             color: "",
             colorFirstCase: color,
             fontColorLastCase: "selectedPosNegNumber"
@@ -917,7 +918,7 @@ GenererVue.prototype.investissementRegime = function () {
             "pour être éligible aux régimes supérieurs.";
         html += "</p><p>";
 
-        html += this.modele.donnee.pays().source;
+        html += this.modele.donnee.pays().source();
     }
     html += "</p>";
     return html;
