@@ -8,7 +8,7 @@ amm += "<br/>";
 genererVue.modele.mesdon().amortissement().forEach(function (item) {
     amm += item.getHtml() + "<br/>";
 });
-document.getElementById("param").innerHTML =genererVue.modele.donnee.pays().nom;
+document.getElementById("param").innerHTML =genererVue.modele.donnee.pays().nom();
 document.getElementById("pet").innerHTML = genererVue.petroleHtml();
 document.getElementById("ammort").innerHTML = amm;
 document.getElementById("ammortExp").innerHTML = genererVue.ammortExcepHtml();

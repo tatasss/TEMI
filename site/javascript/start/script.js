@@ -78,10 +78,13 @@ function validateForm() {
     localStorage.setItem("don", [pays, regime, actualisation, marge].toString());
     let donne = new Donne(pays, regime, actualisation, marge);
     if (donne.pays() !== undefined) {
-        if (donne.pays != null) {
-            console.log(parseFloat(localStorage.getItem("xmlPib : " + donne.pays().code)) * 582.79);
-            //console.log(donne);
-            console.log(donne.pays());
+        if (donne.pays() != null) {
+            let XD=donne.pays().code();
+            //while(localStorage.getItem("xmlPib : " +XD)==null) {
+
+                console.log("pib du pays : "+donne.pays().pib.toString());
+
+            //}
         }
     }
     monModele = new Modele(donne);

@@ -8,9 +8,12 @@
  */
 let Donne = function (pays, regime, actu, marge) {
     let randPays = mesPays();
+    //console.log(mesPays());
     let mP;
+
     for (let i = 0; i < randPays.length; i++) {
-        if (randPays[i].code === pays) {
+
+        if (randPays[i].code() === pays) {
 
             mP = randPays[i];
 

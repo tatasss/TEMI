@@ -16,11 +16,11 @@ ModeleManager.prototype.investissementModele = function (mE, pibchoix) {
  */
 ModeleManager.prototype.ammortissment = function (mE, mP, pibchoix) {
     let amortissement = [];
-    amortissement.push(fabrique.armortirModele(mE.construction * pibchoix, mP.ammort.construction, mP.ammort.coefdegressif, "Construction"));
-    amortissement.push(fabrique.armortirModele(mE.equipement * pibchoix, mP.ammort.equipement, mP.ammort.coefdegressif, "Equipement"));
-    amortissement.push(fabrique.armortirModele(mE.camion * pibchoix, mP.ammort.camion, mP.ammort.coefdegressif, "Camion"));
-    amortissement.push(fabrique.armortirModele(mE.info * pibchoix, mP.ammort.info, mP.ammort.coefdegressif, "Informatique"));
-    amortissement.push(fabrique.armortirModele(mE.bureau * pibchoix, mP.ammort.bureau, mP.ammort.coefdegressif, "Bureau"));
+    amortissement.push(fabrique.armortirModele(mE.construction * pibchoix, mP.ammort().construction, mP.ammort().coefdegressif, "Construction"));
+    amortissement.push(fabrique.armortirModele(mE.equipement * pibchoix, mP.ammort().equipement, mP.ammort().coefdegressif, "Equipement"));
+    amortissement.push(fabrique.armortirModele(mE.camion * pibchoix, mP.ammort().camion, mP.ammort().coefdegressif, "Camion"));
+    amortissement.push(fabrique.armortirModele(mE.info * pibchoix, mP.ammort().info, mP.ammort().coefdegressif, "Informatique"));
+    amortissement.push(fabrique.armortirModele(mE.bureau * pibchoix, mP.ammort().bureau, mP.ammort().coefdegressif, "Bureau"));
     return amortissement;
 
 };
@@ -139,96 +139,96 @@ ModeleManager.prototype.selectTaxe = function (mP, donne) {
     //console.log(mP);
 
     if (donne.regime() === "gen") {
-        cfe = mP.impots.cfe;
-        is = mP.impots.isImp;
-        imf = mP.impots.imf;
-        irvm = mP.impots.irvm;
-        irc = mP.impots.irc;
-        tvaPetrole = mP.impots.tva_petrole;
+        cfe = mP.impots().cfe();
+        is = mP.impots().isImp();
+        imf = mP.impots().imf();
+        irvm = mP.impots().irvm();
+        irc = mP.impots().irc();
+        tvaPetrole = mP.impots().tva_petrole();
 
     }
     else {
 
-        if (mP.investissement.duree < 5) {
-            cfe = mP.impots.cfe;
-            is = mP.impots.isImp;
-            imf = mP.impots.imf;
-            irvm = mP.impots.irvm;
-            irc = mP.impots.irc;
-            tvaPetrole = mP.impots.tva_petrole;
+        if (mP.investissement().duree < 5) {
+            cfe = mP.impots().cfe();
+            is = mP.impots().isImp();
+            imf = mP.impots().imf();
+            irvm = mP.impots().irvm();
+            irc = mP.impots().irc();
+            tvaPetrole = mP.impots().tva_petrole();
         }
         else {
-            if (mP.investissement.cfe.taux != null) {
-                cfe = mP.investissement.cfe.taux;
+            if (mP.investissement().cfe.taux != null) {
+                cfe = mP.investissement().cfe.taux;
             }
             else {
-                if (mP.investissement.cfe.reducexo != null) {
-                    cfe = ((1 - (mP.investissement.cfe.reducexo / 100)) * (mP.impots.cfe / 100)) * 100;
+                if (mP.investissement().cfe.reducexo != null) {
+                    cfe = ((1 - (mP.investissement().cfe.reducexo / 100)) * (mP.impots().cfe() / 100)) * 100;
                 }
                 else {
-                    cfe = mP.impots.cfe;
+                    cfe = mP.impots().cfe();
                 }
 
             }
-            if (mP.investissement.isamort.taux != null) {
-                is = mP.investissement.isamort.taux;
+            if (mP.investissement().isamort.taux != null) {
+                is = mP.investissement().isamort.taux;
             }
             else {
-                if (mP.investissement.isamort.reducexo != null) {
+                if (mP.investissement().isamort.reducexo != null) {
 
-                    is = (((1 - (mP.investissement.isamort.reducexo / 100)) * (mP.impots.isImp / 100)) * 100);
-                    //console.log((1-(mP.investissement.isamort.reducexo/100)));
+                    is = (((1 - (mP.investissement().isamort.reducexo / 100)) * (mP.impots().isImp() / 100)) * 100);
+                    //console.log((1-(mP.investissement().isamort.reducexo/100)));
                 }
                 else {
-                    is = mP.impots.isImp;
-                }
-
-            }
-            if (mP.investissement.imf.taux != null) {
-                imf = mP.investissement.imf.taux;
-            }
-            else {
-                if (mP.investissement.imf.reducexo != null) {
-                    imf = ((1 - (mP.investissement.imf.reducexo / 100)) * (mP.impots.imf / 100)) * 100;
-                }
-                else {
-                    imf = mP.impots.imf;
+                    is = mP.impots().isImp();
                 }
 
             }
-            if (mP.investissement.irvm.taux != null) {
-                irvm = mP.investissement.irvm.taux;
+            if (mP.investissement().imf.taux != null) {
+                imf = mP.investissement().imf.taux;
             }
             else {
-                if (mP.investissement.irvm.reducexo != null) {
-                    irvm = ((1 - (mP.investissement.irvm.reducexo / 100)) * (mP.impots.irvm / 100)) * 100;
+                if (mP.investissement().imf.reducexo != null) {
+                    imf = ((1 - (mP.investissement().imf.reducexo / 100)) * (mP.impots().imf() / 100)) * 100;
                 }
                 else {
-                    irvm = mP.impots.irvm;
+                    imf = mP.impots().imf();
                 }
 
             }
-            if (mP.investissement.irc.taux != null) {
-                irc = mP.investissement.irc.taux;
+            if (mP.investissement().irvm.taux != null) {
+                irvm = mP.investissement().irvm.taux;
             }
             else {
-                if (mP.investissement.irc.reducexo != null) {
-                    irc = ((1 - (mP.investissement.irc.reducexo / 100)) * (mP.impots.irc / 100)) * 100;
+                if (mP.investissement().irvm.reducexo != null) {
+                    irvm = ((1 - (mP.investissement().irvm.reducexo / 100)) * (mP.impots().irvm() / 100)) * 100;
                 }
                 else {
-                    irc = mP.impots.irc;
+                    irvm = mP.impots().irvm();
                 }
 
             }
-            if (mP.investissement.tvaPetrole.taux != null) {
-                tvaPetrole = mP.investissement.tvaPetrole.taux;
+            if (mP.investissement().irc.taux != null) {
+                irc = mP.investissement().irc.taux;
             }
             else {
-                if (mP.investissement.irc.reducexo != null) {
-                    tvaPetrole = ((1 - (mP.investissement.tvaPetrole.reducexo / 100)) * (mP.impots.tva_petrole / 100)) * 100;
+                if (mP.investissement().irc.reducexo != null) {
+                    irc = ((1 - (mP.investissement().irc.reducexo / 100)) * (mP.impots().irc() / 100)) * 100;
                 }
                 else {
-                    tvaPetrole = mP.impots.tva_petrole;
+                    irc = mP.impots().irc();
+                }
+
+            }
+            if (mP.investissement().tvaPetrole.taux != null) {
+                tvaPetrole = mP.investissement().tvaPetrole.taux;
+            }
+            else {
+                if (mP.investissement().irc.reducexo != null) {
+                    tvaPetrole = ((1 - (mP.investissement().tvaPetrole.reducexo / 100)) * (mP.impots().tva_petrole() / 100)) * 100;
+                }
+                else {
+                    tvaPetrole = mP.impots().tva_petrole();
                 }
 
             }
@@ -410,20 +410,20 @@ ModeleManager.prototype.ammortExcept = function (mP, benCompta, regime, donneRef
     let chargeAmorti = [];
     // console.log(investissment);
     if (regime === "nongen") {
-        if (mP.investissement.isamort.ammortTauxEx != null) {
-            taux = mP.investissement.isamort.ammortTauxEx;
+        if (mP.investissement().isamort.ammortTauxEx != null) {
+            taux = mP.investissement().isamort.ammortTauxEx;
         }
         else {
             taux = 0;
         }
-        if (mP.investissement.isamort.ammortLimit != null) {
-            limitation = mP.investissement.isamort.ammortLimit;
+        if (mP.investissement().isamort.ammortLimit != null) {
+            limitation = mP.investissement().isamort.ammortLimit;
         }
         else {
             limitation = 0;
         }
-        if (mP.investissement.isamort.duree != null) {
-            duree = mP.investissement.isamort.duree;
+        if (mP.investissement().isamort.duree != null) {
+            duree = mP.investissement().isamort.duree;
         }
         else {
             duree = 0;

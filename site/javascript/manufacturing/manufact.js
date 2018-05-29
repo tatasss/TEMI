@@ -3,7 +3,7 @@
  * @param {string} code - the code of the land
  * @return {number} Pib
  */
-Fabrique.prototype.pibFind = function (code) {
+Ref.prototype.pibFind = function (code) {
     let pib = 0;
     let xhr = getXMLHttpRequest();
     if (localStorage.getItem("xmlPib : " + code) !== undefined) {
@@ -23,7 +23,7 @@ Fabrique.prototype.pibFind = function (code) {
                         return
                     }
                     localStorage.setItem("xmlPib : " + xhr.responseXML.getElementsByTagName("wb:data")[0].childNodes[3].childNodes[5].firstChild.nodeValue.toString(), xhr.responseXML.getElementsByTagName("wb:data")[0].childNodes[5].childNodes[9].firstChild.nodeValue.toString());
-
+                    //console.log(localStorage);
                 }
 
 
@@ -46,7 +46,7 @@ Fabrique.prototype.pibFind = function (code) {
 
     }
 
-
+    //console.log(localStorage)
     //console.log("http://api.worldbank.org/v2/countries/"+code+"/indicators/NY.GDP.MKTP.CD" + "--> "+cpt );
 
     if (pib === 0) {
@@ -70,14 +70,28 @@ Fabrique.prototype.pibFind = function (code) {
 Fabrique.prototype.pays = function (code, nom, impot, ammort, investissment, dispoDerog, source) {
 
     return {
-        pib: this.pibFind(code),
-        code: code,
-        nom: nom,
-        impots: impot,
-        ammort: ammort,
-        investissement: investissment,
-        dispoDerog: dispoDerog,
-        source: source
+        pib: ref.pibFind(code),
+        code: function () {
+            return code;
+        },
+        nom: function () {
+            return nom;
+        },
+        impots: function () {
+            return impot;
+        },
+        ammort: function () {
+            return ammort;
+        },
+        investissement: function () {
+            return investissment;
+        },
+        dispoDerog: function () {
+            return dispoDerog;
+        },
+        source: function () {
+            return source;
+        }
     };
 };
 /**
@@ -93,12 +107,24 @@ Fabrique.prototype.pays = function (code, nom, impot, ammort, investissment, dis
  */
 Fabrique.prototype.impot = function (cFE, iS, iMF, iRVM, iRC, tVA_Petrole) {
     return {
-        cfe: cFE,
-        isImp: iS,
-        imf: iMF,
-        irvm: iRVM,
-        irc: iRC,
-        tva_petrole: tVA_Petrole,
+        cfe: function () {
+            return cFE;
+        },
+        isImp: function () {
+            return iS;
+        },
+        imf: function () {
+            return iMF;
+        },
+        irvm: function () {
+            return iRVM;
+        },
+        irc: function () {
+            return iRC
+        },
+        tva_petrole: function () {
+            return tVA_Petrole;
+        },
     }
 };
 /**

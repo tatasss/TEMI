@@ -30,6 +30,7 @@ let Fabrique = function () {
 let GenererVue = function (modele) {
     this.modele = modele
 };
+
 /**
  * @description This function is a constructor of Modele class
  * @param {Donne} donnee - the donne used to construct the model
@@ -78,6 +79,7 @@ let ref = new Ref();
  */
 let graph = new Graph();
 
+
 //----------------------------------------------------------------------------------------------------------------------
 /**
  * @description this function find the name of the land with a code
@@ -88,9 +90,9 @@ Ref.prototype.donnerNomPays = function (code) {
     let randPays = mesPays();
 
     for (let i = 0; i < randPays.length; i++) {
-        if (randPays[i].code === code) {
+        if (randPays[i].code() === code) {
 
-            return randPays[i].nom;
+            return randPays[i].nom();
 
         }
 
@@ -105,9 +107,9 @@ Ref.prototype.donnerCodePays = function (nom) {
     let randPays = mesPays();
 
     for (let i = 0; i < randPays.length; i++) {
-        if (randPays[i].nom === nom) {
+        if (randPays[i].nom() === nom) {
 
-            return randPays[i].code;
+            return randPays[i].code();
 
         }
 
