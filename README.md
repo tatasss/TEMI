@@ -9,3 +9,8 @@ Je travaille dans le CERDI qui est un centre mixte de recherche de l’Universit
 Je suis pour l'instant sur une application Front-end dont le code est fait principalement en javaScript,et une vue en HTML/CSS.
 Il suffit donc de téléchager le projet et de cliquez sur index.html pour l'utiliser
 
+
+petit Bémole, mon application utlise la fonction history.pushState a un moment, cette commande génére une erreur si l'url du site 
+commence par file:/// , il est donc conseillé de doit utilisé un autre navigateur, soit lancer le projet sur un serveur localHost(apache ,wamp ou ...)
+ (ou un hebergeur externe mais je suis pas sur que ce soit pratique lors du développement);
+
