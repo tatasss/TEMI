@@ -168,7 +168,7 @@ $("body").delegate("button", "click", function () {
     });
     titre="TEMItauxActualisation:"+localStorage.getItem("compaActu")+"%regimeFiscale:"+reg+"%";
 
-    graph.graphique(modeleTab, "chartCompa", reg,margeTab,titre);
+    graph.graphique(modeleTab, "chartCompa","tabTemi", reg,margeTab,titre);
     document.getElementById("param").innerHTML = bootstrap.collapse(posIn, {
             tittle: "pays",
             body: bootstrap.listeItem(paysChoisiHtml)

@@ -1,19 +1,20 @@
 /**
  * @param {Array} modeleTab - the array of the modele use to put a graphique
- * @param {string} id - a element on document identification
+ * @param {string} idGraph - the id of the graph
+ * @param {string} idText - the id of the text
  * @param {string} regime - a government of the modele
  * @param {Array} maMarge - A Array of the margin Rate
  * @param {string} titre - a filename of the excel outPut
  * @description This function create a graphique with a module Chart.js
  * return nothing but touch the html with id parameter
  */
-Graph.prototype.graphique = function (modeleTab, id, regime,maMarge,titre) {
-    document.getElementById("graph-container").innerHTML = `<canvas id=${id}><canvas>`;
+Graph.prototype.graphique = function (modeleTab, idGraph,idText, regime,maMarge,titre) {
+    document.getElementById("graph-container").innerHTML = `<canvas id=${idGraph}><canvas><div id="idText"></div>`;
 
     let dataset = [];
     let colorDif;
     let color;
-    let targetCanvas = document.getElementById(id);
+    let targetCanvas = document.getElementById(idGraph);
     let ctx = targetCanvas.getContext('2d');
     let myChart;
     if (modeleTab.length !== 0) {
@@ -63,7 +64,7 @@ Graph.prototype.graphique = function (modeleTab, id, regime,maMarge,titre) {
             //----------------------------------------------------------------------------------------------------------
             //ici la parti sur le tableau des temi
             console.log(maMarge);
-            document.getElementById("tabTemi").innerHTML = bootstrap.bootstrapTemiTabSpe(entre, paysChoisi, entreprise,maMarge,titre);
+            document.getElementById(idText).innerHTML = bootstrap.bootstrapTemiTabSpe(entre, paysChoisi, entreprise,maMarge,titre);
             //----------------------------------------------------------------------------------------------------------
             //console.log(color);
             new Chart(ctx, {
@@ -107,7 +108,7 @@ Graph.prototype.graphique = function (modeleTab, id, regime,maMarge,titre) {
             myChart.clear();
             $(id).remove();
             $('iframe.chartjs-hidden-iframe').remove();
-            document.getElementById("tabTemi").innerHTML = " ";
+            document.getElementById(idText).innerHTML = " ";
 
         }
     }
@@ -117,7 +118,7 @@ Graph.prototype.graphique = function (modeleTab, id, regime,maMarge,titre) {
         myChart.clear();
         $(id).remove();
         $('iframe.chartjs-hidden-iframe').remove();
-        document.getElementById("tabTemi").innerHTML = " "
+        document.getElementById(idText).innerHTML = " "
     }
 
 };
