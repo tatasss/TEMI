@@ -2,15 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b89c5143-0212-42c0-b73b-81dad73db30d" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/html/test.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/javascript/start/test.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dictionaries/matgaydu.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dictionaries/matgaydu.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/html/graphForm.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/graphForm.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/javascript/start/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/javascript/start/script.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/javascript/view/directlyChange/graphFormView.js" beforeDir="false" afterPath="$PROJECT_DIR$/javascript/view/directlyChange/graphFormView.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/javascript/view/viewGenerator/bootstrapView.js" beforeDir="false" afterPath="$PROJECT_DIR$/javascript/view/viewGenerator/bootstrapView.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/javascript/view/viewGenerator/graphGenerator.js" beforeDir="false" afterPath="$PROJECT_DIR$/javascript/view/viewGenerator/graphGenerator.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/model.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/model.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -39,17 +33,17 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/html/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="14" column="16" lean-forward="true" selection-start-line="14" selection-end-line="14" selection-end-column="77" />
+            <state relative-caret-position="430">
+              <caret line="94" column="66" selection-start-line="94" selection-start-column="65" selection-end-line="94" selection-end-column="72" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="reference.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/javascript/start/reference.js">
+      <file leaf-file-name="model.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/html/model.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-595">
-              <caret line="19" column="58" selection-start-line="19" selection-start-column="58" selection-end-line="19" selection-end-column="58" />
+            <state relative-caret-position="128">
+              <caret line="106" column="111" selection-start-line="106" selection-start-column="111" selection-end-line="106" selection-end-column="111" />
             </state>
           </provider>
         </entry>
@@ -81,11 +75,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="graphFormView.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="graphFormView.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/javascript/view/directlyChange/graphFormView.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="226">
-              <caret line="170" column="52" selection-start-line="170" selection-start-column="52" selection-end-line="170" selection-end-column="52" />
+            <state relative-caret-position="3043">
+              <caret line="179" column="3" lean-forward="true" selection-start-line="179" selection-start-column="3" selection-end-line="179" selection-end-column="3" />
             </state>
           </provider>
         </entry>
@@ -163,7 +157,6 @@
         <option value="$PROJECT_DIR$/css/general.css" />
         <option value="$PROJECT_DIR$/node_modules/chart.js/dist/Chart.js" />
         <option value="$PROJECT_DIR$/javascript/manaufacturing/manufact.js" />
-        <option value="$PROJECT_DIR$/html/index.html" />
         <option value="$PROJECT_DIR$/css/tabCS.css" />
         <option value="$PROJECT_DIR$/UMLTEST/DiagramClass.puml" />
         <option value="$PROJECT_DIR$/node_modules/excellentexport/dist/excellentexport.js" />
@@ -181,7 +174,6 @@
         <option value="$PROJECT_DIR$/javascript/view/viewGenerator/ViewGenerator.js" />
         <option value="$PROJECT_DIR$/javascript/data/data.js" />
         <option value="$PROJECT_DIR$/javascript/model/modelManager.js" />
-        <option value="$PROJECT_DIR$/html/model.html" />
         <option value="$PROJECT_DIR$/javascript/manufacturing/manufact.js" />
         <option value="$PROJECT_DIR$/javascript/model/anotherFunctiun/excel.js" />
         <option value="$APPLICATION_CONFIG_DIR$/consoles/ide/ide-scripting.js" />
@@ -192,6 +184,8 @@
         <option value="$PROJECT_DIR$/javascript/view/viewGenerator/graphGenerator.js" />
         <option value="$PROJECT_DIR$/html/graphForm.html" />
         <option value="$PROJECT_DIR$/javascript/view/directlyChange/graphFormView.js" />
+        <option value="$PROJECT_DIR$/html/index.html" />
+        <option value="$PROJECT_DIR$/html/model.html" />
       </list>
     </option>
   </component>
@@ -429,7 +423,7 @@
       <workItem from="1527490486776" duration="20083000" />
       <workItem from="1527576806086" duration="23590000" />
       <workItem from="1527607132512" duration="1396000" />
-      <workItem from="1527662862787" duration="3417000" />
+      <workItem from="1527662862787" duration="4706000" />
     </task>
     <task id="LOCAL-00001" summary="mis en place d'un code propre">
       <created>1526980633672</created>
@@ -533,7 +527,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="415722000" />
+    <option name="totallyTimeSpent" value="417011000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -960,13 +954,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/html/model.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="6001">
-          <caret line="353" column="33" selection-start-line="353" selection-start-column="33" selection-end-line="353" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/javascript/view/viewGenerator/ViewGenerator.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="10404">
@@ -1013,13 +1000,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-595">
           <caret line="19" column="58" selection-start-line="19" selection-start-column="58" selection-end-line="19" selection-end-column="58" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/html/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="14" column="16" lean-forward="true" selection-start-line="14" selection-end-line="14" selection-end-column="77" />
         </state>
       </provider>
     </entry>
@@ -1074,8 +1054,22 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/javascript/view/directlyChange/graphFormView.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="226">
-          <caret line="170" column="52" selection-start-line="170" selection-start-column="52" selection-end-line="170" selection-end-column="52" />
+        <state relative-caret-position="3043">
+          <caret line="179" column="3" lean-forward="true" selection-start-line="179" selection-start-column="3" selection-end-line="179" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/html/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="430">
+          <caret line="94" column="66" selection-start-line="94" selection-start-column="65" selection-end-line="94" selection-end-column="72" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/html/model.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="128">
+          <caret line="106" column="111" selection-start-line="106" selection-start-column="111" selection-end-line="106" selection-end-column="111" />
         </state>
       </provider>
     </entry>
