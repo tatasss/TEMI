@@ -278,7 +278,7 @@
       <path value="$PROJECT_DIR$/node_modules/xlsx/package.json" />
     </packageJsonPaths>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="833" />
     <option name="width" value="854" />
     <option name="height" value="1017" />
@@ -419,7 +419,7 @@
       <workItem from="1527490486776" duration="20083000" />
       <workItem from="1527576806086" duration="23590000" />
       <workItem from="1527607132512" duration="1396000" />
-      <workItem from="1527662862787" duration="5398000" />
+      <workItem from="1527662862787" duration="5441000" />
     </task>
     <task id="LOCAL-00001" summary="mis en place d'un code propre">
       <created>1526980633672</created>
@@ -523,7 +523,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="417703000" />
+    <option name="totallyTimeSpent" value="417746000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
