@@ -1,16 +1,13 @@
 ﻿A faire avant Amelioration:
-	-scenario nominal reussite
 	-Si demande supplementaire du Chef de projet, le faire passer devant
 	
 A ameliorer :
-	-OPtimiser les fichiers(en ajouter et ou supprimer) pour que la page html ne telecharge que les fichiers js contenant le strict minimum necessaire a la page
-	-function ext ajout dans les objet approprier
+	-Optimiser les fichiers(en ajouter et ou supprimer) pour que la page html ne telecharge que les fichiers 
+	 js contenant le strict minimum necessaire a la page
 
 -verifiez si le diagramme de classe est à jour
 
 
 Ajout Optionnel:
 	-package String contenant tous les texte ecrit dans le projet(comme en Android)
-	-mis En place de pattern de qulité supérieur
 	-Vue (amélioration ergonomique)
-	-graph en ajax

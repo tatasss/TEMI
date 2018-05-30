@@ -2,16 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b89c5143-0212-42c0-b73b-81dad73db30d" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/javascript/start/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ameliorer.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../ameliorer.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dictionaries/matgaydu.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dictionaries/matgaydu.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/html/graphForm.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/graphForm.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/html/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/html/model.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/model.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/javascript/model/anotherFunctiun/excel.js" beforeDir="false" afterPath="$PROJECT_DIR$/javascript/model/anotherFunctiun/excel.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/javascript/start/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/javascript/start/script.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/javascript/view/viewGenerator/graphGenerator.js" beforeDir="false" afterPath="$PROJECT_DIR$/javascript/view/viewGenerator/graphGenerator.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/javascript/start/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/javascript/start/index.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -72,8 +63,8 @@
       <file leaf-file-name="index.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/javascript/start/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="4" column="5" selection-start-line="4" selection-start-column="5" selection-end-line="4" selection-end-column="5" />
+            <state relative-caret-position="260">
+              <caret line="26" column="27" lean-forward="true" selection-start-line="26" selection-start-column="27" selection-end-line="26" selection-end-column="27" />
             </state>
           </provider>
         </entry>
@@ -448,7 +439,7 @@
       <workItem from="1527490486776" duration="20083000" />
       <workItem from="1527576806086" duration="23590000" />
       <workItem from="1527607132512" duration="1396000" />
-      <workItem from="1527662862787" duration="12982000" />
+      <workItem from="1527662862787" duration="14062000" />
     </task>
     <task id="LOCAL-00001" summary="mis en place d'un code propre">
       <created>1526980633672</created>
@@ -552,7 +543,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="425287000" />
+    <option name="totallyTimeSpent" value="426367000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -565,17 +556,16 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1696" height="1026" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info anchor="right" id="PlantUML" order="3" weight="0.33801955" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4991453" side_tool="true" visible="true" weight="0.24938875" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4991453" side_tool="true" visible="true" weight="0.24938875" />
       <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.49938875" weight="0.3298969" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" x="0" y="447" width="1680" height="116" id="Event Log" order="12" sideWeight="0.50183374" side_tool="true" weight="0.18327606" />
       <window_info anchor="bottom" id="Version Control" order="8" sideWeight="0.51161367" side_tool="true" visible="true" weight="0.3344788" />
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info id="Structure" order="1" sideWeight="0.50085473" side_tool="true" weight="0.24327628" />
-      <window_info anchor="bottom" id="Terminal" order="9" sideWeight="0.4883863" visible="true" weight="0.3344788" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="9" sideWeight="0.4883863" visible="true" weight="0.3344788" />
       <window_info id="Favorites" order="2" sideWeight="0.50085473" side_tool="true" weight="0.24327628" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -1087,8 +1077,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/javascript/start/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="5" selection-start-line="4" selection-start-column="5" selection-end-line="4" selection-end-column="5" />
+        <state relative-caret-position="260">
+          <caret line="26" column="27" lean-forward="true" selection-start-line="26" selection-start-column="27" selection-end-line="26" selection-end-column="27" />
         </state>
       </provider>
     </entry>
