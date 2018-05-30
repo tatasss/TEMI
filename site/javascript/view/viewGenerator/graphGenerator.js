@@ -9,7 +9,7 @@
  * return nothing but touch the html with id parameter
  */
 Graph.prototype.graphique = function (modeleTab, idGraph,idText, regime,maMarge,titre) {
-    document.getElementById("graph-container").innerHTML = `<canvas id=${idGraph}><canvas><div id="idText"></div>`;
+    document.getElementById("graph-container").innerHTML = `<canvas id=${idGraph}><canvas><div id="${idText}"></div>`;
 
     let dataset = [];
     let colorDif;
@@ -106,7 +106,7 @@ Graph.prototype.graphique = function (modeleTab, idGraph,idText, regime,maMarge,
             ctx.clearRect(0, 0, targetCanvas.width, targetCanvas.height);
             myChart = new Chart(ctx, null);
             myChart.clear();
-            $(id).remove();
+            $(idGraph).remove();
             $('iframe.chartjs-hidden-iframe').remove();
             document.getElementById(idText).innerHTML = " ";
 

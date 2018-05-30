@@ -3,27 +3,13 @@
 <head>
     <title>index</title>
     <meta charset="utf-8">
-    <script>
-        localStorage.clear();
-    </script>
-    <script src="../javascript/start/reference.js"></script>
+
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" href="../css/general.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <script src="../javascript/view/viewGenerator/bootstrapView.js"></script>
-    <script src="../javascript/model/anotherFunctiun/myMath.js"></script>
-    <script src="../javascript/model/model.js"></script>
-    <script src="../javascript/model/modelManager.js"></script>
-    <script src="../javascript/manufacturing/manufact.js"></script>
-    <script src="../javascript/view/viewGenerator/ViewGenerator.js"></script>
-    <script src="../javascript/data/data.js"></script>
-    <script src="../javascript/start/script.js"></script>
-
-
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-
 </head>
 <body>
 <nav class="navbar navbar-inverse ">
@@ -77,7 +63,7 @@
                     <form role="form">
                         <div class="form-group">
                             <label>Veuillez saisir le taux d'actualisation</label>
-                            <input type="text" class="form-control" id="actualistionCompa" title="actualisation">
+                            <input type="text" class="form-control" id="actualistionCompa" title="actualisation" value="">
                         </div>
                         <div class="form-group">
                             <label>Regime fiscale:</label>
@@ -91,7 +77,7 @@
                     </form>
                 </div>
                 <div class="modal-footer">
-                    <button type="submit" class="btn btn-danger btn-default pull-left" data-dismiss="modal"><span
+                    <button type="submit" class="btn btn-danger btn-default pull-left" onclick="retourModal()" data-dismiss="modal"><span
                             class="glyphicon glyphicon-remove"/> Annuler
                     </button>
                 </div>
@@ -110,6 +96,19 @@
     <div id="result"></div>
 
 </div>
+<script src="../javascript/start/index.js"></script>
+
+<script src="../javascript/start/reference.js"></script>
+
+<script src="../javascript/view/viewGenerator/bootstrapView.js"></script>
+<script src="../javascript/model/anotherFunctiun/myMath.js"></script>
+<script src="../javascript/model/model.js"></script>
+<script src="../javascript/model/modelManager.js"></script>
+<script src="../javascript/manufacturing/manufact.js"></script>
+<script src="../javascript/view/viewGenerator/ViewGenerator.js"></script>
+<script src="../javascript/data/data.js"></script>
+<script src="../javascript/start/script.js"></script>
+
 <script src="../javascript/view/directlyChange/ViewManufacturing.js"></script>
 </body>
 </html>

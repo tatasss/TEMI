@@ -5,8 +5,6 @@
 A ameliorer :
 	-OPtimiser les fichiers(en ajouter et ou supprimer) pour que la page html ne telecharge que les fichiers js contenant le strict minimum necessaire a la page
 	-function ext ajout dans les objet approprier
-	-eviter la duplication de code (si on voit 2 fois le même code , en faire une methode generale)
-	-mis en mémoire du taux d'actualisition mis en default dans le modale(de même pour le regime)
 
 -verifiez si le diagramme de classe est à jour
 
