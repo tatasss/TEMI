@@ -59,8 +59,12 @@ Model.prototype.mesdon = function () {
         fluxTresApresImpot.courant()[fluxTresApresImpot.courant().length - 1]);
 
     let tauxRendInterneSImp = modelManager.tauxRendementInterne(fluxTresSansImp.courant());
+
+    let tauxRendInterneSImpTot = modelManager.tauxRenInterTot(fluxTresSansImp.topic());
     let tauxRendInterneSISIMF = modelManager.tauxRendementInterne(fluxTresSansISIMF.courant());
+    let tauxRendInterneSISIMFTop = modelManager.tauxRenInterTot(fluxTresSansISIMF.topic());
     let tauxRendInterneAImp = modelManager.tauxRendementInterne(fluxTresApresImpot.courant());
+    let tauxRendInterneAImpTot = modelManager.tauxRenInterTot(fluxTresApresImpot.topic());
     let tauxEffMargImpApIsImf = modelManager.tauxEffectifMarginaux(tauxRendInterneSImp, tauxRendInterneSISIMF);
     let tauxEffMargImpApImp = modelManager.tauxEffectifMarginaux(tauxRendInterneSImp, tauxRendInterneAImp);
     return {
@@ -219,6 +223,13 @@ Model.prototype.mesdon = function () {
             return tauxRendInterneSImp;
         },
         /**
+         * @description the getter of tauxRendInterneSImpToT
+         * @return {number}
+         */
+        tauxRendInterneSImpTot:function(){
+            return tauxRendInterneSImpTot;
+        },
+        /**
          * @description the getter of tauxRendInterneSISIMF
          * @return {Array}
          */
@@ -226,11 +237,25 @@ Model.prototype.mesdon = function () {
             return tauxRendInterneSISIMF;
         },
         /**
+         * @description the getter of tauxRendInterneSISIMFTot
+         * @return {number}
+         */
+        tauxRendInterneSISIMFTot: function () {
+            return tauxRendInterneSISIMFTop;
+        },
+        /**
          * @description the getter of tauxRendInterneAImp
          * @return {Array}
          */
         tauxRendInterneAImp: function () {
             return tauxRendInterneAImp;
+        },
+        /**
+         * @description the getter of tauxRendInterneAImpTot
+         * @return {number}
+         */
+        tauxRendInterneAImpTot: function () {
+            return tauxRendInterneAImpTot;
         },
         /**
          * @description the getter of tauxEffMArgImpApIsIMF

@@ -30,9 +30,9 @@ document.getElementById("fluxeffmoyC").innerHTML = genererVue.tabTauxEffectifMoy
 document.getElementById("fluxTresSaImp").innerHTML = genererVue.tabFluxTresorie(genererVue.modele.mesdon().fluxTresSansImp(), "red");
 document.getElementById("fluxTresSaISIMF").innerHTML = genererVue.tabFluxTresorie(genererVue.modele.mesdon().fluxTresSansISIMF(), "blue");
 document.getElementById("fluxTresAvImpot").innerHTML = genererVue.tabFluxTresorie(genererVue.modele.mesdon().fluxTresApresImpot(), "blue");
-document.getElementById("tauxRendInterneSi").innerHTML = genererVue.tauxRendementInt(genererVue.modele.mesdon().tauxRendInterneSImp());
-document.getElementById("tauxRendInterneSISIMF").innerHTML = genererVue.tauxRendementInt(genererVue.modele.mesdon().tauxRendInterneSISIMF());
-document.getElementById("tauxRendInterneAi").innerHTML = genererVue.tauxRendementInt(genererVue.modele.mesdon().tauxRendInterneAImp());
+document.getElementById("tauxRendInterneSi").innerHTML = genererVue.tauxRendementInt(genererVue.modele.mesdon().tauxRendInterneSImp(),genererVue.modele.mesdon().tauxRendInterneSImpTot());
+document.getElementById("tauxRendInterneSISIMF").innerHTML = genererVue.tauxRendementInt(genererVue.modele.mesdon().tauxRendInterneSISIMF(),genererVue.modele.mesdon().tauxRendInterneSISIMFTot());
+document.getElementById("tauxRendInterneAi").innerHTML = genererVue.tauxRendementInt(genererVue.modele.mesdon().tauxRendInterneAImp(),genererVue.modele.mesdon().tauxRendInterneAImpTot());
 document.getElementById("tauxEffMargImpApIsImf").innerHTML = genererVue.tauxRendementInt(genererVue.modele.mesdon().tauxEffMargImpApIsImf());
 document.getElementById("tauxEffMargImpApImp").innerHTML = genererVue.tauxRendementInt(genererVue.modele.mesdon().tauxEffMargImpApImp());
 

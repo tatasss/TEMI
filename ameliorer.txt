@@ -4,6 +4,7 @@
 A ameliorer :
 	-Optimiser les fichiers(en ajouter et ou supprimer) pour que la page html ne telecharge que les fichiers 
 	 js contenant le strict minimum necessaire a la page
+	-mettre la class Ref dans un nouveaux fichié
 
 -verifiez si le diagramme de classe est à jour
 

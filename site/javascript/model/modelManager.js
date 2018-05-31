@@ -1082,5 +1082,31 @@ ModelManager.prototype.tauxEffectifMarginaux = function (tabSi, tabAi) {
     });
     return tot;
 };
+/**
+ *@description This function give a return rates total
+ * @param {Array} tab - the array want to compute this
+ * @return {number}
+ */
+ModelManager.prototype.tauxRenInterTot=function(tab){
+    let topic=[];
+    let tau;
+    tab.forEach(function(item,index){
+        if( index < tab.length - 1){
+            topic.push(item);
+        }
+    });
+   // console.log(myMath.tri(topic));
+    try {
+        tau = myMath.tri(topic);
+    } catch (e) {
+        console.log("lol");
+        tau = 0;
+    }
 
+
+    if (tau < 0) {
+        tau = 0;
+    }
+    return tau;
+};
 

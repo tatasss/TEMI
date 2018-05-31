@@ -891,11 +891,11 @@ ViewGenerator.prototype.tabFluxTresorie = function (tab, color) {
  * @param {Array} tab -the Array of the return rate
  * @return {string}
  */
-ViewGenerator.prototype.tauxRendementInt = function (tab) {
-    return bootstrap.pan("default", null, bootstrap.tableSE(["courants"], null, {
+ViewGenerator.prototype.tauxRendementInt = function (tab,number) {
+    return bootstrap.pan("default", null, `${bootstrap.tableSE(["courants"], null, {
         tab: myMath.arrondirTabUnit(tab, 2),
         color: ""
-    }));
+    })}<p> Le taux de rendement interne sur les 5 années est de ${number}%</p>`);
 };
 /**
  *@description This function create the HTML to give the investment Government Describe
