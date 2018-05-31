@@ -288,7 +288,7 @@
       <path value="$PROJECT_DIR$/node_modules/xlsx/package.json" />
     </packageJsonPaths>
   </component>
-  <component name="ProjectFrameBounds" extendedState="1">
+  <component name="ProjectFrameBounds">
     <option name="x" value="-7" />
     <option name="width" value="854" />
     <option name="height" value="1017" />
@@ -448,7 +448,7 @@
       <workItem from="1527576806086" duration="23590000" />
       <workItem from="1527607132512" duration="1396000" />
       <workItem from="1527662862787" duration="14181000" />
-      <workItem from="1527748039732" duration="8086000" />
+      <workItem from="1527748039732" duration="8109000" />
     </task>
     <task id="LOCAL-00001" summary="mis en place d'un code propre">
       <created>1526980633672</created>
@@ -552,7 +552,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="434572000" />
+    <option name="totallyTimeSpent" value="434595000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -564,18 +564,17 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="0" width="854" height="1017" extended-state="1" />
-    <editor active="true" />
+    <frame x="-7" y="0" width="854" height="1017" extended-state="0" />
     <layout>
       <window_info anchor="right" id="PlantUML" order="3" weight="0.33801955" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4991453" side_tool="true" visible="true" weight="0.52015114" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4991453" side_tool="true" visible="true" weight="0.52015114" />
       <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.49938875" weight="0.3298969" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" x="0" y="447" width="1680" height="116" id="Event Log" order="12" sideWeight="0.50183374" side_tool="true" weight="0.18327606" />
       <window_info anchor="bottom" id="Version Control" order="8" sideWeight="0.51259446" side_tool="true" visible="true" weight="0.33796296" />
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info id="Structure" order="1" sideWeight="0.50085473" side_tool="true" weight="0.24327628" />
-      <window_info anchor="bottom" id="Terminal" order="9" sideWeight="0.48740554" visible="true" weight="0.33796296" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="9" sideWeight="0.48740554" visible="true" weight="0.33796296" />
       <window_info id="Favorites" order="2" sideWeight="0.50085473" side_tool="true" weight="0.24327628" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
