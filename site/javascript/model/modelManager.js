@@ -1099,7 +1099,7 @@ ModelManager.prototype.tauxRenInterTot=function(tab){
     try {
         tau = myMath.tri(topic);
     } catch (e) {
-        console.log("lol");
+        //console.log("lol");
         tau = 0;
     }
 

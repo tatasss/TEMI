@@ -3,7 +3,6 @@
  * @return {string}
  */
 ViewGenerator.prototype.resultatHtml = function () {
-    //mis en place du tableaux des resultat
     let impotStatDuree = [];
     if (this.modele.donnee.government() === "gen") {
         for (let i = 0; i < 5; i++) {
@@ -13,10 +12,8 @@ ViewGenerator.prototype.resultatHtml = function () {
     else {
 
     }
-    //console.log( this.modele.donnee.land())
     let head = "<thead><tr><th/><th colspan=3 align=center>Taux statuaire</th><th colspan=2>Taux effectifs marginaux</th></tr>";
     head += "<tr><th/><th>Taux plein</th><th>Taux reduit</th><th>Durée</th><th>First Year</th><th>Five Year</th></tr></thead>";
-    //console.log( this.modele.donnee.land().investment().isamort());
     let cfe = this.recupDonneTab(false, this.modele.donnee.land().investment().cfe(), this.modele.donnee.land().impots().cfe(),
         false, false, false);
     let is = this.recupDonneTab(false, this.modele.donnee.land().investment().isamort(),
@@ -88,8 +85,6 @@ ViewGenerator.prototype.recupDonneTab = function (effMoy, impDonne, donneImp, is
     if (isTot) {
         result.push(null);
         result.push(null);
-        /*result.push( effMoy[0]);
-        result .push(effMoy[effMoy.length - 1]);*/
         result.push(this.modele.mesdon().tauxEffMargImpApImp()[0]);
         result.push(this.modele.mesdon().tauxEffMargImpApImp()[this.modele.mesdon().tauxEffMargImpApImp().length - 1]);
         return result;
@@ -102,7 +97,6 @@ ViewGenerator.prototype.recupDonneTab = function (effMoy, impDonne, donneImp, is
             else {
                 if (impDonne.reducexo() != null) {
                     result.push(((1 - (impDonne.reducexo() / 100)) * (donneImp / 100)) * 100);
-                    // console.log(donneImp);
                 }
                 else {
                     result.push(null);
@@ -117,17 +111,11 @@ ViewGenerator.prototype.recupDonneTab = function (effMoy, impDonne, donneImp, is
             }
         }
         if (isIs) {
-            //console.log(this.modele.mesdon().tauxEffMargImpApIsImf)
-            /*result.push(effMoy[0]);
-
-            result.push(effMoy[effMoy.length - 1]);*/
             result.push(this.modele.mesdon().tauxEffMargImpApIsImf()[0]);
             result.push(this.modele.mesdon().tauxEffMargImpApIsImf()[this.modele.mesdon().tauxEffMargImpApIsImf().length - 1]);
         }
         else {
             if (!isImf) {
-                /*result.push(effMoy[0]);
-                result.push( effMoy[effMoy.length - 1]);*/
                 result.push(null);
                 result.push(null);
             }
@@ -140,7 +128,6 @@ ViewGenerator.prototype.recupDonneTab = function (effMoy, impDonne, donneImp, is
  * @return {string}
  */
 ViewGenerator.prototype.pinbHTML = function () {
-    //console.log(this.mP);
     return `<p>Le PIB par tête dans le pays ${this.mP.name()} est de : ${Math.round(this.mP.pib)} FCFA</p>`;
 };
 /**
@@ -392,9 +379,6 @@ ViewGenerator.prototype.amortiExcepHTML = function () {
  * @return {string}
  */
 ViewGenerator.prototype.donneesFiscal = function () {
-    //mis en place des données fiscales
-
-    //fin
     let pannelBody = bootstrap.pan("default", null, this.ImpotHtml(this.modele.mesdon()));
     pannelBody += this.amortissementHtml();
     pannelBody += this.amortiExcepHTML();
@@ -889,6 +873,7 @@ ViewGenerator.prototype.tabFluxTresorie = function (tab, color) {
 /**
  * @description This function create a HTML to give a return rate Array
  * @param {Array} tab -the Array of the return rate
+ * @param {number} number - the TRI total on the period studied
  * @return {string}
  */
 ViewGenerator.prototype.tauxRendementInt = function (tab,number) {

@@ -1,36 +1,4 @@
-/*
-* @description The Function Create the Array with a Pascal Triangle Line on the number enter
- * @param {number} nombrePuiss - the number of the pow want be used
- * @return {Array} pascal
 
-MyMath.prototype.pascalTriangle=function(nombrePuiss){
-    let retour=[];
-    let lol=function (nombrePuiss) {
-        let tab=[];
-        if(nombrePuiss===1){
-            tab.push(1);
-            return tab;
-        }
-        if(nombrePuiss===2){
-            tab.push(1);
-            tab.push(1);
-            return tab;
-        }
-        let tabPrece=lol(nombrePuiss-1);
-        tab.push(1);
-        for(let i=1;i<tabPrece.length;i++){
-            //console.log(tabPrece[i]+tabPrece[i-1]);
-            tab.push(tabPrece[i]+tabPrece[i-1]);
-        }
-        tab.push(1);
-        return tab;
-    };
-    retour=lol(nombrePuiss+1);
-
-    return retour;
-
-
-};*/
 /**
  * @description This function compute the return rate
  * @param {array} tab - the tab want to be use to find the return rate
@@ -118,23 +86,7 @@ MyMath.prototype.sommeTab = function (tab) {
     });
     return tot;
 };
-/*
- * @Description This function divide the value of 2 array
- * @param {array} tabDiv -the array used to make a divide
- * @param {array} tabDive -the array used to make a divide
- * @return {number} div
-MyMath.prototype.divisionTabPurcent=function(tabDiv,tabDive){
-    let tot=[];
-    if(tabDiv.length!==tabDive.length){
-        alert("lol, les tables ne sont  pas de même tailles\n"+tabDiv.length+"\n"+tabDive.length+"\ntaille tab");
-        return null;
-    }
-    for(let i=0;i<=tabDiv.length;i++){
-        //console.log(Math.round((tabDiv[i]/tabDive[i])*1000));
-        tot.push(Math.round((tabDiv[i]/tabDive[i])*1000)/10);
-    }
-    return tot;
-};*/
+
 /**
  * @description The function Round all the value Of a Tab on Unit choose
  * @param {array} tab - the tab want to be used to round it

@@ -9,7 +9,7 @@
  * return nothing but touch the html with id parameter
  */
 Graph.prototype.graphique = function (modeleTab, idGraph,idText, regime,maMarge,titre) {
-    document.getElementById("graph-container").innerHTML = `<canvas id=${idGraph}><canvas><div id="${idText}"></div>`;
+    document.getElementById("graph-container").innerHTML = `<canvas id="${idGraph}"> </canvas><div id="${idText}"></div>`;
 
     let dataset = [];
     let colorDif;
@@ -24,8 +24,6 @@ Graph.prototype.graphique = function (modeleTab, idGraph,idText, regime,maMarge,
             colorDif.forEach(function (item) {
                 color.push(getColorString(item));
             });
-
-
             let pays = [];
             let donneDataset = [];
             modeleTab.forEach(function (item, index) {
@@ -34,7 +32,6 @@ Graph.prototype.graphique = function (modeleTab, idGraph,idText, regime,maMarge,
                 pays[index].forEach(function (item2) {
                     donneDataset[index].push(item2.modele.mesdon().tauxeffMoyCourent());
                 })
-
             });
             let entreprise = [];
             donneDataset[0].forEach(function (lol, index) {
@@ -63,8 +60,9 @@ Graph.prototype.graphique = function (modeleTab, idGraph,idText, regime,maMarge,
             });
             //----------------------------------------------------------------------------------------------------------
             //ici la parti sur le tableau des temi
-            console.log(maMarge);
-            document.getElementById(idText).innerHTML = bootstrap.bootstrapTemiTabSpe(entre, paysChoisi, entreprise,maMarge,titre);
+            //console.log(maMarge);
+           // console.log(document.getElementById(idText));
+            document.getElementById(idText).innerHTML = this.tableau(entreprise,maMarge,titre);
             //----------------------------------------------------------------------------------------------------------
             //console.log(color);
             new Chart(ctx, {
@@ -72,7 +70,6 @@ Graph.prototype.graphique = function (modeleTab, idGraph,idText, regime,maMarge,
                 data: {
                     labels: payTab,
                     datasets: dataset,
-
                 },
                 options: {
                     scales: {
@@ -100,7 +97,6 @@ Graph.prototype.graphique = function (modeleTab, idGraph,idText, regime,maMarge,
                     }
                 }
             });
-
         }
         else {
             ctx.clearRect(0, 0, targetCanvas.width, targetCanvas.height);
@@ -109,7 +105,6 @@ Graph.prototype.graphique = function (modeleTab, idGraph,idText, regime,maMarge,
             $(idGraph).remove();
             $('iframe.chartjs-hidden-iframe').remove();
             document.getElementById(idText).innerHTML = " ";
-
         }
     }
     else {
@@ -120,9 +115,21 @@ Graph.prototype.graphique = function (modeleTab, idGraph,idText, regime,maMarge,
         $('iframe.chartjs-hidden-iframe').remove();
         document.getElementById(idText).innerHTML = " "
     }
-
 };
-
+/**
+ * @description This function create a HTML table of TEMI
+ * @param {Array} entreprise - the tab of entreprise TEMI
+ * @param {Array} maMarge - the tab of marge
+ * @param {string} titre - the name of Excel File
+ * @return {string}
+ */
+Graph.prototype.tableau=function (entreprise,maMarge,titre) {
+    let entrer=[];
+    entreprise.forEach(function(item,index){
+        entrer.push("entreprise " + (index + 1));
+    });
+    return bootstrap.bootstrapTemiTabSpe(entrer, paysChoisi, entreprise,maMarge,titre);
+};
 /**
  * @description This function create a random color array
  * @param {number} number - the number of color u want

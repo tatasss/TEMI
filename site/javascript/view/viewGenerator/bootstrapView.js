@@ -247,7 +247,7 @@ BootstrapView.prototype.bootstrapTemiTabSpe = function (cote, head, tab, maMarge
     let myTab = [];
     let tabExcel=[];
     let cpt = 0;
-    console.log(maMarge);
+    //console.log(maMarge);
     for (let i = 0; i < head.length / 6; i++) {
         myTab.push("<br/><table class='table' id='maTable"+cpt+"'><thead><tr><th/>")
     }
@@ -295,7 +295,7 @@ BootstrapView.prototype.bootstrapTemiTabSpe = function (cote, head, tab, maMarge
     myTab.forEach(function (item) {
         html += item;
     });
-    console.log(tabExcel.toString());
+    //console.log(tabExcel.toString());
     tabExcel.push("ligne");
     tabExcel.push("entreprise");
     tabExcel.push("marge %");
