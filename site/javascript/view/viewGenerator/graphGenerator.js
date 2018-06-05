@@ -96,14 +96,23 @@ Graph.prototype.graphique = function (modeleTab, idGraph,idText, regime,maMarge,
                     responsive:true,
                 }
             });
-            document.getElementById('js-legend').innerHTML = myChart.generateLegend();
+            let legendsHTML="<ul class='1-legend'>";
+            let getLEgend=myChart.legend.legendItems;
+            getLEgend.forEach(function (item, index) {
+                legendsHTML+=`<li><span style="background-color: ${item.fillStyle}"> </span> entreprise ${index +1} </li> `
+            });
+            legendsHTML+="</ul>";
+            console.log(myChart.legend);
+            document.getElementById('js-legend').innerHTML = legendsHTML;
+            //document.getElementById('js-legend').innerHTML = myChart.generateLegend();
             $("#js-legend > ul > li").on("click",function(e){
                 let index = $(this).index();
                 $(this).toggleClass("strike");
-                let ci = e.view.myChart;
-                console.log(index);
-                console.log();
-                let curr = ci.data.datasets[0]._meta[0].data[index];
+                let ci = myChart;
+               // console.log(myChart);
+               // console.log(index);
+               // console.log(ci.data.datasets[0]._meta);
+                let curr = ci.data.datasets[index];
                 curr.hidden = !curr.hidden;
                 ci.update();
             });

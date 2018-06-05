@@ -90,21 +90,32 @@ thead {
 
 .padding {
     padding: 15px;
+    list-style: none;
 }
 .chart-legend li span{
     display: inline-block;
     width: 12px;
     height: 12px;
-    margin-right: 5px;
+    margin-right: 2px;
 }
 
 .chart-legend{
     height:250px;
     overflow:auto;
+    padding-right: 10px;
 }
 
 .chart-legend li{
     cursor:pointer;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+}
+.chart-legend ul{
+    margin: 0;
+    padding: 0;
+
 }
 
 .strike{
@@ -114,3 +125,7 @@ thead {
 .float-left{
     float:left;
 }
+.chart-legend {
+
+}
+
