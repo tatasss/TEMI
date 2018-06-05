@@ -9,7 +9,7 @@
  * return nothing but touch the html with id parameter
  */
 Graph.prototype.graphique = function (modeleTab, idGraph,idText, regime,maMarge,titre) {
-    document.getElementById("graph-container").innerHTML = `<canvas id="${idGraph}"> </canvas><div id="${idText}"></div>`;
+    document.getElementById("graph-container").innerHTML = `<div class="row"><div class="col-sm-10"><canvas id="${idGraph}"> </canvas></div><div class="col-sm-2"> <div id="js-legend" class="chart-legend"></div> </div> </div><div id="${idText}"></div>`;
     let dataset = [];
     let colorDif;
     let color;
@@ -57,8 +57,7 @@ Graph.prototype.graphique = function (modeleTab, idGraph,idText, regime,maMarge,
             modeleTab.forEach(function (item) {
                 payTab.push(item[0].donne.land().name());
             });
-            document.getElementById(idText).innerHTML = this.tableau(entreprise,maMarge,titre);
-            new Chart(ctx, {
+            let myChart=new Chart(ctx, {
                 type: 'bar',
                 data: {
                     labels: payTab,
@@ -84,7 +83,7 @@ Graph.prototype.graphique = function (modeleTab, idGraph,idText, regime,maMarge,
                         }]
                     },
                     legend:{
-                        display:true,
+                        display:false,
                         position:"right",
                         fullWidth:false,
 
@@ -97,6 +96,18 @@ Graph.prototype.graphique = function (modeleTab, idGraph,idText, regime,maMarge,
                     responsive:true,
                 }
             });
+            document.getElementById('js-legend').innerHTML = myChart.generateLegend();
+            $("#js-legend > ul > li").on("click",function(e){
+                let index = $(this).index();
+                $(this).toggleClass("strike");
+                let ci = e.view.myChart;
+                console.log(index);
+                console.log();
+                let curr = ci.data.datasets[0]._meta[0].data[index];
+                curr.hidden = !curr.hidden;
+                ci.update();
+            });
+            document.getElementById(idText).innerHTML = this.tableau(entreprise,maMarge,titre);
         }
         else {
             ctx.clearRect(0, 0, targetCanvas.width, targetCanvas.height);
