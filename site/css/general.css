@@ -67,6 +67,7 @@ thead {
 .yellow {
     background-color: #b9ca4a;
 }
+
 #content-header {
     background: #2a8dd4;
     color: #fff;
@@ -92,40 +93,40 @@ thead {
     padding: 15px;
     list-style: none;
 }
-.chart-legend li span{
+
+.chart-legend li span {
     display: inline-block;
     width: 12px;
     height: 12px;
     margin-right: 2px;
 }
 
-.chart-legend{
-    height:250px;
-    overflow:auto;
+.chart-legend {
+    height: 250px;
+    overflow: auto;
     padding-right: 10px;
 }
 
-.chart-legend li{
-    cursor:pointer;
+.chart-legend li {
+    cursor: pointer;
     list-style: none;
     margin: 0;
     padding: 0;
 
 }
-.chart-legend ul{
+
+.chart-legend ul {
     margin: 0;
     padding: 0;
 
 }
 
-.strike{
+.strike {
     text-decoration: line-through !important;
 }
 
-.float-left{
-    float:left;
+.float-left {
+    float: left;
 }
-.chart-legend {
 
-}
 

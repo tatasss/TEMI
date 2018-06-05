@@ -8,7 +8,7 @@
  * @description This function create a graphique with a module Chart.js
  * return nothing but touch the html with id parameter
  */
-Graph.prototype.graphique = function (modeleTab, idGraph,idText, regime,maMarge,titre) {
+Graph.prototype.graphique = function (modeleTab, idGraph, idText, regime, maMarge, titre) {
     document.getElementById("graph-container").innerHTML = `<div class="row"><div class="col-sm-10"><canvas id="${idGraph}"> </canvas></div><div class="col-sm-2"> <div id="js-legend" class="chart-legend"></div> </div> </div><div id="${idText}"></div>`;
     let dataset = [];
     let colorDif;
@@ -17,7 +17,15 @@ Graph.prototype.graphique = function (modeleTab, idGraph,idText, regime,maMarge,
     let ctx = targetCanvas.getContext('2d');
     let myChart;
     if (modeleTab.length !== 0) {
-        if (modeleTab[0].length !== 0) {
+        if (modeleTab[0].length === 0) {
+            ctx.clearRect(0, 0, targetCanvas.width, targetCanvas.height);
+            myChart = new Chart(ctx, null);
+            myChart.clear();
+            $(idGraph).remove();
+            $('iframe.chartjs-hidden-iframe').remove();
+            document.getElementById(idText).innerHTML = " ";
+        }
+        else {
             colorDif = createColorSet(modeleTab[0].length);
             color = [];
             colorDif.forEach(function (item) {
@@ -57,7 +65,7 @@ Graph.prototype.graphique = function (modeleTab, idGraph,idText, regime,maMarge,
             modeleTab.forEach(function (item) {
                 payTab.push(item[0].donne.land().name());
             });
-            let myChart=new Chart(ctx, {
+            let myChart = new Chart(ctx, {
                 type: 'bar',
                 data: {
                     labels: payTab,
@@ -82,10 +90,10 @@ Graph.prototype.graphique = function (modeleTab, idGraph,idText, regime,maMarge,
                             }
                         }]
                     },
-                    legend:{
-                        display:false,
-                        position:"right",
-                        fullWidth:false,
+                    legend: {
+                        display: false,
+                        position: "right",
+                        fullWidth: false,
 
                     },
                     //maintainAspectRatio: false,
@@ -93,38 +101,31 @@ Graph.prototype.graphique = function (modeleTab, idGraph,idText, regime,maMarge,
                         display: true,
                         text: 'TEMI Global avec le government fiscal :' + regime
                     },
-                    responsive:true,
+                    responsive: true,
                 }
             });
-            let legendsHTML="<ul class='1-legend'>";
-            let getLEgend=myChart.legend.legendItems;
+            let legendsHTML = "<ul class='1-legend'>";
+            let getLEgend = myChart.legend.legendItems;
             getLEgend.forEach(function (item, index) {
-                legendsHTML+=`<li><span style="background-color: ${item.fillStyle}"> </span> entreprise ${index +1} </li> `
+                legendsHTML += `<li><span style="background-color: ${item.fillStyle}"> </span> entreprise ${index + 1} </li> `
             });
-            legendsHTML+="</ul>";
+            legendsHTML += "</ul>";
             console.log(myChart.legend);
             document.getElementById('js-legend').innerHTML = legendsHTML;
             //document.getElementById('js-legend').innerHTML = myChart.generateLegend();
-            $("#js-legend > ul > li").on("click",function(e){
+            // language=JQuery-CSS format=false
+            $("#js-legend > ul > li").on(`click`, function () {
                 let index = $(this).index();
                 $(this).toggleClass("strike");
                 let ci = myChart;
-               // console.log(myChart);
-               // console.log(index);
-               // console.log(ci.data.datasets[0]._meta);
+                // console.log(myChart);
+                // console.log(index);
+                // console.log(ci.data.datasets[0]._meta);
                 let curr = ci.data.datasets[index];
                 curr.hidden = !curr.hidden;
                 ci.update();
             });
-            document.getElementById(idText).innerHTML = this.tableau(entreprise,maMarge,titre);
-        }
-        else {
-            ctx.clearRect(0, 0, targetCanvas.width, targetCanvas.height);
-            myChart = new Chart(ctx, null);
-            myChart.clear();
-            $(idGraph).remove();
-            $('iframe.chartjs-hidden-iframe').remove();
-            document.getElementById(idText).innerHTML = " ";
+            document.getElementById(idText).innerHTML = this.tableau(entreprise, maMarge, titre);
         }
     }
     else {
@@ -143,13 +144,14 @@ Graph.prototype.graphique = function (modeleTab, idGraph,idText, regime,maMarge,
  * @param {string} titre - the name of Excel File
  * @return {string}
  */
-Graph.prototype.tableau=function (entreprise,maMarge,titre) {
-    let entrer=[];
-    entreprise.forEach(function(item,index){
+Graph.prototype.tableau = function (entreprise, maMarge, titre) {
+    let entrer = [];
+    entreprise.forEach(function (item, index) {
         entrer.push("entreprise " + (index + 1));
     });
-    return bootstrap.bootstrapTemiTabSpe(entrer, paysChoisi, entreprise,maMarge,titre);
+    return bootstrap.bootstrapTemiTabSpe(entrer, paysChoisi, entreprise, maMarge, titre);
 };
+
 /**
  * @description This function create a random color array
  * @param {number} number - the number of color u want
@@ -173,6 +175,7 @@ function createColorSet(number) {
     }
     return colors;
 }
+
 /**
  * @description This function create a chart.js color with an array of color
  * @param {Object} tab - the color (r,g b)
