@@ -5,16 +5,13 @@
  * @return {number} tri
  */
 MyMath.prototype.tri = function (tab) {
-
     let numberOfTries = 1;
-    // Cash flow values must contain at least one positive value and one negative value
     let positive, negative;
     Array.prototype.slice.call(tab).forEach(function (value) {
         if (value > 0) positive = true;
         if (value < 0) negative = true;
     });
     if (!positive || !negative) throw new Error('TRI a besoin de valeur positif et negatif');
-
     /**
      * @description This function compute the NPV(Net Present Value)
      * @param {number} rate - the rate of the topic
@@ -32,7 +29,6 @@ MyMath.prototype.tri = function (tab) {
         }
         return npv;
     }
-
     return Math.round(triReel(npv) * 100) / 100;
 };
 /**
@@ -41,10 +37,7 @@ MyMath.prototype.tri = function (tab) {
  * @return {number} tri
  */
 triReel = function (fn) {
-    //console.log("on entre dans seekzero");
     let x = 1;
-
-    //console.log(fn(x));
     while (fn(x) > 0) {
         x += 1;
     }
@@ -60,7 +53,6 @@ triReel = function (fn) {
  * @return {number} NPV
  */
 MyMath.prototype.van = function (actu, tab) {
-
     let lol = tab[0];
     let somme = 0;
     tab.forEach(function (item, index) {
@@ -68,10 +60,7 @@ MyMath.prototype.van = function (actu, tab) {
             somme += (item / Math.pow((1 + actu), index));
         }
     });
-    //lol= lol/(1+topic);
-
     lol = lol + somme;
-    //console.log("on sort du calcul VAN");
     return Math.round(lol);
 };
 /**
@@ -86,7 +75,6 @@ MyMath.prototype.sommeTab = function (tab) {
     });
     return tot;
 };
-
 /**
  * @description The function Round all the value Of a Tab on Unit choose
  * @param {array} tab - the tab want to be used to round it
@@ -107,7 +95,6 @@ MyMath.prototype.arrondirTabUnit = function (tab, numberDec) {
     tab.forEach(function (item) {
         tabArr.push(Math.round(item * Math.pow(10, numberDec)) / (Math.pow(10, numberDec)));
     });
-    // console.log(tabArr);
     return tabArr;
 };
 

@@ -2,7 +2,6 @@
  * @description the test
  */
 function testModele1() {
-
     let i;
     let monTest = maker.armortirModele(26801197, 10, 2.5, "equipement");
     let html = `<p>${monTest.name()}</p>`;
@@ -28,7 +27,6 @@ function testModele1() {
     console.log(document.getElementById("test1"));
     document.getElementById("test1").innerHTML = html;
 }
-
 /**
  * @description the test
  */
@@ -38,7 +36,6 @@ function testModele2() {
     let html = "<p>";
     let mE = donnee.firm();
     let mP = donnee.land();
-
     let pibchoix = donnee.land().pib;
     amortissement.push(maker.armortirModele(Math.trunc(mE.construction() * pibchoix), mP.amortization().construction(), mP.amortization().coefdegressif(), "construction"));
     amortissement.push(maker.armortirModele(mE.equipement() * pibchoix, mP.amortization().equipement(), mP.amortization().coefdegressif(), "equipement"));
@@ -51,21 +48,17 @@ function testModele2() {
     html += "</p>";
     document.getElementById("test2").innerHTML = html;
 }
-
 /**
  * @description the test
  */
 function testModele3() {
     let monm = new Model(new Data("BEN", "gen", 7.5, 22.5));
-
     let html = "<h1>investissment</h1><p>investissement : " + monm.mesdon().investissement() + "</p><h1>Ammortissment :</h1>";
     for (let i = 0; i < monm.mesdon().amortissement().length; i++) {
         html += monm.mesdon().amortissement()[i].getHtml() + "<br/>";
         document.getElementById("test3").innerHTML = html;
     }
-
 }
-
 /**
  * @description the test
  */
@@ -99,10 +92,8 @@ function testModele4() {
         html += `<td>${monm.mesdon().employer().reel_CFE()[i]}</td>`;
     }
     html += "</tr></tbody></table>";
-
     document.getElementById("test4").innerHTML = html;
 }
-
 /**
  * @description the test
  */

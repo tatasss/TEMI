@@ -116,7 +116,6 @@ BootstrapView.prototype.tableSE = function (colOne_head_lig) {
                     }
                 }
                 if (args[i].tab[j] != null) {
-                    //console.log("ici "+(args[i].color=="blue").toString());
                     html += `<td class=\"${args[i].color}\">${args[i].tab[j]}</td>`;
                 }
                 else {
@@ -137,7 +136,6 @@ BootstrapView.prototype.tableSE = function (colOne_head_lig) {
  * @return {string} html
  */
 BootstrapView.prototype.pan = function (type, head, body) {
-
     let result = "<div class='panel panel-" + type + " '>";
     if (head !== null) {
         result += "<div class='panel-heading'>";
@@ -212,8 +210,6 @@ BootstrapView.prototype.listeItem = function (tab) {
 BootstrapView.prototype.collapse = function (objCollapse) {
     let args = arguments;
     let int;
-
-    //console.log(args[0]);
     let html = "<div class='panel-group' id='accordion'>";
     for (let i = 1; i < args.length; i++) {
         if (args[0] !== null && args[0] !== undefined) {
@@ -224,7 +220,6 @@ BootstrapView.prototype.collapse = function (objCollapse) {
                 int = " ";
             }
         }
-        //console.log(int)
         html += `<div class="panel panel-default"><div class="panel-heading"><h4 class="panel-title">`;
         html += `<a data-toggle="collapse" data-parent="#accordion" href="#collapse${i + 1}">`;
         html += `${args[i].tittle}</a></h4></div><div id="collapse${i + 1}" class="panel-collapse collapse ${int}">`;
@@ -247,7 +242,6 @@ BootstrapView.prototype.bootstrapTemiTabSpe = function (cote, head, tab, maMarge
     let myTab = [];
     let tabExcel=[];
     let cpt = 0;
-    //console.log(maMarge);
     for (let i = 0; i < head.length / 6; i++) {
         myTab.push("<br/><table class='table' id='maTable"+cpt+"'><thead><tr><th/>")
     }
@@ -260,12 +254,7 @@ BootstrapView.prototype.bootstrapTemiTabSpe = function (cote, head, tab, maMarge
         myTab[cpt] += item;
         myTab[cpt] += "</th>";
         tabExcel.push(item);
-
     });
-    /*for(let i=0; i<head.length/6;i++){
-        myTab[i]+="</th></thread><tbody>";
-    }*/
-
     tab.forEach(function (item, index) {
         cpt = 0;
         myTab[cpt] += "<tr><td>";
@@ -283,8 +272,6 @@ BootstrapView.prototype.bootstrapTemiTabSpe = function (cote, head, tab, maMarge
             myTab[cpt] += Math.round(items * 100) / 100;
             myTab[cpt] += " % </td>";
             tabExcel.push(Math.round(items * 100) / 100);
-
-
         });
         myTab[cpt] += "</tr>\n";
     });
@@ -295,13 +282,9 @@ BootstrapView.prototype.bootstrapTemiTabSpe = function (cote, head, tab, maMarge
     myTab.forEach(function (item) {
         html += item;
     });
-    //console.log(tabExcel.toString());
     tabExcel.push("ligne");
     tabExcel.push("entreprise");
     tabExcel.push("marge %");
-
-
-
     maMarge.forEach(function(item,index){
         tabExcel.push("entreprise "+(index+1));
         tabExcel.push(item);
@@ -322,11 +305,7 @@ BootstrapView.prototype.bootstrapTemiTabSpe = function (cote, head, tab, maMarge
     tabExcel.push("ligne");
     tabExcel.push("régime Fiscal");
     tabExcel.push(reg);
-
-
     html+=
         `<a class="btn btn-default " download="&{titre}.xls" href="#" id="anchorNewApi-xls" onClick="newApi('xls','${tabExcel.toString()}','${titre}')">Récupérer Excel</a>`;
     return html;
-
-
 };

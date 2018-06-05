@@ -1,8 +1,6 @@
 const genererVue = new ViewGenerator(monModele);
 let investPart = "<p>investissement : " + genererVue.modele.mesdon().investissement() + "</p>";
-
 document.getElementById("invest").innerHTML = investPart;
-
 let amm = genererVue.getAmmortGenneralHtml();
 amm += "<br/>";
 genererVue.modele.mesdon().amortissement().forEach(function (item) {
@@ -23,9 +21,6 @@ document.getElementById("irvm").innerHTML = genererVue.impotRevenuValeurMobilier
 document.getElementById("topic").innerHTML = genererVue.actualisationHtml();
 document.getElementById("impTaxeC").innerHTML = genererVue.tabImpotEtTaxe(genererVue.modele.mesdon().impotTaxeCourent());
 document.getElementById("impTaxeA").innerHTML = genererVue.tabImpotEtTaxe(genererVue.modele.mesdon().impotTaxeActu());
-
-
-
 document.getElementById("fluxeffmoyC").innerHTML = genererVue.tabTauxEffectifMoy(genererVue.modele.mesdon().tauxeffMoyCourent());
 document.getElementById("fluxTresSaImp").innerHTML = genererVue.tabFluxTresorie(genererVue.modele.mesdon().fluxTresSansImp(), "red");
 document.getElementById("fluxTresSaISIMF").innerHTML = genererVue.tabFluxTresorie(genererVue.modele.mesdon().fluxTresSansISIMF(), "blue");

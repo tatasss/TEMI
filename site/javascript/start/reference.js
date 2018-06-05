@@ -30,7 +30,6 @@ let Manufactor = function () {
 let ViewGenerator = function (modele) {
     this.modele = modele
 };
-
 /**
  * @description This function is a constructor of Model class
  * @param {Data} donnee - the donne used to construct the model
@@ -51,9 +50,6 @@ let Ref = function () {
  */
 let Graph = function () {
 };
-
-
-//----------------------------------------------------------------------------------------------------------------------
 /**
  * @type {MyMath}
  */
@@ -78,9 +74,6 @@ let ref = new Ref();
  * @type {Graph}
  */
 let graph = new Graph();
-
-
-//----------------------------------------------------------------------------------------------------------------------
 /**
  * @description this function find the name of the land with a code
  * @param {string} code - the code of the land
@@ -91,11 +84,8 @@ Ref.prototype.donnerNomPays = function (code) {
 
     for (let i = 0; i < randPays.length; i++) {
         if (randPays[i].code() === code) {
-
             return randPays[i].name();
-
         }
-
     }
 };
 /**
@@ -105,13 +95,9 @@ Ref.prototype.donnerNomPays = function (code) {
  */
 Ref.prototype.donnerCodePays = function (nom) {
     let randPays = mesPays();
-
     for (let i = 0; i < randPays.length; i++) {
         if (randPays[i].name() === nom) {
-
             return randPays[i].code();
-
         }
-
     }
 };

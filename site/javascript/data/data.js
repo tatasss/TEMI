@@ -8,17 +8,11 @@
  */
 let Data = function (landName, government, topic, margin) {
     let randLands = mesPays();
-    //console.log(mesPays());
     let mP;
-
     for (let i = 0; i < randLands.length; i++) {
-
         if (randLands[i].code() === landName) {
-
             mP = randLands[i];
-
             break;
-
         }
 
     }

@@ -5,16 +5,13 @@
 Model.prototype.mesdon = function () {
     let mE = this.donnee.firm();
     let mP = this.donnee.land();
-    //console.log(donnee.firm);
     let impotSelected = modelManager.selectTaxe(mP, this.donnee);
     let pibchoix = this.donnee.land().pib;
     let investissement = Math.trunc(modelManager.investissementModele(mE, pibchoix));
     let amortissement = modelManager.ammortissment(mE, mP, pibchoix);
     let generalAmort = modelManager.ammortGen(amortissement);
     let taxeValAjout = modelManager.taxe_val_ajout(mE, impotSelected, pibchoix);
-
     let emploi = modelManager.contributionForfEmploie(mE, mP, pibchoix, impotSelected);
-
     let taxeCreance = modelManager.taxe_creance(mE, impotSelected, pibchoix);
     let resultCompta = modelManager.comptableResult(mE, pibchoix, taxeValAjout.tva(), emploi.salaire_cadre(),
         emploi.salaire_secretaire(), emploi.salaire_ouvrier(), emploi.reel_CFE(), generalAmort);
@@ -24,10 +21,8 @@ Model.prototype.mesdon = function () {
     let impotIMF = [];
     let impotIRVM = [];
     let actualisation = [];
-
     for (let i = 0; i < 5; i++) {
         actualisation.push(1 / Math.pow(1 + (mE.actuali() / 100), i) * 100);
-        // console.log(Math.round(((1/Math.pow(1+(mE.actuali/100),i))*100)*10)/10);
     }
     let lol, lol2;
     for (let i = 0; i < 5; i++) {
@@ -37,29 +32,19 @@ Model.prototype.mesdon = function () {
     }
     for (let i = 0; i < 5; i++) {
         impotIMF.push(resultCompta.vente()[i] * (impotSelected.imf() / 100));
-        //console.log(resultImpot.benImpo[i]*mP.taxes.isImp)
     }
     for (let i = 0; i < 5; i++) {
         impotIRVM.push(resultCompta.benefice_comptable()[i] * (impotSelected.irvm() / 100) * (mE.dividende() / 100));
-
-        //console.log(impotIRVM[i]);
     }
-    //console.log(emploi);
     let isimf = modelManager.iSIMFtab(impotSociete, impotIMF);
     let impotTaxeCourent = modelManager.impotTaxeCourent(mE.actuali(), emploi, isimf, impotIRVM, taxeCreance, taxeValAjout);
     let impotTaxeActu = modelManager.impotTaxeActu(actualisation, emploi, isimf, impotIRVM, taxeCreance, taxeValAjout);
     let fluxTresSansImp = modelManager.fluxTresoriesI(mE, pibchoix, resultCompta, actualisation);
-    //console.log("model le flux de tresorie sans imp :"+fluxTresSansImp.courant.toString());//console.log("model le flux de tresorie sans imp fin");
     let fluxTresSansISIMF = modelManager.fluxTresoriesImp(fluxTresSansImp, impotTaxeCourent.isimf(), impotTaxeActu.isimf(), mE.actuali());
-    //console.log("model le flux de tresorie sans ISIMF :"+fluxTresSansISIMF.courant.toString());
     let fluxTresApresImpot = modelManager.fluxTresoriesImp(fluxTresSansImp, impotTaxeCourent.total(), impotTaxeActu.total(), mE.actuali());
-    // console.log(taxeValAjout);
-
     let tauxeffMoyC = modelManager.tauxEffectif(fluxTresSansImp.courant()[fluxTresSansImp.courant().length - 1],
         fluxTresApresImpot.courant()[fluxTresApresImpot.courant().length - 1]);
-
     let tauxRendInterneSImp = modelManager.tauxRendementInterne(fluxTresSansImp.courant());
-
     let tauxRendInterneSImpTot = modelManager.tauxRenInterTot(fluxTresSansImp.topic());
     let tauxRendInterneSISIMF = modelManager.tauxRendementInterne(fluxTresSansISIMF.courant());
     let tauxRendInterneSISIMFTop = modelManager.tauxRenInterTot(fluxTresSansISIMF.topic());
@@ -272,6 +257,4 @@ Model.prototype.mesdon = function () {
             return tauxEffMargImpApImp;
         }
     }
-
-
 };

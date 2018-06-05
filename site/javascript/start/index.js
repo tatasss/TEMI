@@ -2,10 +2,6 @@
  * @description this function make the save statement of my formulaire
  */
 function base() {
-    //localStorage.setItem("retour1",$("#REGIMECmpta").val());
-    //localStorage.setItem("retour2",$("#actualistionCompa").val());
-    // window.location.reload();
-    // console.log(localStorage.getItem("retour1"));
     let regime = "";
     let act = "";
     if (localStorage.getItem("retour1") !== undefined) {
@@ -28,9 +24,6 @@ function base() {
             document.getElementById("actualisation").value = act;
         }
     }
-    //console.log( $('#REGIME option[value='+mod+']').attr("selected", "selected"));
     $('#REGIME option[value=' + mod + ']').attr("selected", "selected");
-    //$('#REGIME option[value!='+mod+']').attr("selected", "");
 }
-
 base();

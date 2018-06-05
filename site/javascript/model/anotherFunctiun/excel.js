@@ -6,7 +6,6 @@
  * @return {File}
  */
 function newApi(format, tab, titre) {
-    //console.log("on entre");
     let args = tab.split(",");
     let tabExcel = [];
     let cpt = 0;
@@ -25,9 +24,7 @@ function newApi(format, tab, titre) {
         else {
             tabExcel[cpt].push(args[i]);
         }
-
     }
-    //console.log(tabExcel);
     return ExcellentExport.convert({
         anchor: 'anchorNewApi-' + format,
         filename: titre,

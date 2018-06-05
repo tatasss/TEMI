@@ -12,43 +12,25 @@ Ref.prototype.pibFind = function (code) {
         }
     }
     xhr.onreadystatechange = function () {
-
         if (xhr.readyState === 4 && (xhr.status === 200)) {
-
-            // console.log( xhr.responseXML.getElementsByTagName("wb:data")[0].childNodes[3].childNodes[5].firstChild.nodeValue.toString());
-            //monPib=readPib(xhr.responseXML);
             try {
                 if (xhr.responseXML.getElementsByTagName("wb:data")[0].childNodes[3].childNodes[5].firstChild.nodeValue.toString() === code) {
                     if (localStorage.getItem("xmlPib : " + code) === xhr.responseXML.getElementsByTagName("wb:data")[0].childNodes[5].childNodes[9].firstChild.nodeValue.toString()) {
                         return
                     }
                     localStorage.setItem("xmlPib : " + xhr.responseXML.getElementsByTagName("wb:data")[0].childNodes[3].childNodes[5].firstChild.nodeValue.toString(), xhr.responseXML.getElementsByTagName("wb:data")[0].childNodes[5].childNodes[9].firstChild.nodeValue.toString());
-                    //console.log(localStorage);
                 }
-
-
-                //console.log(xhr.responseXML.getElementsByTagName("wb:data")[0].childNodes[3].childNodes[9].firstChild.nodeValue.toString());
             } catch (e) {
                 console.log("Une erreur XML de l'api de workbank est apparu");
             }
-
-
         }
     };
-    //console.log(localStorage.getItem("xmlPib : "+code));
-
-    //console.log(monPib);
     try {
         xhr.open("GET", "http://api.worldbank.org/v2/countries/" + code + "/indicators/NY.GDP.PCAP.CD", true);
         xhr.send(null);
     }
     catch (e) {
-
     }
-
-    //console.log(localStorage)
-    //console.log("http://api.worldbank.org/v2/countries/"+code+"/indicators/NY.GDP.MKTP.CD" + "--> "+cpt );
-
     if (pib === 0) {
         pib = parseFloat(localStorage.getItem("xmlPib : " + code)) * 582.79;
     }

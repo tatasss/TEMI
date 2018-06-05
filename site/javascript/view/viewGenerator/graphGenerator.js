@@ -10,7 +10,6 @@
  */
 Graph.prototype.graphique = function (modeleTab, idGraph,idText, regime,maMarge,titre) {
     document.getElementById("graph-container").innerHTML = `<canvas id="${idGraph}"> </canvas><div id="${idText}"></div>`;
-
     let dataset = [];
     let colorDif;
     let color;
@@ -58,13 +57,7 @@ Graph.prototype.graphique = function (modeleTab, idGraph,idText, regime,maMarge,
             modeleTab.forEach(function (item) {
                 payTab.push(item[0].donne.land().name());
             });
-            //----------------------------------------------------------------------------------------------------------
-            //ici la parti sur le tableau des temi
-            //console.log(maMarge);
-           // console.log(document.getElementById(idText));
             document.getElementById(idText).innerHTML = this.tableau(entreprise,maMarge,titre);
-            //----------------------------------------------------------------------------------------------------------
-            //console.log(color);
             new Chart(ctx, {
                 type: 'bar',
                 data: {
@@ -153,7 +146,6 @@ function createColorSet(number) {
     }
     return colors;
 }
-
 /**
  * @description This function create a chart.js color with an array of color
  * @param {Object} tab - the color (r,g b)
@@ -162,4 +154,3 @@ function createColorSet(number) {
 function getColorString(tab) {
     return 'rgba(' + tab.r + ',' + tab.g + ',' + tab.b + ', 1)';
 }
-
