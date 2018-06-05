@@ -70,7 +70,6 @@ Graph.prototype.graphique = function (modeleTab, idGraph,idText, regime,maMarge,
                             ticks: {
                                 beginAtZero: true,
                                 stepValue: 0.1,
-                                max: 100
                             },
                             scaleLabel: {
                                 display: true,
@@ -84,10 +83,18 @@ Graph.prototype.graphique = function (modeleTab, idGraph,idText, regime,maMarge,
                             }
                         }]
                     },
+                    legend:{
+                        display:true,
+                        position:"right",
+                        fullWidth:false,
+
+                    },
+                    //maintainAspectRatio: false,
                     title: {
                         display: true,
                         text: 'TEMI Global avec le government fiscal :' + regime
-                    }
+                    },
+                    responsive:true,
                 }
             });
         }
@@ -104,7 +111,7 @@ Graph.prototype.graphique = function (modeleTab, idGraph,idText, regime,maMarge,
         ctx.clearRect(0, 0, targetCanvas.width, targetCanvas.height);
         myChart = new Chart(ctx, null);
         myChart.clear();
-        $(id).remove();
+        $(idGraph).remove();
         $('iframe.chartjs-hidden-iframe').remove();
         document.getElementById(idText).innerHTML = " "
     }
