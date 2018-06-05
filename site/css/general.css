@@ -129,4 +129,22 @@ thead {
     float: left;
 }
 
-
+#bouttonGraphique{
+    max-height: 100%;
+    max-width: 100%;
+}
+.hide{
+    border:0 solid white;
+}
+nav{
+    background-color: #2a8dd4;
+}
+.navbar-header a{
+    color: white;
+}
+.nav a{
+    color: white;
+}
+.active{
+    background-color: #5a8dd4;
+}

@@ -8,6 +8,7 @@ let entre=[];
 let titre="";
 let reg;
 reg = " ";
+
 if (localStorage.getItem("compatRegime") === "gen") {
     reg = "codes générales des impots";
 }

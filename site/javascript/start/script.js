@@ -5,6 +5,7 @@ if (localStorage.getItem("don") !== undefined && localStorage.getItem("don") !==
     let tab = localStorage.getItem("don").split(",");
     monModele = new Model(new Data(tab[0], tab[1], tab[2], tab[3]));
 }
+
 /**
  * @description This function show a modal when u click on the button "demarrer comparaison"
  */

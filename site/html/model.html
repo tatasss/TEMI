@@ -11,11 +11,15 @@
 </head>
 <body>
 
-<nav class='navbar navbar-inverse '>
-    <div class='container-fluid'>
-        <div class='navbar-header'>
-            <a class='navbar-brand' href='index.html'>Cerdi</a>
+<nav class="navbar navbar ">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="./index.html">Cerdi</a>
         </div>
+        <ul class="nav navbar-nav">
+            <li class="active"><a href="./index.html">modèle simple</a></li>
+            <li><a data-toggle="modal" href="#myModal">graphique</a></li>
+        </ul>
     </div>
 </nav>
 <div class="container">
@@ -376,6 +380,44 @@
             </div>
         </div>
     </div>
+</div>
+<div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header" style="padding:35px 50px;">
+                <button type="button" class="close" data-dismiss="modal"/>
+                <h4>Comparaison</h4>
+                <p>Vous avez engagé une comparaison entre des entreprises ayant des marges différentes
+                </p>
+            </div>
+            <div class="modal-body" style="padding:40px 50px;">
+                <form role="form">
+                    <div class="form-group">
+                        <label>Veuillez saisir le taux d'actualisation</label>
+                        <input type="text" class="form-control" id="actualistionCompa" title="actualisation" value="">
+                    </div>
+                    <div class="form-group">
+                        <label>Regime fiscale:</label>
+                        <select class="form-control" id="REGIMECmpta" title="regime fiscale">
+                            <option value="gen">code général des impots</option>
+                            <option value="nongen">code des investissements</option>
+                        </select>
+                    </div>
+
+                    <button  type="submit" class="btn btn-success btn-block" id="myCont" onclick="debutCompa($('#actualistionCompa').val(), $('#REGIMECmpta').val());">continuer</button>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="submit" class="btn btn-danger btn-default pull-left" onclick="retourModal()" data-dismiss="modal"><span
+                        class="glyphicon glyphicon-remove"/> Annuler
+                </button>
+            </div>
+        </div>
+
+    </div>
+</div>
 </div>
 <script src="../javascript/start/reference.js"></script>
 <script src="../javascript/view/viewGenerator/bootstrapView.js"></script>

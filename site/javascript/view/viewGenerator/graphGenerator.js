@@ -94,9 +94,7 @@ Graph.prototype.graphique = function (modeleTab, idGraph, idText, regime, maMarg
                         display: false,
                         position: "right",
                         fullWidth: false,
-
                     },
-                    //maintainAspectRatio: false,
                     title: {
                         display: true,
                         text: 'TEMI Global avec le government fiscal :' + regime
@@ -110,17 +108,11 @@ Graph.prototype.graphique = function (modeleTab, idGraph, idText, regime, maMarg
                 legendsHTML += `<li><span style="background-color: ${item.fillStyle}"> </span> entreprise ${index + 1} </li> `
             });
             legendsHTML += "</ul>";
-            console.log(myChart.legend);
             document.getElementById('js-legend').innerHTML = legendsHTML;
-            //document.getElementById('js-legend').innerHTML = myChart.generateLegend();
-            // language=JQuery-CSS format=false
             $("#js-legend > ul > li").on(`click`, function () {
                 let index = $(this).index();
                 $(this).toggleClass("strike");
                 let ci = myChart;
-                // console.log(myChart);
-                // console.log(index);
-                // console.log(ci.data.datasets[0]._meta);
                 let curr = ci.data.datasets[index];
                 curr.hidden = !curr.hidden;
                 ci.update();
@@ -151,7 +143,6 @@ Graph.prototype.tableau = function (entreprise, maMarge, titre) {
     });
     return bootstrap.bootstrapTemiTabSpe(entrer, paysChoisi, entreprise, maMarge, titre);
 };
-
 /**
  * @description This function create a random color array
  * @param {number} number - the number of color u want
@@ -175,7 +166,6 @@ function createColorSet(number) {
     }
     return colors;
 }
-
 /**
  * @description This function create a chart.js color with an array of color
  * @param {Object} tab - the color (r,g b)
