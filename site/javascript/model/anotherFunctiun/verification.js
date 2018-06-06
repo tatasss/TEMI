@@ -50,3 +50,5 @@ Verif.prototype.codeISO3 = function (code) {
     xhr.open("GET", "http://api.worldbank.org/v2/countries/" + code, true);
     xhr.send(null);
 };
+//objectif de demain : mettre en place toutes les verfication pour validé le formulaire
+//mettre en place des zonne de vue exprès pour avertir les erreur(en mode alert)
