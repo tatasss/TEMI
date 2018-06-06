@@ -122,7 +122,7 @@ thead {
 }
 
 .strike {
-    text-decoration: line-through !important;
+    text-decoration: line-through;
 }
 
 .float-left {
@@ -137,7 +137,8 @@ thead {
     border:0 solid white;
 }
 nav{
-    background-color: #2a8dd4;
+    background-color: #205796;
+    max-height: 100%;
 }
 .navbar-header a{
     color: white;
@@ -146,5 +147,15 @@ nav{
     color: white;
 }
 .active{
-    background-color: #5a8dd4;
+    background-color: #0333BB;
+}
+.navbar-header img{
+    background-color: white;
+    height: 200%;
+    float: left;
+    margin-right: 1px;
+    margin-top: -15%;
+}
+.container{
+    margin-top:10%;
 }

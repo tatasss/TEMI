@@ -420,7 +420,7 @@ ViewGenerator.prototype.navigationHtml = function () {
 ViewGenerator.prototype.mainHTML = function () {
     this.mP = this.modele.donnee.land();
     this.mE = this.modele.donnee.firm();
-    return bootstrap.container(bootstrap.GridNavCote(this.bodyHtml(), this.navigationHtml()));
+    return bootstrap.GridNavCote(this.bodyHtml(), this.navigationHtml());
 };
 /**
  * @description This function create a HTML to the petrole Tva Taxe on modele
