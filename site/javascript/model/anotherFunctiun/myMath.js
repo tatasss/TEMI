@@ -119,7 +119,7 @@ MyMath.prototype.separatorNumber=function(number){
                     result+=".";
                 }
             });
-            console.log("ici");
+            //console.log("ici");
         }
         else{
             result=number;

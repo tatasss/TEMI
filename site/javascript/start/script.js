@@ -34,7 +34,7 @@ function showModal() {
 function debutCompa(actu, regime) {
     try {
 
-        actu = verifPourcent(actu);
+        actu = verif.verifPourcent(actu);
         localStorage.setItem("compaActu", actu);
         localStorage.setItem("compatRegime", regime);
         let stateObj = {foo: "bar"};
@@ -59,14 +59,14 @@ function validateForm() {
     let actualisation = $("#actualisation").val();
     let marge = $("#marge").val();
     try {
-        actualisation = verifPourcent(actualisation);
+        actualisation = verif.verifPourcent(actualisation);
     }
     catch (e) {
         alert("Le taux d'actualisation doit être compris entre 0 et 100");
         return;
     }
     try {
-        marge = verifPourcent(marge);
+        marge = verif.verifPourcent(marge);
     }
     catch (e) {
         alert("Le taux de marge doit être compris entre 0 et 100 ");
@@ -107,35 +107,6 @@ function getXMLHttpRequest() {
         return null;
     }
     return xhr;
-}
-
-/**
- * @description This function verify if the the number is a purcent
- * @param {number} nombre - the number wold u verify if it's a purcent number
- * @return {number }
- */
-function verifPourcent(nombre) {
-    let regex1 = /^[0-9]*[.]?[0-9]*$/;
-    if (!regex1.test(nombre)) {
-        throw new Error("Veuillez entrer un pourcentage");
-    }
-    if (nombre === "") {
-        throw new Error("Veuillez entrer quelque chose");
-    }
-    if (nombre === undefined) {
-        throw new Error("Veuillez entrer quelque chose");
-    }
-    if (nombre === null) {
-        throw new Error("Veuillez entrer quelque chose");
-    }
-    nombre = parseFloat(nombre);
-    if (nombre > 100) {
-        throw new Error("le chiffre est supérieur à 100");
-    }
-    if (nombre < 0) {
-        throw new Error("le chiffre est inférieur à 00");
-    }
-    return nombre;
 }
 /**
  * @description This function create all the land and put it on an Array

@@ -39,6 +39,12 @@ let Model = function (donnee) {
     this.donnee = donnee;
 };
 /**
+ * @description This function is a constructor of verif class
+ * @constructor
+ */
+let Verif = function () {
+};
+/**
  * @description This function is a constructor of Ref Class
  * @constructor
  */
@@ -70,6 +76,10 @@ let maker = new Manufactor();
  * @type {Ref}
  */
 let ref = new Ref();
+/**
+ * @type {Verif}
+ */
+let verif =new Verif();
 /**
  * @type {Graph}
  */
