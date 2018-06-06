@@ -7,5 +7,5 @@ mesPays().forEach(function (item) {
     }
 });
 htmlFormPays += "</select>";
-document.getElementById("formPays").innerHTML = htmlFormPays;
 
+document.getElementById("formPays").innerHTML = htmlFormPays;

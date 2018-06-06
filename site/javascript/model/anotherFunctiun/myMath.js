@@ -97,4 +97,47 @@ MyMath.prototype.arrondirTabUnit = function (tab, numberDec) {
     });
     return tabArr;
 };
+MyMath.prototype.separatorNumber=function(number){
+
+        number+='';
+        let regExp1=/^-?[0-9]+\.?[0-9]*/;
+        let result="";
+        let tab=number.split(".");
+        let mynum=[];
+        if(regExp1.test(number)){
+            tab.forEach(function (items,i) {
+                mynum=Array.from(items);
+                mynum.forEach(function (item,index){
+                    if ((index-(mynum.length%3)) % 3 === 0) {
+                        if (index !== 0) {
+                            result += " ";
+                        }
+                    }
+                    result+=item;
+                });
+                if(i<tab.length-1){
+                    result+=".";
+                }
+            });
+            console.log("ici");
+        }
+        else{
+            result=number;
+            if (number==="null"){
+                return null;
+            } if (number==="undefined"){
+                return undefined;
+            }
+        }
+
+        return result
+
+};
+MyMath.prototype.separatorNumberArray=function (array) {
+    let tab=[];
+    array.forEach(function(item){
+        tab.push(myMath.separatorNumber(item));
+    });
+    return tab;
+};
 

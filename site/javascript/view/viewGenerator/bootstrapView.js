@@ -269,7 +269,8 @@ BootstrapView.prototype.bootstrapTemiTabSpe = function (cote, head, tab, maMarge
                 myTab[cpt] += cote[index] + "</td>";
             }
             myTab[cpt] += "<td>";
-            myTab[cpt] += Math.round(items * 100) / 100;
+            console.log(myMath.separatorNumber(Math.round(items * 100) / 100));
+            myTab[cpt] += myMath.separatorNumber(Math.round(items * 100) / 100);
             myTab[cpt] += " % </td>";
             tabExcel.push(Math.round(items * 100) / 100);
         });

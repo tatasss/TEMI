@@ -706,19 +706,19 @@ Manufactor.prototype.armortirModele = function (prix, durLin, coef, nom) {
             let cote2 = ["Base amortissable</td><td>FCFA", "Taux unitaire</td><td>%", "Taux dégréssif</td><td>%", "Charge amortissement</td><td>FCFAS"];
             let html = "<div class='panel panel-info'><div class=\"panel-heading\">";
             let cote1 = ["Durée linéaire</td><td>Année", "Coef dégréssif</td><td>Coef"];
-            let head = `<thead><tr><th>${this.name()}</th><th>FCFA</th><th class='blue'>${this.baseAmortissable()[0]}</th></tr></thead>`;
+            let head = `<thead><tr><th>${this.name()}</th><th>FCFA</th><th class='blue'>${myMath.separatorNumber(this.baseAmortissable()[0])}</th></tr></thead>`;
             html += bootstrap.tableSE(cote1, head, {
-                    tab: [this.dureeRestante()[0]],
+                    tab: myMath.separatorNumberArray([this.dureeRestante()[0]]),
                     color: "yellow"
                 },
                 {
-                    tab: [coefdegr],
+                    tab: myMath.separatorNumberArray([coefdegr]),
                     color: "yellow"
                 });
             html += "</div> <div class='panel-body'>";
             let head2 = "<thead><tr><th>Durée restante</th><th>Annee</th>";
             for (let i = 0; i < 5; i++) {
-                head2 += `<th>${this.dureeRestante()[i]}</th>`;
+                head2 += `<th>${myMath.separatorNumber(this.dureeRestante()[i])}</th>`;
             }
             head2 += "</thead>";
             let tauxLin = [];
@@ -730,19 +730,19 @@ Manufactor.prototype.armortirModele = function (prix, durLin, coef, nom) {
                 tauxDegr.push(Math.round(item * 100) / 100);
             });
             html += bootstrap.tableSE(cote2, head2, {
-                    tab: this.baseAmortissable(),
+                    tab: myMath.separatorNumberArray(this.baseAmortissable()),
                     color: ""
                 },
                 {
-                    tab: tauxLin,
+                    tab: myMath.separatorNumberArray(tauxLin),
                     color: ""
                 },
                 {
-                    tab: tauxDegr,
+                    tab: myMath.separatorNumberArray(tauxDegr),
                     color: ""
                 },
                 {
-                    tab: this.chargeAmorti(),
+                    tab: myMath.separatorNumberArray(this.chargeAmorti()),
                     color: ""
                 });
             html += "</div></div>";

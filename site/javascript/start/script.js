@@ -183,3 +183,4 @@ function mesPays() {
     Pays.push(maker.land("TGO", "Togo", maker.impot(3, 29, 1, 13, 6, 18), maker.ammortissement(20, 10, 2.5, 3, 2, 10), tgo, "", ""));
     return Pays;
 }
+

@@ -85,8 +85,8 @@ ViewGenerator.prototype.recupDonneTab = function (effMoy, impDonne, donneImp, is
     if (isTot) {
         result.push(null);
         result.push(null);
-        result.push(this.modele.mesdon().tauxEffMargImpApImp()[0]);
-        result.push(this.modele.mesdon().tauxEffMargImpApImp()[this.modele.mesdon().tauxEffMargImpApImp().length - 1]);
+        result.push(Math.round(this.modele.mesdon().tauxEffMargImpApImp()[0]*100)/100);
+        result.push(Math.round(this.modele.mesdon().tauxEffMargImpApImp()[this.modele.mesdon().tauxEffMargImpApImp().length - 1]*100)/100);
         return result;
     }
     else {
@@ -111,8 +111,8 @@ ViewGenerator.prototype.recupDonneTab = function (effMoy, impDonne, donneImp, is
             }
         }
         if (isIs) {
-            result.push(this.modele.mesdon().tauxEffMargImpApIsImf()[0]);
-            result.push(this.modele.mesdon().tauxEffMargImpApIsImf()[this.modele.mesdon().tauxEffMargImpApIsImf().length - 1]);
+            result.push(Math.round(this.modele.mesdon().tauxEffMargImpApIsImf()[0]*100)/100);
+            result.push(Math.round(this.modele.mesdon().tauxEffMargImpApIsImf()[this.modele.mesdon().tauxEffMargImpApIsImf().length - 1]*100)/100);
         }
         else {
             if (!isImf) {
@@ -128,7 +128,7 @@ ViewGenerator.prototype.recupDonneTab = function (effMoy, impDonne, donneImp, is
  * @return {string}
  */
 ViewGenerator.prototype.pinbHTML = function () {
-    return `<p>Le PIB par tête dans le pays ${this.mP.name()} est de : ${Math.round(this.mP.pib)} FCFA</p>`;
+    return `<p>Le PIB par tête dans le pays ${this.mP.name()} est de : ${myMath.separatorNumber(Math.round(this.mP.pib))} FCFA</p>`;
 };
 /**
  * @description This function create a html to give a firm information
@@ -136,14 +136,14 @@ ViewGenerator.prototype.pinbHTML = function () {
  */
 ViewGenerator.prototype.entrepriseHTML = function () {
     let result = "<p>L'firm simulée est supposée être localisée dans la plus grande ville du land, employer "
-        + (this.mE.cadre() + this.mE.secretaire() + this.mE.ouvrier()) + " salariés et vendre la totalité de sa " +
+        + myMath.separatorNumber((this.mE.cadre() + this.mE.secretaire() + this.mE.ouvrier())) + " salariés et vendre la totalité de sa " +
         "production sur le marché local. ";
-    result += "<br/>Elles comporte donc " + this.mE.cadre() + " cadre(s) dont l'indice salarial est de "
-        + this.mE.indice_cadre();
-    result += " , " + this.mE.secretaire() + " secrétaire(s) dont l'indice salarial est de " + this.mE.indice_secretaire();
-    result += " , " + this.mE.ouvrier() + " ouvrier(s) dont l'indice salarial est de " + this.mE.indice_ouvrier() + ".";
-    result += "<br/>Elle verse " + this.mE.dividende() + "% de ces bénéfices dans les dividendes";
-    result += "<br/>Elle a un taux d'actualisation de " + this.mE.actuali() + " %";
+    result += "<br/>Elles comporte donc " + myMath.separatorNumber(this.mE.cadre()) + " cadre(s) dont l'indice salarial est de "
+        + myMath.separatorNumber(this.mE.indice_cadre());
+    result += " , " + myMath.separatorNumber(this.mE.secretaire()) + " secrétaire(s) dont l'indice salarial est de " + myMath.separatorNumber(this.mE.indice_secretaire());
+    result += " , " + myMath.separatorNumber(this.mE.ouvrier()) + " ouvrier(s) dont l'indice salarial est de " + myMath.separatorNumber(this.mE.indice_ouvrier()) + ".";
+    result += "<br/>Elle verse " + myMath.separatorNumber(this.mE.dividende()) + "% de ces bénéfices dans les dividendes";
+    result += "<br/>Elle a un taux d'actualisation de " + myMath.separatorNumber(this.mE.actuali()) + " %";
     result += "</p>";
     return result;
 };
@@ -161,51 +161,51 @@ ViewGenerator.prototype.bilanHtml = function () {
         "<span style='font-size: smaller; '><strong>Actif circulant</strong></span>", "Stocks", "Creances Clients",
         "Disponibilités bancaires", "<strong>Actif</strong>"];
     let lin1 = {
-        tab: [null, "<strong>Capitaux propre</strong>", null],
+        tab: myMath.separatorNumberArray([null, "<strong>Capitaux propre</strong>", null]),
         color: ""
     };
     let lin2 = {
-        tab: [this.mE.terrain(), "Capital social", this.mE.capitalSocial()],
+        tab: myMath.separatorNumberArray([this.mE.terrain(), "Capital social", this.mE.capitalSocial()]),
         color: ""
     };
     let lin3 = {
-        tab: [this.mE.construction(), null, null],
+        tab: myMath.separatorNumberArray([this.mE.construction(), null, null]),
         color: ""
     };
     let lin4 = {
-        tab: [this.mE.equipement(), null, null],
+        tab: myMath.separatorNumberArray([this.mE.equipement(), null, null]),
         color: ""
     };
     let lin5 = {
-        tab: [this.mE.camion(), null, null],
+        tab: myMath.separatorNumberArray([this.mE.camion(), null, null]),
         color: ""
     };
     let lin6 = {
-        tab: [this.mE.info(), null, null],
+        tab: myMath.separatorNumberArray([this.mE.info(), null, null]),
         color: ""
     };
     let lin7 = {
-        tab: [this.mE.bureau(), null, null],
+        tab: myMath.separatorNumberArray([this.mE.bureau(), null, null]),
         color: ""
     };
     let lin8 = {
-        tab: [null, "<strong><span style='font-size: smaller; '>Dettes</span></strong>", null],
+        tab: myMath.separatorNumberArray([null, "<strong><span style='font-size: smaller; '>Dettes</span></strong>", null]),
         color: ""
     };
     let lin9 = {
-        tab: [this.mE.stocks(), "Dettes long terme", this.mE.detteLongTerme()],
+        tab: myMath.separatorNumberArray([this.mE.stocks(), "Dettes long terme", this.mE.detteLongTerme()]),
         color: ""
     };
     let lin10 = {
-        tab: [this.mE.creanceCli(), "Dettes court terme", this.mE.detteCourtTerme()],
+        tab: myMath.separatorNumberArray([this.mE.creanceCli(), "Dettes court terme", this.mE.detteCourtTerme()]),
         color: ""
     };
     let lin11 = {
-        tab: [this.mE.dispoBanque(), "Dettes fournisseurs", this.mE.detteFournisseur()],
+        tab: myMath.separatorNumberArray([this.mE.dispoBanque(), "Dettes fournisseurs", this.mE.detteFournisseur()]),
         color: ""
     };
     let lin12 = {
-        tab: [`<strong>${actif}</strong>`, "<strong>passif</strong>", passif],
+        tab: myMath.separatorNumberArray([`<strong>${actif}</strong>`, "<strong>passif</strong>", passif]),
         color: ""
     };
     let head = "<thead><tr><th colspan=3> Bilan à l'ouverture<th/><tr/><tr><th colspan=2>Actif</th><th colspan=2>Passif</th></tr></thead>";
@@ -222,55 +222,55 @@ ViewGenerator.prototype.compteHtml = function () {
         "<strong>Charges financières</strong>", "Charges financières", "<strong>Amortissement</strong>"];
     let head = "<thead><tr><th colspan=3> Compte de résultat<th/></tr><tr><th colspan=2>Charges</th><th colspan=2>Produit</th></tr></thead>";
     let lin0 = {
-        tab: [this.mE.achat(), "Ventes", this.mE.vente()],
+        tab: myMath.separatorNumberArray([this.mE.achat(), "Ventes", this.mE.vente()]),
         color: ""
     };
     let lin1 = {
-        tab: [this.mE.petrole(), null, null],
+        tab: myMath.separatorNumberArray([this.mE.petrole(), null, null]),
         color: ""
     };
     let lin2 = {
-        tab: [this.mE.depenseAdministrative(), null, null],
+        tab: myMath.separatorNumberArray([this.mE.depenseAdministrative(), null, null]),
         color: ""
     };
     let lin3 = {
-        tab: [this.mE.depensePub(), null, null],
+        tab: myMath.separatorNumberArray([this.mE.depensePub(), null, null]),
         color: ""
     };
     let lin4 = {
-        tab: [this.mE.depenseEntretien(), null, null],
+        tab: myMath.separatorNumberArray([this.mE.depenseEntretien(), null, null]),
         color: ""
     };
     let lin5 = {
-        tab: [null, null, null],
+        tab: myMath.separatorNumberArray([null, null, null]),
         color: ""
     };
     let lin6 = {
-        tab: [null, null, null],
+        tab: myMath.separatorNumberArray([null, null, null]),
         color: ""
     };
     let lin7 = {
-        tab: [this.mE.cadre(), null, null],
+        tab: myMath.separatorNumberArray([this.mE.cadre(), null, null]),
         color: ""
     };
     let lin8 = {
-        tab: [this.mE.secretaire(), null, null],
+        tab: myMath.separatorNumberArray([this.mE.secretaire(), null, null]),
         color: ""
     };
     let lin9 = {
-        tab: [this.mE.ouvrier(), null, null],
+        tab: myMath.separatorNumberArray([this.mE.ouvrier(), null, null]),
         color: ""
     };
     let lin10 = {
-        tab: [null, null, null],
+        tab: myMath.separatorNumberArray([null, null, null]),
         color: ""
     };
     let lin11 = {
-        tab: [this.mE.chargeFinanciere(), null, null],
+        tab: myMath.separatorNumberArray([this.mE.chargeFinanciere(), null, null]),
         color: ""
     };
     let lin12 = {
-        tab: [null, null, null],
+        tab: myMath.separatorNumberArray([null, null, null]),
         color: ""
     };
 
@@ -312,26 +312,26 @@ ViewGenerator.prototype.ImpotHtml = function () {
     }
     let cote = ["CFE", "IS", "IMF", "IRVM", "IRC", "TVA Petrole"];
     return bootstrap.tableSE(cote, head, {
-            tab: cfe,
+            tab: myMath.separatorNumberArray(cfe),
             color: ""
         },
         {
-            tab: is,
+            tab: myMath.separatorNumberArray(is),
             color: ""
         },
         {
-            tab: imf,
+            tab: myMath.separatorNumberArray(imf),
             color: ""
         },
         {
-            tab: irvm,
+            tab: myMath.separatorNumberArray(irvm),
             color: ""
         },
         {
-            tab: irc,
+            tab: myMath.separatorNumberArray(irc),
             color: ""
         }, {
-            tab: tva,
+            tab: myMath.separatorNumberArray(tva),
             color: ""
         });
 };
@@ -343,23 +343,23 @@ ViewGenerator.prototype.amortissementHtml = function () {
     let head = "<thead><tr><th colspan=2> Amortissement<th/></tr><tr><th/><th>Durée Linéaire</th><th>Coef dégressif</th></tr></thead>";
     let cote = ["Construction", "Equipement", "Camion", "Matériel informatique", "Matériel bureau"];
     let lin1 = {
-        tab: [this.mP.amortization().construction(), this.mP.amortization().coefdegressif()],
+        tab: myMath.separatorNumberArray([this.mP.amortization().construction(), this.mP.amortization().coefdegressif()]),
         color: ""
     };
     let lin2 = {
-        tab: [this.mP.amortization().equipement(), this.mP.amortization().coefdegressif()],
+        tab: myMath.separatorNumberArray([this.mP.amortization().equipement(), this.mP.amortization().coefdegressif()]),
         color: ""
     };
     let lin3 = {
-        tab: [this.mP.amortization().camion(), this.mP.amortization().coefdegressif()],
+        tab: myMath.separatorNumberArray([this.mP.amortization().camion(), this.mP.amortization().coefdegressif()]),
         color: ""
     };
     let lin4 = {
-        tab: [this.mP.amortization().info(), this.mP.amortization().coefdegressif()],
+        tab: myMath.separatorNumberArray([this.mP.amortization().info(), this.mP.amortization().coefdegressif()]),
         color: ""
     };
     let lin5 = {
-        tab: [this.mP.amortization().bureau(), this.mP.amortization().coefdegressif()],
+        tab: myMath.separatorNumberArray([this.mP.amortization().bureau(), this.mP.amortization().coefdegressif()]),
         color: ""
     };
     let tab = bootstrap.tableSE(cote, head, lin1, lin2, lin3, lin4, lin5);
@@ -429,15 +429,15 @@ ViewGenerator.prototype.mainHTML = function () {
 ViewGenerator.prototype.petroleHtml = function () {
     let cote = ["Pétrole</td><td>FCFA", "Taux</td><td>%", "TVA Petrole</td><td>FCFA"];
     let tab = bootstrap.tableSE(cote, null, {
-            tab: this.modele.mesdon().taxeAjout().petrole(),
+            tab: myMath.separatorNumberArray(this.modele.mesdon().taxeAjout().petrole()),
             color: "blue"
         },
         {
-            tab: this.modele.mesdon().taxeAjout().taux(),
+            tab: myMath.separatorNumberArray(this.modele.mesdon().taxeAjout().taux()),
             color: "yellow"
         },
         {
-            tab: this.modele.mesdon().taxeAjout().tva(),
+            tab: myMath.separatorNumberArray(this.modele.mesdon().taxeAjout().tva()),
             color: ""
         });
     return bootstrap.pan("default", null, tab);
@@ -449,15 +449,15 @@ ViewGenerator.prototype.petroleHtml = function () {
 ViewGenerator.prototype.chargeFinancierHtml = function () {
     let cote = ["Charges financiéres</td><td>FCFA", "Taux</td><td>%", "IRC</td><td>FCFA"];
     let tab = bootstrap.tableSE(cote, null, {
-            tab: myMath.arrondirTabUnit(this.modele.mesdon().taxeCreance().chargeFinance()),
+            tab: myMath.separatorNumberArray(myMath.arrondirTabUnit(this.modele.mesdon().taxeCreance().chargeFinance())),
             color: "blue"
         },
         {
-            tab: myMath.arrondirTabUnit(this.modele.mesdon().taxeCreance().taux(), 2),
+            tab: myMath.separatorNumberArray(myMath.arrondirTabUnit(this.modele.mesdon().taxeCreance().taux(), 2)),
             color: "yellow"
         },
         {
-            tab: myMath.arrondirTabUnit(this.modele.mesdon().taxeCreance().irc()),
+            tab: myMath.separatorNumberArray(myMath.arrondirTabUnit(this.modele.mesdon().taxeCreance().irc())),
             color: ""
         });
     return bootstrap.pan("default", null, tab);
@@ -473,27 +473,27 @@ ViewGenerator.prototype.emploieHtml = function () {
     cote.push("CFE</td><td>FCFA");
     let tab = bootstrap.tableSE(cote, null,
         {
-            tab: myMath.arrondirTabUnit(this.modele.mesdon().employer().salaire_cadre(), 0),
+            tab: myMath.separatorNumberArray(myMath.arrondirTabUnit(this.modele.mesdon().employer().salaire_cadre(), 0)),
             color: "blue"
         },
         {
-            tab: myMath.arrondirTabUnit(this.modele.mesdon().employer().salaire_secretaire()),
+            tab: myMath.separatorNumberArray(myMath.arrondirTabUnit(this.modele.mesdon().employer().salaire_secretaire())),
             color: "blue"
         },
         {
-            tab: myMath.arrondirTabUnit(this.modele.mesdon().employer().salaire_ouvrier()),
+            tab: myMath.separatorNumberArray(myMath.arrondirTabUnit(this.modele.mesdon().employer().salaire_ouvrier())),
             color: "blue"
         },
         {
-            tab: myMath.arrondirTabUnit(this.modele.mesdon().employer().masse_salarial()),
+            tab: myMath.separatorNumberArray(myMath.arrondirTabUnit(this.modele.mesdon().employer().masse_salarial())),
             color: ""
         },
         {
-            tab: myMath.arrondirTabUnit(this.modele.mesdon().employer().tauxCfe(), 2),
+            tab: myMath.separatorNumberArray(myMath.arrondirTabUnit(this.modele.mesdon().employer().tauxCfe(), 2)),
             color: "yellow"
         },
         {
-            tab: myMath.arrondirTabUnit(this.modele.mesdon().employer().reel_CFE()),
+            tab: myMath.separatorNumberArray(myMath.arrondirTabUnit(this.modele.mesdon().employer().reel_CFE())),
             color: ""
         });
     return bootstrap.pan("default", null, tab);
@@ -520,68 +520,68 @@ ViewGenerator.prototype.comptableHtml = function () {
     cote.push("Taux de margin  avant IS/IMF</td><td>%CA");
     let tab = bootstrap.tableSE(cote, null,
         {
-            tab: myMath.arrondirTabUnit(this.modele.mesdon().resultCompta().vente()),
+            tab: myMath.separatorNumberArray(myMath.arrondirTabUnit(this.modele.mesdon().resultCompta().vente())),
             color: "blue",
             bottomBorder: "true"
         },
         {
-            tab: myMath.arrondirTabUnit(this.modele.mesdon().resultCompta().achats()),
+            tab: myMath.separatorNumberArray(myMath.arrondirTabUnit(this.modele.mesdon().resultCompta().achats())),
             color: "blue"
         },
         {
-            tab: myMath.arrondirTabUnit(this.modele.mesdon().resultCompta().petrole()),
+            tab: myMath.separatorNumberArray(myMath.arrondirTabUnit(this.modele.mesdon().resultCompta().petrole())),
             color: "blue"
         },
         {
-            tab: myMath.arrondirTabUnit(this.modele.mesdon().resultCompta().tva_petrole()),
+            tab: myMath.separatorNumberArray(myMath.arrondirTabUnit(this.modele.mesdon().resultCompta().tva_petrole())),
             color: ""
         },
         {
-            tab: myMath.arrondirTabUnit(this.modele.mesdon().resultCompta().depense_admin()),
+            tab: myMath.separatorNumberArray(myMath.arrondirTabUnit(this.modele.mesdon().resultCompta().depense_admin())),
             color: "blue"
         },
         {
-            tab: myMath.arrondirTabUnit(this.modele.mesdon().resultCompta().depense_pub()),
+            tab: myMath.separatorNumberArray(myMath.arrondirTabUnit(this.modele.mesdon().resultCompta().depense_pub())),
             color: "blue"
         },
         {
-            tab: myMath.arrondirTabUnit(this.modele.mesdon().resultCompta().depense_entretien()),
+            tab:myMath.separatorNumberArray( myMath.arrondirTabUnit(this.modele.mesdon().resultCompta().depense_entretien())),
             color: "blue",
             bottomBorder: "true"
         },
         {
-            tab: myMath.arrondirTabUnit(this.modele.mesdon().resultCompta().salaire_cadre()),
+            tab: myMath.separatorNumberArray(myMath.arrondirTabUnit(this.modele.mesdon().resultCompta().salaire_cadre())),
             color: "blue"
         },
         {
-            tab: myMath.arrondirTabUnit(this.modele.mesdon().resultCompta().salaire_secretaire()),
+            tab: myMath.separatorNumberArray(myMath.arrondirTabUnit(this.modele.mesdon().resultCompta().salaire_secretaire())),
             color: "blue"
         },
         {
-            tab: myMath.arrondirTabUnit(this.modele.mesdon().resultCompta().salaire_ouvrier()),
+            tab: myMath.separatorNumberArray(myMath.arrondirTabUnit(this.modele.mesdon().resultCompta().salaire_ouvrier())),
             color: "blue"
         },
         {
-            tab: myMath.arrondirTabUnit(this.modele.mesdon().resultCompta().cfe()),
+            tab: myMath.separatorNumberArray(myMath.arrondirTabUnit(this.modele.mesdon().resultCompta().cfe())),
             color: "",
             bottomBorder: "true"
         },
         {
-            tab: myMath.arrondirTabUnit(this.modele.mesdon().resultCompta().chargeFinanciere()),
+            tab: myMath.separatorNumberArray(myMath.arrondirTabUnit(this.modele.mesdon().resultCompta().chargeFinanciere())),
             color: "blue",
             bottomBorder: "true"
         },
         {
-            tab: myMath.arrondirTabUnit(this.modele.mesdon().resultCompta().amortissement()),
+            tab: myMath.separatorNumberArray(myMath.arrondirTabUnit(this.modele.mesdon().resultCompta().amortissement())),
             color: "",
             bottomBorder: "true"
         },
         {
-            tab: myMath.arrondirTabUnit(this.modele.mesdon().resultCompta().benefice_comptable()),
+            tab: myMath.separatorNumberArray(myMath.arrondirTabUnit(this.modele.mesdon().resultCompta().benefice_comptable())),
             color: ""
         },
         {
-            tab: myMath.arrondirTabUnit(this.modele.mesdon().resultCompta().taux_marge_avant__IS_IMF(), 1),
+            tab: myMath.separatorNumberArray(myMath.separatorNumberArray(myMath.arrondirTabUnit(this.modele.mesdon().resultCompta().taux_marge_avant__IS_IMF()), 1)),
             color: ""
         });
     return bootstrap.pan("default", null, tab);
@@ -594,19 +594,19 @@ ViewGenerator.prototype.ammortExcepHtml = function () {
     let coteHead = ["investment</td><td>FCFA", "Taux</td><td>% investment", "Limitation</td><td>% Bénéfice comptable", "Durée</td><td>Années"];
     let tabHead = bootstrap.tableSE(coteHead, null,
         {
-            tab: [Math.round(this.modele.mesdon().ammortExcep().investment())],
+            tab: myMath.separatorNumberArray([Math.round(this.modele.mesdon().ammortExcep().investment())]),
             color: "blue"
         },
         {
-            tab: myMath.arrondirTabUnit([this.modele.mesdon().ammortExcep().taux()], 2),
+            tab: myMath.separatorNumberArray(myMath.arrondirTabUnit([this.modele.mesdon().ammortExcep().taux()], 2)),
             color: "yellow"
         },
         {
-            tab: myMath.arrondirTabUnit([this.modele.mesdon().ammortExcep().limitation()], 2),
+            tab: myMath.separatorNumberArray(myMath.arrondirTabUnit([this.modele.mesdon().ammortExcep().limitation()], 2)),
             color: "yellow"
         },
         {
-            tab: myMath.arrondirTabUnit([this.modele.mesdon().ammortExcep().duree()]),
+            tab: myMath.separatorNumberArray(myMath.arrondirTabUnit([this.modele.mesdon().ammortExcep().duree()])),
             color: "yellow"
         });
 
@@ -614,14 +614,15 @@ ViewGenerator.prototype.ammortExcepHtml = function () {
     let coteBody = ["Durée restante</td><td>Années", "Base amortissable</td><td>FCFA", "Charge d'amortissement</td><td>FCFA"];
     let tabBody = bootstrap.tableSE(coteBody, null,
         {
-            tab: this.modele.mesdon().ammortExcep().dureeTab(),
+            tab: myMath.separatorNumberArray(this.modele.mesdon().ammortExcep().dureeTab()),
             color: ""
         },
         {
-            tab: this.modele.mesdon().ammortExcep().baseAmorti(), color: ""
+            tab: myMath.separatorNumberArray(this.modele.mesdon().ammortExcep().baseAmorti()),
+            color: ""
         },
         {
-            tab: this.modele.mesdon().ammortExcep().chargeAmorti(),
+            tab: myMath.separatorNumberArray(this.modele.mesdon().ammortExcep().chargeAmorti()),
             color: ""
         });
     return bootstrap.pan("info", tabHead, tabBody);
@@ -633,15 +634,15 @@ ViewGenerator.prototype.ammortExcepHtml = function () {
 ViewGenerator.prototype.resultatImpotHtml = function () {
     let cote = ["Bénéfice comptable</td><td>FCFA", "Amortissement exceptionnel</td><td>FCFA", "Bénéfice imposable</td><td>FCFA"];
     let tab = bootstrap.tableSE(cote, null, {
-            tab: myMath.arrondirTabUnit(this.modele.mesdon().resultImpot().benCompta()),
+            tab: myMath.separatorNumberArray(myMath.arrondirTabUnit(this.modele.mesdon().resultImpot().benCompta())),
             color: ""
         },
         {
-            tab: myMath.arrondirTabUnit(this.modele.mesdon().resultImpot().amortExep()),
+            tab: myMath.separatorNumberArray(myMath.arrondirTabUnit(this.modele.mesdon().resultImpot().amortExep())),
             color: ""
         },
         {
-            tab: myMath.arrondirTabUnit(this.modele.mesdon().resultImpot().benImpo()),
+            tab: myMath.separatorNumberArray(myMath.arrondirTabUnit(this.modele.mesdon().resultImpot().benImpo())),
             color: ""
         });
     return bootstrap.pan("default", null, tab);
@@ -655,7 +656,7 @@ ViewGenerator.prototype.getAmmortGenneralHtml = function () {
     let tab = "<table class='table'><thead/></thead><tbody><tr><td>Construction</td><td>FCFA</td>";
     for (let i = 0; i < this.modele.mesdon().amortissementGeneral().length; i++) {
         if (this.modele.mesdon().amortissementGeneral()[i] !== "change") {
-            tab += `<td>${Math.round(this.modele.mesdon().amortissementGeneral()[i])}</td>`;
+            tab += `<td>${myMath.separatorNumber(Math.round(this.modele.mesdon().amortissementGeneral()[i]))}</td>`;
         }
         else {
             tab += "</tr><tr>";
@@ -696,15 +697,15 @@ ViewGenerator.prototype.impotSocieteHtml = function () {
     let cote = ["Benefice imposable</td><td>FCFA", "Taux</td><td>% bénéfice imposable", "IS</td><td>FCFA"];
     let tab = bootstrap.tableSE(cote, null,
         {
-            tab: myMath.arrondirTabUnit(this.modele.mesdon().resultImpot().benImpo()),
+            tab: myMath.separatorNumberArray(myMath.arrondirTabUnit(this.modele.mesdon().resultImpot().benImpo())),
             color: "",
         },
         {
-            tab: myMath.arrondirTabUnit(is, 2),
+            tab: myMath.separatorNumberArray(myMath.arrondirTabUnit(is, 2)),
             color: "yellow"
         },
         {
-            tab: myMath.arrondirTabUnit(impSoc),
+            tab: myMath.separatorNumberArray(myMath.arrondirTabUnit(impSoc)),
             color: ""
         }
         )
@@ -724,15 +725,15 @@ ViewGenerator.prototype.impotForfaitHtml = function () {
     }
     let cote = ["Ventes</td><td>FCFA", "Taux</td><td>%CA", "IMF</td><td>FCFA"];
     let tab = bootstrap.tableSE(cote, null, {
-            tab: myMath.arrondirTabUnit(this.modele.mesdon().resultCompta().vente()),
+            tab: myMath.separatorNumberArray(myMath.arrondirTabUnit(this.modele.mesdon().resultCompta().vente())),
             color: ""
         },
         {
-            tab: myMath.arrondirTabUnit(imf, 2),
+            tab: myMath.separatorNumberArray(myMath.arrondirTabUnit(imf, 2)),
             color: "yellow"
         },
         {
-            tab: myMath.arrondirTabUnit(impIMF),
+            tab: myMath.separatorNumberArray(myMath.arrondirTabUnit(impIMF)),
             color: ""
         });
     return bootstrap.pan("default", null, tab);
@@ -744,15 +745,15 @@ ViewGenerator.prototype.impotForfaitHtml = function () {
 ViewGenerator.prototype.isImfHtml = function () {
     let cote = ["IS/IMF</td><td>FCFA", "Bénéfice après IS/IMF</td><td>FCFA", "Taux de margin  aprés IS/IMF</td><td>%CA"];
     let tab = bootstrap.tableSE(cote, null, {
-            tab: myMath.arrondirTabUnit(this.modele.mesdon().isImf()),
+            tab: myMath.separatorNumberArray(myMath.arrondirTabUnit(this.modele.mesdon().isImf())),
             color: ""
         },
         {
-            tab: myMath.arrondirTabUnit(this.modele.mesdon().resultCompta().benefice_comptable()),
+            tab: myMath.separatorNumberArray(myMath.arrondirTabUnit(this.modele.mesdon().resultCompta().benefice_comptable())),
             color: ""
         },
         {
-            tab: myMath.arrondirTabUnit(this.modele.mesdon().resultCompta().taux_marge_avant__IS_IMF(), 1),
+            tab: myMath.separatorNumberArray( myMath.arrondirTabUnit(this.modele.mesdon().resultCompta().taux_marge_avant__IS_IMF(), 1)),
             color: ""
         });
     return bootstrap.pan("default", null, tab);
@@ -770,19 +771,19 @@ ViewGenerator.prototype.impotRevenuValeurMobilieres = function () {
     }
     let cote = ["Bénéfice après IS/IMF</td><td>FCFA", "Distribution anuelle</td><td>% des bénéfice après IS/IMF", "taux</td><td>% des bénéfice après IS/IMF", "IRVM</td><td>FCFA"];
     let tab = bootstrap.tableSE(cote, null, {
-            tab: myMath.arrondirTabUnit(this.modele.mesdon().resultCompta().benefice_comptable()),
+            tab: myMath.separatorNumberArray(myMath.arrondirTabUnit(this.modele.mesdon().resultCompta().benefice_comptable())),
             color: ""
         },
         {
-            tab: myMath.arrondirTabUnit(div, 2),
+            tab: myMath.separatorNumberArray(myMath.arrondirTabUnit(div, 2)),
             color: "yellow"
         },
         {
-            tab: myMath.arrondirTabUnit(irvm, 2),
+            tab: myMath.separatorNumberArray(myMath.arrondirTabUnit(irvm, 2)),
             color: "blue"
         },
         {
-            tab: myMath.arrondirTabUnit(this.modele.mesdon().impotIRVM()),
+            tab: myMath.separatorNumberArray(myMath.arrondirTabUnit(this.modele.mesdon().impotIRVM())),
             color: ""
         });
     return bootstrap.pan("default", null, tab);
@@ -793,7 +794,7 @@ ViewGenerator.prototype.impotRevenuValeurMobilieres = function () {
  */
 ViewGenerator.prototype.actualisationHtml = function () {
     let tab = bootstrap.tableSE(["actualisation"], null, {
-        tab: myMath.arrondirTabUnit(this.modele.mesdon().actualisation(), 1),
+        tab: myMath.separatorNumberArray(myMath.arrondirTabUnit(this.modele.mesdon().actualisation(), 1)),
         color: ""
     });
     return bootstrap.pan("default", null, tab);
@@ -807,27 +808,27 @@ ViewGenerator.prototype.tabImpotEtTaxe = function (monm) {
     let cote = ["CFE</td><td>FCFA", "IS/IMF</td><td>FCFA", "IRVM</td><td>FCFA", "IRC</td><td>FCFA", "TVA Petrole</td><td>FCFA", "Total</td><td>FCFA"];
     let tab = bootstrap.tableSE(cote, null,
         {
-            tab: myMath.arrondirTabUnit(monm.cfe()),
+            tab: myMath.separatorNumberArray(myMath.arrondirTabUnit(monm.cfe())),
             color: ""
         },
         {
-            tab: myMath.arrondirTabUnit(monm.isimf()),
+            tab: myMath.separatorNumberArray(myMath.arrondirTabUnit(monm.isimf())),
             color: ""
         },
         {
-            tab: myMath.arrondirTabUnit(monm.irvm()),
+            tab: myMath.separatorNumberArray(myMath.arrondirTabUnit(monm.irvm())),
             color: ""
         },
         {
-            tab: myMath.arrondirTabUnit(monm.irc()),
+            tab: myMath.separatorNumberArray(myMath.arrondirTabUnit(monm.irc())),
             color: ""
         },
         {
-            tab: myMath.arrondirTabUnit(monm.tvaPetrole()),
+            tab: myMath.separatorNumberArray(myMath.arrondirTabUnit(monm.tvaPetrole())),
             color: ""
         },
         {
-            tab: myMath.arrondirTabUnit(monm.total()),
+            tab: myMath.separatorNumberArray(myMath.arrondirTabUnit(monm.total())),
             color: ""
         }
     );
@@ -838,7 +839,7 @@ ViewGenerator.prototype.tabImpotEtTaxe = function (monm) {
  * @return {string}
  */
 ViewGenerator.prototype.tabTauxEffectifMoy = function () {
-    let tab = `<p> le TEMI est de ${Math.round(this.modele.mesdon().tauxeffMoyCourent() * 100) / 100} %</p>`;
+    let tab = `<p> le TEMI est de ${myMath.separatorNumber(Math.round(this.modele.mesdon().tauxeffMoyCourent() * 100) / 100)} %</p>`;
     return bootstrap.pan("default", null, tab);
 };
 /**
@@ -853,13 +854,13 @@ ViewGenerator.prototype.tabFluxTresorie = function (tab, color) {
     //console.log(color);
     let mota = bootstrap.tableSE(cote, "<thead><tr><th/><th/><th/><th/><th/><th/><th/><th/><th>VAN</th></tr></thead>",
         {
-            tab: myMath.arrondirTabUnit(tab.courant()),
+            tab: myMath.separatorNumberArray(myMath.arrondirTabUnit(tab.courant())),
             color: "",
             colorFirstCase: color,
             fontColorLastCase: "selectedPosNegNumber"
         },
         {
-            tab: myMath.arrondirTabUnit(tab.topic()),
+            tab: myMath.separatorNumberArray(myMath.arrondirTabUnit(tab.topic())),
             color: "",
             colorFirstCase: color,
             fontColorLastCase: "selectedPosNegNumber"
@@ -878,9 +879,20 @@ ViewGenerator.prototype.tabFluxTresorie = function (tab, color) {
  */
 ViewGenerator.prototype.tauxRendementInt = function (tab,number) {
     return bootstrap.pan("default", null, `${bootstrap.tableSE(["courants"], null, {
-        tab: myMath.arrondirTabUnit(tab, 2),
+        tab: myMath.separatorNumberArray(myMath.arrondirTabUnit(tab, 2)),
         color: ""
-    })}<p> Le taux de rendement interne sur les 5 années est de ${number}%</p>`);
+    })}<p> Le taux de rendement interne sur les 5 années est de ${myMath.separatorNumber(number)}%</p>`);
+};
+/**
+ * @description This function create a HTML to give a return rate Array
+ * @param {Array} tab -the Array of the return rate
+ * @return {string}
+ */
+ViewGenerator.prototype.tauxMargInt = function (tab) {
+    return bootstrap.pan("default", null, `${bootstrap.tableSE(["courants"], null, {
+        tab: myMath.separatorNumberArray(myMath.arrondirTabUnit(tab, 2)),
+        color: ""
+    })}`);
 };
 /**
  *@description This function create the HTML to give the investment Government Describe

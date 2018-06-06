@@ -1,5 +1,5 @@
 const genererVue = new ViewGenerator(monModele);
-let investPart = "<p>investissement : " + genererVue.modele.mesdon().investissement() + "</p>";
+let investPart = "<p>investissement : " + myMath.separatorNumber(genererVue.modele.mesdon().investissement()) + "</p>";
 document.getElementById("invest").innerHTML = investPart;
 let amm = genererVue.getAmmortGenneralHtml();
 amm += "<br/>";
@@ -28,6 +28,6 @@ document.getElementById("fluxTresAvImpot").innerHTML = genererVue.tabFluxTresori
 document.getElementById("tauxRendInterneSi").innerHTML = genererVue.tauxRendementInt(genererVue.modele.mesdon().tauxRendInterneSImp(),genererVue.modele.mesdon().tauxRendInterneSImpTot());
 document.getElementById("tauxRendInterneSISIMF").innerHTML = genererVue.tauxRendementInt(genererVue.modele.mesdon().tauxRendInterneSISIMF(),genererVue.modele.mesdon().tauxRendInterneSISIMFTot());
 document.getElementById("tauxRendInterneAi").innerHTML = genererVue.tauxRendementInt(genererVue.modele.mesdon().tauxRendInterneAImp(),genererVue.modele.mesdon().tauxRendInterneAImpTot());
-document.getElementById("tauxEffMargImpApIsImf").innerHTML = genererVue.tauxRendementInt(genererVue.modele.mesdon().tauxEffMargImpApIsImf());
-document.getElementById("tauxEffMargImpApImp").innerHTML = genererVue.tauxRendementInt(genererVue.modele.mesdon().tauxEffMargImpApImp());
+document.getElementById("tauxEffMargImpApIsImf").innerHTML = genererVue.tauxMargInt(genererVue.modele.mesdon().tauxEffMargImpApIsImf());
+document.getElementById("tauxEffMargImpApImp").innerHTML = genererVue.tauxMargInt(genererVue.modele.mesdon().tauxEffMargImpApImp());
 
