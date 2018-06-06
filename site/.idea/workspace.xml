@@ -2,6 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b89c5143-0212-42c0-b73b-81dad73db30d" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/dictionaries/matgaydu.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dictionaries/matgaydu.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/css/general.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/general.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/html/ajoutPays.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/ajoutPays.html" afterDir="false" />
     </list>
@@ -19,111 +21,136 @@
     <favorites_list name="site" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="general.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/css/general.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="416">
-              <caret line="153" column="17" lean-forward="true" selection-start-line="153" selection-start-column="17" selection-end-line="153" selection-end-column="17" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ViewGenerator.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/javascript/view/viewGenerator/ViewGenerator.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1615">
-              <caret line="130" column="120" selection-start-line="130" selection-start-column="120" selection-end-line="130" selection-end-column="120" />
-              <folding>
-                <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#span#0;n#strong#0;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ModeleView.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/javascript/view/directlyChange/ModeleView.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="1" column="109" selection-start-line="1" selection-start-column="109" selection-end-line="1" selection-end-column="109" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="manufact.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/javascript/manufacturing/manufact.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="391">
-              <caret line="745" column="29" lean-forward="true" selection-start-line="745" selection-start-column="29" selection-end-line="745" selection-end-column="29" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="script.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/javascript/start/script.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="535">
-              <caret line="186" lean-forward="true" selection-start-line="186" selection-end-line="186" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="graphForm.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/html/graphForm.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="391">
-              <caret line="29" column="77" selection-start-line="29" selection-start-column="77" selection-end-line="29" selection-end-column="77" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ajoutPays.html" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/html/ajoutPays.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="450">
-              <caret line="83" lean-forward="true" selection-start-line="83" selection-end-line="83" />
-              <folding>
-                <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="myMath.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/javascript/model/anotherFunctiun/myMath.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="297">
-              <caret line="109" column="52" selection-start-line="109" selection-start-column="52" selection-end-line="109" selection-end-column="52" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="tabCS.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/css/tabCS.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="2" column="1" selection-start-line="2" selection-start-column="1" selection-end-line="2" selection-end-column="1" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/html/index.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="18" column="14" lean-forward="true" selection-start-line="14" selection-end-line="24" selection-end-column="6" />
-              <folding>
-                <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#4;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#div#4;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <splitter split-orientation="horizontal" split-proportion="0.9">
+      <split-first>
+        <splitter split-orientation="horizontal" split-proportion="0.87126243">
+          <split-first>
+            <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+              <file leaf-file-name="script.js" pinned="false" current-in-tab="false">
+                <entry file="file://$PROJECT_DIR$/javascript/start/script.js">
+                  <provider selected="true" editor-type-id="text-editor">
+                    <state relative-caret-position="544">
+                      <caret line="186" lean-forward="true" selection-start-line="186" selection-end-line="186" />
+                    </state>
+                  </provider>
+                </entry>
+              </file>
+              <file leaf-file-name="general.css" pinned="false" current-in-tab="true">
+                <entry file="file://$PROJECT_DIR$/css/general.css">
+                  <provider selected="true" editor-type-id="text-editor">
+                    <state relative-caret-position="467">
+                      <caret line="188" column="7" selection-start-line="188" selection-start-column="7" selection-end-line="188" selection-end-column="7" />
+                    </state>
+                  </provider>
+                </entry>
+              </file>
+              <file leaf-file-name="model.js" pinned="false" current-in-tab="false">
+                <entry file="file://$PROJECT_DIR$/javascript/model/model.js">
+                  <provider selected="true" editor-type-id="text-editor">
+                    <state relative-caret-position="626">
+                      <caret line="258" column="5" selection-start-line="258" selection-start-column="5" selection-end-line="258" selection-end-column="5" />
+                    </state>
+                  </provider>
+                </entry>
+              </file>
+              <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
+                <entry file="file://$PROJECT_DIR$/javascript/start/index.js">
+                  <provider selected="true" editor-type-id="text-editor">
+                    <state relative-caret-position="459">
+                      <caret line="27" column="1" selection-start-line="27" selection-start-column="1" selection-end-line="27" selection-end-column="1" />
+                    </state>
+                  </provider>
+                </entry>
+              </file>
+              <file leaf-file-name="modelManager.js" pinned="false" current-in-tab="false">
+                <entry file="file://$PROJECT_DIR$/javascript/model/modelManager.js">
+                  <provider selected="true" editor-type-id="text-editor">
+                    <state relative-caret-position="391">
+                      <caret line="23" column="25" selection-start-line="23" selection-start-column="25" selection-end-line="23" selection-end-column="25" />
+                    </state>
+                  </provider>
+                </entry>
+              </file>
+              <file leaf-file-name="myMath.js" pinned="false" current-in-tab="false">
+                <entry file="file://$PROJECT_DIR$/javascript/model/anotherFunctiun/myMath.js">
+                  <provider selected="true" editor-type-id="text-editor">
+                    <state relative-caret-position="127">
+                      <caret line="105" column="16" lean-forward="true" selection-start-line="105" selection-start-column="16" selection-end-line="105" selection-end-column="16" />
+                    </state>
+                  </provider>
+                </entry>
+              </file>
+              <file leaf-file-name="excel.js" pinned="false" current-in-tab="false">
+                <entry file="file://$PROJECT_DIR$/javascript/model/anotherFunctiun/excel.js">
+                  <provider selected="true" editor-type-id="text-editor">
+                    <state relative-caret-position="354">
+                      <caret line="25" column="9" selection-start-line="25" selection-start-column="9" selection-end-line="25" selection-end-column="9" />
+                    </state>
+                  </provider>
+                </entry>
+              </file>
+              <file leaf-file-name="ajoutPays.html" pinned="false" current-in-tab="false">
+                <entry file="file://$PROJECT_DIR$/html/ajoutPays.html">
+                  <provider selected="true" editor-type-id="text-editor">
+                    <state relative-caret-position="289">
+                      <caret line="41" column="61" selection-start-line="41" selection-start-column="61" selection-end-line="41" selection-end-column="61" />
+                      <folding>
+                        <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+                        <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+                      </folding>
+                    </state>
+                  </provider>
+                </entry>
+              </file>
+              <file leaf-file-name="manufact.js" pinned="false" current-in-tab="false">
+                <entry file="file://$PROJECT_DIR$/javascript/manufacturing/manufact.js">
+                  <provider selected="true" editor-type-id="text-editor">
+                    <state relative-caret-position="901">
+                      <caret line="745" column="29" lean-forward="true" selection-start-line="446" selection-start-column="74" selection-end-line="446" selection-end-column="84" />
+                    </state>
+                  </provider>
+                </entry>
+              </file>
+              <file leaf-file-name="data.js" pinned="false" current-in-tab="false">
+                <entry file="file://$PROJECT_DIR$/javascript/data/data.js">
+                  <provider selected="true" editor-type-id="text-editor">
+                    <state relative-caret-position="-244">
+                      <caret line="9" column="30" selection-start-line="9" selection-start-column="30" selection-end-line="9" selection-end-column="30" />
+                    </state>
+                  </provider>
+                </entry>
+              </file>
+            </leaf>
+          </split-first>
+          <split-second>
+            <leaf>
+              <file leaf-file-name="manufact.js" pinned="false" current-in-tab="true">
+                <entry file="file://$PROJECT_DIR$/javascript/manufacturing/manufact.js">
+                  <provider selected="true" editor-type-id="text-editor">
+                    <state relative-caret-position="246">
+                      <caret line="446" column="84" lean-forward="true" selection-start-line="446" selection-start-column="74" selection-end-line="446" selection-end-column="84" />
+                    </state>
+                  </provider>
+                </entry>
+              </file>
+            </leaf>
+          </split-second>
+        </splitter>
+      </split-first>
+      <split-second>
+        <leaf>
+          <file leaf-file-name="script.js" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/javascript/start/script.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="164">
+                  <caret line="147" column="26" selection-start-line="147" selection-start-column="26" selection-end-line="147" selection-end-column="26" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-second>
+    </splitter>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -201,8 +228,8 @@
         <option value="$PROJECT_DIR$/javascript/model/anotherFunctiun/myMath.js" />
         <option value="$PROJECT_DIR$/javascript/view/directlyChange/ModeleView.js" />
         <option value="$PROJECT_DIR$/javascript/manufacturing/manufact.js" />
-        <option value="$PROJECT_DIR$/css/general.css" />
         <option value="$PROJECT_DIR$/html/ajoutPays.html" />
+        <option value="$PROJECT_DIR$/css/general.css" />
       </list>
     </option>
   </component>
@@ -483,7 +510,7 @@
       <workItem from="1528093580012" duration="6837000" />
       <workItem from="1528180274834" duration="22555000" />
       <workItem from="1528213433532" duration="1000" />
-      <workItem from="1528266231471" duration="14104000" />
+      <workItem from="1528266231471" duration="23299000" />
     </task>
     <task id="LOCAL-00001" summary="mis en place d'un code propre">
       <created>1526980633672</created>
@@ -587,7 +614,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="484798000" />
+    <option name="totallyTimeSpent" value="493993000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -651,7 +678,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="2" />
+      <option name="time" value="3" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
@@ -950,52 +977,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/javascript/data/data.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="30" selection-start-line="9" selection-start-column="30" selection-end-line="9" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/javascript/model/anotherFunctiun/excel.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="331">
-          <caret line="25" column="9" selection-start-line="25" selection-start-column="9" selection-end-line="25" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/javascript/start/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="27" column="1" selection-start-line="27" selection-start-column="1" selection-end-line="27" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/javascript/start/reference.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="501">
-          <caret line="100" column="9" selection-start-line="100" selection-start-column="9" selection-end-line="100" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/javascript/view/directlyChange/test.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1581">
           <caret line="93" column="36" selection-start-line="93" selection-start-column="36" selection-end-line="93" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/javascript/model/model.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4386">
-          <caret line="258" column="5" selection-start-line="258" selection-start-column="5" selection-end-line="258" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/javascript/model/modelManager.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="23" column="25" selection-start-line="23" selection-start-column="25" selection-end-line="23" selection-end-column="25" />
         </state>
       </provider>
     </entry>
@@ -1031,60 +1016,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/javascript/view/viewGenerator/graphGenerator.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="490">
-          <caret line="143" column="61" selection-start-line="143" selection-start-column="61" selection-end-line="143" selection-end-column="61" />
-          <folding>
-            <element signature="n#style#0;n#span#0;n#li#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/javascript/view/viewGenerator/bootstrapView.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="271" column="77" selection-start-line="271" selection-start-column="77" selection-end-line="271" selection-end-column="77" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/javascript/view/viewGenerator/ViewGenerator.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1615">
-          <caret line="130" column="120" selection-start-line="130" selection-start-column="120" selection-end-line="130" selection-end-column="120" />
-          <folding>
-            <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#strong#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/javascript/start/script.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="535">
-          <caret line="186" lean-forward="true" selection-start-line="186" selection-end-line="186" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/javascript/model/anotherFunctiun/myMath.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="297">
-          <caret line="109" column="52" selection-start-line="109" selection-start-column="52" selection-end-line="109" selection-end-column="52" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/javascript/view/directlyChange/ModeleView.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
           <caret line="1" column="109" selection-start-line="1" selection-start-column="109" selection-end-line="1" selection-end-column="109" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/javascript/manufacturing/manufact.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="745" column="29" lean-forward="true" selection-start-line="745" selection-start-column="29" selection-end-line="745" selection-end-column="29" />
         </state>
       </provider>
     </entry>
@@ -1108,26 +1043,110 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/html/graphForm.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="29" column="77" selection-start-line="29" selection-start-column="77" selection-end-line="29" selection-end-column="77" />
+        <state relative-caret-position="238">
+          <caret line="29" column="61" selection-start-line="29" selection-start-column="61" selection-end-line="29" selection-end-column="61" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/css/general.css">
+    <entry file="file://$PROJECT_DIR$/javascript/view/viewGenerator/graphGenerator.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="416">
-          <caret line="153" column="17" lean-forward="true" selection-start-line="153" selection-start-column="17" selection-end-line="153" selection-end-column="17" />
+        <state relative-caret-position="490">
+          <caret line="143" column="61" selection-start-line="143" selection-start-column="61" selection-end-line="143" selection-end-column="61" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/javascript/view/viewGenerator/ViewGenerator.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="626">
+          <caret line="130" column="120" selection-start-line="130" selection-start-column="120" selection-end-line="130" selection-end-column="120" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/javascript/view/viewGenerator/bootstrapView.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="271" column="77" selection-start-line="271" selection-start-column="77" selection-end-line="271" selection-end-column="77" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/javascript/start/reference.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="524">
+          <caret line="100" column="9" selection-start-line="100" selection-start-column="9" selection-end-line="100" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/javascript/start/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="459">
+          <caret line="27" column="1" selection-start-line="27" selection-start-column="1" selection-end-line="27" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/javascript/model/modelManager.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="23" column="25" selection-start-line="23" selection-start-column="25" selection-end-line="23" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/javascript/model/model.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="626">
+          <caret line="258" column="5" selection-start-line="258" selection-start-column="5" selection-end-line="258" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/javascript/model/anotherFunctiun/myMath.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="127">
+          <caret line="105" column="16" lean-forward="true" selection-start-line="105" selection-start-column="16" selection-end-line="105" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/javascript/data/data.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-244">
+          <caret line="9" column="30" selection-start-line="9" selection-start-column="30" selection-end-line="9" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/javascript/model/anotherFunctiun/excel.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="354">
+          <caret line="25" column="9" selection-start-line="25" selection-start-column="9" selection-end-line="25" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/javascript/start/script.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="544">
+          <caret line="186" lean-forward="true" selection-start-line="186" selection-end-line="186" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/javascript/manufacturing/manufact.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="901">
+          <caret line="745" column="29" lean-forward="true" selection-start-line="446" selection-start-column="74" selection-end-line="446" selection-end-column="84" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/html/ajoutPays.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="83" lean-forward="true" selection-start-line="83" selection-end-line="83" />
+        <state relative-caret-position="289">
+          <caret line="41" column="61" selection-start-line="41" selection-start-column="61" selection-end-line="41" selection-end-column="61" />
           <folding>
             <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/general.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="467">
+          <caret line="188" column="7" selection-start-line="188" selection-start-column="7" selection-end-line="188" selection-end-column="7" />
         </state>
       </provider>
     </entry>

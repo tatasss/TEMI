@@ -12,6 +12,7 @@
     <script src="../node_modules/chart.js/dist/Chart.min.js"></script>
     <script src="../node_modules/chart.js/dist/Chart.bundle.min.js"></script>
     <script src="../node_modules/excellentexport/dist/excellentexport.js"></script>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 </head>
 <body>
@@ -27,68 +28,347 @@
     </div>
 </nav>
 <div class="container">
+
     <h1>Ajouter un pays</h1>
     <p>Pour creer un nouveau pays, veuillez remplir le formulaire si dessous</p>
-    <h3>Général</h3>
-    <div class="form-group">
 
-        <label>nom</label>
-        <input type="text" class="form-control" id="nomPays" title="actuPays"/>
-    </div>
-    <div class="form-group">
 
-        <label>code ISO3</label>
-        <p>Le code ISO est une codification internationale créé par l'International Standardization Organization (ISO)
-            qui attribue un code unique de trois lettres à toute devise de la planète pour éviter toute ambiguïté dans
-            leurs identifications et leurs désignations. Les deux premières lettres correspondent au nom du pays, la
-            dernière au nom de la monnaie nationale. En cas de changement de monnaie nationale, seule la dernière lettre
-            varie.</p>
-        <input type="text" class="form-control" id="codePays" title="codePays"/>
-    </div>
-    <h3>code Général des Impots</h3>
-    <div class="panel panel-default">
-        <div class="panel-heading">
-            <p><strong>taux d'impot :</strong></p>
+    <div id="myCarousel" class="carousel slide w3-container borderhide" data-interval="false">
+        <!-- Indicators -->
+        <ol class="carousel-indicators lol">
+            <li data-target="#myCarousel" data-slide-to="0" class="active"> </li>
+            <li data-target="#myCarousel" data-slide-to="1"> </li>
+            <li data-target="#myCarousel" data-slide-to="2"> </li>
+            <li data-target="#myCarousel" data-slide-to="3"> </li>
+        </ol>
+        <div class=" borderhide">
+            <div class=" borderhide" id="mapage">
+
+                <!-- Wrapper for slides -->
+                <div class="carousel-inner borderhide">
+                    <div class="item active borderhide">
+                        <h3>Général</h3>
+                        <div class="form-group">
+                            <label>nom</label>
+                            <input type="text" class="form-control" id="nomPays" title="nomPays"/>
+                        </div>
+                        <div class="form-group">
+                            <label>code ISO3</label>
+                            <p>Le code ISO est une codification internationale créé par l'International Standardization
+                                Organization (ISO)
+                                qui attribue un code unique de trois lettres à toute devise de la planète pour éviter
+                                toute
+                                ambiguïté dans
+                                leurs identifications et leurs désignations. Les deux premières lettres correspondent au
+                                nom du
+                                pays, la
+                                dernière au nom de la monnaie nationale. En cas de changement de monnaie nationale,
+                                seule la
+                                dernière lettre
+                                varie.</p>
+                            <input type="text" class="form-control" id="codePays" title="codePays"/>
+                        </div>
+                    </div>
+
+                    <div class="item borderhide" >
+                        <h3>code Général des Impots</h3>
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <div class="panel panel-default">
+                                    <div class="panel-heading">
+                                        <p><strong>taux d'impot :</strong></p>
+                                    </div>
+                                    <div class="panel-body">
+                                        <div class="form-group">
+                                            <label>cotisation foncière des entreprises</label>
+                                            <input type="text" class="form-control" id="cfeImpPays" title="cfeImpPays"/>
+                                        </div>
+                                        <div class="form-group">
+                                            <label>impôts société</label>
+                                            <input type="text" class="form-control" id="isImpPays" title="isImpPays"/>
+                                        </div>
+                                        <div class="form-group">
+                                            <label>impôts minimum forfaitaire</label>
+                                            <input type="text" class="form-control" id="imfImpPays" title="imfImpPays"/>
+                                        </div>
+                                        <div class="form-group">
+                                            <label>impôts sur le revenu de la valeur mobilières</label>
+                                            <input type="text" class="form-control" id="irvmImpPays"
+                                                   title="irvmImpPays"/>
+                                        </div>
+                                        <div class="form-group">
+                                            <label>impôts sur les revenu des creances</label>
+                                            <input type="text" class="form-control" id="ircImpPays" title="ircImpPays"/>
+                                        </div>
+                                        <div class="form-group">
+                                            <label>taxe sur la valeur ajoutée du pétrole</label>
+                                            <input type="text" class="form-control" id="tvaPetroleImpPays"
+                                                   title="tvaPetroleImpPays"/>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="panel panel-default">
+                                    <div class="panel-heading">
+                                        <p><strong>duree d'ammortissement :</strong></p>
+                                    </div>
+                                    <div class="panel-body">
+                                        <div class="form-group">
+                                            <label>cotisation foncière des entreprises</label>
+                                            <input type="text" class="form-control" id="cfeAmmortPays"
+                                                   title="cfeAmmortPays"/>
+                                        </div>
+                                        <div class="form-group">
+                                            <label>impôts société</label>
+                                            <input type="text" class="form-control" id="isAmmortPays"
+                                                   title="isAmmortPays"/>
+                                        </div>
+                                        <div class="form-group">
+                                            <label>impôts minimum forfaitaire</label>
+                                            <input type="text" class="form-control" id="imfAmmortPays"
+                                                   title="imfAmmortPays"/>
+                                        </div>
+                                        <div class="form-group">
+                                            <label>impôts sur le revenu de la valeur mobilières</label>
+                                            <input type="text" class="form-control" id="irvmAmmortPays"
+                                                   title="irvmAmmortPays"/>
+                                        </div>
+                                        <div class="form-group">
+                                            <label>impôts sur les revenu des creances</label>
+                                            <input type="text" class="form-control" id="ircAmmortPays"
+                                                   title="ircAmmortPays"/>
+                                        </div>
+                                        <div class="form-group">
+                                            <label>taxe sur la valeur ajoutée du pétrole</label>
+                                            <input type="text" class="form-control" id="tvaPetroleAmmortPays"
+                                                   title="tvaPetroleAmmortPays"/>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="item borderhide">
+
+                        <h3>code des investissements</h3>
+
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <p>cfe</p>
+                            </div>
+                            <div class="panel-body">
+                                <div class="row">
+                                    <div class="col-sm-4">
+                                        <div class="form-group">
+                                            <label>duree</label>
+                                            <input type="text" class="form-control" id="dureeCFEInvestPays"
+                                                   title="dureeCFEInvestPays"/>
+                                        </div>
+
+                                    </div>
+                                    <div class="col-sm-4">
+                                        <div class="form-group">
+                                            <label>taux</label>
+                                            <input type="text" class="form-control" id="tauxCFEInvestPays"
+                                                   title="tauxCFEInvestPays"/>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-4">
+                                        <div class="form-group">
+                                            <label>reduction exonération</label>
+                                            <input type="text" class="form-control" id="reducExoCFEInvestPays"
+                                                   title="reducExoCFEInvestPays"/>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="panel panel-default borderhide">
+                            <div class="panel-heading">
+                                <p>IS</p>
+                            </div>
+                            <div class="panel-body">
+                                <div class="row">
+                                    <div class="col-sm-4">
+                                        <div class="form-group">
+                                            <label>duree</label>
+                                            <input type="text" class="form-control" id="dureeISInvestPays"
+                                                   title="dureeISInvestPays"/>
+                                        </div>
+
+                                    </div>
+                                    <div class="col-sm-4">
+                                        <div class="form-group">
+                                            <label>taux</label>
+                                            <input type="text" class="form-control" id="tauxISInvestPays"
+                                                   title="tauxISInvestPays"/>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-4">
+                                        <div class="form-group">
+                                            <label>reduction exonération</label>
+                                            <input type="text" class="form-control" id="reducExoISInvestPays"
+                                                   title="reducExoISInvestPays"/>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="panel panel-default ">
+                            <div class="panel-heading">
+                                <p>IMF</p>
+                            </div>
+                            <div class="panel-body">
+                                <div class="row">
+                                    <div class="col-sm-4">
+                                        <div class="form-group">
+                                            <label>duree</label>
+                                            <input type="text" class="form-control" id="dureeIMFInvestPays"
+                                                   title="dureeIMFInvestPays"/>
+                                        </div>
+
+                                    </div>
+                                    <div class="col-sm-4">
+                                        <div class="form-group">
+                                            <label>taux</label>
+                                            <input type="text" class="form-control" id="tauxIMFInvestPays"
+                                                   title="tauxIMFInvestPays"/>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-4">
+                                        <div class="form-group">
+                                            <label>reduction exonération</label>
+                                            <input type="text" class="form-control" id="reducExoIMFInvestPays"
+                                                   title="reducExoIMFInvestPays"/>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item borderhide">
+                        <h3>code des investissements</h3>
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <p>IRVM</p>
+                            </div>
+                            <div class="panel-body">
+                                <div class="row">
+                                    <div class="col-sm-4">
+                                        <div class="form-group">
+                                            <label>duree</label>
+                                            <input type="text" class="form-control" id="dureeIRVMInvestPays"
+                                                   title="dureeIRVMInvestPays"/>
+                                        </div>
+
+                                    </div>
+                                    <div class="col-sm-4">
+                                        <div class="form-group">
+                                            <label>taux</label>
+                                            <input type="text" class="form-control" id="tauxIRVMInvestPays"
+                                                   title="tauxIRVMInvestPays"/>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-4">
+                                        <div class="form-group">
+                                            <label>reduction exonération</label>
+                                            <input type="text" class="form-control" id="reducExoIRVMInvestPays"
+                                                   title="reducExoIRVMInvestPays"/>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <p>IRC</p>
+                            </div>
+                            <div class="panel-body">
+                                <div class="row">
+                                    <div class="col-sm-4">
+                                        <div class="form-group">
+                                            <label>duree</label>
+                                            <input type="text" class="form-control" id="dureeIRCInvestPays"
+                                                   title="dureeIRCInvestPays"/>
+                                        </div>
+
+                                    </div>
+                                    <div class="col-sm-4">
+                                        <div class="form-group">
+                                            <label>taux</label>
+                                            <input type="text" class="form-control" id="tauxIRCInvestPays"
+                                                   title="tauxIRCInvestPays"/>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-4">
+                                        <div class="form-group">
+                                            <label>reduction exonération</label>
+                                            <input type="text" class="form-control" id="reducExoIRCInvestPays"
+                                                   title="reducExoIRCInvestPays"/>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <p>tva Petrole</p>
+                            </div>
+                            <div class="panel-body">
+                                <div class="row">
+                                    <div class="col-sm-4">
+                                        <div class="form-group">
+                                            <label>duree</label>
+                                            <input type="text" class="form-control" id="dureeTVAPetroleInvestPays"
+                                                   title="dureeTVAPetroleInvestPays"/>
+                                        </div>
+
+                                    </div>
+                                    <div class="col-sm-4">
+                                        <div class="form-group">
+                                            <label>taux</label>
+                                            <input type="text" class="form-control" id="tauxTVAPetroleInvestPays"
+                                                   title="tauxTVAPetroleInvestPays"/>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-4">
+                                        <div class="form-group">
+                                            <label>reduction exonération</label>
+                                            <input type="text" class="form-control" id="reducExoTVAPetroleInvestPays"
+                                                   title="reducExoTVAPetroleInvestPays"/>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class=" borderhide">
+
+                <!-- Left and right controls -->
+                <button class="left" href="#myCarousel" data-slide="prev">
+                    <span class="glyphicon glyphicon-chevron-left"> </span>
+                    avant
+                </button>
+                <button id="suivant" class="right" href="#myCarousel" data-slide="next">
+                    suivant
+                    <span class="glyphicon glyphicon-chevron-right"> </span>
+                </button>
+            </div>
         </div>
-        <div class="panel-body">
-            <div class="form-group">
-
-                <label>cotisation foncière des entreprises</label>
-                <input type="text" class="form-control" id="nomPays" title="actuPays"/>
-            </div>
-            <div class="form-group">
-
-                <label>impôts société</label>
-                <input type="text" class="form-control" id="nomPays" title="actuPays"/>
-            </div>
-            <div class="form-group">
-
-                <label>impôts minimum forfaitaire</label>
-                <input type="text" class="form-control" id="nomPays" title="actuPays"/>
-            </div>
-            <div class="form-group">
-
-                <label>impôts sur le revenu de la valeur mobilières</label>
-                <input type="text" class="form-control" id="nomPays" title="actuPays"/>
-            </div>
-            <div class="form-group">
-
-                <label>impôts sur les revenu des creances</label>
-                <input type="text" class="form-control" id="nomPays" title="actuPays"/>
-            </div>
-            <div class="form-group">
-
-                <label>taxe sur la valeur ajoutée du pétrole</label>
-                <input type="text" class="form-control" id="nomPays" title="actuPays"/>
-            </div>
-
-        </div>
     </div>
-
-
-
-
 </div>
+
+
 <div class="modal fade" id="myModal" role="dialog">
     <div class="modal-dialog">
 
@@ -104,7 +384,8 @@
                 <form role="form">
                     <div class="form-group">
                         <label>Veuillez saisir le taux d'actualisation</label>
-                        <input type="text" class="form-control" id="actualistionCompa" title="actualisation" value="">
+                        <input type="text" class="form-control" id="actualistionCompa" title="actualisation"
+                               value="">
                     </div>
                     <div class="form-group">
                         <label>Regime fiscale:</label>
@@ -114,11 +395,15 @@
                         </select>
                     </div>
 
-                    <button  type="submit" class="btn btn-success btn-block" id="myCont" onclick="debutCompa($('#actualistionCompa').val(), $('#REGIMECmpta').val());">continuer</button>
+                    <button type="submit" class="btn btn-success btn-block" id="myCont"
+                            onclick="debutCompa($('#actualistionCompa').val(), $('#REGIMECmpta').val());">
+                        continuer
+                    </button>
                 </form>
             </div>
             <div class="modal-footer">
-                <button type="submit" class="btn btn-danger btn-default pull-left" onclick="retourModal()" data-dismiss="modal"><span
+                <button type="submit" class="btn btn-danger btn-default pull-left" onclick="retourModal()"
+                        data-dismiss="modal"><span
                         class="glyphicon glyphicon-remove"/> Annuler
                 </button>
             </div>

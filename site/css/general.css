@@ -136,6 +136,9 @@ thead {
 .hide{
     border:0 solid white;
 }
+.Borderhide{
+    border:0 solid white;
+}
 nav{
     background-color: #205796;
     max-height: 100%;
@@ -158,4 +161,33 @@ nav{
 }
 .container{
     margin-top:5%;
+}
+.item{
+    background-color: white;
+}
+.blank{
+    background-color: white;
+    color: #205796;
+
+}
+.col{
+    background-color: #205796;
+    border: 1px solid #205796;
+}
+#mapage{
+    min-height: 100%;
+    height:70vh;
+}
+#suivant{
+    float: right;
+}
+.lol li{
+    background-color: #205796;
+    color:#205796;
+
+}
+.lol li.active{
+    background-color: #0333BB;
+    color: #0333BB;
+
 }
