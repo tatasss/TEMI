@@ -1,4 +1,9 @@
-
+/**
+ * @description This function is a constructor of MyMath Class
+ * @constructor
+ */
+let MyMath = function () {
+};
 /**
  * @description This function compute the return rate
  * @param {array} tab - the tab want to be use to find the return rate
@@ -141,3 +146,7 @@ MyMath.prototype.separatorNumberArray=function (array) {
     return tab;
 };
 
+/**
+ * @type {MyMath}
+ */
+let myMath = new MyMath();

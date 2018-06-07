@@ -7,21 +7,23 @@
  * @description  Constructor of the Class Data , the speciality of this class is to create the object with a primal information to make a model
  */
 let Data = function (landName, government, topic, margin) {
-    let randLands = mesPays();
+    let randLands =land;
     let mP;
-    for (let i = 0; i < randLands.length; i++) {
-        if (randLands[i].code() === landName) {
-            mP = randLands[i];
+    for (let i = 0; i < randLands.pays.length; i++) {
+        if (randLands.pays[i].code() === landName) {
+            mP = randLands.pays[i];
             break;
         }
-
     }
     /**
      *@description The getter of land
      * @return {Object}
      */
     this.land =function(){
-        return mP;
+
+        mP.pib=ref.givePIB(mP.code());
+       return mP;
+
     };
     /**
      * @description The getter of government

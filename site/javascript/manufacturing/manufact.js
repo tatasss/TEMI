@@ -1,42 +1,10 @@
 /**
- *@description This function find the pib of the land with the landCode and the worldBank API
- * @param {string} code - the code of the land
- * @return {number} Pib
+ * @description This function is a constructor of Manufactor Class
+ * @constructor
  */
-Ref.prototype.pibFind = function (code) {
-    let pib = 0;
-    let xhr = getXMLHttpRequest();
-    if (localStorage.getItem("xmlPib : " + code) !== undefined) {
-        if (localStorage.getItem("xmlPib : " + code) !== null) {
-            return parseFloat(localStorage.getItem("xmlPib : " + code)) * 582.79;
-        }
-    }
-    xhr.onreadystatechange = function () {
-        if (xhr.readyState === 4 && (xhr.status === 200)) {
-            try {
-                if (xhr.responseXML.getElementsByTagName("wb:data")[0].childNodes[3].childNodes[5].firstChild.nodeValue.toString() === code) {
-                    if (localStorage.getItem("xmlPib : " + code) === xhr.responseXML.getElementsByTagName("wb:data")[0].childNodes[5].childNodes[9].firstChild.nodeValue.toString()) {
-                        return
-                    }
-                    localStorage.setItem("xmlPib : " + xhr.responseXML.getElementsByTagName("wb:data")[0].childNodes[3].childNodes[5].firstChild.nodeValue.toString(), xhr.responseXML.getElementsByTagName("wb:data")[0].childNodes[5].childNodes[9].firstChild.nodeValue.toString());
-                }
-            } catch (e) {
-                console.log("Une erreur XML de l'api de workbank est apparu");
-            }
-        }
-    };
-    try {
-        xhr.open("GET", "http://api.worldbank.org/v2/countries/" + code + "/indicators/NY.GDP.PCAP.CD", true);
-        xhr.send(null);
-    }
-    catch (e) {
-    }
-    if (pib === 0) {
-        pib = parseFloat(localStorage.getItem("xmlPib : " + code)) * 582.79;
-    }
-    return pib;
-
+let Manufactor = function () {
 };
+
 /**
  * @Construct
  * @description The Constructor of Land
@@ -750,5 +718,8 @@ Manufactor.prototype.armortirModele = function (prix, durLin, coef, nom) {
         }
     };
 };
-
+/**
+ * @type {Manufactor}
+ */
+let maker = new Manufactor();
 

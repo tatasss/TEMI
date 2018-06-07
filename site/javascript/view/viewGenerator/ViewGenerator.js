@@ -1,4 +1,12 @@
 /**
+ * @description This function is a constructor of ViewGenerator Class
+ * @param {Model} modele - the modele use by this class to generate view
+ * @constructor
+ */
+let ViewGenerator = function (modele) {
+    this.modele = modele
+};
+/**
  * @description This function create a html to resultat in the index
  * @return {string}
  */

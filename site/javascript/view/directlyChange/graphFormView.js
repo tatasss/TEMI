@@ -55,9 +55,9 @@ supelemEnt = function (marge) {
     cptEnt = cptEnt2;
     posIn = 2;
 };
-let htmlFormPays = "<label for=\"sel1\">Pays:</label> <select class=\"form-control\" id=\"PAYS\">";
+let htmlFormPays = "<label for=\"sel1\">pays:</label> <select class=\"form-control\" id=\"PAYS\">";
 htmlFormPays += `<option value='tousPays'>Tous les Pays</option> `;
-mesPays().forEach(function (item) {
+land.pays.forEach(function (item) {
     if (item.name !== "Guinée Bissao") {
         if (item.name !== "Guinée équatoriale") {
             htmlFormPays += `<option value=${item.code()}>${item.name()}</option> `;
@@ -72,7 +72,7 @@ $("body").delegate("button", "click", function () {
         posIn = 1;
         if ($("#PAYS").val() === "tousPays") {
             paysChoisi = [];
-            mesPays().forEach(function (item) {
+            land.pays.forEach(function (item) {
                 if (item.name() !== "Guinée Bissao") {
                     if (item.name() !== "Guinée équatoriale") {
                         paysChoisi.push(item.name());
@@ -94,7 +94,7 @@ $("body").delegate("button", "click", function () {
     }
     if ($(this).parents('div').attr('id') === "addEnt") {
         try {
-            verifPourcent($('#marge').val());
+            verif.verifPourcent($('#marge').val());
             posIn = 2;
             bool = false;
             let madon = `<strong>entreprise ${cptEnt + 1} :</strong><br/>taux de marge:<br/>${$('#marge').val()} % `;

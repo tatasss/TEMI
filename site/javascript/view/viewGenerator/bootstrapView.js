@@ -1,4 +1,9 @@
-
+/**
+ * @description This function is a constructor of BootstrapView Class
+ * @constructor
+ */
+let BootstrapView = function () {
+};
 /**
  * @description This function create an Bootstrap Tabs
  * @return {string} html
@@ -310,3 +315,15 @@ BootstrapView.prototype.bootstrapTemiTabSpe = function (cote, head, tab, maMarge
         `<a class="btn btn-default " download="&{titre}.xls" href="#" id="anchorNewApi-xls" onClick="newApi('xls','${tabExcel.toString()}','${titre}')">Récupérer Excel</a>`;
     return html;
 };
+/**
+ * @description This function create an alert
+ * @param {string} str - the body of alert
+ * @return {string}
+ */
+BootstrapView.prototype.alertDanger=function(str){
+    return `<div class="alert alert-danger">${str}</div>`
+};
+/**
+ * @type {BootstrapView}
+ */
+let bootstrap = new BootstrapView();

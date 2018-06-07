@@ -1,4 +1,10 @@
 /**
+ * @description This function is a constructor of Graph Class
+ * @constructor
+ */
+let Graph = function () {
+};
+/**
  * @param {Array} modeleTab - the array of the modele use to put a graphique
  * @param {string} idGraph - the id of the graph
  * @param {string} idText - the id of the text
@@ -174,3 +180,7 @@ function createColorSet(number) {
 function getColorString(tab) {
     return 'rgba(' + tab.r + ',' + tab.g + ',' + tab.b + ', 1)';
 }
+/**
+ * @type {Graph}
+ */
+let graph = new Graph();

@@ -1,4 +1,10 @@
 /**
+ * @description This function is a constructor of ModelManager Class
+ * @constructor
+ */
+let ModelManager = function () {
+};
+/**
  * @description This function give the Invest on the modele
  * @param {Object } mE - the firm used by the modele
  * @param {number} pibchoix - the pib want be used
@@ -1032,3 +1038,8 @@ ModelManager.prototype.tauxRenInterTot=function(tab){
     return tau;
 };
 
+
+/**
+ * @type {ModelManager}
+ */
+let modelManager = new ModelManager();

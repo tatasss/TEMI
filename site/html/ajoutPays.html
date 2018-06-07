@@ -31,7 +31,7 @@
 
     <h1>Ajouter un pays</h1>
     <p>Pour creer un nouveau pays, veuillez remplir le formulaire si dessous</p>
-
+    <div id="formError"></div>
 
     <div id="myCarousel" class="carousel slide w3-container borderhide" data-interval="false">
         <!-- Indicators -->
@@ -53,6 +53,7 @@
                             <label>nom</label>
                             <input type="text" class="form-control" id="nomPays" title="nomPays"/>
                         </div>
+                        <div id="errorNom"></div>
                         <div class="form-group">
                             <label>code ISO3</label>
                             <p>Le code ISO est une codification internationale créé par l'International Standardization
@@ -69,6 +70,7 @@
                                 varie.</p>
                             <input type="text" class="form-control" id="codePays" title="codePays"/>
                         </div>
+                        <div id="errorCode"></div>
                     </div>
 
                     <div class="item borderhide">
@@ -84,28 +86,34 @@
                                             <label>cotisation foncière des entreprises</label>
                                             <input type="text" class="form-control" id="cfeImpPays" title="cfeImpPays"/>
                                         </div>
+                                        <div id="errorCFEImp"></div>
                                         <div class="form-group">
                                             <label>impôts société</label>
                                             <input type="text" class="form-control" id="isImpPays" title="isImpPays"/>
                                         </div>
+                                        <div id="errorISImp"></div>
                                         <div class="form-group">
                                             <label>impôts minimum forfaitaire</label>
                                             <input type="text" class="form-control" id="imfImpPays" title="imfImpPays"/>
                                         </div>
+                                        <div id="errorIMFImp"></div>
                                         <div class="form-group">
                                             <label>impôts sur le revenu de la valeur mobilières</label>
                                             <input type="text" class="form-control" id="irvmImpPays"
                                                    title="irvmImpPays"/>
                                         </div>
+                                        <div id="errorIRVMImp"></div>
                                         <div class="form-group">
                                             <label>impôts sur les revenu des creances</label>
                                             <input type="text" class="form-control" id="ircImpPays" title="ircImpPays"/>
                                         </div>
+                                        <div id="errorIRCImp"></div>
                                         <div class="form-group">
                                             <label>taxe sur la valeur ajoutée du pétrole</label>
                                             <input type="text" class="form-control" id="tvaPetroleImpPays"
                                                    title="tvaPetroleImpPays"/>
                                         </div>
+                                        <div id="errorTVAPETImp"></div>
                                     </div>
                                 </div>
                             </div>
@@ -120,31 +128,37 @@
                                             <input type="text" class="form-control" id="cfeAmmortPays"
                                                    title="cfeAmmortPays"/>
                                         </div>
+                                        <div id="errorCFEAmmort"></div>
                                         <div class="form-group">
                                             <label>impôts société</label>
                                             <input type="text" class="form-control" id="isAmmortPays"
                                                    title="isAmmortPays"/>
                                         </div>
+                                        <div id="errorISAmmort"></div>
                                         <div class="form-group">
                                             <label>impôts minimum forfaitaire</label>
                                             <input type="text" class="form-control" id="imfAmmortPays"
                                                    title="imfAmmortPays"/>
                                         </div>
+                                        <div id="errorIMFAmmort"></div>
                                         <div class="form-group">
                                             <label>impôts sur le revenu de la valeur mobilières</label>
                                             <input type="text" class="form-control" id="irvmAmmortPays"
                                                    title="irvmAmmortPays"/>
                                         </div>
+                                        <div id="errorIRVMAmmort"></div>
                                         <div class="form-group">
                                             <label>impôts sur les revenu des creances</label>
                                             <input type="text" class="form-control" id="ircAmmortPays"
                                                    title="ircAmmortPays"/>
                                         </div>
+                                        <div id="errorIRCAmmort"></div>
                                         <div class="form-group">
                                             <label>taxe sur la valeur ajoutée du pétrole</label>
                                             <input type="text" class="form-control" id="tvaPetroleAmmortPays"
                                                    title="tvaPetroleAmmortPays"/>
                                         </div>
+                                        <div id="errorTVAPETAmmort"></div>
                                     </div>
                                 </div>
                             </div>
@@ -168,7 +182,7 @@
                                             <input type="text" class="form-control" id="dureeCFEInvestPays"
                                                    title="dureeCFEInvestPays"/>
                                         </div>
-
+                                        <div id="dureeCFEError"></div>
                                     </div>
                                     <div class="col-sm-4">
                                         <div class="form-group">
@@ -176,6 +190,7 @@
                                             <input type="text" class="form-control" id="tauxCFEInvestPays"
                                                    title="tauxCFEInvestPays"/>
                                         </div>
+                                        <div id="tauxCFEError"></div>
                                     </div>
                                     <div class="col-sm-4">
                                         <div class="form-group">
@@ -183,6 +198,7 @@
                                             <input type="text" class="form-control" id="reducExoCFEInvestPays"
                                                    title="reducExoCFEInvestPays"/>
                                         </div>
+                                        <div id="reducExoCFEError"></div>
                                     </div>
 
                                 </div>
@@ -200,6 +216,7 @@
                                             <input type="text" class="form-control" id="dureeISInvestPays"
                                                    title="dureeISInvestPays"/>
                                         </div>
+                                        <div id="dureeISError"></div>
 
                                     </div>
                                     <div class="col-sm-4">
@@ -208,6 +225,7 @@
                                             <input type="text" class="form-control" id="tauxISInvestPays"
                                                    title="tauxISInvestPays"/>
                                         </div>
+                                        <div id="tauxISError"></div>
                                     </div>
                                     <div class="col-sm-4">
                                         <div class="form-group">
@@ -215,6 +233,7 @@
                                             <input type="text" class="form-control" id="reducExoISInvestPays"
                                                    title="reducExoISInvestPays"/>
                                         </div>
+                                        <div id="reducExoISError"></div>
                                     </div>
                                 </div>
                             </div>
@@ -231,6 +250,7 @@
                                             <input type="text" class="form-control" id="dureeIMFInvestPays"
                                                    title="dureeIMFInvestPays"/>
                                         </div>
+                                        <div id="dureeIMFError"></div>
 
                                     </div>
                                     <div class="col-sm-4">
@@ -239,6 +259,7 @@
                                             <input type="text" class="form-control" id="tauxIMFInvestPays"
                                                    title="tauxIMFInvestPays"/>
                                         </div>
+                                        <div id="tauxIMFError"></div>
                                     </div>
                                     <div class="col-sm-4">
                                         <div class="form-group">
@@ -246,6 +267,7 @@
                                             <input type="text" class="form-control" id="reducExoIMFInvestPays"
                                                    title="reducExoIMFInvestPays"/>
                                         </div>
+                                        <div id="reducExoIMFError"></div>
                                     </div>
 
                                 </div>
@@ -266,7 +288,7 @@
                                             <input type="text" class="form-control" id="dureeIRVMInvestPays"
                                                    title="dureeIRVMInvestPays"/>
                                         </div>
-
+                                        <div id="dureeIRVMError"></div>
                                     </div>
                                     <div class="col-sm-4">
                                         <div class="form-group">
@@ -274,6 +296,7 @@
                                             <input type="text" class="form-control" id="tauxIRVMInvestPays"
                                                    title="tauxIRVMInvestPays"/>
                                         </div>
+                                        <div id="tauxIRVMError"></div>
                                     </div>
                                     <div class="col-sm-4">
                                         <div class="form-group">
@@ -281,6 +304,7 @@
                                             <input type="text" class="form-control" id="reducExoIRVMInvestPays"
                                                    title="reducExoIRVMInvestPays"/>
                                         </div>
+                                        <div id="reducExoIRVMError"></div>
                                     </div>
 
                                 </div>
@@ -298,6 +322,7 @@
                                             <input type="text" class="form-control" id="dureeIRCInvestPays"
                                                    title="dureeIRCInvestPays"/>
                                         </div>
+                                        <div id="dureeIRCError"></div>
 
                                     </div>
                                     <div class="col-sm-4">
@@ -306,6 +331,7 @@
                                             <input type="text" class="form-control" id="tauxIRCInvestPays"
                                                    title="tauxIRCInvestPays"/>
                                         </div>
+                                        <div id="tauxIRCError"></div>
                                     </div>
                                     <div class="col-sm-4">
                                         <div class="form-group">
@@ -313,6 +339,7 @@
                                             <input type="text" class="form-control" id="reducExoIRCInvestPays"
                                                    title="reducExoIRCInvestPays"/>
                                         </div>
+                                        <div id="reducExoIRCError"></div>
                                     </div>
 
                                 </div>
@@ -330,6 +357,7 @@
                                             <input type="text" class="form-control" id="dureeTVAPetroleInvestPays"
                                                    title="dureeTVAPetroleInvestPays"/>
                                         </div>
+                                        <div id="dureeTVAPETROLEError"></div>
 
                                     </div>
                                     <div class="col-sm-4">
@@ -338,6 +366,7 @@
                                             <input type="text" class="form-control" id="tauxTVAPetroleInvestPays"
                                                    title="tauxTVAPetroleInvestPays"/>
                                         </div>
+                                        <div id="tauxTVAPETROLEError"></div>
                                     </div>
                                     <div class="col-sm-4">
                                         <div class="form-group">
@@ -345,6 +374,7 @@
                                             <input type="text" class="form-control" id="reducExoTVAPetroleInvestPays"
                                                    title="reducExoTVAPetroleInvestPays"/>
                                         </div>
+                                        <div id="reducExoTVAPETROLEError"></div>
                                     </div>
 
                                 </div>
@@ -358,6 +388,7 @@
                             <textarea class="form-control" rows="5" id="descDispoInvestPays"
                                       title="descDispoInvestPays"> </textarea>
                         </div>
+                        <div id="descDispoError"></div>
                         <div class="panel panel-default">
                             <div class="panel-heading">
                                 <p>regime d'investissement</p>
@@ -370,7 +401,7 @@
                                             <input type="text" class="form-control" id="nomCodeInvestPays"
                                                    title="nomCodeInvestPays"/>
                                         </div>
-
+                                        <div id="nomCodeInvestError"></div>
                                     </div>
                                     <div class="col-sm-4">
                                         <div class="form-group">
@@ -378,6 +409,7 @@
                                             <input type="text" class="form-control" id="nomRegInvestPays"
                                                    title="nomRegInvestPays"/>
                                         </div>
+                                        <div id="nomRegInvestError"></div>
                                     </div>
                                     <div class="col-sm-4">
                                         <div class="form-group">
@@ -385,6 +417,7 @@
                                             <input type="text" class="form-control" id="zonneInvestPays"
                                                    title="zonneInvestPays"/>
                                         </div>
+                                        <div id="zonneInvestError"></div>
                                     </div>
                                 </div>
                             </div>
@@ -453,14 +486,17 @@
     </div>
 </div>
 
-<script src="../javascript/start/reference.js"></script>
 <script src="../javascript/model/anotherFunctiun/verification.js"></script>
-<script src="../javascript/view/viewGenerator/bootstrapView.js"></script>
+<script src="../javascript/model/anotherFunctiun/XMLRequest.js"></script>
 <script src="../javascript/model/anotherFunctiun/myMath.js"></script>
-<script src="../javascript/model/model.js"></script>
-<script src="../javascript/model/modelManager.js"></script>
+<script src="../javascript/model/anotherFunctiun/Ref.js"></script>
+<script src="../javascript/view/viewGenerator/bootstrapView.js"></script>
 <script src="../javascript/manufacturing/manufact.js"></script>
+<script src="../javascript/model/modelManager.js"></script>
+<script src="../javascript/view/viewGenerator/graphGenerator.js"></script>
 <script src="../javascript/view/viewGenerator/ViewGenerator.js"></script>
+<script src="../javascript/model/model.js"></script>
+<script src="../javascript/data/PaysListe.js"></script>
 <script src="../javascript/data/data.js"></script>
 <script src="../javascript/start/script.js"></script>
 <script src="../javascript/view/directlyChange/PaysAddView.js"></script>

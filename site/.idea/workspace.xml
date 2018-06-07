@@ -2,18 +2,32 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b89c5143-0212-42c0-b73b-81dad73db30d" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/javascript/model/anotherFunctiun/verification.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/javascript/view/directlyChange/PaysAddView.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/javascript/data/PaysListe.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/javascript/model/anotherFunctiun/Ref.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/javascript/model/anotherFunctiun/XMLRequest.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dictionaries/matgaydu.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dictionaries/matgaydu.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/general.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/general.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/html/ajoutPays.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/ajoutPays.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/html/graphForm.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/graphForm.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/html/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/html/model.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/model.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/html/test.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/test.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/javascript/data/data.js" beforeDir="false" afterPath="$PROJECT_DIR$/javascript/data/data.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/javascript/manufacturing/manufact.js" beforeDir="false" afterPath="$PROJECT_DIR$/javascript/manufacturing/manufact.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/javascript/model/anotherFunctiun/myMath.js" beforeDir="false" afterPath="$PROJECT_DIR$/javascript/model/anotherFunctiun/myMath.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/javascript/start/reference.js" beforeDir="false" afterPath="$PROJECT_DIR$/javascript/start/reference.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/javascript/model/anotherFunctiun/verification.js" beforeDir="false" afterPath="$PROJECT_DIR$/javascript/model/anotherFunctiun/verification.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/javascript/model/model.js" beforeDir="false" afterPath="$PROJECT_DIR$/javascript/model/model.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/javascript/model/modelManager.js" beforeDir="false" afterPath="$PROJECT_DIR$/javascript/model/modelManager.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/javascript/start/reference.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/javascript/start/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/javascript/start/script.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/javascript/view/directlyChange/PaysAddView.js" beforeDir="false" afterPath="$PROJECT_DIR$/javascript/view/directlyChange/PaysAddView.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/javascript/view/directlyChange/ViewManufacturing.js" beforeDir="false" afterPath="$PROJECT_DIR$/javascript/view/directlyChange/ViewManufacturing.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/javascript/view/directlyChange/graphFormView.js" beforeDir="false" afterPath="$PROJECT_DIR$/javascript/view/directlyChange/graphFormView.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/javascript/view/viewGenerator/ViewGenerator.js" beforeDir="false" afterPath="$PROJECT_DIR$/javascript/view/viewGenerator/ViewGenerator.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/javascript/view/viewGenerator/bootstrapView.js" beforeDir="false" afterPath="$PROJECT_DIR$/javascript/view/viewGenerator/bootstrapView.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/javascript/view/viewGenerator/graphGenerator.js" beforeDir="false" afterPath="$PROJECT_DIR$/javascript/view/viewGenerator/graphGenerator.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -29,39 +43,30 @@
     <favorites_list name="site" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+    <leaf>
       <file leaf-file-name="test.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/html/test.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="518">
-              <caret line="46" column="75" selection-start-line="46" selection-start-column="75" selection-end-line="46" selection-end-column="75" />
+            <state relative-caret-position="119">
+              <caret line="7" column="77" selection-start-line="7" selection-start-column="77" selection-end-line="7" selection-end-column="77" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="myMath.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/javascript/model/anotherFunctiun/myMath.js">
+      <file leaf-file-name="PaysListe.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/javascript/data/PaysListe.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="748">
-              <caret line="126" column="1" lean-forward="true" selection-start-line="126" selection-start-column="1" selection-end-line="126" selection-end-column="1" />
+            <state relative-caret-position="595">
+              <caret line="50" lean-forward="true" selection-start-line="50" selection-end-line="50" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ModeleView.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/javascript/view/directlyChange/ModeleView.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="1" column="109" selection-start-line="1" selection-start-column="109" selection-end-line="1" selection-end-column="109" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ajoutPays.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="ajoutPays.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/html/ajoutPays.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="763">
-              <caret line="456" column="75" selection-start-line="456" selection-start-column="75" selection-end-line="456" selection-end-column="75" />
+            <state relative-caret-position="518">
+              <caret line="501" column="63" selection-start-line="501" selection-start-column="63" selection-end-line="501" selection-end-column="63" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -70,20 +75,14 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="PaysAddView.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/javascript/view/directlyChange/PaysAddView.js">
+      <file leaf-file-name="graphGenerator.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/javascript/view/viewGenerator/graphGenerator.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="9" column="2" lean-forward="true" selection-start-line="9" selection-start-column="2" selection-end-line="9" selection-end-column="2" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="manufact.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/javascript/manufacturing/manufact.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="17" column="116" lean-forward="true" selection-start-line="17" selection-start-column="69" selection-end-line="17" selection-end-column="116" />
+            <state relative-caret-position="589">
+              <caret line="185" column="24" selection-start-line="185" selection-start-column="24" selection-end-line="185" selection-end-column="24" />
+              <folding>
+                <element signature="n#style#0;n#span#0;n#li#0;n#!!top" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -91,17 +90,17 @@
       <file leaf-file-name="graphForm.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/html/graphForm.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="297">
-              <caret line="91" column="75" selection-start-line="91" selection-start-column="75" selection-end-line="91" selection-end-column="75" />
+            <state relative-caret-position="348">
+              <caret line="94" selection-start-line="94" selection-end-line="104" selection-end-column="53" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="verification.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/javascript/model/anotherFunctiun/verification.js">
+      <file leaf-file-name="Ref.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/javascript/model/anotherFunctiun/Ref.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="450">
-              <caret line="46" column="13" selection-start-line="46" selection-start-column="13" selection-end-line="46" selection-end-column="13" />
+            <state relative-caret-position="300">
+              <caret line="66" column="29" lean-forward="true" selection-start-line="66" selection-start-column="29" selection-end-line="66" selection-end-column="29" />
             </state>
           </provider>
         </entry>
@@ -109,17 +108,39 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/html/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="42">
-              <caret line="86" column="119" lean-forward="true" selection-start-line="86" selection-start-column="119" selection-end-line="86" selection-end-column="119" />
+            <state relative-caret-position="467">
+              <caret line="103" column="73" selection-start-line="103" selection-start-column="73" selection-end-line="103" selection-end-column="73" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="reference.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/javascript/start/reference.js">
+      <file leaf-file-name="model.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/html/model.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="277">
-              <caret line="44" column="25" lean-forward="true" selection-start-line="44" selection-start-column="25" selection-end-line="44" selection-end-column="25" />
+            <state relative-caret-position="164">
+              <caret line="422" selection-start-line="422" selection-end-line="434" selection-end-column="53" />
+              <folding>
+                <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="script.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/javascript/start/script.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="501">
+              <caret line="88" selection-start-line="88" selection-end-line="88" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="XMLRequest.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/javascript/model/anotherFunctiun/XMLRequest.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="51">
+              <caret line="3" column="3" selection-start-line="3" selection-start-column="3" selection-end-line="3" selection-end-column="3" />
             </state>
           </provider>
         </entry>
@@ -153,9 +174,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/javascript/donne/Donne.js" />
-        <option value="$PROJECT_DIR$/javascript/modele/MyMath.js" />
-        <option value="$PROJECT_DIR$/javascript/modele/modeleManager.js" />
         <option value="$PROJECT_DIR$/html/modele.html" />
         <option value="$PROJECT_DIR$/javascript/vue/BootstrapVue.js" />
         <option value="$PROJECT_DIR$/javascript/debut/reference.js" />
@@ -180,30 +198,33 @@
         <option value="$PROJECT_DIR$/doc/lol.graphql" />
         <option value="$APPLICATION_CONFIG_DIR$/consoles/ide/ide-scripting.js" />
         <option value="$PROJECT_DIR$/javascript/start/test.js" />
-        <option value="$PROJECT_DIR$/javascript/data/data.js" />
         <option value="$PROJECT_DIR$/javascript/model/anotherFunctiun/excel.js" />
-        <option value="$PROJECT_DIR$/javascript/model/model.js" />
-        <option value="$PROJECT_DIR$/javascript/model/modelManager.js" />
         <option value="$PROJECT_DIR$/javascript/start/index.js" />
         <option value="$PROJECT_DIR$/javascript/view/directlyChange/test.js" />
-        <option value="$PROJECT_DIR$/javascript/view/directlyChange/graphFormView.js" />
-        <option value="$PROJECT_DIR$/javascript/view/directlyChange/ViewManufacturing.js" />
-        <option value="$PROJECT_DIR$/javascript/view/viewGenerator/ViewGenerator.js" />
-        <option value="$PROJECT_DIR$/javascript/view/viewGenerator/graphGenerator.js" />
-        <option value="$PROJECT_DIR$/javascript/view/viewGenerator/bootstrapView.js" />
         <option value="$PROJECT_DIR$/javascript/view/directlyChange/ModeleView.js" />
-        <option value="$PROJECT_DIR$/javascript/manufacturing/manufact.js" />
         <option value="$PROJECT_DIR$/css/general.css" />
-        <option value="$PROJECT_DIR$/javascript/start/script.js" />
-        <option value="$PROJECT_DIR$/html/test.html" />
-        <option value="$PROJECT_DIR$/javascript/model/anotherFunctiun/myMath.js" />
-        <option value="$PROJECT_DIR$/html/ajoutPays.html" />
-        <option value="$PROJECT_DIR$/html/graphForm.html" />
-        <option value="$PROJECT_DIR$/html/index.html" />
-        <option value="$PROJECT_DIR$/html/model.html" />
-        <option value="$PROJECT_DIR$/javascript/start/reference.js" />
         <option value="$PROJECT_DIR$/javascript/view/directlyChange/PaysAddView.js" />
+        <option value="$PROJECT_DIR$/javascript/view/directlyChange/ViewManufacturing.js" />
+        <option value="$PROJECT_DIR$/javascript/view/directlyChange/graphFormView.js" />
+        <option value="$PROJECT_DIR$/javascript/view/viewGenerator/ViewGenerator.js" />
+        <option value="$PROJECT_DIR$/javascript/model/model.js" />
+        <option value="$PROJECT_DIR$/javascript/data/data.js" />
+        <option value="$PROJECT_DIR$/javascript/model/anotherFunctiun/myMath.js" />
+        <option value="$PROJECT_DIR$/javascript/model/modelManager.js" />
+        <option value="$PROJECT_DIR$/javascript/view/viewGenerator/bootstrapView.js" />
+        <option value="$PROJECT_DIR$/javascript/manufacturing/manufact.js" />
         <option value="$PROJECT_DIR$/javascript/model/anotherFunctiun/verification.js" />
+        <option value="$PROJECT_DIR$/javascript/view/viewGenerator/graphGenerator.js" />
+        <option value="$PROJECT_DIR$/javascript/start/reference.js" />
+        <option value="$PROJECT_DIR$/javascript/data/PaysListe.js" />
+        <option value="$PROJECT_DIR$/javascript/start/script.js" />
+        <option value="$PROJECT_DIR$/javascript/model/anotherFunctiun/XMLRequest.js" />
+        <option value="$PROJECT_DIR$/html/index.html" />
+        <option value="$PROJECT_DIR$/html/test.html" />
+        <option value="$PROJECT_DIR$/html/model.html" />
+        <option value="$PROJECT_DIR$/html/graphForm.html" />
+        <option value="$PROJECT_DIR$/javascript/model/anotherFunctiun/Ref.js" />
+        <option value="$PROJECT_DIR$/html/ajoutPays.html" />
       </list>
     </option>
   </component>
@@ -355,12 +376,6 @@
               <item name="site" type="b2602c69:ProjectViewProjectNode" />
               <item name="site" type="462c0819:PsiDirectoryNode" />
               <item name="javascript" type="462c0819:PsiDirectoryNode" />
-              <item name="manufacturing" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="site" type="b2602c69:ProjectViewProjectNode" />
-              <item name="site" type="462c0819:PsiDirectoryNode" />
-              <item name="javascript" type="462c0819:PsiDirectoryNode" />
               <item name="model" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -407,6 +422,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="full.screen.before.presentation.mode" value="false" />
     <property name="jsgraphql-node-editor-notification" value="false" />
+    <property name="last.edited.regexp" value="Sample Text" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/javascript/view/directlyChange" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_package_manager_path" value="npm" />
@@ -484,7 +500,8 @@
       <workItem from="1528093580012" duration="6837000" />
       <workItem from="1528180274834" duration="22555000" />
       <workItem from="1528213433532" duration="1000" />
-      <workItem from="1528266231471" duration="28631000" />
+      <workItem from="1528266231471" duration="28900000" />
+      <workItem from="1528353468757" duration="14845000" />
     </task>
     <task id="LOCAL-00001" summary="mis en place d'un code propre">
       <created>1526980633672</created>
@@ -588,7 +605,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="499325000" />
+    <option name="totallyTimeSpent" value="514439000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -604,24 +621,24 @@
     <editor active="true" />
     <layout>
       <window_info anchor="right" id="PlantUML" order="3" weight="0.33801955" />
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4991453" side_tool="true" visible="true" weight="0.18154034" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4991453" side_tool="true" visible="true" weight="0.18337408" />
       <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.49938875" weight="0.3298969" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" x="0" y="447" width="1680" height="116" id="Event Log" order="12" sideWeight="0.50183374" side_tool="true" weight="0.18327606" />
-      <window_info anchor="bottom" id="Find" order="1" sideWeight="0.48594132" weight="0.26231387" />
-      <window_info anchor="bottom" id="Version Control" order="8" sideWeight="0.35085574" side_tool="true" visible="true" weight="0.19473082" />
+      <window_info anchor="bottom" id="Find" order="1" sideWeight="0.48533008" weight="0.26231387" />
+      <window_info anchor="bottom" id="Version Control" order="8" sideWeight="0.51466995" side_tool="true" visible="true" weight="0.19473082" />
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info id="Structure" order="1" sideWeight="0.50085473" side_tool="true" weight="0.24327628" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="9" sideWeight="0.64914423" visible="true" weight="0.19473082" />
+      <window_info anchor="bottom" id="Terminal" order="9" sideWeight="0.648533" weight="0.19473082" />
       <window_info id="Favorites" order="2" sideWeight="0.50085473" side_tool="true" weight="0.24327628" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="TypeScript" order="10" />
       <window_info anchor="bottom" id="Inspection Results" order="11" sideWeight="0.49816626" weight="0.32875144" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Message" order="0" />
     </layout>
   </component>
@@ -656,26 +673,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="uml://JavaScript-modules-diagram/C:/Users/matgaydu/Documents/stage/TEMI/site/javascript/model/modelManager.js">
-      <provider selected="true" editor-type-id="UmlEditorProvider">
-        <state>
-          <ID>JavaScript-modules-diagram</ID>
-          <OriginalElement>$PROJECT_DIR$/javascript/model/modelManager.js</OriginalElement>
-          <nodes />
-          <notes />
-          <edges />
-          <settings layout="Hierarchic Group" zoom="1.0" x="648.0" y="266.0" />
-          <SelectedNodes />
-          <Categories>
-            <Category>All</Category>
-          </Categories>
-          <SCOPE>All</SCOPE>
-          <VISIBILITY>Details</VISIBILITY>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/javascript/extLibs/http_maxcdn.bootstrapcdn.com_bootstrap_3.3.7_js_bootstrap.js" />
-    <entry file="file://$APPLICATION_CONFIG_DIR$/javascript/extLibs/http_ajax.googleapis.com_ajax_libs_jquery_3.3.1_jquery.js" />
     <entry file="uml://JavaScript-modules-diagram/C:/Users/matgaydu/Documents/stage/TEMI/site/javascript/data/data.js">
       <provider selected="true" editor-type-id="UmlEditorProvider">
         <state>
@@ -827,45 +824,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/javascript/view/directlyChange/ViewManufacturing.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/javascript/view/directlyChange/graphFormView.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-901">
-          <caret line="10" selection-start-line="10" selection-end-line="10" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/css/tabCS.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
           <caret line="2" column="1" selection-start-line="2" selection-start-column="1" selection-end-line="2" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/javascript/view/viewGenerator/graphGenerator.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="490">
-          <caret line="143" column="61" selection-start-line="143" selection-start-column="61" selection-end-line="143" selection-end-column="61" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/javascript/view/viewGenerator/ViewGenerator.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="626">
-          <caret line="130" column="120" selection-start-line="130" selection-start-column="120" selection-end-line="130" selection-end-column="120" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/javascript/view/viewGenerator/bootstrapView.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="271" column="77" selection-start-line="271" selection-start-column="77" selection-end-line="271" selection-end-column="77" />
         </state>
       </provider>
     </entry>
@@ -876,17 +838,57 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/javascript/model/modelManager.js">
+    <entry file="file://$PROJECT_DIR$/javascript/view/directlyChange/ModeleView.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="23" column="25" selection-start-line="23" selection-start-column="25" selection-end-line="23" selection-end-column="25" />
+        <state relative-caret-position="17">
+          <caret line="1" column="109" selection-start-line="1" selection-start-column="109" selection-end-line="1" selection-end-column="109" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/javascript/data/data.js">
+    <entry file="file://$PROJECT_DIR$/css/general.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-244">
-          <caret line="9" column="30" selection-start-line="9" selection-start-column="30" selection-end-line="9" selection-end-column="30" />
+        <state relative-caret-position="246">
+          <caret line="174" column="30" lean-forward="true" selection-start-line="174" selection-start-column="30" selection-end-line="174" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/javascript/view/directlyChange/PaysAddView.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/javascript/view/directlyChange/ViewManufacturing.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="9" selection-start-line="1" selection-start-column="9" selection-end-line="1" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/javascript/view/directlyChange/graphFormView.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1513">
+          <caret line="89" column="33" lean-forward="true" selection-start-line="89" selection-start-column="33" selection-end-line="89" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/javascript/model/model.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="2" selection-start-line="7" selection-start-column="2" selection-end-line="7" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/javascript/view/viewGenerator/ViewGenerator.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-646">
+          <caret line="7" column="2" selection-start-line="7" selection-start-column="2" selection-end-line="7" selection-end-column="2" />
+          <folding>
+            <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#strong#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -897,109 +899,133 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/css/general.css">
+    <entry file="file://$PROJECT_DIR$/javascript/data/data.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="467">
-          <caret line="188" column="7" selection-start-line="188" selection-start-column="7" selection-end-line="188" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/javascript/model/model.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1340">
-          <caret line="258" column="5" selection-start-line="258" selection-start-column="5" selection-end-line="258" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/javascript/start/script.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="697">
-          <caret line="62" column="5" lean-forward="true" selection-start-line="62" selection-start-column="5" selection-end-line="62" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/html/model.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="382">
-          <caret line="422" column="75" selection-start-line="422" selection-start-column="75" selection-end-line="422" selection-end-column="75" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/html/test.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="518">
-          <caret line="46" column="75" selection-start-line="46" selection-start-column="75" selection-end-line="46" selection-end-column="75" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/javascript/start/reference.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="277">
-          <caret line="44" column="25" lean-forward="true" selection-start-line="44" selection-start-column="25" selection-end-line="44" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/html/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="42">
-          <caret line="86" column="119" lean-forward="true" selection-start-line="86" selection-start-column="119" selection-end-line="86" selection-end-column="119" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/javascript/view/directlyChange/ModeleView.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="109" selection-start-line="1" selection-start-column="109" selection-end-line="1" selection-end-column="109" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/html/graphForm.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="297">
-          <caret line="91" column="75" selection-start-line="91" selection-start-column="75" selection-end-line="91" selection-end-column="75" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/javascript/manufacturing/manufact.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="17" column="116" lean-forward="true" selection-start-line="17" selection-start-column="69" selection-end-line="17" selection-end-column="116" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/javascript/view/directlyChange/PaysAddView.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="2" lean-forward="true" selection-start-line="9" selection-start-column="2" selection-end-line="9" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/html/ajoutPays.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="763">
-          <caret line="456" column="75" selection-start-line="456" selection-start-column="75" selection-end-line="456" selection-end-column="75" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
+        <state relative-caret-position="221">
+          <caret line="22" selection-start-line="22" selection-end-line="22" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/javascript/model/anotherFunctiun/myMath.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="748">
-          <caret line="126" column="1" lean-forward="true" selection-start-line="126" selection-start-column="1" selection-end-line="126" selection-end-column="1" />
+        <state relative-caret-position="586">
+          <caret line="151" column="26" selection-start-line="151" selection-start-column="26" selection-end-line="151" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/javascript/model/modelManager.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="589">
+          <caret line="1044" column="38" selection-start-line="1044" selection-start-column="38" selection-end-line="1044" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/javascript/view/viewGenerator/bootstrapView.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="127">
+          <caret line="159" column="31" selection-start-line="159" selection-start-column="31" selection-end-line="159" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/javascript/manufacturing/manufact.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="538">
+          <caret line="723" column="29" selection-start-line="723" selection-start-column="29" selection-end-line="723" selection-end-column="29" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/javascript/model/anotherFunctiun/verification.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="46" column="13" selection-start-line="46" selection-start-column="13" selection-end-line="46" selection-end-column="13" />
+        <state relative-caret-position="586">
+          <caret line="83" column="23" selection-start-line="83" selection-start-column="23" selection-end-line="83" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/javascript/view/viewGenerator/graphGenerator.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="589">
+          <caret line="185" column="24" selection-start-line="185" selection-start-column="24" selection-end-line="185" selection-end-column="24" />
+          <folding>
+            <element signature="n#style#0;n#span#0;n#li#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/javascript/start/reference.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" selection-start-line="5" selection-end-line="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/javascript/data/PaysListe.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="595">
+          <caret line="50" lean-forward="true" selection-start-line="50" selection-end-line="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/javascript/start/script.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="501">
+          <caret line="88" selection-start-line="88" selection-end-line="88" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/javascript/model/anotherFunctiun/XMLRequest.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="3" selection-start-line="3" selection-start-column="3" selection-end-line="3" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/html/test.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="77" selection-start-line="7" selection-start-column="77" selection-end-line="7" selection-end-column="77" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/html/model.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="164">
+          <caret line="422" selection-start-line="422" selection-end-line="434" selection-end-column="53" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/javascript/model/anotherFunctiun/Ref.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="66" column="29" lean-forward="true" selection-start-line="66" selection-start-column="29" selection-end-line="66" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/html/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="467">
+          <caret line="103" column="73" selection-start-line="103" selection-start-column="73" selection-end-line="103" selection-end-column="73" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/html/graphForm.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="348">
+          <caret line="94" selection-start-line="94" selection-end-line="104" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/html/ajoutPays.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="518">
+          <caret line="501" column="63" selection-start-line="501" selection-start-column="63" selection-end-line="501" selection-end-column="63" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

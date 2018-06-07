@@ -1,4 +1,10 @@
 /**
+ * @description This function is a constructor of verif class
+ * @constructor
+ */
+let Verif = function () {
+};
+/**
  * @description This function verify if the the number is a purcent
  * @param {string} nombre - the number wold u verify if it's a purcent number
  * @return {number }
@@ -50,5 +56,31 @@ Verif.prototype.codeISO3 = function (code) {
     xhr.open("GET", "http://api.worldbank.org/v2/countries/" + code, true);
     xhr.send(null);
 };
+Verif.prototype.stringer=function( str){
+    let regex1 = /[a-zA-Z0-9]+/;
+    if (!regex1.test(str)){
+        throw new Error("veuillez entrer quelque chose");
+    }
+};
+Verif.prototype.inter=function( str){
+    let regex1 = /^[1-9]+[0-9]*$/;
+    if(str===''){
+        throw new Error("veuillez entrer quelque chose");
+    }
+    if(str===null){
+        throw new Error("veuillez entrer quelque chose");
+    }
+    if(str===undefined){
+        throw new Error("veuillez entrer quelque chose");
+    }
+    if (!regex1.test(str)){
+        throw new Error("veuillez entrer un entier");
+    }
+};
+
+/**
+ * @type {Verif}
+ */
+let verif =new Verif();
 //objectif de demain : mettre en place toutes les verfication pour validé le formulaire
 //mettre en place des zonne de vue exprès pour avertir les erreur(en mode alert)

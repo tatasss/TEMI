@@ -1,4 +1,12 @@
 /**
+ * @description This function is a constructor of Model class
+ * @param {Data} donnee - the donne used to construct the model
+ * @constructor
+ */
+let Model = function (donnee) {
+    this.donnee = donnee;
+};
+/**
  * @description This function Keep all the ModeleData
  * @return {{impotSelected: {cfe, is, imf, irvm, irc, tvaPetrole}, investissement: number, amortissementGeneral: Array, amortissement: Array, taxeAjout: {petrole, taux, tva}, employer: {salaire_cadre, salaire_secretaire, salaire_ouvrier, masse_salarial, tauxCfe, reel_CFE}, impotIMF: Array, impotIRVM: Array, ammortExcep: {duree, investissement, taux, limitation, dureeTab, baseAmorti, chargeAmorti}, taxeCreance: {chargeFinance, taux, irc}, resultCompta: {vente, achats, petrole, tva_petrole, depense_entretien, depense_admin, depense_pub, salaire_ouvrier, salaire_secretaire, salaire_cadre, cfe, chargeFinanciere, amortissement, benefice_comptable, taux_marge_avant__IS_IMF}, resultImpot: {benCompta, amortExep, benImpo}, actualisation: Array, impotSociete: Array, isImf: Array, impotTaxeCourent: {cfe, isimf, irvm, irc, tvaPetrole, total}, impotTaxeActu: {cfe, isimf, irvm, irc, tvaPetrole, total}, fluxTresSansImp: {courant, topic}, tauxeffMoy: *, fluxTresSansISIMF: {courant, topic}, fluxTresApresImpot: {courant, topic}, tauxRendInterneSImp: Array, tauxRendInterneSISIMF: Array, tauxRendInterneAImp: Array, tauxEffMargImpApIsImf: Array, tauxEffMargImpApImp: Array}}
  */
