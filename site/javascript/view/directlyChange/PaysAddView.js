@@ -3,15 +3,24 @@ let ajout=new Ajout();
 
 verif.codeISO3("ben");
 Ajout.prototype.addLand=function(){
-
+    console.log("on entre");
     try{
         ajout.verifierChanp();
+        let tax=maker.impot(Number.parseFloat($('#cfeImpPays').val()),Number.parseFloat($('#isImpPays').val()),Number.parseFloat($('#imfImpPays').val()),Number.parseFloat($('#irvmImpPays').val()),Number.parseFloat($('#ircImpPays').val()),Number.parseFloat($('#tvaPetroleImpPays').val()));
+        let amort=maker.ammortissement($('#cfeAmmortPays').val(),Number.parseFloat($('#isAmmortPays').val()),Number.parseFloat($('#imfAmmortPays').val()),Number.parseFloat($('#irvmAmmortPays').val()),Number.parseFloat($('#ircAmmortPays').val()),Number.parseFloat($('#tvaPetroleAmmortPays').val()) );
 
+        let invest=maker.investir(ajout.investirProt("CFE"),ajout.investirProt("IS"),ajout.investirProt("IMF"),ajout.investirProt("IRVM"),ajout.investirProt("IRC"),ajout.investirProt("TVAPetrole"));
+        console.log(invest.irc().duree());
+        let source=$('#nomCodeInvestPays').val()+"<br/>"+$('#nomRegInvestPays').val()+"<br/>"+$('#zonneInvestPays').val();
+        land.ajouterPays(maker.land($("#codePays").val().toUpperCase(),$("#nomPays").val(),tax,amort,invest,$('#descDispoInvestPays').val(),source));
     }
     catch (e) {
-
+        console.log(e)
     }
 
+};
+Ajout.prototype.investirProt=function (impStr){
+  return maker.impotPays($('#duree'+impStr+'InvestPays').val(),$('#taux'+impStr+'InvestPays').val(),$('#reducExo'+impStr+'InvestPays').val());
 };
 Ajout.prototype.verifierChanp=function(){
         document.getElementById("formError").innerHTML="";

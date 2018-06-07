@@ -1,5 +1,6 @@
 let startTime = new Date().getTime();
 let elapsedTime = 0;
+console.log(land.pays);
 let monModele;
 if (localStorage.getItem("don") !== undefined && localStorage.getItem("don") !== null) {
     let tab = localStorage.getItem("don").split(",");

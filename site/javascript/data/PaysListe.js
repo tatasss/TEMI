@@ -45,6 +45,6 @@ let Land=function() {
 };
 Land.prototype.ajouterPays=function(land){
     this.pays.push(land);
+
 };
 
-let land=new Land();
