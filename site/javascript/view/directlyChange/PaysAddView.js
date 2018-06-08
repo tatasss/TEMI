@@ -15,7 +15,6 @@ Ajout.prototype.addLand=function(){
         land.ajouterPays(maker.land($("#codePays").val().toUpperCase(),$("#nomPays").val(),tax,amort,invest,$('#descDispoInvestPays').val(),source));
     }
     catch (e) {
-        //console.log(e)
     }
 
 };
