@@ -69,6 +69,9 @@ Manufactor.prototype.land = function (code, name, tax, amortization, investment,
          */
         source: function () {
             return source;
+        },
+        toString:function () {
+            return this.name()+"|"+this.code()+"|"+this.impots().toString()+"|"+this.amortization().toString()+"|"+this.investment().toString()+"|"+this.override()+"|"+this.source();
         }
     };
 };
@@ -127,6 +130,9 @@ Manufactor.prototype.impot = function (cFE, iS, iMF, iRVM, iRC, tVA_Petrole) {
         tva_petrole: function () {
             return tVA_Petrole;
         },
+        toString :function(){
+            return "["+this.cfe()+","+this.isImp()+","+this.imf()+","+this.irvm()+","+this.irc()+","+this.tva_petrole()+"]"
+        }
     }
 };
 /**
@@ -184,6 +190,9 @@ Manufactor.prototype.ammortissement = function (construction, equipement, coefde
         bureau: function () {
             return bureau;
         },
+        toString:function(){
+            return "["+this.construction()+","+this.equipement()+","+this.camion()+","+this.info()+","+this.bureau()+","+this.coefdegressif()+"]";
+        }
     }
 };
 /**
@@ -456,6 +465,9 @@ Manufactor.prototype.investir = function (cfe, isammmort, imf, irvm, irc, tvaPet
         tvaPetrole: function () {
             return tvaPetrole;
         },
+        toString : function () {
+            return "["+this.cfe()+","+this.isamort()+","+this.imf()+","+this.irvm()+","+this.irc()+","+this.tvaPetrole()+"]";
+        }
     };
 };
 /**
@@ -489,6 +501,9 @@ Manufactor.prototype.impotPays = function (duree, taux, reductonEcume) {
         reducexo: function () {
             return reductonEcume;
         },
+        toString: function(){
+            return "["+this.duree()+","+this.taux()+","+this.reducexo()+"]";
+        }
     };
 };
 /**
@@ -538,6 +553,9 @@ Manufactor.prototype.isImpotPays = function (duree, taux, reductonEcume, ammortT
         ammortLimit: function () {
             return ammortLimit;
         },
+        toString: function(){
+            return "["+this.duree()+","+this.taux()+","+this.reducexo()+","+this.ammortTauxEx()+","+this.ammortLimit()+"]";
+        }
     };
 };
 /**

@@ -14,9 +14,11 @@ function base() {
             act = localStorage.getItem("retour2")
         }
     }
+    let pays=sessionStorage.getItem("land");
     localStorage.clear();
     localStorage.setItem("retour1", regime);
     localStorage.setItem("retour2", act);
+    sessionStorage.setItem("land",pays);
     let mod = localStorage.getItem("retour1");
 
     if (act !== undefined) {
@@ -26,4 +28,5 @@ function base() {
     }
     $('#REGIME option[value=' + mod + ']').attr("selected", "selected");
 }
+
 base();

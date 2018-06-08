@@ -2,49 +2,155 @@
  * @description This function create all the land and put it on an Array
  *
  */
-let Land=function() {
+let Land = function () {
+   // console.log("on entre");
     this.pays = [];
-    let ben = maker.investir(maker.impotPays(null, null, null), maker.isImpotPays(5, null, 100, null, null), maker.impotPays(null, null, null), maker.impotPays(null, null, null), maker.impotPays(null, null, null), maker.impotPays(null, null, null));
-    let bfa = maker.investir(maker.impotPays(5, null, 100), maker.isImpotPays(5, null, null, 50, 50), maker.impotPays(null, null, null), maker.impotPays(null, null, null), maker.impotPays(null, null, null), maker.impotPays(null, null, null));
-    let cmr = maker.investir(maker.impotPays(null, null, null), maker.isImpotPays(5, null, 50, null, null), maker.impotPays(null, null, null), maker.impotPays(5, null, 50), maker.impotPays(null, null, null), maker.impotPays(null, null, null));
-    let caf = maker.investir(maker.impotPays(null, null, null), maker.isImpotPays(3, null, 100, null, null), maker.impotPays(null, null, null), maker.impotPays(null, null, null), maker.impotPays(null, null, null), maker.impotPays(null, null, null));
-    let cog = maker.investir(maker.impotPays(null, null, null), maker.isImpotPays(3, null, 100, null, null), maker.impotPays(null, null, null), maker.impotPays(null, null, null), maker.impotPays(null, null, null), maker.impotPays(null, null, null));
-    let civ = maker.investir(maker.impotPays(7, 2.2, null), maker.isImpotPays(7, null, 100, null, null), maker.impotPays(null, null, null), maker.impotPays(null, null, null), maker.impotPays(null, null, null), maker.impotPays(null, null, null));
-    let gab = maker.investir(maker.impotPays(null, null, null), maker.isImpotPays(5, null, 100, null, null), maker.impotPays(null, null, null), maker.impotPays(null, null, null), maker.impotPays(null, null, null), maker.impotPays(null, null, null));
-    let mli = maker.investir(maker.impotPays(null, null, null), maker.isImpotPays(7, 25, null, null, null), maker.impotPays(null, null, null), maker.impotPays(null, null, null), maker.impotPays(null, null, null), maker.impotPays(null, null, null));
-    let ner = maker.investir(maker.impotPays(null, null, null), maker.isImpotPays(null, null, null, null, null), maker.impotPays(6, null, 100), maker.impotPays(null, null, null), maker.impotPays(null, null, null), maker.impotPays(null, null, null));
-    let sen = maker.investir(maker.impotPays(5, null, 100), maker.isImpotPays(5, null, null, 40, 50), maker.impotPays(null, null, null), maker.impotPays(null, null, null), maker.impotPays(null, null, null), maker.impotPays(null, null, null));
-    let tcd = maker.investir(maker.impotPays(null, null, null), maker.isImpotPays(5, null, 100, null, null), maker.impotPays(5, null, 100), maker.impotPays(null, null, null), maker.impotPays(null, null, null), maker.impotPays(null, null, null));
-    let tgo = maker.investir(maker.impotPays(5, 2, null), maker.isImpotPays(5, null, 2, 40, 50), maker.impotPays(null, null, null), maker.impotPays(null, null, null), maker.impotPays(null, null, null), maker.impotPays(null, null, null));
-    this.pays.push(maker.land("BEN", "Benin", maker.impot(4, 30, 0.75, 10, 15, 18), maker.ammortissement(20, 10, 2.5, 3, 2, 10), ben, "Exonération d’IS pendant 5 ans", "Code des investissements <br/>régime A<br/> zone 1\n"));
-    this.pays.push(maker.land("BFA", "Burkina Faso", maker.impot(3, 27.5, 0.5, 12.5, 25, 18), maker.ammortissement(20, 10, 2.5, 3, 2, 10), bfa, "– Exonération de la taxe patronale d’apprentissage pendant 5 ans.\n" +
-        "– Déduction d’IS pendant 5 ans, à hauteur de 50% de l’investissement, dans la limite de 50% du bénéfice imposable.\n", "Code des investissements\n" +
-        "<br/>régime A<br/> zone normale,<br/>" +
-        "bien que le seuil d’investissement de 100 millions de FCFA ne soit pas atteint.\n"));
-    this.pays.push(maker.land("CMR", "Cameroun", maker.impot(2.5, 33, 2.2, 16.5, 16.5, 19.25), maker.ammortissement(20, 10, 1, 3, 4, 10), cmr, "– Réduction de 50% de l’IS pendant 5 ans.\n" +
-        "– Réduction de 50% de l’IRVM sur les dividendes pendant 5 ans\n", "Modalités d’application des incitations à l’investissement privé" +
-        "<br/>catégorie A"));
-    this.pays.push(maker.land("CAF", "Republique Centraficaine", maker.impot(0, 30, 1.85, 15, 15, 19), maker.ammortissement(20, 10, 1, 3, 4, 10), caf, "Exonération d’IS pendant 3 ans", "Charte des investissements\n" +
-        "<br/>zone normale.\n"));
-    this.pays.push(maker.land("COG", "Republique du Congo", maker.impot(7.5, 30, 1, 15, 15, 18.9), maker.ammortissement(20, 10, 1, 3, 4, 10), cog, "– Exonération d’IS pendant 3 ans.", "Modalités d’application de la charte des investissements\n" +
-        "<br/>régime général G<br/> zone unique<br/>"));
-    this.pays.push(maker.land("CIV", "Côte d Ivoire", maker.impot(2.8, 25, 0.5, 15, 18, 9), maker.ammortissement(20, 5, 2, 3, 2, 10), civ, "– Réduction de 50% de la contribution nationale pour le développement économique, culturel et social de la nation pendant 7 ans.,– Exonération d’IS pendant 7 ans.", "Code des investissements\n" +
-        "<br/>régime d’agrément élargi aux PME<br/> zone A.\n"));
-    this.pays.push(maker.land("GAB", "Gabon", maker.impot(5, 30, 1, 20, 20, 18), maker.ammortissement(20, 10, 1, 3, 4, 10), gab, "Exonération d’IS pendant 5 ans.", "Promotion des PME et PMI,<br/>" +
-        "bien que le chiffre d’affaires annuel dépasse 2 milliards de FCFA.\n"));
-    this.pays.push(maker.land("GNB", "Guinée Bissao", "pas d'impot", "pas d'ammortissement", "pas d'investissment", "", ""));
-    this.pays.push(maker.land("GNQ", "Guinée équatoriale", "pas d'impot", "pas d'ammortissement", "pas d'investissment", "", ""));
-    this.pays.push(maker.land("MLI", "Mali", maker.impot(7.5, 30, 1, 10, 13, 18), maker.ammortissement(20, 10, 2.5, 3, 2, 10), mli, "Taux réduit d’IS (25% au lieu de 30%) pendant 7 ans.", "Code des investissements\n" +
-        "<br/>régime A<br/>zone unique\n"));
-    this.pays.push(maker.land("NER", "Niger", maker.impot(3, 30, 1.5, 10, 20, 19), maker.ammortissement(20, 10, 1, 4, 2, 10), ner, "Exonération d’IMF pendant 6 ans", "Code des investissements\n" +
-        "<br/>régime promotionnel<br/>\n" +
-        "zone normale"));
-    this.pays.push(maker.land("SEN", "Senegal", maker.impot(3, 30, 0.5, 10, 16, 18), maker.ammortissement(20, 10, 2.5, 3, 2, 10), sen, "", ""));
-    this.pays.push(maker.land("TCD", "Tchad", maker.impot(8.7, 35, 1.5, 20, 20, 18), maker.ammortissement(20, 10, 1, 3, 3, 10), tcd, "", ""));
-    this.pays.push(maker.land("TGO", "Togo", maker.impot(3, 29, 1, 13, 6, 18), maker.ammortissement(20, 10, 2.5, 3, 2, 10), tgo, "", ""));
+    let name = "";
+    let code = "";
+    let impStr = "";
+    let impotStr;
+    let impot;
+    let ammortStr = "";
+    let ammortiStr;
+    let ammort;
+    let investStr = "";
+    let invest;
+    let investTab;
+    let overide = "";
+
+    let source = "";
+    let strPa = sessionStorage.getItem("land");
+    let tab = strPa.split("\npays :");
+    let tabis = [];
+    let investImp = function (number, str) {
+        //console.log(str);
+        let taber = str.split(",");
+        let result = [];
+        taber.forEach(function (item) {
+            //console.log(item);
+            if (item === "null") {
+                result.push(null);
+            }
+            else {
+                result.push(Number.parseFloat(item));
+
+            }
+        });
+        let invest;
+        //console.log(result)
+        if (number !== 2) {
+            invest = maker.impotPays(result[0], result[1], result[2]);
+
+        }
+        else {
+            invest = maker.isImpotPays(result[0], result[1], result[2], result[3], result[4])
+        }
+        return invest;
+    };
+    tab.forEach(function (item, index) {
+        if (index === 0) {
+            item = item.slice(7, Array.from(item).length);
+        }
+        item = item.split("|");
+        tabis.push(item);
+    });
+    //console.log(tabis);
+    for (let i=0; i < tabis.length; i++) {
+        //console.log("dans le for")
+        name = tabis[i][0];
+        code = tabis[i][1];
+        impStr = tabis[i][2];
+        impot = [];
+        impotStr = [];
+        ammortStr = tabis[i][3];
+        ammortiStr = [];
+        ammort = [];
+        investStr = tabis[i][4];
+        invest = [];
+        overide = tabis[i][5];
+        source = tabis[i][6];
+       // console.log("on arrive la");
+        impStr = impStr.slice(1, Array.from(impStr).length - 1);
+        impotStr = impStr.split(",");
+        impotStr.forEach(function (item) {
+            if (item === "as d'impo") {
+                impot = "pas d'impot";
+            }
+            else {
+                impot.push(Number.parseFloat(item));
+            }
+
+        });
+        ammortStr = ammortStr.slice(1, Array.from(ammortStr).length - 1);
+        ammortiStr = ammortStr.split(",");
+        ammortiStr.forEach(function (item) {
+            if (item === "as d'ammortissemen") {
+                ammort = "pas d'ammortissement";
+            }
+            else {
+                ammort.push(Number.parseFloat(item));
+            }
+
+        });
+        investStr = investStr.slice(1, Array.from(investStr).length - 1);
+        investTab = investStr.split("],[");
+        investTab.forEach(function (item, index) {
+            if (index === 0) {
+                item = item.slice(1, Array.from(item).length);
+            }
+            if (index === investTab.length - 1) {
+                item = item.slice(0, Array.from(item).length - 1);
+            }
+            //console.log(item);
+            if (item === "s d'investissme") {
+                invest = "as d'investissmen";
+            }
+            else {
+                invest.push(investImp(index + 1, item));
+            }
+        });
+        let imp;
+        let amm;
+        let inv;
+        //console.log("ici");
+        if (name !== "Guinée Bissao") {
+            if (name !== "Guinée équatoriale") {
+                imp = maker.impot(impot[0], impot[1], impot[2], impot[3], impot[4], impot[5]);
+                amm = maker.ammortissement(ammort[0], ammort[1], ammort[5], ammort[2], ammort[3], ammort[4]);
+                inv = maker.investir(invest[0], invest[1], invest[2], invest[3], invest[4], invest[5]);
+            }
+            else {
+                imp = impot;
+                amm = ammort;
+                inv = invest;
+            }
+        }
+        else {
+            imp = impot;
+            amm = ammort;
+            inv = invest;
+        }
+        //console.log("ici");
+        //console.log(maker.land(code, name, imp, amm, inv, overide, source));
+        this.pays.push(maker.land(code, name, imp, amm, inv, overide, source));
+
+    }
+
+    this.pays.toString = function () {
+        let str = "";
+        this.forEach(function (item) {
+            str += "pays :\n" + item + "\n";
+        });
+        return str;
+    }
+    console.log(this.pays.toString());
 };
-Land.prototype.ajouterPays=function(land){
+Land.prototype.ajouterPays = function (land) {
     this.pays.push(land);
+    sessionStorage.setItem("land",this.pays.toString());
+    // noinspection JSAnnotator
+    land = new Land();
 
 };
 
+let land= new Land();
