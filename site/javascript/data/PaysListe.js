@@ -56,9 +56,10 @@ let Land = function () {
     });
     //console.log(tabis);
     for (let i=0; i < tabis.length; i++) {
-        //console.log("dans le for")
+        //console.log(i);
         name = tabis[i][0];
         code = tabis[i][1];
+        //console.log(tabis[i]);
         impStr = tabis[i][2];
         impot = [];
         impotStr = [];
@@ -143,7 +144,7 @@ let Land = function () {
         });
         return str;
     }
-    console.log(this.pays.toString());
+    //console.log(this.pays.toString());
 };
 Land.prototype.ajouterPays = function (land) {
     this.pays.push(land);

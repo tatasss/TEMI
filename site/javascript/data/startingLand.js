@@ -28,8 +28,6 @@ function createDebutPAys(){
         "<br/>régime d’agrément élargi aux PME<br/> zone A.\n"));
     pays.push(maker.land("GAB", "Gabon", maker.impot(5, 30, 1, 20, 20, 18), maker.ammortissement(20, 10, 1, 3, 4, 10), gab, "Exonération d’IS pendant 5 ans.", "Promotion des PME et PMI,<br/>" +
         "bien que le chiffre d’affaires annuel dépasse 2 milliards de FCFA.\n"));
-    pays.push(maker.land("GNB", "Guinée Bissao", "pas d'impot", "pas d'ammortissement", "pas d'investissment", "", ""));
-    pays.push(maker.land("GNQ", "Guinée équatoriale", "pas d'impot", "pas d'ammortissement", "pas d'investissment", "", ""));
     pays.push(maker.land("MLI", "Mali", maker.impot(7.5, 30, 1, 10, 13, 18), maker.ammortissement(20, 10, 2.5, 3, 2, 10), mli, "Taux réduit d’IS (25% au lieu de 30%) pendant 7 ans.", "Code des investissements\n" +
         "<br/>régime A<br/>zone unique\n"));
     pays.push(maker.land("NER", "Niger", maker.impot(3, 30, 1.5, 10, 20, 19), maker.ammortissement(20, 10, 1, 4, 2, 10), ner, "Exonération d’IMF pendant 6 ans", "Code des investissements\n" +
@@ -50,7 +48,14 @@ function createDebutPAys(){
 }
 if(sessionStorage.getItem("land")===undefined) {
     createDebutPAys();
+    console.log("session undefined")
 }
 if(sessionStorage.getItem("land")===null) {
     createDebutPAys();
+    console.log("session null")
+}
+
+if(sessionStorage.getItem("land")==="null") {
+    createDebutPAys();
+    console.log("session null")
 }
