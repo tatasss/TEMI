@@ -56,31 +56,71 @@ Verif.prototype.codeISO3 = function (code) {
     xhr.open("GET", "http://api.worldbank.org/v2/countries/" + code, true);
     xhr.send(null);
 };
-Verif.prototype.stringer=function( str){
+Verif.prototype.stringer = function (str) {
     let regex1 = /[a-zA-Z0-9]+/;
-    if (!regex1.test(str)){
+    if (!regex1.test(str)) {
         throw new Error("veuillez entrer quelque chose");
     }
 };
-Verif.prototype.inter=function( str){
+Verif.prototype.inter = function (str) {
     let regex1 = /^[1-9]+[0-9]*$/;
-    if(str===''){
+    if (str === '') {
         throw new Error("veuillez entrer quelque chose");
     }
-    if(str===null){
+    if (str === null) {
         throw new Error("veuillez entrer quelque chose");
     }
-    if(str===undefined){
+    if (str === undefined) {
         throw new Error("veuillez entrer quelque chose");
     }
-    if (!regex1.test(str)){
+    if (!regex1.test(str)) {
         throw new Error("veuillez entrer un entier");
     }
 };
+Verif.prototype.verifTauxInvest = function (str) {
+    console.log(str);
+    let regex = /^[ ]*$/;
+    if (!regex.test(str)) {
+        if (str !== null) {
+            if (str !== undefined) {
+                let regex1 = /^[0-9]*[.]?[0-9]*$/;
+                if (!regex1.test(str)) {
+                    throw new Error("Veuillez entrer un pourcentage");
+                }
+                str = parseFloat(str);
+                if (str > 100) {
+                    throw new Error("le chiffre est supérieur à 100");
+                }
+                if (str < 0) {
+                    throw new Error("le chiffre est inférieur à 00");
+                }
+            }
 
+        }
+    }
+};
+Verif.prototype.verifDureeInvest = function (str) {
+    console.log(str);
+    let regex = /^[ ]*$/;
+    if (!regex.test(str)) {
+        if (str !== null) {
+            if (str !== undefined) {
+                let regex1 = /^[1-9]+[0-9]*$/;
+                if (!regex1.test(str)) {
+                    throw new Error("Veuillez entrer un pourcentage");
+                }
+                str = parseFloat(str);
+                if (str > 100) {
+                    throw new Error("le chiffre est supérieur à 100");
+                }
+                if (str < 0) {
+                    throw new Error("le chiffre est inférieur à 00");
+                }
+            }
+        }
+    }
+};
 /**
  * @type {Verif}
  */
-let verif =new Verif();
-//objectif de demain : mettre en place toutes les verfication pour validé le formulaire
-//mettre en place des zonne de vue exprès pour avertir les erreur(en mode alert)
+let verif = new Verif();

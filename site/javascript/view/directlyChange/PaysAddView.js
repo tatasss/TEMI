@@ -15,7 +15,7 @@ Ajout.prototype.addLand=function(){
         land.ajouterPays(maker.land($("#codePays").val().toUpperCase(),$("#nomPays").val(),tax,amort,invest,$('#descDispoInvestPays').val(),source));
     }
     catch (e) {
-        console.log(e)
+        //console.log(e)
     }
 
 };
@@ -192,7 +192,7 @@ Ajout.prototype.verifGeneral=function(){
 Ajout.prototype.verifInvestTaxe=function(duree,taux,reduc,nomTaxe){
     try{
         document.getElementById("duree"+nomTaxe.toUpperCase()+"Error").innerHTML="";
-        verif.inter(duree);
+        verif.verifDureeInvest(duree);
     }
     catch (e) {
         document.getElementById("duree"+nomTaxe.toUpperCase()+"Error").innerHTML=bootstrap.alertDanger(e.message);
@@ -200,7 +200,7 @@ Ajout.prototype.verifInvestTaxe=function(duree,taux,reduc,nomTaxe){
     }
     try{
         document.getElementById("taux"+nomTaxe.toUpperCase()+"Error").innerHTML="";
-        taux=verif.verifPourcent(taux);
+        verif.verifTauxInvest(taux);
     }
     catch (e) {
         document.getElementById("taux"+nomTaxe.toUpperCase()+"Error").innerHTML=bootstrap.alertDanger(e.message);
@@ -208,7 +208,7 @@ Ajout.prototype.verifInvestTaxe=function(duree,taux,reduc,nomTaxe){
     }
     try{
         document.getElementById("reducExo"+nomTaxe.toUpperCase()+"Error").innerHTML="";
-        reduc=verif.verifPourcent(reduc);
+        verif.verifTauxInvest(reduc);
     }
     catch (e) {
         document.getElementById("reducExo"+nomTaxe.toUpperCase()+"Error").innerHTML=bootstrap.alertDanger(e.message);
