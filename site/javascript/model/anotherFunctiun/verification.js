@@ -78,7 +78,7 @@ Verif.prototype.inter = function (str) {
     }
 };
 Verif.prototype.verifTauxInvest = function (str) {
-    console.log(str);
+    //console.log(str);
     let regex = /^[ ]*$/;
     if (!regex.test(str)) {
         if (str !== null) {
@@ -100,7 +100,7 @@ Verif.prototype.verifTauxInvest = function (str) {
     }
 };
 Verif.prototype.verifDureeInvest = function (str) {
-    console.log(str);
+    //console.log(str);
     let regex = /^[ ]*$/;
     if (!regex.test(str)) {
         if (str !== null) {

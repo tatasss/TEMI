@@ -3,14 +3,14 @@ let ajout=new Ajout();
 
 verif.codeISO3("ben");
 Ajout.prototype.addLand=function(){
-    console.log("on entre");
+
     try{
         ajout.verifierChanp();
         let tax=maker.impot(Number.parseFloat($('#cfeImpPays').val()),Number.parseFloat($('#isImpPays').val()),Number.parseFloat($('#imfImpPays').val()),Number.parseFloat($('#irvmImpPays').val()),Number.parseFloat($('#ircImpPays').val()),Number.parseFloat($('#tvaPetroleImpPays').val()));
         let amort=maker.ammortissement($('#cfeAmmortPays').val(),Number.parseFloat($('#isAmmortPays').val()),Number.parseFloat($('#imfAmmortPays').val()),Number.parseFloat($('#irvmAmmortPays').val()),Number.parseFloat($('#ircAmmortPays').val()),Number.parseFloat($('#tvaPetroleAmmortPays').val()) );
 
         let invest=maker.investir(ajout.investirProt("CFE"),ajout.investirProt("IS"),ajout.investirProt("IMF"),ajout.investirProt("IRVM"),ajout.investirProt("IRC"),ajout.investirProt("TVAPetrole"));
-        console.log(invest.irc().duree());
+
         let source=$('#nomCodeInvestPays').val()+"<br/>"+$('#nomRegInvestPays').val()+"<br/>"+$('#zonneInvestPays').val();
         land.ajouterPays(maker.land($("#codePays").val().toUpperCase(),$("#nomPays").val(),tax,amort,invest,$('#descDispoInvestPays').val(),source));
     }
@@ -18,8 +18,23 @@ Ajout.prototype.addLand=function(){
     }
 
 };
+Ajout.prototype.verifNull=function (data){
+    console.log(data);
+    let regex = /^[ ]*$/;
+    if(regex.test(data)){
+        return null;
+    }
+    if(data==="null"){
+        return null;
+        console.log(data);
+    }
+    if (data===null){
+        return null;
+    }
+    return data;
+};
 Ajout.prototype.investirProt=function (impStr){
-  return maker.impotPays($('#duree'+impStr+'InvestPays').val(),$('#taux'+impStr+'InvestPays').val(),$('#reducExo'+impStr+'InvestPays').val());
+  return maker.impotPays(ajout.verifNull($('#duree'+impStr+'InvestPays').val()),ajout.verifNull($('#taux'+impStr+'InvestPays').val()),ajout.verifNull($('#reducExo'+impStr+'InvestPays').val()));
 };
 Ajout.prototype.verifierChanp=function(){
         document.getElementById("formError").innerHTML="";

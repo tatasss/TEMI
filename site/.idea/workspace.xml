@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b89c5143-0212-42c0-b73b-81dad73db30d" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/../Documentation/Rapport de stage.docx" beforeDir="false" afterPath="$PROJECT_DIR$/../Documentation/Rapport de stage.docx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/javascript/model/anotherFunctiun/verification.js" beforeDir="false" afterPath="$PROJECT_DIR$/javascript/model/anotherFunctiun/verification.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/javascript/view/directlyChange/PaysAddView.js" beforeDir="false" afterPath="$PROJECT_DIR$/javascript/view/directlyChange/PaysAddView.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -33,8 +32,8 @@
       <file leaf-file-name="verification.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/javascript/model/anotherFunctiun/verification.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2125">
-              <caret line="125" column="24" selection-start-line="125" selection-start-column="24" selection-end-line="125" selection-end-column="24" />
+            <state relative-caret-position="433">
+              <caret line="103" column="25" lean-forward="true" selection-start-line="103" selection-start-column="3" selection-end-line="103" selection-end-column="25" />
             </state>
           </provider>
         </entry>
@@ -51,8 +50,17 @@
       <file leaf-file-name="PaysAddView.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/javascript/view/directlyChange/PaysAddView.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="476">
-              <caret line="136" column="5" lean-forward="true" selection-start-line="136" selection-start-column="5" selection-end-line="136" selection-end-column="5" />
+            <state relative-caret-position="393">
+              <caret line="24" column="20" selection-start-line="24" selection-start-column="20" selection-end-line="24" selection-end-column="20" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ajoutPays.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/html/ajoutPays.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1136">
+              <caret line="501" column="53" selection-start-line="501" selection-start-column="53" selection-end-line="501" selection-end-column="53" />
             </state>
           </provider>
         </entry>
@@ -80,15 +88,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="1734">
               <caret line="102" column="40" selection-start-line="102" selection-start-column="40" selection-end-line="102" selection-end-column="40" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="manufact.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/javascript/manufacturing/manufact.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="12597">
-              <caret line="741" column="29" selection-start-line="741" selection-start-column="29" selection-end-line="741" selection-end-column="29" />
             </state>
           </provider>
         </entry>
@@ -135,6 +134,7 @@
       <find>tauxR</find>
       <find>land.pays</find>
       <find>Pays</find>
+      <find>conso</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -485,6 +485,7 @@
       <workItem from="1528266231471" duration="28900000" />
       <workItem from="1528353468757" duration="20510000" />
       <workItem from="1528698462761" duration="1193000" />
+      <workItem from="1528728089113" duration="1915000" />
     </task>
     <task id="LOCAL-00001" summary="mis en place d'un code propre">
       <created>1526980633672</created>
@@ -588,7 +589,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="545168000" />
+    <option name="totallyTimeSpent" value="547083000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -601,27 +602,28 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1696" height="1026" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info anchor="right" id="PlantUML" order="3" weight="0.33801955" />
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4991453" side_tool="true" visible="true" weight="0.18581907" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4991453" side_tool="true" visible="true" weight="0.18826406" />
       <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.49938875" weight="0.3298969" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" x="0" y="447" width="1680" height="116" id="Event Log" order="12" sideWeight="0.50183374" side_tool="true" weight="0.18327606" />
-      <window_info anchor="bottom" id="Version Control" order="8" sideWeight="0.35268947" side_tool="true" visible="true" weight="0.19473082" />
+      <window_info anchor="bottom" id="Version Control" order="8" sideWeight="0.35330072" side_tool="true" visible="true" weight="0.19473082" />
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info id="Structure" order="1" sideWeight="0.50085473" side_tool="true" weight="0.24327628" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="9" sideWeight="0.6473105" visible="true" weight="0.19473082" />
+      <window_info anchor="bottom" id="Terminal" order="9" sideWeight="0.64669925" visible="true" weight="0.19473082" />
       <window_info id="Favorites" order="2" sideWeight="0.50085473" side_tool="true" weight="0.24327628" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="TypeScript" order="10" />
       <window_info anchor="bottom" id="Inspection Results" order="11" sideWeight="0.49816626" weight="0.32875144" />
-      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="Find" order="1" sideWeight="0.48489666" weight="0.26157406" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Message" order="0" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -878,13 +880,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/html/ajoutPays.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="8517">
-          <caret line="501" column="53" selection-start-line="501" selection-start-column="53" selection-end-line="501" selection-end-column="53" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/javascript/data/PaysListe.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2618">
@@ -952,17 +947,24 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/html/ajoutPays.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1136">
+          <caret line="501" column="53" selection-start-line="501" selection-start-column="53" selection-end-line="501" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/javascript/model/anotherFunctiun/verification.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2125">
-          <caret line="125" column="24" selection-start-line="125" selection-start-column="24" selection-end-line="125" selection-end-column="24" />
+        <state relative-caret-position="433">
+          <caret line="103" column="25" lean-forward="true" selection-start-line="103" selection-start-column="3" selection-end-line="103" selection-end-column="25" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/javascript/view/directlyChange/PaysAddView.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="476">
-          <caret line="136" column="5" lean-forward="true" selection-start-line="136" selection-start-column="5" selection-end-line="136" selection-end-column="5" />
+        <state relative-caret-position="393">
+          <caret line="24" column="20" selection-start-line="24" selection-start-column="20" selection-end-line="24" selection-end-column="20" />
         </state>
       </provider>
     </entry>
