@@ -130,7 +130,7 @@ Ajout.prototype.verifGeneral=function(){
     catch (e) {
         document.getElementById("errorIRCImp").innerHTML=bootstrap.alertDanger(e.message);
         document.getElementById("formError").innerHTML=bootstrap.alertDanger("Le formulaire n'est pas rempli correctement");
-    }
+    }//////////
     try{
         document.getElementById("errorTVAPETImp").innerHTML="";
         tvaPetroleImp=verif.verifPourcent(tvaPetroleImp);
