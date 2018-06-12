@@ -102,8 +102,8 @@
       <file leaf-file-name="bootstrapView.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/javascript/view/viewGenerator/bootstrapView.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="331">
-              <caret line="313" column="11" selection-start-line="313" selection-start-column="11" selection-end-line="313" selection-end-column="11" />
+            <state relative-caret-position="399">
+              <caret line="317" column="3" lean-forward="true" selection-start-line="317" selection-start-column="3" selection-end-line="317" selection-end-column="3" />
             </state>
           </provider>
         </entry>
@@ -489,7 +489,7 @@
       <workItem from="1528353468757" duration="20510000" />
       <workItem from="1528698462761" duration="1193000" />
       <workItem from="1528728089113" duration="2832000" />
-      <workItem from="1528787693462" duration="4751000" />
+      <workItem from="1528787693462" duration="4853000" />
     </task>
     <task id="LOCAL-00001" summary="mis en place d'un code propre">
       <created>1526980633672</created>
@@ -593,7 +593,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="552751000" />
+    <option name="totallyTimeSpent" value="552853000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -975,8 +975,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/javascript/view/viewGenerator/bootstrapView.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="331">
-          <caret line="313" column="11" selection-start-line="313" selection-start-column="11" selection-end-line="313" selection-end-column="11" />
+        <state relative-caret-position="399">
+          <caret line="317" column="3" lean-forward="true" selection-start-line="317" selection-start-column="3" selection-end-line="317" selection-end-column="3" />
         </state>
       </provider>
     </entry>
