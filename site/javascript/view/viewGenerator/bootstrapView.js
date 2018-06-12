@@ -247,6 +247,7 @@ BootstrapView.prototype.bootstrapTemiTabSpe = function (cote, head, tab, maMarge
     let myTab = [];
     let tabExcel=[];
     let cpt = 0;
+    let landName;
     for (let i = 0; i < head.length / 6; i++) {
         myTab.push("<br/><table class='table' id='maTable"+cpt+"'><thead><tr><th/>")
     }
@@ -258,14 +259,26 @@ BootstrapView.prototype.bootstrapTemiTabSpe = function (cote, head, tab, maMarge
         myTab[cpt] += "<th>";
         myTab[cpt] += item;
         myTab[cpt] += "</th>";
-        tabExcel.push(item);
+        if(index!==0){
+            landName=item.slice(1,Array.from(item).length);
+        }
+        else {
+            landName=item;
+        }
+
+        tabExcel.push(ref.donnerCodePays(item));
     });
     tab.forEach(function (item, index) {
         cpt = 0;
         myTab[cpt] += "<tr><td>";
         myTab[cpt] += cote[index] + "</td>";
-
-        tabExcel.push(cote[index]);
+        let cotee="";
+        Array.from(cote[index]).forEach(function (item){
+           if(item!==" "){
+               cotee+=item;
+           }
+        });
+        tabExcel.push(cotee);
         item.forEach(function (items, indexs) {
             if (indexs % 6 === 0 && indexs > 0) {
                 myTab[cpt] += "</tr>";
@@ -290,9 +303,9 @@ BootstrapView.prototype.bootstrapTemiTabSpe = function (cote, head, tab, maMarge
     });
     tabExcel.push("ligne");
     tabExcel.push("entreprise");
-    tabExcel.push("marge %");
+    tabExcel.push("marge_%");
     maMarge.forEach(function(item,index){
-        tabExcel.push("entreprise "+(index+1));
+        tabExcel.push("entreprise"+(index+1));
         tabExcel.push(item);
     });
     tabExcel.push("ligne");
@@ -302,17 +315,40 @@ BootstrapView.prototype.bootstrapTemiTabSpe = function (cote, head, tab, maMarge
     let reg;
     reg = " ";
     if (localStorage.getItem("compatRegime") === "gen") {
-        reg = "codes générales des impots";
+        reg = "codes_générales_des_impots";
     }
     else {
-        reg = "codes des investissements";
+        reg = "codes_des_investissements";
     }
     tabExcel.push("ligne");
     tabExcel.push("ligne");
-    tabExcel.push("régime Fiscal");
+    tabExcel.push("régime_Fiscal");
     tabExcel.push(reg);
     titre+=".xls";
-    html+= `<a class="btn btn-default " download=${titre} href="#" id="anchorNewApi-xls" onClick="newApi('xls','${tabExcel.toString()}','${titre}')">Récupérer Excel</a>`;
+    let titreHtml="";
+    Array.from(titre).forEach(function(item){
+        if(item!==" "){
+          titreHtml+=item;
+        }
+    });
+    tabExcel.toString= function(){
+      let html="";
+      this.forEach(function(item, index){
+          if(index===tabExcel.length){
+              html+=item;
+          }
+          else{
+              html+=item+",";
+          }
+
+      });
+      return html;
+    };
+    console.log(titreHtml);
+    console.log(tabExcel.toString());
+
+    html+= `<a class="btn btn-default " download="${titreHtml}" href="#" id="anchorNewApi-xls" onClick=newApi('xls','${tabExcel.toString()}','${titreHtml}')>Récupérer Excel</a>`;
+    console.log(`<a class="btn btn-default " download="${titreHtml}" href="#" id="anchorNewApi-xls" onClick=newApi('xls','${tabExcel.toString()}','${titreHtml}')>Récupérer Excel</a>`);
     return html;
 };
 /**
