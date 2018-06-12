@@ -48,14 +48,14 @@ function createDebutPAys(){
 }
 if(sessionStorage.getItem("land")===undefined) {
     createDebutPAys();
-    console.log("session undefined")
+   // console.log("session undefined")
 }
 if(sessionStorage.getItem("land")===null) {
     createDebutPAys();
-    console.log("session null")
+    //console.log("session null")
 }
 
 if(sessionStorage.getItem("land")==="null") {
     createDebutPAys();
-    console.log("session null")
+    //console.log("session null")
 }
