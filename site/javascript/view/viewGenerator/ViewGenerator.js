@@ -22,21 +22,21 @@ ViewGenerator.prototype.resultatHtml = function () {
     }
     let head = "<thead><tr><th/><th colspan=3 align=center>Taux statuaire</th><th colspan=2>Taux effectifs marginaux</th></tr>";
     head += "<tr><th/><th>Taux plein</th><th>Taux reduit</th><th>Durée</th><th>First Year</th><th>Five Year</th></tr></thead>";
-    let cfe = this.recupDonneTab(false, this.modele.donnee.land().investment().cfe(), this.modele.donnee.land().impots().cfe(),
+    let cfe = this.recupDonneTab(false, myMath.arrondirTabUnit(this.modele.donnee.land().investment().cfe(),2), myMath.arrondirTabUnit(this.modele.donnee.land().impots().cfe(),2),
         false, false, false);
-    let is = this.recupDonneTab(false, this.modele.donnee.land().investment().isamort(),
-        this.modele.donnee.land().impots().isImp(), true, false, false);
+    let is = this.recupDonneTab(false, myMath.arrondirTabUnit(this.modele.donnee.land().investment().isamort(),2),
+        myMath.arrondirTabUnit(this.modele.donnee.land().impots().isImp(), true, false, false,2));
 
-    let imf = this.recupDonneTab(false, this.modele.donnee.land().investment().imf(), this.modele.donnee.land().impots().imf(),
+    let imf = this.recupDonneTab(false, myMath.arrondirTabUnit(this.modele.donnee.land().investment().imf(),2), myMath.arrondirTabUnit(this.modele.donnee.land().impots().imf(),2),
         false, true, false);
-    let irvm = this.recupDonneTab(false, this.modele.donnee.land().investment().irvm(),
-        this.modele.donnee.land().impots().irvm(), false, false, false);
-    let irc = this.recupDonneTab(false, this.modele.donnee.land().investment().irc(), this.modele.donnee.land().impots().irc(),
+    let irvm = this.recupDonneTab(false, myMath.arrondirTabUnit(this.modele.donnee.land().investment().irvm(),2),
+        myMath.arrondirTabUnit(this.modele.donnee.land().impots().irvm(),2), false, false, false);
+    let irc = this.recupDonneTab(false, myMath.arrondirTabUnit(this.modele.donnee.land().investment().irc(),2), this.modele.donnee.land().impots().irc(),
         false, false, false);
-    let tva = this.recupDonneTab(false, this.modele.donnee.land().investment().tvaPetrole(),
-        this.modele.donnee.land().impots().tva_petrole(), false, false, false);
-    let tot = this.recupDonneTab(this.modele.mesdon().tauxeffMoyCourent, this.modele.donnee.land().investment().total,
-        this.modele.donnee.land().impots().imf(), false, false, true);
+    let tva = this.recupDonneTab(false, myMath.arrondirTabUnit(this.modele.donnee.land().investment().tvaPetrole(),2),
+        myMath.arrondirTabUnit(this.modele.donnee.land().impots().tva_petrole(),2), false, false, false);
+    let tot = this.recupDonneTab(myMath.arrondirTabUnit(this.modele.mesdon().tauxeffMoyCourent,2), myMath.arrondirTabUnit(this.modele.donnee.land().investment().total,2),
+        myMath.arrondirTabUnit(this.modele.donnee.land().impots().imf(),2), false, false, true);
     let bodyTest = bootstrap.tableSE(
         [`CFE</td><td>${this.modele.donnee.land().impots().cfe()}`, `IS</td><td class=\"fontred\">${this.mP.impots().isImp()}`,
             `IMF</td><td class=\"fontred\">${this.mP.impots().imf()}`, `IRVM</td><td>${this.mP.impots().irvm()}`,
