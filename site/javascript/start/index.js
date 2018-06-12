@@ -26,7 +26,6 @@ function base() {
             document.getElementById("actualisation").value = act;
         }
     }
-    $('#REGIME option[value=' + mod + ']').attr("selected", "selected");
 }
 
 base();
