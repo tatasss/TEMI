@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b89c5143-0212-42c0-b73b-81dad73db30d" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/javascript/view/viewGenerator/bootstrapView.js" beforeDir="false" afterPath="$PROJECT_DIR$/javascript/view/viewGenerator/bootstrapView.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -102,8 +103,8 @@
       <file leaf-file-name="bootstrapView.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/javascript/view/viewGenerator/bootstrapView.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="416">
-              <caret line="318" column="45" lean-forward="true" selection-start-line="318" selection-start-column="45" selection-end-line="318" selection-end-column="45" />
+            <state relative-caret-position="348">
+              <caret line="314" column="16" selection-start-line="314" selection-start-column="16" selection-end-line="314" selection-end-column="16" />
             </state>
           </provider>
         </entry>
@@ -301,7 +302,7 @@
       <path value="$PROJECT_DIR$/node_modules/xlsx/package.json" />
     </packageJsonPaths>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-7" />
     <option name="width" value="1318" />
     <option name="height" value="1017" />
@@ -489,7 +490,7 @@
       <workItem from="1528353468757" duration="20510000" />
       <workItem from="1528698462761" duration="1193000" />
       <workItem from="1528728089113" duration="2832000" />
-      <workItem from="1528787693462" duration="3979000" />
+      <workItem from="1528787693462" duration="4409000" />
     </task>
     <task id="LOCAL-00001" summary="mis en place d'un code propre">
       <created>1526980633672</created>
@@ -593,7 +594,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="551979000" />
+    <option name="totallyTimeSpent" value="552409000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -975,8 +976,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/javascript/view/viewGenerator/bootstrapView.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="416">
-          <caret line="318" column="45" lean-forward="true" selection-start-line="318" selection-start-column="45" selection-end-line="318" selection-end-column="45" />
+        <state relative-caret-position="348">
+          <caret line="314" column="16" selection-start-line="314" selection-start-column="16" selection-end-line="314" selection-end-column="16" />
         </state>
       </provider>
     </entry>
