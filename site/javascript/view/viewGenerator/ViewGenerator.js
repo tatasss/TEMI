@@ -417,7 +417,7 @@ ViewGenerator.prototype.navigationHtml = function () {
     }
     let pannel = bootstrap.pan("default", "Paramétres", this.modele.donnee.land().name() + "<br/>" + regime + "</br>" + this.modele.donnee.topic() + "</br>" + this.modele.donnee.margin());
     let result = "<div class='vertical-menu'>" + pannel;
-    result += bootstrap.buttonBalA("./model.html", "voire résultat");
+    result += bootstrap.buttonBalA("./model.html", "voir résultat");
     result += bootstrap.buttonBalA("./index.html", "retour") + "</div>";
     return result;
 };

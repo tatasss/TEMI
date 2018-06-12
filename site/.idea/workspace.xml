@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b89c5143-0212-42c0-b73b-81dad73db30d" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/javascript/data/startingLand.js" beforeDir="false" afterPath="$PROJECT_DIR$/javascript/data/startingLand.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/javascript/view/viewGenerator/ViewGenerator.js" beforeDir="false" afterPath="$PROJECT_DIR$/javascript/view/viewGenerator/ViewGenerator.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -73,11 +74,25 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="startingLand.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="startingLand.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/javascript/data/startingLand.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="453">
               <caret line="56" lean-forward="true" selection-start-line="56" selection-end-line="56" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ViewGenerator.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/javascript/view/viewGenerator/ViewGenerator.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="504">
+              <caret line="423" column="3" lean-forward="true" selection-start-line="423" selection-start-column="3" selection-end-line="423" selection-end-column="3" />
+              <folding>
+                <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#span#0;n#strong#0;n#!!top" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -96,15 +111,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="626">
               <caret line="93" column="36" selection-start-line="93" selection-start-column="36" selection-end-line="93" selection-end-column="36" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/html/index.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2057">
-              <caret line="121" selection-start-line="121" selection-end-line="121" />
             </state>
           </provider>
         </entry>
@@ -173,7 +179,6 @@
         <option value="$PROJECT_DIR$/javascript/view/directlyChange/ModeleView.js" />
         <option value="$PROJECT_DIR$/javascript/view/directlyChange/ViewManufacturing.js" />
         <option value="$PROJECT_DIR$/javascript/view/directlyChange/graphFormView.js" />
-        <option value="$PROJECT_DIR$/javascript/view/viewGenerator/ViewGenerator.js" />
         <option value="$PROJECT_DIR$/javascript/model/model.js" />
         <option value="$PROJECT_DIR$/javascript/data/data.js" />
         <option value="$PROJECT_DIR$/javascript/model/anotherFunctiun/myMath.js" />
@@ -197,6 +202,7 @@
         <option value="$PROJECT_DIR$/javascript/model/anotherFunctiun/verification.js" />
         <option value="$PROJECT_DIR$/javascript/start/index.js" />
         <option value="$PROJECT_DIR$/javascript/data/startingLand.js" />
+        <option value="$PROJECT_DIR$/javascript/view/viewGenerator/ViewGenerator.js" />
       </list>
     </option>
   </component>
@@ -481,7 +487,7 @@
       <workItem from="1528353468757" duration="20510000" />
       <workItem from="1528698462761" duration="1193000" />
       <workItem from="1528728089113" duration="2832000" />
-      <workItem from="1528787693462" duration="2089000" />
+      <workItem from="1528787693462" duration="2781000" />
     </task>
     <task id="LOCAL-00001" summary="mis en place d'un code propre">
       <created>1526980633672</created>
@@ -585,7 +591,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="550089000" />
+    <option name="totallyTimeSpent" value="550781000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -776,13 +782,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/javascript/view/viewGenerator/ViewGenerator.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-646">
-          <caret line="7" column="2" selection-start-line="7" selection-start-column="2" selection-end-line="7" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/javascript/model/anotherFunctiun/excel.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="354">
@@ -961,6 +960,18 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="453">
           <caret line="56" lean-forward="true" selection-start-line="56" selection-end-line="56" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/javascript/view/viewGenerator/ViewGenerator.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="504">
+          <caret line="423" column="3" lean-forward="true" selection-start-line="423" selection-start-column="3" selection-end-line="423" selection-end-column="3" />
+          <folding>
+            <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#strong#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
