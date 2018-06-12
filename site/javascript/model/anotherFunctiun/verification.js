@@ -107,14 +107,7 @@ Verif.prototype.verifDureeInvest = function (str) {
             if (str !== undefined) {
                 let regex1 = /^[1-9]+[0-9]*$/;
                 if (!regex1.test(str)) {
-                    throw new Error("Veuillez entrer un pourcentage");
-                }
-                str = parseFloat(str);
-                if (str > 100) {
-                    throw new Error("le chiffre est supérieur à 100");
-                }
-                if (str < 0) {
-                    throw new Error("le chiffre est inférieur à 00");
+                    throw new Error("Veuillez entrer une duree");
                 }
             }
         }
