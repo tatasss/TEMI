@@ -98,7 +98,13 @@ MyMath.prototype.arrondirTabUnit = function (tab, numberDec) {
     }
     let tabArr = [];
     tab.forEach(function (item) {
-        tabArr.push(Math.round(item * Math.pow(10, numberDec)) / (Math.pow(10, numberDec)));
+        if(item!==null){
+            tabArr.push(Math.round(item * Math.pow(10, numberDec)) / (Math.pow(10, numberDec)));
+        }
+        else {
+            tabArr.push(null);
+        }
+
     });
     return tabArr;
 };
