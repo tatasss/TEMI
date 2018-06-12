@@ -6,5 +6,5 @@ et qui présentera les simulations de TEMI pour un ou plusieurs pays donnés au 
 
 Je travaille depuis le 2 mai et va ainsi jusqu'au 11 juillet.
 Je travaille dans le CERDI qui est un centre mixte de recherche de l’Université Clermont Auvergne et du CNRS en sciences économiques.
-Le site ezst accéssible sur : https://tatasss.github.io/TEMI/site/html/
+Le site est accéssible sur : https://tatasss.github.io/TEMI/site/html/
 
