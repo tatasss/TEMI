@@ -344,11 +344,11 @@ BootstrapView.prototype.bootstrapTemiTabSpe = function (cote, head, tab, maMarge
       });
       return html;
     };
-    console.log(titreHtml);
-    console.log(tabExcel.toString());
+    //console.log(titreHtml);
+    //console.log(tabExcel.toString());
 
     html+= `<a class="btn btn-default " download="${titreHtml}" href="#" id="anchorNewApi-xls" onClick=newApi('xls','${tabExcel.toString()}','${titreHtml}')>Récupérer Excel</a>`;
-    console.log(`<a class="btn btn-default " download="${titreHtml}" href="#" id="anchorNewApi-xls" onClick=newApi('xls','${tabExcel.toString()}','${titreHtml}')>Récupérer Excel</a>`);
+    //console.log(`<a class="btn btn-default " download="${titreHtml}" href="#" id="anchorNewApi-xls" onClick=newApi('xls','${tabExcel.toString()}','${titreHtml}')>Récupérer Excel</a>`);
     return html;
 };
 /**
