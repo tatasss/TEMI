@@ -9,7 +9,7 @@ Ajout.prototype.addLand=function(){
         let tax=maker.impot(Number.parseFloat($('#cfeImpPays').val()),Number.parseFloat($('#isImpPays').val()),Number.parseFloat($('#imfImpPays').val()),Number.parseFloat($('#irvmImpPays').val()),Number.parseFloat($('#ircImpPays').val()),Number.parseFloat($('#tvaPetroleImpPays').val()));
         let amort=maker.ammortissement($('#cfeAmmortPays').val(),Number.parseFloat($('#isAmmortPays').val()),Number.parseFloat($('#imfAmmortPays').val()),Number.parseFloat($('#irvmAmmortPays').val()),Number.parseFloat($('#ircAmmortPays').val()),Number.parseFloat($('#tvaPetroleAmmortPays').val()) );
 
-        let invest=maker.investir(ajout.investirProt("CFE"),ajout.investirProt("IS"),ajout.investirProt("IMF"),ajout.investirProt("IRVM"),ajout.investirProt("IRC"),ajout.investirProt("TVAPetrole"));
+        let invest=maker.investir(ajout.investirProt("CFE"),ajout.investirProt("IS"),ajout.investirProt("IMF"),ajout.investirProt("IRVM"),ajout.investirProt("IRC"),maker.impotPays(null,null,null));
 
         let source=$('#nomCodeInvestPays').val()+"<br/>"+$('#nomRegInvestPays').val()+"<br/>"+$('#zonneInvestPays').val();
         land.ajouterPays(maker.land($("#codePays").val().toUpperCase(),$("#nomPays").val(),tax,amort,invest,$('#descDispoInvestPays').val(),source));
@@ -26,7 +26,6 @@ Ajout.prototype.verifNull=function (data){
     }
     if(data==="null"){
         return null;
-        console.log(data);
     }
     if (data===null){
         return null;
@@ -34,7 +33,7 @@ Ajout.prototype.verifNull=function (data){
     return data;
 };
 Ajout.prototype.investirProt=function (impStr){
-  return maker.impotPays(ajout.verifNull($('#duree'+impStr+'InvestPays').val()),ajout.verifNull($('#taux'+impStr+'InvestPays').val()),ajout.verifNull($('#reducExo'+impStr+'InvestPays').val()));
+  return maker.impotPays(ajout.verifNull($('#duree'+impStr+'InvestPays').val()),ajout.verifNull($('#taux'+impStr+'InvestPays').val()),null);
 };
 Ajout.prototype.verifierChanp=function(){
         document.getElementById("formError").innerHTML="";
@@ -46,12 +45,11 @@ Ajout.prototype.verifierChanp=function(){
         }
 };
 Ajout.prototype.verifInvestissement=function(){
-    ajout.verifInvestTaxe($('#dureeCFEInvestPays').val(),$('#tauxCFEInvestPays').val(),$('#reducExoCFEInvestPays').val(),"cfe");
-    ajout.verifInvestTaxe($('#dureeISInvestPays').val(),$('#tauxISInvestPays').val(),$('#reducExoISInvestPays').val(),"IS");
-    ajout.verifInvestTaxe($('#dureeIMFInvestPays').val(),$('#tauxIMFInvestPays').val(),$('#reducExoIMFInvestPays').val(),"IMF");
-    ajout.verifInvestTaxe($('#dureeIRVMInvestPays').val(),$('#tauxIRVMInvestPays').val(),$('#reducExoIRVMInvestPays').val(),"IRVM");
-    ajout.verifInvestTaxe($('#dureeIRCInvestPays').val(),$('#tauxIRCInvestPays').val(),$('#reducExoIRCInvestPays').val(),"IRC");
-    ajout.verifInvestTaxe($('#dureeTVAPetroleInvestPays').val(),$('#tauxTVAPetroleInvestPays').val(),$('#reducExoTVAPetroleInvestPays').val(),"TvaPetrole");
+    ajout.verifInvestTaxe($('#dureeCFEInvestPays').val(),$('#tauxCFEInvestPays').val(),"cfe");
+    ajout.verifInvestTaxe($('#dureeISInvestPays').val(),$('#tauxISInvestPays').val(),"IS");
+    ajout.verifInvestTaxe($('#dureeIMFInvestPays').val(),$('#tauxIMFInvestPays').val(),"IMF");
+    ajout.verifInvestTaxe($('#dureeIRVMInvestPays').val(),$('#tauxIRVMInvestPays').val(),"IRVM");
+    ajout.verifInvestTaxe($('#dureeIRCInvestPays').val(),$('#tauxIRCInvestPays').val(),"IRC");
     try{
         document.getElementById("descDispoError").innerHTML="";
         verif.stringer($('#descDispoInvestPays').val());
@@ -203,7 +201,7 @@ Ajout.prototype.verifGeneral=function(){
         document.getElementById("formError").innerHTML=bootstrap.alertDanger("Le formulaire n'est pas rempli correctement");
     }
 };
-Ajout.prototype.verifInvestTaxe=function(duree,taux,reduc,nomTaxe){
+Ajout.prototype.verifInvestTaxe=function(duree,taux,nomTaxe){
     try{
         document.getElementById("duree"+nomTaxe.toUpperCase()+"Error").innerHTML="";
         verif.verifDureeInvest(duree);
@@ -218,14 +216,6 @@ Ajout.prototype.verifInvestTaxe=function(duree,taux,reduc,nomTaxe){
     }
     catch (e) {
         document.getElementById("taux"+nomTaxe.toUpperCase()+"Error").innerHTML=bootstrap.alertDanger(e.message);
-        document.getElementById("formError").innerHTML=bootstrap.alertDanger("Le formulaire n'est pas rempli correctement");
-    }
-    try{
-        document.getElementById("reducExo"+nomTaxe.toUpperCase()+"Error").innerHTML="";
-        verif.verifTauxInvest(reduc);
-    }
-    catch (e) {
-        document.getElementById("reducExo"+nomTaxe.toUpperCase()+"Error").innerHTML=bootstrap.alertDanger(e.message);
         document.getElementById("formError").innerHTML=bootstrap.alertDanger("Le formulaire n'est pas rempli correctement");
     }
 
