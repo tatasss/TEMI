@@ -143,7 +143,7 @@ ViewGenerator.prototype.pinbHTML = function () {
  * @return {string}
  */
 ViewGenerator.prototype.entrepriseHTML = function () {
-    let result = "<p>L'firm simulée est supposée être localisée dans la plus grande ville du land, employer "
+    let result = "<p>L'entreprise simulée est supposée être localisée dans la plus grande ville du land, employer "
         + myMath.separatorNumber((this.mE.cadre() + this.mE.secretaire() + this.mE.ouvrier())) + " salariés et vendre la totalité de sa " +
         "production sur le marché local. ";
     result += "<br/>Elles comporte donc " + myMath.separatorNumber(this.mE.cadre()) + " cadre(s) dont l'indice salarial est de "
