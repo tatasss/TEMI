@@ -274,7 +274,7 @@ BootstrapView.prototype.bootstrapTemiTabSpe = function (cote, head, tab, maMarge
                 myTab[cpt] += cote[index] + "</td>";
             }
             myTab[cpt] += "<td>";
-            console.log(myMath.separatorNumber(Math.round(items * 100) / 100));
+            //console.log(myMath.separatorNumber(Math.round(items * 100) / 100));
             myTab[cpt] += myMath.separatorNumber(Math.round(items * 100) / 100);
             myTab[cpt] += " % </td>";
             tabExcel.push(Math.round(items * 100) / 100);
@@ -312,7 +312,7 @@ BootstrapView.prototype.bootstrapTemiTabSpe = function (cote, head, tab, maMarge
     tabExcel.push("régime Fiscal");
     tabExcel.push(reg);
     html+=
-        `<a class="btn btn-default " download="&{titre}.xls" href="#" id="anchorNewApi-xls" onClick="newApi('xls','${tabExcel.toString()}','${titre}')">Récupérer Excel</a>`;
+        `<a class="btn btn-default " download='&{titre}.xls' href="#" id="anchorNewApi-xls" onClick="newApi('xls','${tabExcel.toString()}','${titre}')">Récupérer Excel</a>`;
     return html;
 };
 /**
