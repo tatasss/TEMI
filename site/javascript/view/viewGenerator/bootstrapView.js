@@ -311,8 +311,7 @@ BootstrapView.prototype.bootstrapTemiTabSpe = function (cote, head, tab, maMarge
     tabExcel.push("ligne");
     tabExcel.push("régime Fiscal");
     tabExcel.push(reg);
-    html+=
-        `<button class="btn btn-default " download="${titre}.xls" id="anchorNewApi-xls" onClick="newApi('xls','${tabExcel.toString()}','${titre}')">Récupérer Excel</button>`;
+    html+= `<a class="btn btn-default " download="${titre}.xls" href="#" id="anchorNewApi-xls" onClick="newApi('xls','${tabExcel.toString()}','${titre}')">Récupérer Excel</a>`;
     return html;
 };
 /**
