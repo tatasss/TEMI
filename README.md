@@ -6,11 +6,5 @@ et qui présentera les simulations de TEMI pour un ou plusieurs pays donnés au 
 
 Je travaille depuis le 2 mai et va ainsi jusqu'au 11 juillet.
 Je travaille dans le CERDI qui est un centre mixte de recherche de l’Université Clermont Auvergne et du CNRS en sciences économiques.
-Je suis pour l'instant sur une application Front-end dont le code est fait principalement en javaScript,et une vue en HTML/CSS.
-Il suffit donc de téléchager le projet et de cliquez sur index.html pour l'utiliser
-
-
-petit Bémole, mon application utlise la fonction history.pushState a un moment, cette commande génére une erreur si l'url du site 
-commence par file:/// , il est donc conseillé de doit utilisé un autre navigateur, soit lancer le projet sur un serveur localHost(apache ,wamp ou ...)
- (ou un hebergeur externe mais je suis pas sur que ce soit pratique lors du développement);
+Le site est accéssible sur : https://tatasss.github.io/TEMI/site/html/
 
