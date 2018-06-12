@@ -1,7 +1,6 @@
 let Ajout=function(){};
 let ajout=new Ajout();
 
-verif.codeISO3("ben");
 Ajout.prototype.addLand=function(){
 
     try{
@@ -13,6 +12,7 @@ Ajout.prototype.addLand=function(){
 
         let source=$('#nomCodeInvestPays').val()+"<br/>"+$('#nomRegInvestPays').val()+"<br/>"+$('#zonneInvestPays').val();
         land.ajouterPays(maker.land($("#codePays").val().toUpperCase(),$("#nomPays").val(),tax,amort,invest,$('#descDispoInvestPays').val(),source));
+        document.location.href("./index.html");
     }
     catch (e) {
     }

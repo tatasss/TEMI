@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b89c5143-0212-42c0-b73b-81dad73db30d" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/html/ajoutPays.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/ajoutPays.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/javascript/view/directlyChange/PaysAddView.js" beforeDir="false" afterPath="$PROJECT_DIR$/javascript/view/directlyChange/PaysAddView.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -50,8 +49,8 @@
       <file leaf-file-name="PaysAddView.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/javascript/view/directlyChange/PaysAddView.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="203" column="52" selection-start-line="203" selection-start-column="52" selection-end-line="203" selection-end-column="52" />
+            <state relative-caret-position="238">
+              <caret line="14" column="47" selection-start-line="14" selection-start-column="47" selection-end-line="14" selection-end-column="47" />
             </state>
           </provider>
         </entry>
@@ -495,7 +494,7 @@
       <workItem from="1528353468757" duration="20510000" />
       <workItem from="1528698462761" duration="1193000" />
       <workItem from="1528728089113" duration="2832000" />
-      <workItem from="1528787693462" duration="14356000" />
+      <workItem from="1528787693462" duration="14634000" />
     </task>
     <task id="LOCAL-00001" summary="mis en place d'un code propre">
       <created>1526980633672</created>
@@ -599,7 +598,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="562356000" />
+    <option name="totallyTimeSpent" value="562634000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -615,14 +614,14 @@
     <editor active="true" />
     <layout>
       <window_info anchor="right" id="PlantUML" order="3" weight="0.33801955" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4991453" side_tool="true" visible="true" weight="0.20634921" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4991453" side_tool="true" visible="true" weight="0.20634921" />
       <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.49938875" weight="0.3298969" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" x="0" y="447" width="1680" height="116" id="Event Log" order="12" sideWeight="0.35330072" side_tool="true" weight="0.19473082" />
       <window_info anchor="bottom" id="Version Control" order="8" sideWeight="0.35330072" side_tool="true" weight="0.19473082" />
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info id="Structure" order="1" sideWeight="0.50085473" side_tool="true" weight="0.24327628" />
-      <window_info anchor="bottom" id="Terminal" order="9" sideWeight="0.64669925" visible="true" weight="0.19675925" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="9" sideWeight="0.64669925" visible="true" weight="0.19675925" />
       <window_info id="Favorites" order="2" sideWeight="0.50085473" side_tool="true" weight="0.24327628" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -985,8 +984,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/javascript/view/directlyChange/PaysAddView.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="203" column="52" selection-start-line="203" selection-start-column="52" selection-end-line="203" selection-end-column="52" />
+        <state relative-caret-position="238">
+          <caret line="14" column="47" selection-start-line="14" selection-start-column="47" selection-end-line="14" selection-end-column="47" />
         </state>
       </provider>
     </entry>
