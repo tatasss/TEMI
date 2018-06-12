@@ -62,7 +62,7 @@ Ref.prototype.pibFind = function (code) {
         }
     };
     try {
-        xhr.open("GET", "http://api.worldbank.org/v2/countries/" + code + "/indicators/NY.GDP.PCAP.CD", true);
+        xhr.open("GET", "https://api.worldbank.org/v2/countries/" + code + "/indicators/NY.GDP.PCAP.CD", true);
         xhr.send(null);
         //console.log ("la");
     }
