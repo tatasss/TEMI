@@ -53,7 +53,7 @@ Verif.prototype.codeISO3 = function (code) {
             }
         }
     };
-    xhr.open("GET", "http://api.worldbank.org/v2/countries/" + code, true);
+    xhr.open("GET", "https://api.worldbank.org/v2/countries/" + code, true);
     xhr.send(null);
 };
 Verif.prototype.stringer = function (str) {
