@@ -142,6 +142,6 @@ class __TwigTemplate_a4b19e8f665dfd29ded54bc3dc742249ffd615ced3e5c9417c98a24242e
 
     public function getSourceContext()
     {
-        return new Twig_Source("", "default/index.html.twig", "C:\\Users\\matthias\\Desktop\\stage\\TEMI\\site\\Symfony\\app\\Resources\\views\\default\\index.html.twig");
+        return new Twig_Source("", "default/index.html.twig", "C:\\Users\\matthias\\Desktop\\stage\\TEMI\\site\\app\\Resources\\views\\default\\index.html.twig");
     }
 }

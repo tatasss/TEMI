@@ -95,6 +95,6 @@ class __TwigTemplate_454f2e03f9f9f0294e5fa851510d1353ce6a340a542168ced7bb4bd9339
 
     public function getSourceContext()
     {
-        return new Twig_Source("", "base.html.twig", "C:\\Users\\matthias\\Desktop\\stage\\TEMI\\site\\Symfony\\app\\Resources\\views\\base.html.twig");
+        return new Twig_Source("", "base.html.twig", "C:\\Users\\matthias\\Desktop\\stage\\TEMI\\site\\app\\Resources\\views\\base.html.twig");
     }
 }
