@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b89c5143-0212-42c0-b73b-81dad73db30d" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
-    </list>
+    <list default="true" id="b89c5143-0212-42c0-b73b-81dad73db30d" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -172,7 +170,7 @@
       <path value="$PROJECT_DIR$/Symfony/vendor/swiftmailer/swiftmailer" />
     </include_path>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="1551" />
     <option name="y" value="185" />
     <option name="width" value="1241" />
@@ -190,6 +188,17 @@
             <path>
               <item name="site" type="b2602c69:ProjectViewProjectNode" />
               <item name="site" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="site" type="b2602c69:ProjectViewProjectNode" />
+              <item name="site" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="site" type="b2602c69:ProjectViewProjectNode" />
+              <item name="site" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="config" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -396,7 +405,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="566234000" />
+    <option name="totallyTimeSpent" value="566511000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -408,8 +417,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="1358" y="-8" width="1696" height="1026" extended-state="6" />
-    <editor active="true" />
+    <frame x="1358" y="-8" width="1696" height="1026" extended-state="7" />
     <layout>
       <window_info anchor="right" id="PlantUML" order="3" weight="0.33801955" />
       <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.49938875" weight="0.3298969" />
@@ -417,8 +425,8 @@
       <window_info anchor="bottom" id="Database Changes" order="13" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" sideWeight="0.35391197" side_tool="true" visible="true" weight="0.43243244" />
       <window_info anchor="bottom" id="Run" order="2" />
-      <window_info anchor="bottom" id="Terminal" order="9" sideWeight="0.646088" visible="true" weight="0.43243244" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4991453" side_tool="true" visible="true" weight="0.15220049" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="9" sideWeight="0.646088" visible="true" weight="0.43243244" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4991453" side_tool="true" visible="true" weight="0.15220049" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="3" />
       <window_info id="Structure" order="1" sideWeight="0.50085473" side_tool="true" weight="0.24327628" />
