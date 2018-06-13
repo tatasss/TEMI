@@ -1,7 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b89c5143-0212-42c0-b73b-81dad73db30d" name="Default" comment="" />
+    <list default="true" id="b89c5143-0212-42c0-b73b-81dad73db30d" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/symfony/UPGRADE-3.0.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/symfony/UPGRADE-3.1.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/symfony/UPGRADE-3.2.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/symfony/UPGRADE-3.3.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/symfony/UPGRADE-4.0.md" beforeDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -405,7 +412,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="566511000" />
+    <option name="totallyTimeSpent" value="566848000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -417,7 +424,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="1358" y="-8" width="1696" height="1026" extended-state="7" />
+    <frame x="1358" y="-8" width="1696" height="1026" extended-state="6" />
     <layout>
       <window_info anchor="right" id="PlantUML" order="3" weight="0.33801955" />
       <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.49938875" weight="0.3298969" />
