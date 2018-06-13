@@ -1,0 +1,354 @@
+@startuml
+
+ package "start" <<folder>>{
+      class Ref{
+         Ref()
+         donnerNomPays(code:string):string
+         donnerCodePays(nom:string):string
+      }
+      Object reference.js
+      Object script.js{
+        showModal():void
+        debutCompta(actu:float,regime:string):void
+        validateForm():void
+        getXMLHttpRequest():XMLHttpRequest
+        verifPourcent(nombre:float):float
+        mesPays():Array
+      }
+  }
+package "view" <<folder>>{
+       package "viewGenerator" <<folder>>{
+       class GenererVue{
+                   GenererVue(modele:Modele)
+                   modele:Modele
+                   resultatHtml(regime:string):string
+                   recupDonneTab(effMoy:Array,impDonne:ImpotPays,donneImp:float,isIs:boolean,isIMF:boolean,isTot:boolean):Array
+                   pinbHtml(pays:string):string
+                   entrepriseHtml():string
+                   bilanHtml():string
+                   compteHtml():string
+                   donneesEconomiques(pin:float,pays:string):string
+                   ImpotHtml(monm:modele):string
+                   amortissementHTML():string
+                   amortiExcepHtml():string
+                   donneesFiscal():string
+                   bodyHTML(pin:float,pays:string,regimE:string):string
+                   navigationHtml(pays:string,regime:string,actu:float,marge:float):string
+                   mainHtml(pays:string,regime:string,actu:float,marge:float):string
+                   petroleHtml(taxeAjout:valAjout):string
+                   chargeFinancierHtml(taxeAjout:VlaCreanceCLi):string
+                   emploieHtml(monm:Modele):string
+                   comptableHtml(monm:Modele):string
+                   ammortExcepHtml(monm:Modele):string
+                   resultatImpotHtml(monm:Modele):string
+                   getAmmortGenneralHtml(monm:Modele):string
+                   impotSocieteHtml(monm:Modele):string
+                   impotForfaitHtml(monm:Modele):string
+                   impotRevenuValeurMobilieres(monm:Modele):string
+                   actualisationHtml(monm:Modele):string
+                   tabImpotEtTaxe(monm:ImpotTab):string
+                   tabTauxEffectifMoy(monm:float):string
+                   tabFluxTresorie(tab:FluxTresorie,color:string):string
+                   tauxRendementInt(tab:Array):string
+                   investissementRegime():string
+      }
+       class BootstrapVue{
+                   tableSe(cote:Array,head:string,...:TabType):string
+                   pan(type:string,head:string,body:string):string
+                   container(body:string):string
+                   gridNavCote(body:string,nav:string):string
+                   buttonBalA(href:string,html:string):string
+                   buttonBaBu(type:string,onclick:callable(),html:string,value:Object)
+                   listeItem(tab:Array):string
+                   collapse(...:collapseType):string
+                   bootstrapTemiTabSpe(cote:Array,head:Array,tab:Array,maMarge:Array,titre:String):string
+       }
+
+       class Graph{
+            Graph()
+            graphique(modeleTab:Array,id:string,regime:string,maMarge:Array,titre:String):void
+        }
+       Object graphGenerator.js{
+            createColorSet(number:float):Array
+            getColorString(tab:Array):string
+       }
+       }
+       package  "directlyChange" <<folder>>{
+       Object GraphFormView.js{
+            supelemPays(code:string):void
+            supelemEnt(marge:float):void
+       }
+       Object ModeleView.js
+       Object ViewManufacturing.js
+       note as N1
+            this object is on reality a file with a comportement view
+           end note
+       }
+
+   }
+package "data" <<folder>>{
+    class Donne{
+        regime:String
+        actu:float
+        marge:float
+        Donne(pays:String,regime:String,actu:float,marge:float)
+    }
+}
+ package "manufacturing" <<folder>>{
+     package "Fabrique" <<frame>>{
+         class Fabrique{
+             pibFind()
+             Fabrique()
+         }
+         class Pays{
+            code:String
+            nom:String
+            pib:float
+            dispoDerog:String
+            source:String
+            Pays(string code,string nom,Impot impot,Amortissement ammort,Investir investissement,string dispoDerog,string source)
+         }
+         class Impot{
+             cfe:float
+             isImp:float
+             imf:float
+             irvm:float
+             irc:float
+             tva_petrole:float
+             Impot(float cfe,float is,float imf,float irvm,float tva_petrole)
+         }
+         class Ammortissement{
+             construction:float
+             equipement:float
+             coefDegressif:float
+             camion:float
+             bureau:float
+             Ammortissement(construction:float, equipement:float ,coedDegressif:float,camion:float,info:float,bureau:float)
+         }
+         class Entreprise{
+             nom:string
+             terrain:float
+             construction:float
+             equipement:float
+             camion:float
+             info:float
+             bureau:float
+             stocks:float
+             creanceCli:float
+             dispoBanque:float
+             capitalSocial:float
+             detteLongterme:float
+             detteCourtTerme:float
+             detteFournisseur:float
+             achat:float
+             petrole:float
+             depenseAdministrative:float
+             depensePub:float
+             depenseEntretien:float
+             depenseFinanciere:float
+             vente:float
+             cadre:float
+             secretaire:float
+             ouvrier:float
+             indice_cadre:float
+             indice_secretaire
+             indice_ouvrier:float
+             dividende:float
+             actuali:float
+             Entreprise(actu:float,marge:float)
+         }
+         class Investir{
+
+             Investir(cfe:ImpotPays,isammort:IsImpotPays,imf:ImpotPays,irvm:ImpotPays,irc:ImpotPays,tvaPetrole:ImpotPays)
+         }
+         class ImpotPays{
+             duree:float
+             taux:float
+             reducexo:float
+             ImpotPays(duree:float,taux:float,reducexo:float)
+         }
+         class IsImpotPays{
+             ammortTauxEx:float
+             ammortLimit:float
+             IsImpotPays(duree:float,taux:float,reducexo:float,ammortTauxEx:float,ammortLimit:float)
+         }
+         class AmortirModele{
+             AmortirModele(prix:float,durLin:float,coef:float,nom:String)
+             dureeRestante:float
+             baseAmortissable:float
+             tauxLineaire:float
+             tauxDegressif:float
+             chargeAmorti:float
+             nom:String
+             getHtml():String
+         }
+     }
+ }
+
+
+
+ package "model" <<folder>>{
+     package "anotherFunctiun" <<folder>>{
+         class MyMath{
+            MyMath()
+            tri(tab:Array):float
+            van(actu:float,tab:Array):float
+            sommeTab(tab:Array):float
+            arrondirTabUnit(tab:Array,numberDec:float):Array
+         }
+         Object myMath.js{
+            triReel(fn:callable()):float
+         }
+         Object Excel.js{
+            newAPI(format String,tab :String,titre: string):File
+         }
+     }
+
+     package "ModeleObject<<Implicite>>" <<frame>>{
+        class ValAjout{
+            petrole:Array
+            taux:Array
+            tva:Array
+        }
+        class ImpotResult{
+            benCompta:Array
+            ammortExcep:Array
+            BenImpot:Array
+         }
+        class ValCreanceCli{
+            chargeFinance:Array
+            taux:Array
+            irc:Array
+        }
+        class ComptaResult{
+            vente:Array
+            achats:Array
+            petrole:Array
+            tva_petrole:Array
+            depense_entretien:Array
+            depense_admin:Array
+            depense_pub:Array
+            salaire_ouvrier:Array
+            salaire_secretaire:Array
+            salaire_cadre:Array
+            cfe:Array
+            chargeFinanciere:Array
+            amortissement:Array
+            benefice_comptable:Array
+            taux_marge_avant_IS_IMF:Array
+
+        }
+        class EmploieTab{
+            salaire_cadre:Array
+            salaire_secretaire:Array
+            salaire_ouvrier:Array
+            masse_salarial:Array
+            tauxCfe:Array
+            reel_CFE:Array
+        }
+        class ImpotTab{
+            cfe:Array
+            isImp:Array
+            imf:Array
+            irvm:Array
+            irc:Array
+            tva_petrole:Array
+            total:Array
+        }
+        note bottom: total can be undefined
+        class AmmortExcept{
+            duree:float
+            investissement:float
+            taux:float
+            limitation:float
+            dureeTab:Array
+            baseAmorti:Array
+            chargeAmorti:Array
+        }
+        class FluxTresorie{
+            courant:Array
+            actu:Array
+        }
+     }
+
+         class Modele{
+                Modele(donne:Donne)
+                investissement:float
+                amortissementGeneral:Array
+                amortissement:Array
+                impotIMF:Array
+                ImpotIRVM:Array
+                actualisation:Array
+                impotSociété:Array
+                isImf:Array
+                tauxEffMoyCourent:float
+                tauxRendInterneSImp:Array
+                tauxRendInterneSISIMF:Array
+                tauxRendInterneAIMP:Array
+                tauxEffMargApIsImf:Array
+                tauxEffMargApImp:Array
+
+             }
+     class ModeleManager{
+             ModeleManager()
+             investissementModele(mE:Entreprise,pibchoix:float):float
+             ammortissement(mE:Entreprise,mP:Pays,pibchoix:float):Array
+             ammortGen(ammortissement:Array):Array
+             taxe_val_ajout(mE:Entreprise,impot:Impot,pibchoix:float):valAjout
+             contributionForEmploie(mE:Entreprise,mP:Pays,pibchoix:float,impot:Impot):EmploieTab
+             selectTaxe(mP:Pays,donne:Donne):ImpotTab
+             taxe_creance(mE:Entreprise,impot:Impot,pibchoix:float):ValCreanceCli
+             comptableResult(mE:Entreprise,pibchoix:float,tva,salaire_cadre:Array,salaire_secretaire:Array,salaire_ouvrier:Array,reel_cfe:Array,ammortissement:Array):ComptaResult
+             impotResult(benCompa:Array,amortExep:Array):ImpotResult
+             ammortExcept(mP:Pays,benCompta:Array,regime:String,donneRef:Donne):AmmortExcep
+             iSIMFtab(is:Array,imf:Array):Array
+             impotTaxeCourent(actu:float,employer:EmploieTab,isImf:Array,impotIRVM:Array,taxeCreance:VlaCreanceCli,taxeAjout:VlaAjout):ImpotTab
+             impotTaxeActu(actu:float,employer:EmploieTab,isImf:Array,impotIRVM:Array,taxeCreance:VlaCreanceCli,taxeAjout:VlaAjout):ImpotTab
+             tauxEffectif(vanSI:float,vanAI:float):float
+             fluxTresoriesI(entreprise:Entreprise, pin:float, compta:ComptaResult, actu:float) :FluxTresorie
+             fluxTresoriesImp(fluxTresorie:FluxTresorie,tabImpotC:Array,tabImpotA:Array,actuel:float):FluxTresorie
+             tauxRendementInterne(tab:Array):Array
+             tauxEffectifMarginaux(tabSi:Array,tabAi:Array):Array
+             }
+ }
+  ValAjout-->Modele
+  EmploieTab->Modele
+  FluxTresorie "3"->Modele
+  ImpotTab"3"->Modele
+  ValCreanceCli->Modele
+  ComptaResult->Modele
+  ImpotResult->Modele
+  AmmortExcept->Modele
+  ModeleManager-down->Modele
+  script.js-up-ModeleView.js
+  script.js-GraphFormView.js
+  script.js-ViewManufacturing.js
+  Entreprise-left->Donne
+  Donne-up->Modele
+  Fabrique-down-reference.js
+  Ref->reference.js
+  Graph-down-reference.js
+  MyMath-up-reference.js
+  ModeleManager-up-reference.js
+  Modele-down->GenererVue
+  BootstrapVue-down-reference.js
+  Impot-left->Pays
+  reference.js->script.js
+  Ammortissement -down->Pays
+  Investir -up->Pays
+  ImpotPays "5"-up->Investir
+  IsImpotPays -up->Investir
+  IsImpotPays -up--|>ImpotPays
+  Pays-left->Fabrique
+  Impot-left->Fabrique
+  script.js-GenererVue
+  Entreprise-right->Fabrique
+  AmortirModele-down->Fabrique
+  Investir-up->Fabrique
+  ImpotPays-up->Fabrique
+  IsImpotPays-up->Fabrique
+  Ammortissement->Fabrique
+  Pays->Donne
+  script.js-up-Graph
+  script.js-up-BootstrapVue
+@enduml

@@ -1,0 +1,3 @@
+tem_imain:
+    resource: "@TEMImainBundle/Resources/config/routing.yml"
+    prefix:   /

@@ -1,0 +1,192 @@
+.vertical-menu {
+    width: 200px; /* Set a width if you like */
+}
+
+.vertical-menu a {
+    background-color: #eee; /* Grey background color */
+    color: black; /* Black text color */
+    display: block; /* Make the links appear below each other */
+    padding: 12px; /* Add some padding */
+    text-decoration: none; /* Remove underline from links */
+}
+
+.vertical-menu a:hover {
+    background-color: #ccc; /* Dark grey background on mouse-over */
+}
+
+.vertical-menu a.active {
+    background-color: #4CAF50; /* Add a green color to the "active/current" link */
+    color: white;
+}
+
+.vertical-form {
+    width: 100%;
+}
+
+.test {
+    border: 1px solid black;
+}
+
+.vertical-form button.active {
+    background-color: #4CAF50; /* Add a green color to the "active/current" link */
+    color: white;
+}
+
+.vertical-menu button {
+    background-color: #eee; /* Grey background color */
+    color: black; /* Black text color */
+    display: block; /* Make the links appear below each other */
+    padding: 12px; /* Add some padding */
+    text-decoration: none; /* Remove underline from links */
+}
+
+.monTab {
+
+}
+
+thead {
+    font-weight: normal;
+}
+
+.bottomBorder {
+    border-bottom: 1px solid black;
+}
+
+.blue {
+    background-color: #3eb1d0;
+}
+
+.fontred {
+    color: #c82829;
+}
+
+.red {
+    background-color: #c82829;
+}
+
+.yellow {
+    background-color: #b9ca4a;
+}
+
+#content-header {
+    background: #2a8dd4;
+    color: #fff;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 80px;
+    overflow: hidden;
+}
+
+#content-main {
+    background: #fff;
+    position: fixed;
+    top: 80px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    overflow: auto;
+}
+
+.padding {
+    padding: 15px;
+    list-style: none;
+}
+
+.chart-legend li span {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    margin-right: 2px;
+}
+
+.chart-legend {
+    height: 250px;
+    overflow: auto;
+    padding-right: 10px;
+}
+
+.chart-legend li {
+    cursor: pointer;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+}
+
+.chart-legend ul {
+    margin: 0;
+    padding: 0;
+
+}
+
+.strike {
+    text-decoration: line-through;
+}
+
+.float-left {
+    float: left;
+}
+
+#bouttonGraphique{
+    max-height: 100%;
+    max-width: 100%;
+}
+.hide{
+    border:0 solid white;
+}
+.Borderhide{
+    border:0 solid white;
+}
+nav{
+    background-color: #205796;
+    max-height: 100%;
+}
+.navbar-header a{
+    color: white;
+}
+.nav a{
+    color: white;
+}
+.active{
+    background-color: #0333BB;
+}
+.navbar-header img{
+    background-color: white;
+    height: 200%;
+    float: left;
+    margin-right: 5px;
+    margin-top: -15%;
+}
+.container{
+    margin-top:5%;
+}
+.item{
+    background-color: white;
+}
+.blank{
+    background-color: white;
+    color: #205796;
+
+}
+.col{
+    background-color: #205796;
+    border: 1px solid #205796;
+}
+#mapage{
+    min-height:70vh;
+}
+#suivant{
+    float: right;
+}
+.lol li{
+    background-color: #205796;
+    color:#205796;
+
+}
+.lol li.active{
+    background-color: #0333BB;
+    color: #0333BB;
+
+}
