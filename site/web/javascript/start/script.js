@@ -41,17 +41,17 @@ function debutCompa(actu, regime) {
         let stateObj = {foo: "bar"};
         history.pushState(stateObj, window.location.href);
         console.log(history.state);
-        window.location.href = "./graphForm.html";
-        history.replaceState(stateObj, "some useless title", "./graphForm.html");
+        window.location.href = "./graph";
+        history.replaceState(stateObj, "some useless title", "./graph");
     } catch (e) {
         alert(e.toString());
-        document.location.href="./index.html";
+        document.location.href="./";
     }
 }
 function retourModal(){
     localStorage.setItem("retour1",$("#REGIMECmpta").val());
     localStorage.setItem("retour2",$("#actualistionCompa").val());
-    window.location.href="./index.html";
+    window.location.href="./";
 }
 /**
  * @description This function start the calcul with a parameters enter on html page
@@ -79,7 +79,7 @@ function validateForm() {
     let donne = new Data(pays, regime, actualisation, marge);
     if (donne.land() !== undefined) {
         if (donne.land() != null) {
-            console.log("pib du land : " + donne.land().pib.toString());
+            console.log("pib du pays : " + donne.land().pib.toString());
         }
     }
     monModele = new Model(donne);
