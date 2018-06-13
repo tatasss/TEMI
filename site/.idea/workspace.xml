@@ -1,13 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b89c5143-0212-42c0-b73b-81dad73db30d" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/html/ajoutPays.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/ajoutPays.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/html/graphForm.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/graphForm.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/html/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/html/model.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/model.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/html/test.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/test.html" afterDir="false" />
-    </list>
+    <list default="true" id="b89c5143-0212-42c0-b73b-81dad73db30d" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -22,106 +16,7 @@
     <favorites_list name="site" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="verification.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/javascript/model/anotherFunctiun/verification.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="390">
-              <caret line="110" column="17" selection-start-line="110" selection-start-column="17" selection-end-line="110" selection-end-column="17" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ajoutPays.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/html/ajoutPays.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1232">
-              <caret line="401" column="6" selection-start-line="401" selection-start-column="6" selection-end-line="401" selection-end-column="6" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="graphForm.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/html/graphForm.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="501">
-              <caret line="101" column="74" selection-start-line="101" selection-start-column="74" selection-end-line="101" selection-end-column="74" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="PaysAddView.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/javascript/view/directlyChange/PaysAddView.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="8" column="137" lean-forward="true" selection-start-line="8" selection-start-column="137" selection-end-line="8" selection-end-column="137" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="manufact.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/javascript/manufacturing/manufact.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="11647">
-              <caret line="741" column="29" selection-start-line="741" selection-start-column="29" selection-end-line="741" selection-end-column="29" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="PaysListe.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/javascript/data/PaysListe.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1535">
-              <caret line="154" selection-start-line="154" selection-end-line="154" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="myMath.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/javascript/model/anotherFunctiun/myMath.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="442">
-              <caret line="104" column="30" selection-start-line="104" selection-start-column="30" selection-end-line="104" selection-end-column="30" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/html/index.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2006">
-              <caret line="118" column="53" selection-start-line="118" selection-start-column="53" selection-end-line="118" selection-end-column="53" />
-              <folding>
-                <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#5;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#div#5;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="model.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/html/model.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1989">
-              <caret line="117" column="50" selection-start-line="117" selection-start-column="50" selection-end-line="117" selection-end-column="50" />
-              <folding>
-                <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="test.html" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/html/test.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="527">
-              <caret line="31" column="45" selection-start-line="31" selection-start-column="45" selection-end-line="31" selection-end-column="45" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -262,53 +157,55 @@
       <path value="$PROJECT_DIR$/node_modules/extsprintf/package.json" />
       <path value="$PROJECT_DIR$/node_modules/fast-deep-equal/package.json" />
       <path value="$PROJECT_DIR$/node_modules/fast-json-stable-stringify/package.json" />
-      <path value="$PROJECT_DIR$/node_modules/forever-agent/package.json" />
-      <path value="$PROJECT_DIR$/node_modules/form-data/package.json" />
-      <path value="$PROJECT_DIR$/node_modules/frac/package.json" />
-      <path value="$PROJECT_DIR$/node_modules/getpass/package.json" />
-      <path value="$PROJECT_DIR$/node_modules/har-schema/package.json" />
-      <path value="$PROJECT_DIR$/node_modules/har-validator/package.json" />
-      <path value="$PROJECT_DIR$/node_modules/has-ansi/package.json" />
-      <path value="$PROJECT_DIR$/node_modules/http-signature/package.json" />
-      <path value="$PROJECT_DIR$/node_modules/is-typedarray/package.json" />
-      <path value="$PROJECT_DIR$/node_modules/isstream/package.json" />
-      <path value="$PROJECT_DIR$/node_modules/jsbn/package.json" />
-      <path value="$PROJECT_DIR$/node_modules/json-schema-traverse/package.json" />
-      <path value="$PROJECT_DIR$/node_modules/json-schema/package.json" />
-      <path value="$PROJECT_DIR$/node_modules/json-stringify-safe/package.json" />
-      <path value="$PROJECT_DIR$/node_modules/jsprim/package.json" />
-      <path value="$PROJECT_DIR$/node_modules/lodash/package.json" />
-      <path value="$PROJECT_DIR$/node_modules/mime-db/package.json" />
-      <path value="$PROJECT_DIR$/node_modules/mime-types/package.json" />
-      <path value="$PROJECT_DIR$/node_modules/moment/package.json" />
-      <path value="$PROJECT_DIR$/node_modules/oauth-sign/package.json" />
-      <path value="$PROJECT_DIR$/node_modules/office-addin-validator/package.json" />
-      <path value="$PROJECT_DIR$/node_modules/performance-now/package.json" />
-      <path value="$PROJECT_DIR$/node_modules/printj/package.json" />
-      <path value="$PROJECT_DIR$/node_modules/punycode/package.json" />
-      <path value="$PROJECT_DIR$/node_modules/qs/package.json" />
-      <path value="$PROJECT_DIR$/node_modules/request-promise-core/package.json" />
-      <path value="$PROJECT_DIR$/node_modules/request-promise/package.json" />
-      <path value="$PROJECT_DIR$/node_modules/request/package.json" />
-      <path value="$PROJECT_DIR$/node_modules/safe-buffer/package.json" />
-      <path value="$PROJECT_DIR$/node_modules/ssf/package.json" />
-      <path value="$PROJECT_DIR$/node_modules/sshpk/package.json" />
-      <path value="$PROJECT_DIR$/node_modules/stealthy-require/package.json" />
-      <path value="$PROJECT_DIR$/node_modules/strip-ansi/package.json" />
-      <path value="$PROJECT_DIR$/node_modules/supports-color/package.json" />
-      <path value="$PROJECT_DIR$/node_modules/tough-cookie/package.json" />
-      <path value="$PROJECT_DIR$/node_modules/tunnel-agent/package.json" />
-      <path value="$PROJECT_DIR$/node_modules/tweetnacl/package.json" />
-      <path value="$PROJECT_DIR$/node_modules/uuid/package.json" />
-      <path value="$PROJECT_DIR$/node_modules/verror/package.json" />
-      <path value="$PROJECT_DIR$/node_modules/xlsx/node_modules/commander/package.json" />
-      <path value="$PROJECT_DIR$/node_modules/xlsx/package.json" />
     </packageJsonPaths>
   </component>
+  <component name="PhpWorkspaceProjectConfiguration">
+    <include_path>
+      <path value="$PROJECT_DIR$/Symfony/vendor/jdorn/sql-formatter" />
+      <path value="$PROJECT_DIR$/Symfony/vendor/composer" />
+      <path value="$PROJECT_DIR$/Symfony/vendor/doctrine/doctrine-cache-bundle" />
+      <path value="$PROJECT_DIR$/Symfony/vendor/paragonie/random_compat" />
+      <path value="$PROJECT_DIR$/Symfony/vendor/doctrine/cache" />
+      <path value="$PROJECT_DIR$/Symfony/vendor/doctrine/doctrine-bundle" />
+      <path value="$PROJECT_DIR$/Symfony/vendor/doctrine/common" />
+      <path value="$PROJECT_DIR$/Symfony/vendor/doctrine/collections" />
+      <path value="$PROJECT_DIR$/Symfony/vendor/doctrine/instantiator" />
+      <path value="$PROJECT_DIR$/Symfony/vendor/doctrine/dbal" />
+      <path value="$PROJECT_DIR$/Symfony/vendor/doctrine/annotations" />
+      <path value="$PROJECT_DIR$/Symfony/vendor/doctrine/inflector" />
+      <path value="$PROJECT_DIR$/Symfony/vendor/doctrine/orm" />
+      <path value="$PROJECT_DIR$/Symfony/vendor/doctrine/lexer" />
+      <path value="$PROJECT_DIR$/Symfony/vendor/fig/link-util" />
+      <path value="$PROJECT_DIR$/Symfony/vendor/sensio/framework-extra-bundle" />
+      <path value="$PROJECT_DIR$/Symfony/vendor/sensio/distribution-bundle" />
+      <path value="$PROJECT_DIR$/Symfony/vendor/sensio/generator-bundle" />
+      <path value="$PROJECT_DIR$/Symfony/vendor/twig/twig" />
+      <path value="$PROJECT_DIR$/Symfony/vendor/sensiolabs/security-checker" />
+      <path value="$PROJECT_DIR$/Symfony/vendor/symfony/polyfill-apcu" />
+      <path value="$PROJECT_DIR$/Symfony/vendor/psr/container" />
+      <path value="$PROJECT_DIR$/Symfony/vendor/symfony/polyfill-intl-icu" />
+      <path value="$PROJECT_DIR$/Symfony/vendor/psr/cache" />
+      <path value="$PROJECT_DIR$/Symfony/vendor/symfony/swiftmailer-bundle" />
+      <path value="$PROJECT_DIR$/Symfony/vendor/incenteev/composer-parameter-handler" />
+      <path value="$PROJECT_DIR$/Symfony/vendor/psr/log" />
+      <path value="$PROJECT_DIR$/Symfony/vendor/symfony/polyfill-php56" />
+      <path value="$PROJECT_DIR$/Symfony/vendor/psr/link" />
+      <path value="$PROJECT_DIR$/Symfony/vendor/symfony/polyfill-util" />
+      <path value="$PROJECT_DIR$/Symfony/vendor/psr/simple-cache" />
+      <path value="$PROJECT_DIR$/Symfony/vendor/symfony/polyfill-mbstring" />
+      <path value="$PROJECT_DIR$/Symfony/vendor/symfony/monolog-bundle" />
+      <path value="$PROJECT_DIR$/Symfony/vendor/symfony/symfony" />
+      <path value="$PROJECT_DIR$/Symfony/vendor/symfony/phpunit-bridge" />
+      <path value="$PROJECT_DIR$/Symfony/vendor/symfony/polyfill-php70" />
+      <path value="$PROJECT_DIR$/Symfony/vendor/monolog/monolog" />
+      <path value="$PROJECT_DIR$/Symfony/vendor/swiftmailer/swiftmailer" />
+    </include_path>
+  </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-7" />
-    <option name="width" value="1572" />
-    <option name="height" value="1017" />
+    <option name="x" value="1551" />
+    <option name="y" value="185" />
+    <option name="width" value="1241" />
+    <option name="height" value="726" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -316,7 +213,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -324,86 +220,11 @@
               <item name="site" type="b2602c69:ProjectViewProjectNode" />
               <item name="site" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="site" type="b2602c69:ProjectViewProjectNode" />
-              <item name="site" type="462c0819:PsiDirectoryNode" />
-              <item name="css" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="site" type="b2602c69:ProjectViewProjectNode" />
-              <item name="site" type="462c0819:PsiDirectoryNode" />
-              <item name="doc" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="site" type="b2602c69:ProjectViewProjectNode" />
-              <item name="site" type="462c0819:PsiDirectoryNode" />
-              <item name="html" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="site" type="b2602c69:ProjectViewProjectNode" />
-              <item name="site" type="462c0819:PsiDirectoryNode" />
-              <item name="image" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="site" type="b2602c69:ProjectViewProjectNode" />
-              <item name="site" type="462c0819:PsiDirectoryNode" />
-              <item name="javascript" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="site" type="b2602c69:ProjectViewProjectNode" />
-              <item name="site" type="462c0819:PsiDirectoryNode" />
-              <item name="javascript" type="462c0819:PsiDirectoryNode" />
-              <item name="data" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="site" type="b2602c69:ProjectViewProjectNode" />
-              <item name="site" type="462c0819:PsiDirectoryNode" />
-              <item name="javascript" type="462c0819:PsiDirectoryNode" />
-              <item name="manufacturing" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="site" type="b2602c69:ProjectViewProjectNode" />
-              <item name="site" type="462c0819:PsiDirectoryNode" />
-              <item name="javascript" type="462c0819:PsiDirectoryNode" />
-              <item name="model" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="site" type="b2602c69:ProjectViewProjectNode" />
-              <item name="site" type="462c0819:PsiDirectoryNode" />
-              <item name="javascript" type="462c0819:PsiDirectoryNode" />
-              <item name="model" type="462c0819:PsiDirectoryNode" />
-              <item name="anotherFunctiun" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="site" type="b2602c69:ProjectViewProjectNode" />
-              <item name="site" type="462c0819:PsiDirectoryNode" />
-              <item name="javascript" type="462c0819:PsiDirectoryNode" />
-              <item name="start" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="site" type="b2602c69:ProjectViewProjectNode" />
-              <item name="site" type="462c0819:PsiDirectoryNode" />
-              <item name="javascript" type="462c0819:PsiDirectoryNode" />
-              <item name="view" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="site" type="b2602c69:ProjectViewProjectNode" />
-              <item name="site" type="462c0819:PsiDirectoryNode" />
-              <item name="javascript" type="462c0819:PsiDirectoryNode" />
-              <item name="view" type="462c0819:PsiDirectoryNode" />
-              <item name="directlyChange" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="site" type="b2602c69:ProjectViewProjectNode" />
-              <item name="site" type="462c0819:PsiDirectoryNode" />
-              <item name="javascript" type="462c0819:PsiDirectoryNode" />
-              <item name="view" type="462c0819:PsiDirectoryNode" />
-              <item name="viewGenerator" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -597,7 +418,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="565750000" />
+    <option name="totallyTimeSpent" value="566015000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -609,29 +430,41 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1696" height="1026" extended-state="6" />
-    <editor active="true" />
+    <frame x="1358" y="-8" width="1696" height="1026" extended-state="7" />
     <layout>
       <window_info anchor="right" id="PlantUML" order="3" weight="0.33801955" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4991453" side_tool="true" visible="true" weight="0.19070904" />
       <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.49938875" weight="0.3298969" />
-      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" x="0" y="447" width="1680" height="116" id="Event Log" order="12" sideWeight="0.35330072" side_tool="true" weight="0.19473082" />
-      <window_info anchor="bottom" id="Version Control" order="8" sideWeight="0.35330072" side_tool="true" weight="0.19473082" />
+      <window_info anchor="bottom" x="0" y="447" width="1680" height="116" id="Event Log" order="12" sideWeight="0.50183374" side_tool="true" weight="0.18327606" />
+      <window_info anchor="bottom" id="Database Changes" order="13" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="8" sideWeight="0.35391197" side_tool="true" visible="true" weight="0.43243244" />
       <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Terminal" order="9" sideWeight="0.646088" visible="true" weight="0.43243244" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4991453" side_tool="true" visible="true" weight="0.15220049" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="right" id="Database" order="3" />
       <window_info id="Structure" order="1" sideWeight="0.50085473" side_tool="true" weight="0.24327628" />
-      <window_info anchor="bottom" id="Terminal" order="9" sideWeight="0.64669925" visible="true" weight="0.19473082" />
       <window_info id="Favorites" order="2" sideWeight="0.50085473" side_tool="true" weight="0.24327628" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="TypeScript" order="10" />
+      <window_info anchor="bottom" id="Version Control" order="8" sideWeight="0.35330072" side_tool="true" weight="0.19473082" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4991453" side_tool="true" visible="true" weight="0.19070904" />
+      <window_info id="Structure" order="1" sideWeight="0.50085473" side_tool="true" weight="0.24327628" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="bottom" id="TypeScript" order="10" />
+      <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.49938875" weight="0.3298969" />
+      <window_info anchor="right" id="PlantUML" order="3" weight="0.33801955" />
+      <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="bottom" id="Inspection Results" order="11" sideWeight="0.49816626" weight="0.32875144" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" x="0" y="447" width="1680" height="116" id="Event Log" order="12" sideWeight="0.35330072" side_tool="true" weight="0.19473082" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Find" order="1" sideWeight="0.48489666" weight="0.26157406" />
+      <window_info anchor="bottom" id="Terminal" order="9" sideWeight="0.64669925" visible="true" weight="0.19473082" />
+      <window_info id="Favorites" order="2" sideWeight="0.50085473" side_tool="true" weight="0.24327628" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -710,11 +543,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/UMLTEST/DiagramClass.puml" />
     <entry file="file://$PROJECT_DIR$/my-office-add-in-manifest.xml" />
-    <entry file="file://$PROJECT_DIR$/package-lock.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2244" />
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/package-lock.json" />
     <entry file="file://$PROJECT_DIR$/node_modules/excellentexport/dist/excellentexport.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="432">
@@ -760,20 +589,8 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/html/world bank research.html" />
-    <entry file="file://$USER_HOME$/WS-181.5087.27_matgaydu_29.05.2018_17.15.56/WS-181.5087.27_matgaydu_29.05.2018_17.15.56.hprof">
-      <provider selected="true" editor-type-id="LargeFileEditor">
-        <state relative-caret-position="238">
-          <caret column="2360" lean-forward="true" selection-start-column="2360" selection-end-column="2360" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/ide/ide-scripting.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="3" selection-start-column="3" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$USER_HOME$/WS-181.5087.27_matgaydu_29.05.2018_17.15.56/WS-181.5087.27_matgaydu_29.05.2018_17.15.56.hprof" />
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/ide/ide-scripting.js" />
     <entry file="file://$PROJECT_DIR$/css/tabCS.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
@@ -864,9 +681,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-142">
           <caret line="125" column="65" selection-start-line="125" selection-start-column="65" selection-end-line="125" selection-end-column="65" />
-          <folding>
-            <element signature="n#style#0;n#span#0;n#li#0;n#!!top" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -902,11 +716,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="561">
           <caret line="33" column="38" lean-forward="true" selection-start-line="33" selection-start-column="38" selection-end-line="33" selection-end-column="38" />
-          <folding>
-            <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#strong#0;n#!!top" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -963,10 +772,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2006">
           <caret line="118" column="53" selection-start-line="118" selection-start-column="53" selection-end-line="118" selection-end-column="53" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#5;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#div#5;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -974,10 +779,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1989">
           <caret line="117" column="50" selection-start-line="117" selection-start-column="50" selection-end-line="117" selection-end-column="50" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
