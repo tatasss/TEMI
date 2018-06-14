@@ -1,6 +1,6 @@
 <?php
 
-/* TEMImainBundle:Temi:graphForm.html.twig */
+/* @TEMImain/Temi/graphForm.html.twig */
 class __TwigTemplate_253f6ad0c973fe4e752b75724c564178b23f69b902c16d40079524bc9a217e06 extends Twig_Template
 {
     public function __construct(Twig_Environment $env)
@@ -15,11 +15,11 @@ class __TwigTemplate_253f6ad0c973fe4e752b75724c564178b23f69b902c16d40079524bc9a2
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_dfa564627a4a61c08109a64448980756a1c09ac73e14b5fee755c16f7ff8fef3 = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
-        $__internal_dfa564627a4a61c08109a64448980756a1c09ac73e14b5fee755c16f7ff8fef3->enter($__internal_dfa564627a4a61c08109a64448980756a1c09ac73e14b5fee755c16f7ff8fef3_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "TEMImainBundle:Temi:graphForm.html.twig"));
+        $__internal_657ff5cdeceef7a1b83f763e2302cc3addcd77a18a7685a5bf726651bc962fb7 = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
+        $__internal_657ff5cdeceef7a1b83f763e2302cc3addcd77a18a7685a5bf726651bc962fb7->enter($__internal_657ff5cdeceef7a1b83f763e2302cc3addcd77a18a7685a5bf726651bc962fb7_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "@TEMImain/Temi/graphForm.html.twig"));
 
-        $__internal_e0ff5494038ff9e6271926dd392faccdf4008166b8f0d9ab609cfabd730b9589 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_e0ff5494038ff9e6271926dd392faccdf4008166b8f0d9ab609cfabd730b9589->enter($__internal_e0ff5494038ff9e6271926dd392faccdf4008166b8f0d9ab609cfabd730b9589_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "TEMImainBundle:Temi:graphForm.html.twig"));
+        $__internal_5312c62fe6b308138bbecede2cddbe256bf693e2e76c7a71700521b0faaadbd5 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_5312c62fe6b308138bbecede2cddbe256bf693e2e76c7a71700521b0faaadbd5->enter($__internal_5312c62fe6b308138bbecede2cddbe256bf693e2e76c7a71700521b0faaadbd5_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "@TEMImain/Temi/graphForm.html.twig"));
 
         // line 1
         echo "<!DOCTYPE html>
@@ -54,15 +54,15 @@ class __TwigTemplate_253f6ad0c973fe4e752b75724c564178b23f69b902c16d40079524bc9a2
             <li><a href=\"";
         // line 27
         echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("temi_platform_home");
-        echo "\">modèle simple</a></li>
+        echo "\">Modèle</a></li>
             <li class=\"active\"><a data-toggle=\"modal\" href=\"";
         // line 28
         echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("temi_platform_graph");
-        echo "\">graphique</a></li>
+        echo "\">Graphique</a></li>
             <li><a id=\"ajoutButt\" href=\"";
         // line 29
         echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("temi_platform_home");
-        echo "\">ajouter un pays  <span class=\"glyphicon glyphicon-plus-sign\"> </span> </a></li>
+        echo "\">Ajouter un pays  <span class=\"glyphicon glyphicon-plus-sign\"> </span> </a></li>
         </ul>
     </div>
 </nav>
@@ -76,38 +76,35 @@ class __TwigTemplate_253f6ad0c973fe4e752b75724c564178b23f69b902c16d40079524bc9a2
                         <div id=\"formPays\"></div>
                     </div>
                     <div class=\"form-group\">
-
                         <label>Taux de marge de l'entreprise:</label>
-                        <input type=\"text\" class=\"form-control\" id=\"marge\" title=\"marge\"/>
-
-
+                        <input type=\"text\" class=\"form-control\" id=\"marge\" title=\"marge\" placeholder=\"Ajouter un taux de marge\"/>
                     </div>
                 </div>
                 <div class='col-sm-2 '>
                     <div id=\"addPays\">
                         <button type=\"button\" class=\"btn btn-block\">
                             <div class='row'>
-
                                 <div class='col-sm-8'>
                                     <p>ajouter un <br/>pays</p>
                                 </div>
                                 <div class='col-sm-2'>
-                                    <p/><span class=\"glyphicon glyphicon-plus-sign\"/>
+                                    <p><span class=\"glyphicon glyphicon-plus-sign\"> </span></p>
                                 </div>
                             </div>
                         </button>
                     </div>
-                    <p/>
+                    <p>
+
+                    </p>
                     <div id=\"addEnt\">
                         <button type=\"button\" class=\"btn btn-block\">
                             <div class='row'>
-
                                 <div class='col-sm-8'>
                                     <p>ajouter<br/> une <br/>entreprise</p>
                                 </div>
                                 <div class='col-sm-2'>
                                     <br/>
-                                    <span class=\"glyphicon glyphicon-plus-sign\"/>
+                                    <span class=\"glyphicon glyphicon-plus-sign\"> </span>
                                 </div>
                             </div>
                         </button>
@@ -143,16 +140,16 @@ class __TwigTemplate_253f6ad0c973fe4e752b75724c564178b23f69b902c16d40079524bc9a2
 </body>
 </html>";
         
-        $__internal_dfa564627a4a61c08109a64448980756a1c09ac73e14b5fee755c16f7ff8fef3->leave($__internal_dfa564627a4a61c08109a64448980756a1c09ac73e14b5fee755c16f7ff8fef3_prof);
+        $__internal_657ff5cdeceef7a1b83f763e2302cc3addcd77a18a7685a5bf726651bc962fb7->leave($__internal_657ff5cdeceef7a1b83f763e2302cc3addcd77a18a7685a5bf726651bc962fb7_prof);
 
         
-        $__internal_e0ff5494038ff9e6271926dd392faccdf4008166b8f0d9ab609cfabd730b9589->leave($__internal_e0ff5494038ff9e6271926dd392faccdf4008166b8f0d9ab609cfabd730b9589_prof);
+        $__internal_5312c62fe6b308138bbecede2cddbe256bf693e2e76c7a71700521b0faaadbd5->leave($__internal_5312c62fe6b308138bbecede2cddbe256bf693e2e76c7a71700521b0faaadbd5_prof);
 
     }
 
     public function getTemplateName()
     {
-        return "TEMImainBundle:Temi:graphForm.html.twig";
+        return "@TEMImain/Temi/graphForm.html.twig";
     }
 
     public function isTraitable()
@@ -201,9 +198,9 @@ class __TwigTemplate_253f6ad0c973fe4e752b75724c564178b23f69b902c16d40079524bc9a2
             <a class=\" navbar-brand\" href=\"{{ path('temi_platform_home') }}\"><img class=\"img-rounded\" src=\"../image/logo_CERDI_UCA-01.png\">Cerdi</a>
         </div>
         <ul class=\"nav navbar-nav\">
-            <li><a href=\"{{ path('temi_platform_home') }}\">modèle simple</a></li>
-            <li class=\"active\"><a data-toggle=\"modal\" href=\"{{ path('temi_platform_graph') }}\">graphique</a></li>
-            <li><a id=\"ajoutButt\" href=\"{{ path('temi_platform_home') }}\">ajouter un pays  <span class=\"glyphicon glyphicon-plus-sign\"> </span> </a></li>
+            <li><a href=\"{{ path('temi_platform_home') }}\">Modèle</a></li>
+            <li class=\"active\"><a data-toggle=\"modal\" href=\"{{ path('temi_platform_graph') }}\">Graphique</a></li>
+            <li><a id=\"ajoutButt\" href=\"{{ path('temi_platform_home') }}\">Ajouter un pays  <span class=\"glyphicon glyphicon-plus-sign\"> </span> </a></li>
         </ul>
     </div>
 </nav>
@@ -217,38 +214,35 @@ class __TwigTemplate_253f6ad0c973fe4e752b75724c564178b23f69b902c16d40079524bc9a2
                         <div id=\"formPays\"></div>
                     </div>
                     <div class=\"form-group\">
-
                         <label>Taux de marge de l'entreprise:</label>
-                        <input type=\"text\" class=\"form-control\" id=\"marge\" title=\"marge\"/>
-
-
+                        <input type=\"text\" class=\"form-control\" id=\"marge\" title=\"marge\" placeholder=\"Ajouter un taux de marge\"/>
                     </div>
                 </div>
                 <div class='col-sm-2 '>
                     <div id=\"addPays\">
                         <button type=\"button\" class=\"btn btn-block\">
                             <div class='row'>
-
                                 <div class='col-sm-8'>
                                     <p>ajouter un <br/>pays</p>
                                 </div>
                                 <div class='col-sm-2'>
-                                    <p/><span class=\"glyphicon glyphicon-plus-sign\"/>
+                                    <p><span class=\"glyphicon glyphicon-plus-sign\"> </span></p>
                                 </div>
                             </div>
                         </button>
                     </div>
-                    <p/>
+                    <p>
+
+                    </p>
                     <div id=\"addEnt\">
                         <button type=\"button\" class=\"btn btn-block\">
                             <div class='row'>
-
                                 <div class='col-sm-8'>
                                     <p>ajouter<br/> une <br/>entreprise</p>
                                 </div>
                                 <div class='col-sm-2'>
                                     <br/>
-                                    <span class=\"glyphicon glyphicon-plus-sign\"/>
+                                    <span class=\"glyphicon glyphicon-plus-sign\"> </span>
                                 </div>
                             </div>
                         </button>
@@ -282,6 +276,6 @@ class __TwigTemplate_253f6ad0c973fe4e752b75724c564178b23f69b902c16d40079524bc9a2
 <script src=\"../javascript/view/directlyChange/graphFormView.js\"></script>
 
 </body>
-</html>", "TEMImainBundle:Temi:graphForm.html.twig", "C:\\Users\\matthias\\Desktop\\stage\\TEMI\\site\\src\\TEMI\\mainBundle\\Resources\\views\\Temi\\graphForm.html.twig");
+</html>", "@TEMImain/Temi/graphForm.html.twig", "C:\\Users\\matthias\\Desktop\\stage\\TEMI\\site\\src\\TEMI\\mainBundle\\Resources\\views\\Temi\\graphForm.html.twig");
     }
 }

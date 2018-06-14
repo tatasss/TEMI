@@ -1,5 +1,5 @@
 const genererVue = new ViewGenerator(monModele);
-let investPart = "<p>investissement : " + myMath.separatorNumber(genererVue.modele.mesdon().investissement()) + "</p>";
+let investPart = "<p>Investissement : " + myMath.separatorNumber(genererVue.modele.mesdon().investissement()) + "</p>";
 document.getElementById("invest").innerHTML = investPart;
 let amm = genererVue.getAmmortGenneralHtml();
 amm += "<br/>";
@@ -30,3 +30,4 @@ document.getElementById("tauxRendInterneSISIMF").innerHTML = genererVue.tauxRend
 document.getElementById("tauxRendInterneAi").innerHTML = genererVue.tauxRendementInt(genererVue.modele.mesdon().tauxRendInterneAImp(),genererVue.modele.mesdon().tauxRendInterneAImpTot());
 document.getElementById("tauxEffMargImpApIsImf").innerHTML = genererVue.tauxMargInt(genererVue.modele.mesdon().tauxEffMargImpApIsImf());
 document.getElementById("tauxEffMargImpApImp").innerHTML = genererVue.tauxMargInt(genererVue.modele.mesdon().tauxEffMargImpApImp());
+

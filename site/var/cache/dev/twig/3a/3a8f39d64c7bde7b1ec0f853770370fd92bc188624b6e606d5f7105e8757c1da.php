@@ -15,11 +15,11 @@ class __TwigTemplate_ec8e2f62fe33f8dbdb15c33920ed1d0219ac3cd4584a3982d032be0faef
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_c7f63165540ec59a7c88b69203a78f4a37dd86c50feec37d9951f663032f0810 = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
-        $__internal_c7f63165540ec59a7c88b69203a78f4a37dd86c50feec37d9951f663032f0810->enter($__internal_c7f63165540ec59a7c88b69203a78f4a37dd86c50feec37d9951f663032f0810_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "TEMImainBundle:Temi:ajoutPays.html.twig"));
+        $__internal_ed1b5f780ad47f56c3f1e83f9decaa911e97ddbfbe14e6000291e3520569c336 = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
+        $__internal_ed1b5f780ad47f56c3f1e83f9decaa911e97ddbfbe14e6000291e3520569c336->enter($__internal_ed1b5f780ad47f56c3f1e83f9decaa911e97ddbfbe14e6000291e3520569c336_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "TEMImainBundle:Temi:ajoutPays.html.twig"));
 
-        $__internal_666b9245b9a3796a3133aed9504afad6d069d56259cc4d1fcb6904b1ceffc4b9 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_666b9245b9a3796a3133aed9504afad6d069d56259cc4d1fcb6904b1ceffc4b9->enter($__internal_666b9245b9a3796a3133aed9504afad6d069d56259cc4d1fcb6904b1ceffc4b9_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "TEMImainBundle:Temi:ajoutPays.html.twig"));
+        $__internal_174f1da1a42b1943e5a4388aa2924389f02660e835e488d01cb28d3733913c87 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_174f1da1a42b1943e5a4388aa2924389f02660e835e488d01cb28d3733913c87->enter($__internal_174f1da1a42b1943e5a4388aa2924389f02660e835e488d01cb28d3733913c87_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "TEMImainBundle:Temi:ajoutPays.html.twig"));
 
         // line 1
         echo "<!DOCTYPE html>
@@ -52,19 +52,19 @@ class __TwigTemplate_ec8e2f62fe33f8dbdb15c33920ed1d0219ac3cd4584a3982d032be0faef
             <li><a href=\"";
         // line 25
         echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("temi_platform_home");
-        echo "\">modèle simple</a></li>
-            <li><a data-toggle=\"modal\" href=\"#myModal\">graphique</a></li>
+        echo "\">Modèle</a></li>
+            <li><a data-toggle=\"modal\" href=\"#myModal\">Graphique</a></li>
             <li class=\"active\"><a id=\"ajoutButt\" href=\"";
         // line 27
         echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("temi_platform_add");
-        echo "\">ajouter un pays  <span class=\"glyphicon glyphicon-plus-sign\"> </span> </a></li>
+        echo "\">Ajouter un pays  <span class=\"glyphicon glyphicon-plus-sign\"> </span> </a></li>
         </ul>
     </div>
 </nav>
 
 <div class=\"container\">
     <h1>Ajouter un pays</h1>
-    <p>Pour creer un nouveau pays, veuillez remplir le formulaire si dessous</p>
+    <p>Pour creer un nouveau pays, veuillez remplir le formulaire ci-dessous</p>
     <div id=\"formError\"></div>
     <div id=\"myCarousel\" class=\"carousel slide w3-container borderhide\" data-interval=\"false\">
         <ol class=\"carousel-indicators lol\">
@@ -85,12 +85,12 @@ class __TwigTemplate_ec8e2f62fe33f8dbdb15c33920ed1d0219ac3cd4584a3982d032be0faef
                     <div class=\"item active borderhide\">
                         <h3>Général</h3>
                         <div class=\"form-group\">
-                            <label>nom</label>
-                            <input type=\"text\" class=\"form-control\" id=\"nomPays\" title=\"nomPays\"/>
+                            <label>Nom :</label>
+                            <input type=\"text\" class=\"form-control\" id=\"nomPays\" title=\"nomPays\" placeholder=\"Veuillez saisir le nom du pays\"/>
                         </div>
                         <div id=\"errorNom\"></div>
                         <div class=\"form-group\">
-                            <label>code ISO3</label>
+                            <label>Code ISO3 :</label>
                             <p>Le code ISO est une codification internationale créé par l'International Standardization
                                 Organization (ISO)
                                 qui attribue un code unique de trois lettres à toute devise de la planète pour éviter
@@ -103,49 +103,49 @@ class __TwigTemplate_ec8e2f62fe33f8dbdb15c33920ed1d0219ac3cd4584a3982d032be0faef
                                 seule la
                                 dernière lettre
                                 varie.</p>
-                            <input type=\"text\" class=\"form-control\" id=\"codePays\" title=\"codePays\"/>
+                            <input type=\"text\" class=\"form-control\" id=\"codePays\" title=\"codePays\" placeholder=\"Veuillez saisir le code ISO3 du pays\"/>
                         </div>
                         <div id=\"errorCode\"></div>
                     </div>
                     <div class=\"item borderhide\">
-                        <h3>code Général des Impots</h3>
+                        <h3>Code Général des Impôts</h3>
                         <div class=\"row\">
                             <div class=\"col-sm-6\">
                                 <div class=\"panel panel-default\">
                                     <div class=\"panel-heading\">
-                                        <p><strong>taux d'impot :</strong></p>
+                                        <p><strong>Taux d'impôt :</strong></p>
                                     </div>
                                     <div class=\"panel-body\">
                                         <div class=\"form-group\">
-                                            <label>cotisation foncière des entreprises</label>
-                                            <input type=\"text\" class=\"form-control\" id=\"cfeImpPays\" title=\"cfeImpPays\"/>
+                                            <label>Contributions forfaitaires employeurs :</label>
+                                            <input type=\"text\" class=\"form-control\" id=\"cfeImpPays\" title=\"cfeImpPays\" placeholder=\"Veuillez saisir le taux des CFE du pays\"/>
                                         </div>
                                         <div id=\"errorCFEImp\"></div>
                                         <div class=\"form-group\">
-                                            <label>impôts société</label>
-                                            <input type=\"text\" class=\"form-control\" id=\"isImpPays\" title=\"isImpPays\"/>
+                                            <label>Impôt société :</label>
+                                            <input type=\"text\" class=\"form-control\" id=\"isImpPays\" title=\"isImpPays\" placeholder=\"Veuillez saisir le taux de l'IS du pays\"/>
                                         </div>
                                         <div id=\"errorISImp\"></div>
                                         <div class=\"form-group\">
-                                            <label>impôts minimum forfaitaire</label>
-                                            <input type=\"text\" class=\"form-control\" id=\"imfImpPays\" title=\"imfImpPays\"/>
+                                            <label>Impôt minimum forfaitaire :</label>
+                                            <input type=\"text\" class=\"form-control\" id=\"imfImpPays\" title=\"imfImpPays\" placeholder=\"Veuillez saisir le taux de l'IMF du pays\"/>
                                         </div>
                                         <div id=\"errorIMFImp\"></div>
                                         <div class=\"form-group\">
-                                            <label>impôts sur le revenu de la valeur mobilières</label>
+                                            <label>Impôt sur le revenu de la valeur mobilières :</label>
                                             <input type=\"text\" class=\"form-control\" id=\"irvmImpPays\"
-                                                   title=\"irvmImpPays\"/>
+                                                   title=\"irvmImpPays\" placeholder=\"Veuillez saisir le taux de l'IRVM du pays\"/>
                                         </div>
                                         <div id=\"errorIRVMImp\"></div>
                                         <div class=\"form-group\">
-                                            <label>impôts sur les revenu des creances</label>
-                                            <input type=\"text\" class=\"form-control\" id=\"ircImpPays\" title=\"ircImpPays\"/>
+                                            <label>Impôt sur les revenus des créances :</label>
+                                            <input type=\"text\" class=\"form-control\" id=\"ircImpPays\" title=\"ircImpPays\" placeholder=\"Veuillez saisir le taux de l'IRC du pays\"/>
                                         </div>
                                         <div id=\"errorIRCImp\"></div>
                                         <div class=\"form-group\">
-                                            <label>taxe sur la valeur ajoutée du pétrole</label>
+                                            <label>Taxe sur la valeur ajoutée du pétrole :</label>
                                             <input type=\"text\" class=\"form-control\" id=\"tvaPetroleImpPays\"
-                                                   title=\"tvaPetroleImpPays\"/>
+                                                   title=\"tvaPetroleImpPays\" placeholder=\"Veuillez saisir le taux de la TVA sur le pétrole du pays\"/>
                                         </div>
                                         <div id=\"errorTVAPETImp\"></div>
                                     </div>
@@ -154,43 +154,43 @@ class __TwigTemplate_ec8e2f62fe33f8dbdb15c33920ed1d0219ac3cd4584a3982d032be0faef
                             <div class=\"col-sm-6\">
                                 <div class=\"panel panel-default\">
                                     <div class=\"panel-heading\">
-                                        <p><strong>duree d'ammortissement :</strong></p>
+                                        <p><strong>Durée d'amortissement :</strong></p>
                                     </div>
                                     <div class=\"panel-body\">
                                         <div class=\"form-group\">
-                                            <label>construction</label>
+                                            <label>Construction :</label>
                                             <input type=\"text\" class=\"form-control\" id=\"cfeAmmortPays\"
-                                                   title=\"cfeAmmortPays\"/>
+                                                   title=\"cfeAmmortPays\" placeholder=\"Veuillez saisir la durée d'amortissement des constructions\"/>
                                         </div>
                                         <div id=\"errorCFEAmmort\"></div>
                                         <div class=\"form-group\">
-                                            <label>equipement</label>
+                                            <label>Equipement :</label>
                                             <input type=\"text\" class=\"form-control\" id=\"isAmmortPays\"
-                                                   title=\"isAmmortPays\"/>
+                                                   title=\"isAmmortPays\" placeholder=\"Veuillez saisir la durée d'amortissement des équipements\"/>
                                         </div>
                                         <div id=\"errorISAmmort\"></div>
                                         <div class=\"form-group\">
-                                            <label> camion</label>
+                                            <label>Camion :</label>
                                             <input type=\"text\" class=\"form-control\" id=\"imfAmmortPays\"
-                                                   title=\"imfAmmortPays\"/>
+                                                   title=\"imfAmmortPays\" placeholder=\"Veuillez saisir la durée d'amortissement des achats des camions\"/>
                                         </div>
                                         <div id=\"errorIMFAmmort\"></div>
                                         <div class=\"form-group\">
-                                            <label>matériel informatique</label>
+                                            <label>Matériel informatique :</label>
                                             <input type=\"text\" class=\"form-control\" id=\"irvmAmmortPays\"
-                                                   title=\"irvmAmmortPays\"/>
+                                                   title=\"irvmAmmortPays\" placeholder=\"Veuillez saisir la durée d'amortissement des achats des matériaux informatiques\"/>
                                         </div>
                                         <div id=\"errorIRVMAmmort\"></div>
                                         <div class=\"form-group\">
-                                            <label>matériel de bureau</label>
+                                            <label>Matériel de bureau :</label>
                                             <input type=\"text\" class=\"form-control\" id=\"ircAmmortPays\"
-                                                   title=\"ircAmmortPays\"/>
+                                                   title=\"ircAmmortPays\" placeholder=\"Veuillez saisir la durée d'amortissement des achats des matériaux de bureaux\"/>
                                         </div>
                                         <div id=\"errorIRCAmmort\"></div>
                                         <div class=\"form-group\">
-                                            <label>coefficient Degressif</label>
+                                            <label>Coefficient Dégressif :</label>
                                             <input type=\"text\" class=\"form-control\" id=\"tvaPetroleAmmortPays\"
-                                                   title=\"tvaPetroleAmmortPays\"/>
+                                                   title=\"tvaPetroleAmmortPays\" placeholder=\"Veuillez saisir le coefficient dégressif\"/>
                                         </div>
                                         <div id=\"errorTVAPETAmmort\"></div>
                                     </div>
@@ -199,26 +199,26 @@ class __TwigTemplate_ec8e2f62fe33f8dbdb15c33920ed1d0219ac3cd4584a3982d032be0faef
                         </div>
                     </div>
                     <div class=\"item borderhide\">
-                        <h3>code des investissements</h3>
+                        <h3>Code des investissements</h3>
                         <div class=\"panel panel-default\">
                             <div class=\"panel-heading\">
-                                <p>cfe</p>
+                                <p>Contributions forfaitaire employeurs :</p>
                             </div>
                             <div class=\"panel-body\">
                                 <div class=\"row\">
                                     <div class=\"col-sm-6\">
                                         <div class=\"form-group\">
-                                            <label>duree</label>
+                                            <label>Durée :</label>
                                             <input type=\"text\" class=\"form-control\" id=\"dureeCFEInvestPays\"
-                                                   title=\"dureeCFEInvestPays\"/>
+                                                   title=\"dureeCFEInvestPays\" placeholder=\"Veuillez saisir la durée du taux réduit du CFE dû à l'investissement\"/>
                                         </div>
                                         <div id=\"dureeCFEError\"></div>
                                     </div>
                                     <div class=\"col-sm-6\">
                                         <div class=\"form-group\">
-                                            <label>taux</label>
+                                            <label>Taux :</label>
                                             <input type=\"text\" class=\"form-control\" id=\"tauxCFEInvestPays\"
-                                                   title=\"tauxCFEInvestPays\"/>
+                                                   title=\"tauxCFEInvestPays\" placeholder=\"Veuillez saisir le taux réduit du CFE dû à l'investissement\"/>
                                         </div>
                                         <div id=\"tauxCFEError\"></div>
                                     </div>
@@ -227,23 +227,23 @@ class __TwigTemplate_ec8e2f62fe33f8dbdb15c33920ed1d0219ac3cd4584a3982d032be0faef
                         </div>
                         <div class=\"panel panel-default borderhide\">
                             <div class=\"panel-heading\">
-                                <p>IS</p>
+                                <p>Impôt société :</p>
                             </div>
                             <div class=\"panel-body\">
                                 <div class=\"row\">
                                     <div class=\"col-sm-6\">
                                         <div class=\"form-group\">
-                                            <label>duree</label>
+                                            <label>Durée :</label>
                                             <input type=\"text\" class=\"form-control\" id=\"dureeISInvestPays\"
-                                                   title=\"dureeISInvestPays\"/>
+                                                   title=\"dureeISInvestPays\" placeholder=\"Veuillez saisir la durée du taux réduit de l'IS dû à l'investissement\"/>
                                         </div>
                                         <div id=\"dureeISError\"></div>
                                     </div>
                                     <div class=\"col-sm-6\">
                                         <div class=\"form-group\">
-                                            <label>taux</label>
+                                            <label>Taux :</label>
                                             <input type=\"text\" class=\"form-control\" id=\"tauxISInvestPays\"
-                                                   title=\"tauxISInvestPays\"/>
+                                                   title=\"tauxISInvestPays\" placeholder=\"Veuillez saisir le taux réduit de l'IS dû à l'investissement\"/>
                                         </div>
                                         <div id=\"tauxISError\"></div>
                                     </div>
@@ -252,23 +252,23 @@ class __TwigTemplate_ec8e2f62fe33f8dbdb15c33920ed1d0219ac3cd4584a3982d032be0faef
                         </div>
                         <div class=\"panel panel-default \">
                             <div class=\"panel-heading\">
-                                <p>IMF</p>
+                                <p>Impôt minimum forfaitaire :</p>
                             </div>
                             <div class=\"panel-body\">
                                 <div class=\"row\">
                                     <div class=\"col-sm-6\">
                                         <div class=\"form-group\">
-                                            <label>duree</label>
+                                            <label>Durée :</label>
                                             <input type=\"text\" class=\"form-control\" id=\"dureeIMFInvestPays\"
-                                                   title=\"dureeIMFInvestPays\"/>
+                                                   title=\"dureeIMFInvestPays\" placeholder=\"Veuillez saisir la durée du taux réduit de l'IMF dû à l'investissement\"/>
                                         </div>
                                         <div id=\"dureeIMFError\"></div>
                                     </div>
                                     <div class=\"col-sm-6\">
                                         <div class=\"form-group\">
-                                            <label>taux</label>
+                                            <label>Taux :</label>
                                             <input type=\"text\" class=\"form-control\" id=\"tauxIMFInvestPays\"
-                                                   title=\"tauxIMFInvestPays\"/>
+                                                   title=\"tauxIMFInvestPays\" placeholder=\"Veuillez saisir le taux réduit de l'IMF dû à l'investissement\"/>
                                         </div>
                                         <div id=\"tauxIMFError\"></div>
                                     </div>
@@ -277,26 +277,26 @@ class __TwigTemplate_ec8e2f62fe33f8dbdb15c33920ed1d0219ac3cd4584a3982d032be0faef
                         </div>
                     </div>
                     <div class=\"item borderhide\">
-                        <h3>code des investissements</h3>
+                        <h3>Code des investissements</h3>
                         <div class=\"panel panel-default\">
                             <div class=\"panel-heading\">
-                                <p>IRVM</p>
+                                <p>Impôt sur les revenus des valeurs mobilières :</p>
                             </div>
                             <div class=\"panel-body\">
                                 <div class=\"row\">
                                     <div class=\"col-sm-6\">
                                         <div class=\"form-group\">
-                                            <label>duree</label>
+                                            <label>Durée :</label>
                                             <input type=\"text\" class=\"form-control\" id=\"dureeIRVMInvestPays\"
-                                                   title=\"dureeIRVMInvestPays\"/>
+                                                   title=\"dureeIRVMInvestPays\" placeholder=\"Veuillez saisir la durée du taux réduit de l'IRVM dû à l'investissement\"/>
                                         </div>
                                         <div id=\"dureeIRVMError\"></div>
                                     </div>
                                     <div class=\"col-sm-6\">
                                         <div class=\"form-group\">
-                                            <label>taux</label>
+                                            <label>Taux :</label>
                                             <input type=\"text\" class=\"form-control\" id=\"tauxIRVMInvestPays\"
-                                                   title=\"tauxIRVMInvestPays\"/>
+                                                   title=\"tauxIRVMInvestPays\" placeholder=\"Veuillez saisir le taux réduit de l'IRVM dû à l'investissement\"/>
                                         </div>
                                         <div id=\"tauxIRVMError\"></div>
                                     </div>
@@ -305,23 +305,23 @@ class __TwigTemplate_ec8e2f62fe33f8dbdb15c33920ed1d0219ac3cd4584a3982d032be0faef
                         </div>
                         <div class=\"panel panel-default\">
                             <div class=\"panel-heading\">
-                                <p>IRC</p>
+                                <p>Impôt sur le revenu des créances :</p>
                             </div>
                             <div class=\"panel-body\">
                                 <div class=\"row\">
                                     <div class=\"col-sm-6\">
                                         <div class=\"form-group\">
-                                            <label>duree</label>
+                                            <label>Durée :</label>
                                             <input type=\"text\" class=\"form-control\" id=\"dureeIRCInvestPays\"
-                                                   title=\"dureeIRCInvestPays\"/>
+                                                   title=\"dureeIRCInvestPays\" placeholder=\"Veuillez saisir la durée du taux réduit de l'IRC dû à l'investissement\"/>
                                         </div>
                                         <div id=\"dureeIRCError\"></div>
                                     </div>
                                     <div class=\"col-sm-6\">
                                         <div class=\"form-group\">
-                                            <label>taux</label>
+                                            <label>Taux :</label>
                                             <input type=\"text\" class=\"form-control\" id=\"tauxIRCInvestPays\"
-                                                   title=\"tauxIRCInvestPays\"/>
+                                                   title=\"tauxIRCInvestPays\" placeholder=\"Veuillez saisir le taux réduit de l'IRC dû à l'investissement\"/>
                                         </div>
                                         <div id=\"tauxIRCError\"></div>
                                     </div>
@@ -330,47 +330,47 @@ class __TwigTemplate_ec8e2f62fe33f8dbdb15c33920ed1d0219ac3cd4584a3982d032be0faef
                         </div>
                     </div>
                     <div class=\"item borderhide\">
-                        <h3>code des investissements</h3>
+                        <h3>Code des investissements</h3>
                         <div class=\"form-group\">
-                            <label>description des disposition</label>
+                            <label>Description des dispositions :</label>
                             <textarea class=\"form-control\" rows=\"5\" id=\"descDispoInvestPays\"
-                                      title=\"descDispoInvestPays\"> </textarea>
+                                      title=\"descDispoInvestPays\" >Veuillez saisir une description sur les différentes dispositions dérogatoires </textarea>
                         </div>
                         <div id=\"descDispoError\"></div>
                         <div class=\"panel panel-default\">
                             <div class=\"panel-heading\">
-                                <p>regime d'investissement</p>
+                                <p>Régime d'investissement :</p>
                             </div>
                             <div class=\"panel-body\">
                                 <div class=\"row\">
                                     <div class=\"col-sm-4\">
                                         <div class=\"form-group\">
-                                            <label>nom du code</label>
+                                            <label>Nom du code des investissements :</label>
                                             <input type=\"text\" class=\"form-control\" id=\"nomCodeInvestPays\"
-                                                   title=\"nomCodeInvestPays\"/>
+                                                   title=\"nomCodeInvestPays\" placeholder=\"Veuillez saisir le nom du code des investissements étudié\"/>
                                         </div>
                                         <div id=\"nomCodeInvestError\"></div>
                                     </div>
                                     <div class=\"col-sm-4\">
                                         <div class=\"form-group\">
-                                            <label>nom du régime</label>
+                                            <label>Nom du régime :</label>
                                             <input type=\"text\" class=\"form-control\" id=\"nomRegInvestPays\"
-                                                   title=\"nomRegInvestPays\"/>
+                                                   title=\"nomRegInvestPays\" placeholder=\"Veuillez saisir le nom du régime étudié\"/>
                                         </div>
                                         <div id=\"nomRegInvestError\"></div>
                                     </div>
                                     <div class=\"col-sm-4\">
                                         <div class=\"form-group\">
-                                            <label>zone</label>
+                                            <label>Zone :</label>
                                             <input type=\"text\" class=\"form-control\" id=\"zonneInvestPays\"
-                                                   title=\"zonneInvestPays\"/>
+                                                   title=\"zonneInvestPays\" placeholder=\"Veuillez saisir le nom de la zone du régime étudié\"/>
                                         </div>
                                         <div id=\"zonneInvestError\"></div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <button type=\"submit\" onclick=\"ajout.addLand()\"> ajouter le pays</button>
+                        <button type=\"submit\" onclick=\"ajout.addLand()\">Ajouter le pays</button>
                     </div>
                 </div>
             </div>
@@ -391,36 +391,35 @@ class __TwigTemplate_ec8e2f62fe33f8dbdb15c33920ed1d0219ac3cd4584a3982d032be0faef
     <div class=\"modal-dialog\">
         <div class=\"modal-content\">
             <div class=\"modal-header\" style=\"padding:35px 50px;\">
-                <button type=\"button\" class=\"close\" data-dismiss=\"modal\"/>
+                <button type=\"button\" class=\"close\" data-dismiss=\"modal\"></button>
                 <h4>Comparaison</h4>
-                <p>Vous avez engagé une comparaison entre des entreprises ayant des marges différentes
+                <p>Vous avez lancé une comparaison entre des entreprises ayant des marges différentes
                 </p>
             </div>
             <div class=\"modal-body\" style=\"padding:40px 50px;\">
                 <form role=\"form\">
                     <div class=\"form-group\">
-                        <label>Veuillez saisir le taux d'actualisation</label>
+                        <label>Taux d'actualisation :</label>
                         <input type=\"text\" class=\"form-control\" id=\"actualistionCompa\" title=\"actualisation\"
-                               value=\"\">
+                               value=\"\" placeholder=\"Veuillez entrer un taux d'actualisation\">
                     </div>
                     <div class=\"form-group\">
-                        <label>Regime fiscale:</label>
+                        <label>Régime fiscale:</label>
                         <select class=\"form-control\" id=\"REGIMECmpta\" title=\"regime fiscale\">
-                            <option value=\"gen\">code général des impots</option>
-                            <option value=\"nongen\">code des investissements</option>
+                            <option value=\"gen\">Code général des impôts</option>
+                            <option value=\"nongen\">Code des investissements</option>
                         </select>
                     </div>
-
                     <button type=\"submit\" class=\"btn btn-success btn-block\" id=\"myCont\"
-                            onclick=\"debutCompa(\$('#actualistionCompa').val(), \$('#REGIMECmpta').val());\">
-                        continuer
+                            onclick=\"debutCompa(\$('#actualistionCompa').val(), \$('#REGIMECmpta').val());\">continuer
                     </button>
                 </form>
             </div>
             <div class=\"modal-footer\">
                 <button type=\"submit\" class=\"btn btn-danger btn-default pull-left\" onclick=\"retourModal()\"
-                        data-dismiss=\"modal\"><span
-                            class=\"glyphicon glyphicon-remove\"/> Annuler
+                        data-dismiss=\"modal\">
+                        <span class=\"glyphicon glyphicon-remove\">
+                        </span> Annuler
                 </button>
             </div>
         </div>
@@ -443,10 +442,10 @@ class __TwigTemplate_ec8e2f62fe33f8dbdb15c33920ed1d0219ac3cd4584a3982d032be0faef
 </body>
 </html>";
         
-        $__internal_c7f63165540ec59a7c88b69203a78f4a37dd86c50feec37d9951f663032f0810->leave($__internal_c7f63165540ec59a7c88b69203a78f4a37dd86c50feec37d9951f663032f0810_prof);
+        $__internal_ed1b5f780ad47f56c3f1e83f9decaa911e97ddbfbe14e6000291e3520569c336->leave($__internal_ed1b5f780ad47f56c3f1e83f9decaa911e97ddbfbe14e6000291e3520569c336_prof);
 
         
-        $__internal_666b9245b9a3796a3133aed9504afad6d069d56259cc4d1fcb6904b1ceffc4b9->leave($__internal_666b9245b9a3796a3133aed9504afad6d069d56259cc4d1fcb6904b1ceffc4b9_prof);
+        $__internal_174f1da1a42b1943e5a4388aa2924389f02660e835e488d01cb28d3733913c87->leave($__internal_174f1da1a42b1943e5a4388aa2924389f02660e835e488d01cb28d3733913c87_prof);
 
     }
 
@@ -499,16 +498,16 @@ class __TwigTemplate_ec8e2f62fe33f8dbdb15c33920ed1d0219ac3cd4584a3982d032be0faef
             <a class=\" navbar-brand\" href=\"{{ path('temi_platform_home') }}\"><img class=\"img-rounded\" src=\"../image/logo_CERDI_UCA-01.png\">Cerdi</a>
         </div>
         <ul class=\"nav navbar-nav\">
-            <li><a href=\"{{ path('temi_platform_home') }}\">modèle simple</a></li>
-            <li><a data-toggle=\"modal\" href=\"#myModal\">graphique</a></li>
-            <li class=\"active\"><a id=\"ajoutButt\" href=\"{{ path('temi_platform_add') }}\">ajouter un pays  <span class=\"glyphicon glyphicon-plus-sign\"> </span> </a></li>
+            <li><a href=\"{{ path('temi_platform_home') }}\">Modèle</a></li>
+            <li><a data-toggle=\"modal\" href=\"#myModal\">Graphique</a></li>
+            <li class=\"active\"><a id=\"ajoutButt\" href=\"{{ path('temi_platform_add') }}\">Ajouter un pays  <span class=\"glyphicon glyphicon-plus-sign\"> </span> </a></li>
         </ul>
     </div>
 </nav>
 
 <div class=\"container\">
     <h1>Ajouter un pays</h1>
-    <p>Pour creer un nouveau pays, veuillez remplir le formulaire si dessous</p>
+    <p>Pour creer un nouveau pays, veuillez remplir le formulaire ci-dessous</p>
     <div id=\"formError\"></div>
     <div id=\"myCarousel\" class=\"carousel slide w3-container borderhide\" data-interval=\"false\">
         <ol class=\"carousel-indicators lol\">
@@ -529,12 +528,12 @@ class __TwigTemplate_ec8e2f62fe33f8dbdb15c33920ed1d0219ac3cd4584a3982d032be0faef
                     <div class=\"item active borderhide\">
                         <h3>Général</h3>
                         <div class=\"form-group\">
-                            <label>nom</label>
-                            <input type=\"text\" class=\"form-control\" id=\"nomPays\" title=\"nomPays\"/>
+                            <label>Nom :</label>
+                            <input type=\"text\" class=\"form-control\" id=\"nomPays\" title=\"nomPays\" placeholder=\"Veuillez saisir le nom du pays\"/>
                         </div>
                         <div id=\"errorNom\"></div>
                         <div class=\"form-group\">
-                            <label>code ISO3</label>
+                            <label>Code ISO3 :</label>
                             <p>Le code ISO est une codification internationale créé par l'International Standardization
                                 Organization (ISO)
                                 qui attribue un code unique de trois lettres à toute devise de la planète pour éviter
@@ -547,49 +546,49 @@ class __TwigTemplate_ec8e2f62fe33f8dbdb15c33920ed1d0219ac3cd4584a3982d032be0faef
                                 seule la
                                 dernière lettre
                                 varie.</p>
-                            <input type=\"text\" class=\"form-control\" id=\"codePays\" title=\"codePays\"/>
+                            <input type=\"text\" class=\"form-control\" id=\"codePays\" title=\"codePays\" placeholder=\"Veuillez saisir le code ISO3 du pays\"/>
                         </div>
                         <div id=\"errorCode\"></div>
                     </div>
                     <div class=\"item borderhide\">
-                        <h3>code Général des Impots</h3>
+                        <h3>Code Général des Impôts</h3>
                         <div class=\"row\">
                             <div class=\"col-sm-6\">
                                 <div class=\"panel panel-default\">
                                     <div class=\"panel-heading\">
-                                        <p><strong>taux d'impot :</strong></p>
+                                        <p><strong>Taux d'impôt :</strong></p>
                                     </div>
                                     <div class=\"panel-body\">
                                         <div class=\"form-group\">
-                                            <label>cotisation foncière des entreprises</label>
-                                            <input type=\"text\" class=\"form-control\" id=\"cfeImpPays\" title=\"cfeImpPays\"/>
+                                            <label>Contributions forfaitaires employeurs :</label>
+                                            <input type=\"text\" class=\"form-control\" id=\"cfeImpPays\" title=\"cfeImpPays\" placeholder=\"Veuillez saisir le taux des CFE du pays\"/>
                                         </div>
                                         <div id=\"errorCFEImp\"></div>
                                         <div class=\"form-group\">
-                                            <label>impôts société</label>
-                                            <input type=\"text\" class=\"form-control\" id=\"isImpPays\" title=\"isImpPays\"/>
+                                            <label>Impôt société :</label>
+                                            <input type=\"text\" class=\"form-control\" id=\"isImpPays\" title=\"isImpPays\" placeholder=\"Veuillez saisir le taux de l'IS du pays\"/>
                                         </div>
                                         <div id=\"errorISImp\"></div>
                                         <div class=\"form-group\">
-                                            <label>impôts minimum forfaitaire</label>
-                                            <input type=\"text\" class=\"form-control\" id=\"imfImpPays\" title=\"imfImpPays\"/>
+                                            <label>Impôt minimum forfaitaire :</label>
+                                            <input type=\"text\" class=\"form-control\" id=\"imfImpPays\" title=\"imfImpPays\" placeholder=\"Veuillez saisir le taux de l'IMF du pays\"/>
                                         </div>
                                         <div id=\"errorIMFImp\"></div>
                                         <div class=\"form-group\">
-                                            <label>impôts sur le revenu de la valeur mobilières</label>
+                                            <label>Impôt sur le revenu de la valeur mobilières :</label>
                                             <input type=\"text\" class=\"form-control\" id=\"irvmImpPays\"
-                                                   title=\"irvmImpPays\"/>
+                                                   title=\"irvmImpPays\" placeholder=\"Veuillez saisir le taux de l'IRVM du pays\"/>
                                         </div>
                                         <div id=\"errorIRVMImp\"></div>
                                         <div class=\"form-group\">
-                                            <label>impôts sur les revenu des creances</label>
-                                            <input type=\"text\" class=\"form-control\" id=\"ircImpPays\" title=\"ircImpPays\"/>
+                                            <label>Impôt sur les revenus des créances :</label>
+                                            <input type=\"text\" class=\"form-control\" id=\"ircImpPays\" title=\"ircImpPays\" placeholder=\"Veuillez saisir le taux de l'IRC du pays\"/>
                                         </div>
                                         <div id=\"errorIRCImp\"></div>
                                         <div class=\"form-group\">
-                                            <label>taxe sur la valeur ajoutée du pétrole</label>
+                                            <label>Taxe sur la valeur ajoutée du pétrole :</label>
                                             <input type=\"text\" class=\"form-control\" id=\"tvaPetroleImpPays\"
-                                                   title=\"tvaPetroleImpPays\"/>
+                                                   title=\"tvaPetroleImpPays\" placeholder=\"Veuillez saisir le taux de la TVA sur le pétrole du pays\"/>
                                         </div>
                                         <div id=\"errorTVAPETImp\"></div>
                                     </div>
@@ -598,43 +597,43 @@ class __TwigTemplate_ec8e2f62fe33f8dbdb15c33920ed1d0219ac3cd4584a3982d032be0faef
                             <div class=\"col-sm-6\">
                                 <div class=\"panel panel-default\">
                                     <div class=\"panel-heading\">
-                                        <p><strong>duree d'ammortissement :</strong></p>
+                                        <p><strong>Durée d'amortissement :</strong></p>
                                     </div>
                                     <div class=\"panel-body\">
                                         <div class=\"form-group\">
-                                            <label>construction</label>
+                                            <label>Construction :</label>
                                             <input type=\"text\" class=\"form-control\" id=\"cfeAmmortPays\"
-                                                   title=\"cfeAmmortPays\"/>
+                                                   title=\"cfeAmmortPays\" placeholder=\"Veuillez saisir la durée d'amortissement des constructions\"/>
                                         </div>
                                         <div id=\"errorCFEAmmort\"></div>
                                         <div class=\"form-group\">
-                                            <label>equipement</label>
+                                            <label>Equipement :</label>
                                             <input type=\"text\" class=\"form-control\" id=\"isAmmortPays\"
-                                                   title=\"isAmmortPays\"/>
+                                                   title=\"isAmmortPays\" placeholder=\"Veuillez saisir la durée d'amortissement des équipements\"/>
                                         </div>
                                         <div id=\"errorISAmmort\"></div>
                                         <div class=\"form-group\">
-                                            <label> camion</label>
+                                            <label>Camion :</label>
                                             <input type=\"text\" class=\"form-control\" id=\"imfAmmortPays\"
-                                                   title=\"imfAmmortPays\"/>
+                                                   title=\"imfAmmortPays\" placeholder=\"Veuillez saisir la durée d'amortissement des achats des camions\"/>
                                         </div>
                                         <div id=\"errorIMFAmmort\"></div>
                                         <div class=\"form-group\">
-                                            <label>matériel informatique</label>
+                                            <label>Matériel informatique :</label>
                                             <input type=\"text\" class=\"form-control\" id=\"irvmAmmortPays\"
-                                                   title=\"irvmAmmortPays\"/>
+                                                   title=\"irvmAmmortPays\" placeholder=\"Veuillez saisir la durée d'amortissement des achats des matériaux informatiques\"/>
                                         </div>
                                         <div id=\"errorIRVMAmmort\"></div>
                                         <div class=\"form-group\">
-                                            <label>matériel de bureau</label>
+                                            <label>Matériel de bureau :</label>
                                             <input type=\"text\" class=\"form-control\" id=\"ircAmmortPays\"
-                                                   title=\"ircAmmortPays\"/>
+                                                   title=\"ircAmmortPays\" placeholder=\"Veuillez saisir la durée d'amortissement des achats des matériaux de bureaux\"/>
                                         </div>
                                         <div id=\"errorIRCAmmort\"></div>
                                         <div class=\"form-group\">
-                                            <label>coefficient Degressif</label>
+                                            <label>Coefficient Dégressif :</label>
                                             <input type=\"text\" class=\"form-control\" id=\"tvaPetroleAmmortPays\"
-                                                   title=\"tvaPetroleAmmortPays\"/>
+                                                   title=\"tvaPetroleAmmortPays\" placeholder=\"Veuillez saisir le coefficient dégressif\"/>
                                         </div>
                                         <div id=\"errorTVAPETAmmort\"></div>
                                     </div>
@@ -643,26 +642,26 @@ class __TwigTemplate_ec8e2f62fe33f8dbdb15c33920ed1d0219ac3cd4584a3982d032be0faef
                         </div>
                     </div>
                     <div class=\"item borderhide\">
-                        <h3>code des investissements</h3>
+                        <h3>Code des investissements</h3>
                         <div class=\"panel panel-default\">
                             <div class=\"panel-heading\">
-                                <p>cfe</p>
+                                <p>Contributions forfaitaire employeurs :</p>
                             </div>
                             <div class=\"panel-body\">
                                 <div class=\"row\">
                                     <div class=\"col-sm-6\">
                                         <div class=\"form-group\">
-                                            <label>duree</label>
+                                            <label>Durée :</label>
                                             <input type=\"text\" class=\"form-control\" id=\"dureeCFEInvestPays\"
-                                                   title=\"dureeCFEInvestPays\"/>
+                                                   title=\"dureeCFEInvestPays\" placeholder=\"Veuillez saisir la durée du taux réduit du CFE dû à l'investissement\"/>
                                         </div>
                                         <div id=\"dureeCFEError\"></div>
                                     </div>
                                     <div class=\"col-sm-6\">
                                         <div class=\"form-group\">
-                                            <label>taux</label>
+                                            <label>Taux :</label>
                                             <input type=\"text\" class=\"form-control\" id=\"tauxCFEInvestPays\"
-                                                   title=\"tauxCFEInvestPays\"/>
+                                                   title=\"tauxCFEInvestPays\" placeholder=\"Veuillez saisir le taux réduit du CFE dû à l'investissement\"/>
                                         </div>
                                         <div id=\"tauxCFEError\"></div>
                                     </div>
@@ -671,23 +670,23 @@ class __TwigTemplate_ec8e2f62fe33f8dbdb15c33920ed1d0219ac3cd4584a3982d032be0faef
                         </div>
                         <div class=\"panel panel-default borderhide\">
                             <div class=\"panel-heading\">
-                                <p>IS</p>
+                                <p>Impôt société :</p>
                             </div>
                             <div class=\"panel-body\">
                                 <div class=\"row\">
                                     <div class=\"col-sm-6\">
                                         <div class=\"form-group\">
-                                            <label>duree</label>
+                                            <label>Durée :</label>
                                             <input type=\"text\" class=\"form-control\" id=\"dureeISInvestPays\"
-                                                   title=\"dureeISInvestPays\"/>
+                                                   title=\"dureeISInvestPays\" placeholder=\"Veuillez saisir la durée du taux réduit de l'IS dû à l'investissement\"/>
                                         </div>
                                         <div id=\"dureeISError\"></div>
                                     </div>
                                     <div class=\"col-sm-6\">
                                         <div class=\"form-group\">
-                                            <label>taux</label>
+                                            <label>Taux :</label>
                                             <input type=\"text\" class=\"form-control\" id=\"tauxISInvestPays\"
-                                                   title=\"tauxISInvestPays\"/>
+                                                   title=\"tauxISInvestPays\" placeholder=\"Veuillez saisir le taux réduit de l'IS dû à l'investissement\"/>
                                         </div>
                                         <div id=\"tauxISError\"></div>
                                     </div>
@@ -696,23 +695,23 @@ class __TwigTemplate_ec8e2f62fe33f8dbdb15c33920ed1d0219ac3cd4584a3982d032be0faef
                         </div>
                         <div class=\"panel panel-default \">
                             <div class=\"panel-heading\">
-                                <p>IMF</p>
+                                <p>Impôt minimum forfaitaire :</p>
                             </div>
                             <div class=\"panel-body\">
                                 <div class=\"row\">
                                     <div class=\"col-sm-6\">
                                         <div class=\"form-group\">
-                                            <label>duree</label>
+                                            <label>Durée :</label>
                                             <input type=\"text\" class=\"form-control\" id=\"dureeIMFInvestPays\"
-                                                   title=\"dureeIMFInvestPays\"/>
+                                                   title=\"dureeIMFInvestPays\" placeholder=\"Veuillez saisir la durée du taux réduit de l'IMF dû à l'investissement\"/>
                                         </div>
                                         <div id=\"dureeIMFError\"></div>
                                     </div>
                                     <div class=\"col-sm-6\">
                                         <div class=\"form-group\">
-                                            <label>taux</label>
+                                            <label>Taux :</label>
                                             <input type=\"text\" class=\"form-control\" id=\"tauxIMFInvestPays\"
-                                                   title=\"tauxIMFInvestPays\"/>
+                                                   title=\"tauxIMFInvestPays\" placeholder=\"Veuillez saisir le taux réduit de l'IMF dû à l'investissement\"/>
                                         </div>
                                         <div id=\"tauxIMFError\"></div>
                                     </div>
@@ -721,26 +720,26 @@ class __TwigTemplate_ec8e2f62fe33f8dbdb15c33920ed1d0219ac3cd4584a3982d032be0faef
                         </div>
                     </div>
                     <div class=\"item borderhide\">
-                        <h3>code des investissements</h3>
+                        <h3>Code des investissements</h3>
                         <div class=\"panel panel-default\">
                             <div class=\"panel-heading\">
-                                <p>IRVM</p>
+                                <p>Impôt sur les revenus des valeurs mobilières :</p>
                             </div>
                             <div class=\"panel-body\">
                                 <div class=\"row\">
                                     <div class=\"col-sm-6\">
                                         <div class=\"form-group\">
-                                            <label>duree</label>
+                                            <label>Durée :</label>
                                             <input type=\"text\" class=\"form-control\" id=\"dureeIRVMInvestPays\"
-                                                   title=\"dureeIRVMInvestPays\"/>
+                                                   title=\"dureeIRVMInvestPays\" placeholder=\"Veuillez saisir la durée du taux réduit de l'IRVM dû à l'investissement\"/>
                                         </div>
                                         <div id=\"dureeIRVMError\"></div>
                                     </div>
                                     <div class=\"col-sm-6\">
                                         <div class=\"form-group\">
-                                            <label>taux</label>
+                                            <label>Taux :</label>
                                             <input type=\"text\" class=\"form-control\" id=\"tauxIRVMInvestPays\"
-                                                   title=\"tauxIRVMInvestPays\"/>
+                                                   title=\"tauxIRVMInvestPays\" placeholder=\"Veuillez saisir le taux réduit de l'IRVM dû à l'investissement\"/>
                                         </div>
                                         <div id=\"tauxIRVMError\"></div>
                                     </div>
@@ -749,23 +748,23 @@ class __TwigTemplate_ec8e2f62fe33f8dbdb15c33920ed1d0219ac3cd4584a3982d032be0faef
                         </div>
                         <div class=\"panel panel-default\">
                             <div class=\"panel-heading\">
-                                <p>IRC</p>
+                                <p>Impôt sur le revenu des créances :</p>
                             </div>
                             <div class=\"panel-body\">
                                 <div class=\"row\">
                                     <div class=\"col-sm-6\">
                                         <div class=\"form-group\">
-                                            <label>duree</label>
+                                            <label>Durée :</label>
                                             <input type=\"text\" class=\"form-control\" id=\"dureeIRCInvestPays\"
-                                                   title=\"dureeIRCInvestPays\"/>
+                                                   title=\"dureeIRCInvestPays\" placeholder=\"Veuillez saisir la durée du taux réduit de l'IRC dû à l'investissement\"/>
                                         </div>
                                         <div id=\"dureeIRCError\"></div>
                                     </div>
                                     <div class=\"col-sm-6\">
                                         <div class=\"form-group\">
-                                            <label>taux</label>
+                                            <label>Taux :</label>
                                             <input type=\"text\" class=\"form-control\" id=\"tauxIRCInvestPays\"
-                                                   title=\"tauxIRCInvestPays\"/>
+                                                   title=\"tauxIRCInvestPays\" placeholder=\"Veuillez saisir le taux réduit de l'IRC dû à l'investissement\"/>
                                         </div>
                                         <div id=\"tauxIRCError\"></div>
                                     </div>
@@ -774,47 +773,47 @@ class __TwigTemplate_ec8e2f62fe33f8dbdb15c33920ed1d0219ac3cd4584a3982d032be0faef
                         </div>
                     </div>
                     <div class=\"item borderhide\">
-                        <h3>code des investissements</h3>
+                        <h3>Code des investissements</h3>
                         <div class=\"form-group\">
-                            <label>description des disposition</label>
+                            <label>Description des dispositions :</label>
                             <textarea class=\"form-control\" rows=\"5\" id=\"descDispoInvestPays\"
-                                      title=\"descDispoInvestPays\"> </textarea>
+                                      title=\"descDispoInvestPays\" >Veuillez saisir une description sur les différentes dispositions dérogatoires </textarea>
                         </div>
                         <div id=\"descDispoError\"></div>
                         <div class=\"panel panel-default\">
                             <div class=\"panel-heading\">
-                                <p>regime d'investissement</p>
+                                <p>Régime d'investissement :</p>
                             </div>
                             <div class=\"panel-body\">
                                 <div class=\"row\">
                                     <div class=\"col-sm-4\">
                                         <div class=\"form-group\">
-                                            <label>nom du code</label>
+                                            <label>Nom du code des investissements :</label>
                                             <input type=\"text\" class=\"form-control\" id=\"nomCodeInvestPays\"
-                                                   title=\"nomCodeInvestPays\"/>
+                                                   title=\"nomCodeInvestPays\" placeholder=\"Veuillez saisir le nom du code des investissements étudié\"/>
                                         </div>
                                         <div id=\"nomCodeInvestError\"></div>
                                     </div>
                                     <div class=\"col-sm-4\">
                                         <div class=\"form-group\">
-                                            <label>nom du régime</label>
+                                            <label>Nom du régime :</label>
                                             <input type=\"text\" class=\"form-control\" id=\"nomRegInvestPays\"
-                                                   title=\"nomRegInvestPays\"/>
+                                                   title=\"nomRegInvestPays\" placeholder=\"Veuillez saisir le nom du régime étudié\"/>
                                         </div>
                                         <div id=\"nomRegInvestError\"></div>
                                     </div>
                                     <div class=\"col-sm-4\">
                                         <div class=\"form-group\">
-                                            <label>zone</label>
+                                            <label>Zone :</label>
                                             <input type=\"text\" class=\"form-control\" id=\"zonneInvestPays\"
-                                                   title=\"zonneInvestPays\"/>
+                                                   title=\"zonneInvestPays\" placeholder=\"Veuillez saisir le nom de la zone du régime étudié\"/>
                                         </div>
                                         <div id=\"zonneInvestError\"></div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <button type=\"submit\" onclick=\"ajout.addLand()\"> ajouter le pays</button>
+                        <button type=\"submit\" onclick=\"ajout.addLand()\">Ajouter le pays</button>
                     </div>
                 </div>
             </div>
@@ -835,36 +834,35 @@ class __TwigTemplate_ec8e2f62fe33f8dbdb15c33920ed1d0219ac3cd4584a3982d032be0faef
     <div class=\"modal-dialog\">
         <div class=\"modal-content\">
             <div class=\"modal-header\" style=\"padding:35px 50px;\">
-                <button type=\"button\" class=\"close\" data-dismiss=\"modal\"/>
+                <button type=\"button\" class=\"close\" data-dismiss=\"modal\"></button>
                 <h4>Comparaison</h4>
-                <p>Vous avez engagé une comparaison entre des entreprises ayant des marges différentes
+                <p>Vous avez lancé une comparaison entre des entreprises ayant des marges différentes
                 </p>
             </div>
             <div class=\"modal-body\" style=\"padding:40px 50px;\">
                 <form role=\"form\">
                     <div class=\"form-group\">
-                        <label>Veuillez saisir le taux d'actualisation</label>
+                        <label>Taux d'actualisation :</label>
                         <input type=\"text\" class=\"form-control\" id=\"actualistionCompa\" title=\"actualisation\"
-                               value=\"\">
+                               value=\"\" placeholder=\"Veuillez entrer un taux d'actualisation\">
                     </div>
                     <div class=\"form-group\">
-                        <label>Regime fiscale:</label>
+                        <label>Régime fiscale:</label>
                         <select class=\"form-control\" id=\"REGIMECmpta\" title=\"regime fiscale\">
-                            <option value=\"gen\">code général des impots</option>
-                            <option value=\"nongen\">code des investissements</option>
+                            <option value=\"gen\">Code général des impôts</option>
+                            <option value=\"nongen\">Code des investissements</option>
                         </select>
                     </div>
-
                     <button type=\"submit\" class=\"btn btn-success btn-block\" id=\"myCont\"
-                            onclick=\"debutCompa(\$('#actualistionCompa').val(), \$('#REGIMECmpta').val());\">
-                        continuer
+                            onclick=\"debutCompa(\$('#actualistionCompa').val(), \$('#REGIMECmpta').val());\">continuer
                     </button>
                 </form>
             </div>
             <div class=\"modal-footer\">
                 <button type=\"submit\" class=\"btn btn-danger btn-default pull-left\" onclick=\"retourModal()\"
-                        data-dismiss=\"modal\"><span
-                            class=\"glyphicon glyphicon-remove\"/> Annuler
+                        data-dismiss=\"modal\">
+                        <span class=\"glyphicon glyphicon-remove\">
+                        </span> Annuler
                 </button>
             </div>
         </div>

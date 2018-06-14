@@ -21,7 +21,7 @@ ViewGenerator.prototype.resultatHtml = function () {
 
     }
     let head = "<thead><tr><th/><th colspan=3 align=center>Taux statuaire</th><th colspan=2>Taux effectifs marginaux</th></tr>";
-    head += "<tr><th/><th>Taux plein</th><th>Taux reduit</th><th>Durée</th><th>First Year</th><th>Five Year</th></tr></thead>";
+    head += "<tr><th/><th>Taux plein</th><th>Taux réduit</th><th>Durée</th><th>1re année</th><th>5e année</th></tr></thead>";
     let cfe = this.recupDonneTab(false, this.modele.donnee.land().investment().cfe(), this.modele.donnee.land().impots().cfe(),
         false, false, false);
     let is = this.recupDonneTab(false, this.modele.donnee.land().investment().isamort(),
@@ -40,7 +40,7 @@ ViewGenerator.prototype.resultatHtml = function () {
     let bodyTest = bootstrap.tableSE(
         [`CFE</td><td>${this.modele.donnee.land().impots().cfe()}`, `IS</td><td class=\"fontred\">${this.mP.impots().isImp()}`,
             `IMF</td><td class=\"fontred\">${this.mP.impots().imf()}`, `IRVM</td><td>${this.mP.impots().irvm()}`,
-            `IRC</td><td>${this.mP.impots().irc()}`, `TVA Petrole</td><td>${this.mP.impots().tva_petrole()}`, "total</td><td>"],
+            `IRC</td><td>${this.mP.impots().irc()}`, `TVA Petrole</td><td>${this.mP.impots().tva_petrole()}`, "Total</td><td>"],
         head,
         {
             tab: myMath.arrondirTabUnit(cfe,2),
@@ -75,7 +75,7 @@ ViewGenerator.prototype.resultatHtml = function () {
             color: ""
         });
     let pannelTab = bootstrap.pan("default", null, bodyTest);
-    return this.investissementRegime() + bootstrap.pan("default", "<h1>Resultat</h1>", pannelTab);
+    return this.investissementRegime() + bootstrap.pan("default", "<h1>Résultat</h1>", pannelTab);
 
 };
 /**
@@ -136,21 +136,21 @@ ViewGenerator.prototype.recupDonneTab = function (effMoy, impDonne, donneImp, is
  * @return {string}
  */
 ViewGenerator.prototype.pinbHTML = function () {
-    return `<p>Le PIB par tête dans le pays ${this.mP.name()} est de : ${myMath.separatorNumber(Math.round(this.mP.pib))} FCFA</p>`;
+    return `<p>Le PIB par tête pour le pays ${this.mP.name()} est de : ${myMath.separatorNumber(Math.round(this.mP.pib))} FCFA</p>`;
 };
 /**
  * @description This function create a html to give a firm information
  * @return {string}
  */
 ViewGenerator.prototype.entrepriseHTML = function () {
-    let result = "<p>L'firm simulée est supposée être localisée dans la plus grande ville du land, employer "
+    let result = "<p>L'entreprise simulée est supposée être localisée dans la plus grande ville du pays, employer "
         + myMath.separatorNumber((this.mE.cadre() + this.mE.secretaire() + this.mE.ouvrier())) + " salariés et vendre la totalité de sa " +
         "production sur le marché local. ";
-    result += "<br/>Elles comporte donc " + myMath.separatorNumber(this.mE.cadre()) + " cadre(s) dont l'indice salarial est de "
+    result += "<br/>Elle comporte donc " + myMath.separatorNumber(this.mE.cadre()) + " cadre(s) dont l'indice salarial est de "
         + myMath.separatorNumber(this.mE.indice_cadre());
     result += " , " + myMath.separatorNumber(this.mE.secretaire()) + " secrétaire(s) dont l'indice salarial est de " + myMath.separatorNumber(this.mE.indice_secretaire());
     result += " , " + myMath.separatorNumber(this.mE.ouvrier()) + " ouvrier(s) dont l'indice salarial est de " + myMath.separatorNumber(this.mE.indice_ouvrier()) + ".";
-    result += "<br/>Elle verse " + myMath.separatorNumber(this.mE.dividende()) + "% de ces bénéfices dans les dividendes";
+    result += "<br/>Elle verse " + myMath.separatorNumber(this.mE.dividende()) + "% de ses bénéfices dans les dividendes";
     result += "<br/>Elle a un taux d'actualisation de " + myMath.separatorNumber(this.mE.actuali()) + " %";
     result += "</p>";
     return result;
@@ -166,7 +166,7 @@ ViewGenerator.prototype.bilanHtml = function () {
         this.mE.detteCourtTerme() + this.mE.detteFournisseur();
     let col1 = ["<span style='font-size: smaller; '><strong>Actif immobilisé</strong></span>",
         "Terrain", "Constructions", "Equipement", "Camion", "Matériel informatique", "Matériel de Bureau",
-        "<span style='font-size: smaller; '><strong>Actif circulant</strong></span>", "Stocks", "Creances Clients",
+        "<span style='font-size: smaller; '><strong>Actif circulant</strong></span>", "Stocks", "Créances Clients",
         "Disponibilités bancaires", "<strong>Actif</strong>"];
     let lin1 = {
         tab: myMath.separatorNumberArray([null, "<strong>Capitaux propre</strong>", null]),
@@ -201,11 +201,11 @@ ViewGenerator.prototype.bilanHtml = function () {
         color: ""
     };
     let lin9 = {
-        tab: myMath.separatorNumberArray([this.mE.stocks(), "Dettes long terme", this.mE.detteLongTerme()]),
+        tab: myMath.separatorNumberArray([this.mE.stocks(), "Dettes à long terme", this.mE.detteLongTerme()]),
         color: ""
     };
     let lin10 = {
-        tab: myMath.separatorNumberArray([this.mE.creanceCli(), "Dettes court terme", this.mE.detteCourtTerme()]),
+        tab: myMath.separatorNumberArray([this.mE.creanceCli(), "Dettes à court terme", this.mE.detteCourtTerme()]),
         color: ""
     };
     let lin11 = {
@@ -213,7 +213,7 @@ ViewGenerator.prototype.bilanHtml = function () {
         color: ""
     };
     let lin12 = {
-        tab: myMath.separatorNumberArray([`<strong>${actif}</strong>`, "<strong>passif</strong>", passif]),
+        tab: myMath.separatorNumberArray([`<strong>${actif}</strong>`, "<strong>Passif</strong>", passif]),
         color: ""
     };
     let head = "<thead><tr><th colspan=3> Bilan à l'ouverture<th/><tr/><tr><th colspan=2>Actif</th><th colspan=2>Passif</th></tr></thead>";
@@ -225,7 +225,7 @@ ViewGenerator.prototype.bilanHtml = function () {
  * @return {string}
  */
 ViewGenerator.prototype.compteHtml = function () {
-    let cote = ["Achats", "Petrole", "Depenses administratives", "Depenses publicitaires", "Depenses d'entretien",
+    let cote = ["Achats", "Pétrole", "Dépenses administratives", "Dépenses publicitaires", "Dépenses d'entretien",
         "<strong>Impôts et taxes</strong>", "<strong>Masse Salariale</strong>", "Cadres", "Secrétaires", "Ouvriers",
         "<strong>Charges financières</strong>", "Charges financières", "<strong>Amortissement</strong>"];
     let head = "<thead><tr><th colspan=3> Compte de résultat<th/></tr><tr><th colspan=2>Charges</th><th colspan=2>Produit</th></tr></thead>";
@@ -301,7 +301,7 @@ ViewGenerator.prototype.donneesEconomique = function () {
  * @return {string}
  */
 ViewGenerator.prototype.ImpotHtml = function () {
-    let head = "<thead><tr><th colspan=5> Impot<th/></tr>";
+    let head = "<thead><tr><th colspan=5> Impôt<th/></tr>";
     head += "<tr><th/><th>1</th><th>2</th><th>3</th><th>4</th><th>5</th></tr>";
     head += "</thead>";
     let cfe = [];
@@ -318,7 +318,7 @@ ViewGenerator.prototype.ImpotHtml = function () {
         irc.push(this.modele.mesdon().impotSelected().irc() + "%");
         tva.push(this.modele.mesdon().impotSelected().tvaPetrole() + "%");
     }
-    let cote = ["CFE", "IS", "IMF", "IRVM", "IRC", "TVA Petrole"];
+    let cote = ["CFE", "IS", "IMF", "IRVM", "IRC", "TVA Pétrole"];
     return bootstrap.tableSE(cote, head, {
             tab: myMath.separatorNumberArray(cfe),
             color: ""
@@ -378,8 +378,8 @@ ViewGenerator.prototype.amortissementHtml = function () {
  * @return {string}
  */
 ViewGenerator.prototype.amortiExcepHTML = function () {
-    return "<p> Pour les amortissements exceptionnels, le taux depend de l'investment, il y a une limitation par" +
-        " rapport au bénéfice annuel et l'unité de la durée est l'année</p>";
+    return "<p> Pour les amortissements exceptionnels, le taux dépend de l'investissement, il y a une limitation par" +
+        " rapport au bénéfice annuel et l'unité de la durée est l'année.</p>";
 
 };
 /**
@@ -390,7 +390,7 @@ ViewGenerator.prototype.donneesFiscal = function () {
     let pannelBody = bootstrap.pan("default", null, this.ImpotHtml(this.modele.mesdon()));
     pannelBody += this.amortissementHtml();
     pannelBody += this.amortiExcepHTML();
-    return bootstrap.pan("default", "<h1>données fiscales</h1>", pannelBody);
+    return bootstrap.pan("default", "<h1>Données fiscales</h1>", pannelBody);
 };
 /**
  * @description This function create a  HTML to make a body
@@ -410,15 +410,15 @@ ViewGenerator.prototype.bodyHtml = function () {
 ViewGenerator.prototype.navigationHtml = function () {
     let regime;
     if (this.modele.donnee.government() === "gen") {
-        regime = "code général des impots";
+        regime = "Code général des impôts";
     }
     else {
-        regime = "code des investissements";
+        regime = "Code des investissements";
     }
     let pannel = bootstrap.pan("default", "Paramétres", this.modele.donnee.land().name() + "<br/>" + regime + "</br>" + this.modele.donnee.topic() + "</br>" + this.modele.donnee.margin());
     let result = "<div class='vertical-menu'>" + pannel;
-    result += bootstrap.buttonBalA("./model.html", "voir résultat");
-    result += bootstrap.buttonBalA("./index.html", "retour") + "</div>";
+    result += bootstrap.buttonBalA("./modele", "Voir le résultat");
+    result += bootstrap.buttonBalA("./", "Retour") + "</div>";
     return result;
 };
 /**
@@ -435,7 +435,7 @@ ViewGenerator.prototype.mainHTML = function () {
  * @return {string}
  */
 ViewGenerator.prototype.petroleHtml = function () {
-    let cote = ["Pétrole</td><td>FCFA", "Taux</td><td>%", "TVA Petrole</td><td>FCFA"];
+    let cote = ["Pétrole</td><td>FCFA", "Taux</td><td>%", "TVA Pétrole</td><td>FCFA"];
     let tab = bootstrap.tableSE(cote, null, {
             tab: myMath.separatorNumberArray(this.modele.mesdon().taxeAjout().petrole()),
             color: "blue"
@@ -599,7 +599,7 @@ ViewGenerator.prototype.comptableHtml = function () {
  * @return {string}
  */
 ViewGenerator.prototype.ammortExcepHtml = function () {
-    let coteHead = ["investment</td><td>FCFA", "Taux</td><td>% investment", "Limitation</td><td>% Bénéfice comptable", "Durée</td><td>Années"];
+    let coteHead = ["Investissement</td><td>FCFA", "Taux</td><td>% investissement", "Limitation</td><td>% Bénéfice comptable", "Durée</td><td>Années"];
     let tabHead = bootstrap.tableSE(coteHead, null,
         {
             tab: myMath.separatorNumberArray([Math.round(this.modele.mesdon().ammortExcep().investment())]),
@@ -689,7 +689,7 @@ ViewGenerator.prototype.getAmmortGenneralHtml = function () {
         }
     }
     tab += "</tr></tbody></table>";
-    return bootstrap.pan("info", "Amortissment", tab);
+    return bootstrap.pan("info", "Amortissement", tab);
 };
 /**
  * @description This function create a HTML to give a IS impot Array
@@ -702,7 +702,7 @@ ViewGenerator.prototype.impotSocieteHtml = function () {
         is.push(this.modele.mesdon().impotSelected().is());
         impSoc.push(Math.round(this.modele.mesdon().impotSociete()[i]));
     }
-    let cote = ["Benefice imposable</td><td>FCFA", "Taux</td><td>% bénéfice imposable", "IS</td><td>FCFA"];
+    let cote = ["Bénéfice imposable</td><td>FCFA", "Taux</td><td>% bénéfice imposable", "IS</td><td>FCFA"];
     let tab = bootstrap.tableSE(cote, null,
         {
             tab: myMath.separatorNumberArray(myMath.arrondirTabUnit(this.modele.mesdon().resultImpot().benImpo())),
@@ -751,7 +751,7 @@ ViewGenerator.prototype.impotForfaitHtml = function () {
  * @return {string}
  */
 ViewGenerator.prototype.isImfHtml = function () {
-    let cote = ["IS/IMF</td><td>FCFA", "Bénéfice après IS/IMF</td><td>FCFA", "Taux de margin  aprés IS/IMF</td><td>%CA"];
+    let cote = ["IS/IMF</td><td>FCFA", "Bénéfice après IS/IMF</td><td>FCFA", "Taux de marge  après IS/IMF</td><td>%CA"];
     let tab = bootstrap.tableSE(cote, null, {
             tab: myMath.separatorNumberArray(myMath.arrondirTabUnit(this.modele.mesdon().isImf())),
             color: ""
@@ -777,7 +777,7 @@ ViewGenerator.prototype.impotRevenuValeurMobilieres = function () {
         div.push(this.modele.donnee.firm().dividende());
         irvm.push(this.modele.donnee.land().impots().irvm());
     }
-    let cote = ["Bénéfice après IS/IMF</td><td>FCFA", "Distribution anuelle</td><td>% des bénéfice après IS/IMF", "taux</td><td>% des bénéfice après IS/IMF", "IRVM</td><td>FCFA"];
+    let cote = ["Bénéfice après IS/IMF</td><td>FCFA", "Distribution anuelle</td><td>% des bénéfice après IS/IMF", "Taux</td><td>% des bénéfice après IS/IMF", "IRVM</td><td>FCFA"];
     let tab = bootstrap.tableSE(cote, null, {
             tab: myMath.separatorNumberArray(myMath.arrondirTabUnit(this.modele.mesdon().resultCompta().benefice_comptable())),
             color: ""
@@ -801,7 +801,7 @@ ViewGenerator.prototype.impotRevenuValeurMobilieres = function () {
  * @return {string}
  */
 ViewGenerator.prototype.actualisationHtml = function () {
-    let tab = bootstrap.tableSE(["actualisation"], null, {
+    let tab = bootstrap.tableSE(["Actualisation"], null, {
         tab: myMath.separatorNumberArray(myMath.arrondirTabUnit(this.modele.mesdon().actualisation(), 1)),
         color: ""
     });
@@ -813,7 +813,7 @@ ViewGenerator.prototype.actualisationHtml = function () {
  * @return {string}
  */
 ViewGenerator.prototype.tabImpotEtTaxe = function (monm) {
-    let cote = ["CFE</td><td>FCFA", "IS/IMF</td><td>FCFA", "IRVM</td><td>FCFA", "IRC</td><td>FCFA", "TVA Petrole</td><td>FCFA", "Total</td><td>FCFA"];
+    let cote = ["CFE</td><td>FCFA", "IS/IMF</td><td>FCFA", "IRVM</td><td>FCFA", "IRC</td><td>FCFA", "TVA Pétrole</td><td>FCFA", "Total</td><td>FCFA"];
     let tab = bootstrap.tableSE(cote, null,
         {
             tab: myMath.separatorNumberArray(myMath.arrondirTabUnit(monm.cfe())),
@@ -886,7 +886,7 @@ ViewGenerator.prototype.tabFluxTresorie = function (tab, color) {
  * @return {string}
  */
 ViewGenerator.prototype.tauxRendementInt = function (tab,number) {
-    return bootstrap.pan("default", null, `${bootstrap.tableSE(["courants"], null, {
+    return bootstrap.pan("default", null, `${bootstrap.tableSE(["Courants"], null, {
         tab: myMath.separatorNumberArray(myMath.arrondirTabUnit(tab, 2)),
         color: ""
     })}<p> Le taux de rendement interne sur les 5 années est de ${myMath.separatorNumber(number)}%</p>`);
@@ -897,7 +897,7 @@ ViewGenerator.prototype.tauxRendementInt = function (tab,number) {
  * @return {string}
  */
 ViewGenerator.prototype.tauxMargInt = function (tab) {
-    return bootstrap.pan("default", null, `${bootstrap.tableSE(["courants"], null, {
+    return bootstrap.pan("default", null, `${bootstrap.tableSE(["Courants"], null, {
         tab: myMath.separatorNumberArray(myMath.arrondirTabUnit(tab, 2)),
         color: ""
     })}`);
@@ -929,3 +929,6 @@ ViewGenerator.prototype.investissementRegime = function () {
     return html;
 
 };
+
+
+

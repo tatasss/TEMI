@@ -24,9 +24,9 @@
             <a class=" navbar-brand" href="{{ path('temi_platform_home') }}"><img class="img-rounded" src="../image/logo_CERDI_UCA-01.png">Cerdi</a>
         </div>
         <ul class="nav navbar-nav">
-            <li><a href="{{ path('temi_platform_home') }}">modèle simple</a></li>
-            <li class="active"><a data-toggle="modal" href="{{ path('temi_platform_graph') }}">graphique</a></li>
-            <li><a id="ajoutButt" href="{{ path('temi_platform_home') }}">ajouter un pays  <span class="glyphicon glyphicon-plus-sign"> </span> </a></li>
+            <li><a href="{{ path('temi_platform_home') }}">Modèle</a></li>
+            <li class="active"><a data-toggle="modal" href="{{ path('temi_platform_graph') }}">Graphique</a></li>
+            <li><a id="ajoutButt" href="{{ path('temi_platform_home') }}">Ajouter un pays  <span class="glyphicon glyphicon-plus-sign"> </span> </a></li>
         </ul>
     </div>
 </nav>
@@ -40,38 +40,35 @@
                         <div id="formPays"></div>
                     </div>
                     <div class="form-group">
-
                         <label>Taux de marge de l'entreprise:</label>
-                        <input type="text" class="form-control" id="marge" title="marge"/>
-
-
+                        <input type="text" class="form-control" id="marge" title="marge" placeholder="Ajouter un taux de marge"/>
                     </div>
                 </div>
                 <div class='col-sm-2 '>
                     <div id="addPays">
                         <button type="button" class="btn btn-block">
                             <div class='row'>
-
                                 <div class='col-sm-8'>
                                     <p>ajouter un <br/>pays</p>
                                 </div>
                                 <div class='col-sm-2'>
-                                    <p/><span class="glyphicon glyphicon-plus-sign"/>
+                                    <p><span class="glyphicon glyphicon-plus-sign"> </span></p>
                                 </div>
                             </div>
                         </button>
                     </div>
-                    <p/>
+                    <p>
+
+                    </p>
                     <div id="addEnt">
                         <button type="button" class="btn btn-block">
                             <div class='row'>
-
                                 <div class='col-sm-8'>
                                     <p>ajouter<br/> une <br/>entreprise</p>
                                 </div>
                                 <div class='col-sm-2'>
                                     <br/>
-                                    <span class="glyphicon glyphicon-plus-sign"/>
+                                    <span class="glyphicon glyphicon-plus-sign"> </span>
                                 </div>
                             </div>
                         </button>
