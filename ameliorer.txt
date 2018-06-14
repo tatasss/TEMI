@@ -1,14 +1,5 @@
-﻿A faire avant Amelioration:
-	-Si demande supplementaire du Chef de projet, le faire passer devant
-	
-A ameliorer :
-	-Optimiser les fichiers(en ajouter et ou supprimer) pour que la page html ne telecharge que les fichiers 
-	 js contenant le strict minimum necessaire a la page
-	-mettre la class Ref dans un nouveaux fichié
-
--verifiez si le diagramme de classe est à jour
-
-
-Ajout Optionnel:
-	-package String contenant tous les texte ecrit dans le projet(comme en Android)
-	-Vue (amélioration ergonomique)
+﻿Mise en place de la vue connection, mise en place de la bdd
+Mise en place des pays dans la base
+Faire la diff entre Publique(visiteur) et utilisateur
+Permettre à l'administrateur de mettre en place de nouveaux ou des anciens utilisateur
+Permettre d'ajouter un pays uniquement si c'est un utilisateur

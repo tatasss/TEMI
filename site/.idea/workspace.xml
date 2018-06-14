@@ -89,7 +89,7 @@
         <entry file="file://$PROJECT_DIR$/web/javascript/view/directlyChange/graphFormView.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="484">
-              <caret line="60" column="40" lean-forward="true" selection-start-line="60" selection-start-column="40" selection-end-line="60" selection-end-column="40" />
+              <caret line="60" column="40" selection-start-line="60" selection-start-column="40" selection-end-line="60" selection-end-column="40" />
             </state>
           </provider>
         </entry>
@@ -98,7 +98,7 @@
         <entry file="file://$PROJECT_DIR$/web/javascript/view/directlyChange/ModeleView.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="561">
-              <caret line="33" lean-forward="true" selection-start-line="33" selection-end-line="33" />
+              <caret line="33" selection-start-line="33" selection-end-line="33" />
             </state>
           </provider>
         </entry>
@@ -125,7 +125,7 @@
         <entry file="file://$PROJECT_DIR$/web/javascript/view/directlyChange/ViewManufacturing.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="187">
-              <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
+              <caret line="11" selection-start-line="11" selection-end-line="11" />
             </state>
           </provider>
         </entry>
@@ -729,7 +729,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="577509000" />
+    <option name="totallyTimeSpent" value="577788000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -742,7 +742,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1696" height="1026" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info anchor="right" id="PlantUML" order="3" weight="0.33801955" />
       <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.49938875" weight="0.3298969" />
@@ -750,8 +749,8 @@
       <window_info anchor="bottom" id="Database Changes" order="13" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" show_stripe_button="false" sideWeight="0.35330072" side_tool="true" weight="0.19473082" />
       <window_info anchor="bottom" id="Run" order="2" />
-      <window_info anchor="bottom" id="Terminal" order="9" sideWeight="0.64669925" visible="true" weight="0.13288288" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4991453" side_tool="true" visible="true" weight="0.24022005" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="9" sideWeight="0.64669925" visible="true" weight="0.13288288" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4991453" side_tool="true" visible="true" weight="0.24022005" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="3" />
       <window_info id="Structure" order="1" sideWeight="0.50085473" side_tool="true" weight="0.24327628" />
@@ -944,7 +943,7 @@
     <entry file="file://$PROJECT_DIR$/web/javascript/view/directlyChange/ModeleView.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="561">
-          <caret line="33" lean-forward="true" selection-start-line="33" selection-end-line="33" />
+          <caret line="33" selection-start-line="33" selection-end-line="33" />
         </state>
       </provider>
     </entry>
@@ -965,14 +964,14 @@
     <entry file="file://$PROJECT_DIR$/web/javascript/view/directlyChange/ViewManufacturing.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
-          <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
+          <caret line="11" selection-start-line="11" selection-end-line="11" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/web/javascript/view/directlyChange/graphFormView.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="484">
-          <caret line="60" column="40" lean-forward="true" selection-start-line="60" selection-start-column="40" selection-end-line="60" selection-end-column="40" />
+          <caret line="60" column="40" selection-start-line="60" selection-start-column="40" selection-end-line="60" selection-end-column="40" />
         </state>
       </provider>
     </entry>
