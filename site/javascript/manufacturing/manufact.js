@@ -689,7 +689,7 @@ Manufactor.prototype.armortirModele = function (prix, durLin, coef, nom) {
          */
         getHtml: function () {
 
-            let cote2 = ["Base amortissable</td><td>FCFA", "Taux unitaire</td><td>%", "Taux dégréssif</td><td>%", "Charge amortissement</td><td>FCFAS"];
+            let cote2 = ["Base amortissable</td><td>FCFA", "Taux unitaire</td><td>%", "Taux dégréssif</td><td>%", "Charge amortissement</td><td>FCFA"];
             let html = "<div class='panel panel-info'><div class=\"panel-heading\">";
             let cote1 = ["Durée linéaire</td><td>Année", "Coef dégréssif</td><td>Coef"];
             let head = `<thead><tr><th>${this.name()}</th><th>FCFA</th><th class='blue'>${myMath.separatorNumber(this.baseAmortissable()[0])}</th></tr></thead>`;

@@ -23,13 +23,13 @@
         <ul class="nav navbar-nav">
             <li class="active">
                 <a href="./index.html">
-                    modèle simple
+                    Modèle simple
                 </a>
             </li>
-            <li><a data-toggle="modal" href="#myModal">graphique</a></li>
+            <li><a data-toggle="modal" href="#myModal">Graphique</a></li>
             <li>
                 <a id="ajoutButt" href="./ajoutPays.html">
-                    ajouter un pays
+                    Ajouter un pays
                     <span class="glyphicon glyphicon-plus-sign">
                     </span>
                 </a>
@@ -43,19 +43,20 @@
         </div>
     </div>
     <div class="form-group">
-        <label>Regime fiscale:</label>
+        <label>Régime fiscale:</label>
+
         <select class="form-control" id="REGIME" title="regime Fiscale">
-            <option value="gen">code général des impots</option>
-            <option value="nongen">code des investissements</option>
+            <option value="gen">Code général des impots</option>
+            <option value="nongen">Code des investissements</option>
         </select>
     </div>
     <div class="form-group">
         <label>Taux d'actualisation:</label>
-        <input type="text" class="form-control" id="actualisation" title="actualisation"/>
+        <input type="text" class="form-control" id="actualisation" title="actualisation" placeholder="Veuillez entrer un taux d'actualisation"/>
     </div>
     <div class="form-group">
         <label>Taux de marge de l'entreprise:</label>
-        <input type="text" class="form-control" id="marge" title="marge"/>
+        <input type="text" class="form-control" id="marge" title="marge" placeholder="Veuillez entrer un taux de marge"/>
     </div>
     <button type="submit" class="btn btn-default" onclick="validateForm()">valider</button>
     <button type="submit" class="btn btn-default hide" id="myBtn" onclick="showModal()" disabled>Demarrer Comparaison
@@ -68,7 +69,7 @@
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header" style="padding:35px 50px;">
-                    <button type="button" class="close" data-dismiss="modal"/>
+                    <button type="button" class="close" data-dismiss="modal"></button>
                     <h4>Comparaison</h4>
                     <p>Vous avez engagé une comparaison entre des entreprises ayant des marges différentes
                     </p>
@@ -94,8 +95,9 @@
                 </div>
                 <div class="modal-footer">
                     <button type="submit" class="btn btn-danger btn-default pull-left" onclick="retourModal()"
-                            data-dismiss="modal"><span
-                            class="glyphicon glyphicon-remove"/> Annuler
+                            data-dismiss="modal">
+                        <span class="glyphicon glyphicon-remove">
+                        </span> Annuler
                     </button>
                 </div>
             </div>

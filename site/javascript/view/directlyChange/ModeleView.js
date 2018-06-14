@@ -1,5 +1,5 @@
 const genererVue = new ViewGenerator(monModele);
-let investPart = "<p>investissement : " + myMath.separatorNumber(genererVue.modele.mesdon().investissement()) + "</p>";
+let investPart = "<p>Investissement : " + myMath.separatorNumber(genererVue.modele.mesdon().investissement()) + "</p>";
 document.getElementById("invest").innerHTML = investPart;
 let amm = genererVue.getAmmortGenneralHtml();
 amm += "<br/>";

@@ -60,7 +60,103 @@
     <favorites_list name="site" />
   </component>
   <component name="FileEditorManager">
-    <leaf />
+    <leaf>
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/html/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-315">
+              <caret line="58" column="118" selection-start-line="58" selection-start-column="118" selection-end-line="58" selection-end-column="118" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="bootstrapView.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/javascript/view/viewGenerator/bootstrapView.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="45">
+              <caret line="336" column="21" selection-start-line="336" selection-start-column="21" selection-end-line="336" selection-end-column="21" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ViewGenerator.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/javascript/view/viewGenerator/ViewGenerator.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="518">
+              <caret line="381" column="78" lean-forward="true" selection-start-line="381" selection-start-column="78" selection-end-line="381" selection-end-column="78" />
+              <folding>
+                <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#span#0;n#strong#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ModeleView.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/javascript/view/directlyChange/ModeleView.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="17">
+              <caret line="1" column="22" selection-start-line="1" selection-start-column="22" selection-end-line="1" selection-end-column="22" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="graphFormView.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/javascript/view/directlyChange/graphFormView.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="626">
+              <caret line="142" column="24" lean-forward="true" selection-start-line="142" selection-start-column="24" selection-end-line="142" selection-end-column="24" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="model.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/html/model.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="442">
+              <caret line="254" column="43" selection-start-line="254" selection-start-column="43" selection-end-line="254" selection-end-column="43" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="manufact.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/javascript/manufacturing/manufact.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="283">
+              <caret line="696" column="80" lean-forward="true" selection-start-line="696" selection-start-column="80" selection-end-line="696" selection-end-column="80" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ViewManufacturing.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/javascript/view/directlyChange/ViewManufacturing.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret column="41" selection-start-column="41" selection-end-column="41" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ajoutPays.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/html/ajoutPays.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="956">
+              <caret line="398" column="20" selection-start-line="398" selection-start-column="20" selection-end-line="398" selection-end-column="20" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="graphForm.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/html/graphForm.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="650">
+              <caret line="101" column="74" selection-start-line="101" selection-start-column="74" selection-end-line="101" selection-end-column="74" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -120,8 +216,6 @@
         <option value="$PROJECT_DIR$/javascript/start/test.js" />
         <option value="$PROJECT_DIR$/javascript/model/anotherFunctiun/excel.js" />
         <option value="$PROJECT_DIR$/javascript/view/directlyChange/test.js" />
-        <option value="$PROJECT_DIR$/javascript/view/directlyChange/ModeleView.js" />
-        <option value="$PROJECT_DIR$/javascript/view/directlyChange/ViewManufacturing.js" />
         <option value="$PROJECT_DIR$/javascript/view/directlyChange/graphFormView.js" />
         <option value="$PROJECT_DIR$/javascript/model/model.js" />
         <option value="$PROJECT_DIR$/javascript/data/data.js" />
@@ -129,7 +223,6 @@
         <option value="$PROJECT_DIR$/javascript/view/viewGenerator/graphGenerator.js" />
         <option value="$PROJECT_DIR$/javascript/start/reference.js" />
         <option value="$PROJECT_DIR$/javascript/model/anotherFunctiun/XMLRequest.js" />
-        <option value="$PROJECT_DIR$/javascript/manufacturing/manufact.js" />
         <option value="$PROJECT_DIR$/javascript/start/script.js" />
         <option value="$PROJECT_DIR$/javascript/start/singletonLand.js" />
         <option value="$PROJECT_DIR$/javascript/data/PaysListe.js" />
@@ -138,16 +231,19 @@
         <option value="$PROJECT_DIR$/javascript/start/index.js" />
         <option value="$PROJECT_DIR$/javascript/data/startingLand.js" />
         <option value="$PROJECT_DIR$/javascript/view/viewGenerator/bootstrapView.js" />
-        <option value="$PROJECT_DIR$/javascript/view/viewGenerator/ViewGenerator.js" />
         <option value="$PROJECT_DIR$/javascript/model/anotherFunctiun/myMath.js" />
         <option value="$PROJECT_DIR$/javascript/model/anotherFunctiun/verification.js" />
         <option value="$PROJECT_DIR$/javascript/view/directlyChange/PaysAddView.js" />
-        <option value="$PROJECT_DIR$/html/ajoutPays.html" />
         <option value="$PROJECT_DIR$/html/graphForm.html" />
-        <option value="$PROJECT_DIR$/html/index.html" />
-        <option value="$PROJECT_DIR$/html/model.html" />
         <option value="$PROJECT_DIR$/html/test.html" />
         <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/html/ajoutPays.html" />
+        <option value="$PROJECT_DIR$/javascript/view/directlyChange/ViewManufacturing.js" />
+        <option value="$PROJECT_DIR$/html/index.html" />
+        <option value="$PROJECT_DIR$/javascript/view/directlyChange/ModeleView.js" />
+        <option value="$PROJECT_DIR$/javascript/view/viewGenerator/ViewGenerator.js" />
+        <option value="$PROJECT_DIR$/javascript/manufacturing/manufact.js" />
+        <option value="$PROJECT_DIR$/html/model.html" />
       </list>
     </option>
   </component>
@@ -164,7 +260,85 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="NodePackageJsonFileManager">
-    <packageJsonPaths />
+    <packageJsonPaths>
+      <path value="$PROJECT_DIR$/node_modules/adler-32/package.json" />
+      <path value="$PROJECT_DIR$/node_modules/ajv/package.json" />
+      <path value="$PROJECT_DIR$/node_modules/ansi-regex/package.json" />
+      <path value="$PROJECT_DIR$/node_modules/ansi-styles/package.json" />
+      <path value="$PROJECT_DIR$/node_modules/asn1/package.json" />
+      <path value="$PROJECT_DIR$/node_modules/assert-plus/package.json" />
+      <path value="$PROJECT_DIR$/node_modules/asynckit/package.json" />
+      <path value="$PROJECT_DIR$/node_modules/aws-sign2/package.json" />
+      <path value="$PROJECT_DIR$/node_modules/aws4/package.json" />
+      <path value="$PROJECT_DIR$/node_modules/bcrypt-pbkdf/package.json" />
+      <path value="$PROJECT_DIR$/node_modules/bluebird/package.json" />
+      <path value="$PROJECT_DIR$/node_modules/caseless/package.json" />
+      <path value="$PROJECT_DIR$/node_modules/cfb/package.json" />
+      <path value="$PROJECT_DIR$/node_modules/chalk/package.json" />
+      <path value="$PROJECT_DIR$/node_modules/chart.js/package.json" />
+      <path value="$PROJECT_DIR$/node_modules/chartjs-color-string/package.json" />
+      <path value="$PROJECT_DIR$/node_modules/chartjs-color/package.json" />
+      <path value="$PROJECT_DIR$/node_modules/co/package.json" />
+      <path value="$PROJECT_DIR$/node_modules/codepage/node_modules/commander/package.json" />
+      <path value="$PROJECT_DIR$/node_modules/codepage/package.json" />
+      <path value="$PROJECT_DIR$/node_modules/color-convert/package.json" />
+      <path value="$PROJECT_DIR$/node_modules/color-name/package.json" />
+      <path value="$PROJECT_DIR$/node_modules/combined-stream/package.json" />
+      <path value="$PROJECT_DIR$/node_modules/commander/package.json" />
+      <path value="$PROJECT_DIR$/node_modules/core-util-is/package.json" />
+      <path value="$PROJECT_DIR$/node_modules/crc-32/package.json" />
+      <path value="$PROJECT_DIR$/node_modules/dashdash/package.json" />
+      <path value="$PROJECT_DIR$/node_modules/delayed-stream/package.json" />
+      <path value="$PROJECT_DIR$/node_modules/ecc-jsbn/package.json" />
+      <path value="$PROJECT_DIR$/node_modules/escape-string-regexp/package.json" />
+      <path value="$PROJECT_DIR$/node_modules/excellentexport/package.json" />
+      <path value="$PROJECT_DIR$/node_modules/exit-on-epipe/package.json" />
+      <path value="$PROJECT_DIR$/node_modules/extend/package.json" />
+      <path value="$PROJECT_DIR$/node_modules/extsprintf/package.json" />
+      <path value="$PROJECT_DIR$/node_modules/fast-deep-equal/package.json" />
+      <path value="$PROJECT_DIR$/node_modules/fast-json-stable-stringify/package.json" />
+      <path value="$PROJECT_DIR$/node_modules/forever-agent/package.json" />
+      <path value="$PROJECT_DIR$/node_modules/form-data/package.json" />
+      <path value="$PROJECT_DIR$/node_modules/frac/package.json" />
+      <path value="$PROJECT_DIR$/node_modules/getpass/package.json" />
+      <path value="$PROJECT_DIR$/node_modules/har-schema/package.json" />
+      <path value="$PROJECT_DIR$/node_modules/har-validator/package.json" />
+      <path value="$PROJECT_DIR$/node_modules/has-ansi/package.json" />
+      <path value="$PROJECT_DIR$/node_modules/http-signature/package.json" />
+      <path value="$PROJECT_DIR$/node_modules/is-typedarray/package.json" />
+      <path value="$PROJECT_DIR$/node_modules/isstream/package.json" />
+      <path value="$PROJECT_DIR$/node_modules/jsbn/package.json" />
+      <path value="$PROJECT_DIR$/node_modules/json-schema-traverse/package.json" />
+      <path value="$PROJECT_DIR$/node_modules/json-schema/package.json" />
+      <path value="$PROJECT_DIR$/node_modules/json-stringify-safe/package.json" />
+      <path value="$PROJECT_DIR$/node_modules/jsprim/package.json" />
+      <path value="$PROJECT_DIR$/node_modules/lodash/package.json" />
+      <path value="$PROJECT_DIR$/node_modules/mime-db/package.json" />
+      <path value="$PROJECT_DIR$/node_modules/mime-types/package.json" />
+      <path value="$PROJECT_DIR$/node_modules/moment/package.json" />
+      <path value="$PROJECT_DIR$/node_modules/oauth-sign/package.json" />
+      <path value="$PROJECT_DIR$/node_modules/office-addin-validator/package.json" />
+      <path value="$PROJECT_DIR$/node_modules/performance-now/package.json" />
+      <path value="$PROJECT_DIR$/node_modules/printj/package.json" />
+      <path value="$PROJECT_DIR$/node_modules/punycode/package.json" />
+      <path value="$PROJECT_DIR$/node_modules/qs/package.json" />
+      <path value="$PROJECT_DIR$/node_modules/request-promise-core/package.json" />
+      <path value="$PROJECT_DIR$/node_modules/request-promise/package.json" />
+      <path value="$PROJECT_DIR$/node_modules/request/package.json" />
+      <path value="$PROJECT_DIR$/node_modules/safe-buffer/package.json" />
+      <path value="$PROJECT_DIR$/node_modules/ssf/package.json" />
+      <path value="$PROJECT_DIR$/node_modules/sshpk/package.json" />
+      <path value="$PROJECT_DIR$/node_modules/stealthy-require/package.json" />
+      <path value="$PROJECT_DIR$/node_modules/strip-ansi/package.json" />
+      <path value="$PROJECT_DIR$/node_modules/supports-color/package.json" />
+      <path value="$PROJECT_DIR$/node_modules/tough-cookie/package.json" />
+      <path value="$PROJECT_DIR$/node_modules/tunnel-agent/package.json" />
+      <path value="$PROJECT_DIR$/node_modules/tweetnacl/package.json" />
+      <path value="$PROJECT_DIR$/node_modules/uuid/package.json" />
+      <path value="$PROJECT_DIR$/node_modules/verror/package.json" />
+      <path value="$PROJECT_DIR$/node_modules/xlsx/node_modules/commander/package.json" />
+      <path value="$PROJECT_DIR$/node_modules/xlsx/package.json" />
+    </packageJsonPaths>
   </component>
   <component name="PhpWorkspaceProjectConfiguration">
     <include_path>
@@ -209,8 +383,8 @@
     </include_path>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="1617" />
-    <option name="y" value="-1" />
+    <option name="x" value="49" />
+    <option name="y" value="-29" />
     <option name="width" value="1241" />
     <option name="height" value="726" />
   </component>
@@ -227,6 +401,42 @@
               <item name="site" type="b2602c69:ProjectViewProjectNode" />
               <item name="site" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="site" type="b2602c69:ProjectViewProjectNode" />
+              <item name="site" type="462c0819:PsiDirectoryNode" />
+              <item name="html" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="site" type="b2602c69:ProjectViewProjectNode" />
+              <item name="site" type="462c0819:PsiDirectoryNode" />
+              <item name="javascript" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="site" type="b2602c69:ProjectViewProjectNode" />
+              <item name="site" type="462c0819:PsiDirectoryNode" />
+              <item name="javascript" type="462c0819:PsiDirectoryNode" />
+              <item name="manufacturing" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="site" type="b2602c69:ProjectViewProjectNode" />
+              <item name="site" type="462c0819:PsiDirectoryNode" />
+              <item name="javascript" type="462c0819:PsiDirectoryNode" />
+              <item name="view" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="site" type="b2602c69:ProjectViewProjectNode" />
+              <item name="site" type="462c0819:PsiDirectoryNode" />
+              <item name="javascript" type="462c0819:PsiDirectoryNode" />
+              <item name="view" type="462c0819:PsiDirectoryNode" />
+              <item name="directlyChange" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="site" type="b2602c69:ProjectViewProjectNode" />
+              <item name="site" type="462c0819:PsiDirectoryNode" />
+              <item name="javascript" type="462c0819:PsiDirectoryNode" />
+              <item name="view" type="462c0819:PsiDirectoryNode" />
+              <item name="viewGenerator" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -240,7 +450,7 @@
     <property name="full.screen.before.presentation.mode" value="false" />
     <property name="jsgraphql-node-editor-notification" value="false" />
     <property name="last.edited.regexp" value="Sample Text" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/javascript/view/directlyChange" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
@@ -322,6 +532,8 @@
       <workItem from="1528698462761" duration="1193000" />
       <workItem from="1528728089113" duration="2832000" />
       <workItem from="1528787693462" duration="17750000" />
+      <workItem from="1528958323556" duration="42000" />
+      <workItem from="1528958394180" duration="6183000" />
     </task>
     <task id="LOCAL-00001" summary="mis en place d'un code propre">
       <created>1526980633672</created>
@@ -432,7 +644,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="571882000" />
+    <option name="totallyTimeSpent" value="578107000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -444,41 +656,31 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="1358" y="-8" width="1696" height="1026" extended-state="6" />
+    <frame x="-8" y="-8" width="1696" height="1026" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info anchor="right" id="PlantUML" order="3" weight="0.33801955" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4991453" side_tool="true" visible="true" weight="0.19621027" />
       <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.49938875" weight="0.3298969" />
-      <window_info anchor="bottom" x="0" y="447" width="1680" height="116" id="Event Log" order="12" sideWeight="0.50183374" side_tool="true" weight="0.18327606" />
-      <window_info anchor="bottom" id="Database Changes" order="13" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="8" sideWeight="0.35391197" side_tool="true" weight="0.43243244" />
-      <window_info anchor="bottom" id="Run" order="2" />
-      <window_info anchor="bottom" id="Terminal" order="9" sideWeight="0.646088" visible="true" weight="0.43243244" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4991453" side_tool="true" visible="true" weight="0.15220049" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="right" id="Database" order="3" />
+      <window_info anchor="bottom" x="0" y="447" width="1680" height="116" id="Event Log" order="12" sideWeight="0.35330072" side_tool="true" weight="0.19473082" />
+      <window_info anchor="bottom" id="Version Control" order="8" show_stripe_button="false" sideWeight="0.35330072" side_tool="true" weight="0.19473082" />
+      <window_info anchor="bottom" id="Run" order="2" />
       <window_info id="Structure" order="1" sideWeight="0.50085473" side_tool="true" weight="0.24327628" />
+      <window_info anchor="bottom" id="Terminal" order="9" sideWeight="0.64669925" visible="true" weight="0.19473082" />
       <window_info id="Favorites" order="2" sideWeight="0.50085473" side_tool="true" weight="0.24327628" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="TypeScript" order="10" />
-      <window_info anchor="bottom" id="Version Control" order="8" sideWeight="0.35330072" side_tool="true" weight="0.19473082" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4991453" side_tool="true" visible="true" weight="0.19070904" />
-      <window_info id="Structure" order="1" sideWeight="0.50085473" side_tool="true" weight="0.24327628" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.49938875" weight="0.3298969" />
-      <window_info anchor="right" id="PlantUML" order="3" weight="0.33801955" />
-      <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="bottom" id="Inspection Results" order="11" sideWeight="0.49816626" weight="0.32875144" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="right" id="Database" order="3" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" x="0" y="447" width="1680" height="116" id="Event Log" order="12" sideWeight="0.35330072" side_tool="true" weight="0.19473082" />
+      <window_info anchor="bottom" id="Database Changes" order="13" show_stripe_button="false" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Find" order="1" sideWeight="0.48489666" weight="0.26157406" />
-      <window_info anchor="bottom" id="Terminal" order="9" sideWeight="0.64669925" visible="true" weight="0.19473082" />
-      <window_info id="Favorites" order="2" sideWeight="0.50085473" side_tool="true" weight="0.24327628" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -569,13 +771,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/javascript/start/reference.js" />
     <entry file="file://$PROJECT_DIR$/javascript/start/singletonLand.js" />
-    <entry file="file://$PROJECT_DIR$/javascript/view/directlyChange/ViewManufacturing.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" selection-start-line="11" selection-end-line="11" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/css/general.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="3264">
@@ -587,13 +782,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1020">
           <caret line="60" column="22" selection-start-line="60" selection-start-column="22" selection-end-line="60" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/javascript/view/directlyChange/ModeleView.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="109" selection-start-line="1" selection-start-column="109" selection-end-line="1" selection-end-column="109" />
         </state>
       </provider>
     </entry>
@@ -618,13 +806,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/javascript/view/directlyChange/graphFormView.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1725">
-          <caret line="142" column="24" lean-forward="true" selection-start-line="142" selection-start-column="24" selection-end-line="142" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/javascript/view/viewGenerator/graphGenerator.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-142">
@@ -646,24 +827,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/javascript/view/viewGenerator/bootstrapView.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="336" column="21" selection-start-line="336" selection-start-column="21" selection-end-line="336" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/javascript/model/anotherFunctiun/XMLRequest.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="51">
           <caret line="3" column="3" selection-start-line="3" selection-start-column="3" selection-end-line="3" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/javascript/view/viewGenerator/ViewGenerator.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="561">
-          <caret line="33" column="38" lean-forward="true" selection-start-line="33" selection-start-column="38" selection-end-line="33" selection-end-column="38" />
         </state>
       </provider>
     </entry>
@@ -681,13 +848,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/javascript/manufacturing/manufact.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="11647">
-          <caret line="741" column="29" selection-start-line="741" selection-start-column="29" selection-end-line="741" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/javascript/model/anotherFunctiun/verification.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="390">
@@ -702,34 +862,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/html/ajoutPays.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1232">
-          <caret line="401" column="6" selection-start-line="401" selection-start-column="6" selection-end-line="401" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/html/graphForm.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="501">
-          <caret line="101" column="74" selection-start-line="101" selection-start-column="74" selection-end-line="101" selection-end-column="74" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/html/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2006">
-          <caret line="118" column="53" selection-start-line="118" selection-start-column="53" selection-end-line="118" selection-end-column="53" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/html/model.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1989">
-          <caret line="117" column="50" selection-start-line="117" selection-start-column="50" selection-end-line="117" selection-end-column="50" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/html/test.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="527">
@@ -737,48 +869,91 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/composer.json">
+    <entry file="file://$PROJECT_DIR$/.gitignore" />
+    <entry file="file://$PROJECT_DIR$/composer.json" />
+    <entry file="file://$PROJECT_DIR$/package-lock.json" />
+    <entry file="file://$PROJECT_DIR$/composer.lock" />
+    <entry file="file://$PROJECT_DIR$/app/config/parameters.yml.dist" />
+    <entry file="file://$PROJECT_DIR$/app/config/parameters.yml" />
+    <entry file="file://$PROJECT_DIR$/app/config/config_test.yml" />
+    <entry file="file://$PROJECT_DIR$/app/config/config_prod.yml" />
+    <entry file="file://$PROJECT_DIR$/app/config/config_dev.yml" />
+    <entry file="file://$PROJECT_DIR$/app/config/config.yml" />
+    <entry file="file://$PROJECT_DIR$/app/config/routing_dev.yml" />
+    <entry file="file://$PROJECT_DIR$/app/config/security.yml" />
+    <entry file="file://$PROJECT_DIR$/app/config/services.yml" />
+    <entry file="file://$PROJECT_DIR$/javascript/view/directlyChange/ViewManufacturing.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-863" />
+        <state>
+          <caret column="41" selection-start-column="41" selection-end-column="41" />
+        </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/package-lock.json">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/composer.lock">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/config/parameters.yml.dist">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/config/parameters.yml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/config/config_test.yml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/config/config_prod.yml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/config/config_dev.yml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/config/config.yml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/config/routing_dev.yml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/config/security.yml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/config/services.yml">
+    <entry file="file://$PROJECT_DIR$/javascript/view/directlyChange/ModeleView.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" column="21" lean-forward="true" selection-start-line="14" selection-start-column="21" selection-end-line="14" selection-end-column="21" />
+        <state relative-caret-position="17">
+          <caret line="1" column="22" selection-start-line="1" selection-start-column="22" selection-end-line="1" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/javascript/view/directlyChange/graphFormView.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="626">
+          <caret line="142" column="24" lean-forward="true" selection-start-line="142" selection-start-column="24" selection-end-line="142" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/html/graphForm.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="650">
+          <caret line="101" column="74" selection-start-line="101" selection-start-column="74" selection-end-line="101" selection-end-column="74" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/html/ajoutPays.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="956">
+          <caret line="398" column="20" selection-start-line="398" selection-start-column="20" selection-end-line="398" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/javascript/view/viewGenerator/bootstrapView.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="336" column="21" selection-start-line="336" selection-start-column="21" selection-end-line="336" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/javascript/view/viewGenerator/ViewGenerator.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="518">
+          <caret line="381" column="78" lean-forward="true" selection-start-line="381" selection-start-column="78" selection-end-line="381" selection-end-column="78" />
+          <folding>
+            <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#strong#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/javascript/manufacturing/manufact.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="283">
+          <caret line="696" column="80" lean-forward="true" selection-start-line="696" selection-start-column="80" selection-end-line="696" selection-end-column="80" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/html/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-315">
+          <caret line="58" column="118" selection-start-line="58" selection-start-column="118" selection-end-line="58" selection-end-column="118" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/html/model.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="254" column="43" selection-start-line="254" selection-start-column="43" selection-end-line="254" selection-end-column="43" />
         </state>
       </provider>
     </entry>
