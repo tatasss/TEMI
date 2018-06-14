@@ -55,7 +55,7 @@ supelemEnt = function (marge) {
     cptEnt = cptEnt2;
     posIn = 2;
 };
-let htmlFormPays = "<label for=\"sel1\">pays:</label> <select class=\"form-control\" id=\"PAYS\">";
+let htmlFormPays = "<label for=\"sel1\">Pays:</label> <select class=\"form-control\" id=\"PAYS\">";
 htmlFormPays += `<option disabled selected>Selelectionner un  pays</option><option value='tousPays'>Tous les Pays</option> `;
 land.pays.forEach(function (item) {
     if (item.name !== "Guinée Bissao") {
