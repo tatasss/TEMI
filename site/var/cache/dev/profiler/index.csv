@@ -68,3 +68,5 @@ cd7aa1,::1,GET,http://localhost/site/web/app_dev.php/,1528987297,,500
 251374,::1,GET,http://localhost/site/web/app_dev.php/graph,1528987319,,500
 edd6ac,127.0.0.1,GET,http://localhost/site/web/app_dev.php/_fragment?_path=_format%3Dhtml%26_locale%3Den%26_controller%3DTEMImainBundle%253ATemi%253Amenu,1528987351,431355,200
 431355,::1,GET,http://localhost/site/web/app_dev.php/graph,1528987351,,200
+549cc8,127.0.0.1,GET,http://localhost/site/web/app_dev.php/_fragment?_path=_format%3Dhtml%26_locale%3Den%26_controller%3DTEMImainBundle%253ATemi%253Amenu,1528988066,da8748,200
+da8748,::1,GET,http://localhost/site/web/app_dev.php/graph,1528988066,,200
