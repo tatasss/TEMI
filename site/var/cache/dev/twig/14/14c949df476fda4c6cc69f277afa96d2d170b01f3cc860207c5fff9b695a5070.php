@@ -1,6 +1,6 @@
 <?php
 
-/* @TEMImain/Temi/index.html.twig */
+/* TEMImainBundle:Temi:index.html.twig */
 class __TwigTemplate_7f101169f40660af3a81c4512e655bea38f00ebb069e6ac157fdd95aa48d1127 extends Twig_Template
 {
     public function __construct(Twig_Environment $env)
@@ -15,11 +15,11 @@ class __TwigTemplate_7f101169f40660af3a81c4512e655bea38f00ebb069e6ac157fdd95aa48
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_ec59dc2d985f065777486f7e70a25bc963ee8fb76bf7651c11ec31983dbc7e3b = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
-        $__internal_ec59dc2d985f065777486f7e70a25bc963ee8fb76bf7651c11ec31983dbc7e3b->enter($__internal_ec59dc2d985f065777486f7e70a25bc963ee8fb76bf7651c11ec31983dbc7e3b_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "@TEMImain/Temi/index.html.twig"));
+        $__internal_a13c156ac6c78b9f1486c17af645d9f6d1c1f7ca9beece9f7630638b95ae1765 = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
+        $__internal_a13c156ac6c78b9f1486c17af645d9f6d1c1f7ca9beece9f7630638b95ae1765->enter($__internal_a13c156ac6c78b9f1486c17af645d9f6d1c1f7ca9beece9f7630638b95ae1765_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "TEMImainBundle:Temi:index.html.twig"));
 
-        $__internal_d7cee4923e0d4c57339ac1b1e10ccbff463515537c89abf076d97101d8c51f70 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_d7cee4923e0d4c57339ac1b1e10ccbff463515537c89abf076d97101d8c51f70->enter($__internal_d7cee4923e0d4c57339ac1b1e10ccbff463515537c89abf076d97101d8c51f70_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "@TEMImain/Temi/index.html.twig"));
+        $__internal_75dccce3541ed4d071d0623782f5c7aeb33d7071f67cac0a256d0dee544e36a4 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_75dccce3541ed4d071d0623782f5c7aeb33d7071f67cac0a256d0dee544e36a4->enter($__internal_75dccce3541ed4d071d0623782f5c7aeb33d7071f67cac0a256d0dee544e36a4_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "TEMImainBundle:Temi:index.html.twig"));
 
         // line 1
         echo "<!DOCTYPE html>
@@ -36,27 +36,12 @@ class __TwigTemplate_7f101169f40660af3a81c4512e655bea38f00ebb069e6ac157fdd95aa48
     <script src=\"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js\"></script>
 </head>
 <body>
-<nav class=\"navbar navbar-static-top navbar-fixed-top\">
-    <div class=\"container-fluid\">
-        <div class=\"navbar-header\">
-            <a class=\" navbar-brand\" href=\"";
-        // line 18
-        echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("temi_platform_home");
-        echo "\"><img class=\"img-rounded\" src=\"../image/logo_CERDI_UCA-01.png\">Cerdi</a>
-    </div>
-        <ul class=\"nav navbar-nav\">
-            <li class=\"active\"><a href=\"";
-        // line 21
-        echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("temi_platform_home");
-        echo "\">Modèle</a></li>
-            <li><a data-toggle=\"modal\" href=\"#myModal\">graphique</a></li>
-            <li><a id=\"ajoutButt\" href=\"";
-        // line 23
-        echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("temi_platform_add");
-        echo "\">Ajouter un pays <span class=\"glyphicon glyphicon-plus-sign\"> </span> </a></li>
-        </ul>
-    </div>
-</nav>
+<div id=\"menu\">
+    ";
+        // line 16
+        echo $this->env->getRuntime('Symfony\Bridge\Twig\Extension\HttpKernelRuntime')->renderFragment(Symfony\Bridge\Twig\Extension\HttpKernelExtension::controller("TEMImainBundle:Temi:menu"));
+        echo "
+</div>
 <div class=\"container\">
     <div class=\"form-group\">
         <div id=\"formPays\">
@@ -72,11 +57,13 @@ class __TwigTemplate_7f101169f40660af3a81c4512e655bea38f00ebb069e6ac157fdd95aa48
     </div>
     <div class=\"form-group\">
         <label>Taux d'actualisation:</label>
-        <input type=\"text\" class=\"form-control\" id=\"actualisation\" title=\"actualisation\" placeholder=\"Veuillez entrer un taux d'actualisation\"/>
+        <input type=\"text\" class=\"form-control\" id=\"actualisation\" title=\"actualisation\"
+               placeholder=\"Veuillez entrer un taux d'actualisation\"/>
     </div>
     <div class=\"form-group\">
         <label>Taux de marge de l'entreprise:</label>
-        <input type=\"text\" class=\"form-control\" id=\"marge\" title=\"marge\" placeholder=\"Veuillez entrer un taux de marge\"/>
+        <input type=\"text\" class=\"form-control\" id=\"marge\" title=\"marge\"
+               placeholder=\"Veuillez entrer un taux de marge\"/>
     </div>
     <button type=\"submit\" class=\"btn btn-default\" onclick=\"validateForm()\">valider</button>
     <button type=\"submit\" class=\"btn btn-default hide\" id=\"myBtn\" onclick=\"showModal()\" disabled>Demarrer Comparaison
@@ -84,45 +71,6 @@ class __TwigTemplate_7f101169f40660af3a81c4512e655bea38f00ebb069e6ac157fdd95aa48
     <div>
         <br/>
         <div id=\"result\"></div>
-    </div>
-    <!-- Modal -->
-    <div class=\"modal fade\" id=\"myModal\" role=\"dialog\">
-        <div class=\"modal-dialog\">
-            <div class=\"modal-content\">
-                <div class=\"modal-header\" style=\"padding:35px 50px;\">
-                    <button type=\"button\" class=\"close\" data-dismiss=\"modal\"></button>
-                    <h4>Comparaison</h4>
-                    <p>Vous avez lancé une comparaison entre des entreprises ayant des marges différentes
-                    </p>
-                </div>
-                <div class=\"modal-body\" style=\"padding:40px 50px;\">
-                    <form role=\"form\">
-                        <div class=\"form-group\">
-                            <label>Taux d'actualisation :</label>
-                            <input type=\"text\" class=\"form-control\" id=\"actualistionCompa\" title=\"actualisation\"
-                                   value=\"\" placeholder=\"Veuillez entrer un taux d'actualisation\">
-                        </div>
-                        <div class=\"form-group\">
-                            <label>Régime fiscale:</label>
-                            <select class=\"form-control\" id=\"REGIMECmpta\" title=\"regime fiscale\">
-                                <option value=\"gen\">Code général des impôts</option>
-                                <option value=\"nongen\">Code des investissements</option>
-                            </select>
-                        </div>
-                        <button type=\"submit\" class=\"btn btn-success btn-block\" id=\"myCont\"
-                                onclick=\"debutCompa(\$('#actualistionCompa').val(), \$('#REGIMECmpta').val());\">continuer
-                        </button>
-                    </form>
-                </div>
-                <div class=\"modal-footer\">
-                    <button type=\"submit\" class=\"btn btn-danger btn-default pull-left\" onclick=\"retourModal()\"
-                            data-dismiss=\"modal\">
-                        <span class=\"glyphicon glyphicon-remove\">
-                        </span> Annuler
-                    </button>
-                </div>
-            </div>
-        </div>
     </div>
 </div>
 
@@ -147,16 +95,16 @@ class __TwigTemplate_7f101169f40660af3a81c4512e655bea38f00ebb069e6ac157fdd95aa48
 </body>
 </html>";
         
-        $__internal_ec59dc2d985f065777486f7e70a25bc963ee8fb76bf7651c11ec31983dbc7e3b->leave($__internal_ec59dc2d985f065777486f7e70a25bc963ee8fb76bf7651c11ec31983dbc7e3b_prof);
+        $__internal_a13c156ac6c78b9f1486c17af645d9f6d1c1f7ca9beece9f7630638b95ae1765->leave($__internal_a13c156ac6c78b9f1486c17af645d9f6d1c1f7ca9beece9f7630638b95ae1765_prof);
 
         
-        $__internal_d7cee4923e0d4c57339ac1b1e10ccbff463515537c89abf076d97101d8c51f70->leave($__internal_d7cee4923e0d4c57339ac1b1e10ccbff463515537c89abf076d97101d8c51f70_prof);
+        $__internal_75dccce3541ed4d071d0623782f5c7aeb33d7071f67cac0a256d0dee544e36a4->leave($__internal_75dccce3541ed4d071d0623782f5c7aeb33d7071f67cac0a256d0dee544e36a4_prof);
 
     }
 
     public function getTemplateName()
     {
-        return "@TEMImain/Temi/index.html.twig";
+        return "TEMImainBundle:Temi:index.html.twig";
     }
 
     public function isTraitable()
@@ -166,7 +114,7 @@ class __TwigTemplate_7f101169f40660af3a81c4512e655bea38f00ebb069e6ac157fdd95aa48
 
     public function getDebugInfo()
     {
-        return array (  55 => 23,  50 => 21,  44 => 18,  25 => 1,);
+        return array (  42 => 16,  25 => 1,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -193,18 +141,9 @@ class __TwigTemplate_7f101169f40660af3a81c4512e655bea38f00ebb069e6ac157fdd95aa48
     <script src=\"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js\"></script>
 </head>
 <body>
-<nav class=\"navbar navbar-static-top navbar-fixed-top\">
-    <div class=\"container-fluid\">
-        <div class=\"navbar-header\">
-            <a class=\" navbar-brand\" href=\"{{ path('temi_platform_home') }}\"><img class=\"img-rounded\" src=\"../image/logo_CERDI_UCA-01.png\">Cerdi</a>
-    </div>
-        <ul class=\"nav navbar-nav\">
-            <li class=\"active\"><a href=\"{{ path('temi_platform_home') }}\">Modèle</a></li>
-            <li><a data-toggle=\"modal\" href=\"#myModal\">graphique</a></li>
-            <li><a id=\"ajoutButt\" href=\"{{ path('temi_platform_add') }}\">Ajouter un pays <span class=\"glyphicon glyphicon-plus-sign\"> </span> </a></li>
-        </ul>
-    </div>
-</nav>
+<div id=\"menu\">
+    {{ render(controller(\"TEMImainBundle:Temi:menu\")) }}
+</div>
 <div class=\"container\">
     <div class=\"form-group\">
         <div id=\"formPays\">
@@ -220,11 +159,13 @@ class __TwigTemplate_7f101169f40660af3a81c4512e655bea38f00ebb069e6ac157fdd95aa48
     </div>
     <div class=\"form-group\">
         <label>Taux d'actualisation:</label>
-        <input type=\"text\" class=\"form-control\" id=\"actualisation\" title=\"actualisation\" placeholder=\"Veuillez entrer un taux d'actualisation\"/>
+        <input type=\"text\" class=\"form-control\" id=\"actualisation\" title=\"actualisation\"
+               placeholder=\"Veuillez entrer un taux d'actualisation\"/>
     </div>
     <div class=\"form-group\">
         <label>Taux de marge de l'entreprise:</label>
-        <input type=\"text\" class=\"form-control\" id=\"marge\" title=\"marge\" placeholder=\"Veuillez entrer un taux de marge\"/>
+        <input type=\"text\" class=\"form-control\" id=\"marge\" title=\"marge\"
+               placeholder=\"Veuillez entrer un taux de marge\"/>
     </div>
     <button type=\"submit\" class=\"btn btn-default\" onclick=\"validateForm()\">valider</button>
     <button type=\"submit\" class=\"btn btn-default hide\" id=\"myBtn\" onclick=\"showModal()\" disabled>Demarrer Comparaison
@@ -232,45 +173,6 @@ class __TwigTemplate_7f101169f40660af3a81c4512e655bea38f00ebb069e6ac157fdd95aa48
     <div>
         <br/>
         <div id=\"result\"></div>
-    </div>
-    <!-- Modal -->
-    <div class=\"modal fade\" id=\"myModal\" role=\"dialog\">
-        <div class=\"modal-dialog\">
-            <div class=\"modal-content\">
-                <div class=\"modal-header\" style=\"padding:35px 50px;\">
-                    <button type=\"button\" class=\"close\" data-dismiss=\"modal\"></button>
-                    <h4>Comparaison</h4>
-                    <p>Vous avez lancé une comparaison entre des entreprises ayant des marges différentes
-                    </p>
-                </div>
-                <div class=\"modal-body\" style=\"padding:40px 50px;\">
-                    <form role=\"form\">
-                        <div class=\"form-group\">
-                            <label>Taux d'actualisation :</label>
-                            <input type=\"text\" class=\"form-control\" id=\"actualistionCompa\" title=\"actualisation\"
-                                   value=\"\" placeholder=\"Veuillez entrer un taux d'actualisation\">
-                        </div>
-                        <div class=\"form-group\">
-                            <label>Régime fiscale:</label>
-                            <select class=\"form-control\" id=\"REGIMECmpta\" title=\"regime fiscale\">
-                                <option value=\"gen\">Code général des impôts</option>
-                                <option value=\"nongen\">Code des investissements</option>
-                            </select>
-                        </div>
-                        <button type=\"submit\" class=\"btn btn-success btn-block\" id=\"myCont\"
-                                onclick=\"debutCompa(\$('#actualistionCompa').val(), \$('#REGIMECmpta').val());\">continuer
-                        </button>
-                    </form>
-                </div>
-                <div class=\"modal-footer\">
-                    <button type=\"submit\" class=\"btn btn-danger btn-default pull-left\" onclick=\"retourModal()\"
-                            data-dismiss=\"modal\">
-                        <span class=\"glyphicon glyphicon-remove\">
-                        </span> Annuler
-                    </button>
-                </div>
-            </div>
-        </div>
     </div>
 </div>
 
@@ -293,6 +195,6 @@ class __TwigTemplate_7f101169f40660af3a81c4512e655bea38f00ebb069e6ac157fdd95aa48
 
 <script src=\"../javascript/view/directlyChange/ViewManufacturing.js\"></script>
 </body>
-</html>", "@TEMImain/Temi/index.html.twig", "C:\\Users\\matthias\\Desktop\\stage\\TEMI\\site\\src\\TEMI\\mainBundle\\Resources\\views\\Temi\\index.html.twig");
+</html>", "TEMImainBundle:Temi:index.html.twig", "C:\\Users\\matthias\\Desktop\\stage\\TEMI\\site\\src\\TEMI\\mainBundle\\Resources\\views\\Temi\\index.html.twig");
     }
 }

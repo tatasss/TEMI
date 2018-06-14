@@ -15,11 +15,11 @@ class __TwigTemplate_5e0693d792d33c322623fa1a9f37a1d2dbcf9ac16d8b8307c916e9d331c
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_86c132953134c3d2b32b24acf2606cfa794206adc093ad67367cd89b3893855d = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
-        $__internal_86c132953134c3d2b32b24acf2606cfa794206adc093ad67367cd89b3893855d->enter($__internal_86c132953134c3d2b32b24acf2606cfa794206adc093ad67367cd89b3893855d_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "TEMImainBundle:Temi:ajoutPays.html.twig"));
+        $__internal_a3c396f0ed6cd4b225818519b74edb8257846f8ec761f0868678854366114cae = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
+        $__internal_a3c396f0ed6cd4b225818519b74edb8257846f8ec761f0868678854366114cae->enter($__internal_a3c396f0ed6cd4b225818519b74edb8257846f8ec761f0868678854366114cae_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "TEMImainBundle:Temi:ajoutPays.html.twig"));
 
-        $__internal_7fdd8899f05f73735442d86396662220fe86c3b5e4104a947a3bb646367f8118 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_7fdd8899f05f73735442d86396662220fe86c3b5e4104a947a3bb646367f8118->enter($__internal_7fdd8899f05f73735442d86396662220fe86c3b5e4104a947a3bb646367f8118_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "TEMImainBundle:Temi:ajoutPays.html.twig"));
+        $__internal_4c2e1b6fcc74dbaf44fe4dfd6b82b69f5cfca00693d74e01afa4acd46f9dce05 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_4c2e1b6fcc74dbaf44fe4dfd6b82b69f5cfca00693d74e01afa4acd46f9dce05->enter($__internal_4c2e1b6fcc74dbaf44fe4dfd6b82b69f5cfca00693d74e01afa4acd46f9dce05_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "TEMImainBundle:Temi:ajoutPays.html.twig"));
 
         // line 1
         echo "<!DOCTYPE html>
@@ -40,27 +40,10 @@ class __TwigTemplate_5e0693d792d33c322623fa1a9f37a1d2dbcf9ac16d8b8307c916e9d331c
     <meta name=\"viewport\" content=\"width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no\">
 </head>
 <body>
-<nav class=\"navbar navbar-static-top navbar-fixed-top\">
-    <div class=\"container-fluid\">
-        <div class=\"navbar-header\">
-            <a class=\" navbar-brand\" href=\"";
-        // line 22
-        echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("temi_platform_home");
-        echo "\"><img class=\"img-rounded\" src=\"../image/logo_CERDI_UCA-01.png\">Cerdi</a>
-        </div>
-        <ul class=\"nav navbar-nav\">
-            <li><a href=\"";
-        // line 25
-        echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("temi_platform_home");
-        echo "\">Modèle</a></li>
-            <li><a data-toggle=\"modal\" href=\"#myModal\">Graphique</a></li>
-            <li class=\"active\"><a id=\"ajoutButt\" href=\"";
-        // line 27
-        echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("temi_platform_add");
-        echo "\">Ajouter un pays  <span class=\"glyphicon glyphicon-plus-sign\"> </span> </a></li>
-        </ul>
-    </div>
-</nav>
+";
+        // line 19
+        echo $this->env->getRuntime('Symfony\Bridge\Twig\Extension\HttpKernelRuntime')->renderFragment(Symfony\Bridge\Twig\Extension\HttpKernelExtension::controller("TEMImainBundle:Temi:menu"));
+        echo "
 
 <div class=\"container\">
     <h1>Ajouter un pays</h1>
@@ -442,10 +425,10 @@ class __TwigTemplate_5e0693d792d33c322623fa1a9f37a1d2dbcf9ac16d8b8307c916e9d331c
 </body>
 </html>";
         
-        $__internal_86c132953134c3d2b32b24acf2606cfa794206adc093ad67367cd89b3893855d->leave($__internal_86c132953134c3d2b32b24acf2606cfa794206adc093ad67367cd89b3893855d_prof);
+        $__internal_a3c396f0ed6cd4b225818519b74edb8257846f8ec761f0868678854366114cae->leave($__internal_a3c396f0ed6cd4b225818519b74edb8257846f8ec761f0868678854366114cae_prof);
 
         
-        $__internal_7fdd8899f05f73735442d86396662220fe86c3b5e4104a947a3bb646367f8118->leave($__internal_7fdd8899f05f73735442d86396662220fe86c3b5e4104a947a3bb646367f8118_prof);
+        $__internal_4c2e1b6fcc74dbaf44fe4dfd6b82b69f5cfca00693d74e01afa4acd46f9dce05->leave($__internal_4c2e1b6fcc74dbaf44fe4dfd6b82b69f5cfca00693d74e01afa4acd46f9dce05_prof);
 
     }
 
@@ -461,7 +444,7 @@ class __TwigTemplate_5e0693d792d33c322623fa1a9f37a1d2dbcf9ac16d8b8307c916e9d331c
 
     public function getDebugInfo()
     {
-        return array (  59 => 27,  54 => 25,  48 => 22,  25 => 1,);
+        return array (  45 => 19,  25 => 1,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -492,18 +475,7 @@ class __TwigTemplate_5e0693d792d33c322623fa1a9f37a1d2dbcf9ac16d8b8307c916e9d331c
     <meta name=\"viewport\" content=\"width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no\">
 </head>
 <body>
-<nav class=\"navbar navbar-static-top navbar-fixed-top\">
-    <div class=\"container-fluid\">
-        <div class=\"navbar-header\">
-            <a class=\" navbar-brand\" href=\"{{ path('temi_platform_home') }}\"><img class=\"img-rounded\" src=\"../image/logo_CERDI_UCA-01.png\">Cerdi</a>
-        </div>
-        <ul class=\"nav navbar-nav\">
-            <li><a href=\"{{ path('temi_platform_home') }}\">Modèle</a></li>
-            <li><a data-toggle=\"modal\" href=\"#myModal\">Graphique</a></li>
-            <li class=\"active\"><a id=\"ajoutButt\" href=\"{{ path('temi_platform_add') }}\">Ajouter un pays  <span class=\"glyphicon glyphicon-plus-sign\"> </span> </a></li>
-        </ul>
-    </div>
-</nav>
+{{ render(controller(\"TEMImainBundle:Temi:menu\")) }}
 
 <div class=\"container\">
     <h1>Ajouter un pays</h1>

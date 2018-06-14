@@ -1,0 +1,143 @@
+<?php
+
+/* TEMImainBundle:Temi:menu.html.twig */
+class __TwigTemplate_d7e8124c650085b63ce6a483e5b8b777b95d1445ca3210a4820663b496c130af extends Twig_Template
+{
+    public function __construct(Twig_Environment $env)
+    {
+        parent::__construct($env);
+
+        $this->parent = false;
+
+        $this->blocks = array(
+        );
+    }
+
+    protected function doDisplay(array $context, array $blocks = array())
+    {
+        $__internal_fc5dc91b505614aa069a20fd5a56d4732573c827cedbd29af2741d797c6336d6 = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
+        $__internal_fc5dc91b505614aa069a20fd5a56d4732573c827cedbd29af2741d797c6336d6->enter($__internal_fc5dc91b505614aa069a20fd5a56d4732573c827cedbd29af2741d797c6336d6_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "TEMImainBundle:Temi:menu.html.twig"));
+
+        $__internal_af1e453e2a6a64e4f7297f4c6a80380787bf8dd114d2f5ed84bccb7281ae4b49 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_af1e453e2a6a64e4f7297f4c6a80380787bf8dd114d2f5ed84bccb7281ae4b49->enter($__internal_af1e453e2a6a64e4f7297f4c6a80380787bf8dd114d2f5ed84bccb7281ae4b49_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "TEMImainBundle:Temi:menu.html.twig"));
+
+        // line 2
+        echo "
+<nav class=\"navbar navbar-static-top navbar-fixed-top\">
+
+    <div class=\"container-fluid\">
+        <div class=\"navbar-header\">
+            <a class=\" navbar-brand\" href=\"";
+        // line 7
+        echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("temi_platform_home");
+        echo "\"><img class=\"img-rounded\" src=\"../image/logo_CERDI_UCA-01.png\">Cerdi</a>
+        </div>
+        <ul class=\"nav navbar-nav\">
+
+            ";
+        // line 11
+        if (($this->getAttribute($this->getAttribute($this->getAttribute((isset($context["app"]) ? $context["app"] : $this->getContext($context, "app")), "request", array()), "attributes", array()), "get", array(0 => "_route"), "method") == "temi_platform_home")) {
+            // line 12
+            echo "                <li class=\"active\"><a href=\"";
+            echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("temi_platform_home");
+            echo "\">Modèle</a></li>
+            ";
+        } else {
+            // line 14
+            echo "                <li ><a href=\"";
+            echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("temi_platform_home");
+            echo "\">Modèle ";
+            echo twig_escape_filter($this->env, $this->getAttribute($this->getAttribute((isset($context["app"]) ? $context["app"] : $this->getContext($context, "app")), "request", array()), "uri", array()), "html", null, true);
+            echo "</a></li>
+            ";
+        }
+        // line 16
+        echo "            <li><a data-toggle=\"modal\" href=\"#myModal\">graphique</a></li>
+            <li><a id=\"ajoutButt\" href=\"";
+        // line 17
+        echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("temi_platform_add");
+        echo "\">Ajouter un pays <span class=\"glyphicon glyphicon-plus-sign\"> </span> </a></li>
+        </ul>
+        ";
+        // line 20
+        echo "        <ul class=\"nav navbar-nav navbar-right\">
+            <li><a href=\"";
+        // line 21
+        echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("temi_user_sign_up");
+        echo "\"><span class=\"glyphicon glyphicon-user\"></span> Inscription</a></li>
+            <li><a href=\"";
+        // line 22
+        echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("temi_user_login");
+        echo "\"><span class=\"glyphicon glyphicon-log-in\"></span> Connection</a></li>
+        </ul>
+        ";
+        // line 29
+        echo "    </div>
+</nav>
+";
+        
+        $__internal_fc5dc91b505614aa069a20fd5a56d4732573c827cedbd29af2741d797c6336d6->leave($__internal_fc5dc91b505614aa069a20fd5a56d4732573c827cedbd29af2741d797c6336d6_prof);
+
+        
+        $__internal_af1e453e2a6a64e4f7297f4c6a80380787bf8dd114d2f5ed84bccb7281ae4b49->leave($__internal_af1e453e2a6a64e4f7297f4c6a80380787bf8dd114d2f5ed84bccb7281ae4b49_prof);
+
+    }
+
+    public function getTemplateName()
+    {
+        return "TEMImainBundle:Temi:menu.html.twig";
+    }
+
+    public function isTraitable()
+    {
+        return false;
+    }
+
+    public function getDebugInfo()
+    {
+        return array (  75 => 29,  70 => 22,  66 => 21,  63 => 20,  58 => 17,  55 => 16,  47 => 14,  41 => 12,  39 => 11,  32 => 7,  25 => 2,);
+    }
+
+    /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
+    public function getSource()
+    {
+        @trigger_error('The '.__METHOD__.' method is deprecated since version 1.27 and will be removed in 2.0. Use getSourceContext() instead.', E_USER_DEPRECATED);
+
+        return $this->getSourceContext()->getCode();
+    }
+
+    public function getSourceContext()
+    {
+        return new Twig_Source("{# src/OC/PlatformBundle/Resources/views/layout.html.twig #}
+
+<nav class=\"navbar navbar-static-top navbar-fixed-top\">
+
+    <div class=\"container-fluid\">
+        <div class=\"navbar-header\">
+            <a class=\" navbar-brand\" href=\"{{ path('temi_platform_home') }}\"><img class=\"img-rounded\" src=\"../image/logo_CERDI_UCA-01.png\">Cerdi</a>
+        </div>
+        <ul class=\"nav navbar-nav\">
+
+            {%if app.request.attributes.get('_route')=='temi_platform_home'%}
+                <li class=\"active\"><a href=\"{{ path('temi_platform_home') }}\">Modèle</a></li>
+            {% else %}
+                <li ><a href=\"{{ path('temi_platform_home') }}\">Modèle {{  app.request.uri}}</a></li>
+            {% endif %}
+            <li><a data-toggle=\"modal\" href=\"#myModal\">graphique</a></li>
+            <li><a id=\"ajoutButt\" href=\"{{ path('temi_platform_add') }}\">Ajouter un pays <span class=\"glyphicon glyphicon-plus-sign\"> </span> </a></li>
+        </ul>
+        {#{%if app.session[\"user_conected\"]!=true  %}#}
+        <ul class=\"nav navbar-nav navbar-right\">
+            <li><a href=\"{{ path('temi_user_sign_up') }}\"><span class=\"glyphicon glyphicon-user\"></span> Inscription</a></li>
+            <li><a href=\"{{ path('temi_user_login') }}\"><span class=\"glyphicon glyphicon-log-in\"></span> Connection</a></li>
+        </ul>
+        {#{% else %}
+        <ul class=\"nav navbar-nav navbar-right\">
+            <li><a href=\"{{ path('temi_user_logout') }}\"><span class=\"glyphicon glyphicon-log-out\"></span> Deconnection</a></li>
+        </ul>
+        {% endif %}#}
+    </div>
+</nav>
+", "TEMImainBundle:Temi:menu.html.twig", "C:\\Users\\matthias\\Desktop\\stage\\TEMI\\site\\src\\TEMI\\mainBundle\\Resources\\views\\Temi\\menu.html.twig");
+    }
+}

@@ -147,6 +147,24 @@ class appDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
             return array (  '_controller' => 'TEMI\\mainBundle\\Controller\\TemiController::graphAction',  '_route' => 'temi_platform_graph',);
         }
 
+        if (0 === strpos($pathinfo, '/Connection')) {
+            // temi_user_login
+            if ('/Connection' === $pathinfo) {
+                return array (  '_controller' => 'TEMI\\mainBundle\\Controller\\ConnectController::connectionAction',  '_route' => 'temi_user_login',);
+            }
+
+            // temi_user_logout
+            if ('/Connection' === $pathinfo) {
+                return array (  '_controller' => 'TEMI\\mainBundle\\Controller\\ConnectController::deconnectionAction',  '_route' => 'temi_user_logout',);
+            }
+
+        }
+
+        // temi_user_sign_up
+        if ('/inscription' === $pathinfo) {
+            return array (  '_controller' => 'TEMI\\mainBundle\\Controller\\ConnectController::inscriptionAction',  '_route' => 'temi_user_sign_up',);
+        }
+
         throw 0 < count($allow) ? new MethodNotAllowedException(array_unique($allow)) : new ResourceNotFoundException();
     }
 }

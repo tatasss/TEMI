@@ -1,6 +1,6 @@
 <?php
 
-/* @TEMImain/Temi/graphForm.html.twig */
+/* TEMImainBundle:Temi:graphForm.html.twig */
 class __TwigTemplate_253f6ad0c973fe4e752b75724c564178b23f69b902c16d40079524bc9a217e06 extends Twig_Template
 {
     public function __construct(Twig_Environment $env)
@@ -15,11 +15,11 @@ class __TwigTemplate_253f6ad0c973fe4e752b75724c564178b23f69b902c16d40079524bc9a2
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_657ff5cdeceef7a1b83f763e2302cc3addcd77a18a7685a5bf726651bc962fb7 = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
-        $__internal_657ff5cdeceef7a1b83f763e2302cc3addcd77a18a7685a5bf726651bc962fb7->enter($__internal_657ff5cdeceef7a1b83f763e2302cc3addcd77a18a7685a5bf726651bc962fb7_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "@TEMImain/Temi/graphForm.html.twig"));
+        $__internal_fc29da6b85ba8f2085d10a64e3301e84e1886cb2bb7bdcade9993eb13932d560 = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
+        $__internal_fc29da6b85ba8f2085d10a64e3301e84e1886cb2bb7bdcade9993eb13932d560->enter($__internal_fc29da6b85ba8f2085d10a64e3301e84e1886cb2bb7bdcade9993eb13932d560_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "TEMImainBundle:Temi:graphForm.html.twig"));
 
-        $__internal_5312c62fe6b308138bbecede2cddbe256bf693e2e76c7a71700521b0faaadbd5 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_5312c62fe6b308138bbecede2cddbe256bf693e2e76c7a71700521b0faaadbd5->enter($__internal_5312c62fe6b308138bbecede2cddbe256bf693e2e76c7a71700521b0faaadbd5_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "@TEMImain/Temi/graphForm.html.twig"));
+        $__internal_9566a9caea5613c5e49e374a12bc54cf1e2b0ad194105d36db796e13ef6a9003 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_9566a9caea5613c5e49e374a12bc54cf1e2b0ad194105d36db796e13ef6a9003->enter($__internal_9566a9caea5613c5e49e374a12bc54cf1e2b0ad194105d36db796e13ef6a9003_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "TEMImainBundle:Temi:graphForm.html.twig"));
 
         // line 1
         echo "<!DOCTYPE html>
@@ -42,30 +42,10 @@ class __TwigTemplate_253f6ad0c973fe4e752b75724c564178b23f69b902c16d40079524bc9a2
     <meta name=\"viewport\" content=\"width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no\">
 </head>
 <body>
-<nav class=\"navbar navbar-static-top navbar-fixed-top\">
-    <div class=\"container-fluid\">
-        <div class=\"navbar-header\">
-            <a class=\" navbar-brand\" href=\"";
-        // line 24
-        echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("temi_platform_home");
-        echo "\"><img class=\"img-rounded\" src=\"../image/logo_CERDI_UCA-01.png\">Cerdi</a>
-        </div>
-        <ul class=\"nav navbar-nav\">
-            <li><a href=\"";
-        // line 27
-        echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("temi_platform_home");
-        echo "\">Modèle</a></li>
-            <li class=\"active\"><a data-toggle=\"modal\" href=\"";
-        // line 28
-        echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("temi_platform_graph");
-        echo "\">Graphique</a></li>
-            <li><a id=\"ajoutButt\" href=\"";
-        // line 29
-        echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("temi_platform_home");
-        echo "\">Ajouter un pays  <span class=\"glyphicon glyphicon-plus-sign\"> </span> </a></li>
-        </ul>
-    </div>
-</nav>
+";
+        // line 21
+        echo $this->env->getRuntime('Symfony\Bridge\Twig\Extension\HttpKernelRuntime')->renderFragment(Symfony\Bridge\Twig\Extension\HttpKernelExtension::controller("TEMImainBundle:Temi:menu"));
+        echo "
 <div class=\"container\">
     <div class='row '>
         <div class='col-sm-10'>
@@ -140,16 +120,16 @@ class __TwigTemplate_253f6ad0c973fe4e752b75724c564178b23f69b902c16d40079524bc9a2
 </body>
 </html>";
         
-        $__internal_657ff5cdeceef7a1b83f763e2302cc3addcd77a18a7685a5bf726651bc962fb7->leave($__internal_657ff5cdeceef7a1b83f763e2302cc3addcd77a18a7685a5bf726651bc962fb7_prof);
+        $__internal_fc29da6b85ba8f2085d10a64e3301e84e1886cb2bb7bdcade9993eb13932d560->leave($__internal_fc29da6b85ba8f2085d10a64e3301e84e1886cb2bb7bdcade9993eb13932d560_prof);
 
         
-        $__internal_5312c62fe6b308138bbecede2cddbe256bf693e2e76c7a71700521b0faaadbd5->leave($__internal_5312c62fe6b308138bbecede2cddbe256bf693e2e76c7a71700521b0faaadbd5_prof);
+        $__internal_9566a9caea5613c5e49e374a12bc54cf1e2b0ad194105d36db796e13ef6a9003->leave($__internal_9566a9caea5613c5e49e374a12bc54cf1e2b0ad194105d36db796e13ef6a9003_prof);
 
     }
 
     public function getTemplateName()
     {
-        return "@TEMImain/Temi/graphForm.html.twig";
+        return "TEMImainBundle:Temi:graphForm.html.twig";
     }
 
     public function isTraitable()
@@ -159,7 +139,7 @@ class __TwigTemplate_253f6ad0c973fe4e752b75724c564178b23f69b902c16d40079524bc9a2
 
     public function getDebugInfo()
     {
-        return array (  64 => 29,  60 => 28,  56 => 27,  50 => 24,  25 => 1,);
+        return array (  47 => 21,  25 => 1,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -192,18 +172,7 @@ class __TwigTemplate_253f6ad0c973fe4e752b75724c564178b23f69b902c16d40079524bc9a2
     <meta name=\"viewport\" content=\"width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no\">
 </head>
 <body>
-<nav class=\"navbar navbar-static-top navbar-fixed-top\">
-    <div class=\"container-fluid\">
-        <div class=\"navbar-header\">
-            <a class=\" navbar-brand\" href=\"{{ path('temi_platform_home') }}\"><img class=\"img-rounded\" src=\"../image/logo_CERDI_UCA-01.png\">Cerdi</a>
-        </div>
-        <ul class=\"nav navbar-nav\">
-            <li><a href=\"{{ path('temi_platform_home') }}\">Modèle</a></li>
-            <li class=\"active\"><a data-toggle=\"modal\" href=\"{{ path('temi_platform_graph') }}\">Graphique</a></li>
-            <li><a id=\"ajoutButt\" href=\"{{ path('temi_platform_home') }}\">Ajouter un pays  <span class=\"glyphicon glyphicon-plus-sign\"> </span> </a></li>
-        </ul>
-    </div>
-</nav>
+{{ render(controller(\"TEMImainBundle:Temi:menu\")) }}
 <div class=\"container\">
     <div class='row '>
         <div class='col-sm-10'>
@@ -276,6 +245,6 @@ class __TwigTemplate_253f6ad0c973fe4e752b75724c564178b23f69b902c16d40079524bc9a2
 <script src=\"../javascript/view/directlyChange/graphFormView.js\"></script>
 
 </body>
-</html>", "@TEMImain/Temi/graphForm.html.twig", "C:\\Users\\matthias\\Desktop\\stage\\TEMI\\site\\src\\TEMI\\mainBundle\\Resources\\views\\Temi\\graphForm.html.twig");
+</html>", "TEMImainBundle:Temi:graphForm.html.twig", "C:\\Users\\matthias\\Desktop\\stage\\TEMI\\site\\src\\TEMI\\mainBundle\\Resources\\views\\Temi\\graphForm.html.twig");
     }
 }

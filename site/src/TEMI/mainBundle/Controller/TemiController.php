@@ -8,13 +8,16 @@
 namespace TEMI\mainBundle\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
+use Symfony\Component\Debug\Exception\ContextErrorException;
+use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\HttpFoundation\RequestStack;
 use Symfony\Component\HttpFoundation\Response;
 
 
 class TemiController extends Controller
 {
-    public function indexAction()
-    {
+    public function indexAction(){
+
         return new Response($this->get('templating')->render('TEMImainBundle:Temi:index.html.twig'));
     }
     public function modeleAction()
@@ -28,6 +31,10 @@ class TemiController extends Controller
     public function graphAction()
     {
         return new Response($this->get('templating')->render('TEMImainBundle:Temi:graphForm.html.twig'));
+    }
+    public function menuAction()
+    {
+        return new Response($this->get('templating')->render('TEMImainBundle:Temi:menu.html.twig'));
     }
 
 }
