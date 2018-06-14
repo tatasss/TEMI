@@ -10,13 +10,13 @@ let reg;
 reg = " ";
 
 if (localStorage.getItem("compatRegime") === "gen") {
-    reg = "codes générales des impots";
+    reg = "Codes générales des impôts";
 }
 else {
-    reg = "codes des investissements";
+    reg = "Codes des investissements";
 }
 document.getElementById("info").innerHTML = `<p>Le taux d'actualisation pour toutes les entreprises est `
-    +`de ${localStorage.getItem("compaActu")} %.<br/> Le regime dans tous les pays utilisé par les entreprises est : ${reg} .`;
+    +`de ${localStorage.getItem("compaActu")} %.<br/> Le régime utilisé par les entreprises dans tous les pays est le ${reg} .`;
 /**
  * @description This function delete land of the liste to make a graph
  * @param {string} code - The code of the land
@@ -56,7 +56,7 @@ supelemEnt = function (marge) {
     posIn = 2;
 };
 let htmlFormPays = "<label for=\"sel1\">pays:</label> <select class=\"form-control\" id=\"PAYS\">";
-htmlFormPays += `<option value='tousPays'>Tous les Pays</option> `;
+htmlFormPays += `<option disabled selected>Selelectionner un  pays</option><option value='tousPays'>Tous les Pays</option> `;
 land.pays.forEach(function (item) {
     if (item.name !== "Guinée Bissao") {
         if (item.name !== "Guinée équatoriale") {

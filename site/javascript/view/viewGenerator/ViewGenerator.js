@@ -410,7 +410,7 @@ ViewGenerator.prototype.bodyHtml = function () {
 ViewGenerator.prototype.navigationHtml = function () {
     let regime;
     if (this.modele.donnee.government() === "gen") {
-        regime = "Code général des impots";
+        regime = "Code général des impôts";
     }
     else {
         regime = "Code des investissements";

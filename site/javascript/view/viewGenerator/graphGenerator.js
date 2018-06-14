@@ -103,7 +103,7 @@ Graph.prototype.graphique = function (modeleTab, idGraph, idText, regime, maMarg
                     },
                     title: {
                         display: true,
-                        text: 'TEMI Global avec le government fiscal :' + regime
+                        text: 'TEMI Global avec le régime fiscal :' + regime
                     },
                     responsive: true,
                 }
