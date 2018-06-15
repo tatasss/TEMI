@@ -17,9 +17,7 @@ temi_platform_modele:
 temi_platform_add:
     path:     /ajoutPays
     defaults: { _controller: TEMImainBundle:Temi:ajoutPays }
-temi_platform_menu:
-    path:     /menu
-    defaults: { _controller: TEMImainBundle:Temi:menu }
+
 temi_platform_graph:
     path:     /graph
     defaults: {_controller: TEMImainBundle:Temi:graph }

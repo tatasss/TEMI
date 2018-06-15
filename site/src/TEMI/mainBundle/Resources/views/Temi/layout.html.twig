@@ -12,9 +12,79 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
 <body>
+<div class="body">
 <div id="menu">
-    {{ render(controller("TEMImainBundle:Temi:menu")) }}
+
+    <nav class="navbar navbar-static-top navbar-fixed-top">
+
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class=" navbar-brand" href="{{ path('temi_platform_home') }}"><img class="img-rounded"
+                                                                                      src="../image/logo_CERDI_UCA-01.png">Cerdi</a>
+            </div>
+            <ul class="nav navbar-nav">
+                <li{% if app.request.attributes.get("_route")=='temi_platform_home'  %} class="active"{% endif %}>
+                    <a href="{{ path('temi_platform_home') }}">Modèle</a>
+                </li>
+                <li {% if app.request.attributes.get("_route")=='temi_platform_graph'  %} class="active"{% endif %}>
+                    <a data-toggle="modal" href="#myModal">graphique</a>
+                </li>
+                <li {% if app.request.attributes.get("_route")=='temi_platform_add'  %} class="active"{% endif %}>
+                    <a id="ajoutButt" href="{{ path('temi_platform_add') }}">Ajouter un pays
+                        <span class="glyphicon glyphicon-plus-sign"> </span>
+                    </a>
+                </li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li {% if app.request.attributes.get("_route")=='temi_user_sign_up'  %} class="active"{% endif %}>
+                    <a href="{{ path('temi_user_sign_up') }}"><span class="glyphicon glyphicon-user"></span> Inscription</a>
+                </li>
+                <li {% if app.request.attributes.get("_route")=='temi_user_login'  %} class="active"{% endif %}>
+                    <a href="{{ path('temi_user_login') }}"><span class="glyphicon glyphicon-log-in"></span> Connection</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div class="modal fade" id="myModal" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header" style="padding:35px 50px;">
+                    <button type="button" class="close" data-dismiss="modal"></button>
+                    <h4>Comparaison</h4>
+                    <p>Vous avez lancé une comparaison entre des entreprises ayant des marges différentes
+                    </p>
+                </div>
+                <div class="modal-body" style="padding:40px 50px;">
+                    <form role="form">
+                        <div class="form-group">
+                            <label>Taux d'actualisation :</label>
+                            <input type="text" class="form-control" id="actualistionCompa" title="actualisation"
+                                   value="" placeholder="Veuillez entrer un taux d'actualisation">
+                        </div>
+                        <div class="form-group">
+                            <label>Régime fiscale:</label>
+                            <select class="form-control" id="REGIMECmpta" title="regime fiscale">
+                                <option value="gen">Code général des impôts</option>
+                                <option value="nongen">Code des investissements</option>
+                            </select>
+                        </div>
+                        <button type="submit" class="btn btn-success btn-block" id="myCont"
+                                onclick="debutCompa($('#actualistionCompa').val(), $('#REGIMECmpta').val());">continuer
+                        </button>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="submit" class="btn btn-danger btn-default pull-left" onclick="retourModal()"
+                            data-dismiss="modal">
+                        <span class="glyphicon glyphicon-remove">
+                        </span> Annuler
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
+
 <div class="container">
     {% block body %}
     {% endblock %}
@@ -23,6 +93,6 @@
 
 {% endblock %}
 
-
+</div>
 </body>
 </html>

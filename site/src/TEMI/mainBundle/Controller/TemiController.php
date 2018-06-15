@@ -29,9 +29,6 @@ class TemiController extends Controller
     {
         return new Response($this->get('templating')->render('TEMImainBundle:Temi:graphForm.html.twig'));
     }
-    public function menuAction()
-    {
-    return $this->render('TEMImainBundle:Temi:menu.html.twig',array('doss'=>"lol"));
-    }
+
 
 }

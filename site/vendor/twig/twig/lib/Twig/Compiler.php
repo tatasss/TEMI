@@ -10,8 +10,6 @@
  * file that was distributed with this source code.
  */
 
-class_exists('Twig_Node');
-
 /**
  * Compiles a node to PHP code.
  *
@@ -27,6 +25,7 @@ class Twig_Compiler implements Twig_CompilerInterface
     protected $sourceOffset;
     protected $sourceLine;
     protected $filename;
+    private $varNameSalt = 0;
 
     public function __construct(Twig_Environment $env)
     {
@@ -80,6 +79,7 @@ class Twig_Compiler implements Twig_CompilerInterface
         // source code starts at 1 (as we then increment it when we encounter new lines)
         $this->sourceLine = 1;
         $this->indentation = $indentation;
+        $this->varNameSalt = 0;
 
         if ($node instanceof Twig_Node_Module) {
             // to be removed in 2.0
@@ -278,8 +278,9 @@ class Twig_Compiler implements Twig_CompilerInterface
 
     public function getVarName()
     {
-        return sprintf('__internal_%s', hash('sha256', uniqid(mt_rand(), true), false));
+        return sprintf('__internal_%s', hash('sha256', __METHOD__.$this->varNameSalt++));
     }
 }
 
 class_alias('Twig_Compiler', 'Twig\Compiler', false);
+class_exists('Twig_Node');

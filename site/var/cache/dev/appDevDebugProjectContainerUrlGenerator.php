@@ -5,8 +5,6 @@ use Symfony\Component\Routing\Exception\RouteNotFoundException;
 use Psr\Log\LoggerInterface;
 
 /**
- * appDevDebugProjectContainerUrlGenerator
- *
  * This class has been auto-generated
  * by the Symfony Routing Component.
  */
@@ -14,9 +12,6 @@ class appDevDebugProjectContainerUrlGenerator extends Symfony\Component\Routing\
 {
     private static $declaredRoutes;
 
-    /**
-     * Constructor.
-     */
     public function __construct(RequestContext $context, LoggerInterface $logger = null)
     {
         $this->context = $context;
@@ -27,7 +22,6 @@ class appDevDebugProjectContainerUrlGenerator extends Symfony\Component\Routing\
         '_profiler_home' => array (  0 =>   array (  ),  1 =>   array (    '_controller' => 'web_profiler.controller.profiler:homeAction',  ),  2 =>   array (  ),  3 =>   array (    0 =>     array (      0 => 'text',      1 => '/_profiler/',    ),  ),  4 =>   array (  ),  5 =>   array (  ),),
         '_profiler_search' => array (  0 =>   array (  ),  1 =>   array (    '_controller' => 'web_profiler.controller.profiler:searchAction',  ),  2 =>   array (  ),  3 =>   array (    0 =>     array (      0 => 'text',      1 => '/_profiler/search',    ),  ),  4 =>   array (  ),  5 =>   array (  ),),
         '_profiler_search_bar' => array (  0 =>   array (  ),  1 =>   array (    '_controller' => 'web_profiler.controller.profiler:searchBarAction',  ),  2 =>   array (  ),  3 =>   array (    0 =>     array (      0 => 'text',      1 => '/_profiler/search_bar',    ),  ),  4 =>   array (  ),  5 =>   array (  ),),
-        '_profiler_info' => array (  0 =>   array (    0 => 'about',  ),  1 =>   array (    '_controller' => 'web_profiler.controller.profiler:infoAction',  ),  2 =>   array (  ),  3 =>   array (    0 =>     array (      0 => 'variable',      1 => '/',      2 => '[^/]++',      3 => 'about',    ),    1 =>     array (      0 => 'text',      1 => '/_profiler/info',    ),  ),  4 =>   array (  ),  5 =>   array (  ),),
         '_profiler_phpinfo' => array (  0 =>   array (  ),  1 =>   array (    '_controller' => 'web_profiler.controller.profiler:phpinfoAction',  ),  2 =>   array (  ),  3 =>   array (    0 =>     array (      0 => 'text',      1 => '/_profiler/phpinfo',    ),  ),  4 =>   array (  ),  5 =>   array (  ),),
         '_profiler_search_results' => array (  0 =>   array (    0 => 'token',  ),  1 =>   array (    '_controller' => 'web_profiler.controller.profiler:searchResultsAction',  ),  2 =>   array (  ),  3 =>   array (    0 =>     array (      0 => 'text',      1 => '/search/results',    ),    1 =>     array (      0 => 'variable',      1 => '/',      2 => '[^/]++',      3 => 'token',    ),    2 =>     array (      0 => 'text',      1 => '/_profiler',    ),  ),  4 =>   array (  ),  5 =>   array (  ),),
         '_profiler_open_file' => array (  0 =>   array (  ),  1 =>   array (    '_controller' => 'web_profiler.controller.profiler:openAction',  ),  2 =>   array (  ),  3 =>   array (    0 =>     array (      0 => 'text',      1 => '/_profiler/open',    ),  ),  4 =>   array (  ),  5 =>   array (  ),),
@@ -41,7 +35,6 @@ class appDevDebugProjectContainerUrlGenerator extends Symfony\Component\Routing\
         'temi_platform_home' => array (  0 =>   array (  ),  1 =>   array (    '_controller' => 'TEMI\\mainBundle\\Controller\\TemiController::indexAction',  ),  2 =>   array (  ),  3 =>   array (    0 =>     array (      0 => 'text',      1 => '/',    ),  ),  4 =>   array (  ),  5 =>   array (  ),),
         'temi_platform_modele' => array (  0 =>   array (  ),  1 =>   array (    '_controller' => 'TEMI\\mainBundle\\Controller\\TemiController::modeleAction',  ),  2 =>   array (  ),  3 =>   array (    0 =>     array (      0 => 'text',      1 => '/modele',    ),  ),  4 =>   array (  ),  5 =>   array (  ),),
         'temi_platform_add' => array (  0 =>   array (  ),  1 =>   array (    '_controller' => 'TEMI\\mainBundle\\Controller\\TemiController::ajoutPaysAction',  ),  2 =>   array (  ),  3 =>   array (    0 =>     array (      0 => 'text',      1 => '/ajoutPays',    ),  ),  4 =>   array (  ),  5 =>   array (  ),),
-        'temi_platform_menu' => array (  0 =>   array (  ),  1 =>   array (    '_controller' => 'TEMI\\mainBundle\\Controller\\TemiController::menuAction',  ),  2 =>   array (  ),  3 =>   array (    0 =>     array (      0 => 'text',      1 => '/menu',    ),  ),  4 =>   array (  ),  5 =>   array (  ),),
         'temi_platform_graph' => array (  0 =>   array (  ),  1 =>   array (    '_controller' => 'TEMI\\mainBundle\\Controller\\TemiController::graphAction',  ),  2 =>   array (  ),  3 =>   array (    0 =>     array (      0 => 'text',      1 => '/graph',    ),  ),  4 =>   array (  ),  5 =>   array (  ),),
         'temi_user_login' => array (  0 =>   array (  ),  1 =>   array (    '_controller' => 'TEMI\\mainBundle\\Controller\\ConnectController::connectionAction',  ),  2 =>   array (  ),  3 =>   array (    0 =>     array (      0 => 'text',      1 => '/Connection',    ),  ),  4 =>   array (  ),  5 =>   array (  ),),
         'temi_user_sign_up' => array (  0 =>   array (  ),  1 =>   array (    '_controller' => 'TEMI\\mainBundle\\Controller\\ConnectController::inscriptionAction',  ),  2 =>   array (  ),  3 =>   array (    0 =>     array (      0 => 'text',      1 => '/inscription',    ),  ),  4 =>   array (  ),  5 =>   array (  ),),

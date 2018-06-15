@@ -5,25 +5,20 @@ use Symfony\Component\Routing\Exception\ResourceNotFoundException;
 use Symfony\Component\Routing\RequestContext;
 
 /**
- * appDevDebugProjectContainerUrlMatcher.
- *
  * This class has been auto-generated
  * by the Symfony Routing Component.
  */
 class appDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\RedirectableUrlMatcher
 {
-    /**
-     * Constructor.
-     */
     public function __construct(RequestContext $context)
     {
         $this->context = $context;
     }
 
-    public function match($pathinfo)
+    public function match($rawPathinfo)
     {
         $allow = array();
-        $pathinfo = rawurldecode($pathinfo);
+        $pathinfo = rawurldecode($rawPathinfo);
         $trimmedPathinfo = rtrim($pathinfo, '/');
         $context = $this->context;
         $request = $this->request;
@@ -45,7 +40,7 @@ class appDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
                 // _profiler_home
                 if ('/_profiler' === $trimmedPathinfo) {
                     if (substr($pathinfo, -1) !== '/') {
-                        return $this->redirect($pathinfo.'/', '_profiler_home');
+                        return $this->redirect($rawPathinfo.'/', '_profiler_home');
                     }
 
                     return array (  '_controller' => 'web_profiler.controller.profiler:homeAction',  '_route' => '_profiler_home',);
@@ -62,11 +57,6 @@ class appDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
                         return array (  '_controller' => 'web_profiler.controller.profiler:searchBarAction',  '_route' => '_profiler_search_bar',);
                     }
 
-                }
-
-                // _profiler_info
-                if (0 === strpos($pathinfo, '/_profiler/info') && preg_match('#^/_profiler/info/(?P<about>[^/]++)$#s', $pathinfo, $matches)) {
-                    return $this->mergeDefaults(array_replace($matches, array('_route' => '_profiler_info')), array (  '_controller' => 'web_profiler.controller.profiler:infoAction',));
                 }
 
                 // _profiler_phpinfo
@@ -126,7 +116,7 @@ class appDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
         // temi_platform_home
         if ('' === $trimmedPathinfo) {
             if (substr($pathinfo, -1) !== '/') {
-                return $this->redirect($pathinfo.'/', 'temi_platform_home');
+                return $this->redirect($rawPathinfo.'/', 'temi_platform_home');
             }
 
             return array (  '_controller' => 'TEMI\\mainBundle\\Controller\\TemiController::indexAction',  '_route' => 'temi_platform_home',);
@@ -135,11 +125,6 @@ class appDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
         // temi_platform_modele
         if ('/modele' === $pathinfo) {
             return array (  '_controller' => 'TEMI\\mainBundle\\Controller\\TemiController::modeleAction',  '_route' => 'temi_platform_modele',);
-        }
-
-        // temi_platform_menu
-        if ('/menu' === $pathinfo) {
-            return array (  '_controller' => 'TEMI\\mainBundle\\Controller\\TemiController::menuAction',  '_route' => 'temi_platform_menu',);
         }
 
         // temi_platform_add
