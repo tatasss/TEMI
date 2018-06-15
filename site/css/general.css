@@ -139,6 +139,9 @@ thead {
 .Borderhide{
     border:0 solid white;
 }
+.Borderhide:active{
+    border:0 solid white;
+}
 nav{
     background-color: #205796;
     max-height: 100%;
@@ -162,6 +165,10 @@ nav{
 .container{
     margin-top:5%;
 }
+.myContain{
+    margin-top:5%;
+}
+
 .item{
     background-color: white;
 }
