@@ -1,112 +1,52 @@
 <?php
 
-/* @TEMImain/Connection/inscription.html.twig */
+/* TEMImainBundle:Connection:inscription.html.twig */
 class __TwigTemplate_57c4332dcb6b53d671c6b7abeac690be4f5a67624b5db4ecda4458ec880aafa0 extends Twig_Template
 {
     public function __construct(Twig_Environment $env)
     {
         parent::__construct($env);
 
-        $this->parent = false;
-
+        // line 1
+        $this->parent = $this->loadTemplate("TEMImainBundle:Temi:layout.html.twig", "TEMImainBundle:Connection:inscription.html.twig", 1);
         $this->blocks = array(
+            'body' => array($this, 'block_body'),
         );
+    }
+
+    protected function doGetParent(array $context)
+    {
+        return "TEMImainBundle:Temi:layout.html.twig";
     }
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_827ea4d45b799e0470e175e07765fbae078aa4ec9a9913c719dece98a8faf9db = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
-        $__internal_827ea4d45b799e0470e175e07765fbae078aa4ec9a9913c719dece98a8faf9db->enter($__internal_827ea4d45b799e0470e175e07765fbae078aa4ec9a9913c719dece98a8faf9db_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "@TEMImain/Connection/inscription.html.twig"));
+        $__internal_69b6b7aadcb3e60d991af7ecc681be4c234603a7d22d76a6f201d3a88ab8a2c9 = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
+        $__internal_69b6b7aadcb3e60d991af7ecc681be4c234603a7d22d76a6f201d3a88ab8a2c9->enter($__internal_69b6b7aadcb3e60d991af7ecc681be4c234603a7d22d76a6f201d3a88ab8a2c9_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "TEMImainBundle:Connection:inscription.html.twig"));
 
-        $__internal_7cd69574330e5129043b4ad4e69e1b68cd239e3ab2067a10fd50e712d5969634 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_7cd69574330e5129043b4ad4e69e1b68cd239e3ab2067a10fd50e712d5969634->enter($__internal_7cd69574330e5129043b4ad4e69e1b68cd239e3ab2067a10fd50e712d5969634_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "@TEMImain/Connection/inscription.html.twig"));
+        $__internal_27b0ec3ccda6c8c62b456df84cf9b2b33d8ffc02e944cf24b21c5ce6d8f0fd03 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_27b0ec3ccda6c8c62b456df84cf9b2b33d8ffc02e944cf24b21c5ce6d8f0fd03->enter($__internal_27b0ec3ccda6c8c62b456df84cf9b2b33d8ffc02e944cf24b21c5ce6d8f0fd03_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "TEMImainBundle:Connection:inscription.html.twig"));
 
-        // line 1
-        echo "<!DOCTYPE html>
-<html lang=\"fr\" xmlns=\"http://www.w3.org/1999/html\">
-<head>
-    <title>Inscription</title>
-    <meta charset=\"utf-8\">
+        $this->parent->display($context, array_merge($this->blocks, $blocks));
+        
+        $__internal_69b6b7aadcb3e60d991af7ecc681be4c234603a7d22d76a6f201d3a88ab8a2c9->leave($__internal_69b6b7aadcb3e60d991af7ecc681be4c234603a7d22d76a6f201d3a88ab8a2c9_prof);
 
-    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">
-    <link rel=\"stylesheet\" href=\"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css\">
-    <link rel=\"stylesheet\" href=\"../css/general.css\">
-    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no\">
-    <script src=\"https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js\"></script>
-    <script src=\"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js\"></script>
-</head>
-<body>
-<nav class=\"navbar navbar-static-top navbar-fixed-top\">
-    <div class=\"container-fluid\">
-        <div class=\"navbar-header\">
-            <a class=\" navbar-brand\" href=\"";
-        // line 18
-        echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("temi_platform_home");
-        echo "\"><img class=\"img-rounded\" src=\"../image/logo_CERDI_UCA-01.png\">Cerdi</a>
-        </div>
-        <ul class=\"nav navbar-nav\">
-            <li><a href=\"";
-        // line 21
-        echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("temi_platform_home");
-        echo "\">Modèle</a></li>
-            <li><a data-toggle=\"modal\" href=\"#myModal\">graphique</a></li>
-            <li><a id=\"ajoutButt\" href=\"";
-        // line 23
-        echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("temi_platform_add");
-        echo "\">Ajouter un pays <span class=\"glyphicon glyphicon-plus-sign\"> </span> </a></li>
-        </ul>
-        <ul class=\"nav navbar-nav navbar-right\">
-            <li class=\"active\"><a href=\"";
-        // line 26
-        echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("temi_user_sign_up");
-        echo "\"><span class=\"glyphicon glyphicon-user\"></span> Inscription</a></li>
-            <li><a href=\"";
-        // line 27
-        echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("temi_user_login");
-        echo "\"><span class=\"glyphicon glyphicon-log-in\"></span> Connection</a></li>
-        </ul>
-    </div>
-</nav>
-<div class=\"modal fade\" id=\"myModal\" role=\"dialog\">
-    <div class=\"modal-dialog\">
-        <div class=\"modal-content\">
-            <div class=\"modal-header\" style=\"padding:35px 50px;\">
-                <button type=\"button\" class=\"close\" data-dismiss=\"modal\"></button>
-                <h4>Comparaison</h4>
-                <p>Vous avez lancé une comparaison entre des entreprises ayant des marges différentes
-                </p>
-            </div>
-            <div class=\"modal-body\" style=\"padding:40px 50px;\">
-                <form role=\"form\">
-                    <div class=\"form-group\">
-                        <label>Taux d'actualisation :</label>
-                        <input type=\"text\" class=\"form-control\" id=\"actualistionCompa\" title=\"actualisation\"
-                               value=\"\" placeholder=\"Veuillez entrer un taux d'actualisation\">
-                    </div>
-                    <div class=\"form-group\">
-                        <label>Régime fiscale:</label>
-                        <select class=\"form-control\" id=\"REGIMECmpta\" title=\"regime fiscale\">
-                            <option value=\"gen\">Code général des impôts</option>
-                            <option value=\"nongen\">Code des investissements</option>
-                        </select>
-                    </div>
-                    <button type=\"submit\" class=\"btn btn-success btn-block\" id=\"myCont\"
-                            onclick=\"debutCompa(\$('#actualistionCompa').val(), \$('#REGIMECmpta').val());\">continuer
-                    </button>
-                </form>
-            </div>
-            <div class=\"modal-footer\">
-                <button type=\"submit\" class=\"btn btn-danger btn-default pull-left\" onclick=\"retourModal()\"
-                        data-dismiss=\"modal\">
-                        <span class=\"glyphicon glyphicon-remove\">
-                        </span> Annuler
-                </button>
-            </div>
-        </div>
-    </div>
-</div>
-<div class=\"container\">
-    <div class=\"form-group\">
+        
+        $__internal_27b0ec3ccda6c8c62b456df84cf9b2b33d8ffc02e944cf24b21c5ce6d8f0fd03->leave($__internal_27b0ec3ccda6c8c62b456df84cf9b2b33d8ffc02e944cf24b21c5ce6d8f0fd03_prof);
+
+    }
+
+    // line 2
+    public function block_body($context, array $blocks = array())
+    {
+        $__internal_2f114d413225bf1bab8d46bb1fd823da882e7bb75af6b0e8603d929f35862931 = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
+        $__internal_2f114d413225bf1bab8d46bb1fd823da882e7bb75af6b0e8603d929f35862931->enter($__internal_2f114d413225bf1bab8d46bb1fd823da882e7bb75af6b0e8603d929f35862931_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
+
+        $__internal_3dbf776dd7a86a4221d237d8a355d6be53d4af0c93d574b6d24a21699ae6ecb6 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_3dbf776dd7a86a4221d237d8a355d6be53d4af0c93d574b6d24a21699ae6ecb6->enter($__internal_3dbf776dd7a86a4221d237d8a355d6be53d4af0c93d574b6d24a21699ae6ecb6_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
+
+        // line 3
+        echo "    <div class=\"form-group\">
         <label>Nom :</label>
         <input type=\"text\" class=\"form-control\" id=\"nomUser\" title=\"nomUser\" placeholder=\"Veuillez saisir votre nom\"/>
     </div>
@@ -127,19 +67,18 @@ class __TwigTemplate_57c4332dcb6b53d671c6b7abeac690be4f5a67624b5db4ecda4458ec880
         <input type=\"password\" class=\"form-control\" id=\"mdpUser\" title=\"mdpUser\" placeholder=\"Veuillez encore saisir votre mot de passe\"/>
     </div>
 </div>
-</body>
-</html>";
+";
         
-        $__internal_827ea4d45b799e0470e175e07765fbae078aa4ec9a9913c719dece98a8faf9db->leave($__internal_827ea4d45b799e0470e175e07765fbae078aa4ec9a9913c719dece98a8faf9db_prof);
+        $__internal_3dbf776dd7a86a4221d237d8a355d6be53d4af0c93d574b6d24a21699ae6ecb6->leave($__internal_3dbf776dd7a86a4221d237d8a355d6be53d4af0c93d574b6d24a21699ae6ecb6_prof);
 
         
-        $__internal_7cd69574330e5129043b4ad4e69e1b68cd239e3ab2067a10fd50e712d5969634->leave($__internal_7cd69574330e5129043b4ad4e69e1b68cd239e3ab2067a10fd50e712d5969634_prof);
+        $__internal_2f114d413225bf1bab8d46bb1fd823da882e7bb75af6b0e8603d929f35862931->leave($__internal_2f114d413225bf1bab8d46bb1fd823da882e7bb75af6b0e8603d929f35862931_prof);
 
     }
 
     public function getTemplateName()
     {
-        return "@TEMImain/Connection/inscription.html.twig";
+        return "TEMImainBundle:Connection:inscription.html.twig";
     }
 
     public function isTraitable()
@@ -149,7 +88,7 @@ class __TwigTemplate_57c4332dcb6b53d671c6b7abeac690be4f5a67624b5db4ecda4458ec880
 
     public function getDebugInfo()
     {
-        return array (  65 => 27,  61 => 26,  55 => 23,  50 => 21,  44 => 18,  25 => 1,);
+        return array (  49 => 3,  40 => 2,  11 => 1,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -162,75 +101,8 @@ class __TwigTemplate_57c4332dcb6b53d671c6b7abeac690be4f5a67624b5db4ecda4458ec880
 
     public function getSourceContext()
     {
-        return new Twig_Source("<!DOCTYPE html>
-<html lang=\"fr\" xmlns=\"http://www.w3.org/1999/html\">
-<head>
-    <title>Inscription</title>
-    <meta charset=\"utf-8\">
-
-    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">
-    <link rel=\"stylesheet\" href=\"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css\">
-    <link rel=\"stylesheet\" href=\"../css/general.css\">
-    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no\">
-    <script src=\"https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js\"></script>
-    <script src=\"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js\"></script>
-</head>
-<body>
-<nav class=\"navbar navbar-static-top navbar-fixed-top\">
-    <div class=\"container-fluid\">
-        <div class=\"navbar-header\">
-            <a class=\" navbar-brand\" href=\"{{ path('temi_platform_home') }}\"><img class=\"img-rounded\" src=\"../image/logo_CERDI_UCA-01.png\">Cerdi</a>
-        </div>
-        <ul class=\"nav navbar-nav\">
-            <li><a href=\"{{ path('temi_platform_home') }}\">Modèle</a></li>
-            <li><a data-toggle=\"modal\" href=\"#myModal\">graphique</a></li>
-            <li><a id=\"ajoutButt\" href=\"{{ path('temi_platform_add') }}\">Ajouter un pays <span class=\"glyphicon glyphicon-plus-sign\"> </span> </a></li>
-        </ul>
-        <ul class=\"nav navbar-nav navbar-right\">
-            <li class=\"active\"><a href=\"{{ path('temi_user_sign_up') }}\"><span class=\"glyphicon glyphicon-user\"></span> Inscription</a></li>
-            <li><a href=\"{{ path('temi_user_login') }}\"><span class=\"glyphicon glyphicon-log-in\"></span> Connection</a></li>
-        </ul>
-    </div>
-</nav>
-<div class=\"modal fade\" id=\"myModal\" role=\"dialog\">
-    <div class=\"modal-dialog\">
-        <div class=\"modal-content\">
-            <div class=\"modal-header\" style=\"padding:35px 50px;\">
-                <button type=\"button\" class=\"close\" data-dismiss=\"modal\"></button>
-                <h4>Comparaison</h4>
-                <p>Vous avez lancé une comparaison entre des entreprises ayant des marges différentes
-                </p>
-            </div>
-            <div class=\"modal-body\" style=\"padding:40px 50px;\">
-                <form role=\"form\">
-                    <div class=\"form-group\">
-                        <label>Taux d'actualisation :</label>
-                        <input type=\"text\" class=\"form-control\" id=\"actualistionCompa\" title=\"actualisation\"
-                               value=\"\" placeholder=\"Veuillez entrer un taux d'actualisation\">
-                    </div>
-                    <div class=\"form-group\">
-                        <label>Régime fiscale:</label>
-                        <select class=\"form-control\" id=\"REGIMECmpta\" title=\"regime fiscale\">
-                            <option value=\"gen\">Code général des impôts</option>
-                            <option value=\"nongen\">Code des investissements</option>
-                        </select>
-                    </div>
-                    <button type=\"submit\" class=\"btn btn-success btn-block\" id=\"myCont\"
-                            onclick=\"debutCompa(\$('#actualistionCompa').val(), \$('#REGIMECmpta').val());\">continuer
-                    </button>
-                </form>
-            </div>
-            <div class=\"modal-footer\">
-                <button type=\"submit\" class=\"btn btn-danger btn-default pull-left\" onclick=\"retourModal()\"
-                        data-dismiss=\"modal\">
-                        <span class=\"glyphicon glyphicon-remove\">
-                        </span> Annuler
-                </button>
-            </div>
-        </div>
-    </div>
-</div>
-<div class=\"container\">
+        return new Twig_Source("{% extends \"TEMImainBundle:Temi:layout.html.twig\" %}
+{% block body %}
     <div class=\"form-group\">
         <label>Nom :</label>
         <input type=\"text\" class=\"form-control\" id=\"nomUser\" title=\"nomUser\" placeholder=\"Veuillez saisir votre nom\"/>
@@ -252,7 +124,6 @@ class __TwigTemplate_57c4332dcb6b53d671c6b7abeac690be4f5a67624b5db4ecda4458ec880
         <input type=\"password\" class=\"form-control\" id=\"mdpUser\" title=\"mdpUser\" placeholder=\"Veuillez encore saisir votre mot de passe\"/>
     </div>
 </div>
-</body>
-</html>", "@TEMImain/Connection/inscription.html.twig", "C:\\Users\\matthias\\Desktop\\stage\\TEMI\\site\\src\\TEMI\\mainBundle\\Resources\\views\\Connection\\inscription.html.twig");
+{% endblock %}", "TEMImainBundle:Connection:inscription.html.twig", "C:\\Users\\matthias\\Desktop\\stage\\TEMI\\site\\src\\TEMI\\mainBundle\\Resources\\views\\Connection\\inscription.html.twig");
     }
 }

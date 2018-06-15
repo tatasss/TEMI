@@ -1,21 +1,5 @@
-<!DOCTYPE html>
-<html lang="fr" xmlns="http://www.w3.org/1999/html">
-<head>
-    <title>index</title>
-    <meta charset="utf-8">
-    <link rel="shortcut icon" type="image/x-icon" href="../image/logo_CERDI_UCA-01.png">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <link rel="stylesheet" href="../css/general.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-</head>
-<body>
-<div id="menu">
-    {{ render(controller("TEMImainBundle:Temi:menu")) }}
-</div>
-<div class="container">
+{% extends "TEMImainBundle:Temi:layout.html.twig" %}
+{% block body %}
     <div class="form-group">
         <div id="formPays">
         </div>
@@ -45,25 +29,24 @@
         <br/>
         <div id="result"></div>
     </div>
-</div>
+{% endblock %}
+{% block js %}
+    <script src="../javascript/start/index.js"></script>
+    <script src="../javascript/model/anotherFunctiun/XMLRequest.js"></script>
+    <script src="../javascript/model/anotherFunctiun/verification.js"></script>
+    <script src="../javascript/model/anotherFunctiun/myMath.js"></script>
+    <script src="../javascript/model/anotherFunctiun/Ref.js"></script>
+    <script src="../javascript/view/viewGenerator/bootstrapView.js"></script>
+    <script src="../javascript/manufacturing/manufact.js"></script>
+    <script src="../javascript/data/startingLand.js"></script>
+    <script src="../javascript/model/modelManager.js"></script>
+    <script src="../javascript/view/viewGenerator/graphGenerator.js"></script>
+    <script src="../javascript/model/model.js"></script>
+    <script src="../javascript/view/viewGenerator/ViewGenerator.js"></script>
+    <script src="../javascript/data/data.js"></script>
+    <script src="../javascript/data/PaysListe.js"></script>
+    <script src="../javascript/start/script.js"></script>
 
-<script src="../javascript/start/index.js"></script>
-<script src="../javascript/model/anotherFunctiun/XMLRequest.js"></script>
-<script src="../javascript/model/anotherFunctiun/verification.js"></script>
-<script src="../javascript/model/anotherFunctiun/myMath.js"></script>
-<script src="../javascript/model/anotherFunctiun/Ref.js"></script>
-<script src="../javascript/view/viewGenerator/bootstrapView.js"></script>
-<script src="../javascript/manufacturing/manufact.js"></script>
-<script src="../javascript/data/startingLand.js"></script>
-<script src="../javascript/model/modelManager.js"></script>
-<script src="../javascript/view/viewGenerator/graphGenerator.js"></script>
-<script src="../javascript/model/model.js"></script>
-<script src="../javascript/view/viewGenerator/ViewGenerator.js"></script>
-<script src="../javascript/data/data.js"></script>
-<script src="../javascript/data/PaysListe.js"></script>
-<script src="../javascript/start/script.js"></script>
 
-
-<script src="../javascript/view/directlyChange/ViewManufacturing.js"></script>
-</body>
-</html>
+    <script src="../javascript/view/directlyChange/ViewManufacturing.js"></script>
+{% endblock %}

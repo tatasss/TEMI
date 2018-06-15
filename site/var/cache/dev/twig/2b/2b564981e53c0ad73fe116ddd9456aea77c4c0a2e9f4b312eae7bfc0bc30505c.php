@@ -15,11 +15,11 @@ class __TwigTemplate_d7e8124c650085b63ce6a483e5b8b777b95d1445ca3210a4820663b496c
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_2aef0156e248e0c8f81179f879f067f21faa530bb24ae508a9045647e2d06179 = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
-        $__internal_2aef0156e248e0c8f81179f879f067f21faa530bb24ae508a9045647e2d06179->enter($__internal_2aef0156e248e0c8f81179f879f067f21faa530bb24ae508a9045647e2d06179_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "TEMImainBundle:Temi:menu.html.twig"));
+        $__internal_50bee0c5e8f1dc836bb52ec706041590373790157942680b9472fde7092c3399 = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
+        $__internal_50bee0c5e8f1dc836bb52ec706041590373790157942680b9472fde7092c3399->enter($__internal_50bee0c5e8f1dc836bb52ec706041590373790157942680b9472fde7092c3399_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "TEMImainBundle:Temi:menu.html.twig"));
 
-        $__internal_6b9bbbf2090a8a166b575e70584fae44f86b727a90de6bc3c4ed0661a0e15de4 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_6b9bbbf2090a8a166b575e70584fae44f86b727a90de6bc3c4ed0661a0e15de4->enter($__internal_6b9bbbf2090a8a166b575e70584fae44f86b727a90de6bc3c4ed0661a0e15de4_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "TEMImainBundle:Temi:menu.html.twig"));
+        $__internal_c8e1538824e1105acdeb1dd375c87627f79eb3ea701e92433d7639ff33f9485d = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_c8e1538824e1105acdeb1dd375c87627f79eb3ea701e92433d7639ff33f9485d->enter($__internal_c8e1538824e1105acdeb1dd375c87627f79eb3ea701e92433d7639ff33f9485d_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "TEMImainBundle:Temi:menu.html.twig"));
 
         // line 2
         echo "
@@ -44,15 +44,19 @@ class __TwigTemplate_d7e8124c650085b63ce6a483e5b8b777b95d1445ca3210a4820663b496c
         echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("temi_platform_add");
         echo "\">Ajouter un pays <span
                             class=\"glyphicon glyphicon-plus-sign\"> </span> </a></li>
+            <li><a href=\"#\">";
+        // line 15
+        echo twig_escape_filter($this->env, (isset($context["doss"]) ? $context["doss"] : $this->getContext($context, "doss")), "html", null, true);
+        echo "</a></li>
         </ul>
         <ul class=\"nav navbar-nav navbar-right\">
             <li><a href=\"";
-        // line 17
+        // line 18
         echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("temi_user_sign_up");
         echo "\"><span class=\"glyphicon glyphicon-user\"></span> Inscription</a>
             </li>
             <li><a href=\"";
-        // line 19
+        // line 20
         echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("temi_user_login");
         echo "\"><span class=\"glyphicon glyphicon-log-in\"></span> Connection</a>
             </li>
@@ -98,10 +102,10 @@ class __TwigTemplate_d7e8124c650085b63ce6a483e5b8b777b95d1445ca3210a4820663b496c
     </div>
 </div>";
         
-        $__internal_2aef0156e248e0c8f81179f879f067f21faa530bb24ae508a9045647e2d06179->leave($__internal_2aef0156e248e0c8f81179f879f067f21faa530bb24ae508a9045647e2d06179_prof);
+        $__internal_50bee0c5e8f1dc836bb52ec706041590373790157942680b9472fde7092c3399->leave($__internal_50bee0c5e8f1dc836bb52ec706041590373790157942680b9472fde7092c3399_prof);
 
         
-        $__internal_6b9bbbf2090a8a166b575e70584fae44f86b727a90de6bc3c4ed0661a0e15de4->leave($__internal_6b9bbbf2090a8a166b575e70584fae44f86b727a90de6bc3c4ed0661a0e15de4_prof);
+        $__internal_c8e1538824e1105acdeb1dd375c87627f79eb3ea701e92433d7639ff33f9485d->leave($__internal_c8e1538824e1105acdeb1dd375c87627f79eb3ea701e92433d7639ff33f9485d_prof);
 
     }
 
@@ -117,7 +121,7 @@ class __TwigTemplate_d7e8124c650085b63ce6a483e5b8b777b95d1445ca3210a4820663b496c
 
     public function getDebugInfo()
     {
-        return array (  56 => 19,  51 => 17,  44 => 13,  39 => 11,  32 => 7,  25 => 2,);
+        return array (  60 => 20,  55 => 18,  49 => 15,  44 => 13,  39 => 11,  32 => 7,  25 => 2,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -144,6 +148,7 @@ class __TwigTemplate_d7e8124c650085b63ce6a483e5b8b777b95d1445ca3210a4820663b496c
             <li><a data-toggle=\"modal\" href=\"#myModal\">graphique</a></li>
             <li><a id=\"ajoutButt\" href=\"{{ path('temi_platform_add') }}\">Ajouter un pays <span
                             class=\"glyphicon glyphicon-plus-sign\"> </span> </a></li>
+            <li><a href=\"#\">{{ doss }}</a></li>
         </ul>
         <ul class=\"nav navbar-nav navbar-right\">
             <li><a href=\"{{ path('temi_user_sign_up') }}\"><span class=\"glyphicon glyphicon-user\"></span> Inscription</a>

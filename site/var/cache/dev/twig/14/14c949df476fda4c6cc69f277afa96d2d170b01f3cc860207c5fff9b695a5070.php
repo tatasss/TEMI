@@ -7,43 +7,47 @@ class __TwigTemplate_7f101169f40660af3a81c4512e655bea38f00ebb069e6ac157fdd95aa48
     {
         parent::__construct($env);
 
-        $this->parent = false;
-
+        // line 1
+        $this->parent = $this->loadTemplate("TEMImainBundle:Temi:layout.html.twig", "TEMImainBundle:Temi:index.html.twig", 1);
         $this->blocks = array(
+            'body' => array($this, 'block_body'),
+            'js' => array($this, 'block_js'),
         );
+    }
+
+    protected function doGetParent(array $context)
+    {
+        return "TEMImainBundle:Temi:layout.html.twig";
     }
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_a13c156ac6c78b9f1486c17af645d9f6d1c1f7ca9beece9f7630638b95ae1765 = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
-        $__internal_a13c156ac6c78b9f1486c17af645d9f6d1c1f7ca9beece9f7630638b95ae1765->enter($__internal_a13c156ac6c78b9f1486c17af645d9f6d1c1f7ca9beece9f7630638b95ae1765_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "TEMImainBundle:Temi:index.html.twig"));
+        $__internal_114e074c3b19a05a6f14cc718c39a6ef00108ad1355f572efb9c2e5438349262 = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
+        $__internal_114e074c3b19a05a6f14cc718c39a6ef00108ad1355f572efb9c2e5438349262->enter($__internal_114e074c3b19a05a6f14cc718c39a6ef00108ad1355f572efb9c2e5438349262_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "TEMImainBundle:Temi:index.html.twig"));
 
-        $__internal_75dccce3541ed4d071d0623782f5c7aeb33d7071f67cac0a256d0dee544e36a4 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_75dccce3541ed4d071d0623782f5c7aeb33d7071f67cac0a256d0dee544e36a4->enter($__internal_75dccce3541ed4d071d0623782f5c7aeb33d7071f67cac0a256d0dee544e36a4_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "TEMImainBundle:Temi:index.html.twig"));
+        $__internal_efa06aa9901cedba60ecdb6cd16ba4ddfd7bb12c66ec75b6ce5dd86b2a3f3e28 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_efa06aa9901cedba60ecdb6cd16ba4ddfd7bb12c66ec75b6ce5dd86b2a3f3e28->enter($__internal_efa06aa9901cedba60ecdb6cd16ba4ddfd7bb12c66ec75b6ce5dd86b2a3f3e28_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "TEMImainBundle:Temi:index.html.twig"));
 
-        // line 1
-        echo "<!DOCTYPE html>
-<html lang=\"fr\" xmlns=\"http://www.w3.org/1999/html\">
-<head>
-    <title>index</title>
-    <meta charset=\"utf-8\">
+        $this->parent->display($context, array_merge($this->blocks, $blocks));
+        
+        $__internal_114e074c3b19a05a6f14cc718c39a6ef00108ad1355f572efb9c2e5438349262->leave($__internal_114e074c3b19a05a6f14cc718c39a6ef00108ad1355f572efb9c2e5438349262_prof);
 
-    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">
-    <link rel=\"stylesheet\" href=\"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css\">
-    <link rel=\"stylesheet\" href=\"../css/general.css\">
-    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no\">
-    <script src=\"https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js\"></script>
-    <script src=\"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js\"></script>
-</head>
-<body>
-<div id=\"menu\">
-    ";
-        // line 16
-        echo $this->env->getRuntime('Symfony\Bridge\Twig\Extension\HttpKernelRuntime')->renderFragment(Symfony\Bridge\Twig\Extension\HttpKernelExtension::controller("TEMImainBundle:Temi:menu"));
-        echo "
-</div>
-<div class=\"container\">
-    <div class=\"form-group\">
+        
+        $__internal_efa06aa9901cedba60ecdb6cd16ba4ddfd7bb12c66ec75b6ce5dd86b2a3f3e28->leave($__internal_efa06aa9901cedba60ecdb6cd16ba4ddfd7bb12c66ec75b6ce5dd86b2a3f3e28_prof);
+
+    }
+
+    // line 2
+    public function block_body($context, array $blocks = array())
+    {
+        $__internal_a46a7d8d082e6333f4a84a4fca5c20bf9d9442c5cd6bc0a202733edd275cb0c3 = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
+        $__internal_a46a7d8d082e6333f4a84a4fca5c20bf9d9442c5cd6bc0a202733edd275cb0c3->enter($__internal_a46a7d8d082e6333f4a84a4fca5c20bf9d9442c5cd6bc0a202733edd275cb0c3_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
+
+        $__internal_cd2e7a3e936e23d1e87d92d90af44f06d7425c2a3695c44656bb2d28dcdc67c4 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_cd2e7a3e936e23d1e87d92d90af44f06d7425c2a3695c44656bb2d28dcdc67c4->enter($__internal_cd2e7a3e936e23d1e87d92d90af44f06d7425c2a3695c44656bb2d28dcdc67c4_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
+
+        // line 3
+        echo "    <div class=\"form-group\">
         <div id=\"formPays\">
         </div>
     </div>
@@ -72,9 +76,26 @@ class __TwigTemplate_7f101169f40660af3a81c4512e655bea38f00ebb069e6ac157fdd95aa48
         <br/>
         <div id=\"result\"></div>
     </div>
-</div>
+";
+        
+        $__internal_cd2e7a3e936e23d1e87d92d90af44f06d7425c2a3695c44656bb2d28dcdc67c4->leave($__internal_cd2e7a3e936e23d1e87d92d90af44f06d7425c2a3695c44656bb2d28dcdc67c4_prof);
 
-<script src=\"../javascript/start/index.js\"></script>
+        
+        $__internal_a46a7d8d082e6333f4a84a4fca5c20bf9d9442c5cd6bc0a202733edd275cb0c3->leave($__internal_a46a7d8d082e6333f4a84a4fca5c20bf9d9442c5cd6bc0a202733edd275cb0c3_prof);
+
+    }
+
+    // line 33
+    public function block_js($context, array $blocks = array())
+    {
+        $__internal_63e421ee5e46a9b07bcef4b2e0b5099b008456152fa7fcd287959bae31c92c8c = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
+        $__internal_63e421ee5e46a9b07bcef4b2e0b5099b008456152fa7fcd287959bae31c92c8c->enter($__internal_63e421ee5e46a9b07bcef4b2e0b5099b008456152fa7fcd287959bae31c92c8c_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "js"));
+
+        $__internal_84a42fc6180b300315a0dcb8c475f74ac799ea4ec31414751f24e0c16b65c681 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_84a42fc6180b300315a0dcb8c475f74ac799ea4ec31414751f24e0c16b65c681->enter($__internal_84a42fc6180b300315a0dcb8c475f74ac799ea4ec31414751f24e0c16b65c681_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "js"));
+
+        // line 34
+        echo "<script src=\"../javascript/start/index.js\"></script>
 <script src=\"../javascript/model/anotherFunctiun/XMLRequest.js\"></script>
 <script src=\"../javascript/model/anotherFunctiun/verification.js\"></script>
 <script src=\"../javascript/model/anotherFunctiun/myMath.js\"></script>
@@ -92,13 +113,12 @@ class __TwigTemplate_7f101169f40660af3a81c4512e655bea38f00ebb069e6ac157fdd95aa48
 
 
 <script src=\"../javascript/view/directlyChange/ViewManufacturing.js\"></script>
-</body>
-</html>";
+";
         
-        $__internal_a13c156ac6c78b9f1486c17af645d9f6d1c1f7ca9beece9f7630638b95ae1765->leave($__internal_a13c156ac6c78b9f1486c17af645d9f6d1c1f7ca9beece9f7630638b95ae1765_prof);
+        $__internal_84a42fc6180b300315a0dcb8c475f74ac799ea4ec31414751f24e0c16b65c681->leave($__internal_84a42fc6180b300315a0dcb8c475f74ac799ea4ec31414751f24e0c16b65c681_prof);
 
         
-        $__internal_75dccce3541ed4d071d0623782f5c7aeb33d7071f67cac0a256d0dee544e36a4->leave($__internal_75dccce3541ed4d071d0623782f5c7aeb33d7071f67cac0a256d0dee544e36a4_prof);
+        $__internal_63e421ee5e46a9b07bcef4b2e0b5099b008456152fa7fcd287959bae31c92c8c->leave($__internal_63e421ee5e46a9b07bcef4b2e0b5099b008456152fa7fcd287959bae31c92c8c_prof);
 
     }
 
@@ -114,7 +134,7 @@ class __TwigTemplate_7f101169f40660af3a81c4512e655bea38f00ebb069e6ac157fdd95aa48
 
     public function getDebugInfo()
     {
-        return array (  42 => 16,  25 => 1,);
+        return array (  98 => 34,  89 => 33,  50 => 3,  41 => 2,  11 => 1,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -127,24 +147,8 @@ class __TwigTemplate_7f101169f40660af3a81c4512e655bea38f00ebb069e6ac157fdd95aa48
 
     public function getSourceContext()
     {
-        return new Twig_Source("<!DOCTYPE html>
-<html lang=\"fr\" xmlns=\"http://www.w3.org/1999/html\">
-<head>
-    <title>index</title>
-    <meta charset=\"utf-8\">
-
-    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">
-    <link rel=\"stylesheet\" href=\"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css\">
-    <link rel=\"stylesheet\" href=\"../css/general.css\">
-    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no\">
-    <script src=\"https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js\"></script>
-    <script src=\"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js\"></script>
-</head>
-<body>
-<div id=\"menu\">
-    {{ render(controller(\"TEMImainBundle:Temi:menu\")) }}
-</div>
-<div class=\"container\">
+        return new Twig_Source("{% extends \"TEMImainBundle:Temi:layout.html.twig\" %}
+{% block body %}
     <div class=\"form-group\">
         <div id=\"formPays\">
         </div>
@@ -174,8 +178,8 @@ class __TwigTemplate_7f101169f40660af3a81c4512e655bea38f00ebb069e6ac157fdd95aa48
         <br/>
         <div id=\"result\"></div>
     </div>
-</div>
-
+{% endblock %}
+{% block js %}
 <script src=\"../javascript/start/index.js\"></script>
 <script src=\"../javascript/model/anotherFunctiun/XMLRequest.js\"></script>
 <script src=\"../javascript/model/anotherFunctiun/verification.js\"></script>
@@ -194,7 +198,6 @@ class __TwigTemplate_7f101169f40660af3a81c4512e655bea38f00ebb069e6ac157fdd95aa48
 
 
 <script src=\"../javascript/view/directlyChange/ViewManufacturing.js\"></script>
-</body>
-</html>", "TEMImainBundle:Temi:index.html.twig", "C:\\Users\\matthias\\Desktop\\stage\\TEMI\\site\\src\\TEMI\\mainBundle\\Resources\\views\\Temi\\index.html.twig");
+{% endblock %}", "TEMImainBundle:Temi:index.html.twig", "C:\\Users\\matthias\\Desktop\\stage\\TEMI\\site\\src\\TEMI\\mainBundle\\Resources\\views\\Temi\\index.html.twig");
     }
 }

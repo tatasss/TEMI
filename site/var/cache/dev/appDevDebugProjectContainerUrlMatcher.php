@@ -137,6 +137,11 @@ class appDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
             return array (  '_controller' => 'TEMI\\mainBundle\\Controller\\TemiController::modeleAction',  '_route' => 'temi_platform_modele',);
         }
 
+        // temi_platform_menu
+        if ('/menu' === $pathinfo) {
+            return array (  '_controller' => 'TEMI\\mainBundle\\Controller\\TemiController::menuAction',  '_route' => 'temi_platform_menu',);
+        }
+
         // temi_platform_add
         if ('/ajoutPays' === $pathinfo) {
             return array (  '_controller' => 'TEMI\\mainBundle\\Controller\\TemiController::ajoutPaysAction',  '_route' => 'temi_platform_add',);

@@ -7,46 +7,47 @@ class __TwigTemplate_5e0693d792d33c322623fa1a9f37a1d2dbcf9ac16d8b8307c916e9d331c
     {
         parent::__construct($env);
 
-        $this->parent = false;
-
+        // line 1
+        $this->parent = $this->loadTemplate("TEMImainBundle:Temi:layout.html.twig", "TEMImainBundle:Temi:ajoutPays.html.twig", 1);
         $this->blocks = array(
+            'body' => array($this, 'block_body'),
+            'js' => array($this, 'block_js'),
         );
+    }
+
+    protected function doGetParent(array $context)
+    {
+        return "TEMImainBundle:Temi:layout.html.twig";
     }
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_a3c396f0ed6cd4b225818519b74edb8257846f8ec761f0868678854366114cae = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
-        $__internal_a3c396f0ed6cd4b225818519b74edb8257846f8ec761f0868678854366114cae->enter($__internal_a3c396f0ed6cd4b225818519b74edb8257846f8ec761f0868678854366114cae_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "TEMImainBundle:Temi:ajoutPays.html.twig"));
+        $__internal_0ed13cb396613909a3ebbd8ab19ad97dbf894fa48df89c73b9f4f9208eb2eb50 = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
+        $__internal_0ed13cb396613909a3ebbd8ab19ad97dbf894fa48df89c73b9f4f9208eb2eb50->enter($__internal_0ed13cb396613909a3ebbd8ab19ad97dbf894fa48df89c73b9f4f9208eb2eb50_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "TEMImainBundle:Temi:ajoutPays.html.twig"));
 
-        $__internal_4c2e1b6fcc74dbaf44fe4dfd6b82b69f5cfca00693d74e01afa4acd46f9dce05 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_4c2e1b6fcc74dbaf44fe4dfd6b82b69f5cfca00693d74e01afa4acd46f9dce05->enter($__internal_4c2e1b6fcc74dbaf44fe4dfd6b82b69f5cfca00693d74e01afa4acd46f9dce05_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "TEMImainBundle:Temi:ajoutPays.html.twig"));
+        $__internal_af64e88035c13ec878c85d549bf83384ff01533a2ca43e2465dddca8ed708175 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_af64e88035c13ec878c85d549bf83384ff01533a2ca43e2465dddca8ed708175->enter($__internal_af64e88035c13ec878c85d549bf83384ff01533a2ca43e2465dddca8ed708175_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "TEMImainBundle:Temi:ajoutPays.html.twig"));
 
-        // line 1
-        echo "<!DOCTYPE html>
-<html lang=\"en\">
-<head>
-    <meta charset=\"UTF-8\">
-    <title>ajouter un Pays</title>
-    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">
-    <link rel=\"stylesheet\" href=\"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css\">
-   <link rel=\"stylesheet\" href=\"../css/general.css\">
-    <link rel=\"stylesheet\" href=\"../css/tabCS.css\">
-    <script src=\"https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js\"></script>
-    <script src=\"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js\"></script>
-    <script src=\"../node_modules/chart.js/dist/Chart.min.js\"></script>
-    <script src=\"../node_modules/chart.js/dist/Chart.bundle.min.js\"></script>
-    <script src=\"../node_modules/excellentexport/dist/excellentexport.js\"></script>
-    <link rel=\"stylesheet\" href=\"https://www.w3schools.com/w3css/4/w3.css\">
-    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no\">
-</head>
-<body>
-";
-        // line 19
-        echo $this->env->getRuntime('Symfony\Bridge\Twig\Extension\HttpKernelRuntime')->renderFragment(Symfony\Bridge\Twig\Extension\HttpKernelExtension::controller("TEMImainBundle:Temi:menu"));
-        echo "
+        $this->parent->display($context, array_merge($this->blocks, $blocks));
+        
+        $__internal_0ed13cb396613909a3ebbd8ab19ad97dbf894fa48df89c73b9f4f9208eb2eb50->leave($__internal_0ed13cb396613909a3ebbd8ab19ad97dbf894fa48df89c73b9f4f9208eb2eb50_prof);
 
-<div class=\"container\">
-    <h1>Ajouter un pays</h1>
+        
+        $__internal_af64e88035c13ec878c85d549bf83384ff01533a2ca43e2465dddca8ed708175->leave($__internal_af64e88035c13ec878c85d549bf83384ff01533a2ca43e2465dddca8ed708175_prof);
+
+    }
+
+    // line 2
+    public function block_body($context, array $blocks = array())
+    {
+        $__internal_9d74999ba11eb2199e1fe67ff2c646b0ccc09cb9967b40f3732c183cfa993b6a = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
+        $__internal_9d74999ba11eb2199e1fe67ff2c646b0ccc09cb9967b40f3732c183cfa993b6a->enter($__internal_9d74999ba11eb2199e1fe67ff2c646b0ccc09cb9967b40f3732c183cfa993b6a_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
+
+        $__internal_9d099c2c0b292c1f04f8e3a72bdacbe262e7ac3142a3eaf19153231c9d31e4b5 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_9d099c2c0b292c1f04f8e3a72bdacbe262e7ac3142a3eaf19153231c9d31e4b5->enter($__internal_9d099c2c0b292c1f04f8e3a72bdacbe262e7ac3142a3eaf19153231c9d31e4b5_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
+
+        // line 3
+        echo "    <h1>Ajouter un pays</h1>
     <p>Pour creer un nouveau pays, veuillez remplir le formulaire ci-dessous</p>
     <div id=\"formError\"></div>
     <div id=\"myCarousel\" class=\"carousel slide w3-container borderhide\" data-interval=\"false\">
@@ -369,46 +370,26 @@ class __TwigTemplate_5e0693d792d33c322623fa1a9f37a1d2dbcf9ac16d8b8307c916e9d331c
             </div>
         </div>
     </div>
-</div>
-<div class=\"modal fade\" id=\"myModal\" role=\"dialog\">
-    <div class=\"modal-dialog\">
-        <div class=\"modal-content\">
-            <div class=\"modal-header\" style=\"padding:35px 50px;\">
-                <button type=\"button\" class=\"close\" data-dismiss=\"modal\"></button>
-                <h4>Comparaison</h4>
-                <p>Vous avez lancé une comparaison entre des entreprises ayant des marges différentes
-                </p>
-            </div>
-            <div class=\"modal-body\" style=\"padding:40px 50px;\">
-                <form role=\"form\">
-                    <div class=\"form-group\">
-                        <label>Taux d'actualisation :</label>
-                        <input type=\"text\" class=\"form-control\" id=\"actualistionCompa\" title=\"actualisation\"
-                               value=\"\" placeholder=\"Veuillez entrer un taux d'actualisation\">
-                    </div>
-                    <div class=\"form-group\">
-                        <label>Régime fiscale:</label>
-                        <select class=\"form-control\" id=\"REGIMECmpta\" title=\"regime fiscale\">
-                            <option value=\"gen\">Code général des impôts</option>
-                            <option value=\"nongen\">Code des investissements</option>
-                        </select>
-                    </div>
-                    <button type=\"submit\" class=\"btn btn-success btn-block\" id=\"myCont\"
-                            onclick=\"debutCompa(\$('#actualistionCompa').val(), \$('#REGIMECmpta').val());\">continuer
-                    </button>
-                </form>
-            </div>
-            <div class=\"modal-footer\">
-                <button type=\"submit\" class=\"btn btn-danger btn-default pull-left\" onclick=\"retourModal()\"
-                        data-dismiss=\"modal\">
-                        <span class=\"glyphicon glyphicon-remove\">
-                        </span> Annuler
-                </button>
-            </div>
-        </div>
-    </div>
-</div>
-<script src=\"../javascript/model/anotherFunctiun/verification.js\"></script>
+";
+        
+        $__internal_9d099c2c0b292c1f04f8e3a72bdacbe262e7ac3142a3eaf19153231c9d31e4b5->leave($__internal_9d099c2c0b292c1f04f8e3a72bdacbe262e7ac3142a3eaf19153231c9d31e4b5_prof);
+
+        
+        $__internal_9d74999ba11eb2199e1fe67ff2c646b0ccc09cb9967b40f3732c183cfa993b6a->leave($__internal_9d74999ba11eb2199e1fe67ff2c646b0ccc09cb9967b40f3732c183cfa993b6a_prof);
+
+    }
+
+    // line 327
+    public function block_js($context, array $blocks = array())
+    {
+        $__internal_17dc89884c0804051a9d21b69daaa999da9ff44bc7398b0456aeedc74ab5c993 = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
+        $__internal_17dc89884c0804051a9d21b69daaa999da9ff44bc7398b0456aeedc74ab5c993->enter($__internal_17dc89884c0804051a9d21b69daaa999da9ff44bc7398b0456aeedc74ab5c993_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "js"));
+
+        $__internal_72c9430346af8c28f048a68b93cc3aaa3952843b91af4798d227ff82374a4b6e = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_72c9430346af8c28f048a68b93cc3aaa3952843b91af4798d227ff82374a4b6e->enter($__internal_72c9430346af8c28f048a68b93cc3aaa3952843b91af4798d227ff82374a4b6e_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "js"));
+
+        // line 328
+        echo "<script src=\"../javascript/model/anotherFunctiun/verification.js\"></script>
 <script src=\"../javascript/model/anotherFunctiun/XMLRequest.js\"></script>
 <script src=\"../javascript/model/anotherFunctiun/myMath.js\"></script>
 <script src=\"../javascript/model/anotherFunctiun/Ref.js\"></script>
@@ -422,13 +403,12 @@ class __TwigTemplate_5e0693d792d33c322623fa1a9f37a1d2dbcf9ac16d8b8307c916e9d331c
 <script src=\"../javascript/data/data.js\"></script>
 <script src=\"../javascript/start/script.js\"></script>
 <script src=\"../javascript/view/directlyChange/PaysAddView.js\"></script>
-</body>
-</html>";
+";
         
-        $__internal_a3c396f0ed6cd4b225818519b74edb8257846f8ec761f0868678854366114cae->leave($__internal_a3c396f0ed6cd4b225818519b74edb8257846f8ec761f0868678854366114cae_prof);
+        $__internal_72c9430346af8c28f048a68b93cc3aaa3952843b91af4798d227ff82374a4b6e->leave($__internal_72c9430346af8c28f048a68b93cc3aaa3952843b91af4798d227ff82374a4b6e_prof);
 
         
-        $__internal_4c2e1b6fcc74dbaf44fe4dfd6b82b69f5cfca00693d74e01afa4acd46f9dce05->leave($__internal_4c2e1b6fcc74dbaf44fe4dfd6b82b69f5cfca00693d74e01afa4acd46f9dce05_prof);
+        $__internal_17dc89884c0804051a9d21b69daaa999da9ff44bc7398b0456aeedc74ab5c993->leave($__internal_17dc89884c0804051a9d21b69daaa999da9ff44bc7398b0456aeedc74ab5c993_prof);
 
     }
 
@@ -444,7 +424,7 @@ class __TwigTemplate_5e0693d792d33c322623fa1a9f37a1d2dbcf9ac16d8b8307c916e9d331c
 
     public function getDebugInfo()
     {
-        return array (  45 => 19,  25 => 1,);
+        return array (  392 => 328,  383 => 327,  50 => 3,  41 => 2,  11 => 1,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -457,27 +437,8 @@ class __TwigTemplate_5e0693d792d33c322623fa1a9f37a1d2dbcf9ac16d8b8307c916e9d331c
 
     public function getSourceContext()
     {
-        return new Twig_Source("<!DOCTYPE html>
-<html lang=\"en\">
-<head>
-    <meta charset=\"UTF-8\">
-    <title>ajouter un Pays</title>
-    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">
-    <link rel=\"stylesheet\" href=\"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css\">
-   <link rel=\"stylesheet\" href=\"../css/general.css\">
-    <link rel=\"stylesheet\" href=\"../css/tabCS.css\">
-    <script src=\"https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js\"></script>
-    <script src=\"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js\"></script>
-    <script src=\"../node_modules/chart.js/dist/Chart.min.js\"></script>
-    <script src=\"../node_modules/chart.js/dist/Chart.bundle.min.js\"></script>
-    <script src=\"../node_modules/excellentexport/dist/excellentexport.js\"></script>
-    <link rel=\"stylesheet\" href=\"https://www.w3schools.com/w3css/4/w3.css\">
-    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no\">
-</head>
-<body>
-{{ render(controller(\"TEMImainBundle:Temi:menu\")) }}
-
-<div class=\"container\">
+        return new Twig_Source("{% extends \"TEMImainBundle:Temi:layout.html.twig\" %}
+{% block body %}
     <h1>Ajouter un pays</h1>
     <p>Pour creer un nouveau pays, veuillez remplir le formulaire ci-dessous</p>
     <div id=\"formError\"></div>
@@ -801,45 +762,8 @@ class __TwigTemplate_5e0693d792d33c322623fa1a9f37a1d2dbcf9ac16d8b8307c916e9d331c
             </div>
         </div>
     </div>
-</div>
-<div class=\"modal fade\" id=\"myModal\" role=\"dialog\">
-    <div class=\"modal-dialog\">
-        <div class=\"modal-content\">
-            <div class=\"modal-header\" style=\"padding:35px 50px;\">
-                <button type=\"button\" class=\"close\" data-dismiss=\"modal\"></button>
-                <h4>Comparaison</h4>
-                <p>Vous avez lancé une comparaison entre des entreprises ayant des marges différentes
-                </p>
-            </div>
-            <div class=\"modal-body\" style=\"padding:40px 50px;\">
-                <form role=\"form\">
-                    <div class=\"form-group\">
-                        <label>Taux d'actualisation :</label>
-                        <input type=\"text\" class=\"form-control\" id=\"actualistionCompa\" title=\"actualisation\"
-                               value=\"\" placeholder=\"Veuillez entrer un taux d'actualisation\">
-                    </div>
-                    <div class=\"form-group\">
-                        <label>Régime fiscale:</label>
-                        <select class=\"form-control\" id=\"REGIMECmpta\" title=\"regime fiscale\">
-                            <option value=\"gen\">Code général des impôts</option>
-                            <option value=\"nongen\">Code des investissements</option>
-                        </select>
-                    </div>
-                    <button type=\"submit\" class=\"btn btn-success btn-block\" id=\"myCont\"
-                            onclick=\"debutCompa(\$('#actualistionCompa').val(), \$('#REGIMECmpta').val());\">continuer
-                    </button>
-                </form>
-            </div>
-            <div class=\"modal-footer\">
-                <button type=\"submit\" class=\"btn btn-danger btn-default pull-left\" onclick=\"retourModal()\"
-                        data-dismiss=\"modal\">
-                        <span class=\"glyphicon glyphicon-remove\">
-                        </span> Annuler
-                </button>
-            </div>
-        </div>
-    </div>
-</div>
+{% endblock %}
+{% block js %}
 <script src=\"../javascript/model/anotherFunctiun/verification.js\"></script>
 <script src=\"../javascript/model/anotherFunctiun/XMLRequest.js\"></script>
 <script src=\"../javascript/model/anotherFunctiun/myMath.js\"></script>
@@ -854,7 +778,6 @@ class __TwigTemplate_5e0693d792d33c322623fa1a9f37a1d2dbcf9ac16d8b8307c916e9d331c
 <script src=\"../javascript/data/data.js\"></script>
 <script src=\"../javascript/start/script.js\"></script>
 <script src=\"../javascript/view/directlyChange/PaysAddView.js\"></script>
-</body>
-</html>", "TEMImainBundle:Temi:ajoutPays.html.twig", "C:\\Users\\matthias\\Desktop\\stage\\TEMI\\site\\src\\TEMI\\mainBundle\\Resources\\views\\Temi\\ajoutPays.html.twig");
+{% endblock %}", "TEMImainBundle:Temi:ajoutPays.html.twig", "C:\\Users\\matthias\\Desktop\\stage\\TEMI\\site\\src\\TEMI\\mainBundle\\Resources\\views\\Temi\\ajoutPays.html.twig");
     }
 }

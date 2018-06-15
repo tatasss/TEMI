@@ -1,25 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>ajouter un Pays</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-   <link rel="stylesheet" href="../css/general.css">
-    <link rel="shortcut icon" type="image/x-icon" href="../image/logo_CERDI_UCA-01.png">
-    <link rel="stylesheet" href="../css/tabCS.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <script src="../node_modules/chart.js/dist/Chart.min.js"></script>
-    <script src="../node_modules/chart.js/dist/Chart.bundle.min.js"></script>
-    <script src="../node_modules/excellentexport/dist/excellentexport.js"></script>
-    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-</head>
-<body>
-{{ render(controller("TEMImainBundle:Temi:menu")) }}
-
-<div class="container">
+{% extends "TEMImainBundle:Temi:layout.html.twig" %}
+{% block body %}
     <h1>Ajouter un pays</h1>
     <p>Pour creer un nouveau pays, veuillez remplir le formulaire ci-dessous</p>
     <div id="formError"></div>
@@ -343,7 +323,8 @@
             </div>
         </div>
     </div>
-</div>
+{% endblock %}
+{% block js %}
 <script src="../javascript/model/anotherFunctiun/verification.js"></script>
 <script src="../javascript/model/anotherFunctiun/XMLRequest.js"></script>
 <script src="../javascript/model/anotherFunctiun/myMath.js"></script>
@@ -358,5 +339,4 @@
 <script src="../javascript/data/data.js"></script>
 <script src="../javascript/start/script.js"></script>
 <script src="../javascript/view/directlyChange/PaysAddView.js"></script>
-</body>
-</html>
+{% endblock %}
