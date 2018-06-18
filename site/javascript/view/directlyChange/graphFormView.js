@@ -4,8 +4,8 @@ let paysChoisiHtml = [];
 let margeTab = [];
 let ent = [];
 let posIn = 0;
-let entre=[];
-let titre="";
+let entre = [];
+let titre = "";
 let reg;
 reg = " ";
 
@@ -16,7 +16,7 @@ else {
     reg = "Codes des investissements";
 }
 document.getElementById("info").innerHTML = `<p>Le taux d'actualisation pour toutes les entreprises est `
-    +`de ${localStorage.getItem("compaActu")} %.<br/> Le régime utilisé par les entreprises dans tous les pays est le ${reg} .`;
+    + `de ${localStorage.getItem("compaActu")} %.<br/> Le régime utilisé par les entreprises dans tous les pays est le ${reg} .`;
 /**
  * @description This function delete land of the liste to make a graph
  * @param {string} code - The code of the land
@@ -39,7 +39,7 @@ supelemEnt = function (marge) {
     let madon;
     let cptEnt2 = 0;
     ent = [];
-    entre=[];
+    entre = [];
     margeTab.forEach(function (item, index) {
         if (item === marge) {
             margeTab.splice(index, 1);
@@ -47,7 +47,7 @@ supelemEnt = function (marge) {
     });
     margeTab.forEach(function (item) {
         madon = `<strong>entreprise ${cptEnt2 + 1} :</strong><br/>taux de marge:<br/>${item} % `;
-        madon += bootstrap.buttonBaBu("danger", `supelemEnt('${item}')`, "<spam class='glyphicon glyphicon-remove'/> supprimer", item);
+        madon += bootstrap.buttonBaBu("danger", `supelemEnt('${item}')`, "<spam class='glyphicon glyphicon-remove'/>", item);
         ent.push(madon);
         entre.push(`entreprise ${cptEnt2 + 1} `);
         cptEnt2 += 1;
@@ -56,7 +56,7 @@ supelemEnt = function (marge) {
     posIn = 2;
 };
 let htmlFormPays = "<label for=\"sel1\">Pays:</label> <select class=\"form-control\" id=\"PAYS\">";
-htmlFormPays += `<option disabled selected>Selelectionner un  pays</option><option value='tousPays'>Tous les Pays</option> `;
+htmlFormPays += `<option value="sans" disabled selected>Selectionner un  pays</option><option value='tousPays'>Tous les Pays</option> `;
 land.pays.forEach(function (item) {
     if (item.name !== "Guinée Bissao") {
         if (item.name !== "Guinée équatoriale") {
@@ -70,6 +70,7 @@ $("body").delegate("button", "click", function () {
     let bool;
     if ($(this).parents('div').attr('id') === "addPays") {
         posIn = 1;
+
         if ($("#PAYS").val() === "tousPays") {
             paysChoisi = [];
             land.pays.forEach(function (item) {
@@ -82,13 +83,16 @@ $("body").delegate("button", "click", function () {
         }
         else {
             bool = false;
-            paysChoisi.forEach(function (item) {
-                if (item === ref.donnerNomPays($('#PAYS').val())) {
-                    bool = true;
+            if ($("#PAYS").val() !== null) {
+                paysChoisi.forEach(function (item) {
+
+                    if (item === ref.donnerNomPays($('#PAYS').val())) {
+                        bool = true;
+                    }
+                });
+                if (bool === false) {
+                    paysChoisi.push(ref.donnerNomPays($('#PAYS').val()));
                 }
-            });
-            if (bool === false) {
-                paysChoisi.push(ref.donnerNomPays($('#PAYS').val()));
             }
         }
     }
@@ -99,7 +103,7 @@ $("body").delegate("button", "click", function () {
             bool = false;
             let madon = `<strong>entreprise ${cptEnt + 1} :</strong><br/>taux de marge:<br/>${$('#marge').val()} % `;
             madon += bootstrap.buttonBaBu("danger", `supelemEnt('${$('#margin').val()}')`, "<spam class='glyphicon " +
-                "glyphicon-remove'/> supprimer", $('#margin').val());
+                "glyphicon-remove'/>", $('#margin').val());
             margeTab.forEach(function (item) {
                 if (item === $('#marge').val()) {
                     bool = true
@@ -108,7 +112,7 @@ $("body").delegate("button", "click", function () {
             if (bool === false) {
                 margeTab.push($('#marge').val());
                 ent.push(madon);
-                entre.push(`entreprise ${cptEnt + 1}` );
+                entre.push(`entreprise ${cptEnt + 1}`);
                 cptEnt += 1;
             }
         }
@@ -118,8 +122,8 @@ $("body").delegate("button", "click", function () {
     }
     paysChoisiHtml = [];
     paysChoisi.forEach(function (item) {
-        paysChoisiHtml.push(item + bootstrap.buttonBaBu("danger", `supelemPays('${ref.donnerCodePays(item)}')`,
-            "<spam class='glyphicon glyphicon-remove'/> supprimer", ref.donnerCodePays(item)));
+        paysChoisiHtml.push(item+" " + bootstrap.buttonBaBu("danger", `supelemPays('${ref.donnerCodePays(item)}')`,
+            "<spam class='glyphicon glyphicon-remove'/> ", ref.donnerCodePays(item)));
     });
     let donneTab = [];
     let modeleTab = [];
@@ -136,8 +140,8 @@ $("body").delegate("button", "click", function () {
             modeleTab[index].push({donne: items, modele: new Model(items)})
         });
     });
-    titre="TEMItauxActualisation:"+localStorage.getItem("compaActu")+"%regimeFiscale:"+reg+"%";
-    graph.graphique(modeleTab, "chartCompa","tabTemi", reg,margeTab,titre);
+    titre = "TEMItauxActualisation:" + localStorage.getItem("compaActu") + "%regimeFiscale:" + reg + "%";
+    graph.graphique(modeleTab, "chartCompa", "tabTemi", reg, margeTab, titre);
     document.getElementById("param").innerHTML = bootstrap.collapse(posIn, {
             tittle: "pays",
             body: bootstrap.listeItem(paysChoisiHtml)

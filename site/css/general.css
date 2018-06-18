@@ -1,5 +1,5 @@
 .vertical-menu {
-    width: 200px; /* Set a width if you like */
+   /* width: 200px; /* Set a width if you like */
 }
 
 .vertical-menu a {
@@ -196,4 +196,8 @@ nav{
     background-color: #0333BB;
     color: #0333BB;
 
+}
+
+button{
+    max-width: 100%;
 }
