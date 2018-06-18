@@ -32,8 +32,8 @@
       <file leaf-file-name="graphForm.html.twig" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/TEMI/mainBundle/Resources/views/Temi/graphForm.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="621">
-              <caret line="71" column="14" selection-start-line="71" selection-start-column="14" selection-end-line="71" selection-end-column="14" />
+            <state relative-caret-position="867">
+              <caret line="51" column="26" selection-start-line="51" selection-start-column="26" selection-end-line="51" selection-end-column="26" />
             </state>
           </provider>
         </entry>
@@ -41,8 +41,8 @@
       <file leaf-file-name="index.html.twig" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/TEMI/mainBundle/Resources/views/Temi/index.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="213">
-              <caret line="27" column="9" selection-start-line="27" selection-start-column="9" selection-end-line="27" selection-end-column="9" />
+            <state relative-caret-position="17">
+              <caret line="1" column="37" selection-start-line="1" selection-start-column="37" selection-end-line="1" selection-end-column="37" />
             </state>
           </provider>
         </entry>
@@ -50,72 +50,67 @@
       <file leaf-file-name="model.html.twig" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/TEMI/mainBundle/Resources/views/Temi/model.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3689">
-              <caret line="232" column="53" selection-start-line="232" selection-start-column="53" selection-end-line="232" selection-end-column="53" />
+            <state relative-caret-position="51">
+              <caret line="3" column="11" selection-start-line="3" selection-start-column="11" selection-end-line="3" selection-end-column="11" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TemiController.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/TEMI/mainBundle/Controller/TemiController.php">
+      <file leaf-file-name="ViewGenerator.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/javascript/view/viewGenerator/ViewGenerator.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="305">
-              <caret line="31" selection-start-line="31" selection-end-line="31" />
-              <folding>
-                <element signature="e#130#187#0#PHP" expanded="true" />
-              </folding>
+            <state relative-caret-position="7208">
+              <caret line="424" column="55" selection-start-line="424" selection-start-column="55" selection-end-line="424" selection-end-column="55" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="inscription.html.twig" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/TEMI/mainBundle/Resources/views/Connection/inscription.html.twig">
+      <file leaf-file-name="graphGenerator.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/javascript/view/viewGenerator/graphGenerator.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="425">
-              <caret line="25" column="10" selection-start-line="25" selection-start-column="10" selection-end-line="25" selection-end-column="10" />
+            <state relative-caret-position="1496">
+              <caret line="88" column="60" selection-start-line="88" selection-start-column="60" selection-end-line="88" selection-end-column="60" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="services.yml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/TEMI/mainBundle/Resources/config/services.yml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="4" selection-start-line="4" selection-end-line="4" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TEMImainExtension.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/TEMI/mainBundle/DependencyInjection/TEMImainExtension.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-86" />
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="routing.yml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/TEMI/mainBundle/Resources/config/routing.yml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="152">
-              <caret line="19" selection-start-line="19" selection-end-line="19" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="layout.html.twig" pinned="false" current-in-tab="false">
+      <file leaf-file-name="layout.html.twig" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/TEMI/mainBundle/Resources/views/Temi/layout.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="14" column="18" selection-start-line="14" selection-start-column="18" selection-end-line="14" selection-end-column="18" />
+            <state relative-caret-position="289">
+              <caret line="188" column="18" lean-forward="true" selection-start-line="96" selection-start-column="16" selection-end-line="188" selection-end-column="18" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="general.css" pinned="false" current-in-tab="true">
+      <file leaf-file-name="tabCS.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/css/tabCS.css">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file leaf-file-name="general.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/css/general.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="186">
-              <caret line="183" column="30" lean-forward="true" selection-start-line="183" selection-start-column="30" selection-end-line="183" selection-end-column="30" />
+            <state>
+              <caret lean-forward="true" selection-end-line="268" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="graphFormView.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/javascript/view/directlyChange/graphFormView.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-391">
+              <caret line="103" column="42" selection-start-line="103" selection-start-column="42" selection-end-line="103" selection-end-column="42" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ajoutPays.html.twig" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/TEMI/mainBundle/Resources/views/Temi/ajoutPays.html.twig">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="17">
+              <caret line="1" column="39" selection-start-line="1" selection-start-column="39" selection-end-line="1" selection-end-column="39" />
             </state>
           </provider>
         </entry>
@@ -141,6 +136,9 @@
       <find>land.pays</find>
       <find>Pays</find>
       <find>conso</find>
+      <find>panel-heading</find>
+      <find>param</find>
+      <find>vertical-form</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -187,25 +185,25 @@
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/web/javascript/start/script.js" />
         <option value="$PROJECT_DIR$/web/javascript/view/viewGenerator/ViewGenerator.js" />
-        <option value="$PROJECT_DIR$/web/javascript/view/viewGenerator/graphGenerator.js" />
-        <option value="$PROJECT_DIR$/web/javascript/view/viewGenerator/bootstrapView.js" />
         <option value="$PROJECT_DIR$/web/javascript/view/directlyChange/ModeleView.js" />
         <option value="$PROJECT_DIR$/web/javascript/view/directlyChange/PaysAddView.js" />
         <option value="$PROJECT_DIR$/web/javascript/view/directlyChange/test.js" />
         <option value="$PROJECT_DIR$/web/javascript/view/directlyChange/ViewManufacturing.js" />
-        <option value="$PROJECT_DIR$/web/javascript/view/directlyChange/graphFormView.js" />
         <option value="$PROJECT_DIR$/src/TEMI/mainBundle/Controller/ConnectController.php" />
         <option value="$PROJECT_DIR$/src/TEMI/mainBundle/Controller/AdvertController.php" />
         <option value="$PROJECT_DIR$/src/TEMI/mainBundle/Resources/config/services.yml" />
-        <option value="$PROJECT_DIR$/src/TEMI/mainBundle/Resources/views/Temi/ajoutPays.html.twig" />
         <option value="$PROJECT_DIR$/src/TEMI/mainBundle/Resources/views/Connection/connection.html.twig" />
         <option value="$PROJECT_DIR$/src/TEMI/mainBundle/Resources/views/Connection/inscription.html.twig" />
-        <option value="$PROJECT_DIR$/src/TEMI/mainBundle/Resources/views/Temi/graphForm.html.twig" />
-        <option value="$PROJECT_DIR$/src/TEMI/mainBundle/Resources/views/Temi/index.html.twig" />
-        <option value="$PROJECT_DIR$/src/TEMI/mainBundle/Resources/views/Temi/model.html.twig" />
         <option value="$PROJECT_DIR$/src/TEMI/mainBundle/Resources/views/Temi/menu.html.twig" />
         <option value="$PROJECT_DIR$/src/TEMI/mainBundle/Resources/config/routing.yml" />
         <option value="$PROJECT_DIR$/src/TEMI/mainBundle/Controller/TemiController.php" />
+        <option value="$PROJECT_DIR$/src/TEMI/mainBundle/Resources/views/Temi/graphForm.html.twig" />
+        <option value="$PROJECT_DIR$/web/javascript/view/directlyChange/graphFormView.js" />
+        <option value="$PROJECT_DIR$/web/javascript/view/viewGenerator/bootstrapView.js" />
+        <option value="$PROJECT_DIR$/web/javascript/view/viewGenerator/graphGenerator.js" />
+        <option value="$PROJECT_DIR$/src/TEMI/mainBundle/Resources/views/Temi/index.html.twig" />
+        <option value="$PROJECT_DIR$/src/TEMI/mainBundle/Resources/views/Temi/ajoutPays.html.twig" />
+        <option value="$PROJECT_DIR$/src/TEMI/mainBundle/Resources/views/Temi/model.html.twig" />
         <option value="$PROJECT_DIR$/src/TEMI/mainBundle/Resources/views/Temi/layout.html.twig" />
         <option value="$PROJECT_DIR$/web/css/general.css" />
       </list>
@@ -385,8 +383,8 @@
       <path value="$PROJECT_DIR$/vendor/composer" />
     </include_path>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
-    <option name="x" value="1672" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="1696" />
     <option name="y" value="-8" />
     <option name="width" value="1382" />
     <option name="height" value="744" />
@@ -485,6 +483,35 @@
               <item name="site" type="462c0819:PsiDirectoryNode" />
               <item name="web" type="462c0819:PsiDirectoryNode" />
               <item name="css" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="site" type="b2602c69:ProjectViewProjectNode" />
+              <item name="site" type="462c0819:PsiDirectoryNode" />
+              <item name="web" type="462c0819:PsiDirectoryNode" />
+              <item name="javascript" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="site" type="b2602c69:ProjectViewProjectNode" />
+              <item name="site" type="462c0819:PsiDirectoryNode" />
+              <item name="web" type="462c0819:PsiDirectoryNode" />
+              <item name="javascript" type="462c0819:PsiDirectoryNode" />
+              <item name="view" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="site" type="b2602c69:ProjectViewProjectNode" />
+              <item name="site" type="462c0819:PsiDirectoryNode" />
+              <item name="web" type="462c0819:PsiDirectoryNode" />
+              <item name="javascript" type="462c0819:PsiDirectoryNode" />
+              <item name="view" type="462c0819:PsiDirectoryNode" />
+              <item name="directlyChange" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="site" type="b2602c69:ProjectViewProjectNode" />
+              <item name="site" type="462c0819:PsiDirectoryNode" />
+              <item name="web" type="462c0819:PsiDirectoryNode" />
+              <item name="javascript" type="462c0819:PsiDirectoryNode" />
+              <item name="view" type="462c0819:PsiDirectoryNode" />
+              <item name="viewGenerator" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -585,7 +612,10 @@
       <workItem from="1528958274445" duration="47000" />
       <workItem from="1528976588053" duration="11234000" />
       <workItem from="1528988833416" duration="32000" />
-      <workItem from="1529050493334" duration="6763000" />
+      <workItem from="1529050493334" duration="7568000" />
+      <workItem from="1529241982423" duration="3000" />
+      <workItem from="1529305723095" duration="8009000" />
+      <workItem from="1529324525732" duration="1645000" />
     </task>
     <task id="LOCAL-00001" summary="mis en place d'un code propre">
       <created>1526980633672</created>
@@ -703,7 +733,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="596468000" />
+    <option name="totallyTimeSpent" value="606930000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -724,8 +754,8 @@
       <window_info anchor="bottom" id="Database Changes" order="13" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" show_stripe_button="false" sideWeight="0.35330072" side_tool="true" weight="0.19473082" />
       <window_info anchor="bottom" id="Run" order="2" />
-      <window_info anchor="bottom" id="Terminal" order="9" sideWeight="0.64669925" visible="true" weight="0.19306931" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4991453" side_tool="true" visible="true" weight="0.2065053" />
+      <window_info anchor="bottom" id="Terminal" order="9" sideWeight="0.64669925" visible="true" weight="0.24752475" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4991453" side_tool="true" visible="true" weight="0.26626325" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="3" />
       <window_info id="Structure" order="1" sideWeight="0.50085473" side_tool="true" weight="0.24327628" />
@@ -775,7 +805,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/javascript/data/PaysListe.js" />
     <entry file="file://$PROJECT_DIR$/javascript/manufacturing/manufact.js" />
     <entry file="file://$PROJECT_DIR$/javascript/model/anotherFunctiun/verification.js" />
     <entry file="file://$PROJECT_DIR$/javascript/view/directlyChange/PaysAddView.js" />
@@ -813,34 +842,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/javascript/view/viewGenerator/ViewGenerator.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="382">
-          <caret line="424" column="55" selection-start-line="424" selection-start-column="55" selection-end-line="424" selection-end-column="55" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/javascript/view/viewGenerator/graphGenerator.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="688">
-          <caret line="185" column="24" selection-start-line="185" selection-start-column="24" selection-end-line="185" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/javascript/view/viewGenerator/bootstrapView.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="688">
-          <caret line="364" column="36" selection-start-line="364" selection-start-column="36" selection-end-line="364" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/javascript/view/directlyChange/ModeleView.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="561">
-          <caret line="33" selection-start-line="33" selection-end-line="33" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web/javascript/view/directlyChange/PaysAddView.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="4148">
@@ -862,16 +863,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/javascript/view/directlyChange/graphFormView.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1020">
-          <caret line="60" column="40" selection-start-line="60" selection-start-column="40" selection-end-line="60" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/TEMI/mainBundle/DependencyInjection/Configuration.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/TEMI/mainBundle/TEMImainBundle.php">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -886,13 +877,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="323">
           <caret line="26" column="23" selection-start-line="26" selection-start-column="23" selection-end-line="26" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/TEMI/mainBundle/Resources/views/Temi/ajoutPays.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="607">
-          <caret line="341" column="14" selection-start-line="341" selection-start-column="14" selection-end-line="341" selection-end-column="14" />
         </state>
       </provider>
     </entry>
@@ -913,37 +897,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/TEMI/mainBundle/Resources/views/Temi/graphForm.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="621">
-          <caret line="71" column="14" selection-start-line="71" selection-start-column="14" selection-end-line="71" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/TEMI/mainBundle/Resources/views/Advert/byebye.html.twig">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/TEMI/mainBundle/Resources/views/Temi/index.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="213">
-          <caret line="27" column="9" selection-start-line="27" selection-start-column="9" selection-end-line="27" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/TEMI/mainBundle/Resources/views/Temi/model.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3689">
-          <caret line="232" column="53" selection-start-line="232" selection-start-column="53" selection-end-line="232" selection-end-column="53" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/TEMI/mainBundle/Resources/views/Temi/menu.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" selection-start-line="1" selection-end-line="1" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/TEMI/mainBundle/Resources/views/Temi/menu.html.twig" />
     <entry file="file://$PROJECT_DIR$/src/TEMI/mainBundle/Resources/config/services.yml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
@@ -953,37 +910,101 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/TEMI/mainBundle/Resources/config/routing.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
+        <state relative-caret-position="323">
           <caret line="19" selection-start-line="19" selection-end-line="19" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/TEMI/mainBundle/DependencyInjection/TEMImainExtension.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-86" />
-      </provider>
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/TEMI/mainBundle/Controller/TemiController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="305">
+        <state relative-caret-position="425">
           <caret line="31" selection-start-line="31" selection-end-line="31" />
-          <folding>
-            <element signature="e#130#187#0#PHP" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/TEMI/mainBundle/Resources/views/Temi/layout.html.twig">
+    <entry file="file://$PROJECT_DIR$/src/TEMI/mainBundle/DependencyInjection/Configuration.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/javascript/view/directlyChange/ModeleView.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="14" column="18" selection-start-line="14" selection-start-column="18" selection-end-line="14" selection-end-column="18" />
+        <state relative-caret-position="397">
+          <caret line="33" selection-start-line="33" selection-end-line="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/javascript/view/viewGenerator/bootstrapView.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3468">
+          <caret line="204" column="51" selection-start-line="204" selection-start-column="51" selection-end-line="204" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/javascript/view/viewGenerator/ViewGenerator.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="7208">
+          <caret line="424" column="55" selection-start-line="424" selection-start-column="55" selection-end-line="424" selection-end-column="55" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/javascript/view/viewGenerator/graphGenerator.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1496">
+          <caret line="88" column="60" selection-start-line="88" selection-start-column="60" selection-end-line="88" selection-end-column="60" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/TEMI/mainBundle/Resources/views/Temi/ajoutPays.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="39" selection-start-line="1" selection-start-column="39" selection-end-line="1" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/TEMI/mainBundle/Resources/views/Temi/index.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="37" selection-start-line="1" selection-start-column="37" selection-end-line="1" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/TEMI/mainBundle/Resources/views/Temi/model.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="11" selection-start-line="3" selection-start-column="11" selection-end-line="3" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/TEMI/mainBundle/Resources/views/Temi/graphForm.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="867">
+          <caret line="51" column="26" selection-start-line="51" selection-start-column="26" selection-end-line="51" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/css/tabCS.css">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/javascript/view/directlyChange/graphFormView.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-391">
+          <caret line="103" column="42" selection-start-line="103" selection-start-column="42" selection-end-line="103" selection-end-column="42" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/web/css/general.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="186">
-          <caret line="183" column="30" lean-forward="true" selection-start-line="183" selection-start-column="30" selection-end-line="183" selection-end-column="30" />
+        <state>
+          <caret lean-forward="true" selection-end-line="268" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/TEMI/mainBundle/Resources/views/Temi/layout.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="188" column="18" lean-forward="true" selection-start-line="96" selection-start-column="16" selection-end-line="188" selection-end-column="18" />
         </state>
       </provider>
     </entry>

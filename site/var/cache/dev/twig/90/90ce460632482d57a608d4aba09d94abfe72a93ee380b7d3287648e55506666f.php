@@ -118,7 +118,10 @@ class __TwigTemplate_ab0189a76face1b0acd4716124d8e1436aaf7ced823d7aac27d54845acb
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "js"));
 
         // line 57
-        echo "    <script src=\"../javascript/model/anotherFunctiun/verification.js\"></script>
+        echo "    <script src=\"../node_modules/chart.js/dist/Chart.min.js\"></script>
+    <script src=\"../node_modules/chart.js/dist/Chart.bundle.min.js\"></script>
+    <script src=\"../node_modules/excellentexport/dist/excellentexport.js\"></script>
+    <script src=\"../javascript/model/anotherFunctiun/verification.js\"></script>
     <script src=\"../javascript/model/anotherFunctiun/XMLRequest.js\"></script>
     <script src=\"../javascript/model/anotherFunctiun/excel.js\"></script>
     <script src=\"../javascript/model/anotherFunctiun/myMath.js\"></script>
@@ -223,6 +226,9 @@ class __TwigTemplate_ab0189a76face1b0acd4716124d8e1436aaf7ced823d7aac27d54845acb
     </div>
 {% endblock %}
 {% block js %}
+    <script src=\"../node_modules/chart.js/dist/Chart.min.js\"></script>
+    <script src=\"../node_modules/chart.js/dist/Chart.bundle.min.js\"></script>
+    <script src=\"../node_modules/excellentexport/dist/excellentexport.js\"></script>
     <script src=\"../javascript/model/anotherFunctiun/verification.js\"></script>
     <script src=\"../javascript/model/anotherFunctiun/XMLRequest.js\"></script>
     <script src=\"../javascript/model/anotherFunctiun/excel.js\"></script>

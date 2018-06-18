@@ -200,9 +200,9 @@ BootstrapView.prototype.buttonBaBu = function (type, onclick, html, value) {
  * @return {string} html
  */
 BootstrapView.prototype.listeItem = function (tab) {
-    let html = "<ul class='list-group vertical-form'>";
+    let html = "<ul class='list-group'>";
     tab.forEach(function (item) {
-        html += `<li class="list-group-item">${item}</li>`;
+        html += `<li class="list-group-item-default">${item}</li>`;
     });
     return html;
 };
