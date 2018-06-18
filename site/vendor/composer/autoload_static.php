@@ -63,6 +63,7 @@ class ComposerStaticInitce32f360f39707201d89a619cd8d8bbb
         'F' => 
         array (
             'Fig\\Link\\' => 9,
+            'FOS\\UserBundle\\' => 15,
         ),
         'D' => 
         array (
@@ -188,6 +189,10 @@ class ComposerStaticInitce32f360f39707201d89a619cd8d8bbb
         array (
             0 => __DIR__ . '/..' . '/fig/link-util/src',
         ),
+        'FOS\\UserBundle\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/friendsofsymfony/user-bundle',
+        ),
         'Doctrine\\Instantiator\\' => 
         array (
             0 => __DIR__ . '/..' . '/doctrine/instantiator/src/Doctrine/Instantiator',
@@ -235,6 +240,13 @@ class ComposerStaticInitce32f360f39707201d89a619cd8d8bbb
             'SensioLabs\\Security' => 
             array (
                 0 => __DIR__ . '/..' . '/sensiolabs/security-checker',
+            ),
+        ),
+        'F' => 
+        array (
+            'FOS\\MessageBundle' => 
+            array (
+                0 => __DIR__ . '/..' . '/friendsofsymfony/message-bundle',
             ),
         ),
         'D' => 

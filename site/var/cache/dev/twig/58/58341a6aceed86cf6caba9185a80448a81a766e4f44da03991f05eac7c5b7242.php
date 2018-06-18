@@ -10,6 +10,7 @@ class __TwigTemplate_0437fad585dcfbc92d608e679d35faf7b907bba5e23884b9da3610daa37
         // line 1
         $this->parent = $this->loadTemplate("TEMImainBundle:Temi:layout.html.twig", "TEMImainBundle:Temi:ajoutPays.html.twig", 1);
         $this->blocks = array(
+            'title' => array($this, 'block_title'),
             'body' => array($this, 'block_body'),
             'js' => array($this, 'block_js'),
         );
@@ -38,6 +39,24 @@ class __TwigTemplate_0437fad585dcfbc92d608e679d35faf7b907bba5e23884b9da3610daa37
     }
 
     // line 2
+    public function block_title($context, array $blocks = array())
+    {
+        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
+        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->enter($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "title"));
+
+        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "title"));
+
+        echo " Ajout Pays";
+        
+        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
+
+        
+        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->leave($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof);
+
+    }
+
+    // line 3
     public function block_body($context, array $blocks = array())
     {
         $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
@@ -46,7 +65,7 @@ class __TwigTemplate_0437fad585dcfbc92d608e679d35faf7b907bba5e23884b9da3610daa37
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
 
-        // line 3
+        // line 4
         echo "    <h1>Ajouter un pays</h1>
     <p>Pour creer un nouveau pays, veuillez remplir le formulaire ci-dessous</p>
     <div id=\"formError\"></div>
@@ -379,7 +398,7 @@ class __TwigTemplate_0437fad585dcfbc92d608e679d35faf7b907bba5e23884b9da3610daa37
 
     }
 
-    // line 327
+    // line 328
     public function block_js($context, array $blocks = array())
     {
         $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
@@ -388,7 +407,7 @@ class __TwigTemplate_0437fad585dcfbc92d608e679d35faf7b907bba5e23884b9da3610daa37
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "js"));
 
-        // line 328
+        // line 329
         echo "<script src=\"../javascript/model/anotherFunctiun/verification.js\"></script>
 <script src=\"../javascript/model/anotherFunctiun/XMLRequest.js\"></script>
 <script src=\"../javascript/model/anotherFunctiun/myMath.js\"></script>
@@ -424,7 +443,7 @@ class __TwigTemplate_0437fad585dcfbc92d608e679d35faf7b907bba5e23884b9da3610daa37
 
     public function getDebugInfo()
     {
-        return array (  392 => 328,  383 => 327,  50 => 3,  41 => 2,  11 => 1,);
+        return array (  411 => 329,  402 => 328,  69 => 4,  60 => 3,  42 => 2,  11 => 1,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -438,6 +457,7 @@ class __TwigTemplate_0437fad585dcfbc92d608e679d35faf7b907bba5e23884b9da3610daa37
     public function getSourceContext()
     {
         return new Twig_Source("{% extends \"TEMImainBundle:Temi:layout.html.twig\" %}
+{% block title %} Ajout Pays{% endblock %}
 {% block body %}
     <h1>Ajouter un pays</h1>
     <p>Pour creer un nouveau pays, veuillez remplir le formulaire ci-dessous</p>

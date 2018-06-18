@@ -1,6 +1,6 @@
 <?php
 
-/* TEMImainBundle:Temi:model.html.twig */
+/* @TEMImain/Temi/model.html.twig */
 class __TwigTemplate_c473a007e903750fa4632376389b78c8053634adf8a31a66e326724d283932fe extends Twig_Template
 {
     public function __construct(Twig_Environment $env)
@@ -8,7 +8,7 @@ class __TwigTemplate_c473a007e903750fa4632376389b78c8053634adf8a31a66e326724d283
         parent::__construct($env);
 
         // line 1
-        $this->parent = $this->loadTemplate("TEMImainBundle:Temi:layout.html.twig", "TEMImainBundle:Temi:model.html.twig", 1);
+        $this->parent = $this->loadTemplate("TEMImainBundle:Temi:layout.html.twig", "@TEMImain/Temi/model.html.twig", 1);
         $this->blocks = array(
             'title' => array($this, 'block_title'),
             'body' => array($this, 'block_body'),
@@ -24,10 +24,10 @@ class __TwigTemplate_c473a007e903750fa4632376389b78c8053634adf8a31a66e326724d283
     protected function doDisplay(array $context, array $blocks = array())
     {
         $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
-        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->enter($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "TEMImainBundle:Temi:model.html.twig"));
+        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->enter($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "@TEMImain/Temi/model.html.twig"));
 
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "TEMImainBundle:Temi:model.html.twig"));
+        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "@TEMImain/Temi/model.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
@@ -458,7 +458,7 @@ class __TwigTemplate_c473a007e903750fa4632376389b78c8053634adf8a31a66e326724d283
 
     public function getTemplateName()
     {
-        return "TEMImainBundle:Temi:model.html.twig";
+        return "@TEMImain/Temi/model.html.twig";
     }
 
     public function isTraitable()
@@ -848,6 +848,6 @@ Modèle
     <script src=\"../javascript/data/data.js\"></script>
     <script src=\"../javascript/start/script.js\"></script>
     <script src=\"../javascript/view/directlyChange/ModeleView.js\"></script>
-{% endblock %}", "TEMImainBundle:Temi:model.html.twig", "C:\\Users\\matthias\\Desktop\\stage\\TEMI\\site\\src\\TEMI\\mainBundle\\Resources\\views\\Temi\\model.html.twig");
+{% endblock %}", "@TEMImain/Temi/model.html.twig", "C:\\Users\\matthias\\Desktop\\stage\\TEMI\\site\\src\\TEMI\\mainBundle\\Resources\\views\\Temi\\model.html.twig");
     }
 }

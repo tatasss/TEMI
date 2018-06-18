@@ -55,7 +55,7 @@ class appProdProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBundle\R
         }
 
         // temi_platform_modele
-        if ('/modele' === $pathinfo) {
+        if ('/Modele' === $pathinfo) {
             return array (  '_controller' => 'TEMI\\mainBundle\\Controller\\TemiController::modeleAction',  '_route' => 'temi_platform_modele',);
         }
 

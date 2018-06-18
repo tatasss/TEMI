@@ -10,6 +10,7 @@ class __TwigTemplate_87cfba8372bd84551c6f069cd7cee6825e401d9e0fc734c5d546d4ba8bd
         // line 1
         $this->parent = $this->loadTemplate("TEMImainBundle:Temi:layout.html.twig", "TEMImainBundle:Temi:model.html.twig", 1);
         $this->blocks = array(
+            'title' => array($this, 'block_title'),
             'body' => array($this, 'block_body'),
             'js' => array($this, 'block_js'),
         );
@@ -38,6 +39,26 @@ class __TwigTemplate_87cfba8372bd84551c6f069cd7cee6825e401d9e0fc734c5d546d4ba8bd
     }
 
     // line 2
+    public function block_title($context, array $blocks = array())
+    {
+        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
+        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->enter($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "title"));
+
+        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "title"));
+
+        // line 3
+        echo "Modèle
+";
+        
+        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
+
+        
+        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->leave($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof);
+
+    }
+
+    // line 5
     public function block_body($context, array $blocks = array())
     {
         $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
@@ -46,7 +67,7 @@ class __TwigTemplate_87cfba8372bd84551c6f069cd7cee6825e401d9e0fc734c5d546d4ba8bd
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
 
-        // line 3
+        // line 6
         echo "    <h2>Modèle</h2>
     <div>pays selectionné :
         <strong id=\"param\">Pays non definit , bonne chance</strong>
@@ -401,7 +422,7 @@ class __TwigTemplate_87cfba8372bd84551c6f069cd7cee6825e401d9e0fc734c5d546d4ba8bd
 
     }
 
-    // line 349
+    // line 352
     public function block_js($context, array $blocks = array())
     {
         $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
@@ -410,7 +431,7 @@ class __TwigTemplate_87cfba8372bd84551c6f069cd7cee6825e401d9e0fc734c5d546d4ba8bd
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "js"));
 
-        // line 350
+        // line 353
         echo "
     <script src=\"../javascript/model/anotherFunctiun/verification.js\"></script>
     <script src=\"../javascript/model/anotherFunctiun/XMLRequest.js\"></script>
@@ -447,7 +468,7 @@ class __TwigTemplate_87cfba8372bd84551c6f069cd7cee6825e401d9e0fc734c5d546d4ba8bd
 
     public function getDebugInfo()
     {
-        return array (  414 => 350,  405 => 349,  50 => 3,  41 => 2,  11 => 1,);
+        return array (  435 => 353,  426 => 352,  71 => 6,  62 => 5,  51 => 3,  42 => 2,  11 => 1,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -461,6 +482,9 @@ class __TwigTemplate_87cfba8372bd84551c6f069cd7cee6825e401d9e0fc734c5d546d4ba8bd
     public function getSourceContext()
     {
         return new Twig_Source("{% extends \"TEMImainBundle:Temi:layout.html.twig\" %}
+{% block title %}
+Modèle
+{% endblock %}
 {% block body %}
     <h2>Modèle</h2>
     <div>pays selectionné :

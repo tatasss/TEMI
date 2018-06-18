@@ -1,6 +1,6 @@
 <?php
 
-/* TEMImainBundle:Temi:ajoutPays.html.twig */
+/* @TEMImain/Temi/ajoutPays.html.twig */
 class __TwigTemplate_0eaf3b761ff2c48b40c2e76c551e0e3896e5b6f52737a8797816b1a3bb808108 extends Twig_Template
 {
     public function __construct(Twig_Environment $env)
@@ -8,7 +8,7 @@ class __TwigTemplate_0eaf3b761ff2c48b40c2e76c551e0e3896e5b6f52737a8797816b1a3bb8
         parent::__construct($env);
 
         // line 1
-        $this->parent = $this->loadTemplate("TEMImainBundle:Temi:layout.html.twig", "TEMImainBundle:Temi:ajoutPays.html.twig", 1);
+        $this->parent = $this->loadTemplate("TEMImainBundle:Temi:layout.html.twig", "@TEMImain/Temi/ajoutPays.html.twig", 1);
         $this->blocks = array(
             'title' => array($this, 'block_title'),
             'body' => array($this, 'block_body'),
@@ -24,10 +24,10 @@ class __TwigTemplate_0eaf3b761ff2c48b40c2e76c551e0e3896e5b6f52737a8797816b1a3bb8
     protected function doDisplay(array $context, array $blocks = array())
     {
         $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
-        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->enter($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "TEMImainBundle:Temi:ajoutPays.html.twig"));
+        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->enter($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "@TEMImain/Temi/ajoutPays.html.twig"));
 
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "TEMImainBundle:Temi:ajoutPays.html.twig"));
+        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "@TEMImain/Temi/ajoutPays.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
@@ -433,7 +433,7 @@ class __TwigTemplate_0eaf3b761ff2c48b40c2e76c551e0e3896e5b6f52737a8797816b1a3bb8
 
     public function getTemplateName()
     {
-        return "TEMImainBundle:Temi:ajoutPays.html.twig";
+        return "@TEMImain/Temi/ajoutPays.html.twig";
     }
 
     public function isTraitable()
@@ -798,6 +798,6 @@ class __TwigTemplate_0eaf3b761ff2c48b40c2e76c551e0e3896e5b6f52737a8797816b1a3bb8
 <script src=\"../javascript/data/data.js\"></script>
 <script src=\"../javascript/start/script.js\"></script>
 <script src=\"../javascript/view/directlyChange/PaysAddView.js\"></script>
-{% endblock %}", "TEMImainBundle:Temi:ajoutPays.html.twig", "C:\\Users\\matthias\\Desktop\\stage\\TEMI\\site\\src\\TEMI\\mainBundle\\Resources\\views\\Temi\\ajoutPays.html.twig");
+{% endblock %}", "@TEMImain/Temi/ajoutPays.html.twig", "C:\\Users\\matthias\\Desktop\\stage\\TEMI\\site\\src\\TEMI\\mainBundle\\Resources\\views\\Temi\\ajoutPays.html.twig");
     }
 }

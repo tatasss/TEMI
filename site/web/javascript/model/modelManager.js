@@ -5,8 +5,8 @@
 let ModelManager = function () {
 };
 /**
- * @description This function give the Invest on the modele
- * @param {Object } mE - the firm used by the modele
+ * @description This function give the Invest on the Modele
+ * @param {Object } mE - the firm used by the Modele
  * @param {number} pibchoix - the pib want be used
  * @return {number} invest
  */
@@ -14,9 +14,9 @@ ModelManager.prototype.investissementModele = function (mE, pibchoix) {
     return (mE.terrain() + mE.construction() + mE.equipement() + mE.camion() + mE.info() + mE.bureau()) * pibchoix;
 };
 /**
- * @description This function give the amortissement o the modele
- * @param {Object} mE - the firm used by the modele
- * @param {Object} mP - the Land used by the modele
+ * @description This function give the amortissement o the Modele
+ * @param {Object} mE - the firm used by the Modele
+ * @param {Object} mP - the Land used by the Modele
  * @param {number} pibchoix - the pib want be used
  * @return {Array} amortization
  */
@@ -317,7 +317,7 @@ ModelManager.prototype.selectTaxe = function (mP, donne) {
     }
 };
 /**
- * @description This function give the real price of the Creance used by the modele
+ * @description This function give the real price of the Creance used by the Modele
  * @param {Object } mE  - the firm used by the model
  * @param {Object} impot - the impot used on the land
  * @param {number} pibchoix - the pib want be used
@@ -875,7 +875,7 @@ ModelManager.prototype.tauxEffectif = function (vanSI, vanAI) {
  * @description This function give the cash Flow of the firm on the land without Taxe
  *  @param {Object } entreprise  - the land used by the model
  * @param {number} pin - the pib want be used
- * @param {Object} compta - The comptability result in the modele
+ * @param {Object} compta - The comptability result in the Modele
  * @param {number} actu - a discount rate want be used
  * @return {{courant: Array, topic: Array}}
  */

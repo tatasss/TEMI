@@ -20,7 +20,7 @@ class __TwigTemplate_8c3f0b23bd41dcd13cb08f313fc4d68a70ed1851039b9fe041621d25f5b
 <html lang=\"en\">
 <head>
     <meta charset=\"UTF-8\">
-    <title>modele</title>
+    <title>Modele</title>
     <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">
     <link rel=\"stylesheet\" href=\"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css\">
     <!--<link rel=\"stylesheet\" href=\"../css/general.css\">-->
