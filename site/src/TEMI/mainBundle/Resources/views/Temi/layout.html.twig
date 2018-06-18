@@ -39,12 +39,12 @@
                     </li>
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
-                    <li {% if app.request.attributes.get("_route")=='temi_user_sign_up' %} class="active"{% endif %}>
-                        <a href="{{ path('temi_user_sign_up') }}"><span class="glyphicon glyphicon-user"></span>
+                    <li {% if app.request.attributes.get("_route")=='fos_user_registration_register' %} class="active"{% endif %}>
+                        <a href="{{ path('fos_user_registration_register') }}"><span class="glyphicon glyphicon-user"></span>
                             Inscription</a>
                     </li>
-                    <li {% if app.request.attributes.get("_route")=='temi_user_login' %} class="active"{% endif %}>
-                        <a href="{{ path('temi_user_login') }}"><span class="glyphicon glyphicon-log-in"></span>
+                    <li {% if app.request.attributes.get("_route")=='fos_user_security_login' %} class="active"{% endif %}>
+                        <a href="{{ path('fos_user_security_login') }}"><span class="glyphicon glyphicon-log-in"></span>
                             Connection</a>
                     </li>
                 </ul>

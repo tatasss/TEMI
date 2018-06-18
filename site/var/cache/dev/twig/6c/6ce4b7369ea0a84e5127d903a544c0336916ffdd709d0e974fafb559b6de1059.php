@@ -1,6 +1,6 @@
 <?php
 
-/* @TEMImain/Temi/layout.html.twig */
+/* TEMImainBundle:Temi:layout.html.twig */
 class __TwigTemplate_79f72898d5bce345276a7864435367d31483bc85330f8180d9f0f312116ab95f extends Twig_Template
 {
     public function __construct(Twig_Environment $env)
@@ -19,10 +19,10 @@ class __TwigTemplate_79f72898d5bce345276a7864435367d31483bc85330f8180d9f0f312116
     protected function doDisplay(array $context, array $blocks = array())
     {
         $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
-        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->enter($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "@TEMImain/Temi/layout.html.twig"));
+        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->enter($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "TEMImainBundle:Temi:layout.html.twig"));
 
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "@TEMImain/Temi/layout.html.twig"));
+        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "TEMImainBundle:Temi:layout.html.twig"));
 
         // line 1
         echo "<!DOCTYPE html>
@@ -94,25 +94,25 @@ class __TwigTemplate_79f72898d5bce345276a7864435367d31483bc85330f8180d9f0f312116
                 <ul class=\"nav navbar-nav navbar-right\">
                     <li ";
         // line 42
-        if (($this->getAttribute($this->getAttribute($this->getAttribute((isset($context["app"]) ? $context["app"] : $this->getContext($context, "app")), "request", array()), "attributes", array()), "get", array(0 => "_route"), "method") == "temi_user_sign_up")) {
+        if (($this->getAttribute($this->getAttribute($this->getAttribute((isset($context["app"]) ? $context["app"] : $this->getContext($context, "app")), "request", array()), "attributes", array()), "get", array(0 => "_route"), "method") == "fos_user_registration_register")) {
             echo " class=\"active\"";
         }
         echo ">
                         <a href=\"";
         // line 43
-        echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("temi_user_sign_up");
+        echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("fos_user_registration_register");
         echo "\"><span class=\"glyphicon glyphicon-user\"></span>
                             Inscription</a>
                     </li>
                     <li ";
         // line 46
-        if (($this->getAttribute($this->getAttribute($this->getAttribute((isset($context["app"]) ? $context["app"] : $this->getContext($context, "app")), "request", array()), "attributes", array()), "get", array(0 => "_route"), "method") == "temi_user_login")) {
+        if (($this->getAttribute($this->getAttribute($this->getAttribute((isset($context["app"]) ? $context["app"] : $this->getContext($context, "app")), "request", array()), "attributes", array()), "get", array(0 => "_route"), "method") == "fos_user_security_login")) {
             echo " class=\"active\"";
         }
         echo ">
                         <a href=\"";
         // line 47
-        echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("temi_user_login");
+        echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("fos_user_security_login");
         echo "\"><span class=\"glyphicon glyphicon-log-in\"></span>
                             Connection</a>
                     </li>
@@ -341,7 +341,7 @@ class __TwigTemplate_79f72898d5bce345276a7864435367d31483bc85330f8180d9f0f312116
 
     public function getTemplateName()
     {
-        return "@TEMImain/Temi/layout.html.twig";
+        return "TEMImainBundle:Temi:layout.html.twig";
     }
 
     public function isTraitable()
@@ -405,12 +405,12 @@ class __TwigTemplate_79f72898d5bce345276a7864435367d31483bc85330f8180d9f0f312116
                     </li>
                 </ul>
                 <ul class=\"nav navbar-nav navbar-right\">
-                    <li {% if app.request.attributes.get(\"_route\")=='temi_user_sign_up' %} class=\"active\"{% endif %}>
-                        <a href=\"{{ path('temi_user_sign_up') }}\"><span class=\"glyphicon glyphicon-user\"></span>
+                    <li {% if app.request.attributes.get(\"_route\")=='fos_user_registration_register' %} class=\"active\"{% endif %}>
+                        <a href=\"{{ path('fos_user_registration_register') }}\"><span class=\"glyphicon glyphicon-user\"></span>
                             Inscription</a>
                     </li>
-                    <li {% if app.request.attributes.get(\"_route\")=='temi_user_login' %} class=\"active\"{% endif %}>
-                        <a href=\"{{ path('temi_user_login') }}\"><span class=\"glyphicon glyphicon-log-in\"></span>
+                    <li {% if app.request.attributes.get(\"_route\")=='fos_user_security_login' %} class=\"active\"{% endif %}>
+                        <a href=\"{{ path('fos_user_security_login') }}\"><span class=\"glyphicon glyphicon-log-in\"></span>
                             Connection</a>
                     </li>
                 </ul>
@@ -566,6 +566,6 @@ class __TwigTemplate_79f72898d5bce345276a7864435367d31483bc85330f8180d9f0f312116
 
 </div>
 </body>
-</html>", "@TEMImain/Temi/layout.html.twig", "C:\\Users\\matthias\\Desktop\\stage\\TEMI\\site\\src\\TEMI\\mainBundle\\Resources\\views\\Temi\\layout.html.twig");
+</html>", "TEMImainBundle:Temi:layout.html.twig", "C:\\Users\\matthias\\Desktop\\stage\\TEMI\\site\\src\\TEMI\\mainBundle\\Resources\\views\\Temi\\layout.html.twig");
     }
 }
