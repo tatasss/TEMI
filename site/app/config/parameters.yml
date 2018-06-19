@@ -8,6 +8,6 @@ parameters:
     mailer_transport: smtp
     mailer_host: 127.0.0.1
     mailer_user: matthias.gaydu@etu.uca.fr
-    mailer_password: null
+    mailer_password: root
     secret: 05f44fb2eb9fd7981a1c3e8a9d2a3b3e76b52278
 
