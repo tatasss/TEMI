@@ -21,12 +21,3 @@ temi_platform_add:
 temi_platform_graph:
     path:     /graph
     defaults: {_controller: TEMImainBundle:Temi:graph }
-temi_user_login:
-    path:     /Connection
-    defaults: { _controller: TEMImainBundle:Connect:connection}
-temi_user_sign_up:
-    path:     /inscription
-    defaults: { _controller: TEMImainBundle:Connect:inscription}
-temi_user_logout:
-    path:     /Connection
-    defaults: { _controller: TEMImainBundle:Connect:deconnection}

@@ -34,7 +34,7 @@ class __TwigTemplate_aa41868c34a0b1ff560207585c7c8f24a4afb6cb31df9c91c9e732b5200
     <div>
         <input type=\"submit\" value=\"";
         // line 6
-        echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\TranslationExtension')->trans("change_password.submit", array(), "FOSUserBundle"), "html", null, true);
+        echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\TranslationExtension')->trans("valider", array(), "FOSUserBundle"), "html", null, true);
         echo "\" />
     </div>
 ";
@@ -80,7 +80,7 @@ class __TwigTemplate_aa41868c34a0b1ff560207585c7c8f24a4afb6cb31df9c91c9e732b5200
 {{ form_start(form, { 'action': path('fos_user_change_password'), 'attr': { 'class': 'fos_user_change_password' } }) }}
     {{ form_widget(form) }}
     <div>
-        <input type=\"submit\" value=\"{{ 'change_password.submit'|trans }}\" />
+        <input type=\"submit\" value=\"{{ 'valider'|trans }}\" />
     </div>
 {{ form_end(form) }}
 ", "@FOSUser/ChangePassword/change_password_content.html.twig", "C:\\Users\\matthias\\Desktop\\stage\\TEMI\\site\\vendor\\friendsofsymfony\\user-bundle\\Resources\\views\\ChangePassword\\change_password_content.html.twig");

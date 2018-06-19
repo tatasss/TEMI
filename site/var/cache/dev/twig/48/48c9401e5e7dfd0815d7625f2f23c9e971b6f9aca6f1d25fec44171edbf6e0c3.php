@@ -47,7 +47,7 @@ class __TwigTemplate_4aee59985fd3de2cff8f78ff4f4b31ae731593dc6a5d8eb842139291c92
 
         // line 6
         echo "    <p>";
-        echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\TranslationExtension')->trans("registration.check_email", array("%email%" => $this->getAttribute((isset($context["user"]) ? $context["user"] : $this->getContext($context, "user")), "email", array())), "FOSUserBundle"), "html", null, true);
+        echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\TranslationExtension')->trans("Email :", array("%email%" => $this->getAttribute((isset($context["user"]) ? $context["user"] : $this->getContext($context, "user")), "email", array())), "FOSUserBundle"), "html", null, true);
         echo "</p>
 ";
         
@@ -88,7 +88,7 @@ class __TwigTemplate_4aee59985fd3de2cff8f78ff4f4b31ae731593dc6a5d8eb842139291c92
 {% trans_default_domain 'FOSUserBundle' %}
 
 {% block fos_user_content %}
-    <p>{{ 'registration.check_email'|trans({'%email%': user.email}) }}</p>
+    <p>{{ 'Email :'|trans({'%email%': user.email}) }}</p>
 {% endblock fos_user_content %}
 ", "@FOSUser/Registration/check_email.html.twig", "C:\\Users\\matthias\\Desktop\\stage\\TEMI\\site\\vendor\\friendsofsymfony\\user-bundle\\Resources\\views\\Registration\\check_email.html.twig");
     }

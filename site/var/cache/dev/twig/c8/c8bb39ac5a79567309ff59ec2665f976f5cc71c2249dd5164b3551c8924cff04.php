@@ -47,7 +47,7 @@ class __TwigTemplate_32417e30bdcd3d1a28154e87ad7d1609682dccda7b3ce1d0f4a34fe5a46
 
         // line 6
         echo "    <p>";
-        echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\TranslationExtension')->trans("registration.confirmed", array("%username%" => $this->getAttribute((isset($context["user"]) ? $context["user"] : $this->getContext($context, "user")), "username", array())), "FOSUserBundle"), "html", null, true);
+        echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\TranslationExtension')->trans("confimrmé :", array("%username%" => $this->getAttribute((isset($context["user"]) ? $context["user"] : $this->getContext($context, "user")), "username", array())), "FOSUserBundle"), "html", null, true);
         echo "</p>
     ";
         // line 7
@@ -56,7 +56,7 @@ class __TwigTemplate_32417e30bdcd3d1a28154e87ad7d1609682dccda7b3ce1d0f4a34fe5a46
             echo "    <p><a href=\"";
             echo twig_escape_filter($this->env, (isset($context["targetUrl"]) ? $context["targetUrl"] : $this->getContext($context, "targetUrl")), "html", null, true);
             echo "\">";
-            echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\TranslationExtension')->trans("registration.back", array(), "FOSUserBundle"), "html", null, true);
+            echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\TranslationExtension')->trans("Confirmer", array(), "FOSUserBundle"), "html", null, true);
             echo "</a></p>
     ";
         }
@@ -98,9 +98,9 @@ class __TwigTemplate_32417e30bdcd3d1a28154e87ad7d1609682dccda7b3ce1d0f4a34fe5a46
 {% trans_default_domain 'FOSUserBundle' %}
 
 {% block fos_user_content %}
-    <p>{{ 'registration.confirmed'|trans({'%username%': user.username}) }}</p>
+    <p>{{ 'confimrmé :'|trans({'%username%': user.username}) }}</p>
     {% if targetUrl %}
-    <p><a href=\"{{ targetUrl }}\">{{ 'registration.back'|trans }}</a></p>
+    <p><a href=\"{{ targetUrl }}\">{{ 'Confirmer'|trans }}</a></p>
     {% endif %}
 {% endblock fos_user_content %}
 ", "@FOSUser/Registration/confirmed.html.twig", "C:\\Users\\matthias\\Desktop\\stage\\TEMI\\site\\vendor\\friendsofsymfony\\user-bundle\\Resources\\views\\Registration\\confirmed.html.twig");

@@ -44,36 +44,40 @@ class __TwigTemplate_a5c45edb7d7cf80987ed7ae59aee227a5e514ea61318c24005dc38e7bd8
             // line 9
             echo "        <input type=\"hidden\" name=\"_csrf_token\" value=\"";
             echo twig_escape_filter($this->env, (isset($context["csrf_token"]) ? $context["csrf_token"] : $this->getContext($context, "csrf_token")), "html", null, true);
-            echo "\" />
+            echo "\"/>
     ";
         }
         // line 11
-        echo "
-    <label for=\"username\">";
+        echo "    <div class=\"form-group\">
+        <label for=\"username\">";
         // line 12
-        echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\TranslationExtension')->trans("security.login.username", array(), "FOSUserBundle"), "html", null, true);
+        echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\TranslationExtension')->trans("Nom", array(), "FOSUserBundle"), "html", null, true);
         echo "</label>
-    <input type=\"text\" id=\"username\" name=\"_username\" value=\"";
+        <input type=\"text\" id=\"username\" class=\"form-control\" name=\"_username\" value=\"";
         // line 13
         echo twig_escape_filter($this->env, (isset($context["last_username"]) ? $context["last_username"] : $this->getContext($context, "last_username")), "html", null, true);
-        echo "\" required=\"required\" autocomplete=\"username\" />
-
-    <label for=\"password\">";
-        // line 15
-        echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\TranslationExtension')->trans("security.login.password", array(), "FOSUserBundle"), "html", null, true);
+        echo "\" required=\"required\"
+               autocomplete=\"username\"/>
+    </div>
+    <div class=\"form-group\">
+        <label for=\"password\">";
+        // line 17
+        echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\TranslationExtension')->trans("Mot de passe :", array(), "FOSUserBundle"), "html", null, true);
         echo "</label>
-    <input type=\"password\" id=\"password\" name=\"_password\" required=\"required\" autocomplete=\"current-password\" />
-
-    <input type=\"checkbox\" id=\"remember_me\" name=\"_remember_me\" value=\"on\" />
-    <label for=\"remember_me\">";
-        // line 19
-        echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\TranslationExtension')->trans("security.login.remember_me", array(), "FOSUserBundle"), "html", null, true);
+        <input type=\"password\" class=\"form-control\"  id=\"password\" name=\"_password\" required=\"required\" autocomplete=\"current-password\"/>
+    </div>
+    <div class=\"form-group\">
+        <input type=\"checkbox\"  id=\"remember_me\" name=\"_remember_me\" value=\"on\"/>
+        <label for=\"remember_me\">";
+        // line 22
+        echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\TranslationExtension')->trans("Se souvenir de moi", array(), "FOSUserBundle"), "html", null, true);
         echo "</label>
+    </div>
 
-    <input type=\"submit\" id=\"_submit\" name=\"_submit\" value=\"";
-        // line 21
-        echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\TranslationExtension')->trans("security.login.submit", array(), "FOSUserBundle"), "html", null, true);
-        echo "\" />
+    <input type=\"submit\" class=\"btn btn-default\" id=\"_submit\" name=\"_submit\" value=\"";
+        // line 25
+        echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\TranslationExtension')->trans("Valider", array(), "FOSUserBundle"), "html", null, true);
+        echo "\"/>
 </form>
 ";
         
@@ -96,7 +100,7 @@ class __TwigTemplate_a5c45edb7d7cf80987ed7ae59aee227a5e514ea61318c24005dc38e7bd8
 
     public function getDebugInfo()
     {
-        return array (  75 => 21,  70 => 19,  63 => 15,  58 => 13,  54 => 12,  51 => 11,  45 => 9,  43 => 8,  39 => 7,  36 => 6,  30 => 4,  28 => 3,  25 => 2,);
+        return array (  79 => 25,  73 => 22,  65 => 17,  58 => 13,  54 => 12,  51 => 11,  45 => 9,  43 => 8,  39 => 7,  36 => 6,  30 => 4,  28 => 3,  25 => 2,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -117,19 +121,23 @@ class __TwigTemplate_a5c45edb7d7cf80987ed7ae59aee227a5e514ea61318c24005dc38e7bd8
 
 <form action=\"{{ path(\"fos_user_security_check\") }}\" method=\"post\">
     {% if csrf_token %}
-        <input type=\"hidden\" name=\"_csrf_token\" value=\"{{ csrf_token }}\" />
+        <input type=\"hidden\" name=\"_csrf_token\" value=\"{{ csrf_token }}\"/>
     {% endif %}
+    <div class=\"form-group\">
+        <label for=\"username\">{{ 'Nom'|trans }}</label>
+        <input type=\"text\" id=\"username\" class=\"form-control\" name=\"_username\" value=\"{{ last_username }}\" required=\"required\"
+               autocomplete=\"username\"/>
+    </div>
+    <div class=\"form-group\">
+        <label for=\"password\">{{ 'Mot de passe :'|trans }}</label>
+        <input type=\"password\" class=\"form-control\"  id=\"password\" name=\"_password\" required=\"required\" autocomplete=\"current-password\"/>
+    </div>
+    <div class=\"form-group\">
+        <input type=\"checkbox\"  id=\"remember_me\" name=\"_remember_me\" value=\"on\"/>
+        <label for=\"remember_me\">{{ 'Se souvenir de moi'|trans }}</label>
+    </div>
 
-    <label for=\"username\">{{ 'security.login.username'|trans }}</label>
-    <input type=\"text\" id=\"username\" name=\"_username\" value=\"{{ last_username }}\" required=\"required\" autocomplete=\"username\" />
-
-    <label for=\"password\">{{ 'security.login.password'|trans }}</label>
-    <input type=\"password\" id=\"password\" name=\"_password\" required=\"required\" autocomplete=\"current-password\" />
-
-    <input type=\"checkbox\" id=\"remember_me\" name=\"_remember_me\" value=\"on\" />
-    <label for=\"remember_me\">{{ 'security.login.remember_me'|trans }}</label>
-
-    <input type=\"submit\" id=\"_submit\" name=\"_submit\" value=\"{{ 'security.login.submit'|trans }}\" />
+    <input type=\"submit\" class=\"btn btn-default\" id=\"_submit\" name=\"_submit\" value=\"{{ 'Valider'|trans }}\"/>
 </form>
 ", "@FOSUser/Security/login_content.html.twig", "C:\\Users\\matthias\\Desktop\\stage\\TEMI\\site\\vendor\\friendsofsymfony\\user-bundle\\Resources\\views\\Security\\login_content.html.twig");
     }

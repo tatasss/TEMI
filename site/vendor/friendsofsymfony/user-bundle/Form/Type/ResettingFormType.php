@@ -45,8 +45,8 @@ class ResettingFormType extends AbstractType
                     'autocomplete' => 'new-password',
                 ),
             ),
-            'first_options' => array('label' => 'form.new_password'),
-            'second_options' => array('label' => 'form.new_password_confirmation'),
+            'first_options' => array('label' => 'Nouveaux Mot de passe :'),
+            'second_options' => array('label' => 'Confirmer nouveaux mot de passe :'),
             'invalid_message' => 'fos_user.password.mismatch',
         ));
     }

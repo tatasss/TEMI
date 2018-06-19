@@ -1,6 +1,6 @@
 <?php
 
-/* TEMImainBundle:Temi:layout.html.twig */
+/* @TEMImain/Temi/layout.html.twig */
 class __TwigTemplate_79f72898d5bce345276a7864435367d31483bc85330f8180d9f0f312116ab95f extends Twig_Template
 {
     public function __construct(Twig_Environment $env)
@@ -19,10 +19,10 @@ class __TwigTemplate_79f72898d5bce345276a7864435367d31483bc85330f8180d9f0f312116
     protected function doDisplay(array $context, array $blocks = array())
     {
         $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
-        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->enter($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "TEMImainBundle:Temi:layout.html.twig"));
+        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->enter($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "@TEMImain/Temi/layout.html.twig"));
 
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "TEMImainBundle:Temi:layout.html.twig"));
+        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "@TEMImain/Temi/layout.html.twig"));
 
         // line 1
         echo "<!DOCTYPE html>
@@ -35,10 +35,25 @@ class __TwigTemplate_79f72898d5bce345276a7864435367d31483bc85330f8180d9f0f312116
         // line 7
         echo "    </title>
     <meta charset=\"utf-8\">
-    <link rel=\"shortcut icon\" type=\"image/x-icon\" href=\"../image/logo_CERDI_UCA-01.png\">
+    <link rel=\"shortcut icon\" type=\"image/x-icon\" ";
+        // line 9
+        if (($this->getAttribute($this->getAttribute($this->getAttribute((isset($context["app"]) ? $context["app"] : $this->getContext($context, "app")), "request", array()), "attributes", array()), "get", array(0 => "_route"), "method") != "fos_user_registration_register")) {
+            echo " href=\"../image/logo_CERDI_UCA-01.png\"";
+        } else {
+            echo " href=\"../../image/logo_CERDI_UCA-01.png\"";
+        }
+        echo ">
     <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">
     <link rel=\"stylesheet\" href=\"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css\">
-    <link rel=\"stylesheet\" href=\"../css/general.css\">
+    <link rel=\"stylesheet\" ";
+        // line 12
+        if (($this->getAttribute($this->getAttribute($this->getAttribute((isset($context["app"]) ? $context["app"] : $this->getContext($context, "app")), "request", array()), "attributes", array()), "get", array(0 => "_route"), "method") != "fos_user_registration_register")) {
+            // line 13
+            echo "          href=\"../css/general.css\"";
+        } else {
+            echo " href=\"../../css/general.css\"";
+        }
+        echo ">
     <meta name=\"viewport\" content=\"width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no\">
     <script src=\"https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js\"></script>
     <script src=\"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js\"></script>
@@ -52,25 +67,32 @@ class __TwigTemplate_79f72898d5bce345276a7864435367d31483bc85330f8180d9f0f312116
             <div class=\"container-fluid\">
                 <div class=\"navbar-header\">
                     <a class=\" navbar-brand\" href=\"";
-        // line 25
+        // line 26
         echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("temi_platform_home");
         echo "\"><img class=\"img-rounded\"
-                                                                                          src=\"../image/logo_CERDI_UCA-01.png\">Cerdi</a>
+                                ";
+        // line 27
+        if (($this->getAttribute($this->getAttribute($this->getAttribute((isset($context["app"]) ? $context["app"] : $this->getContext($context, "app")), "request", array()), "attributes", array()), "get", array(0 => "_route"), "method") != "fos_user_registration_register")) {
+            echo " src=\"../image/logo_CERDI_UCA-01.png\"";
+        } else {
+            echo " src=\"../../image/logo_CERDI_UCA-01.png\"";
+        }
+        echo ">Cerdi</a>
                 </div>
                 <ul class=\"nav navbar-nav\">
                     <li";
-        // line 29
+        // line 30
         if (($this->getAttribute($this->getAttribute($this->getAttribute((isset($context["app"]) ? $context["app"] : $this->getContext($context, "app")), "request", array()), "attributes", array()), "get", array(0 => "_route"), "method") == "temi_platform_home")) {
             echo " class=\"active\"";
         }
         echo ">
                         <a href=\"";
-        // line 30
+        // line 31
         echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("temi_platform_home");
         echo "\">Modèle</a>
                     </li>
                     <li ";
-        // line 32
+        // line 33
         if (($this->getAttribute($this->getAttribute($this->getAttribute((isset($context["app"]) ? $context["app"] : $this->getContext($context, "app")), "request", array()), "attributes", array()), "get", array(0 => "_route"), "method") == "temi_platform_graph")) {
             echo " class=\"active\"";
         }
@@ -78,13 +100,13 @@ class __TwigTemplate_79f72898d5bce345276a7864435367d31483bc85330f8180d9f0f312116
                         <a data-toggle=\"modal\" href=\"#myModal\">graphique</a>
                     </li>
                     <li ";
-        // line 35
+        // line 36
         if (($this->getAttribute($this->getAttribute($this->getAttribute((isset($context["app"]) ? $context["app"] : $this->getContext($context, "app")), "request", array()), "attributes", array()), "get", array(0 => "_route"), "method") == "temi_platform_add")) {
             echo " class=\"active\"";
         }
         echo ">
                         <a id=\"ajoutButt\" href=\"";
-        // line 36
+        // line 37
         echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("temi_platform_add");
         echo "\">Ajouter un pays
                             <span class=\"glyphicon glyphicon-plus-sign\"> </span>
@@ -93,25 +115,25 @@ class __TwigTemplate_79f72898d5bce345276a7864435367d31483bc85330f8180d9f0f312116
                 </ul>
                 <ul class=\"nav navbar-nav navbar-right\">
                     <li ";
-        // line 42
+        // line 43
         if (($this->getAttribute($this->getAttribute($this->getAttribute((isset($context["app"]) ? $context["app"] : $this->getContext($context, "app")), "request", array()), "attributes", array()), "get", array(0 => "_route"), "method") == "fos_user_registration_register")) {
             echo " class=\"active\"";
         }
         echo ">
                         <a href=\"";
-        // line 43
+        // line 44
         echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("fos_user_registration_register");
         echo "\"><span class=\"glyphicon glyphicon-user\"></span>
                             Inscription</a>
                     </li>
                     <li ";
-        // line 46
+        // line 47
         if (($this->getAttribute($this->getAttribute($this->getAttribute((isset($context["app"]) ? $context["app"] : $this->getContext($context, "app")), "request", array()), "attributes", array()), "get", array(0 => "_route"), "method") == "fos_user_security_login")) {
             echo " class=\"active\"";
         }
         echo ">
                         <a href=\"";
-        // line 47
+        // line 48
         echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("fos_user_security_login");
         echo "\"><span class=\"glyphicon glyphicon-log-in\"></span>
                             Connection</a>
@@ -163,7 +185,14 @@ class __TwigTemplate_79f72898d5bce345276a7864435367d31483bc85330f8180d9f0f312116
     <div class=\"container-fluid myContain\">
         <div class=\"row\">
             <div class=\"col-sm-4\">
-                <img src=\"../image/Logo_Temi_1.png\">
+                <img ";
+        // line 98
+        if (($this->getAttribute($this->getAttribute($this->getAttribute((isset($context["app"]) ? $context["app"] : $this->getContext($context, "app")), "request", array()), "attributes", array()), "get", array(0 => "_route"), "method") != "fos_user_registration_register")) {
+            echo " src=\"../image/Logo_Temi_1.png\"";
+        } else {
+            echo " src=\"../../image/Logo_Temi_1.png\"";
+        }
+        echo ">
                 <h2>LE CALCULATOR TEMI</h2>
                 <div class=\"panel-group Borderhide\" id=\"accordion7\">
                     <div class=\"panel panel-default Borderhide\">
@@ -258,17 +287,17 @@ class __TwigTemplate_79f72898d5bce345276a7864435367d31483bc85330f8180d9f0f312116
             </div>
             <div class=\"col-sm-8\">
                 ";
-        // line 191
+        // line 192
         $this->displayBlock('body', $context, $blocks);
-        // line 193
+        // line 194
         echo "            </div>
         </div>
 
     </div>
     ";
-        // line 197
+        // line 198
         $this->displayBlock('js', $context, $blocks);
-        // line 200
+        // line 201
         echo "
 </div>
 </body>
@@ -300,7 +329,7 @@ class __TwigTemplate_79f72898d5bce345276a7864435367d31483bc85330f8180d9f0f312116
 
     }
 
-    // line 191
+    // line 192
     public function block_body($context, array $blocks = array())
     {
         $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
@@ -309,7 +338,7 @@ class __TwigTemplate_79f72898d5bce345276a7864435367d31483bc85330f8180d9f0f312116
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
 
-        // line 192
+        // line 193
         echo "                ";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
@@ -319,7 +348,7 @@ class __TwigTemplate_79f72898d5bce345276a7864435367d31483bc85330f8180d9f0f312116
 
     }
 
-    // line 197
+    // line 198
     public function block_js($context, array $blocks = array())
     {
         $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
@@ -328,7 +357,7 @@ class __TwigTemplate_79f72898d5bce345276a7864435367d31483bc85330f8180d9f0f312116
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "js"));
 
-        // line 198
+        // line 199
         echo "
     ";
         
@@ -341,7 +370,7 @@ class __TwigTemplate_79f72898d5bce345276a7864435367d31483bc85330f8180d9f0f312116
 
     public function getTemplateName()
     {
-        return "TEMImainBundle:Temi:layout.html.twig";
+        return "@TEMImain/Temi/layout.html.twig";
     }
 
     public function isTraitable()
@@ -351,7 +380,7 @@ class __TwigTemplate_79f72898d5bce345276a7864435367d31483bc85330f8180d9f0f312116
 
     public function getDebugInfo()
     {
-        return array (  332 => 198,  323 => 197,  313 => 192,  304 => 191,  294 => 6,  285 => 5,  272 => 200,  270 => 197,  264 => 193,  262 => 191,  115 => 47,  109 => 46,  103 => 43,  97 => 42,  88 => 36,  82 => 35,  74 => 32,  69 => 30,  63 => 29,  56 => 25,  36 => 7,  34 => 5,  28 => 1,);
+        return array (  361 => 199,  352 => 198,  342 => 193,  333 => 192,  323 => 6,  314 => 5,  301 => 201,  299 => 198,  293 => 194,  291 => 192,  190 => 98,  137 => 48,  131 => 47,  125 => 44,  119 => 43,  110 => 37,  104 => 36,  96 => 33,  91 => 31,  85 => 30,  75 => 27,  71 => 26,  52 => 13,  50 => 12,  40 => 9,  36 => 7,  34 => 5,  28 => 1,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -372,10 +401,11 @@ class __TwigTemplate_79f72898d5bce345276a7864435367d31483bc85330f8180d9f0f312116
         {% endblock %}
     </title>
     <meta charset=\"utf-8\">
-    <link rel=\"shortcut icon\" type=\"image/x-icon\" href=\"../image/logo_CERDI_UCA-01.png\">
+    <link rel=\"shortcut icon\" type=\"image/x-icon\" {% if app.request.attributes.get(\"_route\")!='fos_user_registration_register' %} href=\"../image/logo_CERDI_UCA-01.png\"{% else %} href=\"../../image/logo_CERDI_UCA-01.png\"{% endif %}>
     <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">
     <link rel=\"stylesheet\" href=\"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css\">
-    <link rel=\"stylesheet\" href=\"../css/general.css\">
+    <link rel=\"stylesheet\" {% if app.request.attributes.get(\"_route\")!='fos_user_registration_register' %}
+          href=\"../css/general.css\"{% else %} href=\"../../css/general.css\"{% endif %}>
     <meta name=\"viewport\" content=\"width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no\">
     <script src=\"https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js\"></script>
     <script src=\"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js\"></script>
@@ -389,7 +419,7 @@ class __TwigTemplate_79f72898d5bce345276a7864435367d31483bc85330f8180d9f0f312116
             <div class=\"container-fluid\">
                 <div class=\"navbar-header\">
                     <a class=\" navbar-brand\" href=\"{{ path('temi_platform_home') }}\"><img class=\"img-rounded\"
-                                                                                          src=\"../image/logo_CERDI_UCA-01.png\">Cerdi</a>
+                                {% if app.request.attributes.get(\"_route\")!='fos_user_registration_register' %} src=\"../image/logo_CERDI_UCA-01.png\"{% else %} src=\"../../image/logo_CERDI_UCA-01.png\"{% endif %}>Cerdi</a>
                 </div>
                 <ul class=\"nav navbar-nav\">
                     <li{% if app.request.attributes.get(\"_route\")=='temi_platform_home' %} class=\"active\"{% endif %}>
@@ -460,7 +490,7 @@ class __TwigTemplate_79f72898d5bce345276a7864435367d31483bc85330f8180d9f0f312116
     <div class=\"container-fluid myContain\">
         <div class=\"row\">
             <div class=\"col-sm-4\">
-                <img src=\"../image/Logo_Temi_1.png\">
+                <img {% if app.request.attributes.get(\"_route\")!='fos_user_registration_register' %} src=\"../image/Logo_Temi_1.png\"{% else %} src=\"../../image/Logo_Temi_1.png\"{% endif %}>
                 <h2>LE CALCULATOR TEMI</h2>
                 <div class=\"panel-group Borderhide\" id=\"accordion7\">
                     <div class=\"panel panel-default Borderhide\">
@@ -566,6 +596,6 @@ class __TwigTemplate_79f72898d5bce345276a7864435367d31483bc85330f8180d9f0f312116
 
 </div>
 </body>
-</html>", "TEMImainBundle:Temi:layout.html.twig", "C:\\Users\\matthias\\Desktop\\stage\\TEMI\\site\\src\\TEMI\\mainBundle\\Resources\\views\\Temi\\layout.html.twig");
+</html>", "@TEMImain/Temi/layout.html.twig", "C:\\Users\\matthias\\Desktop\\stage\\TEMI\\site\\src\\TEMI\\mainBundle\\Resources\\views\\Temi\\layout.html.twig");
     }
 }

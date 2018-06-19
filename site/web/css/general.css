@@ -253,15 +253,19 @@ a {
 .trans {
     background-color: transparent;
 }
-.liste-group{
- background-color: transparent;
-}
-.liste-group-item-default{
+
+.liste-group {
     background-color: transparent;
 }
-.liste-group .liste-group-item-default{
+
+.liste-group-item-default {
     background-color: transparent;
 }
+
+.liste-group .liste-group-item-default {
+    background-color: transparent;
+}
+
 .btn-block {
     background-color: #eee;
     color: black;

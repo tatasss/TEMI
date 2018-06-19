@@ -6,10 +6,11 @@
         {% endblock %}
     </title>
     <meta charset="utf-8">
-    <link rel="shortcut icon" type="image/x-icon" href="../image/logo_CERDI_UCA-01.png">
+    <link rel="shortcut icon" type="image/x-icon" {% if app.request.attributes.get("_route")!='fos_user_registration_register' %} href="../image/logo_CERDI_UCA-01.png"{% else %} href="../../image/logo_CERDI_UCA-01.png"{% endif %}>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <link rel="stylesheet" href="../css/general.css">
+    <link rel="stylesheet" {% if app.request.attributes.get("_route")!='fos_user_registration_register' %}
+          href="../css/general.css"{% else %} href="../../css/general.css"{% endif %}>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
@@ -23,7 +24,7 @@
             <div class="container-fluid">
                 <div class="navbar-header">
                     <a class=" navbar-brand" href="{{ path('temi_platform_home') }}"><img class="img-rounded"
-                                                                                          src="../image/logo_CERDI_UCA-01.png">Cerdi</a>
+                                {% if app.request.attributes.get("_route")!='fos_user_registration_register' %} src="../image/logo_CERDI_UCA-01.png"{% else %} src="../../image/logo_CERDI_UCA-01.png"{% endif %}>Cerdi</a>
                 </div>
                 <ul class="nav navbar-nav">
                     <li{% if app.request.attributes.get("_route")=='temi_platform_home' %} class="active"{% endif %}>
@@ -94,7 +95,7 @@
     <div class="container-fluid myContain">
         <div class="row">
             <div class="col-sm-4">
-                <img src="../image/Logo_Temi_1.png">
+                <img {% if app.request.attributes.get("_route")!='fos_user_registration_register' %} src="../image/Logo_Temi_1.png"{% else %} src="../../image/Logo_Temi_1.png"{% endif %}>
                 <h2>LE CALCULATOR TEMI</h2>
                 <div class="panel-group Borderhide" id="accordion7">
                     <div class="panel panel-default Borderhide">

@@ -48,7 +48,7 @@ class ChangePasswordFormType extends AbstractType
         }
 
         $builder->add('current_password', PasswordType::class, array(
-            'label' => 'form.current_password',
+            'label' => 'mot de passe actuel',
             'translation_domain' => 'FOSUserBundle',
             'mapped' => false,
             'constraints' => array(
@@ -68,8 +68,8 @@ class ChangePasswordFormType extends AbstractType
                     'autocomplete' => 'new-password',
                 ),
             ),
-            'first_options' => array('label' => 'form.new_password'),
-            'second_options' => array('label' => 'form.new_password_confirmation'),
+            'first_options' => array('label' => 'Nouveaux mot de passe'),
+            'second_options' => array('label' => 'Confirmer nouveaux mot de passe'),
             'invalid_message' => 'fos_user.password.mismatch',
         ));
     }
