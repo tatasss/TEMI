@@ -4,10 +4,6 @@
     <list default="true" id="b89c5143-0212-42c0-b73b-81dad73db30d" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/css/general.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/general.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/html/ajoutPays.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/ajoutPays.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/html/graphForm.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/graphForm.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/html/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/html/model.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/model.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -27,7 +23,7 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/html/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
+            <state relative-caret-position="714">
               <caret line="42" column="48" selection-start-line="42" selection-start-column="48" selection-end-line="42" selection-end-column="48" />
             </state>
           </provider>
@@ -36,7 +32,7 @@
       <file leaf-file-name="ajoutPays.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/html/ajoutPays.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
+            <state relative-caret-position="697">
               <caret line="41" column="48" selection-start-line="41" selection-start-column="48" selection-end-line="41" selection-end-column="48" />
             </state>
           </provider>
@@ -60,11 +56,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="general.css" pinned="false" current-in-tab="false">
+      <file leaf-file-name="general.css" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/css/general.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="547">
-              <caret line="268" selection-start-line="268" selection-end-line="268" />
+            <state relative-caret-position="339">
+              <caret line="271" lean-forward="true" selection-start-line="271" selection-end-line="271" />
             </state>
           </provider>
         </entry>
@@ -81,7 +77,7 @@
       <file leaf-file-name="graphForm.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/html/graphForm.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="425">
+            <state relative-caret-position="663">
               <caret line="39" column="48" selection-start-line="39" selection-start-column="48" selection-end-line="39" selection-end-column="48" />
             </state>
           </provider>
@@ -96,11 +92,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="model.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="model.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/html/model.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="411">
-              <caret line="134" column="4" selection-start-line="134" selection-start-column="4" selection-end-line="134" selection-end-column="4" />
+            <state relative-caret-position="2278">
+              <caret line="134" selection-start-line="134" selection-end-line="134" />
             </state>
           </provider>
         </entry>
@@ -198,11 +194,11 @@
         <option value="$PROJECT_DIR$/javascript/view/viewGenerator/graphGenerator.js" />
         <option value="$PROJECT_DIR$/html/lol.html" />
         <option value="$PROJECT_DIR$/javascript/view/directlyChange/graphFormView.js" />
-        <option value="$PROJECT_DIR$/css/general.css" />
         <option value="$PROJECT_DIR$/html/index.html" />
         <option value="$PROJECT_DIR$/html/ajoutPays.html" />
         <option value="$PROJECT_DIR$/html/graphForm.html" />
         <option value="$PROJECT_DIR$/html/model.html" />
+        <option value="$PROJECT_DIR$/css/general.css" />
       </list>
     </option>
   </component>
@@ -511,6 +507,8 @@
       <workItem from="1529305797977" duration="1594000" />
       <workItem from="1529307426623" duration="8869000" />
       <workItem from="1529324508019" duration="1708000" />
+      <workItem from="1529320721138" duration="2388000" />
+      <workItem from="1529401859074" duration="10000" />
     </task>
     <task id="LOCAL-00001" summary="mis en place d'un code propre">
       <created>1526980633672</created>
@@ -621,7 +619,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="600469000" />
+    <option name="totallyTimeSpent" value="602867000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -633,18 +631,17 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1696" height="1026" extended-state="6" />
-    <editor active="true" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <layout>
       <window_info anchor="right" id="PlantUML" order="3" weight="0.33801955" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4991453" side_tool="true" visible="true" weight="0.27017114" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4991453" side_tool="true" visible="true" weight="0.27760968" />
       <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.49938875" weight="0.3298969" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" x="0" y="447" width="1680" height="116" id="Event Log" order="12" sideWeight="0.3551345" side_tool="true" visible="true" weight="0.25887743" />
+      <window_info anchor="bottom" x="0" y="447" width="1680" height="116" id="Event Log" order="12" sideWeight="0.35627836" side_tool="true" visible="true" weight="0.2571912" />
       <window_info anchor="bottom" id="Version Control" order="8" sideWeight="0.35330072" side_tool="true" weight="0.19473082" />
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info id="Structure" order="1" sideWeight="0.50085473" side_tool="true" weight="0.24327628" />
-      <window_info anchor="bottom" id="Terminal" order="9" sideWeight="0.6448655" visible="true" weight="0.25887743" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="9" sideWeight="0.64372164" visible="true" weight="0.2571912" />
       <window_info id="Favorites" order="2" sideWeight="0.50085473" side_tool="true" weight="0.24327628" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="TypeScript" order="10" />
@@ -894,38 +891,38 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/css/general.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="547">
-          <caret line="268" selection-start-line="268" selection-end-line="268" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/html/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
+        <state relative-caret-position="714">
           <caret line="42" column="48" selection-start-line="42" selection-start-column="48" selection-end-line="42" selection-end-column="48" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/html/ajoutPays.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
+        <state relative-caret-position="697">
           <caret line="41" column="48" selection-start-line="41" selection-start-column="48" selection-end-line="41" selection-end-column="48" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/html/graphForm.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
+        <state relative-caret-position="663">
           <caret line="39" column="48" selection-start-line="39" selection-start-column="48" selection-end-line="39" selection-end-column="48" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/html/model.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="411">
-          <caret line="134" column="4" selection-start-line="134" selection-start-column="4" selection-end-line="134" selection-end-column="4" />
+        <state relative-caret-position="2278">
+          <caret line="134" selection-start-line="134" selection-end-line="134" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/general.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="339">
+          <caret line="271" lean-forward="true" selection-start-line="271" selection-end-line="271" />
         </state>
       </provider>
     </entry>
