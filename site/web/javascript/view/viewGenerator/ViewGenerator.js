@@ -1,6 +1,6 @@
 /**
  * @description This function is a constructor of ViewGenerator Class
- * @param {Model} modele - the Modele use by this class to generate view
+ * @param {Model} modele - the Entity use by this class to generate view
  * @constructor
  */
 let ViewGenerator = function (modele) {
@@ -156,7 +156,7 @@ ViewGenerator.prototype.entrepriseHTML = function () {
     return result;
 };
 /**
- * @description This function create a html to give a bilan Array on the firm used by the Modele
+ * @description This function create a html to give a bilan Array on the firm used by the Entity
  * @return {string}
  */
 ViewGenerator.prototype.bilanHtml = function () {
@@ -417,12 +417,12 @@ ViewGenerator.prototype.navigationHtml = function () {
     }
     let pannel = bootstrap.pan("default", "Paramétres", this.modele.donnee.land().name() + "<br/>" + regime + "</br>" + this.modele.donnee.topic() + "</br>" + this.modele.donnee.margin());
     let result = "<div class='vertical-menu'>" + pannel;
-    result += bootstrap.buttonBalA("./Modele", "Voir le résultat");
+    result += bootstrap.buttonBalA("./Entity", "Voir le résultat");
     result += bootstrap.buttonBalA("./", "Retour") + "</div>";
     return result;
 };
 /**
- * @description This function is the main to create a Data Modele View on html
+ * @description This function is the main to create a Data Entity View on html
  * @return {string}
  */
 ViewGenerator.prototype.mainHTML = function () {
@@ -431,7 +431,7 @@ ViewGenerator.prototype.mainHTML = function () {
     return bootstrap.GridNavCote(this.bodyHtml(), this.navigationHtml());
 };
 /**
- * @description This function create a HTML to the petrole Tva Taxe on Modele
+ * @description This function create a HTML to the petrole Tva Taxe on Entity
  * @return {string}
  */
 ViewGenerator.prototype.petroleHtml = function () {
@@ -721,7 +721,7 @@ ViewGenerator.prototype.impotSocieteHtml = function () {
     return bootstrap.pan("default", null, tab);
 };
 /**
- * @description This function create a HTML to give a IMF Impot on Modele
+ * @description This function create a HTML to give a IMF Impot on Entity
  * @return {string}
  */
 ViewGenerator.prototype.impotForfaitHtml = function () {
@@ -767,7 +767,7 @@ ViewGenerator.prototype.isImfHtml = function () {
     return bootstrap.pan("default", null, tab);
 };
 /**
- * @description This function create the HTML to give the IRVM Impot on Modele
+ * @description This function create the HTML to give the IRVM Impot on Entity
  * @return {string}
  */
 ViewGenerator.prototype.impotRevenuValeurMobilieres = function () {
@@ -809,7 +809,7 @@ ViewGenerator.prototype.actualisationHtml = function () {
 };
 /**
  * @description This function create a HTML to give All Impot and Taxe used by a Model
- * @param  {Object} monm - The impot use by the Modele use to generate a Html
+ * @param  {Object} monm - The impot use by the Entity use to generate a Html
  * @return {string}
  */
 ViewGenerator.prototype.tabImpotEtTaxe = function (monm) {

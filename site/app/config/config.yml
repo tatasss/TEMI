@@ -56,6 +56,7 @@ doctrine:
         #path: '%database_path%'
 
     orm:
+        default_entity_manager: default
         auto_generate_proxy_classes: '%kernel.debug%'
         naming_strategy: doctrine.orm.naming_strategy.underscore
         auto_mapping: true
@@ -71,7 +72,8 @@ swiftmailer:
 fos_user:
     db_driver: orm # other valid values are 'mongodb' and 'couchdb'
     firewall_name: main
-    user_class: TEMI\mainBundle\Modele\User\User
+    user_class: TEMI\mainBundle\Entity\User\User
     from_email:
         address: "%mailer_user%"
         sender_name: "%mailer_user%"
+

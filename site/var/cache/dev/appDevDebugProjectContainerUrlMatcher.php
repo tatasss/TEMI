@@ -123,8 +123,8 @@ class appDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
         }
 
         // temi_platform_modele
-        if ('/Modele' === $pathinfo) {
-            return array (  '_controller' => 'TEMI\\mainBundle\\Controller\\TemiController::ModeleAction',  '_route' => 'temi_platform_modele',);
+        if ('/Entity' === $pathinfo) {
+            return array (  '_controller' => 'TEMI\\mainBundle\\Controller\\TemiController::EntityAction',  '_route' => 'temi_platform_modele',);
         }
 
         // temi_platform_add

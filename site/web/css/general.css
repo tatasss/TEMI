@@ -206,7 +206,7 @@ nav {
 }
 
 body {
-    background: url("../image/Fond_TEMI_4.png") fixed;
+    background: url("../image/Fond_TEMI_4.png") fixed center center;
     height: 100vh;
     color: white;
 

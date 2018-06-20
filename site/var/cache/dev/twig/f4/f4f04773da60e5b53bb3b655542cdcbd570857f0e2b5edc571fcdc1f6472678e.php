@@ -47,12 +47,16 @@ class __TwigTemplate_9b03c17ef107d49eac6f18379b9bd90dbc0efe56fdcab405c1be2ee04bb
 
         // line 6
         echo "    <p>";
-        echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\TranslationExtension')->trans("confimrmé :", array("%username%" => $this->getAttribute((isset($context["user"]) ? $context["user"] : $this->getContext($context, "user")), "username", array())), "FOSUserBundle"), "html", null, true);
+        echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\TranslationExtension')->trans("Vous avez bien été enregistrer:", array("%username%" => $this->getAttribute((isset($context["user"]) ? $context["user"] : $this->getContext($context, "user")), "username", array())), "FOSUserBundle"), "html", null, true);
         echo "</p>
-    ";
+    <a class=\"btn btn-default\" href=\"";
         // line 7
+        echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("temi_platform_home");
+        echo "\"> Acceuil </a>
+    ";
+        // line 8
         if ((isset($context["targetUrl"]) ? $context["targetUrl"] : $this->getContext($context, "targetUrl"))) {
-            // line 8
+            // line 9
             echo "    <p><a href=\"";
             echo twig_escape_filter($this->env, (isset($context["targetUrl"]) ? $context["targetUrl"] : $this->getContext($context, "targetUrl")), "html", null, true);
             echo "\">";
@@ -80,7 +84,7 @@ class __TwigTemplate_9b03c17ef107d49eac6f18379b9bd90dbc0efe56fdcab405c1be2ee04bb
 
     public function getDebugInfo()
     {
-        return array (  56 => 8,  54 => 7,  49 => 6,  40 => 5,  11 => 1,);
+        return array (  60 => 9,  58 => 8,  54 => 7,  49 => 6,  40 => 5,  11 => 1,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -98,7 +102,8 @@ class __TwigTemplate_9b03c17ef107d49eac6f18379b9bd90dbc0efe56fdcab405c1be2ee04bb
 {% trans_default_domain 'FOSUserBundle' %}
 
 {% block fos_user_content %}
-    <p>{{ 'confimrmé :'|trans({'%username%': user.username}) }}</p>
+    <p>{{ 'Vous avez bien été enregistrer:'|trans({'%username%': user.username}) }}</p>
+    <a class=\"btn btn-default\" href=\"{{ path('temi_platform_home') }}\"> Acceuil </a>
     {% if targetUrl %}
     <p><a href=\"{{ targetUrl }}\">{{ 'Confirmer'|trans }}</a></p>
     {% endif %}

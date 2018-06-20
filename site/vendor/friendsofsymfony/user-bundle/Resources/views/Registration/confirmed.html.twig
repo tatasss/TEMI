@@ -3,7 +3,8 @@
 {% trans_default_domain 'FOSUserBundle' %}
 
 {% block fos_user_content %}
-    <p>{{ 'confimrmé :'|trans({'%username%': user.username}) }}</p>
+    <p>{{ 'Vous avez bien été enregistrer:'|trans({'%username%': user.username}) }}</p>
+    <a class="btn btn-default" href="{{ path('temi_platform_home') }}"> Acceuil </a>
     {% if targetUrl %}
     <p><a href="{{ targetUrl }}">{{ 'Confirmer'|trans }}</a></p>
     {% endif %}

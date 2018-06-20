@@ -5,10 +5,10 @@
 let Graph = function () {
 };
 /**
- * @param {Array} modeleTab - the array of the Modele use to put a graphique
+ * @param {Array} modeleTab - the array of the Entity use to put a graphique
  * @param {string} idGraph - the id of the graph
  * @param {string} idText - the id of the text
- * @param {string} regime - a government of the Modele
+ * @param {string} regime - a government of the Entity
  * @param {Array} maMarge - A Array of the margin Rate
  * @param {string} titre - a filename of the excel outPut
  * @description This function create a graphique with a module Chart.js
