@@ -2,16 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b89c5143-0212-42c0-b73b-81dad73db30d" name="Default" comment="debut">
-      <change afterPath="$PROJECT_DIR$/src/TEMI/mainBundle/Entity/User/User.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/config/config.yml" beforeDir="false" afterPath="$PROJECT_DIR$/app/config/config.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/config/routing.yml" beforeDir="false" afterPath="$PROJECT_DIR$/app/config/routing.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/config/security.yml" beforeDir="false" afterPath="$PROJECT_DIR$/app/config/security.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/TEMI/mainBundle/Controller/RegistrationController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/TEMI/mainBundle/Controller/RegistrationController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/TEMI/mainBundle/Modele/User/User.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Resources/FOSUserBundle/views/layout.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/app/Resources/FOSUserBundle/views/layout.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/TEMI/mainBundle/Resources/config/routing.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/TEMI/mainBundle/Resources/config/routing.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/TEMI/mainBundle/Resources/views/Temi/layout.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/TEMI/mainBundle/Resources/views/Temi/layout.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/TEMI/mainBundle/TEMImainBundle.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/TEMI/mainBundle/TEMImainBundle.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/var/cache/dev/annotations.map" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/var/cache/dev/annotations.php" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/var/cache/dev/appDevDebugProjectContainer.php" beforeDir="false" />
@@ -67,34 +61,34 @@
       <change beforePath="$PROJECT_DIR$/var/cache/dev/pools/qGV6dY0qnr/S/U/6o6dzHtlv4XY2uRmc8-E" beforeDir="false" afterPath="$PROJECT_DIR$/var/cache/dev/pools/qGV6dY0qnr/S/U/6o6dzHtlv4XY2uRmc8-E" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/var/cache/dev/pools/qGV6dY0qnr/V/M/I4YHK9JMxDcK9X3ajugA" beforeDir="false" afterPath="$PROJECT_DIR$/var/cache/dev/pools/qGV6dY0qnr/V/M/I4YHK9JMxDcK9X3ajugA" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/var/cache/dev/pools/qGV6dY0qnr/X/K/rEJ4r9WOezFcAoiYdRLC" beforeDir="false" afterPath="$PROJECT_DIR$/var/cache/dev/pools/qGV6dY0qnr/X/K/rEJ4r9WOezFcAoiYdRLC" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/dev/profiler/03/20/002003" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/dev/profiler/1c/c4/89c41c" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/dev/profiler/22/57/d45722" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/dev/profiler/30/28/e92830" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/dev/profiler/33/75/ec7533" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/dev/profiler/3b/93/b1933b" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/dev/profiler/42/ce/e8ce42" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/dev/profiler/5f/ea/6dea5f" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/dev/profiler/62/5c/a85c62" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/dev/profiler/70/c1/d5c170" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/dev/profiler/79/68/da6879" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/dev/profiler/7b/98/f8987b" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/dev/profiler/95/4e/7b4e95" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/dev/profiler/97/7f/a27f97" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/dev/profiler/9b/d9/76d99b" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/dev/profiler/a0/59/e359a0" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/dev/profiler/a0/76/d076a0" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/dev/profiler/a5/53/2f53a5" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/dev/profiler/aa/89/e989aa" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/dev/profiler/ab/da/b7daab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/dev/profiler/b3/4b/fa4bb3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/dev/profiler/b3/76/7d76b3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/dev/profiler/ba/63/9d63ba" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/dev/profiler/bc/57/af57bc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/dev/profiler/c1/00/a600c1" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/dev/profiler/d2/93/fd93d2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/dev/profiler/db/e3/a7e3db" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/dev/profiler/fd/9d/879dfd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/var/cache/dev/profiler/06/10/851006" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/var/cache/dev/profiler/0a/de/57de0a" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/var/cache/dev/profiler/13/76/e27613" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/var/cache/dev/profiler/15/76/f07615" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/var/cache/dev/profiler/30/c9/54c930" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/var/cache/dev/profiler/31/d7/7dd731" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/var/cache/dev/profiler/38/72/8d7238" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/var/cache/dev/profiler/4e/a5/faa54e" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/var/cache/dev/profiler/6c/9f/b19f6c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/var/cache/dev/profiler/6e/d9/36d96e" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/var/cache/dev/profiler/71/62/4e6271" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/var/cache/dev/profiler/84/6c/326c84" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/var/cache/dev/profiler/90/d7/7ad790" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/var/cache/dev/profiler/9d/7b/af7b9d" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/var/cache/dev/profiler/9e/48/f9489e" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/var/cache/dev/profiler/9f/4b/6d4b9f" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/var/cache/dev/profiler/a3/a1/96a1a3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/var/cache/dev/profiler/a8/b5/4db5a8" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/var/cache/dev/profiler/be/fb/42fbbe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/var/cache/dev/profiler/bf/e4/73e4bf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/var/cache/dev/profiler/cb/73/2573cb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/var/cache/dev/profiler/e1/b3/2cb3e1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/var/cache/dev/profiler/e6/9e/4b9ee6" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/var/cache/dev/profiler/e8/e4/b5e4e8" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/var/cache/dev/profiler/ec/69/9169ec" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/var/cache/dev/profiler/ef/f6/5ef6ef" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/var/cache/dev/profiler/f5/e7/83e7f5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/var/cache/dev/profiler/f8/7d/de7df8" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/var/cache/dev/profiler/index.csv" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/var/cache/dev/templates.php" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/var/cache/dev/twig/00/0003bed5fd010c7c6215d518b3bb81b819640dfc84e1e3e88723bc201135dbac.php" beforeDir="false" />
@@ -393,292 +387,22 @@
       <change beforePath="$PROJECT_DIR$/var/cache/dev/twig/fd/fd7e5170c435e97d70c65ebda09f53ee1d548bda025bd351bbf72be8de0e0e72.php" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/var/cache/dev/twig/fe/fe89ad71f82d5379b1a3dc96f92a286e688fc0c0b907096278467816c0dab9ca.php" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/var/cache/dev/validation.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/prod/annotations.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/prod/annotations.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/prod/appProdProjectContainer.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/prod/appProdProjectContainer.php.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/prod/appProdProjectContainerUrlGenerator.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/prod/appProdProjectContainerUrlGenerator.php.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/prod/appProdProjectContainerUrlMatcher.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/prod/appProdProjectContainerUrlMatcher.php.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/prod/classes.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/prod/classes.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/prod/pools/WoPradXQXO/+/Y/6SRlieGA-h4kmJAkJZne" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/prod/pools/WoPradXQXO/-/U/JQd+bhSP99eeERRR-SDD" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/prod/pools/WoPradXQXO/1/B/a31F7kI-cKQOEpx+SzJe" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/prod/pools/WoPradXQXO/1/S/wwN6OK3NkQ05oBxH-3UX" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/prod/pools/WoPradXQXO/1/X/V9epGlCLqDflchOtKEJ+" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/prod/pools/WoPradXQXO/1/Y/xf3npOhZfQJx6hGrbb91" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/prod/pools/WoPradXQXO/2/3/qDueb1sRA5W9kmc52fN5" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/prod/pools/WoPradXQXO/2/G/kMLDuwgA8EwQw4jaEPyI" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/prod/pools/WoPradXQXO/2/K/oF4rAIZEbuxM-g4C8md7" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/prod/pools/WoPradXQXO/3/G/z9oBGgrAf19c5YhmrYEb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/prod/pools/WoPradXQXO/3/K/cMUeav4wQc9xtJ0MgvA9" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/prod/pools/WoPradXQXO/3/S/bl0QwqUt8kzGMWKxvVgG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/prod/pools/WoPradXQXO/4/E/8NMDoU6ZF9KKkf3xyuXQ" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/prod/pools/WoPradXQXO/5/G/zCb3dknvOpUjSQ-ZltFq" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/prod/pools/WoPradXQXO/6/D/Lj3oJxLPhfQ8TdRAl1bP" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/prod/pools/WoPradXQXO/6/F/rUQQX2buZcOShREnAqjJ" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/prod/pools/WoPradXQXO/6/J/IMkBoYMjdX2Z4ZZv-O52" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/prod/pools/WoPradXQXO/6/V/yEtvuzqoH6RzrKWokjO1" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/prod/pools/WoPradXQXO/6/W/n8OsGVD47JJ7Th8qwOL2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/prod/pools/WoPradXQXO/7/L/HEt3W66PqKzJVveUJjAd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/prod/pools/WoPradXQXO/7/T/y7Zx1DD9xkqmm69SHFLY" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/prod/pools/WoPradXQXO/7/V/DH0rje35hs1j6IFm1cZv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/prod/pools/WoPradXQXO/8/R/nb2+LxVdNJnPi9ibI8CB" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/prod/pools/WoPradXQXO/A/E/l8Hfs11WBO6G1CcbCnc7" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/prod/pools/WoPradXQXO/A/K/whmmByxV7PUjTKtcaEDx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/prod/pools/WoPradXQXO/A/N/aJbs2hWCrmtPywedEnSy" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/prod/pools/WoPradXQXO/A/O/rJ3i7RS9ut4ZZ7W486O-" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/prod/pools/WoPradXQXO/A/P/fjndYzSRLpTSDhher8EP" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/prod/pools/WoPradXQXO/B/B/3gggo6V0JmUWJLAZp3Z9" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/prod/pools/WoPradXQXO/C/0/T9XPuDGow3PZUVmI+IAN" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/prod/pools/WoPradXQXO/C/L/vPHwH7UXid11wymrr6VN" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/prod/pools/WoPradXQXO/D/8/clZWPEk9R4IQ-XBr3UEL" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/prod/pools/WoPradXQXO/D/H/DjmJrPlxNfPeCqzSbL6f" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/prod/pools/WoPradXQXO/D/H/QT1gMZ2aHyEfdnS1kyNy" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/prod/pools/WoPradXQXO/D/K/lUrz2h0FzdFjcOWcJ+B7" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/prod/pools/WoPradXQXO/D/L/DXgmfnD84ZYsTB1jWE7f" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/prod/pools/WoPradXQXO/E/4/CMPHsK81Hp-GFGTQ4FQ8" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/prod/pools/WoPradXQXO/E/M/RPUxuhAfBfVyh4oEjOuW" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/prod/pools/WoPradXQXO/E/M/jezwEE2iof5YkxrnnZTr" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/prod/pools/WoPradXQXO/E/O/UrPRGBV4BdXQOfX4t4Zs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/prod/pools/WoPradXQXO/E/Q/C3ioW-tXnvpjpOrpIEUy" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/prod/pools/WoPradXQXO/E/V/5me+X+mvJj+jG0x4ujPJ" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/prod/pools/WoPradXQXO/F/E/ZpqwDX+weJJpF5trHcmo" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/prod/pools/WoPradXQXO/F/G/ilTEzaODgj8mvjXmdpz-" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/prod/pools/WoPradXQXO/F/N/lSegD8eW7NqdlOMNIQXU" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/prod/pools/WoPradXQXO/F/P/Cp9E9H9zdHHTWoYvtmyO" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/prod/pools/WoPradXQXO/F/Q/NN5iRIEJyflIkcOCz6JE" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/prod/pools/WoPradXQXO/F/V/kyeCgZgSsLKupaA711PI" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/prod/pools/WoPradXQXO/G/T/Ncqozz+DYaUNGl-81EQz" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/prod/pools/WoPradXQXO/G/V/6iHRKi9ZkQWJq5vIXT5d" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/prod/pools/WoPradXQXO/G/Z/NjN-2Mal193i7rrK6emC" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/prod/pools/WoPradXQXO/H/-/YLKkA40R9hGfvE+TypGl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/prod/pools/WoPradXQXO/H/8/y1hSh4qMq9WSvNAvHlOQ" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/prod/pools/WoPradXQXO/H/A/OKwsmiaeWeXU29NcQ7X5" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/prod/pools/WoPradXQXO/H/Z/eQJ9km4UmMjRY6VeOL6a" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/prod/pools/WoPradXQXO/I/5/chIHOx1o6+SLSW7cqiny" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/prod/pools/WoPradXQXO/I/7/iuYaVs5mFQ7rm+bDBTqf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/prod/pools/WoPradXQXO/I/Q/d0g1Mxo92GkL5PLIGWSf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/prod/pools/WoPradXQXO/J/2/3HoVpCC2+5tWe4E1y8fr" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/prod/pools/WoPradXQXO/J/8/EsDwKbjh5scFqKYmSp-Z" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/prod/pools/WoPradXQXO/J/E/84yxqyEYtP2w0pIN0VxZ" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/prod/pools/WoPradXQXO/J/L/025x4GVIazq+qEHIEUp8" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/prod/pools/WoPradXQXO/J/S/TRv2Eupj1HWY74NqcJ23" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/prod/pools/WoPradXQXO/K/3/OA8iz1Ay23DgutPxRh1O" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/prod/pools/WoPradXQXO/K/5/gOIFqk3XtJjx0g+rdoeH" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/prod/pools/WoPradXQXO/K/9/dLJOY1nXIt0ZKEGYkjY2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/prod/pools/WoPradXQXO/K/W/TrdakKwOMM2zEOf56v0Z" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/prod/pools/WoPradXQXO/L/B/81yIEONdIZ0Eb+wqwwqr" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/prod/pools/WoPradXQXO/L/G/AXn6FkoNFgjr4tFLkiUg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/prod/pools/WoPradXQXO/L/J/7vcKrlD73JEJWgUnwFKP" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/prod/pools/WoPradXQXO/M/6/z5IpCka1V4Ej7BCbzLvn" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/prod/pools/WoPradXQXO/M/B/cEkDUo4EZTsl2Bk-85RA" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/prod/pools/WoPradXQXO/M/O/500AKJRKuRYzTTPKOzIC" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/prod/pools/WoPradXQXO/M/R/7-EQlJA3uJxNVV9K5CKO" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/prod/pools/WoPradXQXO/N/K/8OvLq4ZzZ9IhERyBXzNv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/prod/pools/WoPradXQXO/N/K/ghESaQU-b+DqRaX9+nMZ" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/prod/pools/WoPradXQXO/N/K/uJRWlA2ExJyCnZyVpTI-" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/prod/pools/WoPradXQXO/N/W/RGFcn7LRtNjn2aw1QLu4" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/prod/pools/WoPradXQXO/N/Z/OXSgVwyKMhwOSdnppRlB" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/prod/pools/WoPradXQXO/O/1/KERsO4wORzIMCYELgBQ-" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/prod/pools/WoPradXQXO/O/F/GE9nhx6NSWVGfH8OfWSi" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/prod/pools/WoPradXQXO/O/O/SnhlrU48SzVbW6x6v2Ut" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/prod/pools/WoPradXQXO/O/S/NIom65FTazzK8jbRDIJJ" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/prod/pools/WoPradXQXO/P/1/LUgEaIQBNKcMQQcZZMJv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/prod/pools/WoPradXQXO/P/5/n2Kzq0b4vQVi4yl+VrVo" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/prod/pools/WoPradXQXO/P/R/0TfEeedO2WZQ-mANadST" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/prod/pools/WoPradXQXO/P/T/ToPU+U3UK77wvzrf7sly" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/prod/pools/WoPradXQXO/P/V/4Up47HTXqUkyRdZwlhK5" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/prod/pools/WoPradXQXO/Q/3/A9aDcKAozZ9RyaNiv1+6" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/prod/pools/WoPradXQXO/Q/6/B4bZ-TWDu0L9R6xNvHoH" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/prod/pools/WoPradXQXO/Q/G/T71neEgyiXdVfYYle9TN" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/prod/pools/WoPradXQXO/Q/S/uNw9ebTyLcfPOVaWjfmk" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/prod/pools/WoPradXQXO/Q/W/4Qum0xMOblX1ETi3s5HC" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/prod/pools/WoPradXQXO/Q/Z/7CCqf9-1m0v4ILmjQWso" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/prod/pools/WoPradXQXO/R/3/0RSPJc6b9Y5RrmsHlAwe" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/prod/pools/WoPradXQXO/R/6/BnYFoNNsW8AId5gcvdJ2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/prod/pools/WoPradXQXO/R/9/gO4L-OnOoflaS5r7I6QL" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/prod/pools/WoPradXQXO/R/B/oEc7g06yUuh5XQXXRfDc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/prod/pools/WoPradXQXO/R/Y/-d9RjFpdiQ9bJlMzNWwn" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/prod/pools/WoPradXQXO/R/Y/51ELG7P3VFYrW5bl5Ke3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/prod/pools/WoPradXQXO/R/Z/qMp5zwGeKiJDrQe1HZmY" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/prod/pools/WoPradXQXO/S/G/MQptIFkNReTxB0x-mV+j" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/prod/pools/WoPradXQXO/S/J/Sz8PLDXMw58N0O0mLSp3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/prod/pools/WoPradXQXO/S/K/8YMYJkU6IbXK99i4aglw" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/prod/pools/WoPradXQXO/S/S/zmVLPZUUlQIy6PtXFSxx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/prod/pools/WoPradXQXO/T/B/myyfxRlR2NIk96Abo6Ta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/prod/pools/WoPradXQXO/T/O/+DTC4IxPKlN7-Sj6ZULz" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/prod/pools/WoPradXQXO/T/O/Y2nY3Xbor0r+tCjlZHkL" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/prod/pools/WoPradXQXO/T/Q/L59nK0FBhxMeONOA+UKA" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/prod/pools/WoPradXQXO/U/X/5zf0VehdhVgw0lKD9Wp9" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/prod/pools/WoPradXQXO/V/0/QxO2M+KkvHgv1JEB9qNB" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/prod/pools/WoPradXQXO/V/A/w4YyNVZwawq5Zl1VDD04" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/prod/pools/WoPradXQXO/V/H/YJWVQKhE0QL+CSE-Rb7x" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/prod/pools/WoPradXQXO/V/T/RsT-C8jAEtlH-nQ2mFjG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/prod/pools/WoPradXQXO/V/W/OJwX-3z+9+63CJPDw+6j" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/prod/pools/WoPradXQXO/W/H/bWW7vVaXlGuXJosJMBYt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/prod/pools/WoPradXQXO/X/2/dpLylVMNQXakcxP8Jg2m" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/prod/pools/WoPradXQXO/X/L/M6MHF4vz2zljpggOjzfq" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/prod/pools/WoPradXQXO/Y/1/AmMyd-MhaVRrItF38Ar-" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/prod/pools/WoPradXQXO/Y/F/-jtvVvKTCQ4WeTivp-T6" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/prod/pools/WoPradXQXO/Y/T/lHlYD2sqjI5MMuRD5QeI" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/prod/pools/WoPradXQXO/Y/V/i4HlYkvdCElgPXnkVLDd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/prod/pools/WoPradXQXO/Z/E/KESnKLRY02PUihOXFGth" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/prod/pools/WoPradXQXO/Z/N/MKF0-DllvgTj4g85-Qqj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/prod/pools/a8FkfScSSU/2/K/Z6u6OmsvgJwc7ebtEOgh" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/prod/pools/a8FkfScSSU/G/X/yZNbBRIFFz8iml0QPV-9" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/prod/pools/a8FkfScSSU/J/2/kS0KKoNDGN-JrVNBsv6r" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/prod/pools/a8FkfScSSU/S/U/6o6dzHtlv4XY2uRmc8-E" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/prod/pools/a8FkfScSSU/V/M/I4YHK9JMxDcK9X3ajugA" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/prod/pools/a8FkfScSSU/X/K/rEJ4r9WOezFcAoiYdRLC" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/prod/templates.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/prod/twig/02/0220ab0367ae87e2933813cf2aa5a9fc631b2a0bc6bf582bca21826f910646df.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/prod/twig/02/02c5fd387d8b4c4f3ecafb4c8dccf2d8709f358b3522137d4fca8ea40487f8ec.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/prod/twig/09/09338ca89ba4cb661197fe99c19e788d0eeb31d6e5547bc5fe08e5c0db4d1a36.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/prod/twig/0b/0b48e84e8d47c4ce80d0cb492eaf5d3eb0e70da4302d4d877f347abb209fd9bf.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/prod/twig/0c/0c3303bc9a14ea2cf6a6a211e6b7acbf60c7b4afaed77be4af6c607a1e94cb57.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/prod/twig/0e/0e1d38e7ccc215b7165f14757a002df6de017de7323259d34ddc61d6a4a3680c.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/prod/twig/0f/0fdd879e2a098dbd37db0b4d853a71dcc299e5ca45d0ce1e7a6b72229c54b0c0.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/prod/twig/0f/0fe8ddc7235deea901c7f1ce24f39252568090a2760d01c86a06606c1127cc19.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/prod/twig/11/11803be83f893c646a4e2966a915580803b224e457896853499edfa93b59b8ab.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/prod/twig/15/153ab1090cd387a0983c56d92dbc71e12dd86efb60dbef5f7028c80903bc2b2f.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/prod/twig/15/15854a021391bdd9fd1ddfe8c5992deee8f922ed16cab1e011263ba8d42ca077.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/prod/twig/15/15c67ac88d1b7f1c98cdb5de09ac44f49af4ae144ab9524debbc71213b4d893b.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/prod/twig/17/170c2a86af4a21a89eec177bf6ca8d859882039176ed6da0ce07949e7c1f356c.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/prod/twig/19/1969baa050b63068c4afcb8db64e8eb0343b0696f0403ae19cc584fda00cf53d.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/prod/twig/1a/1a269fb3e6bc84faf3be5bf3383da6bea679797eee916636d71100b00fe3f66e.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/prod/twig/1b/1b6a7ff04f526a758027c7165092959e637b6520f5e007b5f0187ce88b9d7ddb.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/prod/twig/1c/1c769586a2a6fc6a6e359df01662d7b175070face8a298bb636b1495cdc78d86.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/prod/twig/1d/1d0f33b7cf561d76b1863a1ab27596c0b77bb857f714cfb8a2e903eb0233079a.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/prod/twig/1e/1e8e967cadedc6d021ac5dea4351c913557be7b799c786cfda19a64b8b9eb3da.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/prod/twig/1e/1ea0c3ea21bac20407882a5a2d82107f6329303d975d4d3e0b32b78ba81201a3.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/prod/twig/1e/1eae6d440fc792f916d1bfd45813a1371c48cd5afbe5ece4800c8ab5dd34cf72.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/prod/twig/21/212bc21d75a53a484e0a5c6333a242f562af8d34147a16d8733117b5baac6676.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/prod/twig/26/2634e20d5c04f311aa56168d0c1e4badf0df6e818c5b4dde6dfe23833cb24504.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/prod/twig/29/295e5791861c93b2bb27eac467eafd6a29e316c10671a10f1b30995e2bc9dbea.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/prod/twig/2b/2b05ca165d7fcfdd1ed0b8f79b24ce854a40e66846c5276ee62d904772c3af62.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/prod/twig/2b/2b72f0fb9410533e8dc5acbd1bb69f2ab564e2f5e364937ac6ea035f6443bf97.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/prod/twig/2b/2bc528cbbe13bf4215e5b8cb44018a520cc156b416511a291885597484cb56ac.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/prod/twig/2c/2c44a9ffab0fb00ebd8203131470bb173a0587ebc60ff4ad292f6b58208c248f.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/prod/twig/2c/2c87aa6f469d3c8273bcde51aee88f17b332935fcaa7f20a3043bdbe544d31d0.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/prod/twig/2d/2d906c6bd03c7aff792c68be6693ad9041e48606d837932ccec68a251a51d924.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/prod/twig/2e/2e214d8cc9e37cf2133ecf4c778a444f622c96c0d132847d0d28785542e43f1a.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/prod/twig/2f/2fde4320c72dfcf46b3de9c2a95171e28f9fe11c5e801427a77ad642f158c00e.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/prod/twig/36/36aecd0758ace585e607ed1ad8fef7e91fb4e4cb3f67bb27afece3e395c2aee2.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/prod/twig/38/386956e50b858b59bd9e19847351938cbe6f2f407ebb0b69e0277d5859bf333b.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/prod/twig/39/3999fa3638aeb0f3c5714a0d27d61ee543c68d7e353a83a4841454cbcc485396.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/prod/twig/3a/3a6bc1c70617b2ef0eb0f72cd5b3a9ae7bedb94123ac935a2d0286a8f2b7a79e.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/prod/twig/3b/3b985f5547b86285e68feee6602be6d797d54d4dbd2ec746f814468f6e68aa3d.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/prod/twig/3c/3c428529b8da055ba19b6345cd4ba90c0d3befac5f8825ca2373e16048c1c64c.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/prod/twig/3e/3e6160052a0d78bbcbec3bcb104dcc3ef5d9be296f227446d61655b1d2fd0715.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/prod/twig/3f/3f231ddef7760122a25345f600c524267edf6a9d40d0af0910899a700bbb67f5.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/prod/twig/3f/3f95becfd176cbd7260a295f3b9ea562a3a28e2e3f4de50f225270aae96ae259.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/prod/twig/41/419bc1e5ac47f7351524522750f858ee062122beabfd0dbdd658722bf94fcc00.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/prod/twig/41/41bc93c9148b0c479b17ccc2413e0f381928b1ea18b89bc1b001e73a6ef93ca6.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/prod/twig/44/446df191b23b764e739a274559f88cd48e479d1e26525461780ee6535377dff8.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/prod/twig/47/47d6e9db1110a0974f6f089fd21a9af81e34f65a69bb229bbee146b9c7905acf.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/prod/twig/48/48282d7917919d5650b417b921a894b8c640ec9f5328b1e69241f0cb9fba97ae.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/prod/twig/4a/4a9c7866a6bc3718d7f3410e11960ff7af56ed2c01cb7f4869a52550462fbfc9.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/prod/twig/4c/4c8e1e746e7edeb81e2a576763c2c9731f15b316c6894132beacc4e167570c8d.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/prod/twig/4d/4db400e8bb8688c401dd69fb309f34a6a6828b19543f132c3377867d8356dc91.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/prod/twig/51/51373972248a38e4f3c8633c70f0fcca3dde706670734cbff311217f20ccf2ae.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/prod/twig/53/53a648e67f1aa0851a628a235ff429b11f6d329329217b89718d6e65a576530b.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/prod/twig/56/5657dd0ce55aaff15dc73d5c9d24ca1d7f2a8ba45b2652fb15fa8493dc8db723.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/prod/twig/56/56992b7bd868d0759bc1f37b3af3708946ee8efe2b7312778095cf439ddad61b.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/prod/twig/5c/5cdbd44500af3474ed5e63a8b8c8b228f73dc71dafbd445ad157371c3ab90801.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/prod/twig/5d/5dee825a49f42207c3e11158ded8c69fc158171d77256407c6b977739cd0b362.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/prod/twig/5e/5e6823ed438294a8f43ed51690c23acf5b092759419d66619860daf392c80afd.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/prod/twig/60/608492e5074f9b889fb092c4968c7f52e11633418791dc70488707be36d71be5.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/prod/twig/60/60ebfeb8fa9ea1df02ba004a4408478b424d82852b6aaf4cd5ae1f8b6bc91070.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/prod/twig/67/6725f67488cdaf51a5b9c2a10b887657d0323fac5214a141dc8aa33462bcfde0.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/prod/twig/68/68a876202cf6f1b40fa9ee2f9179dfc1939b5ca4ca44693075988a02c19baa33.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/prod/twig/6c/6ce95fa08a27b93fe48317ed287a0b72c8887b7bbfb7641668f37d10481fb223.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/prod/twig/6d/6d2d113e86e438db3602684eabd695516bb57f6cc57a7aa9f21c1922e5071060.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/prod/twig/6d/6d75ff7f596b204a37cd3293569bb8aff93c4c217e25bc0e7f649834e61b46a8.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/prod/twig/6e/6e0c9f81c836c189f39efbe33893ecbcb5bc74bcfeb974d271f0b7f12540e3c9.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/prod/twig/6e/6ed0b1650cd2d5cb7e3fc78bd4398d39ac2d76c6bf7e3dfc0cf1363126dda11b.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/prod/twig/71/7107dde2c0c252348f2e63e5074479024e0f86b59a6b058135251a70100fec5a.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/prod/twig/72/723461fe5d34c410e58a4f3919b7c744b83f1d8c81133a436c6e3447888b32a4.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/prod/twig/73/73ef5e492735e6ca79ebe3054fae07e942e8237bb4bb7e4b5536fc240e8a70ce.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/prod/twig/79/79fc112cb07f662483ed43543e13085f5e7b992a5f947f18437637712ac3e448.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/prod/twig/7b/7b06dc5ae6664559747c13618d417126979fed00b9edb530718b7ee16a6c4ed2.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/prod/twig/7b/7bc1c80db4c00346df9876181809695e792755cd596e40310e38f66d8ebc33cd.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/prod/twig/7e/7e144a9c5e27eefd4c019886cc6fa29fd1a0d8836324c138809de82fcbbf504b.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/prod/twig/88/88af6f0f9817339813fd4a5b647a7ba993ffd18dd95d90f442864fe0e21bcb54.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/prod/twig/8a/8a99af5cae5a62db9a59b4bfdff2b9b51d3c5dd83f0cacb691c6c403d5a80b9f.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/prod/twig/8e/8eb2322ee0c82541f6f0df15c0695162a94c35e90c6b581687a5eb29a72764d3.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/prod/twig/8e/8ec00fbe42ab60aaf59fcaa349b5c00f61af7ad5b2b928abe513e9f6ddf01c32.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/prod/twig/8f/8f80629d58b80ddc7d3f566126ae14664d39d4c0af46f3d3e30c238e40317cca.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/prod/twig/90/9034cad80191f7faea9d200a203e48721432fcefdad8f4e078050f3db116f17f.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/prod/twig/91/91f3a90a3f7b03f31e8fcb7eac52fbc38f6cb60713a5dbf7645812502d477628.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/prod/twig/93/9317342b08e15f6abd86ee9a0074bb21d35e9524ac1cd9c44097f31a9c4e2b78.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/prod/twig/94/9409280d9694f94ef0b6da3f308693207ea2a3abccd9617acf1c267700ee48cd.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/prod/twig/94/94a3d66b3ff222bd7d0409c7046ec58040a3da15e08016dbbaff832106e45ab6.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/prod/twig/95/9505e8513869e825c1cdf0469884767bb931479568b5184b2e576d25b14c71c9.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/prod/twig/96/96e22a29d5e769178fc27d89719964f3b73485b36b3249f5349d31711f9cf1f1.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/prod/twig/9a/9a3792616abb0478914d0e46988367725c269f864264e87347d300d5ab0c6739.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/prod/twig/9b/9b0f9da9c135c2aa61961d6f5c801f299b8cc375755040154d0a1ca42974ee4a.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/prod/twig/9e/9ee5538ef99c6e20ac7dee2c767bf83407c15791d8142b32e81993b44060b72f.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/prod/twig/a2/a21ef9d1d1f3df21a7e4b9b77803b72452df4ae5889911704bbb683a3f7fb7ea.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/prod/twig/a6/a6b0802b4f90ec0785a1fcfc0266a173cf332d5517aad89325df8666dca0c4d2.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/prod/twig/a8/a8765cb3279c9e5a354894c9aee0f0c333cab7affecbeb21283ad521b43308f9.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/prod/twig/ad/ad7f011c56c9204b5ad74b51ba9df4751879ffe56de9e7984c7a7df43beef31e.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/prod/twig/ad/adfb329b49bb1017c95e11baf2c8c83862c5aafac01b243c556ef220bf286733.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/prod/twig/b3/b37a9b27f267112d3635f843669b97d27120ea4a32e12706525843ff08adc0dd.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/prod/twig/b4/b4612e34cb9f3cc514f10ca52e5b1b8bf9a438774f4b572b3f74c6d461eda370.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/prod/twig/b4/b4f77d41a84f86e25e2de9748f22aae9c04c2f5846f6a71dac94c9855899bc37.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/prod/twig/b7/b70184d9706862af1a60bd9ca23c7e31b9cc60e65281b716f0f327d5551cb89c.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/prod/twig/be/be799b4814d0e0c02922afcd9aaafa144edf06de26fa648a2a08e117cdda36a4.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/prod/twig/c2/c2aa0dc392d63d84c482c7dbef566fbe4591654740560125ebccfd2710ce8a22.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/prod/twig/c7/c79ad6a3373d230cd59b2a39b77de425eeb39ea37fa6722da260b44517dfedfe.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/prod/twig/c9/c9b61f54a2ad03d49ef36c29f909f2e82680b0262d6d5394a655ab3a1c3718ba.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/prod/twig/cb/cb7b03d84efe7b9c6b7d2d32ec4984a48718811d3909bb30db25ebe66f4dfa3c.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/prod/twig/cb/cbcd9e90959b66d8425dbf31e1df1cc466abadb8077062ccab7461c9034bdfec.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/prod/twig/cd/cd7e4fac06e877a67cdde7a60eed2ca693c8a616b6199580d7c7bb5adc3461cd.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/prod/twig/ce/ced73de6c6ac77f482691f9ef4bc4b808b0fbd7af9e8a0b70c3b155ea9665601.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/prod/twig/cf/cfc1918f09490d20404510d7f88c1b1ee491b7e10c48084ba6f26c31cdef1cc3.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/prod/twig/d1/d1503dc0bb7ff5248c0ee21a4a9c5f27921cf6b343c90ad14d86e912b7d694ed.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/prod/twig/d1/d17ccf511a55a3b508cfa54b971dd66dff592151bfdb589acd95be50081ae22c.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/prod/twig/d2/d2de9111cc2d7967a39c71b95397291759751f8cad1e2d318f762ddfd6b2a0c7.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/prod/twig/d3/d39298fe25aa37c3ca56f7b40962d35b335e7ff3228fc03e54b2fedf5f9fd085.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/prod/twig/d5/d5e2b8e72e03cac590c2d2bb401ac27ad01cbcfbcacaf86a650f6dbbc8e740ca.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/prod/twig/db/dbd4f55c25701f4f28852a50eaf15a5da98a827b0394ccce243c2b6abe700b04.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/prod/twig/dc/dc7d268c1b555249b14ecb5a41a92ab8d40844efd4c3f69974f8b7bb028247ce.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/prod/twig/dc/dc92694be61655cd5078b1144a5a8b18540f5271fa1520931d8a3f325c56cb37.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/prod/twig/dd/dd944a5bf7034c701917f2ecbb0b8694b387e4b4037d1e8e3c846e0706277e34.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/prod/twig/dd/ddae85170a66868062dddee218fc5ceab4ab691d5784b2581b6824158122145b.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/prod/twig/de/de990c43d82166af2d32bd57c2aba0336a7c36fee9084d0f3717c2b87d73c316.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/prod/twig/de/deab275d5738c4b5062f1cf789f8dda585c0f9ec1706668379c4f4bd3e4ef49f.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/prod/twig/df/df3e79f1cfb20a312bc6b71460bf1a4e43e349c4627c437510d3adaeb246af15.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/prod/twig/e0/e002e6fcd326f90b39ab4144df319268988b4711d740063eab157c53cf656b3a.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/prod/twig/e2/e286aba9093e008a5fb63068061f94edec008cebdabc941538ec6412e3aca356.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/prod/twig/e3/e32c23829e6827bf9f8288e10221d2bd6b519fdfd7a05166c38ad8ae8a431763.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/prod/twig/e5/e5b8c9188cb2603333a3176187b7e019031707ced985bd044ce4f8377476c088.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/prod/twig/e6/e660ae70bb897a3f16592403d6d7269d3986a68c851a0fc952d0ff3f04e3154f.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/prod/twig/e7/e7764decb9aed3a51b1362351435d2ecf217054f5d453fc0ce68441a49a89700.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/prod/twig/e8/e893b4e4f25e6179f6ed26d94cfb649a4b3d7c0d2c7f2b58f2b98288825aa616.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/prod/twig/e8/e8c47a17eea1079d43de0c7b7db93106ca8691f16d6a0cfff619ebb2131ef0d3.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/prod/twig/ea/ea39e946cfc5cef3983bc937084d9eaa01da66765156be29bf9406e8776bc337.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/prod/twig/ee/eea4c83a8bceb9e05e76cb9724a4ec8fc0645f35aee43491d35378468b9ffb68.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/prod/twig/f1/f123625d51ef53e997957f83e03597478b352c8b750dc9514b8eeb438fdaab79.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/prod/twig/f3/f348c8900bce557ff7b223ce304d9abbbc0f89d2e6719679d15d0fa88705f825.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/prod/twig/f4/f487233bc3bff7ccfc77d1f0198ab851ae8436eb22502f86f1ba56dedbfdfe7d.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/prod/twig/f7/f75c350ffabb2fbf9affc8afa9d1987aba540de1fd1892c12849f42666b1db6b.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/prod/twig/f7/f7952ed88cdf067b6f91144937054ded9df96f361ac4a93001d89d874b0053f6.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/prod/twig/f7/f7e411812077bac3c72c6c5ef708225ae0ea93fec3b0b848894df2992669c36b.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/prod/twig/f8/f8fb47dc736de642a6a5d31d74596363dab450825202d0c144820998c6a64751.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/prod/twig/f9/f9c6e9fdaf96ca1991162817085962aedc4f1fc30066e4d747b413c284438d0f.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/prod/twig/fd/fdd0f09bfa130042d894abeca8e2f4e218c3fa33353f5b9033be601407ea5300.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/prod/twig/ff/ff5f4f48a20696e584a8b1d549ce8e134ec5a18828a9466b3598ea8002fee9b6.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/prod/validation.php" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/var/logs/dev.log" beforeDir="false" afterPath="$PROJECT_DIR$/var/logs/dev.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/friendsofsymfony/user-bundle/Resources/views/Registration/confirmed.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/friendsofsymfony/user-bundle/Resources/views/Registration/confirmed.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/var/sessions/dev/sess_tn7f246l73u3q7rg5pk35qr8f6" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/friendsofsymfony/user-bundle/Form/Type/ChangePasswordFormType.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/friendsofsymfony/user-bundle/Form/Type/ChangePasswordFormType.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/friendsofsymfony/user-bundle/Form/Type/GroupFormType.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/friendsofsymfony/user-bundle/Form/Type/GroupFormType.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/friendsofsymfony/user-bundle/Form/Type/ProfileFormType.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/friendsofsymfony/user-bundle/Form/Type/ProfileFormType.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/friendsofsymfony/user-bundle/Form/Type/ResettingFormType.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/friendsofsymfony/user-bundle/Form/Type/ResettingFormType.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/friendsofsymfony/user-bundle/Resources/views/ChangePassword/change_password.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/friendsofsymfony/user-bundle/Resources/views/ChangePassword/change_password.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/friendsofsymfony/user-bundle/Resources/views/ChangePassword/change_password_content.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/friendsofsymfony/user-bundle/Resources/views/ChangePassword/change_password_content.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/friendsofsymfony/user-bundle/Resources/views/Profile/edit.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/friendsofsymfony/user-bundle/Resources/views/Profile/edit.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/friendsofsymfony/user-bundle/Resources/views/Profile/edit_content.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/friendsofsymfony/user-bundle/Resources/views/Profile/edit_content.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/friendsofsymfony/user-bundle/Resources/views/Profile/show.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/friendsofsymfony/user-bundle/Resources/views/Profile/show.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/friendsofsymfony/user-bundle/Resources/views/Profile/show_content.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/friendsofsymfony/user-bundle/Resources/views/Profile/show_content.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/friendsofsymfony/user-bundle/Resources/views/Registration/register.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/friendsofsymfony/user-bundle/Resources/views/Registration/register.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/friendsofsymfony/user-bundle/Resources/views/Security/login.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/friendsofsymfony/user-bundle/Resources/views/Security/login.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/css/general.css" beforeDir="false" afterPath="$PROJECT_DIR$/web/css/general.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/javascript/model/modelManager.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/javascript/model/modelManager.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/javascript/view/viewGenerator/ViewGenerator.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/javascript/view/viewGenerator/ViewGenerator.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/javascript/view/viewGenerator/graphGenerator.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/javascript/view/viewGenerator/graphGenerator.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -698,67 +422,40 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="routing.yml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/config/routing.yml">
+      <file leaf-file-name="edit_content.html.twig" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/vendor/friendsofsymfony/user-bundle/Resources/views/Profile/edit_content.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="7" selection-start-line="7" selection-end-line="7" />
+            <state relative-caret-position="17">
+              <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="RegistrationController.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/TEMI/mainBundle/Controller/RegistrationController.php">
+      <file leaf-file-name="edit.html.twig" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/vendor/friendsofsymfony/user-bundle/Resources/views/Profile/edit.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="24" selection-start-line="24" selection-end-line="24" />
-              <folding>
-                <element signature="e#130#179#0#PHP" expanded="true" />
-              </folding>
+            <state relative-caret-position="17">
+              <caret line="1" column="31" selection-start-line="1" selection-start-column="31" selection-end-line="1" selection-end-column="31" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="layout.html.twig" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/TEMI/mainBundle/Resources/views/Temi/layout.html.twig">
+      <file leaf-file-name="show.html.twig" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/vendor/friendsofsymfony/user-bundle/Resources/views/Profile/show.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="46" column="67" selection-start-line="46" selection-start-column="67" selection-end-line="46" selection-end-column="67" />
+            <state relative-caret-position="17">
+              <caret line="1" column="24" selection-start-line="1" selection-start-column="24" selection-end-line="1" selection-end-column="24" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="general.css" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/web/css/general.css">
+      <file leaf-file-name="register.html.twig" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/vendor/friendsofsymfony/user-bundle/Resources/views/Registration/register.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="95">
-              <caret line="208" column="67" selection-start-line="208" selection-start-column="67" selection-end-line="208" selection-end-column="67" />
+            <state relative-caret-position="17">
+              <caret line="1" column="28" selection-start-line="1" selection-start-column="28" selection-end-line="1" selection-end-column="28" />
             </state>
           </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="security.yml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/config/security.yml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="33" column="27" selection-start-line="33" selection-start-column="27" selection-end-line="33" selection-end-column="27" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="change_password.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/vendor/friendsofsymfony/user-bundle/Resources/config/routing/change_password.xml">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file leaf-file-name="profile.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/vendor/friendsofsymfony/user-bundle/Resources/config/routing/profile.xml">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file leaf-file-name="all.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/vendor/friendsofsymfony/user-bundle/Resources/config/routing/all.xml">
-          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
       <file leaf-file-name="confirmed.html.twig" pinned="false" current-in-tab="false">
@@ -770,11 +467,39 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="routing.yml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/TEMI/mainBundle/Resources/config/routing.yml">
+      <file leaf-file-name="email.txt.twig" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/vendor/friendsofsymfony/user-bundle/Resources/views/Registration/email.txt.twig">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file leaf-file-name="login.html.twig" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/vendor/friendsofsymfony/user-bundle/Resources/views/Security/login.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="8" selection-start-line="8" selection-end-line="8" selection-end-column="18" />
+            <state relative-caret-position="17">
+              <caret line="1" column="27" selection-start-line="1" selection-start-column="27" selection-end-line="1" selection-end-column="27" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="check_email.html.twig" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/vendor/friendsofsymfony/user-bundle/Resources/views/Registration/check_email.html.twig">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file leaf-file-name="change_password.html.twig" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/vendor/friendsofsymfony/user-bundle/Resources/views/ChangePassword/change_password.html.twig">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="17">
+              <caret line="1" column="28" selection-start-line="1" selection-start-column="28" selection-end-line="1" selection-end-column="28" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="change_password_content.html.twig" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/vendor/friendsofsymfony/user-bundle/Resources/views/ChangePassword/change_password_content.html.twig">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="85">
+              <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
             </state>
           </provider>
         </entry>
@@ -819,15 +544,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/html/test.html" />
-        <option value="$PROJECT_DIR$/.gitignore" />
-        <option value="$PROJECT_DIR$/web/javascript/start/script.js" />
-        <option value="$PROJECT_DIR$/web/javascript/view/viewGenerator/ViewGenerator.js" />
-        <option value="$PROJECT_DIR$/web/javascript/view/directlyChange/ModeleView.js" />
-        <option value="$PROJECT_DIR$/web/javascript/view/directlyChange/PaysAddView.js" />
-        <option value="$PROJECT_DIR$/web/javascript/view/directlyChange/test.js" />
-        <option value="$PROJECT_DIR$/web/javascript/view/directlyChange/ViewManufacturing.js" />
-        <option value="$PROJECT_DIR$/src/TEMI/mainBundle/Controller/ConnectController.php" />
         <option value="$PROJECT_DIR$/src/TEMI/mainBundle/Controller/AdvertController.php" />
         <option value="$PROJECT_DIR$/src/TEMI/mainBundle/Resources/config/services.yml" />
         <option value="$PROJECT_DIR$/src/TEMI/mainBundle/Resources/views/Connection/connection.html.twig" />
@@ -842,14 +558,8 @@
         <option value="$PROJECT_DIR$/src/TEMI/mainBundle/Resources/views/Temi/model.html.twig" />
         <option value="$PROJECT_DIR$/src/TEMI/mainBundle/Modele/User.php" />
         <option value="$PROJECT_DIR$/vendor/friendsofsymfony/user-bundle/Resources/views/layout.html.twig" />
-        <option value="$PROJECT_DIR$/app/Resources/FOSUserBundle/views/layout.html.twig" />
         <option value="$PROJECT_DIR$/vendor/friendsofsymfony/user-bundle/Resources/config/routing/registration.xml" />
-        <option value="$PROJECT_DIR$/src/TEMI/mainBundle/Resources/config/routing.yml" />
-        <option value="$PROJECT_DIR$/vendor/friendsofsymfony/user-bundle/Form/Type/ChangePasswordFormType.php" />
-        <option value="$PROJECT_DIR$/vendor/friendsofsymfony/user-bundle/Form/Type/ProfileFormType.php" />
-        <option value="$PROJECT_DIR$/vendor/friendsofsymfony/user-bundle/Form/Type/ResettingFormType.php" />
         <option value="$PROJECT_DIR$/vendor/friendsofsymfony/user-bundle/Resources/views/Registration/check_email.html.twig" />
-        <option value="$PROJECT_DIR$/vendor/friendsofsymfony/user-bundle/Resources/views/ChangePassword/change_password_content.html.twig" />
         <option value="$PROJECT_DIR$/vendor/friendsofsymfony/user-bundle/Resources/views/Security/login_content.html.twig" />
         <option value="$PROJECT_DIR$/vendor/friendsofsymfony/user-bundle/Form/Type/RegistrationFormType.php" />
         <option value="$PROJECT_DIR$/vendor/friendsofsymfony/user-bundle/Resources/views/Registration/register_content.html.twig" />
@@ -868,8 +578,23 @@
         <option value="$PROJECT_DIR$/src/TEMI/mainBundle/Entity/User/User.php" />
         <option value="$PROJECT_DIR$/vendor/friendsofsymfony/user-bundle/Resources/views/Registration/confirmed.html.twig" />
         <option value="$PROJECT_DIR$/app/config/security.yml" />
+        <option value="$PROJECT_DIR$/vendor/friendsofsymfony/user-bundle/Resources/views/Profile/show_content.html.twig" />
+        <option value="$PROJECT_DIR$/web/javascript/view/viewGenerator/ViewGenerator.js" />
+        <option value="$PROJECT_DIR$/src/TEMI/mainBundle/Resources/config/routing.yml" />
+        <option value="$PROJECT_DIR$/vendor/friendsofsymfony/user-bundle/Form/Type/ResettingFormType.php" />
+        <option value="$PROJECT_DIR$/vendor/friendsofsymfony/user-bundle/Form/Type/GroupFormType.php" />
+        <option value="$PROJECT_DIR$/vendor/friendsofsymfony/user-bundle/Form/Type/ProfileFormType.php" />
+        <option value="$PROJECT_DIR$/vendor/friendsofsymfony/user-bundle/Form/Type/ChangePasswordFormType.php" />
         <option value="$PROJECT_DIR$/src/TEMI/mainBundle/Resources/views/Temi/layout.html.twig" />
+        <option value="$PROJECT_DIR$/vendor/friendsofsymfony/user-bundle/Resources/views/ChangePassword/change_password_content.html.twig" />
+        <option value="$PROJECT_DIR$/vendor/friendsofsymfony/user-bundle/Resources/views/Profile/edit_content.html.twig" />
         <option value="$PROJECT_DIR$/web/css/general.css" />
+        <option value="$PROJECT_DIR$/app/Resources/FOSUserBundle/views/layout.html.twig" />
+        <option value="$PROJECT_DIR$/vendor/friendsofsymfony/user-bundle/Resources/views/ChangePassword/change_password.html.twig" />
+        <option value="$PROJECT_DIR$/vendor/friendsofsymfony/user-bundle/Resources/views/Profile/edit.html.twig" />
+        <option value="$PROJECT_DIR$/vendor/friendsofsymfony/user-bundle/Resources/views/Profile/show.html.twig" />
+        <option value="$PROJECT_DIR$/vendor/friendsofsymfony/user-bundle/Resources/views/Registration/register.html.twig" />
+        <option value="$PROJECT_DIR$/vendor/friendsofsymfony/user-bundle/Resources/views/Security/login.html.twig" />
       </list>
     </option>
   </component>
@@ -1088,6 +813,28 @@
             <path>
               <item name="site" type="b2602c69:ProjectViewProjectNode" />
               <item name="site" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="Resources" type="462c0819:PsiDirectoryNode" />
+              <item name="FOSUserBundle" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="site" type="b2602c69:ProjectViewProjectNode" />
+              <item name="site" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="Resources" type="462c0819:PsiDirectoryNode" />
+              <item name="FOSUserBundle" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="site" type="b2602c69:ProjectViewProjectNode" />
+              <item name="site" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="Resources" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="site" type="b2602c69:ProjectViewProjectNode" />
+              <item name="site" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -1102,6 +849,14 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="TEMI" type="462c0819:PsiDirectoryNode" />
               <item name="mainBundle" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="site" type="b2602c69:ProjectViewProjectNode" />
+              <item name="site" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="TEMI" type="462c0819:PsiDirectoryNode" />
+              <item name="mainBundle" type="462c0819:PsiDirectoryNode" />
+              <item name="Controller" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="site" type="b2602c69:ProjectViewProjectNode" />
@@ -1110,15 +865,6 @@
               <item name="TEMI" type="462c0819:PsiDirectoryNode" />
               <item name="mainBundle" type="462c0819:PsiDirectoryNode" />
               <item name="Entity" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="site" type="b2602c69:ProjectViewProjectNode" />
-              <item name="site" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="TEMI" type="462c0819:PsiDirectoryNode" />
-              <item name="mainBundle" type="462c0819:PsiDirectoryNode" />
-              <item name="Entity" type="462c0819:PsiDirectoryNode" />
-              <item name="User" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="site" type="b2602c69:ProjectViewProjectNode" />
@@ -1159,13 +905,88 @@
             <path>
               <item name="site" type="b2602c69:ProjectViewProjectNode" />
               <item name="site" type="462c0819:PsiDirectoryNode" />
-              <item name="web" type="462c0819:PsiDirectoryNode" />
+              <item name="var" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="site" type="b2602c69:ProjectViewProjectNode" />
               <item name="site" type="462c0819:PsiDirectoryNode" />
-              <item name="web" type="462c0819:PsiDirectoryNode" />
-              <item name="css" type="462c0819:PsiDirectoryNode" />
+              <item name="var" type="462c0819:PsiDirectoryNode" />
+              <item name="cache" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="site" type="b2602c69:ProjectViewProjectNode" />
+              <item name="site" type="462c0819:PsiDirectoryNode" />
+              <item name="vendor" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="site" type="b2602c69:ProjectViewProjectNode" />
+              <item name="site" type="462c0819:PsiDirectoryNode" />
+              <item name="vendor" type="462c0819:PsiDirectoryNode" />
+              <item name="friendsofsymfony" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="site" type="b2602c69:ProjectViewProjectNode" />
+              <item name="site" type="462c0819:PsiDirectoryNode" />
+              <item name="vendor" type="462c0819:PsiDirectoryNode" />
+              <item name="friendsofsymfony" type="462c0819:PsiDirectoryNode" />
+              <item name="user-bundle" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="site" type="b2602c69:ProjectViewProjectNode" />
+              <item name="site" type="462c0819:PsiDirectoryNode" />
+              <item name="vendor" type="462c0819:PsiDirectoryNode" />
+              <item name="friendsofsymfony" type="462c0819:PsiDirectoryNode" />
+              <item name="user-bundle" type="462c0819:PsiDirectoryNode" />
+              <item name="Resources" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="site" type="b2602c69:ProjectViewProjectNode" />
+              <item name="site" type="462c0819:PsiDirectoryNode" />
+              <item name="vendor" type="462c0819:PsiDirectoryNode" />
+              <item name="friendsofsymfony" type="462c0819:PsiDirectoryNode" />
+              <item name="user-bundle" type="462c0819:PsiDirectoryNode" />
+              <item name="Resources" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="site" type="b2602c69:ProjectViewProjectNode" />
+              <item name="site" type="462c0819:PsiDirectoryNode" />
+              <item name="vendor" type="462c0819:PsiDirectoryNode" />
+              <item name="friendsofsymfony" type="462c0819:PsiDirectoryNode" />
+              <item name="user-bundle" type="462c0819:PsiDirectoryNode" />
+              <item name="Resources" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="ChangePassword" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="site" type="b2602c69:ProjectViewProjectNode" />
+              <item name="site" type="462c0819:PsiDirectoryNode" />
+              <item name="vendor" type="462c0819:PsiDirectoryNode" />
+              <item name="friendsofsymfony" type="462c0819:PsiDirectoryNode" />
+              <item name="user-bundle" type="462c0819:PsiDirectoryNode" />
+              <item name="Resources" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="Profile" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="site" type="b2602c69:ProjectViewProjectNode" />
+              <item name="site" type="462c0819:PsiDirectoryNode" />
+              <item name="vendor" type="462c0819:PsiDirectoryNode" />
+              <item name="friendsofsymfony" type="462c0819:PsiDirectoryNode" />
+              <item name="user-bundle" type="462c0819:PsiDirectoryNode" />
+              <item name="Resources" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="Registration" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="site" type="b2602c69:ProjectViewProjectNode" />
+              <item name="site" type="462c0819:PsiDirectoryNode" />
+              <item name="vendor" type="462c0819:PsiDirectoryNode" />
+              <item name="friendsofsymfony" type="462c0819:PsiDirectoryNode" />
+              <item name="user-bundle" type="462c0819:PsiDirectoryNode" />
+              <item name="Resources" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="Security" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -1274,7 +1095,7 @@
       <workItem from="1529320746984" duration="8008000" />
       <workItem from="1529396097405" duration="7479000" />
       <workItem from="1529409571721" duration="10194000" />
-      <workItem from="1529480713635" duration="11495000" />
+      <workItem from="1529480713635" duration="19817000" />
     </task>
     <task id="LOCAL-00001" summary="mis en place d'un code propre">
       <created>1526980633672</created>
@@ -1392,7 +1213,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="644833000" />
+    <option name="totallyTimeSpent" value="653155000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1409,11 +1230,11 @@
     <layout>
       <window_info anchor="right" id="PlantUML" order="3" weight="0.33736762" />
       <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.49938875" weight="0.3298969" />
-      <window_info anchor="bottom" x="0" y="447" width="1680" height="116" id="Event Log" order="12" sideWeight="0.51891077" side_tool="true" visible="true" weight="0.2970297" />
+      <window_info anchor="bottom" x="0" y="447" width="1680" height="116" id="Event Log" order="12" sideWeight="0.3600605" side_tool="true" visible="true" weight="0.31353134" />
       <window_info anchor="bottom" id="Database Changes" order="13" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" sideWeight="0.35330072" side_tool="true" weight="0.19473082" />
       <window_info anchor="bottom" id="Run" order="2" />
-      <window_info anchor="bottom" id="Terminal" order="9" sideWeight="0.6406959" weight="0.2970297" />
+      <window_info anchor="bottom" id="Terminal" order="9" sideWeight="0.6399395" visible="true" weight="0.31353134" />
       <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4991453" side_tool="true" visible="true" weight="0.24130106" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="3" />
@@ -1464,129 +1285,19 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/vendor/friendsofsymfony/user-bundle/Form/Type/ChangePasswordFormType.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="378">
-          <caret line="78" column="7" selection-start-line="78" selection-start-column="7" selection-end-line="78" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/friendsofsymfony/user-bundle/Form/Type/UsernameFormType.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="276">
-          <caret line="74" selection-start-line="74" selection-end-line="74" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/friendsofsymfony/user-bundle/Resources/views/Registration/check_email.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="18" selection-start-line="5" selection-start-column="18" selection-end-line="5" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/friendsofsymfony/user-bundle/Resources/views/Registration/email.txt.twig">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/friendsofsymfony/user-bundle/Resources/views/Registration/register.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" selection-start-line="5" selection-end-line="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/friendsofsymfony/user-bundle/Security/EmailUserProvider.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/friendsofsymfony/user-bundle/Security/LoginManager.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/friendsofsymfony/user-bundle/Security/LoginManagerInterface.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/friendsofsymfony/user-bundle/Security/UserProvider.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/friendsofsymfony/user-bundle/Resources/views/ChangePassword/change_password.html.twig">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/friendsofsymfony/user-bundle/Resources/views/ChangePassword/change_password_content.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="47" selection-start-line="5" selection-start-column="47" selection-end-line="5" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/friendsofsymfony/user-bundle/Resources/views/Security/login.html.twig">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/friendsofsymfony/user-bundle/Resources/views/Security/login_content.html.twig">
+    <entry file="file://$PROJECT_DIR$/app/config/security.yml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="238">
-          <caret line="24" column="95" selection-start-line="24" selection-start-column="95" selection-end-line="24" selection-end-column="95" />
+          <caret line="33" column="27" selection-start-line="33" selection-start-column="27" selection-end-line="33" selection-end-column="27" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/friendsofsymfony/user-bundle/Form/Type/ProfileFormType.php">
+    <entry file="file://$PROJECT_DIR$/app/config/config.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="265">
-          <caret line="106" column="5" selection-start-line="106" selection-start-column="5" selection-end-line="106" selection-end-column="5" />
+        <state relative-caret-position="44">
+          <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/friendsofsymfony/user-bundle/Form/Type/ResettingFormType.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="47" column="72" selection-start-line="47" selection-start-column="72" selection-end-line="47" selection-end-column="72" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/friendsofsymfony/user-bundle/Form/Type/RegistrationFormType.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="310">
-          <caret line="57" column="81" selection-start-line="57" selection-start-column="81" selection-end-line="57" selection-end-column="81" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/friendsofsymfony/user-bundle/Resources/views/Registration/register_content.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/friendsofsymfony/user-bundle/Doctrine/UserManager.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="20" column="13" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/var/cache/dev/appDevDebugProjectContainer.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="167">
-          <caret line="2107" column="27" selection-start-line="2107" selection-start-column="27" selection-end-line="2107" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/friendsofsymfony/user-bundle/Resources/config/doctrine-mapping/User.couchdb.xml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/friendsofsymfony/user-bundle/Resources/config/doctrine-mapping/Group.orm.xml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/friendsofsymfony/user-bundle/Resources/config/doctrine-mapping/User.orm.xml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/TEMI/mainBundle/DependencyInjection/TEMImainExtension.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" selection-start-line="3" selection-end-line="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/config/config_test.yml">
-      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/app/config/parameters.yml">
       <provider selected="true" editor-type-id="text-editor">
@@ -1595,15 +1306,45 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/config/routing_dev.yml">
-      <provider selected="true" editor-type-id="text-editor" />
+    <entry file="file://$PROJECT_DIR$/web/image/Logo_Temi_2.png">
+      <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/var/cache/de_/annotations.map">
-      <provider selected="true" editor-type-id="text-editor" />
+    <entry file="file://$PROJECT_DIR$/web/image/Logo_Temi_1.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/image/Fond_TEMI_3.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/image/blanc.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/image/Fond_TEMI_1.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/image/Fond_TEMI_2.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/image/Fond_TEMI_4.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/image/logo_CERDI_UCA-01.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/javascript/view/viewGenerator/ViewGenerator.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="419" column="44" selection-start-line="419" selection-start-column="44" selection-end-line="419" selection-end-column="44" />
+          <folding>
+            <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#strong#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/TEMI/mainBundle/Controller/TemiController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
+        <state relative-caret-position="-85">
           <caret line="9" selection-start-line="9" selection-end-line="9" />
           <folding>
             <element signature="e#131#188#0#PHP" expanded="true" />
@@ -1611,85 +1352,80 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/AppCache.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/AppKernel.php">
+    <entry file="file://$PROJECT_DIR$/src/TEMI/mainBundle/Resources/config/routing.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="20" selection-start-line="20" selection-end-line="20" />
+        <state relative-caret-position="221">
+          <caret line="13" column="21" selection-start-line="13" selection-start-column="21" selection-end-line="13" selection-end-column="21" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/config/services.yml">
+    <entry file="file://$PROJECT_DIR$/vendor/friendsofsymfony/user-bundle/Form/Type/ResettingFormType.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" column="21" selection-start-line="14" selection-start-column="21" selection-end-line="14" selection-end-column="21" />
+        <state relative-caret-position="106">
+          <caret line="48" column="77" selection-start-line="48" selection-start-column="77" selection-end-line="48" selection-end-column="77" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/friendsofsymfony/user-bundle/Model/UserManager.php">
+    <entry file="file://$PROJECT_DIR$/vendor/friendsofsymfony/user-bundle/Form/Type/GroupFormType.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-714">
-          <caret line="13" column="4" selection-start-line="13" selection-start-column="4" selection-end-line="13" selection-end-column="4" />
+        <state relative-caret-position="-282">
+          <caret line="37" column="81" selection-start-line="37" selection-start-column="81" selection-end-line="37" selection-end-column="81" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/friendsofsymfony/user-bundle/Model/User.php">
+    <entry file="file://$PROJECT_DIR$/vendor/friendsofsymfony/user-bundle/Form/Type/RegistrationFormType.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-153" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/TEMI/mainBundle/Entity/User/UserManager.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="19" column="81" selection-start-line="19" selection-start-column="81" selection-end-line="19" selection-end-column="81" />
+        <state relative-caret-position="-353">
+          <caret line="56" column="41" selection-start-line="56" selection-start-column="41" selection-end-line="56" selection-end-column="80" />
           <folding>
-            <element signature="e#132#178#0#PHP" expanded="true" />
+            <element signature="e#298#338#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/config/config_dev.yml">
+    <entry file="file://$PROJECT_DIR$/vendor/friendsofsymfony/user-bundle/Resources/config/profile.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-255" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/friendsofsymfony/user-bundle/Controller/ProfileController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="82" column="21" selection-start-line="82" selection-start-column="21" selection-end-line="82" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/friendsofsymfony/user-bundle/Form/Factory/FormFactory.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-612" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/friendsofsymfony/user-bundle/Form/Factory/FactoryInterface.php">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/config/config.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="191">
-          <caret line="74" column="38" selection-start-line="74" selection-start-column="38" selection-end-line="74" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/TEMI/mainBundle/TEMImainBundle.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="1" selection-start-line="7" selection-start-column="1" selection-end-line="7" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/TEMI/mainBundle/Tests/Controller/DefaultControllerTest.php">
+    <entry file="file://$PROJECT_DIR$/vendor/friendsofsymfony/user-bundle/Form/DataTransformer/UserToUsernameTransformer.php">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/TEMI/mainBundle/Entity/User/UserManager.php">
+    <entry file="file://$PROJECT_DIR$/vendor/friendsofsymfony/user-bundle/Form/Type/UsernameFormType.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-731">
-          <caret line="21" column="5" selection-start-line="21" selection-start-column="5" selection-end-line="21" selection-end-column="5" />
-          <folding>
-            <element signature="e#132#171#0#PHP" expanded="true" />
-          </folding>
-        </state>
+        <state relative-caret-position="-822" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/TEMI/mainBundle/Entity/User/User.php">
+    <entry file="file://$PROJECT_DIR$/vendor/friendsofsymfony/user-bundle/Util/PasswordUpdater.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="9" column="32" selection-start-line="9" selection-start-column="32" selection-end-line="9" selection-end-column="32" />
-          <folding>
-            <element signature="e#6#90#0#PHP" expanded="true" />
-            <element signature="e#97#139#0#PHP" expanded="true" />
-          </folding>
-        </state>
+        <state relative-caret-position="-459" />
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/friendsofsymfony/user-bundle/Util/UserManipulator.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2128" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/friendsofsymfony/user-bundle/Resources/config/routing/security.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/friendsofsymfony/user-bundle/Resources/config/routing/resetting.xml">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/vendor/friendsofsymfony/user-bundle/Resources/config/routing/registration.xml">
       <provider selected="true" editor-type-id="text-editor">
@@ -1698,22 +1434,123 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/TEMI/mainBundle/Controller/RegistrationController.php">
+    <entry file="file://$PROJECT_DIR$/vendor/friendsofsymfony/user-bundle/Resources/config/routing/profile.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="24" selection-start-line="24" selection-end-line="24" />
-          <folding>
-            <element signature="e#130#179#0#PHP" expanded="true" />
-          </folding>
+        <state relative-caret-position="187">
+          <caret line="11" column="52" selection-start-line="11" selection-start-column="52" selection-end-line="11" selection-end-column="52" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/TEMI/mainBundle/Resources/config/routing.yml">
+    <entry file="file://$PROJECT_DIR$/vendor/friendsofsymfony/user-bundle/Resources/config/routing/group.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/friendsofsymfony/user-bundle/Resources/config/routing/all.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/friendsofsymfony/user-bundle/Controller/ChangePasswordController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-510" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/friendsofsymfony/user-bundle/Form/Type/ChangePasswordFormType.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
-          <caret line="8" selection-start-line="8" selection-end-line="8" selection-end-column="18" />
+          <caret line="49" column="69" selection-start-line="49" selection-start-column="69" selection-end-line="49" selection-end-column="69" />
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/TEMI/mainBundle/Resources/views/Temi/index.html.twig">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/friendsofsymfony/user-bundle/Form/Type/ProfileFormType.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="123">
+          <caret line="51" column="69" selection-start-line="51" selection-start-column="69" selection-end-line="51" selection-end-column="69" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/friendsofsymfony/user-bundle/Resources/config/routing/change_password.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="63" selection-start-line="6" selection-start-column="47" selection-end-line="6" selection-end-column="63" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/friendsofsymfony/user-bundle/Resources/views/Profile/show_content.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="69" selection-start-line="5" selection-start-column="69" selection-end-line="5" selection-end-column="69" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/css/general.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3791">
+          <caret line="268" selection-start-line="268" selection-end-line="268" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/TEMI/mainBundle/Resources/views/Temi/layout.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2278">
+          <caret line="134" column="81" selection-start-line="134" selection-start-column="81" selection-end-line="134" selection-end-column="81" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/friendsofsymfony/user-bundle/Resources/views/layout.html.twig">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Resources/FOSUserBundle/views/layout.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" selection-start-line="2" selection-end-line="2" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/friendsofsymfony/user-bundle/Resources/views/ChangePassword/change_password_content.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/friendsofsymfony/user-bundle/Resources/views/ChangePassword/change_password.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="28" selection-start-line="1" selection-start-column="28" selection-end-line="1" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/friendsofsymfony/user-bundle/Resources/views/Profile/edit_content.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/friendsofsymfony/user-bundle/Resources/views/Profile/edit.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="31" selection-start-line="1" selection-start-column="31" selection-end-line="1" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/friendsofsymfony/user-bundle/Resources/views/Profile/show.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="24" selection-start-line="1" selection-start-column="24" selection-end-line="1" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/friendsofsymfony/user-bundle/Resources/views/Registration/register.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="28" selection-start-line="1" selection-start-column="28" selection-end-line="1" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/friendsofsymfony/user-bundle/Resources/views/Registration/check_email.html.twig">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/vendor/friendsofsymfony/user-bundle/Resources/views/Registration/confirmed.html.twig">
       <provider selected="true" editor-type-id="text-editor">
@@ -1722,40 +1559,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/config/routing.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" selection-start-line="7" selection-end-line="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/friendsofsymfony/user-bundle/Resources/config/routing/profile.xml">
+    <entry file="file://$PROJECT_DIR$/vendor/friendsofsymfony/user-bundle/Resources/views/Registration/email.txt.twig">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/friendsofsymfony/user-bundle/Resources/config/routing/change_password.xml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/friendsofsymfony/user-bundle/Resources/config/routing/all.xml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/config/security.yml">
+    <entry file="file://$PROJECT_DIR$/vendor/friendsofsymfony/user-bundle/Resources/views/Security/login.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="33" column="27" selection-start-line="33" selection-start-column="27" selection-end-line="33" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/TEMI/mainBundle/Resources/views/Temi/layout.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="46" column="67" selection-start-line="46" selection-start-column="67" selection-end-line="46" selection-end-column="67" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/css/general.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="95">
-          <caret line="208" column="67" selection-start-line="208" selection-start-column="67" selection-end-line="208" selection-end-column="67" />
+        <state relative-caret-position="17">
+          <caret line="1" column="27" selection-start-line="1" selection-start-column="27" selection-end-line="1" selection-end-column="27" />
         </state>
       </provider>
     </entry>

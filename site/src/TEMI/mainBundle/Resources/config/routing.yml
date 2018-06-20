@@ -11,8 +11,8 @@ temi_platform_home:
     defaults: { _controller: TEMImainBundle:Temi:index }
 
 temi_platform_modele:
-    path:     /Entity
-    defaults: { _controller: TEMImainBundle:Temi:Entity }
+    path:     /modele
+    defaults: { _controller: TEMImainBundle:Temi:modele }
 
 temi_platform_add:
     path:     /ajoutPays

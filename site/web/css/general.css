@@ -206,9 +206,9 @@ nav {
 }
 
 body {
-    background: url("../image/Fond_TEMI_4.png") fixed center center;
+    /*background: url("../image/Fond_TEMI_4.png") fixed center center;
     height: 100vh;
-    color: white;
+    color: white;*/
 
 }
 
@@ -239,7 +239,7 @@ a {
 
 .panel-default .panel-heading {
     background-color: transparent;
-    color: white;
+   /* color: white;*/
 }
 
 .modal-header {
@@ -266,7 +266,3 @@ a {
     background-color: transparent;
 }
 
-.btn-block {
-    background-color: #eee;
-    color: black;
-}

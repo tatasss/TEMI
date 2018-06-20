@@ -32,13 +32,14 @@ class __TwigTemplate_aa41868c34a0b1ff560207585c7c8f24a4afb6cb31df9c91c9e732b5200
         echo $this->env->getRuntime('Symfony\Bridge\Twig\Form\TwigRenderer')->searchAndRenderBlock((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), 'widget');
         echo "
     <div>
+        <br/>
         <input type=\"submit\" value=\"";
-        // line 6
+        // line 7
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\TranslationExtension')->trans("valider", array(), "FOSUserBundle"), "html", null, true);
         echo "\" />
     </div>
 ";
-        // line 8
+        // line 9
         echo         $this->env->getRuntime('Symfony\Bridge\Twig\Form\TwigRenderer')->renderBlock((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), 'form_end');
         echo "
 ";
@@ -62,7 +63,7 @@ class __TwigTemplate_aa41868c34a0b1ff560207585c7c8f24a4afb6cb31df9c91c9e732b5200
 
     public function getDebugInfo()
     {
-        return array (  42 => 8,  37 => 6,  32 => 4,  28 => 3,  25 => 2,);
+        return array (  43 => 9,  38 => 7,  32 => 4,  28 => 3,  25 => 2,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -80,6 +81,7 @@ class __TwigTemplate_aa41868c34a0b1ff560207585c7c8f24a4afb6cb31df9c91c9e732b5200
 {{ form_start(form, { 'action': path('fos_user_change_password'), 'attr': { 'class': 'fos_user_change_password' } }) }}
     {{ form_widget(form) }}
     <div>
+        <br/>
         <input type=\"submit\" value=\"{{ 'valider'|trans }}\" />
     </div>
 {{ form_end(form) }}

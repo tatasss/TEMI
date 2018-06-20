@@ -12,7 +12,10 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" {% if app.request.attributes.get("_route")=='fos_user_registration_register' %}
         href="../../css/general.css"{% else %}{% if app.request.attributes.get("_route")=='fos_user_registration_confirmed' %}
-        href="../../css/general.css"{% else %} href="../css/general.css"{% endif %}{% endif %}>
+        href="../../css/general.css"{% else %}{% if app.request.attributes.get("_route")=='fos_user_profile_show' %}
+        href="../../css/general.css"{% else %}{% if app.request.attributes.get("_route")=='fos_user_profile_edit' %}
+        href="../../css/general.css"{% else %}{% if app.request.attributes.get("_route")=='fos_user_change_password' %}
+        href="../../css/general.css"{% else %} href="../css/general.css"{% endif %}{% endif %}{% endif %}{% endif %}{% endif %}>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
@@ -26,14 +29,14 @@
             <div class="container-fluid">
                 <div class="navbar-header">
                     <a class=" navbar-brand" href="{{ path('temi_platform_home') }}"><img class="img-rounded"
-                                {% if app.request.attributes.get("_route")=='fos_user_registration_register' %} src="../../image/logo_CERDI_UCA-01.png"{% else %}{% if app.request.attributes.get("_route")=='fos_user_registration_confirmed' %} src="../../image/logo_CERDI_UCA-01.png"{% else %} src="../image/logo_CERDI_UCA-01.png"{% endif %}{% endif %}>Cerdi</a>
+                                {% if app.request.attributes.get("_route")=='fos_user_registration_register' %} src="../../image/logo_CERDI_UCA-01.png"{% else %}{% if app.request.attributes.get("_route")=='fos_user_registration_confirmed' %} src="../../image/logo_CERDI_UCA-01.png"{% else %}{% if app.request.attributes.get("_route")=='fos_user_profile_show' %} src="../../image/logo_CERDI_UCA-01.png"{% else %}{% if app.request.attributes.get("_route")=='fos_user_profile_edit' %} src="../../image/logo_CERDI_UCA-01.png"{% else %}{% if app.request.attributes.get("_route")=='fos_user_change_password' %} src="../../image/logo_CERDI_UCA-01.png"{% else %} src="../image/logo_CERDI_UCA-01.png"{% endif %}{% endif %}{% endif %}{% endif %}{% endif %}>Cerdi</a>
                 </div>
                 <ul class="nav navbar-nav">
                     <li{% if app.request.attributes.get("_route")=='temi_platform_home' %} class="active"{% endif %}>
                         <a href="{{ path('temi_platform_home') }}">Modèle</a>
                     </li>
                     <li {% if app.request.attributes.get("_route")=='temi_platform_graph' %} class="active"{% endif %}>
-                        <a data-toggle="modal" href="#myModal">graphique</a>
+                        <a data-toggle="modal" href="#myModal">Graphique</a>
                     </li>
                     <li {% if app.request.attributes.get("_route")=='temi_platform_add' %} class="active"{% endif %}>
                         <a id="ajoutButt" href="{{ path('temi_platform_add') }}">Ajouter un pays
@@ -116,7 +119,24 @@
 
         <div class="row">
             <div class="col-sm-4">
-                <img {% if app.request.attributes.get("_route")=='fos_user_registration_register' %} src="../../image/Logo_Temi_1.png"{% else %}{% if app.request.attributes.get("_route")=='fos_user_registration_confirmed' %} src="../../image/Logo_Temi_1.png" {% else %}src="../image/Logo_Temi_1.png"{% endif %}{% endif %}>
+                <img
+                        {% if app.request.attributes.get("_route")=='fos_user_registration_register' %}
+                    src="../../image/Logo_Temi_1.png"
+                {% else %}
+                    {% if app.request.attributes.get("_route")=='fos_user_registration_confirmed' %}
+                        src="../../image/Logo_Temi_1.png"
+                    {% else %}
+                        {% if app.request.attributes.get("_route")=='fos_user_profile_show' %}
+                            src="../../image/Logo_Temi_1.png"
+                        {% else %}
+                            {% if app.request.attributes.get("_route")=='fos_user_profile_edit' %}
+                            src="../../image/Logo_Temi_1.png"
+                        {% else %}
+                            {% if app.request.attributes.get("_route")=='fos_user_change_password' %}
+                            src="../../image/Logo_Temi_1.png"
+                        {% else %}
+                            src="../image/Logo_Temi_1.png"
+                        {% endif %}{% endif %} {% endif %}{% endif %}{% endif %}>
                 <h2>LE CALCULATOR TEMI</h2>
                 <div class="panel-group Borderhide" id="accordion7">
                     <div class="panel panel-default Borderhide">

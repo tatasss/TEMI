@@ -32,13 +32,18 @@ class __TwigTemplate_206217a0cd71119cfad505c0f76173f9c3a55cf6ff1b21082efde63442d
         echo $this->env->getRuntime('Symfony\Bridge\Twig\Form\TwigRenderer')->searchAndRenderBlock((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), 'widget');
         echo "
     <div>
-        <input type=\"submit\" value=\"";
-        // line 6
-        echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\TranslationExtension')->trans("profile.edit.submit", array(), "FOSUserBundle"), "html", null, true);
-        echo "\" />
+        <br/>
+        <input type=\"submit\" class=\"btn btn-block\" value=\"";
+        // line 7
+        echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\TranslationExtension')->trans("Valider", array(), "FOSUserBundle"), "html", null, true);
+        echo "\" /> <br/>
+        <a type=\"submit\" class=\"btn btn-block\" href=\"";
+        // line 8
+        echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("fos_user_change_password");
+        echo "\" >Changer mot de passe</a>
     </div>
 ";
-        // line 8
+        // line 10
         echo         $this->env->getRuntime('Symfony\Bridge\Twig\Form\TwigRenderer')->renderBlock((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), 'form_end');
         echo "
 ";
@@ -62,7 +67,7 @@ class __TwigTemplate_206217a0cd71119cfad505c0f76173f9c3a55cf6ff1b21082efde63442d
 
     public function getDebugInfo()
     {
-        return array (  42 => 8,  37 => 6,  32 => 4,  28 => 3,  25 => 2,);
+        return array (  47 => 10,  42 => 8,  38 => 7,  32 => 4,  28 => 3,  25 => 2,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -80,7 +85,9 @@ class __TwigTemplate_206217a0cd71119cfad505c0f76173f9c3a55cf6ff1b21082efde63442d
 {{ form_start(form, { 'action': path('fos_user_profile_edit'), 'attr': { 'class': 'fos_user_profile_edit' } }) }}
     {{ form_widget(form) }}
     <div>
-        <input type=\"submit\" value=\"{{ 'profile.edit.submit'|trans }}\" />
+        <br/>
+        <input type=\"submit\" class=\"btn btn-block\" value=\"{{ 'Valider'|trans }}\" /> <br/>
+        <a type=\"submit\" class=\"btn btn-block\" href=\"{{ path('fos_user_change_password') }}\" >Changer mot de passe</a>
     </div>
 {{ form_end(form) }}
 ", "@FOSUser/Profile/edit_content.html.twig", "C:\\Users\\matthias\\Desktop\\stage\\TEMI\\site\\vendor\\friendsofsymfony\\user-bundle\\Resources\\views\\Profile\\edit_content.html.twig");

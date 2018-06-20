@@ -26,16 +26,20 @@ class __TwigTemplate_2bb10b1aeb605dea828f21b9529f9933d0cb7f94988199b2a7239bfdfd6
 <div class=\"fos_user_user_show\">
     <p>";
         // line 4
-        echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\TranslationExtension')->trans("profile.show.username", array(), "FOSUserBundle"), "html", null, true);
+        echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\TranslationExtension')->trans("Nom d'utilisateur", array(), "FOSUserBundle"), "html", null, true);
         echo ": ";
         echo twig_escape_filter($this->env, $this->getAttribute((isset($context["user"]) ? $context["user"] : $this->getContext($context, "user")), "username", array()), "html", null, true);
         echo "</p>
     <p>";
         // line 5
-        echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\TranslationExtension')->trans("profile.show.email", array(), "FOSUserBundle"), "html", null, true);
+        echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\TranslationExtension')->trans("Email", array(), "FOSUserBundle"), "html", null, true);
         echo ": ";
         echo twig_escape_filter($this->env, $this->getAttribute((isset($context["user"]) ? $context["user"] : $this->getContext($context, "user")), "email", array()), "html", null, true);
         echo "</p>
+    <a href=\"";
+        // line 6
+        echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("fos_user_profile_edit");
+        echo "\" class=\"btn btn-info\"> Changer ces donnèes </a>
 </div>
 ";
         
@@ -58,7 +62,7 @@ class __TwigTemplate_2bb10b1aeb605dea828f21b9529f9933d0cb7f94988199b2a7239bfdfd6
 
     public function getDebugInfo()
     {
-        return array (  35 => 5,  29 => 4,  25 => 2,);
+        return array (  41 => 6,  35 => 5,  29 => 4,  25 => 2,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -74,8 +78,9 @@ class __TwigTemplate_2bb10b1aeb605dea828f21b9529f9933d0cb7f94988199b2a7239bfdfd6
         return new Twig_Source("{% trans_default_domain 'FOSUserBundle' %}
 
 <div class=\"fos_user_user_show\">
-    <p>{{ 'profile.show.username'|trans }}: {{ user.username }}</p>
-    <p>{{ 'profile.show.email'|trans }}: {{ user.email }}</p>
+    <p>{{ 'Nom d\\'utilisateur'|trans }}: {{ user.username }}</p>
+    <p>{{ 'Email'|trans }}: {{ user.email }}</p>
+    <a href=\"{{ path('fos_user_profile_edit') }}\" class=\"btn btn-info\"> Changer ces donnèes </a>
 </div>
 ", "FOSUserBundle:Profile:show_content.html.twig", "C:\\Users\\matthias\\Desktop\\stage\\TEMI\\site\\vendor\\friendsofsymfony\\user-bundle/Resources/views/Profile/show_content.html.twig");
     }

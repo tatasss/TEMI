@@ -3,6 +3,8 @@
 {{ form_start(form, { 'action': path('fos_user_profile_edit'), 'attr': { 'class': 'fos_user_profile_edit' } }) }}
     {{ form_widget(form) }}
     <div>
-        <input type="submit" value="{{ 'profile.edit.submit'|trans }}" />
+        <br/>
+        <input type="submit" class="btn btn-block" value="{{ 'Valider'|trans }}" /> <br/>
+        <a type="submit" class="btn btn-block" href="{{ path('fos_user_change_password') }}" >Changer mot de passe</a>
     </div>
 {{ form_end(form) }}

@@ -48,7 +48,6 @@ class __TwigTemplate_2386c02d63f7bee75640a4941eba41016d48e5ea68f4eed5e32e820ef60
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "title"));
 
-        echo "lol";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
 
@@ -123,7 +122,7 @@ class __TwigTemplate_2386c02d63f7bee75640a4941eba41016d48e5ea68f4eed5e32e820ef60
 
     public function getDebugInfo()
     {
-        return array (  88 => 6,  70 => 5,  61 => 4,  43 => 3,  11 => 1,);
+        return array (  87 => 6,  69 => 5,  60 => 4,  43 => 3,  11 => 1,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -138,7 +137,7 @@ class __TwigTemplate_2386c02d63f7bee75640a4941eba41016d48e5ea68f4eed5e32e820ef60
     {
         return new Twig_Source("{% extends \"TEMImainBundle:Temi:layout.html.twig\" %}
 
-{% block title %}lol{% endblock %}
+{% block title %}{% endblock %}
 {% block body %}
 {% block content %}
     {% block fos_user_content %}{% endblock %}
