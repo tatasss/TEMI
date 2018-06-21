@@ -1,0 +1,17 @@
+78c371,::1,GET,http://localhost/site/web/app_dev.php/index.html,1529571177,b4b655,200
+b4b655,::1,GET,http://localhost/site/web/app_dev.php/index.html,1529571179,,404
+7f453d,::1,GET,http://localhost/site/web/app_dev.php/login,1529571261,,200
+c2aed2,::1,GET,http://localhost/site/web/app_dev.php/,1529571266,,200
+fc6a94,::1,GET,http://localhost/site/web/app_dev.php/register/,1529571281,,200
+782447,::1,GET,http://localhost/site/web/app_dev.php/,1529571286,,200
+3841c7,::1,GET,http://localhost/site/web/app_dev.php/login,1529571308,,200
+7db149,::1,POST,http://localhost/site/web/app_dev.php/login_check,1529571322,,302
+a2682f,::1,GET,http://localhost/site/web/app_dev.php/,1529571323,,200
+bc02e1,::1,GET,http://localhost/site/web/app_dev.php/profile/,1529571327,,200
+44d2b5,::1,GET,http://localhost/site/web/app_dev.php/image/logo_CERDI_UCA-01.png,1529571330,f54c9a,200
+f54c9a,::1,GET,http://localhost/site/web/app_dev.php/image/logo_CERDI_UCA-01.png,1529571330,,404
+4d3e74,::1,GET,http://localhost/site/web/app_dev.php/profile/edit,1529571332,,200
+8007ee,::1,GET,http://localhost/site/web/app_dev.php/profile/change-password,1529571340,,200
+a4f929,::1,GET,http://localhost/site/web/app_dev.php/,1529571352,,200
+e84850,::1,GET,http://localhost/site/web/app_dev.php/,1529573304,7faa9d,200
+7faa9d,::1,GET,http://localhost/site/web/app_dev.php/,1529573304,,500

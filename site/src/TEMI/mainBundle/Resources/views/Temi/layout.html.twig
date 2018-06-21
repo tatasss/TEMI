@@ -28,7 +28,7 @@
 
             <div class="container-fluid">
                 <div class="navbar-header">
-                    <a  class=" navbar-brand" href="./index.html">
+                    <a  class=" navbar-brand" href="{{ path('temi_platform_home') }}">
                         <img class="img-rounded" id="cerdi"
                                 {% if app.request.attributes.get("_route")=='fos_user_registration_register' %}
                                     src="../../image/logo_CERDI_UCA-01.png"
@@ -51,7 +51,7 @@
                                 {% endif %}/>
                         Cerdi
                     </a>
-                    <a class=" navbar-brand" href="./index.html">
+                    <a class=" navbar-brand" href="{{ path('temi_platform_home') }}">
                         <img class="img-rounded" id="logoTEMI"
                                 {% if app.request.attributes.get("_route")=='fos_user_registration_register' %}
                             src="../../image/Logo_Calculateur_TEMI_blanc.png"
