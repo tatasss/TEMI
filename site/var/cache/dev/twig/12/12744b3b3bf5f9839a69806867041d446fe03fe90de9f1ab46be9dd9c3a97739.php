@@ -8,7 +8,7 @@ class __TwigTemplate_9d70b208614946ab646b080ee765138128e2253851d4db77fafa46fbfab
         parent::__construct($env);
 
         // line 1
-        $this->parent = $this->loadTemplate("TEMImainBundle:Temi:layout.html.twig", "FOSUserBundle::layout.html.twig", 1);
+        $this->parent = $this->loadTemplate("TEMImainBundle:Temi:HTMLlayout.html.twig", "FOSUserBundle::layout.html.twig", 1);
         $this->blocks = array(
             'title' => array($this, 'block_title'),
             'body' => array($this, 'block_body'),
@@ -19,7 +19,7 @@ class __TwigTemplate_9d70b208614946ab646b080ee765138128e2253851d4db77fafa46fbfab
 
     protected function doGetParent(array $context)
     {
-        return "TEMImainBundle:Temi:layout.html.twig";
+        return "TEMImainBundle:Temi:HTMLlayout.html.twig";
     }
 
     protected function doDisplay(array $context, array $blocks = array())
@@ -135,7 +135,7 @@ class __TwigTemplate_9d70b208614946ab646b080ee765138128e2253851d4db77fafa46fbfab
 
     public function getSourceContext()
     {
-        return new Twig_Source("{% extends \"TEMImainBundle:Temi:layout.html.twig\" %}
+        return new Twig_Source("{% extends \"TEMImainBundle:Temi:HTML\\layout.html.twig\" %}
 
 {% block title %}{% endblock %}
 {% block body %}

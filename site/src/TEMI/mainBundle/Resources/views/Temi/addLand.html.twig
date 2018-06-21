@@ -1,0 +1,191 @@
+{% extends "TEMImainBundle:Temi:layout.html.twig" %}
+{% block title %} Ajout Pays{% endblock %}
+{% block body %}
+    <h1>Ajouter un pays</h1>
+    <p>Pour creer un nouveau pays, veuillez remplir le formulaire ci-dessous</p>
+    {{ form_start(form) }}
+
+    {# Les erreurs générales du formulaire. #}
+    {{ form_errors(form) }}
+
+
+    <div id="formError"></div>
+    <div id="myCarousel" class="carousel slide w3-container borderhide" data-interval="false">
+        <ol class="carousel-indicators lol">
+            <li data-target="#myCarousel" data-slide-to="0" class="active">
+            </li>
+            <li data-target="#myCarousel" data-slide-to="1">
+            </li>
+            <li data-target="#myCarousel" data-slide-to="2">
+            </li>
+            <li data-target="#myCarousel" data-slide-to="3">
+            </li>
+            <li data-target="#myCarousel" data-slide-to="4">
+            </li>
+        </ol>
+        <div class=" borderhide">
+            <div class=" borderhide" id="mapage">
+                <div class="carousel-inner borderhide">
+                    <div class="item active borderhide">
+                        <h3>Général</h3>
+                        <div class="form-group">
+                            <label>Nom </label>
+                            {{ form_errors(form.Name) }}
+                            {{ form_widget(form.Name, {'attr': {'class': 'form-control'}}) }}
+                        </div>
+                        <div class="form-group">
+                            {{ form_label(form.code) }}
+                            <p>Le code ISO est une codification internationale créé par l'International
+                                Standardization
+                                Organization (ISO)
+                                qui attribue un code unique de trois lettres à toute devise de la planète pour
+                                éviter
+                                toute
+                                ambiguïté dans
+                                leurs identifications et leurs désignations. Les deux premières lettres
+                                correspondent au
+                                nom du
+                                pays, la
+                                dernière au nom de la monnaie nationale. En cas de changement de monnaie
+                                nationale,
+                                seule la
+                                dernière lettre
+                                varie.
+                            </p>
+                            {{ form_errors(form.code) }}
+                            {{ form_widget(form.code, {'attr': {'class': 'form-control'}}) }}
+                        </div>
+                    </div>
+                    <div class="item borderhide">
+                        <h3>Code Général des Impôts</h3>
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <div class="panel panel-default">
+                                    <div class="panel-heading">
+                                        <p><strong>Durée d'amortissment :</strong></p>
+                                    </div>
+                                    <div class="panel-body">
+                                    {{ form_start(formAmm) }}
+
+                                        {# Les erreurs générales du formulaire. #}
+                                        {{ form_errors(formAmm) }}
+                                        <div class="form-group">
+                                            <label>Construction</label>
+                                            {{ form_errors(formAmm.construction) }}
+                                            {{ form_widget(formAmm.construction, {'attr': {'class': 'form-control'}}) }}
+                                        </div>
+                                        <div class="form-group">
+                                            <label>Equipement</label>
+                                            {{ form_errors(formAmm.equipement) }}
+                                            {{ form_widget(formAmm.equipement, {'attr': {'class': 'form-control'}}) }}
+                                        </div>
+                                        <div class="form-group">
+                                            <label>Camion</label>
+                                            {{ form_errors(formAmm.camion) }}
+                                            {{ form_widget(formAmm.camion, {'attr': {'class': 'form-control'}}) }}
+                                        </div>
+                                        <div class="form-group">
+                                            <label>Matériel Informatique</label>
+                                            {{ form_errors(formAmm.matInformatique) }}
+                                            {{ form_widget(formAmm.matInformatique, {'attr': {'class': 'form-control'}}) }}
+                                        </div>
+                                        <div class="form-group">
+                                            <label>Matériel de bureau</label>
+                                            {{ form_errors(formAmm.matBureau) }}
+                                            {{ form_widget(formAmm.matBureau, {'attr': {'class': 'form-control'}}) }}
+                                        </div>
+                                        <div class="form-group">
+                                            <label>Coefficient Dégressif</label>
+                                            {{ form_errors(formAmm.coefDegressif) }}
+                                            {{ form_widget(formAmm.coefDegressif, {'attr': {'class': 'form-control'}}) }}
+                                        </div>
+                                        {{ form_rest(formAmm) }}
+
+                                        {# Fermeture de la balise <form> du formulaire HTML #}
+                                    {{ form_end(formAmm) }}
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="panel panel-default">
+                                    <div class="panel-heading">
+                                        <p><strong>Taux d'impôt :</strong></p>
+                                    </div>
+                                    <div class="panel-body">
+                                        {{ form_start(formImp) }}
+
+                                        {# Les erreurs générales du formulaire. #}
+                                        {{ form_errors(formImp) }}
+                                        <div class="form-group">
+                                            <label>Contributions forfaitaires employeurs</label>
+                                            {{ form_errors(formImp.cfe) }}
+                                            {{ form_widget(formImp.cfe, {'attr': {'class': 'form-control'}}) }}
+                                        </div>
+                                        <div class="form-group">
+                                            <label>Impôt Société</label>
+                                            {{ form_errors(formImp.isImp) }}
+                                            {{ form_widget(formImp.isImp, {'attr': {'class': 'form-control'}}) }}
+                                        </div>
+                                        <div class="form-group">
+                                            <label>Impôt minimum forfaitaire</label>
+                                            {{ form_errors(formImp.imf) }}
+                                            {{ form_widget(formImp.imf, {'attr': {'class': 'form-control'}}) }}
+                                        </div>
+                                        <div class="form-group">
+                                            <label>Impôt sur le revenu de la valeur mobilières</label>
+                                            {{ form_errors(formImp.irvm) }}
+                                            {{ form_widget(formImp.irvm, {'attr': {'class': 'form-control'}}) }}
+                                        </div>
+                                        <div class="form-group">
+                                            <label>Impôt sur le revenu des créances</label>
+                                            {{ form_errors(formImp.irc) }}
+                                            {{ form_widget(formImp.irc, {'attr': {'class': 'form-control'}}) }}
+                                        </div>
+                                        <div class="form-group">
+                                            <label>Taxe sur la valeur ajoutée du pétrole</label>
+                                            {{ form_errors(formImp.tva_petrole) }}
+                                            {{ form_widget(formImp.tva_petrole, {'attr': {'class': 'form-control'}}) }}
+                                        </div>
+                                        {{ form_rest(formImp) }}
+
+                                        {# Fermeture de la balise <form> du formulaire HTML #}
+                                        {{ form_end(formImp) }}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class=" borderhide">
+            <button class="left" href="#myCarousel" data-slide="prev">
+                <span class="glyphicon glyphicon-chevron-left"> </span>
+                avant
+            </button>
+            <button id="suivant" class="right" href="#myCarousel" data-slide="next">
+                suivant
+                <span class="glyphicon glyphicon-chevron-right"> </span>
+            </button>
+        </div>
+    </div>
+
+
+
+    {# Idem pour un autre champ. #}
+
+
+
+
+    {# Pour le bouton, pas de label ni d'erreur, on affiche juste le widget #}
+    {{ form_widget(form.save, {'attr': {'class': 'btn btn-primary'}}) }}
+
+    {# Génération automatique des champs pas encore écrits.
+       Dans cet exemple, ce serait le champ CSRF (géré automatiquement par Symfony !)
+       et tous les champs cachés (type « hidden »). #}
+    {{ form_rest(form) }}
+
+    {# Fermeture de la balise <form> du formulaire HTML #}
+    {{ form_end(form) }}
+
+{% endblock %}

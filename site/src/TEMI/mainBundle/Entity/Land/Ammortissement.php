@@ -54,7 +54,7 @@ class Ammortissement
      *
      * @ORM\Column(name="matInforrmatique", type="integer")
      */
-    private $matInforrmatique;
+    private $matInformatique;
 
     /**
      * @var int
@@ -177,9 +177,9 @@ class Ammortissement
      *
      * @return Ammortissement
      */
-    public function setMatInforrmatique($matInforrmatique)
+    public function setMatInformatique($matInforrmatique)
     {
-        $this->matInforrmatique = $matInforrmatique;
+        $this->matInformatique = $matInforrmatique;
 
         return $this;
     }
@@ -189,9 +189,9 @@ class Ammortissement
      *
      * @return int
      */
-    public function getMatInforrmatique()
+    public function getMatInformatique()
     {
-        return $this->matInforrmatique;
+        return $this->matInformatique;
     }
 
     /**

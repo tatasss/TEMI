@@ -87,7 +87,10 @@ class __TwigTemplate_68dc9c74467f123fde467b53e9fbd86179d1a4a072458309120d4041791
 
             <div class=\"container-fluid\">
                 <div class=\"navbar-header\">
-                    <a  class=\" navbar-brand\" href=\"./index.html\">
+                    <a  class=\" navbar-brand\" href=\"";
+        // line 31
+        echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("temi_platform_home");
+        echo "\">
                         <img class=\"img-rounded\" id=\"cerdi\"
                                 ";
         // line 33
@@ -141,7 +144,10 @@ class __TwigTemplate_68dc9c74467f123fde467b53e9fbd86179d1a4a072458309120d4041791
         echo "/>
                         Cerdi
                     </a>
-                    <a class=\" navbar-brand\" href=\"./index.html\">
+                    <a class=\" navbar-brand\" href=\"";
+        // line 54
+        echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("temi_platform_home");
+        echo "\">
                         <img class=\"img-rounded\" id=\"logoTEMI\"
                                 ";
         // line 56
@@ -592,7 +598,7 @@ class __TwigTemplate_68dc9c74467f123fde467b53e9fbd86179d1a4a072458309120d4041791
 
     public function getDebugInfo()
     {
-        return array (  573 => 295,  564 => 294,  554 => 289,  545 => 288,  535 => 6,  526 => 5,  513 => 297,  511 => 294,  505 => 290,  503 => 288,  392 => 183,  387 => 182,  383 => 180,  380 => 179,  376 => 177,  373 => 176,  369 => 174,  366 => 173,  362 => 171,  359 => 170,  355 => 168,  353 => 167,  303 => 119,  294 => 113,  288 => 112,  281 => 108,  275 => 107,  272 => 106,  262 => 99,  256 => 98,  251 => 96,  246 => 94,  240 => 93,  237 => 92,  235 => 91,  227 => 86,  221 => 85,  213 => 82,  208 => 80,  202 => 79,  193 => 74,  190 => 73,  187 => 72,  184 => 71,  178 => 69,  175 => 68,  171 => 66,  168 => 65,  164 => 63,  161 => 62,  157 => 60,  154 => 59,  150 => 57,  148 => 56,  139 => 51,  136 => 50,  133 => 49,  130 => 48,  124 => 46,  121 => 45,  117 => 43,  114 => 42,  110 => 40,  107 => 39,  103 => 37,  100 => 36,  96 => 34,  94 => 33,  69 => 18,  65 => 17,  61 => 16,  57 => 15,  53 => 14,  51 => 13,  41 => 10,  36 => 7,  34 => 5,  28 => 1,);
+        return array (  579 => 295,  570 => 294,  560 => 289,  551 => 288,  541 => 6,  532 => 5,  519 => 297,  517 => 294,  511 => 290,  509 => 288,  398 => 183,  393 => 182,  389 => 180,  386 => 179,  382 => 177,  379 => 176,  375 => 174,  372 => 173,  368 => 171,  365 => 170,  361 => 168,  359 => 167,  309 => 119,  300 => 113,  294 => 112,  287 => 108,  281 => 107,  278 => 106,  268 => 99,  262 => 98,  257 => 96,  252 => 94,  246 => 93,  243 => 92,  241 => 91,  233 => 86,  227 => 85,  219 => 82,  214 => 80,  208 => 79,  199 => 74,  196 => 73,  193 => 72,  190 => 71,  184 => 69,  181 => 68,  177 => 66,  174 => 65,  170 => 63,  167 => 62,  163 => 60,  160 => 59,  156 => 57,  154 => 56,  149 => 54,  142 => 51,  139 => 50,  136 => 49,  133 => 48,  127 => 46,  124 => 45,  120 => 43,  117 => 42,  113 => 40,  110 => 39,  106 => 37,  103 => 36,  99 => 34,  97 => 33,  92 => 31,  69 => 18,  65 => 17,  61 => 16,  57 => 15,  53 => 14,  51 => 13,  41 => 10,  36 => 7,  34 => 5,  28 => 1,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -635,7 +641,7 @@ class __TwigTemplate_68dc9c74467f123fde467b53e9fbd86179d1a4a072458309120d4041791
 
             <div class=\"container-fluid\">
                 <div class=\"navbar-header\">
-                    <a  class=\" navbar-brand\" href=\"./index.html\">
+                    <a  class=\" navbar-brand\" href=\"{{ path('temi_platform_home') }}\">
                         <img class=\"img-rounded\" id=\"cerdi\"
                                 {% if app.request.attributes.get(\"_route\")=='fos_user_registration_register' %}
                                     src=\"../../image/logo_CERDI_UCA-01.png\"
@@ -658,7 +664,7 @@ class __TwigTemplate_68dc9c74467f123fde467b53e9fbd86179d1a4a072458309120d4041791
                                 {% endif %}/>
                         Cerdi
                     </a>
-                    <a class=\" navbar-brand\" href=\"./index.html\">
+                    <a class=\" navbar-brand\" href=\"{{ path('temi_platform_home') }}\">
                         <img class=\"img-rounded\" id=\"logoTEMI\"
                                 {% if app.request.attributes.get(\"_route\")=='fos_user_registration_register' %}
                             src=\"../../image/Logo_Calculateur_TEMI_blanc.png\"
