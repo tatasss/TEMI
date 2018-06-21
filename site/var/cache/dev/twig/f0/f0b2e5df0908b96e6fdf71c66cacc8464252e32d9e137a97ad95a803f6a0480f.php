@@ -87,49 +87,129 @@ class __TwigTemplate_68dc9c74467f123fde467b53e9fbd86179d1a4a072458309120d4041791
 
             <div class=\"container-fluid\">
                 <div class=\"navbar-header\">
-                    <a class=\" navbar-brand\" href=\"";
-        // line 31
-        echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("temi_platform_home");
-        echo "\"><img class=\"img-rounded\"
+                    <a  class=\" navbar-brand\" href=\"./index.html\">
+                        <img class=\"img-rounded\" id=\"cerdi\"
                                 ";
-        // line 32
+        // line 33
         if (($this->getAttribute($this->getAttribute($this->getAttribute((isset($context["app"]) ? $context["app"] : $this->getContext($context, "app")), "request", array()), "attributes", array()), "get", array(0 => "_route"), "method") == "fos_user_registration_register")) {
-            echo " src=\"../../image/logo_CERDI_UCA-01.png\"";
+            // line 34
+            echo "                                    src=\"../../image/logo_CERDI_UCA-01.png\"
+                                ";
         } else {
+            // line 36
+            echo "                                    ";
             if (($this->getAttribute($this->getAttribute($this->getAttribute((isset($context["app"]) ? $context["app"] : $this->getContext($context, "app")), "request", array()), "attributes", array()), "get", array(0 => "_route"), "method") == "fos_user_registration_confirmed")) {
-                echo " src=\"../../image/logo_CERDI_UCA-01.png\"";
+                // line 37
+                echo "                                        src=\"../../image/logo_CERDI_UCA-01.png\"
+                                    ";
             } else {
+                // line 39
+                echo "                                        ";
                 if (($this->getAttribute($this->getAttribute($this->getAttribute((isset($context["app"]) ? $context["app"] : $this->getContext($context, "app")), "request", array()), "attributes", array()), "get", array(0 => "_route"), "method") == "fos_user_profile_show")) {
-                    echo " src=\"../../image/logo_CERDI_UCA-01.png\"";
+                    // line 40
+                    echo "                                            src=\"../../image/logo_CERDI_UCA-01.png\"
+                                        ";
                 } else {
+                    // line 42
+                    echo "                                            ";
                     if (($this->getAttribute($this->getAttribute($this->getAttribute((isset($context["app"]) ? $context["app"] : $this->getContext($context, "app")), "request", array()), "attributes", array()), "get", array(0 => "_route"), "method") == "fos_user_profile_edit")) {
-                        echo " src=\"../../image/logo_CERDI_UCA-01.png\"";
+                        // line 43
+                        echo "                                                src=\"../../image/logo_CERDI_UCA-01.png\"
+                                            ";
                     } else {
+                        // line 45
+                        echo "                                                ";
                         if (($this->getAttribute($this->getAttribute($this->getAttribute((isset($context["app"]) ? $context["app"] : $this->getContext($context, "app")), "request", array()), "attributes", array()), "get", array(0 => "_route"), "method") == "fos_user_change_password")) {
-                            echo " src=\"../../image/logo_CERDI_UCA-01.png\"";
+                            // line 46
+                            echo "                                                    src=\"../../image/logo_CERDI_UCA-01.png\"";
                         } else {
-                            echo " src=\"../image/logo_CERDI_UCA-01.png\"";
+                            echo " src=\"../image/logo_CERDI_UCA-01.png\"
+                                                ";
                         }
+                        // line 48
+                        echo "                                            ";
                     }
+                    // line 49
+                    echo "                                        ";
                 }
+                // line 50
+                echo "                                    ";
             }
+            // line 51
+            echo "                                ";
         }
-        echo ">Cerdi</a>
+        echo "/>
+                        Cerdi
+                    </a>
+                    <a class=\" navbar-brand\" href=\"./index.html\">
+                        <img class=\"img-rounded\" id=\"logoTEMI\"
+                                ";
+        // line 56
+        if (($this->getAttribute($this->getAttribute($this->getAttribute((isset($context["app"]) ? $context["app"] : $this->getContext($context, "app")), "request", array()), "attributes", array()), "get", array(0 => "_route"), "method") == "fos_user_registration_register")) {
+            // line 57
+            echo "                            src=\"../../image/Logo_Calculateur_TEMI_blanc.png\"
+                        ";
+        } else {
+            // line 59
+            echo "                            ";
+            if (($this->getAttribute($this->getAttribute($this->getAttribute((isset($context["app"]) ? $context["app"] : $this->getContext($context, "app")), "request", array()), "attributes", array()), "get", array(0 => "_route"), "method") == "fos_user_registration_confirmed")) {
+                // line 60
+                echo "                                src=\"../../image/Logo_Calculateur_TEMI_blanc.png\"
+                            ";
+            } else {
+                // line 62
+                echo "                                ";
+                if (($this->getAttribute($this->getAttribute($this->getAttribute((isset($context["app"]) ? $context["app"] : $this->getContext($context, "app")), "request", array()), "attributes", array()), "get", array(0 => "_route"), "method") == "fos_user_profile_show")) {
+                    // line 63
+                    echo "                                    src=\"../../image/Logo_Calculateur_TEMI_blanc.png\"
+                                ";
+                } else {
+                    // line 65
+                    echo "                                    ";
+                    if (($this->getAttribute($this->getAttribute($this->getAttribute((isset($context["app"]) ? $context["app"] : $this->getContext($context, "app")), "request", array()), "attributes", array()), "get", array(0 => "_route"), "method") == "fos_user_profile_edit")) {
+                        // line 66
+                        echo "                                        src=\"../../image/Logo_Calculateur_TEMI_blanc.png\"
+                                    ";
+                    } else {
+                        // line 68
+                        echo "                                        ";
+                        if (($this->getAttribute($this->getAttribute($this->getAttribute((isset($context["app"]) ? $context["app"] : $this->getContext($context, "app")), "request", array()), "attributes", array()), "get", array(0 => "_route"), "method") == "fos_user_change_password")) {
+                            // line 69
+                            echo "                                            src=\"../../image/logo_CERDI_UCA-01.png\"";
+                        } else {
+                            echo " src=\"../image/Logo_Calculateur_TEMI_blanc.png\"
+                                        ";
+                        }
+                        // line 71
+                        echo "                                    ";
+                    }
+                    // line 72
+                    echo "                                ";
+                }
+                // line 73
+                echo "                            ";
+            }
+            // line 74
+            echo "                                ";
+        }
+        echo "/>
+                    </a>
+
                 </div>
                 <ul class=\"nav navbar-nav\">
                     <li";
-        // line 35
+        // line 79
         if (($this->getAttribute($this->getAttribute($this->getAttribute((isset($context["app"]) ? $context["app"] : $this->getContext($context, "app")), "request", array()), "attributes", array()), "get", array(0 => "_route"), "method") == "temi_platform_home")) {
             echo " class=\"active\"";
         }
         echo ">
                         <a href=\"";
-        // line 36
+        // line 80
         echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("temi_platform_home");
         echo "\">Modèle</a>
                     </li>
                     <li ";
-        // line 38
+        // line 82
         if (($this->getAttribute($this->getAttribute($this->getAttribute((isset($context["app"]) ? $context["app"] : $this->getContext($context, "app")), "request", array()), "attributes", array()), "get", array(0 => "_route"), "method") == "temi_platform_graph")) {
             echo " class=\"active\"";
         }
@@ -137,13 +217,13 @@ class __TwigTemplate_68dc9c74467f123fde467b53e9fbd86179d1a4a072458309120d4041791
                         <a data-toggle=\"modal\" href=\"#myModal\">Graphique</a>
                     </li>
                     <li ";
-        // line 41
+        // line 85
         if (($this->getAttribute($this->getAttribute($this->getAttribute((isset($context["app"]) ? $context["app"] : $this->getContext($context, "app")), "request", array()), "attributes", array()), "get", array(0 => "_route"), "method") == "temi_platform_add")) {
             echo " class=\"active\"";
         }
         echo ">
                         <a id=\"ajoutButt\" href=\"";
-        // line 42
+        // line 86
         echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("temi_platform_add");
         echo "\">Ajouter un pays
                             <span class=\"glyphicon glyphicon-plus-sign\"> </span>
@@ -151,34 +231,34 @@ class __TwigTemplate_68dc9c74467f123fde467b53e9fbd86179d1a4a072458309120d4041791
                     </li>
                 </ul>
                 ";
-        // line 47
+        // line 91
         if ($this->env->getExtension('Symfony\Bridge\Twig\Extension\SecurityExtension')->isGranted("IS_AUTHENTICATED_FULLY")) {
-            // line 48
+            // line 92
             echo "                    <ul class=\"nav navbar-nav navbar-right\">
                         <li ";
-            // line 49
+            // line 93
             if (($this->getAttribute($this->getAttribute($this->getAttribute((isset($context["app"]) ? $context["app"] : $this->getContext($context, "app")), "request", array()), "attributes", array()), "get", array(0 => "_route"), "method") == "fos_user_profile_show")) {
                 echo " class=\"active\"";
             }
             echo ">
                             <a href=\"";
-            // line 50
+            // line 94
             echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("fos_user_profile_show");
             echo "\"><span
                                         class=\"glyphicon glyphicon-user\"></span>
                                 ";
-            // line 52
+            // line 96
             echo twig_escape_filter($this->env, $this->getAttribute((isset($context["app"]) ? $context["app"] : $this->getContext($context, "app")), "user", array()), "html", null, true);
             echo "</a>
                         </li>
                         <li ";
-            // line 54
+            // line 98
             if (($this->getAttribute($this->getAttribute($this->getAttribute((isset($context["app"]) ? $context["app"] : $this->getContext($context, "app")), "request", array()), "attributes", array()), "get", array(0 => "_route"), "method") == "fos_user_security_logout")) {
                 echo " class=\"active\"";
             }
             echo ">
                             <a href=\"";
-            // line 55
+            // line 99
             echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("fos_user_security_logout");
             echo "\"><span
                                         class=\"glyphicon glyphicon-log-out\"></span>
@@ -188,29 +268,29 @@ class __TwigTemplate_68dc9c74467f123fde467b53e9fbd86179d1a4a072458309120d4041791
 
                 ";
         } else {
-            // line 62
+            // line 106
             echo "                    <ul class=\"nav navbar-nav navbar-right\">
                         <li ";
-            // line 63
+            // line 107
             if (($this->getAttribute($this->getAttribute($this->getAttribute((isset($context["app"]) ? $context["app"] : $this->getContext($context, "app")), "request", array()), "attributes", array()), "get", array(0 => "_route"), "method") == "fos_user_registration_register")) {
                 echo " class=\"active\"";
             }
             echo ">
                             <a href=\"";
-            // line 64
+            // line 108
             echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("fos_user_registration_register");
             echo "\"><span
                                         class=\"glyphicon glyphicon-user\"></span>
                                 Inscription</a>
                         </li>
                         <li ";
-            // line 68
+            // line 112
             if (($this->getAttribute($this->getAttribute($this->getAttribute((isset($context["app"]) ? $context["app"] : $this->getContext($context, "app")), "request", array()), "attributes", array()), "get", array(0 => "_route"), "method") == "fos_user_security_login")) {
                 echo " class=\"active\"";
             }
             echo ">
                             <a href=\"";
-            // line 69
+            // line 113
             echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("fos_user_security_login");
             echo "\"><span
                                         class=\"glyphicon glyphicon-log-in\"></span>
@@ -219,7 +299,7 @@ class __TwigTemplate_68dc9c74467f123fde467b53e9fbd86179d1a4a072458309120d4041791
                     </ul>
                 ";
         }
-        // line 75
+        // line 119
         echo "            </div>
         </nav>
         <div class=\"modal fade\" id=\"myModal\" role=\"dialog\">
@@ -252,7 +332,7 @@ class __TwigTemplate_68dc9c74467f123fde467b53e9fbd86179d1a4a072458309120d4041791
                         </form>
                     </div>
                     <div class=\"modal-footer\">
-                        <button type=\"submit\" class=\"btn btn-danger btn-default pull-left\" onclick=\"retourModal()\"
+                        <button type=\"submit\" class=\"btn btn-danger pull-left\" onclick=\"retourModal()\"
                                 data-dismiss=\"modal\">
                         <span class=\"glyphicon glyphicon-remove\">
                         </span> Annuler
@@ -269,62 +349,62 @@ class __TwigTemplate_68dc9c74467f123fde467b53e9fbd86179d1a4a072458309120d4041791
             <div class=\"col-sm-4\">
                 <img
                         ";
-        // line 123
+        // line 167
         if (($this->getAttribute($this->getAttribute($this->getAttribute((isset($context["app"]) ? $context["app"] : $this->getContext($context, "app")), "request", array()), "attributes", array()), "get", array(0 => "_route"), "method") == "fos_user_registration_register")) {
-            // line 124
-            echo "                    src=\"../../image/Logo_Temi_1.png\"
+            // line 168
+            echo "                    src=\"../../image/Logo_Calculateur_TEMI.png\"
                 ";
         } else {
-            // line 126
+            // line 170
             echo "                    ";
             if (($this->getAttribute($this->getAttribute($this->getAttribute((isset($context["app"]) ? $context["app"] : $this->getContext($context, "app")), "request", array()), "attributes", array()), "get", array(0 => "_route"), "method") == "fos_user_registration_confirmed")) {
-                // line 127
-                echo "                        src=\"../../image/Logo_Temi_1.png\"
+                // line 171
+                echo "                        src=\"../../image/Logo_Calculateur_TEMI.png\"
                     ";
             } else {
-                // line 129
+                // line 173
                 echo "                        ";
                 if (($this->getAttribute($this->getAttribute($this->getAttribute((isset($context["app"]) ? $context["app"] : $this->getContext($context, "app")), "request", array()), "attributes", array()), "get", array(0 => "_route"), "method") == "fos_user_profile_show")) {
-                    // line 130
-                    echo "                            src=\"../../image/Logo_Temi_1.png\"
+                    // line 174
+                    echo "                            src=\"../../image/Logo_Calculateur_TEMI.png\"
                         ";
                 } else {
-                    // line 132
+                    // line 176
                     echo "                            ";
                     if (($this->getAttribute($this->getAttribute($this->getAttribute((isset($context["app"]) ? $context["app"] : $this->getContext($context, "app")), "request", array()), "attributes", array()), "get", array(0 => "_route"), "method") == "fos_user_profile_edit")) {
-                        // line 133
-                        echo "                            src=\"../../image/Logo_Temi_1.png\"
+                        // line 177
+                        echo "                            src=\"../../image/Logo_Calculateur_TEMI.png\"
                         ";
                     } else {
-                        // line 135
+                        // line 179
                         echo "                            ";
                         if (($this->getAttribute($this->getAttribute($this->getAttribute((isset($context["app"]) ? $context["app"] : $this->getContext($context, "app")), "request", array()), "attributes", array()), "get", array(0 => "_route"), "method") == "fos_user_change_password")) {
-                            // line 136
-                            echo "                            src=\"../../image/Logo_Temi_1.png\"
+                            // line 180
+                            echo "                            src=\"../../image/Logo_Calculateur_TEMI.png\"
                         ";
                         } else {
-                            // line 138
-                            echo "                            src=\"../image/Logo_Temi_1.png\"
+                            // line 182
+                            echo "                            src=\"../image/Logo_Calculateur_TEMI.png\"
                         ";
                         }
                     }
-                    // line 139
+                    // line 183
                     echo " ";
                 }
             }
         }
-        echo ">
-                <h2>LE CALCULATOR TEMI</h2>
-                <div class=\"panel-group Borderhide\" id=\"accordion7\">
-                    <div class=\"panel panel-default Borderhide\">
-                        <div class=\"panel-heading Borderhide\">
-                            <h4 class=\"panel-title Borderhide\">
+        echo " width=\"100%\" id=\"navImage\">
+                <h2 class=\"navCote\" id=\"navTitle\">LE CALCULATEUR TEMI</h2>
+                <div class=\"panel-group Borderhide navCote\" id=\"accordion7\">
+                    <div class=\"panel panel-default Borderhide navCote\">
+                        <div class=\"panel-heading Borderhide navCote\">
+                            <h4 class=\"panel-title Borderhide navCote\">
                                 <a data-toggle=\"collapse\" data-parent=\"#accordion7\" href=\"#collapse50\"
                                    class=\"Borderhide\">
                                     C'EST QUOI ?</a>
                             </h4>
                         </div>
-                        <div id=\"collapse50\" class=\"panel-collapse collapse Borderhide\">
+                        <div id=\"collapse50\" class=\"panel-collapse collapse Borderhide navCote\">
                             <div class=\"panel-body Borderhide\">C’est un outil de calcul du taux effectif moyen
                                 d’imposition d’une entreprise à partir de 4 impôts :
                                 <ul>
@@ -337,44 +417,44 @@ class __TwigTemplate_68dc9c74467f123fde467b53e9fbd86179d1a4a072458309120d4041791
                             </div>
                         </div>
                     </div>
-                    <div class=\"panel panel-default Borderhide\">
-                        <div class=\"panel-heading Borderhide\">
-                            <h4 class=\"panel-title Borderhide\">
+                    <div class=\"panel panel-default Borderhide navCote\">
+                        <div class=\"panel-heading Borderhide navCote\">
+                            <h4 class=\"panel-title Borderhide navCote\">
                                 <a data-toggle=\"collapse\" data-parent=\"#accordion7\" href=\"#collapse51\"
                                    class=\"Borderhide\">
                                     POUR QUOI FAIRE ?</a>
                             </h4>
                         </div>
-                        <div id=\"collapse51\" class=\"panel-collapse collapse Borderhide\">
+                        <div id=\"collapse51\" class=\"panel-collapse collapse Borderhide navCote\">
                             <div class=\"panel-body Borderhide\">Evaluer et comparer la fiscalité sur les sociétés</div>
                         </div>
                     </div>
-                    <div class=\"panel panel-default Borderhide\">
-                        <div class=\"panel-heading Borderhide\">
-                            <h4 class=\"panel-title Borderhide\">
+                    <div class=\"panel panel-default Borderhide navCote\">
+                        <div class=\"panel-heading Borderhide navCote\">
+                            <h4 class=\"panel-title Borderhide navCote\">
                                 <a data-toggle=\"collapse\" data-parent=\"#accordion7\" href=\"#collapse52\"
                                    class=\"Borderhide\">
                                     POUR QUI ?</a>
                             </h4>
                         </div>
-                        <div id=\"collapse52\" class=\"panel-collapse collapse Borderhide\">
-                            <div class=\"panel-body Borderhide\">Politiques, gouvernements pour réfléchir à leur régime
+                        <div id=\"collapse52\" class=\"panel-collapse collapse Borderhide navCote\">
+                            <div class=\"panel-body Borderhide navCote\">Politiques, gouvernements pour réfléchir à leur régime
                                 fiscal<br/>
                                 Entrepreneurs pour évaluer quel régime fiscal est plus « intéressant »<br/>
                                 Citoyens, associations…
                             </div>
                         </div>
                     </div>
-                    <div class=\"panel panel-default Borderhide\">
-                        <div class=\"panel-heading Borderhide\">
-                            <h4 class=\"panel-title Borderhide\">
+                    <div class=\"panel panel-default Borderhide navCote\">
+                        <div class=\"panel-heading Borderhide navCote\">
+                            <h4 class=\"panel-title Borderhide navCote\">
                                 <a data-toggle=\"collapse\" data-parent=\"#accordion7\" href=\"#collapse53\"
-                                   class=\"Borderhide\">
+                                   class=\"Borderhide navCote\">
                                     QUELS PAYS ?</a>
                             </h4>
                         </div>
                         <div id=\"collapse53\" class=\"panel-collapse collapse Borderhide\">
-                            <div class=\"panel-body Borderhide\">Les pays de la zone Franc :
+                            <div class=\"panel-body Borderhide navCote\">Les pays de la zone Franc :
                                 <ul>
                                     <li>
                                         Union Economique et Monétaire Ouest Africaine (UEMOA) : Bénin, Burkina Faso,
@@ -388,28 +468,28 @@ class __TwigTemplate_68dc9c74467f123fde467b53e9fbd86179d1a4a072458309120d4041791
                             </div>
                         </div>
                     </div>
-                    <div class=\"panel panel-default Borderhide\">
-                        <div class=\"panel-heading Borderhide\">
-                            <h4 class=\"panel-title Borderhide\">
+                    <div class=\"panel panel-default Borderhide navCote\">
+                        <div class=\"panel-heading Borderhide navCote\">
+                            <h4 class=\"panel-title Borderhide navCote\">
                                 <a data-toggle=\"collapse\" data-parent=\"#accordion7\" href=\"#collapse54\"
-                                   class=\"Borderhide\">
+                                   class=\"Borderhide navCote\">
                                     COMMENT ?</a>
                             </h4>
                         </div>
-                        <div id=\"collapse54\" class=\"panel-collapse collapse Borderhide\">
-                            <div class=\"panel-body Borderhide\">Le calcul suit la méthodologie de Djankov (2010)</div>
+                        <div id=\"collapse54\" class=\"panel-collapse collapse Borderhide navCote\">
+                            <div class=\"panel-body Borderhide navCote\">Le calcul suit la méthodologie de Djankov (2010)</div>
                         </div>
                     </div>
-                    <div class=\"panel panel-default Borderhide\">
-                        <div class=\"panel-heading Borderhide\">
-                            <h4 class=\"panel-title Borderhide\">
+                    <div class=\"panel panel-default Borderhide navCote\">
+                        <div class=\"panel-heading Borderhide navCote\">
+                            <h4 class=\"panel-title Borderhide navCote\">
                                 <a data-toggle=\"collapse\" data-parent=\"#accordion7\" href=\"#collapse55\"
-                                   class=\"Borderhide\">
+                                   class=\"Borderhide navCote\">
                                     SOURCES DES DONÉES</a>
                             </h4>
                         </div>
-                        <div id=\"collapse55\" class=\"panel-collapse collapse Borderhide\">
-                            <div class=\"panel-body Borderhide\">Banque mondiale : World Development Indicators pour le
+                        <div id=\"collapse55\" class=\"panel-collapse collapse Borderhide navCote\">
+                            <div class=\"panel-body Borderhide navCote\">Banque mondiale : World Development Indicators pour le
                                 PNB/tête
                                 FMI (PIB, taux d’inflation)
                             </div>
@@ -419,17 +499,17 @@ class __TwigTemplate_68dc9c74467f123fde467b53e9fbd86179d1a4a072458309120d4041791
             </div>
             <div class=\"col-sm-8\">
                 ";
-        // line 244
+        // line 288
         $this->displayBlock('body', $context, $blocks);
-        // line 246
+        // line 290
         echo "            </div>
         </div>
 
     </div>
     ";
-        // line 250
+        // line 294
         $this->displayBlock('js', $context, $blocks);
-        // line 253
+        // line 297
         echo "
 </div>
 </body>
@@ -461,7 +541,7 @@ class __TwigTemplate_68dc9c74467f123fde467b53e9fbd86179d1a4a072458309120d4041791
 
     }
 
-    // line 244
+    // line 288
     public function block_body($context, array $blocks = array())
     {
         $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
@@ -470,7 +550,7 @@ class __TwigTemplate_68dc9c74467f123fde467b53e9fbd86179d1a4a072458309120d4041791
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
 
-        // line 245
+        // line 289
         echo "                ";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
@@ -480,7 +560,7 @@ class __TwigTemplate_68dc9c74467f123fde467b53e9fbd86179d1a4a072458309120d4041791
 
     }
 
-    // line 250
+    // line 294
     public function block_js($context, array $blocks = array())
     {
         $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
@@ -489,7 +569,7 @@ class __TwigTemplate_68dc9c74467f123fde467b53e9fbd86179d1a4a072458309120d4041791
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "js"));
 
-        // line 251
+        // line 295
         echo "
     ";
         
@@ -512,7 +592,7 @@ class __TwigTemplate_68dc9c74467f123fde467b53e9fbd86179d1a4a072458309120d4041791
 
     public function getDebugInfo()
     {
-        return array (  493 => 251,  484 => 250,  474 => 245,  465 => 244,  455 => 6,  446 => 5,  433 => 253,  431 => 250,  425 => 246,  423 => 244,  312 => 139,  307 => 138,  303 => 136,  300 => 135,  296 => 133,  293 => 132,  289 => 130,  286 => 129,  282 => 127,  279 => 126,  275 => 124,  273 => 123,  223 => 75,  214 => 69,  208 => 68,  201 => 64,  195 => 63,  192 => 62,  182 => 55,  176 => 54,  171 => 52,  166 => 50,  160 => 49,  157 => 48,  155 => 47,  147 => 42,  141 => 41,  133 => 38,  128 => 36,  122 => 35,  96 => 32,  92 => 31,  69 => 18,  65 => 17,  61 => 16,  57 => 15,  53 => 14,  51 => 13,  41 => 10,  36 => 7,  34 => 5,  28 => 1,);
+        return array (  573 => 295,  564 => 294,  554 => 289,  545 => 288,  535 => 6,  526 => 5,  513 => 297,  511 => 294,  505 => 290,  503 => 288,  392 => 183,  387 => 182,  383 => 180,  380 => 179,  376 => 177,  373 => 176,  369 => 174,  366 => 173,  362 => 171,  359 => 170,  355 => 168,  353 => 167,  303 => 119,  294 => 113,  288 => 112,  281 => 108,  275 => 107,  272 => 106,  262 => 99,  256 => 98,  251 => 96,  246 => 94,  240 => 93,  237 => 92,  235 => 91,  227 => 86,  221 => 85,  213 => 82,  208 => 80,  202 => 79,  193 => 74,  190 => 73,  187 => 72,  184 => 71,  178 => 69,  175 => 68,  171 => 66,  168 => 65,  164 => 63,  161 => 62,  157 => 60,  154 => 59,  150 => 57,  148 => 56,  139 => 51,  136 => 50,  133 => 49,  130 => 48,  124 => 46,  121 => 45,  117 => 43,  114 => 42,  110 => 40,  107 => 39,  103 => 37,  100 => 36,  96 => 34,  94 => 33,  69 => 18,  65 => 17,  61 => 16,  57 => 15,  53 => 14,  51 => 13,  41 => 10,  36 => 7,  34 => 5,  28 => 1,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -555,8 +635,52 @@ class __TwigTemplate_68dc9c74467f123fde467b53e9fbd86179d1a4a072458309120d4041791
 
             <div class=\"container-fluid\">
                 <div class=\"navbar-header\">
-                    <a class=\" navbar-brand\" href=\"{{ path('temi_platform_home') }}\"><img class=\"img-rounded\"
-                                {% if app.request.attributes.get(\"_route\")=='fos_user_registration_register' %} src=\"../../image/logo_CERDI_UCA-01.png\"{% else %}{% if app.request.attributes.get(\"_route\")=='fos_user_registration_confirmed' %} src=\"../../image/logo_CERDI_UCA-01.png\"{% else %}{% if app.request.attributes.get(\"_route\")=='fos_user_profile_show' %} src=\"../../image/logo_CERDI_UCA-01.png\"{% else %}{% if app.request.attributes.get(\"_route\")=='fos_user_profile_edit' %} src=\"../../image/logo_CERDI_UCA-01.png\"{% else %}{% if app.request.attributes.get(\"_route\")=='fos_user_change_password' %} src=\"../../image/logo_CERDI_UCA-01.png\"{% else %} src=\"../image/logo_CERDI_UCA-01.png\"{% endif %}{% endif %}{% endif %}{% endif %}{% endif %}>Cerdi</a>
+                    <a  class=\" navbar-brand\" href=\"./index.html\">
+                        <img class=\"img-rounded\" id=\"cerdi\"
+                                {% if app.request.attributes.get(\"_route\")=='fos_user_registration_register' %}
+                                    src=\"../../image/logo_CERDI_UCA-01.png\"
+                                {% else %}
+                                    {% if app.request.attributes.get(\"_route\")=='fos_user_registration_confirmed' %}
+                                        src=\"../../image/logo_CERDI_UCA-01.png\"
+                                    {% else %}
+                                        {% if app.request.attributes.get(\"_route\")=='fos_user_profile_show' %}
+                                            src=\"../../image/logo_CERDI_UCA-01.png\"
+                                        {% else %}
+                                            {% if app.request.attributes.get(\"_route\")=='fos_user_profile_edit' %}
+                                                src=\"../../image/logo_CERDI_UCA-01.png\"
+                                            {% else %}
+                                                {% if app.request.attributes.get(\"_route\")=='fos_user_change_password' %}
+                                                    src=\"../../image/logo_CERDI_UCA-01.png\"{% else %} src=\"../image/logo_CERDI_UCA-01.png\"
+                                                {% endif %}
+                                            {% endif %}
+                                        {% endif %}
+                                    {% endif %}
+                                {% endif %}/>
+                        Cerdi
+                    </a>
+                    <a class=\" navbar-brand\" href=\"./index.html\">
+                        <img class=\"img-rounded\" id=\"logoTEMI\"
+                                {% if app.request.attributes.get(\"_route\")=='fos_user_registration_register' %}
+                            src=\"../../image/Logo_Calculateur_TEMI_blanc.png\"
+                        {% else %}
+                            {% if app.request.attributes.get(\"_route\")=='fos_user_registration_confirmed' %}
+                                src=\"../../image/Logo_Calculateur_TEMI_blanc.png\"
+                            {% else %}
+                                {% if app.request.attributes.get(\"_route\")=='fos_user_profile_show' %}
+                                    src=\"../../image/Logo_Calculateur_TEMI_blanc.png\"
+                                {% else %}
+                                    {% if app.request.attributes.get(\"_route\")=='fos_user_profile_edit' %}
+                                        src=\"../../image/Logo_Calculateur_TEMI_blanc.png\"
+                                    {% else %}
+                                        {% if app.request.attributes.get(\"_route\")=='fos_user_change_password' %}
+                                            src=\"../../image/logo_CERDI_UCA-01.png\"{% else %} src=\"../image/Logo_Calculateur_TEMI_blanc.png\"
+                                        {% endif %}
+                                    {% endif %}
+                                {% endif %}
+                            {% endif %}
+                                {% endif %}/>
+                    </a>
+
                 </div>
                 <ul class=\"nav navbar-nav\">
                     <li{% if app.request.attributes.get(\"_route\")=='temi_platform_home' %} class=\"active\"{% endif %}>
@@ -631,7 +755,7 @@ class __TwigTemplate_68dc9c74467f123fde467b53e9fbd86179d1a4a072458309120d4041791
                         </form>
                     </div>
                     <div class=\"modal-footer\">
-                        <button type=\"submit\" class=\"btn btn-danger btn-default pull-left\" onclick=\"retourModal()\"
+                        <button type=\"submit\" class=\"btn btn-danger pull-left\" onclick=\"retourModal()\"
                                 data-dismiss=\"modal\">
                         <span class=\"glyphicon glyphicon-remove\">
                         </span> Annuler
@@ -648,33 +772,33 @@ class __TwigTemplate_68dc9c74467f123fde467b53e9fbd86179d1a4a072458309120d4041791
             <div class=\"col-sm-4\">
                 <img
                         {% if app.request.attributes.get(\"_route\")=='fos_user_registration_register' %}
-                    src=\"../../image/Logo_Temi_1.png\"
+                    src=\"../../image/Logo_Calculateur_TEMI.png\"
                 {% else %}
                     {% if app.request.attributes.get(\"_route\")=='fos_user_registration_confirmed' %}
-                        src=\"../../image/Logo_Temi_1.png\"
+                        src=\"../../image/Logo_Calculateur_TEMI.png\"
                     {% else %}
                         {% if app.request.attributes.get(\"_route\")=='fos_user_profile_show' %}
-                            src=\"../../image/Logo_Temi_1.png\"
+                            src=\"../../image/Logo_Calculateur_TEMI.png\"
                         {% else %}
                             {% if app.request.attributes.get(\"_route\")=='fos_user_profile_edit' %}
-                            src=\"../../image/Logo_Temi_1.png\"
+                            src=\"../../image/Logo_Calculateur_TEMI.png\"
                         {% else %}
                             {% if app.request.attributes.get(\"_route\")=='fos_user_change_password' %}
-                            src=\"../../image/Logo_Temi_1.png\"
+                            src=\"../../image/Logo_Calculateur_TEMI.png\"
                         {% else %}
-                            src=\"../image/Logo_Temi_1.png\"
-                        {% endif %}{% endif %} {% endif %}{% endif %}{% endif %}>
-                <h2>LE CALCULATOR TEMI</h2>
-                <div class=\"panel-group Borderhide\" id=\"accordion7\">
-                    <div class=\"panel panel-default Borderhide\">
-                        <div class=\"panel-heading Borderhide\">
-                            <h4 class=\"panel-title Borderhide\">
+                            src=\"../image/Logo_Calculateur_TEMI.png\"
+                        {% endif %}{% endif %} {% endif %}{% endif %}{% endif %} width=\"100%\" id=\"navImage\">
+                <h2 class=\"navCote\" id=\"navTitle\">LE CALCULATEUR TEMI</h2>
+                <div class=\"panel-group Borderhide navCote\" id=\"accordion7\">
+                    <div class=\"panel panel-default Borderhide navCote\">
+                        <div class=\"panel-heading Borderhide navCote\">
+                            <h4 class=\"panel-title Borderhide navCote\">
                                 <a data-toggle=\"collapse\" data-parent=\"#accordion7\" href=\"#collapse50\"
                                    class=\"Borderhide\">
                                     C'EST QUOI ?</a>
                             </h4>
                         </div>
-                        <div id=\"collapse50\" class=\"panel-collapse collapse Borderhide\">
+                        <div id=\"collapse50\" class=\"panel-collapse collapse Borderhide navCote\">
                             <div class=\"panel-body Borderhide\">C’est un outil de calcul du taux effectif moyen
                                 d’imposition d’une entreprise à partir de 4 impôts :
                                 <ul>
@@ -687,44 +811,44 @@ class __TwigTemplate_68dc9c74467f123fde467b53e9fbd86179d1a4a072458309120d4041791
                             </div>
                         </div>
                     </div>
-                    <div class=\"panel panel-default Borderhide\">
-                        <div class=\"panel-heading Borderhide\">
-                            <h4 class=\"panel-title Borderhide\">
+                    <div class=\"panel panel-default Borderhide navCote\">
+                        <div class=\"panel-heading Borderhide navCote\">
+                            <h4 class=\"panel-title Borderhide navCote\">
                                 <a data-toggle=\"collapse\" data-parent=\"#accordion7\" href=\"#collapse51\"
                                    class=\"Borderhide\">
                                     POUR QUOI FAIRE ?</a>
                             </h4>
                         </div>
-                        <div id=\"collapse51\" class=\"panel-collapse collapse Borderhide\">
+                        <div id=\"collapse51\" class=\"panel-collapse collapse Borderhide navCote\">
                             <div class=\"panel-body Borderhide\">Evaluer et comparer la fiscalité sur les sociétés</div>
                         </div>
                     </div>
-                    <div class=\"panel panel-default Borderhide\">
-                        <div class=\"panel-heading Borderhide\">
-                            <h4 class=\"panel-title Borderhide\">
+                    <div class=\"panel panel-default Borderhide navCote\">
+                        <div class=\"panel-heading Borderhide navCote\">
+                            <h4 class=\"panel-title Borderhide navCote\">
                                 <a data-toggle=\"collapse\" data-parent=\"#accordion7\" href=\"#collapse52\"
                                    class=\"Borderhide\">
                                     POUR QUI ?</a>
                             </h4>
                         </div>
-                        <div id=\"collapse52\" class=\"panel-collapse collapse Borderhide\">
-                            <div class=\"panel-body Borderhide\">Politiques, gouvernements pour réfléchir à leur régime
+                        <div id=\"collapse52\" class=\"panel-collapse collapse Borderhide navCote\">
+                            <div class=\"panel-body Borderhide navCote\">Politiques, gouvernements pour réfléchir à leur régime
                                 fiscal<br/>
                                 Entrepreneurs pour évaluer quel régime fiscal est plus « intéressant »<br/>
                                 Citoyens, associations…
                             </div>
                         </div>
                     </div>
-                    <div class=\"panel panel-default Borderhide\">
-                        <div class=\"panel-heading Borderhide\">
-                            <h4 class=\"panel-title Borderhide\">
+                    <div class=\"panel panel-default Borderhide navCote\">
+                        <div class=\"panel-heading Borderhide navCote\">
+                            <h4 class=\"panel-title Borderhide navCote\">
                                 <a data-toggle=\"collapse\" data-parent=\"#accordion7\" href=\"#collapse53\"
-                                   class=\"Borderhide\">
+                                   class=\"Borderhide navCote\">
                                     QUELS PAYS ?</a>
                             </h4>
                         </div>
                         <div id=\"collapse53\" class=\"panel-collapse collapse Borderhide\">
-                            <div class=\"panel-body Borderhide\">Les pays de la zone Franc :
+                            <div class=\"panel-body Borderhide navCote\">Les pays de la zone Franc :
                                 <ul>
                                     <li>
                                         Union Economique et Monétaire Ouest Africaine (UEMOA) : Bénin, Burkina Faso,
@@ -738,28 +862,28 @@ class __TwigTemplate_68dc9c74467f123fde467b53e9fbd86179d1a4a072458309120d4041791
                             </div>
                         </div>
                     </div>
-                    <div class=\"panel panel-default Borderhide\">
-                        <div class=\"panel-heading Borderhide\">
-                            <h4 class=\"panel-title Borderhide\">
+                    <div class=\"panel panel-default Borderhide navCote\">
+                        <div class=\"panel-heading Borderhide navCote\">
+                            <h4 class=\"panel-title Borderhide navCote\">
                                 <a data-toggle=\"collapse\" data-parent=\"#accordion7\" href=\"#collapse54\"
-                                   class=\"Borderhide\">
+                                   class=\"Borderhide navCote\">
                                     COMMENT ?</a>
                             </h4>
                         </div>
-                        <div id=\"collapse54\" class=\"panel-collapse collapse Borderhide\">
-                            <div class=\"panel-body Borderhide\">Le calcul suit la méthodologie de Djankov (2010)</div>
+                        <div id=\"collapse54\" class=\"panel-collapse collapse Borderhide navCote\">
+                            <div class=\"panel-body Borderhide navCote\">Le calcul suit la méthodologie de Djankov (2010)</div>
                         </div>
                     </div>
-                    <div class=\"panel panel-default Borderhide\">
-                        <div class=\"panel-heading Borderhide\">
-                            <h4 class=\"panel-title Borderhide\">
+                    <div class=\"panel panel-default Borderhide navCote\">
+                        <div class=\"panel-heading Borderhide navCote\">
+                            <h4 class=\"panel-title Borderhide navCote\">
                                 <a data-toggle=\"collapse\" data-parent=\"#accordion7\" href=\"#collapse55\"
-                                   class=\"Borderhide\">
+                                   class=\"Borderhide navCote\">
                                     SOURCES DES DONÉES</a>
                             </h4>
                         </div>
-                        <div id=\"collapse55\" class=\"panel-collapse collapse Borderhide\">
-                            <div class=\"panel-body Borderhide\">Banque mondiale : World Development Indicators pour le
+                        <div id=\"collapse55\" class=\"panel-collapse collapse Borderhide navCote\">
+                            <div class=\"panel-body Borderhide navCote\">Banque mondiale : World Development Indicators pour le
                                 PNB/tête
                                 FMI (PIB, taux d’inflation)
                             </div>
