@@ -1,11 +1,11 @@
 <?php
 
-namespace TEMI\mainBundle\Entity;
+namespace TEMI\mainBundle\Entity\Land;
 
 use Doctrine\ORM\Mapping as ORM;
-use TEMI\mainBundle\Entity\Ammortissement;
-use TEMI\mainBundle\Entity\Impot;
-use TEMI\mainBundle\Entity\Investissement;
+use TEMI\mainBundle\Entity\Land\Ammortissement;
+use TEMI\mainBundle\Entity\Land\Impot;
+use TEMI\mainBundle\Entity\Land\Investissement;
 
 /**
  * Land
@@ -46,17 +46,17 @@ class Land
     private $pib;
 
     /**
-     * @ORM\ManyToOne(targetEntity="TEMI\mainBundle\Entity\Impot")
+     * @ORM\ManyToOne(targetEntity="TEMI\mainBundle\Entity\Land\Impot")
      *@ORM\JoinColumn(name="impot_id", referencedColumnName="id")
      */
     private $impot;
     /**
-     * @ORM\ManyToOne(targetEntity="TEMI\mainBundle\Entity\Ammortissement")
+     * @ORM\ManyToOne(targetEntity="TEMI\mainBundle\Entity\Land\Ammortissement")
      *@ORM\JoinColumn(name="ammort_id", referencedColumnName="id")
      */
     private $ammort;
     /**
-     * @ORM\ManyToOne(targetEntity="TEMI\mainBundle\Entity\Investissement")
+     * @ORM\ManyToOne(targetEntity="TEMI\mainBundle\Entity\Land\Investissement")
      *@ORM\JoinColumn(name="invest_id", referencedColumnName="id")
      */
     private $invest;

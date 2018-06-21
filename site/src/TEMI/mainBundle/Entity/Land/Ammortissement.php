@@ -1,6 +1,6 @@
 <?php
 
-namespace TEMI\mainBundle\Entity;
+namespace TEMI\mainBundle\Entity\Land;
 
 use Doctrine\ORM\Mapping as ORM;
 

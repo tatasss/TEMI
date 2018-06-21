@@ -1,8 +1,9 @@
 <?php
 
-namespace TEMI\mainBundle\Entity;
-use TEMI\mainBundle\Entity\ImpotPays;
+namespace TEMI\mainBundle\Entity\Land;
+use TEMI\mainBundle\Entity\Land\ImpotPays;
 use Doctrine\ORM\Mapping as ORM;
+use TEMI\mainBundle\Entity\Land\impotPays as impotName;
 
 /**
  * Investissement
@@ -22,32 +23,32 @@ class Investissement
     private $id;
 
     /**
-     * @ORM\ManyToOne(targetEntity="TEMI\mainBundle\Entity\ImpotPays")
+     * @ORM\ManyToOne(targetEntity="TEMI\mainBundle\Entity\Land\ImpotPays")
      *@ORM\JoinColumn(name="cfe_id", referencedColumnName="id")
      */
     private $cfe;
     /**
-     * @ORM\ManyToOne(targetEntity="TEMI\mainBundle\Entity\ImpotPays")
+     * @ORM\ManyToOne(targetEntity="TEMI\mainBundle\Entity\Land\ImpotPays")
      *@ORM\JoinColumn(name="is_id", referencedColumnName="id")
      */
     private $isInv;
     /**
-     * @ORM\ManyToOne(targetEntity="TEMI\mainBundle\Entity\ImpotPays")
+     * @ORM\ManyToOne(targetEntity="TEMI\mainBundle\Entity\Land\ImpotPays")
      *@ORM\JoinColumn(name="imf_id", referencedColumnName="id")
      */
     private $imf;
     /**
-     * @ORM\ManyToOne(targetEntity="TEMI\mainBundle\Entity\ImpotPays")
+     * @ORM\ManyToOne(targetEntity="TEMI\mainBundle\Entity\Land\ImpotPays")
      *@ORM\JoinColumn(name="irvm_id", referencedColumnName="id")
      */
     private $irvm;
     /**
-     * @ORM\ManyToOne(targetEntity="TEMI\mainBundle\Entity\ImpotPays")
+     * @ORM\ManyToOne(targetEntity="TEMI\mainBundle\Entity\Land\ImpotPays")
      *@ORM\JoinColumn(name="irc_id", referencedColumnName="id")
      */
     private $irc;
     /**
-     * @ORM\ManyToOne(targetEntity="TEMI\mainBundle\Entity\ImpotPays")
+     * @ORM\ManyToOne(targetEntity="TEMI\mainBundle\Entity\Land\ImpotPays")
      *@ORM\JoinColumn(name="tva_petrole_id", referencedColumnName="id")
      */
     private $tva_petrole;
@@ -65,11 +66,11 @@ class Investissement
     /**
      * Set cfe
      *
-     * @param \TEMI\mainBundle\Entity\impotPays $cfe
+     * @param impotName $cfe
      *
      * @return Investissement
      */
-    public function setCfe(\TEMI\mainBundle\Entity\impotPays $cfe = null)
+    public function setCfe(ImpotName $cfe = null)
     {
         $this->cfe = $cfe;
 
@@ -79,7 +80,7 @@ class Investissement
     /**
      * Get cfe
      *
-     * @return \TEMI\mainBundle\Entity\impotPays
+     * @return ImpotName
      */
     public function getCfe()
     {
@@ -89,11 +90,11 @@ class Investissement
     /**
      * Set isInv
      *
-     * @param \TEMI\mainBundle\Entity\impotPays $isInv
+     * @param ImpotName $isInv
      *
      * @return Investissement
      */
-    public function setIsInv(\TEMI\mainBundle\Entity\impotPays $isInv = null)
+    public function setIsInv(ImpotName $isInv = null)
     {
         $this->isInv = $isInv;
 
@@ -103,7 +104,7 @@ class Investissement
     /**
      * Get isInv
      *
-     * @return \TEMI\mainBundle\Entity\impotPays
+     * @return ImpotName
      */
     public function getIsInv()
     {
@@ -113,11 +114,11 @@ class Investissement
     /**
      * Set imf
      *
-     * @param \TEMI\mainBundle\Entity\impotPays $imf
+     * @param ImpotName $imf
      *
      * @return Investissement
      */
-    public function setImf(\TEMI\mainBundle\Entity\impotPays $imf = null)
+    public function setImf(ImpotName $imf = null)
     {
         $this->imf = $imf;
 
@@ -127,7 +128,7 @@ class Investissement
     /**
      * Get imf
      *
-     * @return \TEMI\mainBundle\Entity\impotPays
+     * @return ImpotName
      */
     public function getImf()
     {
@@ -137,11 +138,11 @@ class Investissement
     /**
      * Set irvm
      *
-     * @param \TEMI\mainBundle\Entity\impotPays $irvm
+     * @param ImpotName $irvm
      *
      * @return Investissement
      */
-    public function setIrvm(\TEMI\mainBundle\Entity\impotPays $irvm = null)
+    public function setIrvm(ImpotName $irvm = null)
     {
         $this->irvm = $irvm;
 
@@ -151,7 +152,7 @@ class Investissement
     /**
      * Get irvm
      *
-     * @return \TEMI\mainBundle\Entity\impotPays
+     * @return ImpotName
      */
     public function getIrvm()
     {
@@ -161,11 +162,11 @@ class Investissement
     /**
      * Set irc
      *
-     * @param \TEMI\mainBundle\Entity\impotPays $irc
+     * @param ImpotName $irc
      *
      * @return Investissement
      */
-    public function setIrc(\TEMI\mainBundle\Entity\impotPays $irc = null)
+    public function setIrc(ImpotName $irc = null)
     {
         $this->irc = $irc;
 
@@ -175,7 +176,7 @@ class Investissement
     /**
      * Get irc
      *
-     * @return \TEMI\mainBundle\Entity\impotPays
+     * @return ImpotName
      */
     public function getIrc()
     {
@@ -185,11 +186,11 @@ class Investissement
     /**
      * Set tvaPetrole
      *
-     * @param \TEMI\mainBundle\Entity\impotPays $tvaPetrole
+     * @param ImpotName $tvaPetrole
      *
      * @return Investissement
      */
-    public function setTvaPetrole(\TEMI\mainBundle\Entity\impotPays $tvaPetrole = null)
+    public function setTvaPetrole(ImpotName $tvaPetrole = null)
     {
         $this->tva_petrole = $tvaPetrole;
 
@@ -199,7 +200,7 @@ class Investissement
     /**
      * Get tvaPetrole
      *
-     * @return \TEMI\mainBundle\Entity\impotPays
+     * @return ImpotName
      */
     public function getTvaPetrole()
     {
