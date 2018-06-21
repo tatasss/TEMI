@@ -1,7 +1,7 @@
 
 .vertical-menu a {
-    background-color: #eee; /* Grey background color */
-    color: black; /* Black text color */
+    background-color: #ddffdd;
+    color: #33ff33;/* Black text color */
     display: block; /* Make the links appear below each other */
     padding: 12px; /* Add some padding */
     text-decoration: none; /* Remove underline from links */
@@ -12,8 +12,8 @@
 }
 
 .vertical-menu a.active {
-    background-color: #4CAF50; /* Add a green color to the "active/current" link */
-    color: white;
+    background-color: #ddffdd;
+    color: #33ff33;
 }
 
 .vertical-form {
@@ -31,8 +31,8 @@
 }
 
 .vertical-menu button {
-    background-color: #eee; /* Grey background color */
-    color: black; /* Black text color */
+    background-color: #ddffdd;
+    color: #33ff33; /* Black text color */
     display: block; /* Make the links appear below each other */
     padding: 12px; /* Add some padding */
     text-decoration: none; /* Remove underline from links */
@@ -154,12 +154,18 @@ nav {
     background-color: #0333BB;
 }
 
-.navbar-header img {
+#cerdi {
     background-color: white;
     height: 200%;
     float: left;
     margin-right: 5px;
     margin-top: -15%;
+}
+#logoTEMI{
+    height: 350%;
+    float: left;
+    margin-right: 5px;
+    margin-top: -20%;
 }
 
 .container {
@@ -279,4 +285,28 @@ a {
 #navImage{
     margin-left: 2vh;
     width: 100%;
+}
+.cnetre, #centreBody {
+    /* on permet à ces éléments de s'aligner verticalement */
+    display:inline-block;
+    vertical-align:middle;
+}
+.centre{
+    min-height: 100vh;
+}
+.bodyCentre{
+    height: 50%;
+    width: 100%;
+}
+.btn-block{
+    background-color: #ddffdd;
+    color: #33ff33;
+}
+.btn-default{
+    background-color: #ddffdd;
+    color: #33ff33;
+}
+.modal .btn-block{
+    background-color: #5cb85c;
+    color: white;
 }
