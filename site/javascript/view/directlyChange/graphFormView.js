@@ -10,10 +10,10 @@ let reg;
 reg = " ";
 
 if (localStorage.getItem("compatRegime") === "gen") {
-    reg = "Codes générales des impôts";
+    reg = "code générale des impôts";
 }
 else {
-    reg = "Codes des investissements";
+    reg = "code des investissements";
 }
 document.getElementById("info").innerHTML = `<p>Le taux d'actualisation pour toutes les entreprises est `
     + `de ${localStorage.getItem("compaActu")} %.<br/> Le régime utilisé par les entreprises dans tous les pays est le ${reg} .`;

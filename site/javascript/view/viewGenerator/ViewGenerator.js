@@ -165,7 +165,7 @@ ViewGenerator.prototype.bilanHtml = function () {
     let passif = this.mE.capitalSocial() + this.mE.detteLongTerme() +
         this.mE.detteCourtTerme() + this.mE.detteFournisseur();
     let col1 = ["<span style='font-size: smaller; '><strong>Actif immobilisé</strong></span>",
-        "Terrain", "Constructions", "Equipement", "Camion", "Matériel informatique", "Matériel de Bureau",
+        "Terrain", "Constructions", "Equipement", "Camion", "Matériel informatique", "Matériel de bureau",
         "<span style='font-size: smaller; '><strong>Actif circulant</strong></span>", "Stocks", "Créances Clients",
         "Disponibilités bancaires", "<strong>Actif</strong>"];
     let lin1 = {
@@ -294,7 +294,7 @@ ViewGenerator.prototype.donneesEconomique = function () {
     result += this.entrepriseHTML();
     result += this.bilanHtml();
     result += this.compteHtml(this.modele.donnee);
-    return bootstrap.pan("default", "<h1>Données economiques</h1>", result);
+    return bootstrap.pan("default", "<h1>Données Economiques</h1>", result);
 };
 /**
  * @description This function create a html to give the Impot of the land
@@ -415,7 +415,7 @@ ViewGenerator.prototype.navigationHtml = function () {
     else {
         regime = "Code des investissements";
     }
-    let pannel = bootstrap.pan("default", "Paramétres", this.modele.donnee.land().name() + "<br/>" + regime + "</br>" + this.modele.donnee.topic() + "</br>" + this.modele.donnee.margin());
+    let pannel = bootstrap.pan("default", "Paramètres", this.modele.donnee.land().name() + "<br/>" + regime + "</br>" + this.modele.donnee.topic() + "</br>" + this.modele.donnee.margin());
     let result = "<div class='vertical-menu'>" + pannel;
     result += bootstrap.buttonBalA("./model.html", "Voir le résultat");
     result += bootstrap.buttonBalA("./index.html", "Retour") + "</div>";
