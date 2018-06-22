@@ -1,7 +1,4 @@
-5d6a31,::1,GET,http://localhost/site/web/app_dev.php/ajoutPays,1529595544,882cae,200
-882cae,::1,GET,http://localhost/site/web/app_dev.php/ajoutPays,1529595544,,500
-8ee947,::1,GET,http://localhost/site/web/app_dev.php/ajoutPays,1529595608,13c855,200
-13c855,::1,GET,http://localhost/site/web/app_dev.php/ajoutPays,1529595608,,500
-296518,::1,GET,http://localhost/site/web/app_dev.php/ajoutPays,1529595681,89fe92,200
-89fe92,::1,GET,http://localhost/site/web/app_dev.php/ajoutPays,1529595681,,500
-3769ae,::1,GET,http://localhost/site/web/app_dev.php/ajoutPays,1529595740,,200
+950650,::1,GET,http://localhost/site/web/app_dev.php/ajoutPays,1529660488,,200
+eecd38,::1,GET,http://localhost/site/web/app_dev.php/ajoutPays,1529660595,,200
+133147,::1,GET,http://localhost/site/web/app_dev.php/ajoutPays,1529660637,,200
+52ef5f,::1,POST,http://localhost/site/web/app_dev.php/ajoutPays,1529660762,,200

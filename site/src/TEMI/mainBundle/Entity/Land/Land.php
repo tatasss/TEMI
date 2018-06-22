@@ -68,9 +68,8 @@ class Land
     private $descriptionDerog;
 
     /**
-     * @var string
-     *
-     * @ORM\Column(name="source", type="string", length=255)
+     * @ORM\ManyToOne(targetEntity="TEMI\mainBundle\Entity\Land\Source")
+     *@ORM\JoinColumn(name="source_id", referencedColumnName="id")
      */
     private $source;
 
@@ -188,7 +187,7 @@ class Land
     /**
      * Set source
      *
-     * @param string $source
+     * @param Source $source
      *
      * @return Land
      */
@@ -202,7 +201,7 @@ class Land
     /**
      * Get source
      *
-     * @return string
+     * @return Source
      */
     public function getSource()
     {

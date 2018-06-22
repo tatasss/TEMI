@@ -155,6 +155,203 @@
                             </div>
                         </div>
                     </div>
+                    <div class="item borderhide">
+                        <h3>Code des investissements</h3>
+                        {{ form_start(formCfe) }}
+                        {# Les erreurs générales du formulaire. #}
+                        {{ form_errors(formCfe) }}
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <p>Contributions forfaitaire employeurs :</p>
+                            </div>
+                            <div class="panel-body">
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <div class="form-group">
+                                            <label>Durée</label>
+                                            {{ form_errors(formCfe.duree) }}
+                                            {{ form_widget(formCfe.duree, {'attr': {'class': 'form-control'}}) }}
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="form-group">
+                                            <label>Taux </label>
+                                            {{ form_errors(formCfe.taux) }}
+                                            {{ form_widget(formCfe.taux, {'attr': {'class': 'form-control'}}) }}
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        {{ form_rest(formCfe) }}
+                        {# Fermeture de la balise <form> du formulaire HTML #}
+                        {{ form_end(formCfe) }}
+                        {{ form_start(formIs) }}
+                        {# Les erreurs générales du formulaire. #}
+                        {{ form_errors(formIs) }}
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <p>Impôt société:</p>
+                            </div>
+                            <div class="panel-body">
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <div class="form-group">
+                                            <label>Durée</label>
+                                            {{ form_errors(formIs.duree) }}
+                                            {{ form_widget(formIs.duree, {'attr': {'class': 'form-control'}}) }}
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="form-group">
+                                            <label>Taux </label>
+                                            {{ form_errors(formIs.taux) }}
+                                            {{ form_widget(formIs.taux, {'attr': {'class': 'form-control'}}) }}
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        {{ form_rest(formIs) }}
+                        {# Fermeture de la balise <form> du formulaire HTML #}
+                        {{ form_end(formIs) }}
+                        {{ form_start(formImf) }}
+                        {# Les erreurs générales du formulaire. #}
+                        {{ form_errors(formImf) }}
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <p>Impôt minimum forfaitaire :</p>
+                            </div>
+                            <div class="panel-body">
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <div class="form-group">
+                                            <label>Durée</label>
+                                            {{ form_errors(formImf.duree) }}
+                                            {{ form_widget(formImf.duree, {'attr': {'class': 'form-control'}}) }}
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="form-group">
+                                            <label>Taux </label>
+                                            {{ form_errors(formImf.taux) }}
+                                            {{ form_widget(formImf.taux, {'attr': {'class': 'form-control'}}) }}
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        {{ form_rest(formImf) }}
+                        {# Fermeture de la balise <form> du formulaire HTML #}
+                        {{ form_end(formImf) }}
+                    </div>
+                    <div class="item borderhide">
+                        <h3>Code des investissements</h3>
+                        {{ form_start(formIrvm) }}
+                        {# Les erreurs générales du formulaire. #}
+                        {{ form_errors(formIrvm) }}
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <p>Impôt sur les revenus des valeurs mobilières :</p>
+                            </div>
+                            <div class="panel-body">
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <div class="form-group">
+                                            <label>Durée</label>
+                                            {{ form_errors(formIrvm.duree) }}
+                                            {{ form_widget(formIrvm.duree, {'attr': {'class': 'form-control'}}) }}
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="form-group">
+                                            <label>Taux </label>
+                                            {{ form_errors(formIrvm.taux) }}
+                                            {{ form_widget(formIrvm.taux, {'attr': {'class': 'form-control'}}) }}
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        {{ form_rest(formIrvm) }}
+                        {# Fermeture de la balise <form> du formulaire HTML #}
+                        {{ form_end(formIrvm) }}
+                        {{ form_start(formIrc) }}
+                        {# Les erreurs générales du formulaire. #}
+                        {{ form_errors(formIrc) }}
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <p>Impôt sur le revenu des creances :</p>
+                            </div>
+                            <div class="panel-body">
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <div class="form-group">
+                                            <label>Durée</label>
+                                            {{ form_errors(formIrc.duree) }}
+                                            {{ form_widget(formIrc.duree, {'attr': {'class': 'form-control'}}) }}
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="form-group">
+                                            <label>Taux </label>
+                                            {{ form_errors(formIrc.taux) }}
+                                            {{ form_widget(formIrc.taux, {'attr': {'class': 'form-control'}}) }}
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        {{ form_rest(formIrc) }}
+                        {# Fermeture de la balise <form> du formulaire HTML #}
+                        {{ form_end(formIrc) }}
+                    </div>
+                    <div class="item borderhide">
+                        <h3>Code des investissements</h3>
+                        <div class="form-group">
+                            <label>Description des dispositions :</label>
+                            {{ form_errors(form.descriptionDerog) }}
+                            {{ form_widget(form.descriptionDerog, {'attr': {'class': 'form-control','rows':'5'}}) }}
+
+                        </div>
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <p>Régime d'investissement :</p>
+                            </div>
+                            <div class="panel-body">
+                                {{ form_start(formSource) }}
+                                {# Les erreurs générales du formulaire. #}
+                                {{ form_errors(formSource) }}
+                                <div class="row">
+                                    <div class="col-sm-4">
+                                        <div class="form-group">
+                                            <label>Nom du code des investissements :</label>
+                                            {{ form_errors(formSource.nomCodeInvest) }}
+                                            {{ form_widget(formSource.nomCodeInvest, {'attr': {'class': 'form-control'}}) }}
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-4">
+                                        <div class="form-group">
+                                            <label>Nom du régime :</label>
+                                            {{ form_errors(formSource.nomRegimeInvest) }}
+                                            {{ form_widget(formSource.nomRegimeInvest, {'attr': {'class': 'form-control'}}) }}
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-4">
+                                        <div class="form-group">
+                                            <label>Zone :</label>
+                                            {{ form_errors(formSource.nomZonneRegime) }}
+                                            {{ form_widget(formSource.nomZonneRegime, {'attr': {'class': 'form-control'}}) }}
+                                        </div>
+                                    </div>
+                                </div>
+                                {{ form_rest(formSource) }}
+                                {# Fermeture de la balise <form> du formulaire HTML #}
+                                {{ form_end(formSource) }}
+                                {{ form_widget(form.ajouterLePays, {'attr': {'class': 'btn btn-default'}}) }}
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -178,7 +375,7 @@
 
 
     {# Pour le bouton, pas de label ni d'erreur, on affiche juste le widget #}
-    {{ form_widget(form.save, {'attr': {'class': 'btn btn-primary'}}) }}
+
 
     {# Génération automatique des champs pas encore écrits.
        Dans cet exemple, ce serait le champ CSRF (géré automatiquement par Symfony !)
