@@ -30,8 +30,8 @@
                         <h3>Général</h3>
                         <div class="form-group">
                             <label>Nom </label>
-                            {{ form_errors(form.Name) }}
-                            {{ form_widget(form.Name, {'attr': {'class': 'form-control'}}) }}
+                            {{ form_errors(form.name) }}
+                            {{ form_widget(form.name, {'attr': {'class': 'form-control'}}) }}
                         </div>
                         <div class="form-group">
                             {{ form_label(form.code) }}
@@ -65,44 +65,38 @@
                                         <p><strong>Durée d'amortissment :</strong></p>
                                     </div>
                                     <div class="panel-body">
-                                    {{ form_start(formAmm) }}
 
-                                        {# Les erreurs générales du formulaire. #}
-                                        {{ form_errors(formAmm) }}
                                         <div class="form-group">
                                             <label>Construction</label>
-                                            {{ form_errors(formAmm.construction) }}
-                                            {{ form_widget(formAmm.construction, {'attr': {'class': 'form-control'}}) }}
+                                            {{ form_errors(form.ammort.construction) }}
+                                            {{ form_widget(form.ammort.construction, {'attr': {'class': 'form-control'}}) }}
                                         </div>
                                         <div class="form-group">
                                             <label>Equipement</label>
-                                            {{ form_errors(formAmm.equipement) }}
-                                            {{ form_widget(formAmm.equipement, {'attr': {'class': 'form-control'}}) }}
+                                            {{ form_errors(form.ammort.equipement) }}
+                                            {{ form_widget(form.ammort.equipement, {'attr': {'class': 'form-control'}}) }}
                                         </div>
                                         <div class="form-group">
                                             <label>Camion</label>
-                                            {{ form_errors(formAmm.camion) }}
-                                            {{ form_widget(formAmm.camion, {'attr': {'class': 'form-control'}}) }}
+                                            {{ form_errors(form.ammort.camion) }}
+                                            {{ form_widget(form.ammort.camion, {'attr': {'class': 'form-control'}}) }}
                                         </div>
                                         <div class="form-group">
                                             <label>Matériel Informatique</label>
-                                            {{ form_errors(formAmm.matInformatique) }}
-                                            {{ form_widget(formAmm.matInformatique, {'attr': {'class': 'form-control'}}) }}
+                                            {{ form_errors(form.ammort.matInformatique) }}
+                                            {{ form_widget(form.ammort.matInformatique, {'attr': {'class': 'form-control'}}) }}
                                         </div>
                                         <div class="form-group">
                                             <label>Matériel de bureau</label>
-                                            {{ form_errors(formAmm.matBureau) }}
-                                            {{ form_widget(formAmm.matBureau, {'attr': {'class': 'form-control'}}) }}
+                                            {{ form_errors(form.ammort.matBureau) }}
+                                            {{ form_widget(form.ammort.matBureau, {'attr': {'class': 'form-control'}}) }}
                                         </div>
                                         <div class="form-group">
                                             <label>Coefficient Dégressif</label>
-                                            {{ form_errors(formAmm.coefDegressif) }}
-                                            {{ form_widget(formAmm.coefDegressif, {'attr': {'class': 'form-control'}}) }}
+                                            {{ form_errors(form.ammort.coefdegressif) }}
+                                            {{ form_widget(form.ammort.coefdegressif, {'attr': {'class': 'form-control'}}) }}
                                         </div>
-                                        {{ form_rest(formAmm) }}
 
-                                        {# Fermeture de la balise <form> du formulaire HTML #}
-                                    {{ form_end(formAmm) }}
                                     </div>
                                 </div>
                             </div>
@@ -112,44 +106,38 @@
                                         <p><strong>Taux d'impôt :</strong></p>
                                     </div>
                                     <div class="panel-body">
-                                        {{ form_start(formImp) }}
 
-                                        {# Les erreurs générales du formulaire. #}
-                                        {{ form_errors(formImp) }}
                                         <div class="form-group">
                                             <label>Contributions forfaitaires employeurs</label>
-                                            {{ form_errors(formImp.cfe) }}
-                                            {{ form_widget(formImp.cfe, {'attr': {'class': 'form-control'}}) }}
+                                            {{ form_errors(form.impot.cfe) }}
+                                            {{ form_widget(form.impot.cfe, {'attr': {'class': 'form-control'}}) }}
                                         </div>
                                         <div class="form-group">
                                             <label>Impôt Société</label>
-                                            {{ form_errors(formImp.isImp) }}
-                                            {{ form_widget(formImp.isImp, {'attr': {'class': 'form-control'}}) }}
+                                            {{ form_errors(form.impot.isImp) }}
+                                            {{ form_widget(form.impot.isImp, {'attr': {'class': 'form-control'}}) }}
                                         </div>
                                         <div class="form-group">
                                             <label>Impôt minimum forfaitaire</label>
-                                            {{ form_errors(formImp.imf) }}
-                                            {{ form_widget(formImp.imf, {'attr': {'class': 'form-control'}}) }}
+                                            {{ form_errors(form.impot.imf) }}
+                                            {{ form_widget(form.impot.imf, {'attr': {'class': 'form-control'}}) }}
                                         </div>
                                         <div class="form-group">
                                             <label>Impôt sur le revenu de la valeur mobilières</label>
-                                            {{ form_errors(formImp.irvm) }}
-                                            {{ form_widget(formImp.irvm, {'attr': {'class': 'form-control'}}) }}
+                                            {{ form_errors(form.impot.irvm) }}
+                                            {{ form_widget(form.impot.irvm, {'attr': {'class': 'form-control'}}) }}
                                         </div>
                                         <div class="form-group">
                                             <label>Impôt sur le revenu des créances</label>
-                                            {{ form_errors(formImp.irc) }}
-                                            {{ form_widget(formImp.irc, {'attr': {'class': 'form-control'}}) }}
+                                            {{ form_errors(form.impot.irc) }}
+                                            {{ form_widget(form.impot.irc, {'attr': {'class': 'form-control'}}) }}
                                         </div>
                                         <div class="form-group">
                                             <label>Taxe sur la valeur ajoutée du pétrole</label>
-                                            {{ form_errors(formImp.tva_petrole) }}
-                                            {{ form_widget(formImp.tva_petrole, {'attr': {'class': 'form-control'}}) }}
+                                            {{ form_errors(form.impot.tvaPetrole) }}
+                                            {{ form_widget(form.impot.tvaPetrole, {'attr': {'class': 'form-control'}}) }}
                                         </div>
-                                        {{ form_rest(formImp) }}
 
-                                        {# Fermeture de la balise <form> du formulaire HTML #}
-                                        {{ form_end(formImp) }}
                                     </div>
                                 </div>
                             </div>
@@ -157,9 +145,7 @@
                     </div>
                     <div class="item borderhide">
                         <h3>Code des investissements</h3>
-                        {{ form_start(formCfe) }}
-                        {# Les erreurs générales du formulaire. #}
-                        {{ form_errors(formCfe) }}
+
                         <div class="panel panel-default">
                             <div class="panel-heading">
                                 <p>Contributions forfaitaire employeurs :</p>
@@ -169,26 +155,21 @@
                                     <div class="col-sm-6">
                                         <div class="form-group">
                                             <label>Durée</label>
-                                            {{ form_errors(formCfe.duree) }}
-                                            {{ form_widget(formCfe.duree, {'attr': {'class': 'form-control'}}) }}
+                                            {{ form_errors(form.invest.cfe.duree) }}
+                                            {{ form_widget(form.invest.cfe.duree, {'attr': {'class': 'form-control'}}) }}
                                         </div>
                                     </div>
                                     <div class="col-sm-6">
                                         <div class="form-group">
                                             <label>Taux </label>
-                                            {{ form_errors(formCfe.taux) }}
-                                            {{ form_widget(formCfe.taux, {'attr': {'class': 'form-control'}}) }}
+                                            {{ form_errors(form.invest.cfe.taux) }}
+                                            {{ form_widget(form.invest.cfe.taux, {'attr': {'class': 'form-control'}}) }}
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        {{ form_rest(formCfe) }}
-                        {# Fermeture de la balise <form> du formulaire HTML #}
-                        {{ form_end(formCfe) }}
-                        {{ form_start(formIs) }}
-                        {# Les erreurs générales du formulaire. #}
-                        {{ form_errors(formIs) }}
+
                         <div class="panel panel-default">
                             <div class="panel-heading">
                                 <p>Impôt société:</p>
@@ -198,26 +179,21 @@
                                     <div class="col-sm-6">
                                         <div class="form-group">
                                             <label>Durée</label>
-                                            {{ form_errors(formIs.duree) }}
-                                            {{ form_widget(formIs.duree, {'attr': {'class': 'form-control'}}) }}
+                                            {{ form_errors(form.invest.isInv.duree) }}
+                                            {{ form_widget(form.invest.isInv.duree, {'attr': {'class': 'form-control'}}) }}
                                         </div>
                                     </div>
                                     <div class="col-sm-6">
                                         <div class="form-group">
                                             <label>Taux </label>
-                                            {{ form_errors(formIs.taux) }}
-                                            {{ form_widget(formIs.taux, {'attr': {'class': 'form-control'}}) }}
+                                            {{ form_errors(form.invest.isInv.taux) }}
+                                            {{ form_widget(form.invest.isInv.taux, {'attr': {'class': 'form-control'}}) }}
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        {{ form_rest(formIs) }}
-                        {# Fermeture de la balise <form> du formulaire HTML #}
-                        {{ form_end(formIs) }}
-                        {{ form_start(formImf) }}
-                        {# Les erreurs générales du formulaire. #}
-                        {{ form_errors(formImf) }}
+
                         <div class="panel panel-default">
                             <div class="panel-heading">
                                 <p>Impôt minimum forfaitaire :</p>
@@ -227,29 +203,24 @@
                                     <div class="col-sm-6">
                                         <div class="form-group">
                                             <label>Durée</label>
-                                            {{ form_errors(formImf.duree) }}
-                                            {{ form_widget(formImf.duree, {'attr': {'class': 'form-control'}}) }}
+                                            {{ form_errors(form.invest.imf.duree) }}
+                                            {{ form_widget(form.invest.imf.duree, {'attr': {'class': 'form-control'}}) }}
                                         </div>
                                     </div>
                                     <div class="col-sm-6">
                                         <div class="form-group">
                                             <label>Taux </label>
-                                            {{ form_errors(formImf.taux) }}
-                                            {{ form_widget(formImf.taux, {'attr': {'class': 'form-control'}}) }}
+                                            {{ form_errors(form.invest.imf.taux) }}
+                                            {{ form_widget(form.invest.imf.taux, {'attr': {'class': 'form-control'}}) }}
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        {{ form_rest(formImf) }}
-                        {# Fermeture de la balise <form> du formulaire HTML #}
-                        {{ form_end(formImf) }}
+
                     </div>
                     <div class="item borderhide">
                         <h3>Code des investissements</h3>
-                        {{ form_start(formIrvm) }}
-                        {# Les erreurs générales du formulaire. #}
-                        {{ form_errors(formIrvm) }}
                         <div class="panel panel-default">
                             <div class="panel-heading">
                                 <p>Impôt sur les revenus des valeurs mobilières :</p>
@@ -259,26 +230,21 @@
                                     <div class="col-sm-6">
                                         <div class="form-group">
                                             <label>Durée</label>
-                                            {{ form_errors(formIrvm.duree) }}
-                                            {{ form_widget(formIrvm.duree, {'attr': {'class': 'form-control'}}) }}
+                                            {{ form_errors(form.invest.irvm.duree) }}
+                                            {{ form_widget(form.invest.irvm.duree, {'attr': {'class': 'form-control'}}) }}
                                         </div>
                                     </div>
                                     <div class="col-sm-6">
                                         <div class="form-group">
                                             <label>Taux </label>
-                                            {{ form_errors(formIrvm.taux) }}
-                                            {{ form_widget(formIrvm.taux, {'attr': {'class': 'form-control'}}) }}
+                                            {{ form_errors(form.invest.irvm.taux) }}
+                                            {{ form_widget(form.invest.irvm.taux, {'attr': {'class': 'form-control'}}) }}
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        {{ form_rest(formIrvm) }}
-                        {# Fermeture de la balise <form> du formulaire HTML #}
-                        {{ form_end(formIrvm) }}
-                        {{ form_start(formIrc) }}
-                        {# Les erreurs générales du formulaire. #}
-                        {{ form_errors(formIrc) }}
+
                         <div class="panel panel-default">
                             <div class="panel-heading">
                                 <p>Impôt sur le revenu des creances :</p>
@@ -288,23 +254,21 @@
                                     <div class="col-sm-6">
                                         <div class="form-group">
                                             <label>Durée</label>
-                                            {{ form_errors(formIrc.duree) }}
-                                            {{ form_widget(formIrc.duree, {'attr': {'class': 'form-control'}}) }}
+                                            {{ form_errors(form.invest.irc.duree) }}
+                                            {{ form_widget(form.invest.irc.duree, {'attr': {'class': 'form-control'}}) }}
                                         </div>
                                     </div>
                                     <div class="col-sm-6">
                                         <div class="form-group">
                                             <label>Taux </label>
-                                            {{ form_errors(formIrc.taux) }}
-                                            {{ form_widget(formIrc.taux, {'attr': {'class': 'form-control'}}) }}
+                                            {{ form_errors(form.invest.irc.taux) }}
+                                            {{ form_widget(form.invest.irc.taux, {'attr': {'class': 'form-control'}}) }}
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        {{ form_rest(formIrc) }}
-                        {# Fermeture de la balise <form> du formulaire HTML #}
-                        {{ form_end(formIrc) }}
+
                     </div>
                     <div class="item borderhide">
                         <h3>Code des investissements</h3>
@@ -319,42 +283,38 @@
                                 <p>Régime d'investissement :</p>
                             </div>
                             <div class="panel-body">
-                                {{ form_start(formSource) }}
-                                {# Les erreurs générales du formulaire. #}
-                                {{ form_errors(formSource) }}
                                 <div class="row">
                                     <div class="col-sm-4">
                                         <div class="form-group">
                                             <label>Nom du code des investissements :</label>
-                                            {{ form_errors(formSource.nomCodeInvest) }}
-                                            {{ form_widget(formSource.nomCodeInvest, {'attr': {'class': 'form-control'}}) }}
+                                            {{ form_errors(form.source.nomCodeInvest) }}
+                                            {{ form_widget(form.source.nomCodeInvest, {'attr': {'class': 'form-control'}}) }}
                                         </div>
                                     </div>
                                     <div class="col-sm-4">
                                         <div class="form-group">
                                             <label>Nom du régime :</label>
-                                            {{ form_errors(formSource.nomRegimeInvest) }}
-                                            {{ form_widget(formSource.nomRegimeInvest, {'attr': {'class': 'form-control'}}) }}
+                                            {{ form_errors(form.source.nomRegimeInvest) }}
+                                            {{ form_widget(form.source.nomRegimeInvest, {'attr': {'class': 'form-control'}}) }}
                                         </div>
                                     </div>
                                     <div class="col-sm-4">
                                         <div class="form-group">
                                             <label>Zone :</label>
-                                            {{ form_errors(formSource.nomZonneRegime) }}
-                                            {{ form_widget(formSource.nomZonneRegime, {'attr': {'class': 'form-control'}}) }}
+                                            {{ form_errors(form.source.nomZonneRegime) }}
+                                            {{ form_widget(form.source.nomZonneRegime, {'attr': {'class': 'form-control'}}) }}
                                         </div>
                                     </div>
                                 </div>
-                                {{ form_rest(formSource) }}
-                                {# Fermeture de la balise <form> du formulaire HTML #}
-                                {{ form_end(formSource) }}
-                                {{ form_widget(form.ajouterLePays, {'attr': {'class': 'btn btn-default'}}) }}
                             </div>
+
+                            {{ form_widget(form.ajouterLePays, {'attr': {'class': 'btn btn-default'}}) }}
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+
         <div class=" borderhide">
             <button class="left" href="#myCarousel" data-slide="prev">
                 <span class="glyphicon glyphicon-chevron-left"> </span>

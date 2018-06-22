@@ -102,11 +102,11 @@ class __TwigTemplate_9ab8e48b4db2a70415a207370f9a43565418e81239701df44e7757cf0d3
                             <label>Nom </label>
                             ";
         // line 33
-        echo $this->env->getRuntime('Symfony\Bridge\Twig\Form\TwigRenderer')->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "Name", array()), 'errors');
+        echo $this->env->getRuntime('Symfony\Bridge\Twig\Form\TwigRenderer')->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "name", array()), 'errors');
         echo "
                             ";
         // line 34
-        echo $this->env->getRuntime('Symfony\Bridge\Twig\Form\TwigRenderer')->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "Name", array()), 'widget', array("attr" => array("class" => "form-control")));
+        echo $this->env->getRuntime('Symfony\Bridge\Twig\Form\TwigRenderer')->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "name", array()), 'widget', array("attr" => array("class" => "form-control")));
         echo "
                         </div>
                         <div class=\"form-group\">
@@ -150,92 +150,74 @@ class __TwigTemplate_9ab8e48b4db2a70415a207370f9a43565418e81239701df44e7757cf0d3
                                         <p><strong>Durée d'amortissment :</strong></p>
                                     </div>
                                     <div class=\"panel-body\">
-                                    ";
-        // line 68
-        echo         $this->env->getRuntime('Symfony\Bridge\Twig\Form\TwigRenderer')->renderBlock((isset($context["formAmm"]) ? $context["formAmm"] : $this->getContext($context, "formAmm")), 'form_start');
-        echo "
 
-                                        ";
-        // line 71
-        echo "                                        ";
-        echo $this->env->getRuntime('Symfony\Bridge\Twig\Form\TwigRenderer')->searchAndRenderBlock((isset($context["formAmm"]) ? $context["formAmm"] : $this->getContext($context, "formAmm")), 'errors');
-        echo "
                                         <div class=\"form-group\">
                                             <label>Construction</label>
                                             ";
-        // line 74
-        echo $this->env->getRuntime('Symfony\Bridge\Twig\Form\TwigRenderer')->searchAndRenderBlock($this->getAttribute((isset($context["formAmm"]) ? $context["formAmm"] : $this->getContext($context, "formAmm")), "construction", array()), 'errors');
+        // line 71
+        echo $this->env->getRuntime('Symfony\Bridge\Twig\Form\TwigRenderer')->searchAndRenderBlock($this->getAttribute($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "ammort", array()), "construction", array()), 'errors');
         echo "
                                             ";
-        // line 75
-        echo $this->env->getRuntime('Symfony\Bridge\Twig\Form\TwigRenderer')->searchAndRenderBlock($this->getAttribute((isset($context["formAmm"]) ? $context["formAmm"] : $this->getContext($context, "formAmm")), "construction", array()), 'widget', array("attr" => array("class" => "form-control")));
+        // line 72
+        echo $this->env->getRuntime('Symfony\Bridge\Twig\Form\TwigRenderer')->searchAndRenderBlock($this->getAttribute($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "ammort", array()), "construction", array()), 'widget', array("attr" => array("class" => "form-control")));
         echo "
                                         </div>
                                         <div class=\"form-group\">
                                             <label>Equipement</label>
                                             ";
-        // line 79
-        echo $this->env->getRuntime('Symfony\Bridge\Twig\Form\TwigRenderer')->searchAndRenderBlock($this->getAttribute((isset($context["formAmm"]) ? $context["formAmm"] : $this->getContext($context, "formAmm")), "equipement", array()), 'errors');
+        // line 76
+        echo $this->env->getRuntime('Symfony\Bridge\Twig\Form\TwigRenderer')->searchAndRenderBlock($this->getAttribute($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "ammort", array()), "equipement", array()), 'errors');
         echo "
                                             ";
-        // line 80
-        echo $this->env->getRuntime('Symfony\Bridge\Twig\Form\TwigRenderer')->searchAndRenderBlock($this->getAttribute((isset($context["formAmm"]) ? $context["formAmm"] : $this->getContext($context, "formAmm")), "equipement", array()), 'widget', array("attr" => array("class" => "form-control")));
+        // line 77
+        echo $this->env->getRuntime('Symfony\Bridge\Twig\Form\TwigRenderer')->searchAndRenderBlock($this->getAttribute($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "ammort", array()), "equipement", array()), 'widget', array("attr" => array("class" => "form-control")));
         echo "
                                         </div>
                                         <div class=\"form-group\">
                                             <label>Camion</label>
                                             ";
-        // line 84
-        echo $this->env->getRuntime('Symfony\Bridge\Twig\Form\TwigRenderer')->searchAndRenderBlock($this->getAttribute((isset($context["formAmm"]) ? $context["formAmm"] : $this->getContext($context, "formAmm")), "camion", array()), 'errors');
+        // line 81
+        echo $this->env->getRuntime('Symfony\Bridge\Twig\Form\TwigRenderer')->searchAndRenderBlock($this->getAttribute($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "ammort", array()), "camion", array()), 'errors');
         echo "
                                             ";
-        // line 85
-        echo $this->env->getRuntime('Symfony\Bridge\Twig\Form\TwigRenderer')->searchAndRenderBlock($this->getAttribute((isset($context["formAmm"]) ? $context["formAmm"] : $this->getContext($context, "formAmm")), "camion", array()), 'widget', array("attr" => array("class" => "form-control")));
+        // line 82
+        echo $this->env->getRuntime('Symfony\Bridge\Twig\Form\TwigRenderer')->searchAndRenderBlock($this->getAttribute($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "ammort", array()), "camion", array()), 'widget', array("attr" => array("class" => "form-control")));
         echo "
                                         </div>
                                         <div class=\"form-group\">
                                             <label>Matériel Informatique</label>
                                             ";
-        // line 89
-        echo $this->env->getRuntime('Symfony\Bridge\Twig\Form\TwigRenderer')->searchAndRenderBlock($this->getAttribute((isset($context["formAmm"]) ? $context["formAmm"] : $this->getContext($context, "formAmm")), "matInformatique", array()), 'errors');
+        // line 86
+        echo $this->env->getRuntime('Symfony\Bridge\Twig\Form\TwigRenderer')->searchAndRenderBlock($this->getAttribute($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "ammort", array()), "matInformatique", array()), 'errors');
         echo "
                                             ";
-        // line 90
-        echo $this->env->getRuntime('Symfony\Bridge\Twig\Form\TwigRenderer')->searchAndRenderBlock($this->getAttribute((isset($context["formAmm"]) ? $context["formAmm"] : $this->getContext($context, "formAmm")), "matInformatique", array()), 'widget', array("attr" => array("class" => "form-control")));
+        // line 87
+        echo $this->env->getRuntime('Symfony\Bridge\Twig\Form\TwigRenderer')->searchAndRenderBlock($this->getAttribute($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "ammort", array()), "matInformatique", array()), 'widget', array("attr" => array("class" => "form-control")));
         echo "
                                         </div>
                                         <div class=\"form-group\">
                                             <label>Matériel de bureau</label>
                                             ";
-        // line 94
-        echo $this->env->getRuntime('Symfony\Bridge\Twig\Form\TwigRenderer')->searchAndRenderBlock($this->getAttribute((isset($context["formAmm"]) ? $context["formAmm"] : $this->getContext($context, "formAmm")), "matBureau", array()), 'errors');
+        // line 91
+        echo $this->env->getRuntime('Symfony\Bridge\Twig\Form\TwigRenderer')->searchAndRenderBlock($this->getAttribute($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "ammort", array()), "matBureau", array()), 'errors');
         echo "
                                             ";
-        // line 95
-        echo $this->env->getRuntime('Symfony\Bridge\Twig\Form\TwigRenderer')->searchAndRenderBlock($this->getAttribute((isset($context["formAmm"]) ? $context["formAmm"] : $this->getContext($context, "formAmm")), "matBureau", array()), 'widget', array("attr" => array("class" => "form-control")));
+        // line 92
+        echo $this->env->getRuntime('Symfony\Bridge\Twig\Form\TwigRenderer')->searchAndRenderBlock($this->getAttribute($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "ammort", array()), "matBureau", array()), 'widget', array("attr" => array("class" => "form-control")));
         echo "
                                         </div>
                                         <div class=\"form-group\">
                                             <label>Coefficient Dégressif</label>
                                             ";
-        // line 99
-        echo $this->env->getRuntime('Symfony\Bridge\Twig\Form\TwigRenderer')->searchAndRenderBlock($this->getAttribute((isset($context["formAmm"]) ? $context["formAmm"] : $this->getContext($context, "formAmm")), "coefDegressif", array()), 'errors');
+        // line 96
+        echo $this->env->getRuntime('Symfony\Bridge\Twig\Form\TwigRenderer')->searchAndRenderBlock($this->getAttribute($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "ammort", array()), "coefdegressif", array()), 'errors');
         echo "
                                             ";
-        // line 100
-        echo $this->env->getRuntime('Symfony\Bridge\Twig\Form\TwigRenderer')->searchAndRenderBlock($this->getAttribute((isset($context["formAmm"]) ? $context["formAmm"] : $this->getContext($context, "formAmm")), "coefDegressif", array()), 'widget', array("attr" => array("class" => "form-control")));
+        // line 97
+        echo $this->env->getRuntime('Symfony\Bridge\Twig\Form\TwigRenderer')->searchAndRenderBlock($this->getAttribute($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "ammort", array()), "coefdegressif", array()), 'widget', array("attr" => array("class" => "form-control")));
         echo "
                                         </div>
-                                        ";
-        // line 102
-        echo $this->env->getRuntime('Symfony\Bridge\Twig\Form\TwigRenderer')->searchAndRenderBlock((isset($context["formAmm"]) ? $context["formAmm"] : $this->getContext($context, "formAmm")), 'rest');
-        echo "
 
-                                        ";
-        // line 105
-        echo "                                    ";
-        echo         $this->env->getRuntime('Symfony\Bridge\Twig\Form\TwigRenderer')->renderBlock((isset($context["formAmm"]) ? $context["formAmm"] : $this->getContext($context, "formAmm")), 'form_end');
-        echo "
                                     </div>
                                 </div>
                             </div>
@@ -245,92 +227,74 @@ class __TwigTemplate_9ab8e48b4db2a70415a207370f9a43565418e81239701df44e7757cf0d3
                                         <p><strong>Taux d'impôt :</strong></p>
                                     </div>
                                     <div class=\"panel-body\">
-                                        ";
-        // line 115
-        echo         $this->env->getRuntime('Symfony\Bridge\Twig\Form\TwigRenderer')->renderBlock((isset($context["formImp"]) ? $context["formImp"] : $this->getContext($context, "formImp")), 'form_start');
-        echo "
 
-                                        ";
-        // line 118
-        echo "                                        ";
-        echo $this->env->getRuntime('Symfony\Bridge\Twig\Form\TwigRenderer')->searchAndRenderBlock((isset($context["formImp"]) ? $context["formImp"] : $this->getContext($context, "formImp")), 'errors');
-        echo "
                                         <div class=\"form-group\">
                                             <label>Contributions forfaitaires employeurs</label>
                                             ";
-        // line 121
-        echo $this->env->getRuntime('Symfony\Bridge\Twig\Form\TwigRenderer')->searchAndRenderBlock($this->getAttribute((isset($context["formImp"]) ? $context["formImp"] : $this->getContext($context, "formImp")), "cfe", array()), 'errors');
+        // line 112
+        echo $this->env->getRuntime('Symfony\Bridge\Twig\Form\TwigRenderer')->searchAndRenderBlock($this->getAttribute($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "impot", array()), "cfe", array()), 'errors');
         echo "
                                             ";
-        // line 122
-        echo $this->env->getRuntime('Symfony\Bridge\Twig\Form\TwigRenderer')->searchAndRenderBlock($this->getAttribute((isset($context["formImp"]) ? $context["formImp"] : $this->getContext($context, "formImp")), "cfe", array()), 'widget', array("attr" => array("class" => "form-control")));
+        // line 113
+        echo $this->env->getRuntime('Symfony\Bridge\Twig\Form\TwigRenderer')->searchAndRenderBlock($this->getAttribute($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "impot", array()), "cfe", array()), 'widget', array("attr" => array("class" => "form-control")));
         echo "
                                         </div>
                                         <div class=\"form-group\">
                                             <label>Impôt Société</label>
                                             ";
-        // line 126
-        echo $this->env->getRuntime('Symfony\Bridge\Twig\Form\TwigRenderer')->searchAndRenderBlock($this->getAttribute((isset($context["formImp"]) ? $context["formImp"] : $this->getContext($context, "formImp")), "isImp", array()), 'errors');
+        // line 117
+        echo $this->env->getRuntime('Symfony\Bridge\Twig\Form\TwigRenderer')->searchAndRenderBlock($this->getAttribute($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "impot", array()), "isImp", array()), 'errors');
         echo "
                                             ";
-        // line 127
-        echo $this->env->getRuntime('Symfony\Bridge\Twig\Form\TwigRenderer')->searchAndRenderBlock($this->getAttribute((isset($context["formImp"]) ? $context["formImp"] : $this->getContext($context, "formImp")), "isImp", array()), 'widget', array("attr" => array("class" => "form-control")));
+        // line 118
+        echo $this->env->getRuntime('Symfony\Bridge\Twig\Form\TwigRenderer')->searchAndRenderBlock($this->getAttribute($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "impot", array()), "isImp", array()), 'widget', array("attr" => array("class" => "form-control")));
         echo "
                                         </div>
                                         <div class=\"form-group\">
                                             <label>Impôt minimum forfaitaire</label>
                                             ";
-        // line 131
-        echo $this->env->getRuntime('Symfony\Bridge\Twig\Form\TwigRenderer')->searchAndRenderBlock($this->getAttribute((isset($context["formImp"]) ? $context["formImp"] : $this->getContext($context, "formImp")), "imf", array()), 'errors');
+        // line 122
+        echo $this->env->getRuntime('Symfony\Bridge\Twig\Form\TwigRenderer')->searchAndRenderBlock($this->getAttribute($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "impot", array()), "imf", array()), 'errors');
         echo "
                                             ";
-        // line 132
-        echo $this->env->getRuntime('Symfony\Bridge\Twig\Form\TwigRenderer')->searchAndRenderBlock($this->getAttribute((isset($context["formImp"]) ? $context["formImp"] : $this->getContext($context, "formImp")), "imf", array()), 'widget', array("attr" => array("class" => "form-control")));
+        // line 123
+        echo $this->env->getRuntime('Symfony\Bridge\Twig\Form\TwigRenderer')->searchAndRenderBlock($this->getAttribute($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "impot", array()), "imf", array()), 'widget', array("attr" => array("class" => "form-control")));
         echo "
                                         </div>
                                         <div class=\"form-group\">
                                             <label>Impôt sur le revenu de la valeur mobilières</label>
                                             ";
-        // line 136
-        echo $this->env->getRuntime('Symfony\Bridge\Twig\Form\TwigRenderer')->searchAndRenderBlock($this->getAttribute((isset($context["formImp"]) ? $context["formImp"] : $this->getContext($context, "formImp")), "irvm", array()), 'errors');
+        // line 127
+        echo $this->env->getRuntime('Symfony\Bridge\Twig\Form\TwigRenderer')->searchAndRenderBlock($this->getAttribute($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "impot", array()), "irvm", array()), 'errors');
         echo "
                                             ";
-        // line 137
-        echo $this->env->getRuntime('Symfony\Bridge\Twig\Form\TwigRenderer')->searchAndRenderBlock($this->getAttribute((isset($context["formImp"]) ? $context["formImp"] : $this->getContext($context, "formImp")), "irvm", array()), 'widget', array("attr" => array("class" => "form-control")));
+        // line 128
+        echo $this->env->getRuntime('Symfony\Bridge\Twig\Form\TwigRenderer')->searchAndRenderBlock($this->getAttribute($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "impot", array()), "irvm", array()), 'widget', array("attr" => array("class" => "form-control")));
         echo "
                                         </div>
                                         <div class=\"form-group\">
                                             <label>Impôt sur le revenu des créances</label>
                                             ";
-        // line 141
-        echo $this->env->getRuntime('Symfony\Bridge\Twig\Form\TwigRenderer')->searchAndRenderBlock($this->getAttribute((isset($context["formImp"]) ? $context["formImp"] : $this->getContext($context, "formImp")), "irc", array()), 'errors');
+        // line 132
+        echo $this->env->getRuntime('Symfony\Bridge\Twig\Form\TwigRenderer')->searchAndRenderBlock($this->getAttribute($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "impot", array()), "irc", array()), 'errors');
         echo "
                                             ";
-        // line 142
-        echo $this->env->getRuntime('Symfony\Bridge\Twig\Form\TwigRenderer')->searchAndRenderBlock($this->getAttribute((isset($context["formImp"]) ? $context["formImp"] : $this->getContext($context, "formImp")), "irc", array()), 'widget', array("attr" => array("class" => "form-control")));
+        // line 133
+        echo $this->env->getRuntime('Symfony\Bridge\Twig\Form\TwigRenderer')->searchAndRenderBlock($this->getAttribute($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "impot", array()), "irc", array()), 'widget', array("attr" => array("class" => "form-control")));
         echo "
                                         </div>
                                         <div class=\"form-group\">
                                             <label>Taxe sur la valeur ajoutée du pétrole</label>
                                             ";
-        // line 146
-        echo $this->env->getRuntime('Symfony\Bridge\Twig\Form\TwigRenderer')->searchAndRenderBlock($this->getAttribute((isset($context["formImp"]) ? $context["formImp"] : $this->getContext($context, "formImp")), "tva_petrole", array()), 'errors');
+        // line 137
+        echo $this->env->getRuntime('Symfony\Bridge\Twig\Form\TwigRenderer')->searchAndRenderBlock($this->getAttribute($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "impot", array()), "tvaPetrole", array()), 'errors');
         echo "
                                             ";
-        // line 147
-        echo $this->env->getRuntime('Symfony\Bridge\Twig\Form\TwigRenderer')->searchAndRenderBlock($this->getAttribute((isset($context["formImp"]) ? $context["formImp"] : $this->getContext($context, "formImp")), "tva_petrole", array()), 'widget', array("attr" => array("class" => "form-control")));
+        // line 138
+        echo $this->env->getRuntime('Symfony\Bridge\Twig\Form\TwigRenderer')->searchAndRenderBlock($this->getAttribute($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "impot", array()), "tvaPetrole", array()), 'widget', array("attr" => array("class" => "form-control")));
         echo "
                                         </div>
-                                        ";
-        // line 149
-        echo $this->env->getRuntime('Symfony\Bridge\Twig\Form\TwigRenderer')->searchAndRenderBlock((isset($context["formImp"]) ? $context["formImp"] : $this->getContext($context, "formImp")), 'rest');
-        echo "
 
-                                        ";
-        // line 152
-        echo "                                        ";
-        echo         $this->env->getRuntime('Symfony\Bridge\Twig\Form\TwigRenderer')->renderBlock((isset($context["formImp"]) ? $context["formImp"] : $this->getContext($context, "formImp")), 'form_end');
-        echo "
                                     </div>
                                 </div>
                             </div>
@@ -338,15 +302,7 @@ class __TwigTemplate_9ab8e48b4db2a70415a207370f9a43565418e81239701df44e7757cf0d3
                     </div>
                     <div class=\"item borderhide\">
                         <h3>Code des investissements</h3>
-                        ";
-        // line 160
-        echo         $this->env->getRuntime('Symfony\Bridge\Twig\Form\TwigRenderer')->renderBlock((isset($context["formCfe"]) ? $context["formCfe"] : $this->getContext($context, "formCfe")), 'form_start');
-        echo "
-                        ";
-        // line 162
-        echo "                        ";
-        echo $this->env->getRuntime('Symfony\Bridge\Twig\Form\TwigRenderer')->searchAndRenderBlock((isset($context["formCfe"]) ? $context["formCfe"] : $this->getContext($context, "formCfe")), 'errors');
-        echo "
+
                         <div class=\"panel panel-default\">
                             <div class=\"panel-heading\">
                                 <p>Contributions forfaitaire employeurs :</p>
@@ -357,12 +313,12 @@ class __TwigTemplate_9ab8e48b4db2a70415a207370f9a43565418e81239701df44e7757cf0d3
                                         <div class=\"form-group\">
                                             <label>Durée</label>
                                             ";
-        // line 172
-        echo $this->env->getRuntime('Symfony\Bridge\Twig\Form\TwigRenderer')->searchAndRenderBlock($this->getAttribute((isset($context["formCfe"]) ? $context["formCfe"] : $this->getContext($context, "formCfe")), "duree", array()), 'errors');
+        // line 158
+        echo $this->env->getRuntime('Symfony\Bridge\Twig\Form\TwigRenderer')->searchAndRenderBlock($this->getAttribute($this->getAttribute($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "invest", array()), "cfe", array()), "duree", array()), 'errors');
         echo "
                                             ";
-        // line 173
-        echo $this->env->getRuntime('Symfony\Bridge\Twig\Form\TwigRenderer')->searchAndRenderBlock($this->getAttribute((isset($context["formCfe"]) ? $context["formCfe"] : $this->getContext($context, "formCfe")), "duree", array()), 'widget', array("attr" => array("class" => "form-control")));
+        // line 159
+        echo $this->env->getRuntime('Symfony\Bridge\Twig\Form\TwigRenderer')->searchAndRenderBlock($this->getAttribute($this->getAttribute($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "invest", array()), "cfe", array()), "duree", array()), 'widget', array("attr" => array("class" => "form-control")));
         echo "
                                         </div>
                                     </div>
@@ -370,36 +326,19 @@ class __TwigTemplate_9ab8e48b4db2a70415a207370f9a43565418e81239701df44e7757cf0d3
                                         <div class=\"form-group\">
                                             <label>Taux </label>
                                             ";
-        // line 179
-        echo $this->env->getRuntime('Symfony\Bridge\Twig\Form\TwigRenderer')->searchAndRenderBlock($this->getAttribute((isset($context["formCfe"]) ? $context["formCfe"] : $this->getContext($context, "formCfe")), "taux", array()), 'errors');
+        // line 165
+        echo $this->env->getRuntime('Symfony\Bridge\Twig\Form\TwigRenderer')->searchAndRenderBlock($this->getAttribute($this->getAttribute($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "invest", array()), "cfe", array()), "taux", array()), 'errors');
         echo "
                                             ";
-        // line 180
-        echo $this->env->getRuntime('Symfony\Bridge\Twig\Form\TwigRenderer')->searchAndRenderBlock($this->getAttribute((isset($context["formCfe"]) ? $context["formCfe"] : $this->getContext($context, "formCfe")), "taux", array()), 'widget', array("attr" => array("class" => "form-control")));
+        // line 166
+        echo $this->env->getRuntime('Symfony\Bridge\Twig\Form\TwigRenderer')->searchAndRenderBlock($this->getAttribute($this->getAttribute($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "invest", array()), "cfe", array()), "taux", array()), 'widget', array("attr" => array("class" => "form-control")));
         echo "
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        ";
-        // line 186
-        echo $this->env->getRuntime('Symfony\Bridge\Twig\Form\TwigRenderer')->searchAndRenderBlock((isset($context["formCfe"]) ? $context["formCfe"] : $this->getContext($context, "formCfe")), 'rest');
-        echo "
-                        ";
-        // line 188
-        echo "                        ";
-        echo         $this->env->getRuntime('Symfony\Bridge\Twig\Form\TwigRenderer')->renderBlock((isset($context["formCfe"]) ? $context["formCfe"] : $this->getContext($context, "formCfe")), 'form_end');
-        echo "
-                        ";
-        // line 189
-        echo         $this->env->getRuntime('Symfony\Bridge\Twig\Form\TwigRenderer')->renderBlock((isset($context["formIs"]) ? $context["formIs"] : $this->getContext($context, "formIs")), 'form_start');
-        echo "
-                        ";
-        // line 191
-        echo "                        ";
-        echo $this->env->getRuntime('Symfony\Bridge\Twig\Form\TwigRenderer')->searchAndRenderBlock((isset($context["formIs"]) ? $context["formIs"] : $this->getContext($context, "formIs")), 'errors');
-        echo "
+
                         <div class=\"panel panel-default\">
                             <div class=\"panel-heading\">
                                 <p>Impôt société:</p>
@@ -410,12 +349,12 @@ class __TwigTemplate_9ab8e48b4db2a70415a207370f9a43565418e81239701df44e7757cf0d3
                                         <div class=\"form-group\">
                                             <label>Durée</label>
                                             ";
-        // line 201
-        echo $this->env->getRuntime('Symfony\Bridge\Twig\Form\TwigRenderer')->searchAndRenderBlock($this->getAttribute((isset($context["formIs"]) ? $context["formIs"] : $this->getContext($context, "formIs")), "duree", array()), 'errors');
+        // line 182
+        echo $this->env->getRuntime('Symfony\Bridge\Twig\Form\TwigRenderer')->searchAndRenderBlock($this->getAttribute($this->getAttribute($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "invest", array()), "isInv", array()), "duree", array()), 'errors');
         echo "
                                             ";
-        // line 202
-        echo $this->env->getRuntime('Symfony\Bridge\Twig\Form\TwigRenderer')->searchAndRenderBlock($this->getAttribute((isset($context["formIs"]) ? $context["formIs"] : $this->getContext($context, "formIs")), "duree", array()), 'widget', array("attr" => array("class" => "form-control")));
+        // line 183
+        echo $this->env->getRuntime('Symfony\Bridge\Twig\Form\TwigRenderer')->searchAndRenderBlock($this->getAttribute($this->getAttribute($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "invest", array()), "isInv", array()), "duree", array()), 'widget', array("attr" => array("class" => "form-control")));
         echo "
                                         </div>
                                     </div>
@@ -423,36 +362,19 @@ class __TwigTemplate_9ab8e48b4db2a70415a207370f9a43565418e81239701df44e7757cf0d3
                                         <div class=\"form-group\">
                                             <label>Taux </label>
                                             ";
-        // line 208
-        echo $this->env->getRuntime('Symfony\Bridge\Twig\Form\TwigRenderer')->searchAndRenderBlock($this->getAttribute((isset($context["formIs"]) ? $context["formIs"] : $this->getContext($context, "formIs")), "taux", array()), 'errors');
+        // line 189
+        echo $this->env->getRuntime('Symfony\Bridge\Twig\Form\TwigRenderer')->searchAndRenderBlock($this->getAttribute($this->getAttribute($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "invest", array()), "isInv", array()), "taux", array()), 'errors');
         echo "
                                             ";
-        // line 209
-        echo $this->env->getRuntime('Symfony\Bridge\Twig\Form\TwigRenderer')->searchAndRenderBlock($this->getAttribute((isset($context["formIs"]) ? $context["formIs"] : $this->getContext($context, "formIs")), "taux", array()), 'widget', array("attr" => array("class" => "form-control")));
+        // line 190
+        echo $this->env->getRuntime('Symfony\Bridge\Twig\Form\TwigRenderer')->searchAndRenderBlock($this->getAttribute($this->getAttribute($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "invest", array()), "isInv", array()), "taux", array()), 'widget', array("attr" => array("class" => "form-control")));
         echo "
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        ";
-        // line 215
-        echo $this->env->getRuntime('Symfony\Bridge\Twig\Form\TwigRenderer')->searchAndRenderBlock((isset($context["formIs"]) ? $context["formIs"] : $this->getContext($context, "formIs")), 'rest');
-        echo "
-                        ";
-        // line 217
-        echo "                        ";
-        echo         $this->env->getRuntime('Symfony\Bridge\Twig\Form\TwigRenderer')->renderBlock((isset($context["formIs"]) ? $context["formIs"] : $this->getContext($context, "formIs")), 'form_end');
-        echo "
-                        ";
-        // line 218
-        echo         $this->env->getRuntime('Symfony\Bridge\Twig\Form\TwigRenderer')->renderBlock((isset($context["formImf"]) ? $context["formImf"] : $this->getContext($context, "formImf")), 'form_start');
-        echo "
-                        ";
-        // line 220
-        echo "                        ";
-        echo $this->env->getRuntime('Symfony\Bridge\Twig\Form\TwigRenderer')->searchAndRenderBlock((isset($context["formImf"]) ? $context["formImf"] : $this->getContext($context, "formImf")), 'errors');
-        echo "
+
                         <div class=\"panel panel-default\">
                             <div class=\"panel-heading\">
                                 <p>Impôt minimum forfaitaire :</p>
@@ -463,12 +385,12 @@ class __TwigTemplate_9ab8e48b4db2a70415a207370f9a43565418e81239701df44e7757cf0d3
                                         <div class=\"form-group\">
                                             <label>Durée</label>
                                             ";
-        // line 230
-        echo $this->env->getRuntime('Symfony\Bridge\Twig\Form\TwigRenderer')->searchAndRenderBlock($this->getAttribute((isset($context["formImf"]) ? $context["formImf"] : $this->getContext($context, "formImf")), "duree", array()), 'errors');
+        // line 206
+        echo $this->env->getRuntime('Symfony\Bridge\Twig\Form\TwigRenderer')->searchAndRenderBlock($this->getAttribute($this->getAttribute($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "invest", array()), "imf", array()), "duree", array()), 'errors');
         echo "
                                             ";
-        // line 231
-        echo $this->env->getRuntime('Symfony\Bridge\Twig\Form\TwigRenderer')->searchAndRenderBlock($this->getAttribute((isset($context["formImf"]) ? $context["formImf"] : $this->getContext($context, "formImf")), "duree", array()), 'widget', array("attr" => array("class" => "form-control")));
+        // line 207
+        echo $this->env->getRuntime('Symfony\Bridge\Twig\Form\TwigRenderer')->searchAndRenderBlock($this->getAttribute($this->getAttribute($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "invest", array()), "imf", array()), "duree", array()), 'widget', array("attr" => array("class" => "form-control")));
         echo "
                                         </div>
                                     </div>
@@ -476,39 +398,22 @@ class __TwigTemplate_9ab8e48b4db2a70415a207370f9a43565418e81239701df44e7757cf0d3
                                         <div class=\"form-group\">
                                             <label>Taux </label>
                                             ";
-        // line 237
-        echo $this->env->getRuntime('Symfony\Bridge\Twig\Form\TwigRenderer')->searchAndRenderBlock($this->getAttribute((isset($context["formImf"]) ? $context["formImf"] : $this->getContext($context, "formImf")), "taux", array()), 'errors');
+        // line 213
+        echo $this->env->getRuntime('Symfony\Bridge\Twig\Form\TwigRenderer')->searchAndRenderBlock($this->getAttribute($this->getAttribute($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "invest", array()), "imf", array()), "taux", array()), 'errors');
         echo "
                                             ";
-        // line 238
-        echo $this->env->getRuntime('Symfony\Bridge\Twig\Form\TwigRenderer')->searchAndRenderBlock($this->getAttribute((isset($context["formImf"]) ? $context["formImf"] : $this->getContext($context, "formImf")), "taux", array()), 'widget', array("attr" => array("class" => "form-control")));
+        // line 214
+        echo $this->env->getRuntime('Symfony\Bridge\Twig\Form\TwigRenderer')->searchAndRenderBlock($this->getAttribute($this->getAttribute($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "invest", array()), "imf", array()), "taux", array()), 'widget', array("attr" => array("class" => "form-control")));
         echo "
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        ";
-        // line 244
-        echo $this->env->getRuntime('Symfony\Bridge\Twig\Form\TwigRenderer')->searchAndRenderBlock((isset($context["formImf"]) ? $context["formImf"] : $this->getContext($context, "formImf")), 'rest');
-        echo "
-                        ";
-        // line 246
-        echo "                        ";
-        echo         $this->env->getRuntime('Symfony\Bridge\Twig\Form\TwigRenderer')->renderBlock((isset($context["formImf"]) ? $context["formImf"] : $this->getContext($context, "formImf")), 'form_end');
-        echo "
+
                     </div>
                     <div class=\"item borderhide\">
                         <h3>Code des investissements</h3>
-                        ";
-        // line 250
-        echo         $this->env->getRuntime('Symfony\Bridge\Twig\Form\TwigRenderer')->renderBlock((isset($context["formIrvm"]) ? $context["formIrvm"] : $this->getContext($context, "formIrvm")), 'form_start');
-        echo "
-                        ";
-        // line 252
-        echo "                        ";
-        echo $this->env->getRuntime('Symfony\Bridge\Twig\Form\TwigRenderer')->searchAndRenderBlock((isset($context["formIrvm"]) ? $context["formIrvm"] : $this->getContext($context, "formIrvm")), 'errors');
-        echo "
                         <div class=\"panel panel-default\">
                             <div class=\"panel-heading\">
                                 <p>Impôt sur les revenus des valeurs mobilières :</p>
@@ -519,12 +424,12 @@ class __TwigTemplate_9ab8e48b4db2a70415a207370f9a43565418e81239701df44e7757cf0d3
                                         <div class=\"form-group\">
                                             <label>Durée</label>
                                             ";
-        // line 262
-        echo $this->env->getRuntime('Symfony\Bridge\Twig\Form\TwigRenderer')->searchAndRenderBlock($this->getAttribute((isset($context["formIrvm"]) ? $context["formIrvm"] : $this->getContext($context, "formIrvm")), "duree", array()), 'errors');
+        // line 233
+        echo $this->env->getRuntime('Symfony\Bridge\Twig\Form\TwigRenderer')->searchAndRenderBlock($this->getAttribute($this->getAttribute($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "invest", array()), "irvm", array()), "duree", array()), 'errors');
         echo "
                                             ";
-        // line 263
-        echo $this->env->getRuntime('Symfony\Bridge\Twig\Form\TwigRenderer')->searchAndRenderBlock($this->getAttribute((isset($context["formIrvm"]) ? $context["formIrvm"] : $this->getContext($context, "formIrvm")), "duree", array()), 'widget', array("attr" => array("class" => "form-control")));
+        // line 234
+        echo $this->env->getRuntime('Symfony\Bridge\Twig\Form\TwigRenderer')->searchAndRenderBlock($this->getAttribute($this->getAttribute($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "invest", array()), "irvm", array()), "duree", array()), 'widget', array("attr" => array("class" => "form-control")));
         echo "
                                         </div>
                                     </div>
@@ -532,36 +437,19 @@ class __TwigTemplate_9ab8e48b4db2a70415a207370f9a43565418e81239701df44e7757cf0d3
                                         <div class=\"form-group\">
                                             <label>Taux </label>
                                             ";
-        // line 269
-        echo $this->env->getRuntime('Symfony\Bridge\Twig\Form\TwigRenderer')->searchAndRenderBlock($this->getAttribute((isset($context["formIrvm"]) ? $context["formIrvm"] : $this->getContext($context, "formIrvm")), "taux", array()), 'errors');
+        // line 240
+        echo $this->env->getRuntime('Symfony\Bridge\Twig\Form\TwigRenderer')->searchAndRenderBlock($this->getAttribute($this->getAttribute($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "invest", array()), "irvm", array()), "taux", array()), 'errors');
         echo "
                                             ";
-        // line 270
-        echo $this->env->getRuntime('Symfony\Bridge\Twig\Form\TwigRenderer')->searchAndRenderBlock($this->getAttribute((isset($context["formIrvm"]) ? $context["formIrvm"] : $this->getContext($context, "formIrvm")), "taux", array()), 'widget', array("attr" => array("class" => "form-control")));
+        // line 241
+        echo $this->env->getRuntime('Symfony\Bridge\Twig\Form\TwigRenderer')->searchAndRenderBlock($this->getAttribute($this->getAttribute($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "invest", array()), "irvm", array()), "taux", array()), 'widget', array("attr" => array("class" => "form-control")));
         echo "
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        ";
-        // line 276
-        echo $this->env->getRuntime('Symfony\Bridge\Twig\Form\TwigRenderer')->searchAndRenderBlock((isset($context["formIrvm"]) ? $context["formIrvm"] : $this->getContext($context, "formIrvm")), 'rest');
-        echo "
-                        ";
-        // line 278
-        echo "                        ";
-        echo         $this->env->getRuntime('Symfony\Bridge\Twig\Form\TwigRenderer')->renderBlock((isset($context["formIrvm"]) ? $context["formIrvm"] : $this->getContext($context, "formIrvm")), 'form_end');
-        echo "
-                        ";
-        // line 279
-        echo         $this->env->getRuntime('Symfony\Bridge\Twig\Form\TwigRenderer')->renderBlock((isset($context["formIrc"]) ? $context["formIrc"] : $this->getContext($context, "formIrc")), 'form_start');
-        echo "
-                        ";
-        // line 281
-        echo "                        ";
-        echo $this->env->getRuntime('Symfony\Bridge\Twig\Form\TwigRenderer')->searchAndRenderBlock((isset($context["formIrc"]) ? $context["formIrc"] : $this->getContext($context, "formIrc")), 'errors');
-        echo "
+
                         <div class=\"panel panel-default\">
                             <div class=\"panel-heading\">
                                 <p>Impôt sur le revenu des creances :</p>
@@ -572,12 +460,12 @@ class __TwigTemplate_9ab8e48b4db2a70415a207370f9a43565418e81239701df44e7757cf0d3
                                         <div class=\"form-group\">
                                             <label>Durée</label>
                                             ";
-        // line 291
-        echo $this->env->getRuntime('Symfony\Bridge\Twig\Form\TwigRenderer')->searchAndRenderBlock($this->getAttribute((isset($context["formIrc"]) ? $context["formIrc"] : $this->getContext($context, "formIrc")), "duree", array()), 'errors');
+        // line 257
+        echo $this->env->getRuntime('Symfony\Bridge\Twig\Form\TwigRenderer')->searchAndRenderBlock($this->getAttribute($this->getAttribute($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "invest", array()), "irc", array()), "duree", array()), 'errors');
         echo "
                                             ";
-        // line 292
-        echo $this->env->getRuntime('Symfony\Bridge\Twig\Form\TwigRenderer')->searchAndRenderBlock($this->getAttribute((isset($context["formIrc"]) ? $context["formIrc"] : $this->getContext($context, "formIrc")), "duree", array()), 'widget', array("attr" => array("class" => "form-control")));
+        // line 258
+        echo $this->env->getRuntime('Symfony\Bridge\Twig\Form\TwigRenderer')->searchAndRenderBlock($this->getAttribute($this->getAttribute($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "invest", array()), "irc", array()), "duree", array()), 'widget', array("attr" => array("class" => "form-control")));
         echo "
                                         </div>
                                     </div>
@@ -585,38 +473,30 @@ class __TwigTemplate_9ab8e48b4db2a70415a207370f9a43565418e81239701df44e7757cf0d3
                                         <div class=\"form-group\">
                                             <label>Taux </label>
                                             ";
-        // line 298
-        echo $this->env->getRuntime('Symfony\Bridge\Twig\Form\TwigRenderer')->searchAndRenderBlock($this->getAttribute((isset($context["formIrc"]) ? $context["formIrc"] : $this->getContext($context, "formIrc")), "taux", array()), 'errors');
+        // line 264
+        echo $this->env->getRuntime('Symfony\Bridge\Twig\Form\TwigRenderer')->searchAndRenderBlock($this->getAttribute($this->getAttribute($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "invest", array()), "irc", array()), "taux", array()), 'errors');
         echo "
                                             ";
-        // line 299
-        echo $this->env->getRuntime('Symfony\Bridge\Twig\Form\TwigRenderer')->searchAndRenderBlock($this->getAttribute((isset($context["formIrc"]) ? $context["formIrc"] : $this->getContext($context, "formIrc")), "taux", array()), 'widget', array("attr" => array("class" => "form-control")));
+        // line 265
+        echo $this->env->getRuntime('Symfony\Bridge\Twig\Form\TwigRenderer')->searchAndRenderBlock($this->getAttribute($this->getAttribute($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "invest", array()), "irc", array()), "taux", array()), 'widget', array("attr" => array("class" => "form-control")));
         echo "
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        ";
-        // line 305
-        echo $this->env->getRuntime('Symfony\Bridge\Twig\Form\TwigRenderer')->searchAndRenderBlock((isset($context["formIrc"]) ? $context["formIrc"] : $this->getContext($context, "formIrc")), 'rest');
-        echo "
-                        ";
-        // line 307
-        echo "                        ";
-        echo         $this->env->getRuntime('Symfony\Bridge\Twig\Form\TwigRenderer')->renderBlock((isset($context["formIrc"]) ? $context["formIrc"] : $this->getContext($context, "formIrc")), 'form_end');
-        echo "
+
                     </div>
                     <div class=\"item borderhide\">
                         <h3>Code des investissements</h3>
                         <div class=\"form-group\">
                             <label>Description des dispositions :</label>
                             ";
-        // line 313
+        // line 277
         echo $this->env->getRuntime('Symfony\Bridge\Twig\Form\TwigRenderer')->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "descriptionDerog", array()), 'errors');
         echo "
                             ";
-        // line 314
+        // line 278
         echo $this->env->getRuntime('Symfony\Bridge\Twig\Form\TwigRenderer')->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "descriptionDerog", array()), 'widget', array("attr" => array("class" => "form-control", "rows" => "5")));
         echo "
 
@@ -626,26 +506,17 @@ class __TwigTemplate_9ab8e48b4db2a70415a207370f9a43565418e81239701df44e7757cf0d3
                                 <p>Régime d'investissement :</p>
                             </div>
                             <div class=\"panel-body\">
-                                ";
-        // line 322
-        echo         $this->env->getRuntime('Symfony\Bridge\Twig\Form\TwigRenderer')->renderBlock((isset($context["formSource"]) ? $context["formSource"] : $this->getContext($context, "formSource")), 'form_start');
-        echo "
-                                ";
-        // line 324
-        echo "                                ";
-        echo $this->env->getRuntime('Symfony\Bridge\Twig\Form\TwigRenderer')->searchAndRenderBlock((isset($context["formSource"]) ? $context["formSource"] : $this->getContext($context, "formSource")), 'errors');
-        echo "
                                 <div class=\"row\">
                                     <div class=\"col-sm-4\">
                                         <div class=\"form-group\">
                                             <label>Nom du code des investissements :</label>
                                             ";
-        // line 329
-        echo $this->env->getRuntime('Symfony\Bridge\Twig\Form\TwigRenderer')->searchAndRenderBlock($this->getAttribute((isset($context["formSource"]) ? $context["formSource"] : $this->getContext($context, "formSource")), "nomCodeInvest", array()), 'errors');
+        // line 290
+        echo $this->env->getRuntime('Symfony\Bridge\Twig\Form\TwigRenderer')->searchAndRenderBlock($this->getAttribute($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "source", array()), "nomCodeInvest", array()), 'errors');
         echo "
                                             ";
-        // line 330
-        echo $this->env->getRuntime('Symfony\Bridge\Twig\Form\TwigRenderer')->searchAndRenderBlock($this->getAttribute((isset($context["formSource"]) ? $context["formSource"] : $this->getContext($context, "formSource")), "nomCodeInvest", array()), 'widget', array("attr" => array("class" => "form-control")));
+        // line 291
+        echo $this->env->getRuntime('Symfony\Bridge\Twig\Form\TwigRenderer')->searchAndRenderBlock($this->getAttribute($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "source", array()), "nomCodeInvest", array()), 'widget', array("attr" => array("class" => "form-control")));
         echo "
                                         </div>
                                     </div>
@@ -653,12 +524,12 @@ class __TwigTemplate_9ab8e48b4db2a70415a207370f9a43565418e81239701df44e7757cf0d3
                                         <div class=\"form-group\">
                                             <label>Nom du régime :</label>
                                             ";
-        // line 336
-        echo $this->env->getRuntime('Symfony\Bridge\Twig\Form\TwigRenderer')->searchAndRenderBlock($this->getAttribute((isset($context["formSource"]) ? $context["formSource"] : $this->getContext($context, "formSource")), "nomRegimeInvest", array()), 'errors');
+        // line 297
+        echo $this->env->getRuntime('Symfony\Bridge\Twig\Form\TwigRenderer')->searchAndRenderBlock($this->getAttribute($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "source", array()), "nomRegimeInvest", array()), 'errors');
         echo "
                                             ";
-        // line 337
-        echo $this->env->getRuntime('Symfony\Bridge\Twig\Form\TwigRenderer')->searchAndRenderBlock($this->getAttribute((isset($context["formSource"]) ? $context["formSource"] : $this->getContext($context, "formSource")), "nomRegimeInvest", array()), 'widget', array("attr" => array("class" => "form-control")));
+        // line 298
+        echo $this->env->getRuntime('Symfony\Bridge\Twig\Form\TwigRenderer')->searchAndRenderBlock($this->getAttribute($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "source", array()), "nomRegimeInvest", array()), 'widget', array("attr" => array("class" => "form-control")));
         echo "
                                         </div>
                                     </div>
@@ -666,35 +537,28 @@ class __TwigTemplate_9ab8e48b4db2a70415a207370f9a43565418e81239701df44e7757cf0d3
                                         <div class=\"form-group\">
                                             <label>Zone :</label>
                                             ";
-        // line 343
-        echo $this->env->getRuntime('Symfony\Bridge\Twig\Form\TwigRenderer')->searchAndRenderBlock($this->getAttribute((isset($context["formSource"]) ? $context["formSource"] : $this->getContext($context, "formSource")), "nomZonneRegime", array()), 'errors');
+        // line 304
+        echo $this->env->getRuntime('Symfony\Bridge\Twig\Form\TwigRenderer')->searchAndRenderBlock($this->getAttribute($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "source", array()), "nomZonneRegime", array()), 'errors');
         echo "
                                             ";
-        // line 344
-        echo $this->env->getRuntime('Symfony\Bridge\Twig\Form\TwigRenderer')->searchAndRenderBlock($this->getAttribute((isset($context["formSource"]) ? $context["formSource"] : $this->getContext($context, "formSource")), "nomZonneRegime", array()), 'widget', array("attr" => array("class" => "form-control")));
+        // line 305
+        echo $this->env->getRuntime('Symfony\Bridge\Twig\Form\TwigRenderer')->searchAndRenderBlock($this->getAttribute($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "source", array()), "nomZonneRegime", array()), 'widget', array("attr" => array("class" => "form-control")));
         echo "
                                         </div>
                                     </div>
                                 </div>
-                                ";
-        // line 348
-        echo $this->env->getRuntime('Symfony\Bridge\Twig\Form\TwigRenderer')->searchAndRenderBlock((isset($context["formSource"]) ? $context["formSource"] : $this->getContext($context, "formSource")), 'rest');
-        echo "
-                                ";
-        // line 350
-        echo "                                ";
-        echo         $this->env->getRuntime('Symfony\Bridge\Twig\Form\TwigRenderer')->renderBlock((isset($context["formSource"]) ? $context["formSource"] : $this->getContext($context, "formSource")), 'form_end');
-        echo "
-                                ";
-        // line 351
+                            </div>
+
+                            ";
+        // line 311
         echo $this->env->getRuntime('Symfony\Bridge\Twig\Form\TwigRenderer')->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "ajouterLePays", array()), 'widget', array("attr" => array("class" => "btn btn-default")));
         echo "
-                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+
         <div class=\" borderhide\">
             <button class=\"left\" href=\"#myCarousel\" data-slide=\"prev\">
                 <span class=\"glyphicon glyphicon-chevron-left\"> </span>
@@ -710,23 +574,23 @@ class __TwigTemplate_9ab8e48b4db2a70415a207370f9a43565418e81239701df44e7757cf0d3
 
 
     ";
-        // line 373
+        // line 333
         echo "
 
 
 
     ";
-        // line 378
+        // line 338
         echo "
 
     ";
-        // line 383
+        // line 343
         echo "    ";
         echo $this->env->getRuntime('Symfony\Bridge\Twig\Form\TwigRenderer')->searchAndRenderBlock((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), 'rest');
         echo "
 
     ";
-        // line 386
+        // line 346
         echo "    ";
         echo         $this->env->getRuntime('Symfony\Bridge\Twig\Form\TwigRenderer')->renderBlock((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), 'form_end');
         echo "
@@ -752,7 +616,7 @@ class __TwigTemplate_9ab8e48b4db2a70415a207370f9a43565418e81239701df44e7757cf0d3
 
     public function getDebugInfo()
     {
-        return array (  730 => 386,  724 => 383,  720 => 378,  714 => 373,  690 => 351,  685 => 350,  681 => 348,  674 => 344,  670 => 343,  661 => 337,  657 => 336,  648 => 330,  644 => 329,  635 => 324,  631 => 322,  620 => 314,  616 => 313,  606 => 307,  602 => 305,  593 => 299,  589 => 298,  580 => 292,  576 => 291,  562 => 281,  558 => 279,  553 => 278,  549 => 276,  540 => 270,  536 => 269,  527 => 263,  523 => 262,  509 => 252,  505 => 250,  497 => 246,  493 => 244,  484 => 238,  480 => 237,  471 => 231,  467 => 230,  453 => 220,  449 => 218,  444 => 217,  440 => 215,  431 => 209,  427 => 208,  418 => 202,  414 => 201,  400 => 191,  396 => 189,  391 => 188,  387 => 186,  378 => 180,  374 => 179,  365 => 173,  361 => 172,  347 => 162,  343 => 160,  331 => 152,  326 => 149,  321 => 147,  317 => 146,  310 => 142,  306 => 141,  299 => 137,  295 => 136,  288 => 132,  284 => 131,  277 => 127,  273 => 126,  266 => 122,  262 => 121,  255 => 118,  250 => 115,  236 => 105,  231 => 102,  226 => 100,  222 => 99,  215 => 95,  211 => 94,  204 => 90,  200 => 89,  193 => 85,  189 => 84,  182 => 80,  178 => 79,  171 => 75,  167 => 74,  160 => 71,  155 => 68,  140 => 56,  136 => 55,  115 => 37,  109 => 34,  105 => 33,  77 => 9,  72 => 6,  68 => 4,  59 => 3,  41 => 2,  11 => 1,);
+        return array (  594 => 346,  588 => 343,  584 => 338,  578 => 333,  554 => 311,  545 => 305,  541 => 304,  532 => 298,  528 => 297,  519 => 291,  515 => 290,  500 => 278,  496 => 277,  481 => 265,  477 => 264,  468 => 258,  464 => 257,  445 => 241,  441 => 240,  432 => 234,  428 => 233,  406 => 214,  402 => 213,  393 => 207,  389 => 206,  370 => 190,  366 => 189,  357 => 183,  353 => 182,  334 => 166,  330 => 165,  321 => 159,  317 => 158,  294 => 138,  290 => 137,  283 => 133,  279 => 132,  272 => 128,  268 => 127,  261 => 123,  257 => 122,  250 => 118,  246 => 117,  239 => 113,  235 => 112,  217 => 97,  213 => 96,  206 => 92,  202 => 91,  195 => 87,  191 => 86,  184 => 82,  180 => 81,  173 => 77,  169 => 76,  162 => 72,  158 => 71,  140 => 56,  136 => 55,  115 => 37,  109 => 34,  105 => 33,  77 => 9,  72 => 6,  68 => 4,  59 => 3,  41 => 2,  11 => 1,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -797,8 +661,8 @@ class __TwigTemplate_9ab8e48b4db2a70415a207370f9a43565418e81239701df44e7757cf0d3
                         <h3>Général</h3>
                         <div class=\"form-group\">
                             <label>Nom </label>
-                            {{ form_errors(form.Name) }}
-                            {{ form_widget(form.Name, {'attr': {'class': 'form-control'}}) }}
+                            {{ form_errors(form.name) }}
+                            {{ form_widget(form.name, {'attr': {'class': 'form-control'}}) }}
                         </div>
                         <div class=\"form-group\">
                             {{ form_label(form.code) }}
@@ -832,44 +696,38 @@ class __TwigTemplate_9ab8e48b4db2a70415a207370f9a43565418e81239701df44e7757cf0d3
                                         <p><strong>Durée d'amortissment :</strong></p>
                                     </div>
                                     <div class=\"panel-body\">
-                                    {{ form_start(formAmm) }}
 
-                                        {# Les erreurs générales du formulaire. #}
-                                        {{ form_errors(formAmm) }}
                                         <div class=\"form-group\">
                                             <label>Construction</label>
-                                            {{ form_errors(formAmm.construction) }}
-                                            {{ form_widget(formAmm.construction, {'attr': {'class': 'form-control'}}) }}
+                                            {{ form_errors(form.ammort.construction) }}
+                                            {{ form_widget(form.ammort.construction, {'attr': {'class': 'form-control'}}) }}
                                         </div>
                                         <div class=\"form-group\">
                                             <label>Equipement</label>
-                                            {{ form_errors(formAmm.equipement) }}
-                                            {{ form_widget(formAmm.equipement, {'attr': {'class': 'form-control'}}) }}
+                                            {{ form_errors(form.ammort.equipement) }}
+                                            {{ form_widget(form.ammort.equipement, {'attr': {'class': 'form-control'}}) }}
                                         </div>
                                         <div class=\"form-group\">
                                             <label>Camion</label>
-                                            {{ form_errors(formAmm.camion) }}
-                                            {{ form_widget(formAmm.camion, {'attr': {'class': 'form-control'}}) }}
+                                            {{ form_errors(form.ammort.camion) }}
+                                            {{ form_widget(form.ammort.camion, {'attr': {'class': 'form-control'}}) }}
                                         </div>
                                         <div class=\"form-group\">
                                             <label>Matériel Informatique</label>
-                                            {{ form_errors(formAmm.matInformatique) }}
-                                            {{ form_widget(formAmm.matInformatique, {'attr': {'class': 'form-control'}}) }}
+                                            {{ form_errors(form.ammort.matInformatique) }}
+                                            {{ form_widget(form.ammort.matInformatique, {'attr': {'class': 'form-control'}}) }}
                                         </div>
                                         <div class=\"form-group\">
                                             <label>Matériel de bureau</label>
-                                            {{ form_errors(formAmm.matBureau) }}
-                                            {{ form_widget(formAmm.matBureau, {'attr': {'class': 'form-control'}}) }}
+                                            {{ form_errors(form.ammort.matBureau) }}
+                                            {{ form_widget(form.ammort.matBureau, {'attr': {'class': 'form-control'}}) }}
                                         </div>
                                         <div class=\"form-group\">
                                             <label>Coefficient Dégressif</label>
-                                            {{ form_errors(formAmm.coefDegressif) }}
-                                            {{ form_widget(formAmm.coefDegressif, {'attr': {'class': 'form-control'}}) }}
+                                            {{ form_errors(form.ammort.coefdegressif) }}
+                                            {{ form_widget(form.ammort.coefdegressif, {'attr': {'class': 'form-control'}}) }}
                                         </div>
-                                        {{ form_rest(formAmm) }}
 
-                                        {# Fermeture de la balise <form> du formulaire HTML #}
-                                    {{ form_end(formAmm) }}
                                     </div>
                                 </div>
                             </div>
@@ -879,44 +737,38 @@ class __TwigTemplate_9ab8e48b4db2a70415a207370f9a43565418e81239701df44e7757cf0d3
                                         <p><strong>Taux d'impôt :</strong></p>
                                     </div>
                                     <div class=\"panel-body\">
-                                        {{ form_start(formImp) }}
 
-                                        {# Les erreurs générales du formulaire. #}
-                                        {{ form_errors(formImp) }}
                                         <div class=\"form-group\">
                                             <label>Contributions forfaitaires employeurs</label>
-                                            {{ form_errors(formImp.cfe) }}
-                                            {{ form_widget(formImp.cfe, {'attr': {'class': 'form-control'}}) }}
+                                            {{ form_errors(form.impot.cfe) }}
+                                            {{ form_widget(form.impot.cfe, {'attr': {'class': 'form-control'}}) }}
                                         </div>
                                         <div class=\"form-group\">
                                             <label>Impôt Société</label>
-                                            {{ form_errors(formImp.isImp) }}
-                                            {{ form_widget(formImp.isImp, {'attr': {'class': 'form-control'}}) }}
+                                            {{ form_errors(form.impot.isImp) }}
+                                            {{ form_widget(form.impot.isImp, {'attr': {'class': 'form-control'}}) }}
                                         </div>
                                         <div class=\"form-group\">
                                             <label>Impôt minimum forfaitaire</label>
-                                            {{ form_errors(formImp.imf) }}
-                                            {{ form_widget(formImp.imf, {'attr': {'class': 'form-control'}}) }}
+                                            {{ form_errors(form.impot.imf) }}
+                                            {{ form_widget(form.impot.imf, {'attr': {'class': 'form-control'}}) }}
                                         </div>
                                         <div class=\"form-group\">
                                             <label>Impôt sur le revenu de la valeur mobilières</label>
-                                            {{ form_errors(formImp.irvm) }}
-                                            {{ form_widget(formImp.irvm, {'attr': {'class': 'form-control'}}) }}
+                                            {{ form_errors(form.impot.irvm) }}
+                                            {{ form_widget(form.impot.irvm, {'attr': {'class': 'form-control'}}) }}
                                         </div>
                                         <div class=\"form-group\">
                                             <label>Impôt sur le revenu des créances</label>
-                                            {{ form_errors(formImp.irc) }}
-                                            {{ form_widget(formImp.irc, {'attr': {'class': 'form-control'}}) }}
+                                            {{ form_errors(form.impot.irc) }}
+                                            {{ form_widget(form.impot.irc, {'attr': {'class': 'form-control'}}) }}
                                         </div>
                                         <div class=\"form-group\">
                                             <label>Taxe sur la valeur ajoutée du pétrole</label>
-                                            {{ form_errors(formImp.tva_petrole) }}
-                                            {{ form_widget(formImp.tva_petrole, {'attr': {'class': 'form-control'}}) }}
+                                            {{ form_errors(form.impot.tvaPetrole) }}
+                                            {{ form_widget(form.impot.tvaPetrole, {'attr': {'class': 'form-control'}}) }}
                                         </div>
-                                        {{ form_rest(formImp) }}
 
-                                        {# Fermeture de la balise <form> du formulaire HTML #}
-                                        {{ form_end(formImp) }}
                                     </div>
                                 </div>
                             </div>
@@ -924,9 +776,7 @@ class __TwigTemplate_9ab8e48b4db2a70415a207370f9a43565418e81239701df44e7757cf0d3
                     </div>
                     <div class=\"item borderhide\">
                         <h3>Code des investissements</h3>
-                        {{ form_start(formCfe) }}
-                        {# Les erreurs générales du formulaire. #}
-                        {{ form_errors(formCfe) }}
+
                         <div class=\"panel panel-default\">
                             <div class=\"panel-heading\">
                                 <p>Contributions forfaitaire employeurs :</p>
@@ -936,26 +786,21 @@ class __TwigTemplate_9ab8e48b4db2a70415a207370f9a43565418e81239701df44e7757cf0d3
                                     <div class=\"col-sm-6\">
                                         <div class=\"form-group\">
                                             <label>Durée</label>
-                                            {{ form_errors(formCfe.duree) }}
-                                            {{ form_widget(formCfe.duree, {'attr': {'class': 'form-control'}}) }}
+                                            {{ form_errors(form.invest.cfe.duree) }}
+                                            {{ form_widget(form.invest.cfe.duree, {'attr': {'class': 'form-control'}}) }}
                                         </div>
                                     </div>
                                     <div class=\"col-sm-6\">
                                         <div class=\"form-group\">
                                             <label>Taux </label>
-                                            {{ form_errors(formCfe.taux) }}
-                                            {{ form_widget(formCfe.taux, {'attr': {'class': 'form-control'}}) }}
+                                            {{ form_errors(form.invest.cfe.taux) }}
+                                            {{ form_widget(form.invest.cfe.taux, {'attr': {'class': 'form-control'}}) }}
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        {{ form_rest(formCfe) }}
-                        {# Fermeture de la balise <form> du formulaire HTML #}
-                        {{ form_end(formCfe) }}
-                        {{ form_start(formIs) }}
-                        {# Les erreurs générales du formulaire. #}
-                        {{ form_errors(formIs) }}
+
                         <div class=\"panel panel-default\">
                             <div class=\"panel-heading\">
                                 <p>Impôt société:</p>
@@ -965,26 +810,21 @@ class __TwigTemplate_9ab8e48b4db2a70415a207370f9a43565418e81239701df44e7757cf0d3
                                     <div class=\"col-sm-6\">
                                         <div class=\"form-group\">
                                             <label>Durée</label>
-                                            {{ form_errors(formIs.duree) }}
-                                            {{ form_widget(formIs.duree, {'attr': {'class': 'form-control'}}) }}
+                                            {{ form_errors(form.invest.isInv.duree) }}
+                                            {{ form_widget(form.invest.isInv.duree, {'attr': {'class': 'form-control'}}) }}
                                         </div>
                                     </div>
                                     <div class=\"col-sm-6\">
                                         <div class=\"form-group\">
                                             <label>Taux </label>
-                                            {{ form_errors(formIs.taux) }}
-                                            {{ form_widget(formIs.taux, {'attr': {'class': 'form-control'}}) }}
+                                            {{ form_errors(form.invest.isInv.taux) }}
+                                            {{ form_widget(form.invest.isInv.taux, {'attr': {'class': 'form-control'}}) }}
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        {{ form_rest(formIs) }}
-                        {# Fermeture de la balise <form> du formulaire HTML #}
-                        {{ form_end(formIs) }}
-                        {{ form_start(formImf) }}
-                        {# Les erreurs générales du formulaire. #}
-                        {{ form_errors(formImf) }}
+
                         <div class=\"panel panel-default\">
                             <div class=\"panel-heading\">
                                 <p>Impôt minimum forfaitaire :</p>
@@ -994,29 +834,24 @@ class __TwigTemplate_9ab8e48b4db2a70415a207370f9a43565418e81239701df44e7757cf0d3
                                     <div class=\"col-sm-6\">
                                         <div class=\"form-group\">
                                             <label>Durée</label>
-                                            {{ form_errors(formImf.duree) }}
-                                            {{ form_widget(formImf.duree, {'attr': {'class': 'form-control'}}) }}
+                                            {{ form_errors(form.invest.imf.duree) }}
+                                            {{ form_widget(form.invest.imf.duree, {'attr': {'class': 'form-control'}}) }}
                                         </div>
                                     </div>
                                     <div class=\"col-sm-6\">
                                         <div class=\"form-group\">
                                             <label>Taux </label>
-                                            {{ form_errors(formImf.taux) }}
-                                            {{ form_widget(formImf.taux, {'attr': {'class': 'form-control'}}) }}
+                                            {{ form_errors(form.invest.imf.taux) }}
+                                            {{ form_widget(form.invest.imf.taux, {'attr': {'class': 'form-control'}}) }}
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        {{ form_rest(formImf) }}
-                        {# Fermeture de la balise <form> du formulaire HTML #}
-                        {{ form_end(formImf) }}
+
                     </div>
                     <div class=\"item borderhide\">
                         <h3>Code des investissements</h3>
-                        {{ form_start(formIrvm) }}
-                        {# Les erreurs générales du formulaire. #}
-                        {{ form_errors(formIrvm) }}
                         <div class=\"panel panel-default\">
                             <div class=\"panel-heading\">
                                 <p>Impôt sur les revenus des valeurs mobilières :</p>
@@ -1026,26 +861,21 @@ class __TwigTemplate_9ab8e48b4db2a70415a207370f9a43565418e81239701df44e7757cf0d3
                                     <div class=\"col-sm-6\">
                                         <div class=\"form-group\">
                                             <label>Durée</label>
-                                            {{ form_errors(formIrvm.duree) }}
-                                            {{ form_widget(formIrvm.duree, {'attr': {'class': 'form-control'}}) }}
+                                            {{ form_errors(form.invest.irvm.duree) }}
+                                            {{ form_widget(form.invest.irvm.duree, {'attr': {'class': 'form-control'}}) }}
                                         </div>
                                     </div>
                                     <div class=\"col-sm-6\">
                                         <div class=\"form-group\">
                                             <label>Taux </label>
-                                            {{ form_errors(formIrvm.taux) }}
-                                            {{ form_widget(formIrvm.taux, {'attr': {'class': 'form-control'}}) }}
+                                            {{ form_errors(form.invest.irvm.taux) }}
+                                            {{ form_widget(form.invest.irvm.taux, {'attr': {'class': 'form-control'}}) }}
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        {{ form_rest(formIrvm) }}
-                        {# Fermeture de la balise <form> du formulaire HTML #}
-                        {{ form_end(formIrvm) }}
-                        {{ form_start(formIrc) }}
-                        {# Les erreurs générales du formulaire. #}
-                        {{ form_errors(formIrc) }}
+
                         <div class=\"panel panel-default\">
                             <div class=\"panel-heading\">
                                 <p>Impôt sur le revenu des creances :</p>
@@ -1055,23 +885,21 @@ class __TwigTemplate_9ab8e48b4db2a70415a207370f9a43565418e81239701df44e7757cf0d3
                                     <div class=\"col-sm-6\">
                                         <div class=\"form-group\">
                                             <label>Durée</label>
-                                            {{ form_errors(formIrc.duree) }}
-                                            {{ form_widget(formIrc.duree, {'attr': {'class': 'form-control'}}) }}
+                                            {{ form_errors(form.invest.irc.duree) }}
+                                            {{ form_widget(form.invest.irc.duree, {'attr': {'class': 'form-control'}}) }}
                                         </div>
                                     </div>
                                     <div class=\"col-sm-6\">
                                         <div class=\"form-group\">
                                             <label>Taux </label>
-                                            {{ form_errors(formIrc.taux) }}
-                                            {{ form_widget(formIrc.taux, {'attr': {'class': 'form-control'}}) }}
+                                            {{ form_errors(form.invest.irc.taux) }}
+                                            {{ form_widget(form.invest.irc.taux, {'attr': {'class': 'form-control'}}) }}
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        {{ form_rest(formIrc) }}
-                        {# Fermeture de la balise <form> du formulaire HTML #}
-                        {{ form_end(formIrc) }}
+
                     </div>
                     <div class=\"item borderhide\">
                         <h3>Code des investissements</h3>
@@ -1086,42 +914,38 @@ class __TwigTemplate_9ab8e48b4db2a70415a207370f9a43565418e81239701df44e7757cf0d3
                                 <p>Régime d'investissement :</p>
                             </div>
                             <div class=\"panel-body\">
-                                {{ form_start(formSource) }}
-                                {# Les erreurs générales du formulaire. #}
-                                {{ form_errors(formSource) }}
                                 <div class=\"row\">
                                     <div class=\"col-sm-4\">
                                         <div class=\"form-group\">
                                             <label>Nom du code des investissements :</label>
-                                            {{ form_errors(formSource.nomCodeInvest) }}
-                                            {{ form_widget(formSource.nomCodeInvest, {'attr': {'class': 'form-control'}}) }}
+                                            {{ form_errors(form.source.nomCodeInvest) }}
+                                            {{ form_widget(form.source.nomCodeInvest, {'attr': {'class': 'form-control'}}) }}
                                         </div>
                                     </div>
                                     <div class=\"col-sm-4\">
                                         <div class=\"form-group\">
                                             <label>Nom du régime :</label>
-                                            {{ form_errors(formSource.nomRegimeInvest) }}
-                                            {{ form_widget(formSource.nomRegimeInvest, {'attr': {'class': 'form-control'}}) }}
+                                            {{ form_errors(form.source.nomRegimeInvest) }}
+                                            {{ form_widget(form.source.nomRegimeInvest, {'attr': {'class': 'form-control'}}) }}
                                         </div>
                                     </div>
                                     <div class=\"col-sm-4\">
                                         <div class=\"form-group\">
                                             <label>Zone :</label>
-                                            {{ form_errors(formSource.nomZonneRegime) }}
-                                            {{ form_widget(formSource.nomZonneRegime, {'attr': {'class': 'form-control'}}) }}
+                                            {{ form_errors(form.source.nomZonneRegime) }}
+                                            {{ form_widget(form.source.nomZonneRegime, {'attr': {'class': 'form-control'}}) }}
                                         </div>
                                     </div>
                                 </div>
-                                {{ form_rest(formSource) }}
-                                {# Fermeture de la balise <form> du formulaire HTML #}
-                                {{ form_end(formSource) }}
-                                {{ form_widget(form.ajouterLePays, {'attr': {'class': 'btn btn-default'}}) }}
                             </div>
+
+                            {{ form_widget(form.ajouterLePays, {'attr': {'class': 'btn btn-default'}}) }}
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+
         <div class=\" borderhide\">
             <button class=\"left\" href=\"#myCarousel\" data-slide=\"prev\">
                 <span class=\"glyphicon glyphicon-chevron-left\"> </span>
