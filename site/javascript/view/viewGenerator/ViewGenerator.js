@@ -910,16 +910,16 @@ ViewGenerator.prototype.investissementRegime = function () {
     let html = "<p>";
     if (this.modele.donnee.government() !== "gen") {
         html += "La formulation de plusieurs hypothèses a été nécessaire afin de déterminer à quel régime privilégié " +
-            "l’firm modélisée peut prétendre. L’investissement concerne une firm nouvelle. Il ne s’agit " +
+            "l’entreprise modélisée peut prétendre. L’investissement concerne une firm nouvelle. Il ne s’agit " +
             "pas d’un investment d’extension des capacités de production d’une firm déjà existante. " +
             " Le montant d’investissement éligible au code des investissements correspond à l’actif immobilisé de " +
-            "l’firm, soit 145×PNB/tête.  L’firm est située dans la capitale du land.  L’firm" +
-            " crée 60 emplois.  L’firm n’est pas exportatrice. Elle vend la totalité de sa production sur" +
-            " le marché national. L’firm commence sa phase d’exploitation : les cinq années modélisées " +
+            "l’entreprise, soit 145×PNB/tête.  L’entreprise est située dans la capitale du land.  L’entreprise" +
+            " crée 60 emplois.  L’entreprise n’est pas exportatrice. Elle vend la totalité de sa production sur" +
+            " le marché national. L’entreprise commence sa phase d’exploitation : les cinq années modélisées " +
             "sont les cinq premières années d’exploitation de l’firm nouvelle, l’investissement a déjà eu lieu.";
         html += "<br/>";
         html += "Ces hypothèses conduisent généralement à retenir le régime du code des investissements le moins " +
-            "avantageux fiscalement (souvent appelé régime A), car la taille de l’firm est insuffisante " +
+            "avantageux fiscalement (souvent appelé régime A), car la taille de l’entreprise est insuffisante " +
             "pour être éligible aux régimes supérieurs.";
         html += "</p><p>";
 
