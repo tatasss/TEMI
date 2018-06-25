@@ -10,4 +10,7 @@ namespace TEMI\mainBundle\Repository;
  */
 class LandRepository extends \Doctrine\ORM\EntityRepository
 {
+    public function insertedLand(){
+
+    }
 }

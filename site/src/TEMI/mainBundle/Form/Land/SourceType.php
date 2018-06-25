@@ -26,10 +26,14 @@ class SourceType extends AbstractType
     public function configureOptions(OptionsResolver $resolver)
     {
         $resolver->setDefaults(array(
-            'data_class' => 'TEMI\mainBundle\Entity\Land\Source'
+            'data_class' => 'TEMI\mainBundle\Entity\Land\Source',
+            'compound'=>true
         ));
     }
-
+    public function getParent()
+    {
+        return EntityType::class;
+    }
     /**
      * {@inheritdoc}
      */

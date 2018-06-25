@@ -10,4 +10,3 @@ parameters:
     mailer_user: matthias.gaydu@etu.uca.fr
     mailer_password: root
     secret: 05f44fb2eb9fd7981a1c3e8a9d2a3b3e76b52278
-

@@ -23,32 +23,32 @@ class Investissement
     private $id;
 
     /**
-     * @ORM\ManyToOne(targetEntity="TEMI\mainBundle\Entity\Land\ImpotPays")
+     * @ORM\ManyToOne(targetEntity="TEMI\mainBundle\Entity\Land\ImpotPays",cascade={"persist"})
      *@ORM\JoinColumn(name="cfe_id", referencedColumnName="id")
      */
     private $cfe;
     /**
-     * @ORM\ManyToOne(targetEntity="TEMI\mainBundle\Entity\Land\ImpotPays")
+     * @ORM\ManyToOne(targetEntity="TEMI\mainBundle\Entity\Land\ImpotPays",cascade={"persist"})
      *@ORM\JoinColumn(name="is_id", referencedColumnName="id")
      */
     private $isInv;
     /**
-     * @ORM\ManyToOne(targetEntity="TEMI\mainBundle\Entity\Land\ImpotPays")
+     * @ORM\ManyToOne(targetEntity="TEMI\mainBundle\Entity\Land\ImpotPays",cascade={"persist"})
      *@ORM\JoinColumn(name="imf_id", referencedColumnName="id")
      */
     private $imf;
     /**
-     * @ORM\ManyToOne(targetEntity="TEMI\mainBundle\Entity\Land\ImpotPays")
+     * @ORM\ManyToOne(targetEntity="TEMI\mainBundle\Entity\Land\ImpotPays",cascade={"persist"})
      *@ORM\JoinColumn(name="irvm_id", referencedColumnName="id")
      */
     private $irvm;
     /**
-     * @ORM\ManyToOne(targetEntity="TEMI\mainBundle\Entity\Land\ImpotPays")
+     * @ORM\ManyToOne(targetEntity="TEMI\mainBundle\Entity\Land\ImpotPays",cascade={"persist"})
      *@ORM\JoinColumn(name="irc_id", referencedColumnName="id")
      */
     private $irc;
     /**
-     * @ORM\ManyToOne(targetEntity="TEMI\mainBundle\Entity\Land\ImpotPays")
+     * @ORM\ManyToOne(targetEntity="TEMI\mainBundle\Entity\Land\ImpotPays",cascade={"persist"})
      *@ORM\JoinColumn(name="tva_petrole_id", referencedColumnName="id")
      */
     private $tva_petrole;

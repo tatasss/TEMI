@@ -2,6 +2,7 @@
 
 namespace TEMI\mainBundle\Form\Land;
 
+use Symfony\Bridge\Doctrine\Form\Type\EntityType;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\FormBuilderInterface;
@@ -24,10 +25,14 @@ class ImpotPaysType extends AbstractType
     public function configureOptions(OptionsResolver $resolver)
     {
         $resolver->setDefaults(array(
-            'data_class' => 'TEMI\mainBundle\Entity\Land\ImpotPays'
+            'data_class' => 'TEMI\mainBundle\Entity\Land\ImpotPays',
+            'compound'=>true
         ));
     }
-
+    public function getParent()
+    {
+        return EntityType::class;
+    }
     /**
      * {@inheritdoc}
      */

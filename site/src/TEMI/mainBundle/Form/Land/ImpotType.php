@@ -28,7 +28,8 @@ class ImpotType extends AbstractType
     public function configureOptions(OptionsResolver $resolver)
     {
         $resolver->setDefaults(array(
-            'data_class' => 'TEMI\mainBundle\Entity\Land\Impot'
+            'data_class' => 'TEMI\mainBundle\Entity\Land\Impot',
+            'compound'=>true
         ));
     }
     public function getParent()

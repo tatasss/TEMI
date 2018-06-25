@@ -10,7 +10,7 @@ use TEMI\mainBundle\Entity\Land\Investissement;
 /**
  * Land
  *
- * @ORM\Table(name="land")
+ * @ORM\Table(name="Land")
  * @ORM\Entity(repositoryClass="TEMI\mainBundle\Repository\LandRepository")
  */
 class Land
@@ -46,17 +46,17 @@ class Land
     private $pib;
 
     /**
-     * @ORM\ManyToOne(targetEntity="TEMI\mainBundle\Entity\Land\Impot")
+     * @ORM\ManyToOne(targetEntity="TEMI\mainBundle\Entity\Land\Impot", cascade={"persist"})
      *@ORM\JoinColumn(name="impot_id", referencedColumnName="id")
      */
     private $impot;
     /**
-     * @ORM\ManyToOne(targetEntity="TEMI\mainBundle\Entity\Land\Ammortissement")
+     * @ORM\ManyToOne(targetEntity="TEMI\mainBundle\Entity\Land\Ammortissement", cascade={"persist"})
      *@ORM\JoinColumn(name="ammort_id", referencedColumnName="id")
      */
     private $ammort;
     /**
-     * @ORM\ManyToOne(targetEntity="TEMI\mainBundle\Entity\Land\Investissement")
+     * @ORM\ManyToOne(targetEntity="TEMI\mainBundle\Entity\Land\Investissement", cascade={"persist"})
      *@ORM\JoinColumn(name="invest_id", referencedColumnName="id")
      */
     private $invest;
@@ -68,13 +68,13 @@ class Land
     private $descriptionDerog;
 
     /**
-     * @ORM\ManyToOne(targetEntity="TEMI\mainBundle\Entity\Land\Source")
+     * @ORM\ManyToOne(targetEntity="TEMI\mainBundle\Entity\Land\Source",cascade={"persist"})
      *@ORM\JoinColumn(name="source_id", referencedColumnName="id")
      */
     private $source;
 
     /**
-     * @ORM\ManyToOne(targetEntity="TEMI\mainBundle\Entity\User\User")
+     * @ORM\ManyToOne(targetEntity="TEMI\mainBundle\Entity\User\User",cascade={"persist"})
      *@ORM\JoinColumn(name="user_id", referencedColumnName="id")
      */
     private $user;
@@ -217,6 +217,7 @@ class Land
      */
     public function setImpot(Impot $impot = null)
     {
+
         $this->impot = $impot;
 
         return $this;
@@ -241,6 +242,7 @@ class Land
      */
     public function setAmmort(Ammortissement $ammort = null)
     {
+
         $this->ammort = $ammort;
 
         return $this;

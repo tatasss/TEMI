@@ -7,7 +7,7 @@ use Doctrine\ORM\Mapping as ORM;
 /**
  * Impot
  *
- * @ORM\Table(name="impot")
+ * @ORM\Table(name="Impot")
  * @ORM\Entity(repositoryClass="TEMI\mainBundle\Repository\ImpotRepository")
  */
 class Impot
