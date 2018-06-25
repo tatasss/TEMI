@@ -88,7 +88,7 @@ class __TwigTemplate_e6310a153ab50d9cfc0a06b023b40db4b882eb96e2954384d00d755de51
         <input type=\"text\" class=\"form-control\" id=\"marge\" title=\"marge\"
                placeholder=\"Veuillez entrer un taux de marge\"/>
     </div>
-    <button type=\"submit\" class=\"btn btn-default\" onclick=\"validateForm()\">valider</button>
+    <button type=\"submit\" class=\"btn btn-default\" onclick=\"validateForm()\">Valider</button>
     <button type=\"submit\" class=\"btn btn-default hide\" id=\"myBtn\" onclick=\"showModal()\" disabled>Demarrer Comparaison
     </button>
     <div>
@@ -191,7 +191,7 @@ class __TwigTemplate_e6310a153ab50d9cfc0a06b023b40db4b882eb96e2954384d00d755de51
         <input type=\"text\" class=\"form-control\" id=\"marge\" title=\"marge\"
                placeholder=\"Veuillez entrer un taux de marge\"/>
     </div>
-    <button type=\"submit\" class=\"btn btn-default\" onclick=\"validateForm()\">valider</button>
+    <button type=\"submit\" class=\"btn btn-default\" onclick=\"validateForm()\">Valider</button>
     <button type=\"submit\" class=\"btn btn-default hide\" id=\"myBtn\" onclick=\"showModal()\" disabled>Demarrer Comparaison
     </button>
     <div>

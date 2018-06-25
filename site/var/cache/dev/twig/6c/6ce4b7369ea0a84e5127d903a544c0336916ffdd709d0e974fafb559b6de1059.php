@@ -334,7 +334,7 @@ class __TwigTemplate_79f72898d5bce345276a7864435367d31483bc85330f8180d9f0f312116
                             </div>
                             <button type=\"submit\" class=\"btn btn-success btn-block\" id=\"myCont\"
                                     onclick=\"debutCompa(\$('#actualistionCompa').val(), \$('#REGIMECmpta').val());\">
-                                continuer
+                                Continuer
                             </button>
                         </form>
                     </div>
@@ -492,7 +492,7 @@ class __TwigTemplate_79f72898d5bce345276a7864435367d31483bc85330f8180d9f0f312116
                             <h4 class=\"panel-title Borderhide navCote\">
                                 <a data-toggle=\"collapse\" data-parent=\"#accordion7\" href=\"#collapse55\"
                                    class=\"Borderhide navCote\">
-                                    SOURCES DES DONÉES</a>
+                                    SOURCES DES DONNÉES</a>
                             </h4>
                         </div>
                         <div id=\"collapse55\" class=\"panel-collapse collapse Borderhide navCote\">
@@ -758,7 +758,7 @@ class __TwigTemplate_79f72898d5bce345276a7864435367d31483bc85330f8180d9f0f312116
                             </div>
                             <button type=\"submit\" class=\"btn btn-success btn-block\" id=\"myCont\"
                                     onclick=\"debutCompa(\$('#actualistionCompa').val(), \$('#REGIMECmpta').val());\">
-                                continuer
+                                Continuer
                             </button>
                         </form>
                     </div>
@@ -887,7 +887,7 @@ class __TwigTemplate_79f72898d5bce345276a7864435367d31483bc85330f8180d9f0f312116
                             <h4 class=\"panel-title Borderhide navCote\">
                                 <a data-toggle=\"collapse\" data-parent=\"#accordion7\" href=\"#collapse55\"
                                    class=\"Borderhide navCote\">
-                                    SOURCES DES DONÉES</a>
+                                    SOURCES DES DONNÉES</a>
                             </h4>
                         </div>
                         <div id=\"collapse55\" class=\"panel-collapse collapse Borderhide navCote\">

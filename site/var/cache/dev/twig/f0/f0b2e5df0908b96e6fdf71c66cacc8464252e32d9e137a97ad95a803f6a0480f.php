@@ -308,6 +308,7 @@ class __TwigTemplate_68dc9c74467f123fde467b53e9fbd86179d1a4a072458309120d4041791
         // line 119
         echo "            </div>
         </nav>
+
         <div class=\"modal fade\" id=\"myModal\" role=\"dialog\">
             <div class=\"modal-dialog\">
                 <div class=\"modal-content\">
@@ -333,7 +334,7 @@ class __TwigTemplate_68dc9c74467f123fde467b53e9fbd86179d1a4a072458309120d4041791
                             </div>
                             <button type=\"submit\" class=\"btn btn-success btn-block\" id=\"myCont\"
                                     onclick=\"debutCompa(\$('#actualistionCompa').val(), \$('#REGIMECmpta').val());\">
-                                continuer
+                                Continuer
                             </button>
                         </form>
                     </div>
@@ -355,46 +356,46 @@ class __TwigTemplate_68dc9c74467f123fde467b53e9fbd86179d1a4a072458309120d4041791
             <div class=\"col-sm-4\">
                 <img
                         ";
-        // line 167
+        // line 168
         if (($this->getAttribute($this->getAttribute($this->getAttribute((isset($context["app"]) ? $context["app"] : $this->getContext($context, "app")), "request", array()), "attributes", array()), "get", array(0 => "_route"), "method") == "fos_user_registration_register")) {
-            // line 168
+            // line 169
             echo "                    src=\"../../image/Logo_Calculateur_TEMI.png\"
                 ";
         } else {
-            // line 170
+            // line 171
             echo "                    ";
             if (($this->getAttribute($this->getAttribute($this->getAttribute((isset($context["app"]) ? $context["app"] : $this->getContext($context, "app")), "request", array()), "attributes", array()), "get", array(0 => "_route"), "method") == "fos_user_registration_confirmed")) {
-                // line 171
+                // line 172
                 echo "                        src=\"../../image/Logo_Calculateur_TEMI.png\"
                     ";
             } else {
-                // line 173
+                // line 174
                 echo "                        ";
                 if (($this->getAttribute($this->getAttribute($this->getAttribute((isset($context["app"]) ? $context["app"] : $this->getContext($context, "app")), "request", array()), "attributes", array()), "get", array(0 => "_route"), "method") == "fos_user_profile_show")) {
-                    // line 174
+                    // line 175
                     echo "                            src=\"../../image/Logo_Calculateur_TEMI.png\"
                         ";
                 } else {
-                    // line 176
+                    // line 177
                     echo "                            ";
                     if (($this->getAttribute($this->getAttribute($this->getAttribute((isset($context["app"]) ? $context["app"] : $this->getContext($context, "app")), "request", array()), "attributes", array()), "get", array(0 => "_route"), "method") == "fos_user_profile_edit")) {
-                        // line 177
+                        // line 178
                         echo "                            src=\"../../image/Logo_Calculateur_TEMI.png\"
                         ";
                     } else {
-                        // line 179
+                        // line 180
                         echo "                            ";
                         if (($this->getAttribute($this->getAttribute($this->getAttribute((isset($context["app"]) ? $context["app"] : $this->getContext($context, "app")), "request", array()), "attributes", array()), "get", array(0 => "_route"), "method") == "fos_user_change_password")) {
-                            // line 180
+                            // line 181
                             echo "                            src=\"../../image/Logo_Calculateur_TEMI.png\"
                         ";
                         } else {
-                            // line 182
+                            // line 183
                             echo "                            src=\"../image/Logo_Calculateur_TEMI.png\"
                         ";
                         }
                     }
-                    // line 183
+                    // line 184
                     echo " ";
                 }
             }
@@ -491,7 +492,7 @@ class __TwigTemplate_68dc9c74467f123fde467b53e9fbd86179d1a4a072458309120d4041791
                             <h4 class=\"panel-title Borderhide navCote\">
                                 <a data-toggle=\"collapse\" data-parent=\"#accordion7\" href=\"#collapse55\"
                                    class=\"Borderhide navCote\">
-                                    SOURCES DES DONÉES</a>
+                                    SOURCES DES DONNÉES</a>
                             </h4>
                         </div>
                         <div id=\"collapse55\" class=\"panel-collapse collapse Borderhide navCote\">
@@ -505,17 +506,17 @@ class __TwigTemplate_68dc9c74467f123fde467b53e9fbd86179d1a4a072458309120d4041791
             </div>
             <div class=\"col-sm-8\">
                 ";
-        // line 288
+        // line 289
         $this->displayBlock('body', $context, $blocks);
-        // line 290
+        // line 291
         echo "            </div>
         </div>
 
     </div>
     ";
-        // line 294
+        // line 295
         $this->displayBlock('js', $context, $blocks);
-        // line 297
+        // line 298
         echo "
 </div>
 </body>
@@ -547,7 +548,7 @@ class __TwigTemplate_68dc9c74467f123fde467b53e9fbd86179d1a4a072458309120d4041791
 
     }
 
-    // line 288
+    // line 289
     public function block_body($context, array $blocks = array())
     {
         $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
@@ -556,7 +557,7 @@ class __TwigTemplate_68dc9c74467f123fde467b53e9fbd86179d1a4a072458309120d4041791
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
 
-        // line 289
+        // line 290
         echo "                ";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
@@ -566,7 +567,7 @@ class __TwigTemplate_68dc9c74467f123fde467b53e9fbd86179d1a4a072458309120d4041791
 
     }
 
-    // line 294
+    // line 295
     public function block_js($context, array $blocks = array())
     {
         $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
@@ -575,7 +576,7 @@ class __TwigTemplate_68dc9c74467f123fde467b53e9fbd86179d1a4a072458309120d4041791
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "js"));
 
-        // line 295
+        // line 296
         echo "
     ";
         
@@ -598,7 +599,7 @@ class __TwigTemplate_68dc9c74467f123fde467b53e9fbd86179d1a4a072458309120d4041791
 
     public function getDebugInfo()
     {
-        return array (  579 => 295,  570 => 294,  560 => 289,  551 => 288,  541 => 6,  532 => 5,  519 => 297,  517 => 294,  511 => 290,  509 => 288,  398 => 183,  393 => 182,  389 => 180,  386 => 179,  382 => 177,  379 => 176,  375 => 174,  372 => 173,  368 => 171,  365 => 170,  361 => 168,  359 => 167,  309 => 119,  300 => 113,  294 => 112,  287 => 108,  281 => 107,  278 => 106,  268 => 99,  262 => 98,  257 => 96,  252 => 94,  246 => 93,  243 => 92,  241 => 91,  233 => 86,  227 => 85,  219 => 82,  214 => 80,  208 => 79,  199 => 74,  196 => 73,  193 => 72,  190 => 71,  184 => 69,  181 => 68,  177 => 66,  174 => 65,  170 => 63,  167 => 62,  163 => 60,  160 => 59,  156 => 57,  154 => 56,  149 => 54,  142 => 51,  139 => 50,  136 => 49,  133 => 48,  127 => 46,  124 => 45,  120 => 43,  117 => 42,  113 => 40,  110 => 39,  106 => 37,  103 => 36,  99 => 34,  97 => 33,  92 => 31,  69 => 18,  65 => 17,  61 => 16,  57 => 15,  53 => 14,  51 => 13,  41 => 10,  36 => 7,  34 => 5,  28 => 1,);
+        return array (  580 => 296,  571 => 295,  561 => 290,  552 => 289,  542 => 6,  533 => 5,  520 => 298,  518 => 295,  512 => 291,  510 => 289,  399 => 184,  394 => 183,  390 => 181,  387 => 180,  383 => 178,  380 => 177,  376 => 175,  373 => 174,  369 => 172,  366 => 171,  362 => 169,  360 => 168,  309 => 119,  300 => 113,  294 => 112,  287 => 108,  281 => 107,  278 => 106,  268 => 99,  262 => 98,  257 => 96,  252 => 94,  246 => 93,  243 => 92,  241 => 91,  233 => 86,  227 => 85,  219 => 82,  214 => 80,  208 => 79,  199 => 74,  196 => 73,  193 => 72,  190 => 71,  184 => 69,  181 => 68,  177 => 66,  174 => 65,  170 => 63,  167 => 62,  163 => 60,  160 => 59,  156 => 57,  154 => 56,  149 => 54,  142 => 51,  139 => 50,  136 => 49,  133 => 48,  127 => 46,  124 => 45,  120 => 43,  117 => 42,  113 => 40,  110 => 39,  106 => 37,  103 => 36,  99 => 34,  97 => 33,  92 => 31,  69 => 18,  65 => 17,  61 => 16,  57 => 15,  53 => 14,  51 => 13,  41 => 10,  36 => 7,  34 => 5,  28 => 1,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -731,6 +732,7 @@ class __TwigTemplate_68dc9c74467f123fde467b53e9fbd86179d1a4a072458309120d4041791
                 {% endif %}
             </div>
         </nav>
+
         <div class=\"modal fade\" id=\"myModal\" role=\"dialog\">
             <div class=\"modal-dialog\">
                 <div class=\"modal-content\">
@@ -756,7 +758,7 @@ class __TwigTemplate_68dc9c74467f123fde467b53e9fbd86179d1a4a072458309120d4041791
                             </div>
                             <button type=\"submit\" class=\"btn btn-success btn-block\" id=\"myCont\"
                                     onclick=\"debutCompa(\$('#actualistionCompa').val(), \$('#REGIMECmpta').val());\">
-                                continuer
+                                Continuer
                             </button>
                         </form>
                     </div>
@@ -885,7 +887,7 @@ class __TwigTemplate_68dc9c74467f123fde467b53e9fbd86179d1a4a072458309120d4041791
                             <h4 class=\"panel-title Borderhide navCote\">
                                 <a data-toggle=\"collapse\" data-parent=\"#accordion7\" href=\"#collapse55\"
                                    class=\"Borderhide navCote\">
-                                    SOURCES DES DONÉES</a>
+                                    SOURCES DES DONNÉES</a>
                             </h4>
                         </div>
                         <div id=\"collapse55\" class=\"panel-collapse collapse Borderhide navCote\">

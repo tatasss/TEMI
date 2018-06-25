@@ -1,6 +1,6 @@
 /**
  * @description This function is a constructor of ViewGenerator Class
- * @param {Model} modele - the Entity use by this class to generate view
+ * @param {Model} modele - the modele use by this class to generate view
  * @constructor
  */
 let ViewGenerator = function (modele) {
@@ -156,7 +156,7 @@ ViewGenerator.prototype.entrepriseHTML = function () {
     return result;
 };
 /**
- * @description This function create a html to give a bilan Array on the firm used by the Entity
+ * @description This function create a html to give a bilan Array on the firm used by the modele
  * @return {string}
  */
 ViewGenerator.prototype.bilanHtml = function () {
@@ -165,7 +165,7 @@ ViewGenerator.prototype.bilanHtml = function () {
     let passif = this.mE.capitalSocial() + this.mE.detteLongTerme() +
         this.mE.detteCourtTerme() + this.mE.detteFournisseur();
     let col1 = ["<span style='font-size: smaller; '><strong>Actif immobilisé</strong></span>",
-        "Terrain", "Constructions", "Equipement", "Camion", "Matériel informatique", "Matériel de Bureau",
+        "Terrain", "Constructions", "Equipement", "Camion", "Matériel informatique", "Matériel de bureau",
         "<span style='font-size: smaller; '><strong>Actif circulant</strong></span>", "Stocks", "Créances Clients",
         "Disponibilités bancaires", "<strong>Actif</strong>"];
     let lin1 = {
@@ -294,7 +294,7 @@ ViewGenerator.prototype.donneesEconomique = function () {
     result += this.entrepriseHTML();
     result += this.bilanHtml();
     result += this.compteHtml(this.modele.donnee);
-    return bootstrap.pan("default", "<h1>Données economiques</h1>", result);
+    return bootstrap.pan("default", "<h1>Données Economiques</h1>", result);
 };
 /**
  * @description This function create a html to give the Impot of the land
@@ -415,14 +415,14 @@ ViewGenerator.prototype.navigationHtml = function () {
     else {
         regime = "Code des investissements";
     }
-    let pannel = bootstrap.pan("default", "Paramétres", this.modele.donnee.land().name() + "<br/>" + regime + "</br>" + this.modele.donnee.topic() + "</br>" + this.modele.donnee.margin());
+    let pannel = bootstrap.pan("default", "Paramètres", this.modele.donnee.land().name() + "<br/>" + regime + "</br>" + this.modele.donnee.topic() + "</br>" + this.modele.donnee.margin());
     let result = "<div class='vertical-menu'>" + pannel;
     result += bootstrap.buttonBalA("./modele", "Voir le résultat");
     result += bootstrap.buttonBalA("./", "Retour") + "</div>";
     return result;
 };
 /**
- * @description This function is the main to create a Data Entity View on html
+ * @description This function is the main to create a Data modele View on html
  * @return {string}
  */
 ViewGenerator.prototype.mainHTML = function () {
@@ -431,7 +431,7 @@ ViewGenerator.prototype.mainHTML = function () {
     return bootstrap.GridNavCote(this.bodyHtml(), this.navigationHtml());
 };
 /**
- * @description This function create a HTML to the petrole Tva Taxe on Entity
+ * @description This function create a HTML to the petrole Tva Taxe on modele
  * @return {string}
  */
 ViewGenerator.prototype.petroleHtml = function () {
@@ -721,7 +721,7 @@ ViewGenerator.prototype.impotSocieteHtml = function () {
     return bootstrap.pan("default", null, tab);
 };
 /**
- * @description This function create a HTML to give a IMF Impot on Entity
+ * @description This function create a HTML to give a IMF Impot on modele
  * @return {string}
  */
 ViewGenerator.prototype.impotForfaitHtml = function () {
@@ -767,7 +767,7 @@ ViewGenerator.prototype.isImfHtml = function () {
     return bootstrap.pan("default", null, tab);
 };
 /**
- * @description This function create the HTML to give the IRVM Impot on Entity
+ * @description This function create the HTML to give the IRVM Impot on modele
  * @return {string}
  */
 ViewGenerator.prototype.impotRevenuValeurMobilieres = function () {
@@ -809,7 +809,7 @@ ViewGenerator.prototype.actualisationHtml = function () {
 };
 /**
  * @description This function create a HTML to give All Impot and Taxe used by a Model
- * @param  {Object} monm - The impot use by the Entity use to generate a Html
+ * @param  {Object} monm - The impot use by the modele use to generate a Html
  * @return {string}
  */
 ViewGenerator.prototype.tabImpotEtTaxe = function (monm) {
@@ -910,16 +910,16 @@ ViewGenerator.prototype.investissementRegime = function () {
     let html = "<p>";
     if (this.modele.donnee.government() !== "gen") {
         html += "La formulation de plusieurs hypothèses a été nécessaire afin de déterminer à quel régime privilégié " +
-            "l’firm modélisée peut prétendre. L’investissement concerne une firm nouvelle. Il ne s’agit " +
+            "l’entreprise modélisée peut prétendre. L’investissement concerne une firm nouvelle. Il ne s’agit " +
             "pas d’un investment d’extension des capacités de production d’une firm déjà existante. " +
             " Le montant d’investissement éligible au code des investissements correspond à l’actif immobilisé de " +
-            "l’firm, soit 145×PNB/tête.  L’firm est située dans la capitale du land.  L’firm" +
-            " crée 60 emplois.  L’firm n’est pas exportatrice. Elle vend la totalité de sa production sur" +
-            " le marché national. L’firm commence sa phase d’exploitation : les cinq années modélisées " +
+            "l’entreprise, soit 145×PNB/tête.  L’entreprise est située dans la capitale du land.  L’entreprise" +
+            " crée 60 emplois.  L’entreprise n’est pas exportatrice. Elle vend la totalité de sa production sur" +
+            " le marché national. L’entreprise commence sa phase d’exploitation : les cinq années modélisées " +
             "sont les cinq premières années d’exploitation de l’firm nouvelle, l’investissement a déjà eu lieu.";
         html += "<br/>";
         html += "Ces hypothèses conduisent généralement à retenir le régime du code des investissements le moins " +
-            "avantageux fiscalement (souvent appelé régime A), car la taille de l’firm est insuffisante " +
+            "avantageux fiscalement (souvent appelé régime A), car la taille de l’entreprise est insuffisante " +
             "pour être éligible aux régimes supérieurs.";
         html += "</p><p>";
 

@@ -67,7 +67,7 @@ class __TwigTemplate_0437fad585dcfbc92d608e679d35faf7b907bba5e23884b9da3610daa37
 
         // line 4
         echo "    <h1>Ajouter un pays</h1>
-    <p>Pour creer un nouveau pays, veuillez remplir le formulaire ci-dessous</p>
+    <p>Pour créer un nouveau pays, veuillez remplir le formulaire ci-dessous</p>
     <div id=\"formError\"></div>
     <div id=\"myCarousel\" class=\"carousel slide w3-container borderhide\" data-interval=\"false\">
         <ol class=\"carousel-indicators lol\">
@@ -94,7 +94,7 @@ class __TwigTemplate_0437fad585dcfbc92d608e679d35faf7b907bba5e23884b9da3610daa37
                         <div id=\"errorNom\"></div>
                         <div class=\"form-group\">
                             <label>Code ISO3 :</label>
-                            <p>Le code ISO est une codification internationale créé par l'International Standardization
+                            <p>Le code ISO est une codification internationale créée par l'International Standardization
                                 Organization (ISO)
                                 qui attribue un code unique de trois lettres à toute devise de la planète pour éviter
                                 toute
@@ -460,7 +460,7 @@ class __TwigTemplate_0437fad585dcfbc92d608e679d35faf7b907bba5e23884b9da3610daa37
 {% block title %} Ajout Pays{% endblock %}
 {% block body %}
     <h1>Ajouter un pays</h1>
-    <p>Pour creer un nouveau pays, veuillez remplir le formulaire ci-dessous</p>
+    <p>Pour créer un nouveau pays, veuillez remplir le formulaire ci-dessous</p>
     <div id=\"formError\"></div>
     <div id=\"myCarousel\" class=\"carousel slide w3-container borderhide\" data-interval=\"false\">
         <ol class=\"carousel-indicators lol\">
@@ -487,7 +487,7 @@ class __TwigTemplate_0437fad585dcfbc92d608e679d35faf7b907bba5e23884b9da3610daa37
                         <div id=\"errorNom\"></div>
                         <div class=\"form-group\">
                             <label>Code ISO3 :</label>
-                            <p>Le code ISO est une codification internationale créé par l'International Standardization
+                            <p>Le code ISO est une codification internationale créée par l'International Standardization
                                 Organization (ISO)
                                 qui attribue un code unique de trois lettres à toute devise de la planète pour éviter
                                 toute

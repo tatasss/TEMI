@@ -10,10 +10,10 @@ let reg;
 reg = " ";
 
 if (localStorage.getItem("compatRegime") === "gen") {
-    reg = "Codes générales des impôts";
+    reg = "code générale des impôts";
 }
 else {
-    reg = "Codes des investissements";
+    reg = "code des investissements";
 }
 document.getElementById("info").innerHTML = `<p>Le taux d'actualisation pour toutes les entreprises est `
     + `de ${localStorage.getItem("compaActu")} %.<br/> Le régime utilisé par les entreprises dans tous les pays est le ${reg} .`;
@@ -101,9 +101,9 @@ $("body").delegate("button", "click", function () {
             verif.verifPourcent($('#marge').val());
             posIn = 2;
             bool = false;
-            let madon = `<div class="trans"><strong>entreprise ${cptEnt + 1} :</strong><br/>taux de marge:<br/>${$('#marge').val()} % `;
+            let madon = `<strong>entreprise ${cptEnt + 1} :</strong><br/>taux de marge:<br/>${$('#marge').val()} % `;
             madon += bootstrap.buttonBaBu("danger", `supelemEnt('${$('#margin').val()}')`, "<spam class='glyphicon " +
-                "glyphicon-remove'/>", $('#margin').val())+"</div>";
+                "glyphicon-remove'/>", $('#margin').val());
             margeTab.forEach(function (item) {
                 if (item === $('#marge').val()) {
                     bool = true

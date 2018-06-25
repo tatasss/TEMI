@@ -1,6 +1,6 @@
 <?php
 
-/* @TEMImain/Temi/model.html.twig */
+/* TEMImainBundle:Temi:model.html.twig */
 class __TwigTemplate_c473a007e903750fa4632376389b78c8053634adf8a31a66e326724d283932fe extends Twig_Template
 {
     public function __construct(Twig_Environment $env)
@@ -8,7 +8,7 @@ class __TwigTemplate_c473a007e903750fa4632376389b78c8053634adf8a31a66e326724d283
         parent::__construct($env);
 
         // line 1
-        $this->parent = $this->loadTemplate("TEMImainBundle:Temi:layout.html.twig", "@TEMImain/Temi/model.html.twig", 1);
+        $this->parent = $this->loadTemplate("TEMImainBundle:Temi:layout.html.twig", "TEMImainBundle:Temi:model.html.twig", 1);
         $this->blocks = array(
             'title' => array($this, 'block_title'),
             'body' => array($this, 'block_body'),
@@ -24,10 +24,10 @@ class __TwigTemplate_c473a007e903750fa4632376389b78c8053634adf8a31a66e326724d283
     protected function doDisplay(array $context, array $blocks = array())
     {
         $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
-        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->enter($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "@TEMImain/Temi/model.html.twig"));
+        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->enter($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "TEMImainBundle:Temi:model.html.twig"));
 
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "@TEMImain/Temi/model.html.twig"));
+        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "TEMImainBundle:Temi:model.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
@@ -68,19 +68,24 @@ class __TwigTemplate_c473a007e903750fa4632376389b78c8053634adf8a31a66e326724d283
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
 
         // line 6
-        echo "    <h2>Modèle</h2>
+        echo "    <h2>MODÈLE</h2>
     <div>pays selectionné :
         <strong id=\"param\">Pays non definit , bonne chance</strong>
     </div>
     <p> Le régime fiscal simulé peut être celui du Code général des impôts ou celui du Code des investissements.
-        Le TEMI est évalué à partir d’un modèle de flux de trésorerie suivant la méthodologie développée par Djankov et
+        Le TEMI est évalué à partir d’un modèle de flux de trésorerie suivant la méthodologie développée par
+        Djankov et
         al.
-        (2010). Les différents régimes fiscaux sont appliqués aux données comptables d’une entreprise représentative.
+        (2010). Les différents régimes fiscaux sont appliqués aux données comptables d’une entreprise
+        représentative.
         Cette entreprise est supposée être localisée dans la plus grande ville du pays, employer 60 salariés
-        et vendre la totalité de sa production sur le marché local. La charge fiscale supportée par la société est
-        calculée sur cinq ans et intègre quatre impôts (CFE, IS, IMF et IRCM). L’entreprise est modélisée d’après
+        et vendre la totalité de sa production sur le marché local. La charge fiscale supportée par la société
+        est
+        calculée sur cinq ans et intègre quatre impôts (CFE, IS, IMF et IRCM). L’entreprise est modélisée
+        d’après
         les coefficients de Djankov (2010). Ces coefficients sont multipliés par le PNB/tête des pays, dont les
-        chiffres datent de 2014 et sont issus des World Development Indicators (Banque Mondiale). Le modèle ainsi
+        chiffres datent de 2014 et sont issus des World Development Indicators (Banque Mondiale). Le modèle
+        ainsi
         construit permet de connaître le TEMI selon la législation de chaque pays. </p>
     <div class=\"panel-group\" id=\"accordion\">
         <div class=\"panel panel-default\">
@@ -109,7 +114,8 @@ class __TwigTemplate_c473a007e903750fa4632376389b78c8053634adf8a31a66e326724d283
                         <div class=\"panel panel-default\">
                             <div class=\"panel-heading\">
                                 <h4 class=\"panel-title\">
-                                    <a data-toggle=\"collapse\" data-parent=\"#accordion2\" href=\"#collapse16\">Flux de
+                                    <a data-toggle=\"collapse\" data-parent=\"#accordion2\" href=\"#collapse16\">Flux
+                                        de
                                         trésorie sans
                                         impôts</a>
 
@@ -124,7 +130,8 @@ class __TwigTemplate_c473a007e903750fa4632376389b78c8053634adf8a31a66e326724d283
                         <div class=\"panel panel-default\">
                             <div class=\"panel-heading\">
                                 <h4 class=\"panel-title\">
-                                    <a data-toggle=\"collapse\" data-parent=\"#accordion2\" href=\"#collapse17\">Flux de
+                                    <a data-toggle=\"collapse\" data-parent=\"#accordion2\" href=\"#collapse17\">Flux
+                                        de
                                         trésorie sans
                                         IS/IMF</a>
                                 </h4>
@@ -136,7 +143,8 @@ class __TwigTemplate_c473a007e903750fa4632376389b78c8053634adf8a31a66e326724d283
                         <div class=\"panel panel-default\">
                             <div class=\"panel-heading\">
                                 <h4 class=\"panel-title\">
-                                    <a data-toggle=\"collapse\" data-parent=\"#accordion2\" href=\"#collapse18\">Flux de
+                                    <a data-toggle=\"collapse\" data-parent=\"#accordion2\" href=\"#collapse18\">Flux
+                                        de
                                         trésorie après
                                         impôts</a>
                                 </h4>
@@ -148,7 +156,8 @@ class __TwigTemplate_c473a007e903750fa4632376389b78c8053634adf8a31a66e326724d283
                         <div class=\"panel panel-default\">
                             <div class=\"panel-heading\">
                                 <h4 class=\"panel-title\">
-                                    <a data-toggle=\"collapse\" data-parent=\"#accordion2\" href=\"#collapse19\">Taux de
+                                    <a data-toggle=\"collapse\" data-parent=\"#accordion2\" href=\"#collapse19\">Taux
+                                        de
                                         rendement interne sans
                                         Impôts</a>
                                 </h4>
@@ -160,7 +169,8 @@ class __TwigTemplate_c473a007e903750fa4632376389b78c8053634adf8a31a66e326724d283
                         <div class=\"panel panel-default\">
                             <div class=\"panel-heading\">
                                 <h4 class=\"panel-title\">
-                                    <a data-toggle=\"collapse\" data-parent=\"#accordion2\" href=\"#collapse20\">Taux de
+                                    <a data-toggle=\"collapse\" data-parent=\"#accordion2\" href=\"#collapse20\">Taux
+                                        de
                                         rendement interne sans
                                         IS/IMF</a>
                                 </h4>
@@ -172,7 +182,8 @@ class __TwigTemplate_c473a007e903750fa4632376389b78c8053634adf8a31a66e326724d283
                         <div class=\"panel panel-default\">
                             <div class=\"panel-heading\">
                                 <h4 class=\"panel-title\">
-                                    <a data-toggle=\"collapse\" data-parent=\"#accordion2\" href=\"#collapse21\">Taux de
+                                    <a data-toggle=\"collapse\" data-parent=\"#accordion2\" href=\"#collapse21\">Taux
+                                        de
                                         rendement interne
                                         après Impôts</a>
                                 </h4>
@@ -257,7 +268,8 @@ class __TwigTemplate_c473a007e903750fa4632376389b78c8053634adf8a31a66e326724d283
                         <div class=\"panel panel-default\">
                             <div class=\"panel-heading\">
                                 <h4 class=\"panel-title\">
-                                    <a data-toggle=\"collapse\" data-parent=\"#accordion3\" href=\"#collapse4\">Taxe sur
+                                    <a data-toggle=\"collapse\" data-parent=\"#accordion3\" href=\"#collapse4\">Taxe
+                                        sur
                                         la
                                         valeur
                                         ajoutée
@@ -283,7 +295,8 @@ class __TwigTemplate_c473a007e903750fa4632376389b78c8053634adf8a31a66e326724d283
                         <div class=\"panel panel-default\">
                             <div class=\"panel-heading\">
                                 <h4 class=\"panel-title\">
-                                    <a data-toggle=\"collapse\" data-parent=\"#accordion3\" href=\"#collapse6\">Impôt sur
+                                    <a data-toggle=\"collapse\" data-parent=\"#accordion3\" href=\"#collapse6\">Impôt
+                                        sur
                                         le
                                         revenu
                                         des
@@ -319,7 +332,8 @@ class __TwigTemplate_c473a007e903750fa4632376389b78c8053634adf8a31a66e326724d283
                         <div class=\"panel panel-default\">
                             <div class=\"panel-heading\">
                                 <h4 class=\"panel-title\">
-                                    <a data-toggle=\"collapse\" data-parent=\"#accordion3\" href=\"#collapse9\">Impôt sur
+                                    <a data-toggle=\"collapse\" data-parent=\"#accordion3\" href=\"#collapse9\">Impôt
+                                        sur
                                         les
                                         sociétés</a>
                                 </h4>
@@ -331,7 +345,8 @@ class __TwigTemplate_c473a007e903750fa4632376389b78c8053634adf8a31a66e326724d283
                         <div class=\"panel panel-default\">
                             <div class=\"panel-heading\">
                                 <h4 class=\"panel-title\">
-                                    <a data-toggle=\"collapse\" data-parent=\"#accordion3\" href=\"#collapse10\">Impôt sur
+                                    <a data-toggle=\"collapse\" data-parent=\"#accordion3\" href=\"#collapse10\">Impôt
+                                        sur
                                         les
                                         minimum
                                         forfaitaires</a>
@@ -355,7 +370,8 @@ class __TwigTemplate_c473a007e903750fa4632376389b78c8053634adf8a31a66e326724d283
                         <div class=\"panel panel-default\">
                             <div class=\"panel-heading\">
                                 <h4 class=\"panel-title\">
-                                    <a data-toggle=\"collapse\" data-parent=\"#accordion3\" href=\"#collapse12\">Impôt sur
+                                    <a data-toggle=\"collapse\" data-parent=\"#accordion3\" href=\"#collapse12\">Impôt
+                                        sur
                                         le
                                         revenu des
                                         valeurs mobiliéres</a>
@@ -379,7 +395,8 @@ class __TwigTemplate_c473a007e903750fa4632376389b78c8053634adf8a31a66e326724d283
                         <div class=\"panel panel-default\">
                             <div class=\"panel-heading\">
                                 <h4 class=\"panel-title\">
-                                    <a data-toggle=\"collapse\" data-parent=\"#accordion3\" href=\"#collapse14\">Impôts et
+                                    <a data-toggle=\"collapse\" data-parent=\"#accordion3\" href=\"#collapse14\">Impôts
+                                        et
                                         taxes</a>
                                 </h4>
                             </div>
@@ -413,6 +430,47 @@ class __TwigTemplate_c473a007e903750fa4632376389b78c8053634adf8a31a66e326724d283
             </div>
         </div>
     </div>
+    </div>
+    </div>
+    </div>
+    <div class=\"modal fade\" id=\"myModal\" role=\"dialog\">
+        <div class=\"modal-dialog\">
+            <div class=\"modal-content\">
+                <div class=\"modal-header\" style=\"padding:35px 50px;\">
+                    <button type=\"button\" class=\"close\" data-dismiss=\"modal\"></button>
+                    <h4>Comparaison</h4>
+                    <p>Vous avez lancé une comparaison entre des entreprises ayant des marges différentes
+                    </p>
+                </div>
+                <div class=\"modal-body\" style=\"padding:40px 50px;\">
+                    <form role=\"form\">
+                        <div class=\"form-group\">
+                            <label>Taux d'actualisation :</label>
+                            <input type=\"text\" class=\"form-control\" id=\"actualistionCompa\" title=\"actualisation\"
+                                   value=\"\" placeholder=\"Veuillez entrer un taux d'actualisation\">
+                        </div>
+                        <div class=\"form-group\">
+                            <label>Régime fiscale:</label>
+                            <select class=\"form-control\" id=\"REGIMECmpta\" title=\"regime fiscale\">
+                                <option value=\"gen\">Code général des impôts</option>
+                                <option value=\"nongen\">Code des investissements</option>
+                            </select>
+                        </div>
+                        <button type=\"submit\" class=\"btn btn-success btn-block\" id=\"myCont\"
+                                onclick=\"debutCompa(\$('#actualistionCompa').val(), \$('#REGIMECmpta').val());\">Continuer
+                        </button>
+                    </form>
+                </div>
+                <div class=\"modal-footer\">
+                    <button type=\"submit\" class=\"btn btn-danger pull-left\" onclick=\"retourModal()\"
+                            data-dismiss=\"modal\">
+                        <span class=\"glyphicon glyphicon-remove\">
+                        </span> Annuler
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
 ";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
@@ -422,7 +480,7 @@ class __TwigTemplate_c473a007e903750fa4632376389b78c8053634adf8a31a66e326724d283
 
     }
 
-    // line 352
+    // line 410
     public function block_js($context, array $blocks = array())
     {
         $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
@@ -431,7 +489,7 @@ class __TwigTemplate_c473a007e903750fa4632376389b78c8053634adf8a31a66e326724d283
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "js"));
 
-        // line 353
+        // line 411
         echo "
     <script src=\"../javascript/model/anotherFunctiun/verification.js\"></script>
     <script src=\"../javascript/model/anotherFunctiun/XMLRequest.js\"></script>
@@ -458,7 +516,7 @@ class __TwigTemplate_c473a007e903750fa4632376389b78c8053634adf8a31a66e326724d283
 
     public function getTemplateName()
     {
-        return "@TEMImain/Temi/model.html.twig";
+        return "TEMImainBundle:Temi:model.html.twig";
     }
 
     public function isTraitable()
@@ -468,7 +526,7 @@ class __TwigTemplate_c473a007e903750fa4632376389b78c8053634adf8a31a66e326724d283
 
     public function getDebugInfo()
     {
-        return array (  435 => 353,  426 => 352,  71 => 6,  62 => 5,  51 => 3,  42 => 2,  11 => 1,);
+        return array (  493 => 411,  484 => 410,  71 => 6,  62 => 5,  51 => 3,  42 => 2,  11 => 1,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -486,19 +544,24 @@ class __TwigTemplate_c473a007e903750fa4632376389b78c8053634adf8a31a66e326724d283
 Modèle
 {% endblock %}
 {% block body %}
-    <h2>Modèle</h2>
+    <h2>MODÈLE</h2>
     <div>pays selectionné :
         <strong id=\"param\">Pays non definit , bonne chance</strong>
     </div>
     <p> Le régime fiscal simulé peut être celui du Code général des impôts ou celui du Code des investissements.
-        Le TEMI est évalué à partir d’un modèle de flux de trésorerie suivant la méthodologie développée par Djankov et
+        Le TEMI est évalué à partir d’un modèle de flux de trésorerie suivant la méthodologie développée par
+        Djankov et
         al.
-        (2010). Les différents régimes fiscaux sont appliqués aux données comptables d’une entreprise représentative.
+        (2010). Les différents régimes fiscaux sont appliqués aux données comptables d’une entreprise
+        représentative.
         Cette entreprise est supposée être localisée dans la plus grande ville du pays, employer 60 salariés
-        et vendre la totalité de sa production sur le marché local. La charge fiscale supportée par la société est
-        calculée sur cinq ans et intègre quatre impôts (CFE, IS, IMF et IRCM). L’entreprise est modélisée d’après
+        et vendre la totalité de sa production sur le marché local. La charge fiscale supportée par la société
+        est
+        calculée sur cinq ans et intègre quatre impôts (CFE, IS, IMF et IRCM). L’entreprise est modélisée
+        d’après
         les coefficients de Djankov (2010). Ces coefficients sont multipliés par le PNB/tête des pays, dont les
-        chiffres datent de 2014 et sont issus des World Development Indicators (Banque Mondiale). Le modèle ainsi
+        chiffres datent de 2014 et sont issus des World Development Indicators (Banque Mondiale). Le modèle
+        ainsi
         construit permet de connaître le TEMI selon la législation de chaque pays. </p>
     <div class=\"panel-group\" id=\"accordion\">
         <div class=\"panel panel-default\">
@@ -527,7 +590,8 @@ Modèle
                         <div class=\"panel panel-default\">
                             <div class=\"panel-heading\">
                                 <h4 class=\"panel-title\">
-                                    <a data-toggle=\"collapse\" data-parent=\"#accordion2\" href=\"#collapse16\">Flux de
+                                    <a data-toggle=\"collapse\" data-parent=\"#accordion2\" href=\"#collapse16\">Flux
+                                        de
                                         trésorie sans
                                         impôts</a>
 
@@ -542,7 +606,8 @@ Modèle
                         <div class=\"panel panel-default\">
                             <div class=\"panel-heading\">
                                 <h4 class=\"panel-title\">
-                                    <a data-toggle=\"collapse\" data-parent=\"#accordion2\" href=\"#collapse17\">Flux de
+                                    <a data-toggle=\"collapse\" data-parent=\"#accordion2\" href=\"#collapse17\">Flux
+                                        de
                                         trésorie sans
                                         IS/IMF</a>
                                 </h4>
@@ -554,7 +619,8 @@ Modèle
                         <div class=\"panel panel-default\">
                             <div class=\"panel-heading\">
                                 <h4 class=\"panel-title\">
-                                    <a data-toggle=\"collapse\" data-parent=\"#accordion2\" href=\"#collapse18\">Flux de
+                                    <a data-toggle=\"collapse\" data-parent=\"#accordion2\" href=\"#collapse18\">Flux
+                                        de
                                         trésorie après
                                         impôts</a>
                                 </h4>
@@ -566,7 +632,8 @@ Modèle
                         <div class=\"panel panel-default\">
                             <div class=\"panel-heading\">
                                 <h4 class=\"panel-title\">
-                                    <a data-toggle=\"collapse\" data-parent=\"#accordion2\" href=\"#collapse19\">Taux de
+                                    <a data-toggle=\"collapse\" data-parent=\"#accordion2\" href=\"#collapse19\">Taux
+                                        de
                                         rendement interne sans
                                         Impôts</a>
                                 </h4>
@@ -578,7 +645,8 @@ Modèle
                         <div class=\"panel panel-default\">
                             <div class=\"panel-heading\">
                                 <h4 class=\"panel-title\">
-                                    <a data-toggle=\"collapse\" data-parent=\"#accordion2\" href=\"#collapse20\">Taux de
+                                    <a data-toggle=\"collapse\" data-parent=\"#accordion2\" href=\"#collapse20\">Taux
+                                        de
                                         rendement interne sans
                                         IS/IMF</a>
                                 </h4>
@@ -590,7 +658,8 @@ Modèle
                         <div class=\"panel panel-default\">
                             <div class=\"panel-heading\">
                                 <h4 class=\"panel-title\">
-                                    <a data-toggle=\"collapse\" data-parent=\"#accordion2\" href=\"#collapse21\">Taux de
+                                    <a data-toggle=\"collapse\" data-parent=\"#accordion2\" href=\"#collapse21\">Taux
+                                        de
                                         rendement interne
                                         après Impôts</a>
                                 </h4>
@@ -675,7 +744,8 @@ Modèle
                         <div class=\"panel panel-default\">
                             <div class=\"panel-heading\">
                                 <h4 class=\"panel-title\">
-                                    <a data-toggle=\"collapse\" data-parent=\"#accordion3\" href=\"#collapse4\">Taxe sur
+                                    <a data-toggle=\"collapse\" data-parent=\"#accordion3\" href=\"#collapse4\">Taxe
+                                        sur
                                         la
                                         valeur
                                         ajoutée
@@ -701,7 +771,8 @@ Modèle
                         <div class=\"panel panel-default\">
                             <div class=\"panel-heading\">
                                 <h4 class=\"panel-title\">
-                                    <a data-toggle=\"collapse\" data-parent=\"#accordion3\" href=\"#collapse6\">Impôt sur
+                                    <a data-toggle=\"collapse\" data-parent=\"#accordion3\" href=\"#collapse6\">Impôt
+                                        sur
                                         le
                                         revenu
                                         des
@@ -737,7 +808,8 @@ Modèle
                         <div class=\"panel panel-default\">
                             <div class=\"panel-heading\">
                                 <h4 class=\"panel-title\">
-                                    <a data-toggle=\"collapse\" data-parent=\"#accordion3\" href=\"#collapse9\">Impôt sur
+                                    <a data-toggle=\"collapse\" data-parent=\"#accordion3\" href=\"#collapse9\">Impôt
+                                        sur
                                         les
                                         sociétés</a>
                                 </h4>
@@ -749,7 +821,8 @@ Modèle
                         <div class=\"panel panel-default\">
                             <div class=\"panel-heading\">
                                 <h4 class=\"panel-title\">
-                                    <a data-toggle=\"collapse\" data-parent=\"#accordion3\" href=\"#collapse10\">Impôt sur
+                                    <a data-toggle=\"collapse\" data-parent=\"#accordion3\" href=\"#collapse10\">Impôt
+                                        sur
                                         les
                                         minimum
                                         forfaitaires</a>
@@ -773,7 +846,8 @@ Modèle
                         <div class=\"panel panel-default\">
                             <div class=\"panel-heading\">
                                 <h4 class=\"panel-title\">
-                                    <a data-toggle=\"collapse\" data-parent=\"#accordion3\" href=\"#collapse12\">Impôt sur
+                                    <a data-toggle=\"collapse\" data-parent=\"#accordion3\" href=\"#collapse12\">Impôt
+                                        sur
                                         le
                                         revenu des
                                         valeurs mobiliéres</a>
@@ -797,7 +871,8 @@ Modèle
                         <div class=\"panel panel-default\">
                             <div class=\"panel-heading\">
                                 <h4 class=\"panel-title\">
-                                    <a data-toggle=\"collapse\" data-parent=\"#accordion3\" href=\"#collapse14\">Impôts et
+                                    <a data-toggle=\"collapse\" data-parent=\"#accordion3\" href=\"#collapse14\">Impôts
+                                        et
                                         taxes</a>
                                 </h4>
                             </div>
@@ -831,6 +906,47 @@ Modèle
             </div>
         </div>
     </div>
+    </div>
+    </div>
+    </div>
+    <div class=\"modal fade\" id=\"myModal\" role=\"dialog\">
+        <div class=\"modal-dialog\">
+            <div class=\"modal-content\">
+                <div class=\"modal-header\" style=\"padding:35px 50px;\">
+                    <button type=\"button\" class=\"close\" data-dismiss=\"modal\"></button>
+                    <h4>Comparaison</h4>
+                    <p>Vous avez lancé une comparaison entre des entreprises ayant des marges différentes
+                    </p>
+                </div>
+                <div class=\"modal-body\" style=\"padding:40px 50px;\">
+                    <form role=\"form\">
+                        <div class=\"form-group\">
+                            <label>Taux d'actualisation :</label>
+                            <input type=\"text\" class=\"form-control\" id=\"actualistionCompa\" title=\"actualisation\"
+                                   value=\"\" placeholder=\"Veuillez entrer un taux d'actualisation\">
+                        </div>
+                        <div class=\"form-group\">
+                            <label>Régime fiscale:</label>
+                            <select class=\"form-control\" id=\"REGIMECmpta\" title=\"regime fiscale\">
+                                <option value=\"gen\">Code général des impôts</option>
+                                <option value=\"nongen\">Code des investissements</option>
+                            </select>
+                        </div>
+                        <button type=\"submit\" class=\"btn btn-success btn-block\" id=\"myCont\"
+                                onclick=\"debutCompa(\$('#actualistionCompa').val(), \$('#REGIMECmpta').val());\">Continuer
+                        </button>
+                    </form>
+                </div>
+                <div class=\"modal-footer\">
+                    <button type=\"submit\" class=\"btn btn-danger pull-left\" onclick=\"retourModal()\"
+                            data-dismiss=\"modal\">
+                        <span class=\"glyphicon glyphicon-remove\">
+                        </span> Annuler
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
 {% endblock %}
 {% block js %}
 
@@ -848,6 +964,6 @@ Modèle
     <script src=\"../javascript/data/data.js\"></script>
     <script src=\"../javascript/start/script.js\"></script>
     <script src=\"../javascript/view/directlyChange/ModeleView.js\"></script>
-{% endblock %}", "@TEMImain/Temi/model.html.twig", "C:\\Users\\matthias\\Desktop\\stage\\TEMI\\site\\src\\TEMI\\mainBundle\\Resources\\views\\Temi\\model.html.twig");
+{% endblock %}", "TEMImainBundle:Temi:model.html.twig", "C:\\Users\\matthias\\Desktop\\stage\\TEMI\\site\\src\\TEMI\\mainBundle\\Resources\\views\\Temi\\model.html.twig");
     }
 }
