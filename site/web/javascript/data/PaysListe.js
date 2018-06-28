@@ -55,7 +55,7 @@ let Land = function () {
         tabis.push(item);
     });
     //console.log(tabis);
-    for (let i=0; i < tabis.length; i++) {
+    for (let i = 0; i < tabis.length; i++) {
         //console.log(i);
         name = tabis[i][0];
         code = tabis[i][1];
@@ -113,7 +113,6 @@ let Land = function () {
         let imp;
         let amm;
         let inv;
-        //console.log("ici");
         if (name !== "Guinée Bissao") {
             if (name !== "Guinée équatoriale") {
                 imp = maker.impot(impot[0], impot[1], impot[2], impot[3], impot[4], impot[5]);
@@ -131,8 +130,6 @@ let Land = function () {
             amm = ammort;
             inv = invest;
         }
-        //console.log("ici");
-        //console.log(maker.land(code, name, imp, amm, inv, overide, source));
         this.pays.push(maker.land(code, name, imp, amm, inv, overide, source));
 
     }
@@ -144,14 +141,106 @@ let Land = function () {
         });
         return str;
     }
-    //console.log(this.pays.toString());
 };
-Land.prototype.ajouterPays = function (land) {
-    this.pays.push(land);
-    sessionStorage.setItem("land",this.pays.toString());
-    // noinspection JSAnnotator
+Land.prototype.ajouterPays = function (lande) {
+    let monBool = true;
+    let monNom = '';
+    let source = '';
+
+    for (let i = 0; i < this.pays.length; i++) {
+        monNom = '';
+        Array.from(this.pays[i].name()).forEach(function (letter) {
+            if (letter !== "\n") {
+                monNom += letter;
+            }
+        });
+        if (lande.code() === this.pays[i].code()) {
+            if (lande.name() === monNom) {
+                if (lande.impots().cfe() === this.pays[i].impots().cfe()) {
+                    if (lande.impots().isImp() === this.pays[i].impots().isImp()) {
+                        if (lande.impots().imf() === this.pays[i].impots().imf()) {
+                            if (lande.impots().irvm() === this.pays[i].impots().irvm()) {
+                                if (lande.impots().irc() === this.pays[i].impots().irc()) {
+                                    if (lande.impots().tva_petrole() === this.pays[i].impots().tva_petrole()) {
+                                        if (lande.amortization().construction() === this.pays[i].amortization().construction()) {
+                                            if (lande.amortization().equipement() === this.pays[i].amortization().equipement()) {
+                                                if (lande.amortization().coefdegressif() === this.pays[i].amortization().coefdegressif()) {
+                                                    if (lande.amortization().camion() === this.pays[i].amortization().camion()) {
+                                                        if (lande.amortization().info() === this.pays[i].amortization().info()) {
+                                                            if (lande.amortization().bureau() === this.pays[i].amortization().bureau()) {
+                                                                if (lande.investment().cfe().duree() === this.pays[i].investment().cfe().duree()) {
+                                                                    if (lande.investment().cfe().taux() === this.pays[i].investment().cfe().taux()) {
+                                                                        if (lande.investment().cfe().reducexo() === this.pays[i].investment().cfe().reducexo()) {
+                                                                            if (lande.investment().isamort().duree() === this.pays[i].investment().isamort().duree()) {
+                                                                                if (lande.investment().isamort().taux() === this.pays[i].investment().isamort().taux()) {
+                                                                                    if (lande.investment().isamort().reducexo() === this.pays[i].investment().isamort().reducexo()) {
+                                                                                        if (lande.investment().isamort().ammortTauxEx() === this.pays[i].investment().isamort().ammortTauxEx()) {
+                                                                                            if (lande.investment().isamort().ammortLimit() === this.pays[i].investment().isamort().ammortLimit()) {
+                                                                                                if (lande.investment().imf().duree() === this.pays[i].investment().imf().duree()) {
+                                                                                                    if (lande.investment().imf().taux() === this.pays[i].investment().imf().taux()) {
+                                                                                                        if (lande.investment().imf().reducexo() === this.pays[i].investment().imf().reducexo()) {
+                                                                                                            if (lande.investment().irvm().duree() === this.pays[i].investment().irvm().duree()) {
+                                                                                                                if (lande.investment().irvm().taux() === this.pays[i].investment().irvm().taux()) {
+                                                                                                                    if (lande.investment().irvm().reducexo() === this.pays[i].investment().irvm().reducexo()) {
+                                                                                                                        if (lande.investment().irc().duree() === this.pays[i].investment().irc().duree()) {
+                                                                                                                            if (lande.investment().irc().taux() === this.pays[i].investment().irc().taux()) {
+                                                                                                                                if (lande.investment().irc().reducexo() === this.pays[i].investment().irc().reducexo()) {
+                                                                                                                                    if (lande.investment().tvaPetrole().duree() === this.pays[i].investment().tvaPetrole().duree()) {
+                                                                                                                                        if (lande.investment().tvaPetrole().taux() === this.pays[i].investment().tvaPetrole().taux()) {
+                                                                                                                                            if (lande.investment().tvaPetrole().reducexo() === this.pays[i].investment().tvaPetrole().reducexo()) {
+
+                                                                                                                                                if (lande.override() === this.pays[i].override()) {
+                                                                                                                                                    source = '';
+                                                                                                                                                    Array.from(this.pays[i].source().toString()).forEach(function (item) {
+                                                                                                                                                        if (item !== '\n') {
+                                                                                                                                                            source += item;
+                                                                                                                                                        }
+                                                                                                                                                    });
+                                                                                                                                                    if (lande.source().toString() === source) {
+                                                                                                                                                        //console.log("ici");
+                                                                                                                                                        monBool = false;
+                                                                                                                                                        break;
+                                                                                                                                                    }
+                                                                                                                                                }
+                                                                                                                                            }
+                                                                                                                                        }
+                                                                                                                                    }
+                                                                                                                                }
+                                                                                                                            }
+                                                                                                                        }
+                                                                                                                    }
+                                                                                                                }
+                                                                                                            }
+                                                                                                        }
+                                                                                                    }
+                                                                                                }
+                                                                                            }
+                                                                                        }
+                                                                                    }
+                                                                                }
+                                                                            }
+                                                                        }
+                                                                    }
+                                                                }
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    if (monBool) {
+        this.pays.push(lande);
+        sessionStorage.setItem("land", this.pays.toString());
+    }
     land = new Land();
-
 };
-
-let land= new Land();
+let land = new Land();

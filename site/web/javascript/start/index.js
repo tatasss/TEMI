@@ -27,5 +27,8 @@ function base() {
         }
     }
 }
-
+var url = '/';
+$.post(url, function(data){
+    $('#data').html(data);
+});
 base();

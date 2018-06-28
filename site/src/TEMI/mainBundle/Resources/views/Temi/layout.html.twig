@@ -82,11 +82,13 @@
                     <li {% if app.request.attributes.get("_route")=='temi_platform_graph' %} class="active"{% endif %}>
                         <a data-toggle="modal" href="#myModal">Graphique</a>
                     </li>
+                    {% if  is_granted("IS_AUTHENTICATED_FULLY") %}
                     <li {% if app.request.attributes.get("_route")=='temi_platform_add' %} class="active"{% endif %}>
                         <a id="ajoutButt" href="{{ path('temi_platform_add') }}">Ajouter un pays
                             <span class="glyphicon glyphicon-plus-sign"> </span>
                         </a>
                     </li>
+                    {% endif %}
                 </ul>
                 {% if  is_granted("IS_AUTHENTICATED_FULLY") %}
                     <ul class="nav navbar-nav navbar-right">
@@ -295,7 +297,9 @@
     {% block js %}
 
     {% endblock %}
-
+    <div class="footer">
+        <p>nombre de visiteur: {{ numVisit }}</p>
+    </div>
 </div>
 </body>
 </html>

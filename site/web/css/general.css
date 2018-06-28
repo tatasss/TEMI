@@ -212,7 +212,7 @@ nav {
 }
 
 body {
-    background: url("../../../../../../web/image/Fond_Final.png") fixed no-repeat;
+    background: url("../image/Fond_Final.png") fixed no-repeat;
     background-size: contain;
     height: 100vh;
 
@@ -309,4 +309,15 @@ a {
 .modal .btn-block{
     background-color: #5cb85c;
     color: white;
+}
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    text-align: left;
+    padding-left: 1vh;
+    margin-bottom: -1vh;
+    font-size:1vh;
+    color: #205796
 }

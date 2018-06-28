@@ -37,16 +37,47 @@ use TEMI\mainBundle\Form\Land\SourceType;
 
 class TemiController extends Controller
 {
-
-    public function indexAction()
+    private function nombreVisit($request){
+        $hits=0;
+        if(empty($hits)){
+            $fp=fopen("compteur.txt","a+"); //OUVRE LE FICHIER compteur.txt
+            $num=fgets($fp,4096); // RECUPERE LE CONTENUE DU COMPTEUR
+            fclose($fp); // FERME LE FICHIER
+            if($request->attributes->get('_route')=='temi_platform_home'){
+                $hits=$num +1;
+            }
+            else{
+                $hits=$num;
+            }
+             // TRAITEMENT
+            $fp=fopen("compteur.txt","w"); // OUVRE DE NOUVEAU LE FICHIER
+            fputs($fp,$hits); // MET LA NOUVELLE VALEUR
+            fclose($fp); // FERME LE FICHIER
+        }
+        return $hits;
+    }
+    public function indexAction(Request $request)
     {
 
-        return new Response($this->get('templating')->render('TEMImainBundle:Temi:index.html.twig'));
+
+        $repository = $this
+            ->getDoctrine()
+            ->getManager()
+            ->getRepository('TEMImainBundle:Land\Land');
+        $listAdverts=array();
+        if($this->getUser()!=null){
+            $listAdverts = $repository->selectedLandUser($this->getUser()->getId());
+        }
+
+
+       /* foreach ($listAdverts as $advert)
+        $listeImpot=$this->getDoctrine()->getManager()->find($advert->)*/
+        return new Response($this->get('templating')->render('TEMImainBundle:Temi:index.html.twig',array('tabLand'=>$listAdverts, 'numVisit'=>$this->nombreVisit($request))));
     }
 
-    public function modeleAction()
+    public function modeleAction(Request $request)
     {
-        return new Response($this->get('templating')->render('TEMImainBundle:Temi:model.html.twig'));
+        return new Response($this->get('templating')->render('TEMImainBundle:Temi:model.html.twig',array('numVisit'=>$this->nombreVisit($request))));
     }
 
     public function ajoutPaysAction(Request $request)
@@ -157,12 +188,13 @@ class TemiController extends Controller
         return $this->render('TEMImainBundle:Temi:addLand.html.twig',
             array(
                 'form' => $form->createView(),
+                'numVisit'=>$this->nombreVisit($request)
             ));
     }
 
-    public function graphAction()
+    public function graphAction(Request $request)
     {
-        return new Response($this->get('templating')->render('TEMImainBundle:Temi:graphForm.html.twig'));
+        return new Response($this->get('templating')->render('TEMImainBundle:Temi:graphForm.html.twig',array('numVisit'=>$this->nombreVisit($request))));
     }
     private  function findPib($land){
         $json = file_get_contents("https://api.worldbank.org/v2/countries/" .$land->getCode(). "/indicators/NY.GDP.PCAP.CD?format=json");
@@ -182,6 +214,7 @@ class TemiController extends Controller
 
         throw new Exception("code non trouvé");
     }
+
 
 
 

@@ -48,6 +48,54 @@
     <script src="../javascript/data/PaysListe.js"></script>
     <script src="../javascript/start/script.js"></script>
 
+    <script>
+
+
+        {% for land in tabLand %}
+        land.ajouterPays(
+            maker.land(
+                '{{ land.code|upper }}',
+                '{{ land.name }}',
+                maker.impot({{ land.impot.cfe }},{{ land.impot.isImp }},{{ land.impot.imf }},{{ land.impot.irvm }},{{ land.impot.irc }},{{ land.impot.tvaPetrole }}),
+                maker.ammortissement({{ land.ammort.construction }},{{ land.ammort.equipement }},{{ land.ammort.coefdegressif }},{{ land.ammort.camion }},{{ land.ammort.matInformatique }},{{ land.ammort.matBureau }}),
+                maker.investir(
+                    maker.impotPays(
+                            {% if land.invest.cfe.duree != null %}{{ land.invest.cfe.duree }}{% else %}null{% endif %},
+                            {% if land.invest.cfe.taux != null %}{{ land.invest.cfe.taux }}{% else %}null{% endif %},
+                            {% if land.invest.cfe.reducexo != null %}{{ land.invest.cfe.reducexo }}{% else %}null{% endif %}),
+                    maker.isImpotPays(
+                            {% if land.invest.IsInv.duree != null %}{{ land.invest.isInv.duree }}{% else %}null{% endif %},
+                            {% if land.invest.IsInv.taux != null %}{{  land.invest.isInv.taux }}{% else %}null{% endif %},
+                            {% if land.invest.IsInv.reducexo != null %}{{ land.invest.isInv.reducexo }}{% else %}null{% endif %},
+                            {% if land.invest.IsInv.ammortTauxEx != null %}{{ land.invest.isInv.ammortTauxEx }}{% else %}null{% endif %},
+                            {% if land.invest.IsInv.ammortLimit != null %}{{ land.invest.isInv.ammortLimit }}{% else %}null{% endif %}),
+                    maker.impotPays(
+                            {% if land.invest.imf.duree != null %}{{ land.invest.imf.duree }}{% else %}null{% endif %},
+                            {% if land.invest.imf.taux != null %}{{ land.invest.imf.taux }}{% else %}null{% endif %},
+                            {% if land.invest.imf.reducexo != null %}{{ land.invest.imf.reducexo }}{% else %}null{% endif %}),
+                    maker.impotPays(
+                            {% if land.invest.irvm.duree != null %}{{ land.invest.irvm.duree }}{% else %}null{% endif %},
+                            {% if land.invest.irvm.taux != null %}{{ land.invest.irvm.taux }}{% else %}null{% endif %},
+                            {% if land.invest.irvm.reducexo != null %}{{ land.invest.irvm.reducexo }}{% else %}null{% endif %}),
+                    maker.impotPays(
+                            {% if land.invest.irc.duree != null %}{{ land.invest.irc.duree }}{% else %}null{% endif %},
+                            {% if land.invest.irc.taux != null %}{{ land.invest.irc.taux }}{% else %}null{% endif %},
+                            {% if land.invest.irc.reducexo != null %}{{ land.invest.irc.reducexo }}{% else %}null{% endif %}),
+                    {% if land.invest.tvaPetrole!= null %}
+                    maker.impotPays(
+                            {% if land.invest.tvaPetrole.duree != null %}{{ land.invest.tvaPetrole.duree }}{% else %}null{% endif %},
+                            {% if land.invest.tvaPetrole.taux != null %}{{ land.invest.tvaPetrole.taux }}{% else %}null{% endif %},
+                            {% if land.invest.tvaPetrole.reducexo != null %}{{ land.invest.tvaPetrole.reducexo }}{% else %}null{% endif %}),
+                    {% else %}
+                    maker.impotPays(null,null,null),
+                    {% endif %}
+                ),
+                '{{ land.descriptionDerog }}',
+                '{{ land.source.nomCodeInvest }} <br/> {{ land.source.nomRegimeInvest }} <br/> {{ land.source.nomZonneRegime }}'
+            ));
+        {% endfor %}
+
+    </script>
 
     <script src="../javascript/view/directlyChange/ViewManufacturing.js"></script>
 {% endblock %}

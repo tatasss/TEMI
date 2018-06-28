@@ -1,6 +1,7 @@
 <?php
 
 namespace TEMI\mainBundle\Repository;
+use TEMI\mainBundle\Entity\Land\Land;
 
 /**
  * LandRepository
@@ -10,7 +11,23 @@ namespace TEMI\mainBundle\Repository;
  */
 class LandRepository extends \Doctrine\ORM\EntityRepository
 {
-    public function insertedLand(){
+    public function selectedLand(){
 
+        $queryBuilder = $this->createQueryBuilder('a');
+        $query = $queryBuilder->getQuery();
+        $results = $query->getResult();
+        return $results;
+    }
+    public function selectedLandUser($userId){
+
+        $queryBuilder = $this->createQueryBuilder('s');
+        $queryBuilder->select('a')
+            ->from(Land::class,'a')
+            ->where('a.user= :id')
+            ->setParameter('id',$userId);
+
+        $query = $queryBuilder->getQuery();
+        $results = $query->getResult();
+        return $results;
     }
 }

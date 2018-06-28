@@ -10,4 +10,5 @@ namespace TEMI\mainBundle\Repository;
  */
 class ImpotRepository extends \Doctrine\ORM\EntityRepository
 {
+
 }

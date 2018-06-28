@@ -1,4 +1,5 @@
 function createDebutPAys(){
+    sessionStorage.clear();
     let pays = [];
     let ben = maker.investir(maker.impotPays(null, null, null), maker.isImpotPays(5, null, 100, null, null), maker.impotPays(null, null, null), maker.impotPays(null, null, null), maker.impotPays(null, null, null), maker.impotPays(null, null, null));
     let bfa = maker.investir(maker.impotPays(5, null, 100), maker.isImpotPays(5, null, null, 50, 50), maker.impotPays(null, null, null), maker.impotPays(null, null, null), maker.impotPays(null, null, null), maker.impotPays(null, null, null));
@@ -48,14 +49,17 @@ function createDebutPAys(){
 }
 if(sessionStorage.getItem("land")===undefined) {
     createDebutPAys();
+    window.reload(true);
     // console.log("session undefined")
 }
 if(sessionStorage.getItem("land")===null) {
     createDebutPAys();
+    window.reload(true);
     //console.log("session null")
 }
 
 if(sessionStorage.getItem("land")==="null") {
     createDebutPAys();
+    window.reload(true);
     //console.log("session null")
 }

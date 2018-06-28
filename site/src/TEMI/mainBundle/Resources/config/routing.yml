@@ -1,11 +1,3 @@
-hello_the_world:
-    path:     /hello-world
-    defaults: { _controller: TEMImainBundle:Advert:index }
-
-bye_the_world:
-    path:     /bye
-    defaults: { _controller: TEMImainBundle:Advert:bye }
-
 temi_platform_home:
     path:     /
     defaults: { _controller: TEMImainBundle:Temi:index }
