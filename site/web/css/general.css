@@ -1,14 +1,14 @@
 
 .vertical-menu a {
     background-color: #ddffdd;
-    color: #33ff33;/* Black text color */
-    display: block; /* Make the links appear below each other */
-    padding: 12px; /* Add some padding */
-    text-decoration: none; /* Remove underline from links */
+    color: #33ff33;
+    display: block;
+    padding: 12px;
+    text-decoration: none;
 }
 
 .vertical-menu a:hover {
-    background-color: #ccc; /* Dark grey background on mouse-over */
+    background-color: #ccc;
 }
 
 .vertical-menu a.active {
@@ -246,7 +246,6 @@ a {
 
 .panel-default .panel-heading {
     background-color: transparent;
-    /* color: white;*/
 }
 
 .modal-header {
@@ -287,7 +286,6 @@ a {
     width: 100%;
 }
 .cnetre, #centreBody {
-    /* on permet à ces éléments de s'aligner verticalement */
     display:inline-block;
     vertical-align:middle;
 }
