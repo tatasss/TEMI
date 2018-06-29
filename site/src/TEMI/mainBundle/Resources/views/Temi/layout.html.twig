@@ -6,16 +6,22 @@
         {% endblock %}
     </title>
     <meta charset="utf-8">
+    {% image  'bundles/temimain/image/logo_CERDI_UCA-01.png'%}
     <link rel="shortcut icon"
-          type="image/x-icon" {% if app.request.attributes.get("_route")!='fos_user_registration_register' %} href="../image/logo_CERDI_UCA-01.png"{% else %} href="../../image/logo_CERDI_UCA-01.png"{% endif %}>
+          type="image/x-icon" href="{{ asset_url }}">
+    {% endimage %}
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <link rel="stylesheet" {% if app.request.attributes.get("_route")=='fos_user_registration_register' %}
+   {% stylesheets 'bundles/temimain/css/general.css' %}
+        <link rel="stylesheet" href="{{ asset_url }}" type="text/css" />
+    {% endstylesheets %}
+
+    {#<link rel="stylesheet" {% if app.request.attributes.get("_route")=='fos_user_registration_register' %}
         href="../../css/general.css"{% else %}{% if app.request.attributes.get("_route")=='fos_user_registration_confirmed' %}
         href="../../css/general.css"{% else %}{% if app.request.attributes.get("_route")=='fos_user_profile_show' %}
         href="../../css/general.css"{% else %}{% if app.request.attributes.get("_route")=='fos_user_profile_edit' %}
         href="../../css/general.css"{% else %}{% if app.request.attributes.get("_route")=='fos_user_change_password' %}
-        href="../../css/general.css"{% else %} href="../css/general.css"{% endif %}{% endif %}{% endif %}{% endif %}{% endif %}>
+        href="../../css/general.css"{% else %} href="../css/general.css"{% endif %}{% endif %}{% endif %}{% endif %}{% endif %}>#}
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
@@ -29,51 +35,11 @@
             <div class="container-fluid">
                 <div class="navbar-header">
                     <a  class=" navbar-brand" href="{{ path('temi_platform_home') }}">
-                        <img class="img-rounded" id="cerdi"
-                                {% if app.request.attributes.get("_route")=='fos_user_registration_register' %}
-                                    src="../../image/logo_CERDI_UCA-01.png"
-                                {% else %}
-                                    {% if app.request.attributes.get("_route")=='fos_user_registration_confirmed' %}
-                                        src="../../image/logo_CERDI_UCA-01.png"
-                                    {% else %}
-                                        {% if app.request.attributes.get("_route")=='fos_user_profile_show' %}
-                                            src="../../image/logo_CERDI_UCA-01.png"
-                                        {% else %}
-                                            {% if app.request.attributes.get("_route")=='fos_user_profile_edit' %}
-                                                src="../../image/logo_CERDI_UCA-01.png"
-                                            {% else %}
-                                                {% if app.request.attributes.get("_route")=='fos_user_change_password' %}
-                                                    src="../../image/logo_CERDI_UCA-01.png"{% else %} src="../image/logo_CERDI_UCA-01.png"
-                                                {% endif %}
-                                            {% endif %}
-                                        {% endif %}
-                                    {% endif %}
-                                {% endif %}/>
+                        {% image  'bundles/temimain/image/logo_CERDI_UCA-01.png'%}
+                        <img class="img-rounded" id="cerdi" src="{{ asset_url }}"/>
                         Cerdi
+                        {% endimage %}
                     </a>
-                    <a class=" navbar-brand" href="{{ path('temi_platform_home') }}">
-                        <img class="img-rounded" id="logoTEMI"
-                                {% if app.request.attributes.get("_route")=='fos_user_registration_register' %}
-                            src="../../image/Logo_Calculateur_TEMI_blanc.png"
-                        {% else %}
-                            {% if app.request.attributes.get("_route")=='fos_user_registration_confirmed' %}
-                                src="../../image/Logo_Calculateur_TEMI_blanc.png"
-                            {% else %}
-                                {% if app.request.attributes.get("_route")=='fos_user_profile_show' %}
-                                    src="../../image/Logo_Calculateur_TEMI_blanc.png"
-                                {% else %}
-                                    {% if app.request.attributes.get("_route")=='fos_user_profile_edit' %}
-                                        src="../../image/Logo_Calculateur_TEMI_blanc.png"
-                                    {% else %}
-                                        {% if app.request.attributes.get("_route")=='fos_user_change_password' %}
-                                            src="../../image/logo_CERDI_UCA-01.png"{% else %} src="../image/Logo_Calculateur_TEMI_blanc.png"
-                                        {% endif %}
-                                    {% endif %}
-                                {% endif %}
-                            {% endif %}
-                                {% endif %}/>
-                    </a>
-
                 </div>
                 <ul class="nav navbar-nav">
                     <li{% if app.request.attributes.get("_route")=='temi_platform_home' %} class="active"{% endif %}>
@@ -166,24 +132,10 @@
 
         <div class="row">
             <div class="col-sm-4">
-                <img
-                        {% if app.request.attributes.get("_route")=='fos_user_registration_register' %}
-                    src="../../image/Logo_Calculateur_TEMI.png"
-                {% else %}
-                    {% if app.request.attributes.get("_route")=='fos_user_registration_confirmed' %}
-                        src="../../image/Logo_Calculateur_TEMI.png"
-                    {% else %}
-                        {% if app.request.attributes.get("_route")=='fos_user_profile_show' %}
-                            src="../../image/Logo_Calculateur_TEMI.png"
-                        {% else %}
-                            {% if app.request.attributes.get("_route")=='fos_user_profile_edit' %}
-                            src="../../image/Logo_Calculateur_TEMI.png"
-                        {% else %}
-                            {% if app.request.attributes.get("_route")=='fos_user_change_password' %}
-                            src="../../image/Logo_Calculateur_TEMI.png"
-                        {% else %}
-                            src="../image/Logo_Calculateur_TEMI.png"
-                        {% endif %}{% endif %} {% endif %}{% endif %}{% endif %} width="100%" id="navImage">
+                {% image  'bundles/temimain/image/logo_Calculateur_TEMI.png'%}
+                <img src="{{ asset_url}}"
+                         width="100%" id="navImage">
+                {%  endimage%}
                 <h2 class="navCote" id="navTitle">LE CALCULATEUR TEMI</h2>
                 <div class="panel-group Borderhide navCote" id="accordion7">
                     <div class="panel panel-default Borderhide navCote">
@@ -297,9 +249,24 @@
     {% block js %}
 
     {% endblock %}
-    <div class="footer">
-        <p>nombre de visiteur: {{ numVisit }}</p>
-    </div>
+
+    {% if app.request.attributes.get("_route")=='fos_user_registration_register' %}
+    {% else %}
+        {% if app.request.attributes.get("_route")=='fos_user_registration_confirmed' %}
+        {% else %}
+            {% if app.request.attributes.get("_route")=='fos_user_profile_show' %}
+            {% else %}
+                {% if app.request.attributes.get("_route")=='fos_user_profile_edit' %}
+                {% else %}
+                    {% if app.request.attributes.get("_route")=='fos_user_change_password' %}
+                    {% else %}
+                        {% if app.request.attributes.get("_route")=='fos_user_security_login' %}
+                        {% else %}
+                            <div class="footer">
+                                <p>nombre de visiteur: {{ numVisit }}</p>
+                            </div>
+                    {% endif %}{% endif %}{% endif %} {% endif %}{% endif %}{% endif %}
+
 </div>
 </body>
 </html>

@@ -1,0 +1,321 @@
+
+.vertical-menu a {
+    background-color: #ddffdd;
+    color: #33ff33;
+    display: block;
+    padding: 12px;
+    text-decoration: none;
+}
+
+.vertical-menu a:hover {
+    background-color: #ccc;
+}
+
+.vertical-menu a.active {
+    background-color: #ddffdd;
+    color: #33ff33;
+}
+
+.vertical-form {
+    width: 100%;
+    background-color: transparent;
+}
+
+.test {
+    border: 1px solid black;
+}
+
+.vertical-form button.active {
+    background-color: #4CAF50; /* Add a green color to the "active/current" link */
+    color: transparent;
+}
+
+.vertical-menu button {
+    background-color: #ddffdd;
+    color: #33ff33; /* Black text color */
+    display: block; /* Make the links appear below each other */
+    padding: 12px; /* Add some padding */
+    text-decoration: none; /* Remove underline from links */
+}
+
+thead {
+    font-weight: normal;
+}
+
+.bottomBorder {
+    border-bottom: 1px solid black;
+}
+
+.blue {
+    background-color: #3eb1d0;
+}
+
+.fontred {
+    color: #c82829;
+}
+
+.red {
+    background-color: #c82829;
+}
+
+.yellow {
+    background-color: #b9ca4a;
+}
+
+#content-header {
+    background: #2a8dd4;
+    color: #fff;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 80px;
+    overflow: hidden;
+}
+
+#content-main {
+    background: transparent;
+    position: fixed;
+    top: 80px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    overflow: auto;
+}
+
+.padding {
+    padding: 15px;
+    list-style: none;
+}
+
+.chart-legend li span {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    margin-right: 2px;
+}
+
+.chart-legend {
+    height: 250px;
+    overflow: auto;
+    padding-right: 10px;
+}
+
+.chart-legend li {
+    cursor: pointer;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+}
+
+.chart-legend ul {
+    margin: 0;
+    padding: 0;
+
+}
+
+.strike {
+    text-decoration: line-through;
+}
+
+.float-left {
+    float: left;
+}
+
+#bouttonGraphique {
+    max-height: 100%;
+    max-width: 100%;
+}
+
+.hide {
+    border: 0 solid transparent;
+}
+
+.Borderhide {
+    border: 0 solid transparent;
+
+}
+
+nav {
+    background-color: #205796;
+    max-height: 100%;
+}
+
+.navbar-header a {
+    color: white;
+}
+
+.nav a {
+    color: white;
+}
+
+.active {
+    background-color: #0333BB;
+}
+
+#cerdi {
+    background-color: white;
+    height: 200%;
+    float: left;
+    margin-right: 5px;
+    margin-top: -15%;
+}
+#logoTEMI{
+    height: 350%;
+    float: left;
+    margin-right: 5px;
+    margin-top: -20%;
+}
+
+.container {
+    margin-top: 5%;
+}
+
+.item {
+    background-color: transparent;
+}
+
+.blank {
+    background-color: transparent;
+    color: #205796;
+
+}
+
+.col {
+    background-color: #205796;
+    border: 1px solid #205796;
+}
+
+#mapage {
+    min-height: 70vh;
+}
+
+#suivant {
+    float: right;
+}
+
+.lol li {
+    background-color: #205796;
+    color: #205796;
+
+}
+
+.lol li.active {
+    background-color: #0333BB;
+    color: #0333BB;
+
+}
+
+.myContain {
+    margin-top: 5%;
+}
+
+body {
+    background: url("../../bundles/temimain/image/Fond_Final.png") fixed no-repeat;
+    background-size: contain;
+    height: 100vh;
+
+
+}
+
+.panel {
+    background-color: transparent;
+    border: transparent;
+
+}
+
+.panel-heading {
+    background-color: transparent;
+
+}
+
+.panel-title {
+    background-color: transparent;
+
+}
+
+a {
+    background-color: transparent;
+
+}
+
+.carousel-inner {
+    background-color: transparent;
+}
+
+.panel-default .panel-heading {
+    background-color: transparent;
+}
+
+.modal-header {
+    color: black;
+}
+
+.modal-body {
+    color: black;
+}
+
+.trans {
+    background-color: transparent;
+}
+
+.liste-group {
+    background-color: transparent;
+}
+
+.liste-group-item-default {
+    background-color: transparent;
+}
+
+.liste-group .liste-group-item-default {
+    background-color: transparent;
+}
+
+.navCote{
+    color: #205796
+}
+.navCote .navbar-header{
+    text-decoration: none;
+}
+#navTitle{
+    margin-left: 2vh;
+}
+#navImage{
+    margin-left: 2vh;
+    width: 100%;
+}
+.cnetre, #centreBody {
+    display:inline-block;
+    vertical-align:middle;
+}
+.centre{
+    min-height: 100vh;
+}
+.bodyCentre{
+    height: 50%;
+    width: 100%;
+}
+.btn-block{
+    background-color: #ddffdd;
+    color: #33ff33;
+}
+.btn-default{
+    background-color: #ddffdd;
+    color: #33ff33;
+}
+.modal .btn-block{
+    background-color: #5cb85c;
+    color: white;
+}
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    text-align: left;
+    padding-left: 1vh;
+    margin-bottom: -1vh;
+    font-size:1vh;
+    color: #205796
+}

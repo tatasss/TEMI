@@ -85,7 +85,6 @@
   'TEMImainBundle:Advert:byebye.html.twig' => __DIR__.'/../../../src/TEMI/mainBundle/Resources/views/Advert/byebye.html.twig',
   'TEMImainBundle:Advert:index.html.twig' => __DIR__.'/../../../src/TEMI/mainBundle/Resources/views/Advert/index.html.twig',
   'TEMImainBundle:Temi:addLand.html.twig' => __DIR__.'/../../../src/TEMI/mainBundle/Resources/views/Temi/addLand.html.twig',
-  'TEMImainBundle:Temi:ajoutPays.html.twig' => __DIR__.'/../../../src/TEMI/mainBundle/Resources/views/Temi/ajoutPays.html.twig',
   'TEMImainBundle:Temi:graphForm.html.twig' => __DIR__.'/../../../src/TEMI/mainBundle/Resources/views/Temi/graphForm.html.twig',
   'TEMImainBundle:Temi:index.html.twig' => __DIR__.'/../../../src/TEMI/mainBundle/Resources/views/Temi/index.html.twig',
   'TEMImainBundle:Temi:layout.html.twig' => __DIR__.'/../../../src/TEMI/mainBundle/Resources/views/Temi/layout.html.twig',

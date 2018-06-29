@@ -8,6 +8,7 @@ $baseDir = dirname($vendorDir);
 return array(
     'Twig_' => array($vendorDir . '/twig/twig/lib'),
     'SensioLabs\\Security' => array($vendorDir . '/sensiolabs/security-checker'),
+    'JSqueeze' => array($vendorDir . '/patchwork/jsqueeze/class'),
     'FOS\\MessageBundle' => array($vendorDir . '/friendsofsymfony/message-bundle'),
     'Doctrine\\ORM\\' => array($vendorDir . '/doctrine/orm/lib'),
     'Doctrine\\DBAL\\' => array($vendorDir . '/doctrine/dbal/lib'),
@@ -15,4 +16,5 @@ return array(
     'Doctrine\\Common\\Inflector\\' => array($vendorDir . '/doctrine/inflector/lib'),
     'Doctrine\\Common\\Collections\\' => array($vendorDir . '/doctrine/collections/lib'),
     'Behat\\Transliterator' => array($vendorDir . '/behat/transliterator/src'),
+    'Assetic' => array($vendorDir . '/kriswallsmith/assetic/src'),
 );

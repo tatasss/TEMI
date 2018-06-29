@@ -408,19 +408,23 @@ Modèle
     </div>
 {% endblock %}
 {% block js %}
+    {% javascripts
+        'bundles/temimain/javascript/model/anotherFunctiun/XMLRequest.js'
+        'bundles/temimain/javascript/model/anotherFunctiun/verification.js'
+        'bundles/temimain/javascript/model/anotherFunctiun/myMath.js'
+        'bundles/temimain/javascript/model/anotherFunctiun/Ref.js'
+        'bundles/temimain/javascript/view/viewGenerator/bootstrapView.js'
+        'bundles/temimain/javascript/manufacturing/manufact.js'
+        'bundles/temimain/javascript/model/modelManager.js'
+        'bundles/temimain/javascript/model/model.js'
+        'bundles/temimain/javascript/view/viewGenerator/graphGenerator.js'
+        'bundles/temimain/javascript/view/viewGenerator/ViewGenerator.js'
+        'bundles/temimain/javascript/data/data.js'
+        'bundles/temimain/javascript/data/PaysListe.js'
+        'bundles/temimain/javascript/start/script.js'
+        'bundles/temimain/javascript/view/directlyChange/ModeleView.js'
 
-    <script src="../javascript/model/anotherFunctiun/verification.js"></script>
-    <script src="../javascript/model/anotherFunctiun/XMLRequest.js"></script>
-    <script src="../javascript/model/anotherFunctiun/myMath.js"></script>
-    <script src="../javascript/model/anotherFunctiun/Ref.js"></script>
-    <script src="../javascript/view/viewGenerator/bootstrapView.js"></script>
-    <script src="../javascript/manufacturing/manufact.js"></script>
-    <script src="../javascript/model/modelManager.js"></script>
-    <script src="../javascript/view/viewGenerator/graphGenerator.js"></script>
-    <script src="../javascript/view/viewGenerator/ViewGenerator.js"></script>
-    <script src="../javascript/model/model.js"></script>
-    <script src="../javascript/data/PaysListe.js"></script>
-    <script src="../javascript/data/data.js"></script>
-    <script src="../javascript/start/script.js"></script>
-    <script src="../javascript/view/directlyChange/ModeleView.js"></script>
-{% endblock %}
+    %}
+        <script src="{{ asset_url }}"></script>
+    {% endjavascripts %}
+{%  endblock %}

@@ -1,0 +1,1 @@
+;let Data=function(e,r,t,n){let randLands=land;let mP;for(let i=0;i<randLands.pays.length;i++){if(randLands.pays[i].code()===e){mP=randLands.pays[i];break}};this.land=function(){mP.pib=ref.givePIB(mP.code());return mP};this.government=function(){return r};this.topic=function(){return t};this.margin=function(){return n};this.firm=function(){return maker.firm(t,n)}};

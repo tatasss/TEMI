@@ -13,3 +13,6 @@ temi_platform_add:
 temi_platform_graph:
     path:     /graph
     defaults: {_controller: TEMImainBundle:Temi:graph }
+temi_css_general:
+    path: /general
+    defaults: { _controller: TEMImainBundle:JSCSS:generalCSS }

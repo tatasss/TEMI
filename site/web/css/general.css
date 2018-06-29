@@ -212,7 +212,7 @@ nav {
 }
 
 body {
-    background: url("../image/Fond_Final.png") fixed no-repeat;
+    background: url("../../../../../../web/image/Fond_Final.png") fixed no-repeat;
     background-size: contain;
     height: 100vh;
 

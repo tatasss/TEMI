@@ -30,6 +30,305 @@ class appDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
         }
 
 
+        if (0 === strpos($pathinfo, '/js')) {
+            // _assetic_b86f587
+            if ('/js/b86f587.js' === $pathinfo) {
+                return array (  '_controller' => 'assetic.controller:render',  'name' => 'b86f587',  'pos' => NULL,  '_format' => 'js',  '_route' => '_assetic_b86f587',);
+            }
+
+            if (0 === strpos($pathinfo, '/js/b86f587_')) {
+                // _assetic_b86f587_0
+                if ('/js/b86f587_Chart.min_1.js' === $pathinfo) {
+                    return array (  '_controller' => 'assetic.controller:render',  'name' => 'b86f587',  'pos' => 0,  '_format' => 'js',  '_route' => '_assetic_b86f587_0',);
+                }
+
+                // _assetic_b86f587_1
+                if ('/js/b86f587_Chart.bundle.min_2.js' === $pathinfo) {
+                    return array (  '_controller' => 'assetic.controller:render',  'name' => 'b86f587',  'pos' => 1,  '_format' => 'js',  '_route' => '_assetic_b86f587_1',);
+                }
+
+                // _assetic_b86f587_2
+                if ('/js/b86f587_excellentexport_3.js' === $pathinfo) {
+                    return array (  '_controller' => 'assetic.controller:render',  'name' => 'b86f587',  'pos' => 2,  '_format' => 'js',  '_route' => '_assetic_b86f587_2',);
+                }
+
+                // _assetic_b86f587_3
+                if ('/js/b86f587_XMLRequest_4.js' === $pathinfo) {
+                    return array (  '_controller' => 'assetic.controller:render',  'name' => 'b86f587',  'pos' => 3,  '_format' => 'js',  '_route' => '_assetic_b86f587_3',);
+                }
+
+                // _assetic_b86f587_4
+                if ('/js/b86f587_verification_5.js' === $pathinfo) {
+                    return array (  '_controller' => 'assetic.controller:render',  'name' => 'b86f587',  'pos' => 4,  '_format' => 'js',  '_route' => '_assetic_b86f587_4',);
+                }
+
+                if (0 === strpos($pathinfo, '/js/b86f587_m')) {
+                    // _assetic_b86f587_5
+                    if ('/js/b86f587_myMath_6.js' === $pathinfo) {
+                        return array (  '_controller' => 'assetic.controller:render',  'name' => 'b86f587',  'pos' => 5,  '_format' => 'js',  '_route' => '_assetic_b86f587_5',);
+                    }
+
+                    // _assetic_b86f587_8
+                    if ('/js/b86f587_manufact_9.js' === $pathinfo) {
+                        return array (  '_controller' => 'assetic.controller:render',  'name' => 'b86f587',  'pos' => 8,  '_format' => 'js',  '_route' => '_assetic_b86f587_8',);
+                    }
+
+                    // _assetic_b86f587_9
+                    if ('/js/b86f587_modelManager_10.js' === $pathinfo) {
+                        return array (  '_controller' => 'assetic.controller:render',  'name' => 'b86f587',  'pos' => 9,  '_format' => 'js',  '_route' => '_assetic_b86f587_9',);
+                    }
+
+                    // _assetic_b86f587_10
+                    if ('/js/b86f587_model_11.js' === $pathinfo) {
+                        return array (  '_controller' => 'assetic.controller:render',  'name' => 'b86f587',  'pos' => 10,  '_format' => 'js',  '_route' => '_assetic_b86f587_10',);
+                    }
+
+                }
+
+                // _assetic_b86f587_6
+                if ('/js/b86f587_Ref_7.js' === $pathinfo) {
+                    return array (  '_controller' => 'assetic.controller:render',  'name' => 'b86f587',  'pos' => 6,  '_format' => 'js',  '_route' => '_assetic_b86f587_6',);
+                }
+
+                // _assetic_b86f587_7
+                if ('/js/b86f587_bootstrapView_8.js' === $pathinfo) {
+                    return array (  '_controller' => 'assetic.controller:render',  'name' => 'b86f587',  'pos' => 7,  '_format' => 'js',  '_route' => '_assetic_b86f587_7',);
+                }
+
+                // _assetic_b86f587_11
+                if ('/js/b86f587_graphGenerator_12.js' === $pathinfo) {
+                    return array (  '_controller' => 'assetic.controller:render',  'name' => 'b86f587',  'pos' => 11,  '_format' => 'js',  '_route' => '_assetic_b86f587_11',);
+                }
+
+                // _assetic_b86f587_16
+                if ('/js/b86f587_graphFormView_17.js' === $pathinfo) {
+                    return array (  '_controller' => 'assetic.controller:render',  'name' => 'b86f587',  'pos' => 16,  '_format' => 'js',  '_route' => '_assetic_b86f587_16',);
+                }
+
+                // _assetic_b86f587_12
+                if ('/js/b86f587_ViewGenerator_13.js' === $pathinfo) {
+                    return array (  '_controller' => 'assetic.controller:render',  'name' => 'b86f587',  'pos' => 12,  '_format' => 'js',  '_route' => '_assetic_b86f587_12',);
+                }
+
+                // _assetic_b86f587_13
+                if ('/js/b86f587_data_14.js' === $pathinfo) {
+                    return array (  '_controller' => 'assetic.controller:render',  'name' => 'b86f587',  'pos' => 13,  '_format' => 'js',  '_route' => '_assetic_b86f587_13',);
+                }
+
+                // _assetic_b86f587_14
+                if ('/js/b86f587_PaysListe_15.js' === $pathinfo) {
+                    return array (  '_controller' => 'assetic.controller:render',  'name' => 'b86f587',  'pos' => 14,  '_format' => 'js',  '_route' => '_assetic_b86f587_14',);
+                }
+
+                // _assetic_b86f587_15
+                if ('/js/b86f587_script_16.js' === $pathinfo) {
+                    return array (  '_controller' => 'assetic.controller:render',  'name' => 'b86f587',  'pos' => 15,  '_format' => 'js',  '_route' => '_assetic_b86f587_15',);
+                }
+
+            }
+
+            // _assetic_5300c02
+            if ('/js/5300c02.js' === $pathinfo) {
+                return array (  '_controller' => 'assetic.controller:render',  'name' => '5300c02',  'pos' => NULL,  '_format' => 'js',  '_route' => '_assetic_5300c02',);
+            }
+
+            if (0 === strpos($pathinfo, '/js/5300c02_')) {
+                // _assetic_5300c02_0
+                if ('/js/5300c02_index_1.js' === $pathinfo) {
+                    return array (  '_controller' => 'assetic.controller:render',  'name' => '5300c02',  'pos' => 0,  '_format' => 'js',  '_route' => '_assetic_5300c02_0',);
+                }
+
+                // _assetic_5300c02_1
+                if ('/js/5300c02_XMLRequest_2.js' === $pathinfo) {
+                    return array (  '_controller' => 'assetic.controller:render',  'name' => '5300c02',  'pos' => 1,  '_format' => 'js',  '_route' => '_assetic_5300c02_1',);
+                }
+
+                // _assetic_5300c02_2
+                if ('/js/5300c02_verification_3.js' === $pathinfo) {
+                    return array (  '_controller' => 'assetic.controller:render',  'name' => '5300c02',  'pos' => 2,  '_format' => 'js',  '_route' => '_assetic_5300c02_2',);
+                }
+
+                if (0 === strpos($pathinfo, '/js/5300c02_m')) {
+                    // _assetic_5300c02_3
+                    if ('/js/5300c02_myMath_4.js' === $pathinfo) {
+                        return array (  '_controller' => 'assetic.controller:render',  'name' => '5300c02',  'pos' => 3,  '_format' => 'js',  '_route' => '_assetic_5300c02_3',);
+                    }
+
+                    // _assetic_5300c02_6
+                    if ('/js/5300c02_manufact_7.js' === $pathinfo) {
+                        return array (  '_controller' => 'assetic.controller:render',  'name' => '5300c02',  'pos' => 6,  '_format' => 'js',  '_route' => '_assetic_5300c02_6',);
+                    }
+
+                    // _assetic_5300c02_8
+                    if ('/js/5300c02_modelManager_9.js' === $pathinfo) {
+                        return array (  '_controller' => 'assetic.controller:render',  'name' => '5300c02',  'pos' => 8,  '_format' => 'js',  '_route' => '_assetic_5300c02_8',);
+                    }
+
+                    // _assetic_5300c02_9
+                    if ('/js/5300c02_model_10.js' === $pathinfo) {
+                        return array (  '_controller' => 'assetic.controller:render',  'name' => '5300c02',  'pos' => 9,  '_format' => 'js',  '_route' => '_assetic_5300c02_9',);
+                    }
+
+                }
+
+                // _assetic_5300c02_4
+                if ('/js/5300c02_Ref_5.js' === $pathinfo) {
+                    return array (  '_controller' => 'assetic.controller:render',  'name' => '5300c02',  'pos' => 4,  '_format' => 'js',  '_route' => '_assetic_5300c02_4',);
+                }
+
+                // _assetic_5300c02_5
+                if ('/js/5300c02_bootstrapView_6.js' === $pathinfo) {
+                    return array (  '_controller' => 'assetic.controller:render',  'name' => '5300c02',  'pos' => 5,  '_format' => 'js',  '_route' => '_assetic_5300c02_5',);
+                }
+
+                // _assetic_5300c02_7
+                if ('/js/5300c02_startingLand_8.js' === $pathinfo) {
+                    return array (  '_controller' => 'assetic.controller:render',  'name' => '5300c02',  'pos' => 7,  '_format' => 'js',  '_route' => '_assetic_5300c02_7',);
+                }
+
+                // _assetic_5300c02_14
+                if ('/js/5300c02_script_15.js' === $pathinfo) {
+                    return array (  '_controller' => 'assetic.controller:render',  'name' => '5300c02',  'pos' => 14,  '_format' => 'js',  '_route' => '_assetic_5300c02_14',);
+                }
+
+                // _assetic_5300c02_10
+                if ('/js/5300c02_graphGenerator_11.js' === $pathinfo) {
+                    return array (  '_controller' => 'assetic.controller:render',  'name' => '5300c02',  'pos' => 10,  '_format' => 'js',  '_route' => '_assetic_5300c02_10',);
+                }
+
+                // _assetic_5300c02_11
+                if ('/js/5300c02_ViewGenerator_12.js' === $pathinfo) {
+                    return array (  '_controller' => 'assetic.controller:render',  'name' => '5300c02',  'pos' => 11,  '_format' => 'js',  '_route' => '_assetic_5300c02_11',);
+                }
+
+                // _assetic_5300c02_12
+                if ('/js/5300c02_data_13.js' === $pathinfo) {
+                    return array (  '_controller' => 'assetic.controller:render',  'name' => '5300c02',  'pos' => 12,  '_format' => 'js',  '_route' => '_assetic_5300c02_12',);
+                }
+
+                // _assetic_5300c02_13
+                if ('/js/5300c02_PaysListe_14.js' === $pathinfo) {
+                    return array (  '_controller' => 'assetic.controller:render',  'name' => '5300c02',  'pos' => 13,  '_format' => 'js',  '_route' => '_assetic_5300c02_13',);
+                }
+
+            }
+
+            // _assetic_78afcc5
+            if ('/js/78afcc5.js' === $pathinfo) {
+                return array (  '_controller' => 'assetic.controller:render',  'name' => '78afcc5',  'pos' => NULL,  '_format' => 'js',  '_route' => '_assetic_78afcc5',);
+            }
+
+            if (0 === strpos($pathinfo, '/js/78afcc5_')) {
+                // _assetic_78afcc5_0
+                if ('/js/78afcc5_XMLRequest_1.js' === $pathinfo) {
+                    return array (  '_controller' => 'assetic.controller:render',  'name' => '78afcc5',  'pos' => 0,  '_format' => 'js',  '_route' => '_assetic_78afcc5_0',);
+                }
+
+                // _assetic_78afcc5_1
+                if ('/js/78afcc5_verification_2.js' === $pathinfo) {
+                    return array (  '_controller' => 'assetic.controller:render',  'name' => '78afcc5',  'pos' => 1,  '_format' => 'js',  '_route' => '_assetic_78afcc5_1',);
+                }
+
+                if (0 === strpos($pathinfo, '/js/78afcc5_m')) {
+                    // _assetic_78afcc5_2
+                    if ('/js/78afcc5_myMath_3.js' === $pathinfo) {
+                        return array (  '_controller' => 'assetic.controller:render',  'name' => '78afcc5',  'pos' => 2,  '_format' => 'js',  '_route' => '_assetic_78afcc5_2',);
+                    }
+
+                    // _assetic_78afcc5_5
+                    if ('/js/78afcc5_manufact_6.js' === $pathinfo) {
+                        return array (  '_controller' => 'assetic.controller:render',  'name' => '78afcc5',  'pos' => 5,  '_format' => 'js',  '_route' => '_assetic_78afcc5_5',);
+                    }
+
+                    // _assetic_78afcc5_6
+                    if ('/js/78afcc5_modelManager_7.js' === $pathinfo) {
+                        return array (  '_controller' => 'assetic.controller:render',  'name' => '78afcc5',  'pos' => 6,  '_format' => 'js',  '_route' => '_assetic_78afcc5_6',);
+                    }
+
+                    // _assetic_78afcc5_7
+                    if ('/js/78afcc5_model_8.js' === $pathinfo) {
+                        return array (  '_controller' => 'assetic.controller:render',  'name' => '78afcc5',  'pos' => 7,  '_format' => 'js',  '_route' => '_assetic_78afcc5_7',);
+                    }
+
+                }
+
+                // _assetic_78afcc5_3
+                if ('/js/78afcc5_Ref_4.js' === $pathinfo) {
+                    return array (  '_controller' => 'assetic.controller:render',  'name' => '78afcc5',  'pos' => 3,  '_format' => 'js',  '_route' => '_assetic_78afcc5_3',);
+                }
+
+                // _assetic_78afcc5_4
+                if ('/js/78afcc5_bootstrapView_5.js' === $pathinfo) {
+                    return array (  '_controller' => 'assetic.controller:render',  'name' => '78afcc5',  'pos' => 4,  '_format' => 'js',  '_route' => '_assetic_78afcc5_4',);
+                }
+
+                // _assetic_78afcc5_8
+                if ('/js/78afcc5_graphGenerator_9.js' === $pathinfo) {
+                    return array (  '_controller' => 'assetic.controller:render',  'name' => '78afcc5',  'pos' => 8,  '_format' => 'js',  '_route' => '_assetic_78afcc5_8',);
+                }
+
+                // _assetic_78afcc5_9
+                if ('/js/78afcc5_ViewGenerator_10.js' === $pathinfo) {
+                    return array (  '_controller' => 'assetic.controller:render',  'name' => '78afcc5',  'pos' => 9,  '_format' => 'js',  '_route' => '_assetic_78afcc5_9',);
+                }
+
+                // _assetic_78afcc5_10
+                if ('/js/78afcc5_data_11.js' === $pathinfo) {
+                    return array (  '_controller' => 'assetic.controller:render',  'name' => '78afcc5',  'pos' => 10,  '_format' => 'js',  '_route' => '_assetic_78afcc5_10',);
+                }
+
+                // _assetic_78afcc5_11
+                if ('/js/78afcc5_PaysListe_12.js' === $pathinfo) {
+                    return array (  '_controller' => 'assetic.controller:render',  'name' => '78afcc5',  'pos' => 11,  '_format' => 'js',  '_route' => '_assetic_78afcc5_11',);
+                }
+
+                // _assetic_78afcc5_12
+                if ('/js/78afcc5_script_13.js' === $pathinfo) {
+                    return array (  '_controller' => 'assetic.controller:render',  'name' => '78afcc5',  'pos' => 12,  '_format' => 'js',  '_route' => '_assetic_78afcc5_12',);
+                }
+
+                // _assetic_78afcc5_13
+                if ('/js/78afcc5_ModeleView_14.js' === $pathinfo) {
+                    return array (  '_controller' => 'assetic.controller:render',  'name' => '78afcc5',  'pos' => 13,  '_format' => 'js',  '_route' => '_assetic_78afcc5_13',);
+                }
+
+            }
+
+        }
+
+        elseif (0 === strpos($pathinfo, '/images')) {
+            // _assetic_81953f2
+            if ('/images/81953f2.png' === $pathinfo) {
+                return array (  '_controller' => 'assetic.controller:render',  'name' => '81953f2',  'pos' => NULL,  '_format' => 'png',  '_route' => '_assetic_81953f2',);
+            }
+
+            // _assetic_81953f2_0
+            if ('/images/81953f2_logo_CERDI_UCA-01_1.png' === $pathinfo) {
+                return array (  '_controller' => 'assetic.controller:render',  'name' => '81953f2',  'pos' => 0,  '_format' => 'png',  '_route' => '_assetic_81953f2_0',);
+            }
+
+            // _assetic_5c63501
+            if ('/images/5c63501.png' === $pathinfo) {
+                return array (  '_controller' => 'assetic.controller:render',  'name' => '5c63501',  'pos' => NULL,  '_format' => 'png',  '_route' => '_assetic_5c63501',);
+            }
+
+            // _assetic_5c63501_0
+            if ('/images/5c63501_logo_Calculateur_TEMI_1.png' === $pathinfo) {
+                return array (  '_controller' => 'assetic.controller:render',  'name' => '5c63501',  'pos' => 0,  '_format' => 'png',  '_route' => '_assetic_5c63501_0',);
+            }
+
+        }
+
+        // _assetic_c9335ea
+        if ('/css/c9335ea.css' === $pathinfo) {
+            return array (  '_controller' => 'assetic.controller:render',  'name' => 'c9335ea',  'pos' => NULL,  '_format' => 'css',  '_route' => '_assetic_c9335ea',);
+        }
+
+        // _assetic_c9335ea_0
+        if ('/css/c9335ea_general_1.css' === $pathinfo) {
+            return array (  '_controller' => 'assetic.controller:render',  'name' => 'c9335ea',  'pos' => 0,  '_format' => 'css',  '_route' => '_assetic_c9335ea_0',);
+        }
+
         if (0 === strpos($pathinfo, '/_')) {
             // _wdt
             if (0 === strpos($pathinfo, '/_wdt') && preg_match('#^/_wdt/(?P<token>[^/]++)$#s', $pathinfo, $matches)) {
@@ -125,6 +424,11 @@ class appDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
         // temi_platform_graph
         if ('/graph' === $pathinfo) {
             return array (  '_controller' => 'TEMI\\mainBundle\\Controller\\TemiController::graphAction',  '_route' => 'temi_platform_graph',);
+        }
+
+        // temi_css_general
+        if ('/general' === $pathinfo) {
+            return array (  '_controller' => 'TEMI\\mainBundle\\Controller\\JSCSSController::generalCSSAction',  '_route' => 'temi_css_general',);
         }
 
         if (0 === strpos($pathinfo, '/login')) {
