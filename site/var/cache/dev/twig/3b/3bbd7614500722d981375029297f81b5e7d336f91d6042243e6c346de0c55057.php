@@ -1,6 +1,6 @@
 <?php
 
-/* @TEMImain/Temi/layout.html.twig */
+/* TEMImainBundle:Temi:layout.html.twig */
 class __TwigTemplate_d7763a4e52806d52db457adfd8470063ae8ced8d0b186b964e9a805efb28553b extends Twig_Template
 {
     public function __construct(Twig_Environment $env)
@@ -19,10 +19,10 @@ class __TwigTemplate_d7763a4e52806d52db457adfd8470063ae8ced8d0b186b964e9a805efb2
     protected function doDisplay(array $context, array $blocks = array())
     {
         $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
-        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->enter($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "@TEMImain/Temi/layout.html.twig"));
+        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->enter($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "TEMImainBundle:Temi:layout.html.twig"));
 
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "@TEMImain/Temi/layout.html.twig"));
+        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "TEMImainBundle:Temi:layout.html.twig"));
 
         // line 1
         echo "<!DOCTYPE html>
@@ -197,7 +197,7 @@ class __TwigTemplate_d7763a4e52806d52db457adfd8470063ae8ced8d0b186b964e9a805efb2
             echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("fos_user_security_logout");
             echo "\"><span
                                         class=\"glyphicon glyphicon-log-out\"></span>
-                                Deconnection</a>
+                                Deconnexion</a>
                         </li>
                     </ul>
 
@@ -229,7 +229,7 @@ class __TwigTemplate_d7763a4e52806d52db457adfd8470063ae8ced8d0b186b964e9a805efb2
             echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("fos_user_security_login");
             echo "\"><span
                                         class=\"glyphicon glyphicon-log-in\"></span>
-                                Connection</a>
+                                Connexion</a>
                         </li>
                     </ul>
                 ";
@@ -255,7 +255,7 @@ class __TwigTemplate_d7763a4e52806d52db457adfd8470063ae8ced8d0b186b964e9a805efb2
                                        value=\"\" placeholder=\"Veuillez entrer un taux d'actualisation\">
                             </div>
                             <div class=\"form-group\">
-                                <label>Régime fiscale:</label>
+                                <label>Régime fiscal:</label>
                                 <select class=\"form-control\" id=\"REGIMECmpta\" title=\"regime fiscale\">
                                     <option value=\"gen\">Code général des impôts</option>
                                     <option value=\"nongen\">Code des investissements</option>
@@ -547,7 +547,7 @@ class __TwigTemplate_d7763a4e52806d52db457adfd8470063ae8ced8d0b186b964e9a805efb2
 
     public function getTemplateName()
     {
-        return "@TEMImain/Temi/layout.html.twig";
+        return "TEMImainBundle:Temi:layout.html.twig";
     }
 
     public function isTraitable()
@@ -638,7 +638,7 @@ class __TwigTemplate_d7763a4e52806d52db457adfd8470063ae8ced8d0b186b964e9a805efb2
                         <li {% if app.request.attributes.get(\"_route\")=='fos_user_security_logout' %} class=\"active\"{% endif %}>
                             <a href=\"{{ path('fos_user_security_logout') }}\"><span
                                         class=\"glyphicon glyphicon-log-out\"></span>
-                                Deconnection</a>
+                                Deconnexion</a>
                         </li>
                     </ul>
 
@@ -652,7 +652,7 @@ class __TwigTemplate_d7763a4e52806d52db457adfd8470063ae8ced8d0b186b964e9a805efb2
                         <li {% if app.request.attributes.get(\"_route\")=='fos_user_security_login' %} class=\"active\"{% endif %}>
                             <a href=\"{{ path('fos_user_security_login') }}\"><span
                                         class=\"glyphicon glyphicon-log-in\"></span>
-                                Connection</a>
+                                Connexion</a>
                         </li>
                     </ul>
                 {% endif %}
@@ -676,7 +676,7 @@ class __TwigTemplate_d7763a4e52806d52db457adfd8470063ae8ced8d0b186b964e9a805efb2
                                        value=\"\" placeholder=\"Veuillez entrer un taux d'actualisation\">
                             </div>
                             <div class=\"form-group\">
-                                <label>Régime fiscale:</label>
+                                <label>Régime fiscal:</label>
                                 <select class=\"form-control\" id=\"REGIMECmpta\" title=\"regime fiscale\">
                                     <option value=\"gen\">Code général des impôts</option>
                                     <option value=\"nongen\">Code des investissements</option>
@@ -841,6 +841,6 @@ class __TwigTemplate_d7763a4e52806d52db457adfd8470063ae8ced8d0b186b964e9a805efb2
 
 </div>
 </body>
-</html>", "@TEMImain/Temi/layout.html.twig", "C:\\Users\\matthias\\Desktop\\stage\\TEMI\\site\\src\\TEMI\\mainBundle\\Resources\\views\\Temi\\layout.html.twig");
+</html>", "TEMImainBundle:Temi:layout.html.twig", "C:\\Users\\matthias\\Desktop\\stage\\TEMI\\site\\src\\TEMI\\mainBundle\\Resources\\views\\Temi\\layout.html.twig");
     }
 }

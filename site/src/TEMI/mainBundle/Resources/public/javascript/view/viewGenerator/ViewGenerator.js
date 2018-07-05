@@ -169,7 +169,7 @@ ViewGenerator.prototype.bilanHtml = function () {
         "<span style='font-size: smaller; '><strong>Actif circulant</strong></span>", "Stocks", "Créances Clients",
         "Disponibilités bancaires", "<strong>Actif</strong>"];
     let lin1 = {
-        tab: myMath.separatorNumberArray([null, "<strong>Capitaux propre</strong>", null]),
+        tab: myMath.separatorNumberArray([null, "<strong>Capitaux propres</strong>", null]),
         color: ""
     };
     let lin2 = {
@@ -226,9 +226,9 @@ ViewGenerator.prototype.bilanHtml = function () {
  */
 ViewGenerator.prototype.compteHtml = function () {
     let cote = ["Achats", "Pétrole", "Dépenses administratives", "Dépenses publicitaires", "Dépenses d'entretien",
-        "<strong>Impôts et taxes</strong>", "<strong>Masse Salariale</strong>", "Cadres", "Secrétaires", "Ouvriers",
+        "<strong>Impôts et taxes</strong>", "<strong>Masse salariale</strong>", "Cadres", "Secrétaires", "Ouvriers",
         "<strong>Charges financières</strong>", "Charges financières", "<strong>Amortissement</strong>"];
-    let head = "<thead><tr><th colspan=3> Compte de résultat<th/></tr><tr><th colspan=2>Charges</th><th colspan=2>Produit</th></tr></thead>";
+    let head = "<thead><tr><th colspan=3> Compte de résultat<th/></tr><tr><th colspan=2>Charges</th><th colspan=2>Produits</th></tr></thead>";
     let lin0 = {
         tab: myMath.separatorNumberArray([this.mE.achat(), "Ventes", this.mE.vente()]),
         color: ""
@@ -303,8 +303,7 @@ ViewGenerator.prototype.donneesEconomique = function () {
 ViewGenerator.prototype.ImpotHtml = function () {
     let head = "<thead><tr><th colspan=5> Impôt<th/></tr>";
     head += "<tr><th/><th>1</th><th>2</th><th>3</th><th>4</th><th>5</th></tr>";
-    head += "</thead>";
-    let cfe = [];
+    head += "</thead>";let cfe = [];
     let is = [];
     let imf = [];
     let irvm = [];
@@ -379,7 +378,7 @@ ViewGenerator.prototype.amortissementHtml = function () {
  */
 ViewGenerator.prototype.amortiExcepHTML = function () {
     return "<p> Pour les amortissements exceptionnels, le taux dépend de l'investissement, il y a une limitation par" +
-        " rapport au bénéfice annuel et l'unité de la durée est l'année.</p>";
+        " rapport au bénéfice annuel et l'unité de durée est l'année.</p>";
 
 };
 /**
@@ -455,7 +454,7 @@ ViewGenerator.prototype.petroleHtml = function () {
  * @return {string}
  */
 ViewGenerator.prototype.chargeFinancierHtml = function () {
-    let cote = ["Charges financiéres</td><td>FCFA", "Taux</td><td>%", "IRC</td><td>FCFA"];
+    let cote = ["Charges financières</td><td>FCFA", "Taux</td><td>%", "IRC</td><td>FCFA"];
     let tab = bootstrap.tableSE(cote, null, {
             tab: myMath.separatorNumberArray(myMath.arrondirTabUnit(this.modele.mesdon().taxeCreance().chargeFinance())),
             color: "blue"
@@ -777,7 +776,7 @@ ViewGenerator.prototype.impotRevenuValeurMobilieres = function () {
         div.push(this.modele.donnee.firm().dividende());
         irvm.push(this.modele.donnee.land().impots().irvm());
     }
-    let cote = ["Bénéfice après IS/IMF</td><td>FCFA", "Distribution anuelle</td><td>% des bénéfice après IS/IMF", "Taux</td><td>% des bénéfice après IS/IMF", "IRVM</td><td>FCFA"];
+    let cote = ["Bénéfice après IS/IMF</td><td>FCFA", "Distribution anuelle</td><td>% des bénéfices après IS/IMF", "Taux</td><td>% des bénéfices après IS/IMF", "IRVM</td><td>FCFA"];
     let tab = bootstrap.tableSE(cote, null, {
             tab: myMath.separatorNumberArray(myMath.arrondirTabUnit(this.modele.mesdon().resultCompta().benefice_comptable())),
             color: ""

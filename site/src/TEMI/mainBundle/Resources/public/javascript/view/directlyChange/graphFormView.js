@@ -10,7 +10,7 @@ let reg;
 reg = " ";
 
 if (localStorage.getItem("compatRegime") === "gen") {
-    reg = "code générale des impôts";
+    reg = "code général des impôts";
 }
 else {
     reg = "code des investissements";

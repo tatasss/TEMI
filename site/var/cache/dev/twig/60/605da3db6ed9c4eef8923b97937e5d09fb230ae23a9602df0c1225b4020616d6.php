@@ -1,6 +1,6 @@
 <?php
 
-/* @TEMImain/Temi/model.html.twig */
+/* TEMImainBundle:Temi:model.html.twig */
 class __TwigTemplate_067e5bd6eaca408e00131b06c5348d44d2902ebe68d3273046053efa27304298 extends Twig_Template
 {
     public function __construct(Twig_Environment $env)
@@ -8,7 +8,7 @@ class __TwigTemplate_067e5bd6eaca408e00131b06c5348d44d2902ebe68d3273046053efa273
         parent::__construct($env);
 
         // line 1
-        $this->parent = $this->loadTemplate("TEMImainBundle:Temi:layout.html.twig", "@TEMImain/Temi/model.html.twig", 1);
+        $this->parent = $this->loadTemplate("TEMImainBundle:Temi:layout.html.twig", "TEMImainBundle:Temi:model.html.twig", 1);
         $this->blocks = array(
             'title' => array($this, 'block_title'),
             'body' => array($this, 'block_body'),
@@ -24,10 +24,10 @@ class __TwigTemplate_067e5bd6eaca408e00131b06c5348d44d2902ebe68d3273046053efa273
     protected function doDisplay(array $context, array $blocks = array())
     {
         $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
-        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->enter($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "@TEMImain/Temi/model.html.twig"));
+        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->enter($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "TEMImainBundle:Temi:model.html.twig"));
 
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "@TEMImain/Temi/model.html.twig"));
+        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "TEMImainBundle:Temi:model.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
@@ -72,19 +72,19 @@ class __TwigTemplate_067e5bd6eaca408e00131b06c5348d44d2902ebe68d3273046053efa273
     <div>pays selectionné :
         <strong id=\"param\">Pays non definit , bonne chance</strong>
     </div>
-    <p> Le régime fiscal simulé peut être celui du Code général des impôts ou celui du Code des investissements.
+    <p> Le <strong>régime fiscal</strong> simulé peut être celui du Code général des impôts ou celui du Code des investissements.
         Le TEMI est évalué à partir d’un modèle de flux de trésorerie suivant la méthodologie développée par
         Djankov et
         al.
         (2010). Les différents régimes fiscaux sont appliqués aux données comptables d’une entreprise
-        représentative.
+        représentative.<br/>
         Cette entreprise est supposée être localisée dans la plus grande ville du pays, employer 60 salariés
         et vendre la totalité de sa production sur le marché local. La charge fiscale supportée par la société
         est
         calculée sur cinq ans et intègre quatre impôts (CFE, IS, IMF et IRCM). L’entreprise est modélisée
         d’après
-        les coefficients de Djankov (2010). Ces coefficients sont multipliés par le PNB/tête des pays, dont les
-        chiffres datent de 2014 et sont issus des World Development Indicators (Banque Mondiale). Le modèle
+        <strong> les coefficients de Djankov (2010)</strong>. Ces coefficients sont multipliés par le PNB/tête des pays, dont les
+        chiffres datent de 2014 et sont issus des <strong> World Development Indicators </strong> (Banque Mondiale). Le modèle
         ainsi
         construit permet de connaître le TEMI selon la législation de chaque pays. </p>
     <div class=\"panel-group\" id=\"accordion\">
@@ -101,7 +101,7 @@ class __TwigTemplate_067e5bd6eaca408e00131b06c5348d44d2902ebe68d3273046053efa273
                             <div class=\"panel-heading\">
                                 <h4 class=\"panel-title\">
                                     <a data-toggle=\"collapse\" data-parent=\"#accordion2\" href=\"#collapse15\">Taux
-                                        effectifs
+                                        effectif
                                         moyen
                                         d'imposition</a>
 
@@ -596,7 +596,7 @@ class __TwigTemplate_067e5bd6eaca408e00131b06c5348d44d2902ebe68d3273046053efa273
 
     public function getTemplateName()
     {
-        return "@TEMImain/Temi/model.html.twig";
+        return "TEMImainBundle:Temi:model.html.twig";
     }
 
     public function isTraitable()
@@ -628,19 +628,19 @@ Modèle
     <div>pays selectionné :
         <strong id=\"param\">Pays non definit , bonne chance</strong>
     </div>
-    <p> Le régime fiscal simulé peut être celui du Code général des impôts ou celui du Code des investissements.
+    <p> Le <strong>régime fiscal</strong> simulé peut être celui du Code général des impôts ou celui du Code des investissements.
         Le TEMI est évalué à partir d’un modèle de flux de trésorerie suivant la méthodologie développée par
         Djankov et
         al.
         (2010). Les différents régimes fiscaux sont appliqués aux données comptables d’une entreprise
-        représentative.
+        représentative.<br/>
         Cette entreprise est supposée être localisée dans la plus grande ville du pays, employer 60 salariés
         et vendre la totalité de sa production sur le marché local. La charge fiscale supportée par la société
         est
         calculée sur cinq ans et intègre quatre impôts (CFE, IS, IMF et IRCM). L’entreprise est modélisée
         d’après
-        les coefficients de Djankov (2010). Ces coefficients sont multipliés par le PNB/tête des pays, dont les
-        chiffres datent de 2014 et sont issus des World Development Indicators (Banque Mondiale). Le modèle
+        <strong> les coefficients de Djankov (2010)</strong>. Ces coefficients sont multipliés par le PNB/tête des pays, dont les
+        chiffres datent de 2014 et sont issus des <strong> World Development Indicators </strong> (Banque Mondiale). Le modèle
         ainsi
         construit permet de connaître le TEMI selon la législation de chaque pays. </p>
     <div class=\"panel-group\" id=\"accordion\">
@@ -657,7 +657,7 @@ Modèle
                             <div class=\"panel-heading\">
                                 <h4 class=\"panel-title\">
                                     <a data-toggle=\"collapse\" data-parent=\"#accordion2\" href=\"#collapse15\">Taux
-                                        effectifs
+                                        effectif
                                         moyen
                                         d'imposition</a>
 
@@ -1048,6 +1048,6 @@ Modèle
     %}
         <script src=\"{{ asset_url }}\"></script>
     {% endjavascripts %}
-{%  endblock %}", "@TEMImain/Temi/model.html.twig", "C:\\Users\\matthias\\Desktop\\stage\\TEMI\\site\\src\\TEMI\\mainBundle\\Resources\\views\\Temi\\model.html.twig");
+{%  endblock %}", "TEMImainBundle:Temi:model.html.twig", "C:\\Users\\matthias\\Desktop\\stage\\TEMI\\site\\src\\TEMI\\mainBundle\\Resources\\views\\Temi\\model.html.twig");
     }
 }
